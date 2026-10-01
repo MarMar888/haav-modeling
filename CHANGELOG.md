@@ -3,6 +3,12 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.1.1 — 2026-10-01
+
+Added `openplaning-reference.ipynb`: a reference notebook for the `PlaningBoat` class itself (hull vs
+propulsion inputs/outputs), built on the openplaning README's own documented Savitsky '76 example rather
+than this project's hull. Separate from `explore.ipynb`, which models this project's actual hull.
+
 ## 0.1.0 — 2026-10-01
 
 First version tracked here. A continuous multistart SLSQP search (`continuous.py`) over hull geometry,
