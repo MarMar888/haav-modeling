@@ -210,11 +210,11 @@ reversed or nonpositive ranges, invalid efficiencies and inconsistent voltage or
 
 | Input or constraint | Starting value | Basis |
 | --- | --- | --- |
-| Distance | 3218.688 m | Discussed 2-mile mission |
+| Distance | 3218.688 m | PEP27 rules: uncrewed craft race 2 miles (`../docs/PEP-Rules/`) |
 | Benchmark | 420 s | User-reported target to beat; not a hard feasibility rule |
-| Payload | 13.6077711 kg | Discussed 30 lb payload; fixed in every candidate |
-| Mass limit | 52.16 kg | Earlier 115 lb design bound; not a verified hull capacity |
-| Voltage limit | 55.5 V | Earlier rules discussion; checked at full charge |
+| Payload | 13.6077711 kg | PEP27 rule 17: 30 lb removable payload, fixed in every candidate |
+| Mass limit | 52.16 kg | Earlier 115 lb design bound; not a verified hull capacity, and not a PEP27 rule — PEP27 caps capacity (500 Ah) and voltage, not total mass |
+| Voltage limit | 55.5 V | PEP27 rule 10: total voltage at most 55.5 V, checked at full charge |
 | Energy allowance | 70% of capacity | Assumed reserve policy |
 | Continuous rating allowance | 80% | Assumed design margin |
 | LCG interval | 30-45% from transom | Provisional search constraint |
