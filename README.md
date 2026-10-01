@@ -179,6 +179,23 @@ Savitsky nor CFD nor an experimentally fitted marine model.** Its numbers and
 exponents only exercise coupling. The shell area and fixed component positions
 are also assumptions, not CAD outputs.
 
+### Variable dependency diagrams
+
+Three diagrams in [`../diagrams/`](../diagrams/), traced line by line from `model.py`/`continuous.py`
+rather than paraphrased from this README, each kept under ~15 nodes so it's actually readable:
+
+- [`opt-1-decisions-to-mass-balance`](../diagrams/opt-1-decisions-to-mass-balance.png) - hull geometry and
+  battery capacity decisions down to `mass` and `lcg`.
+- [`opt-2-mass-speed-to-power`](../diagrams/opt-2-mass-speed-to-power.png) - `mass`/`speed_mps` through
+  `drag` → `shaft_power` → `bus_power` → `race_time` (the objective).
+- [`opt-3-constraints`](../diagrams/opt-3-constraints.png) - what actually limits the search. Flags
+  something non-obvious found while tracing this: `system_voltage_v` and `drive_voltage_v` compare
+  `battery.full_voltage_v` against fixed catalog limits - **neither margin depends on any decision
+  variable at all**, once a drive/battery pair is picked. They're a catalog-compatibility check, not
+  something the optimizer can trade off against anything else.
+
+Each `.mmd` is the editable source; the `.excalidraw` opens at excalidraw.com for hand-editing.
+
 ## finalops integration
 
 Inspected repository: https://github.com/MarMar888/finalops
