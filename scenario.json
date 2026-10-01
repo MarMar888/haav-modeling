@@ -1,0 +1,85 @@
+{
+  "name": "illustrative_monohull_search",
+  "data_status": "illustrative_not_calibrated",
+  "source": "User discussion and optimization-plan.md; all component and resistance values are synthetic assumptions, not supplier specifications.",
+  "mission": {
+    "distance_m": 3218.688,
+    "benchmark_s": 420,
+    "payload_kg": 13.6077711,
+    "fixed_mass_kg": 4,
+    "hotel_power_w": 30,
+    "max_mass_kg": 52.16312255,
+    "voltage_limit_v": 55.5,
+    "usable_energy_fraction": 0.7,
+    "continuous_rating_fraction": 0.8,
+    "lcg_min_fraction": 0.3,
+    "lcg_max_fraction": 0.45,
+    "extra_time_s": 20
+  },
+  "hulls": {
+    "length_m": {"min": 0.9144, "max": 3.048},
+    "beam_m": {"min": 0.3048, "max": 1.2192},
+    "transom_beam_m": {"min": 0.2286, "max": 1.2192},
+    "bow_deadrise_deg": {"min": 30, "max": 50},
+    "aft_deadrise_deg": {"min": 6, "max": 16},
+    "shell_kg_per_m2": 2,
+    "surface_area_multiplier": 2.2,
+    "structure_mass_kg": 2
+  },
+  "search": {
+    "battery_capacity_wh": {"min": 400, "max": 1500},
+    "speed_mps": {"min": 4, "max": 14},
+    "payload_x_fraction": {"min": 0.25, "max": 0.5},
+    "battery_x_fraction": {"min": 0.25, "max": 0.45},
+    "starts_log2": 5,
+    "seed": 20260929,
+    "max_iterations": 300
+  },
+  "battery": {
+    "id": "assumed_12s_pack",
+    "nominal_voltage_v": 44.4,
+    "full_voltage_v": 50.4,
+    "loaded_voltage_v": 40,
+    "specific_energy_wh_per_kg": 180,
+    "continuous_c_rate": 8
+  },
+  "drives": [
+    {
+      "id": "assumed_4kw_drive",
+      "mass_kg": 4,
+      "continuous_shaft_power_w": 4000,
+      "continuous_bus_current_a": 130,
+      "max_voltage_v": 60,
+      "electrical_to_shaft_efficiency": 0.88
+    },
+    {
+      "id": "assumed_6kw_drive",
+      "mass_kg": 5.5,
+      "continuous_shaft_power_w": 6000,
+      "continuous_bus_current_a": 180,
+      "max_voltage_v": 60,
+      "electrical_to_shaft_efficiency": 0.9
+    }
+  ],
+  "props": [
+    {"id": "assumed_prop_a", "mass_kg": 0.3, "efficiency": 0.5, "compatible_drive_ids": ["assumed_4kw_drive", "assumed_6kw_drive"]},
+    {"id": "assumed_prop_b", "mass_kg": 0.5, "efficiency": 0.6, "compatible_drive_ids": ["assumed_6kw_drive"]}
+  ],
+  "resistance": {
+    "reference_mass_kg": 40,
+    "reference_speed_mps": 10,
+    "reference_length_m": 2.5,
+    "reference_beam_m": 0.85,
+    "reference_transom_beam_m": 0.7,
+    "reference_deadrise_deg": 10,
+    "reference_resistance_n": 220,
+    "mass_exponent": 1.2,
+    "speed_exponent": 2,
+    "length_exponent": -0.25,
+    "beam_exponent": 0.3,
+    "transom_beam_exponent": 0.2,
+    "deadrise_penalty_per_degree": 0.015,
+    "preferred_lcg_fraction": 0.37,
+    "lcg_penalty": 12
+  }
+}
