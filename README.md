@@ -269,7 +269,7 @@ geometry variables stop landing on their bounds, and compare results across
 uncertain inputs and seeds.
 Fossen's full motion model is not required for this first step.
 
-The older `../optimization-plan.md` remains background research. This folder
+The older `optimization-plan.md` remains background research. This folder
 implements the continuous joint formulation agreed in the later discussion.
 
 ## Results viewer
@@ -300,19 +300,20 @@ browser import. An empty deployment shows an empty state, not invented results.
 The viewer does not execute the optimizer or change any BOM choices.
 
 ```sh
+cd dashboard   # the Next.js app and its package.json live here
 pnpm dev
 pnpm exec playwright install chromium
 pnpm exec playwright test
 ```
 
 Browser tests create and clean up their own small run fixture. Their screenshots
-and test artifacts live under `.context/`.
+and test artifacts live under `.context/` at the repo root.
 To use an existing Chrome installation instead of downloading Chromium, run
 `PLAYWRIGHT_CHANNEL=chrome pnpm exec playwright test`.
 
 ## Explore notebook
 
-`explore.ipynb` is a working model of the boat described in `../optimization2.md` for exploring by hand: a prismatic
+`explore.ipynb` is a working model of the boat described in `optimization2.md` for exploring by hand: a prismatic
 hull with OpenPlaning for the planing balance, plus hydrostatics, propeller, battery voltage and the constraints, with
 sweeps, sliders and a small search. It is separate from the finalops solver above and uses placeholder component data.
 
