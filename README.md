@@ -321,3 +321,9 @@ sweeps, sliders and a small search. It is separate from the finalops solver abov
 optimization/.venv/bin/python -m pip install -r optimization/requirements-notebook.txt
 optimization/.venv/bin/jupyter lab optimization/explore.ipynb
 ```
+
+`openplaning-reference.ipynb` is a different, smaller notebook: a reference for the `PlaningBoat` class
+itself (what it takes as input vs what it computes, split into hull and propulsion), built on the
+openplaning README's own documented Savitsky '76 worked example rather than this project's hull - use it
+to understand the library before trusting `explore.ipynb`'s use of it. Same setup as above, just point
+`jupyter lab` at `optimization/openplaning-reference.ipynb` instead.
