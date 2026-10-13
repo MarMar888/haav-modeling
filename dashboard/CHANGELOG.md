@@ -3,6 +3,14 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.1 — 2026-10-13
+
+Added faint blueprint-style boat schematics to the side margins of the public site (wide screens only), drawn
+in light ink and changing as you scroll: hull lines plan, a Savitsky planing-hull free-body and wetted-area
+diagram (the hull trims up and the wetted area shrinks as it scrolls past), a general arrangement, and an
+exploded parts view (GPS, lidar, avionics box, battery, hull with hatch cover, motor, driveshaft, propeller, rudder). Drawings are in `src/app/(site)/margin-scenes.tsx`, scroll logic in `margin-art.tsx`,
+styling in `globals.css` (`.ma`). Motion is toned down under `prefers-reduced-motion`. Issue #55.
+
 ## 0.7.0 — 2026-10-08
 
 Added a one-page, letter-size handout at `/handout` (hero, how we model the boat with first-principles mixed-integer

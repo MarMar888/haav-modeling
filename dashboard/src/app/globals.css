@@ -24,3 +24,59 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
+
+/* Margin schematics: src/app/(site)/margin-art.tsx draws them, margin-scenes.tsx holds the drawings. JS only sets
+   --p (page progress), --o<i> (scene opacity) and --k<i> (progress through scene i); everything else is here. */
+.ma {
+  color: #64748b;
+  --ma-acc: #10b981;
+}
+@media (prefers-color-scheme: dark) {
+  .ma {
+    color: #a1a1aa;
+  }
+}
+.ma svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.ma-s {
+  opacity: calc(var(--o) * 0.6);
+  /* Each scene drifts slowly against the scroll, so the margins never sit still. */
+  transform: translateY(calc((var(--c) - var(--p, 0)) * 140px));
+}
+.ma-s0 { --c: 0; --o: var(--o0, 1); --k: var(--k0, 0); }
+.ma-s1 { --c: 0.3333; --o: var(--o1, 0); --k: var(--k1, 0); }
+.ma-s2 { --c: 0.6667; --o: var(--o2, 0); --k: var(--k2, 0); }
+.ma-s3 { --c: 1; --o: var(--o3, 0); --k: var(--k3, 0); }
+.ma :is(path, circle, ellipse, rect, polygon) {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.ma .acc { stroke: var(--ma-acc); }
+.ma .dot { fill: var(--ma-acc); stroke: none; }
+.ma text {
+  fill: currentColor;
+  stroke: none;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  letter-spacing: 0.08em;
+}
+/* Lines draw themselves in as their scene fades in (pathLength is 1), or with scene progress for .dk. */
+.ma .d { stroke-dasharray: 1; stroke-dashoffset: calc(1 - var(--o)); }
+.ma .dk { stroke-dasharray: 1; stroke-dashoffset: calc(1 - var(--k)); }
+/* Savitsky scene: the hull rises onto plane (trim grows, wetted area shrinks) as the scene scrolls past. */
+.ma-trim { transform-origin: 60px 500px; transform: rotate(calc(var(--k) * -3deg - 1.5deg)); }
+.ma-untrim { transform-origin: 135px 470px; transform: rotate(calc(var(--k) * 3deg + 1.5deg)); }
+.ma-wet { transform-origin: 150px 520px; transform: scaleY(calc(1 - var(--k) * 0.45)); }
+@media (prefers-reduced-motion: reduce) {
+  .ma-s { transform: none; }
+  .ma-trim { transform: rotate(-3deg); }
+  .ma-untrim { transform: rotate(3deg); }
+  .ma-wet { transform: none; }
+}
