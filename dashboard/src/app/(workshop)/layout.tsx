@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ModeToggle } from "@/components/mode-toggle";
 
 // Working tools: editable by anyone with the link, so kept out of search results.
 export const metadata: Metadata = { robots: { index: false, follow: false } };
@@ -18,6 +19,7 @@ export default function WorkshopLayout({ children }: Readonly<{ children: React.
           <Link href="/" className="ml-auto text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">
             ← Public site
           </Link>
+          <ModeToggle />
         </div>
       </header>
       <main className="flex-1">{children}</main>

@@ -127,7 +127,7 @@ box(0, 0, 8.5, 11, fill=PAPER, name="Paper")
 
 # header
 text(LEFT, 0.36, 3, 0.7, "HaaV", size=36, bold=True, name="Title")
-text(LEFT, 1.04, 4, 0.22, "Highly amphibious / autonomous Vehicle", size=9.75, color=SOFT, name="Subtitle")
+text(LEFT, 1.04, 4, 0.22, "Highly amphibious / autonomous Vessel", size=9.75, color=SOFT, name="Subtitle")
 text(8.5 - LEFT - 3.5, 0.4, 3.5, 0.4, "Team: UW–Madison", size=19.5, bold=True, color=RED, align=PP_ALIGN.RIGHT, name="UW-Madison")
 text(8.5 - LEFT - 3.5, 0.8, 3.5, 0.22, "College of Engineering", size=9.75, color=SOFT, align=PP_ALIGN.RIGHT, name="College of Engineering")
 

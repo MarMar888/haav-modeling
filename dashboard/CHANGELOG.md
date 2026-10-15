@@ -3,6 +3,32 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.2 — 2026-10-13
+
+Added a site footer line, "Affiliated with the DI Lab at UW-Madison (making.engr.wisc.edu)", linking to
+making.engr.wisc.edu. Haav now stands for Highly Amphibious / Autonomous **Vessel** (was Vehicle) on the site, page titles,
+share image, handout page and PowerPoint script, and the README. The exported `public/haav-handout.pdf` and
+`haav-handout.pptx` still say Vehicle until they are re-exported. Issue #57.
+
+Added a line to the home page intro: we are planning to participate in the PEP2027 Autonomous Uncrewed Division, a 2 mile
+point to point time challenge. Issue #58.
+
+The margin schematics now only scroll through their scenes on the home page. Short pages (`/join`, `/simulation`) hold the first
+drawing on each side, since the whole sequence was sweeping past in a few pixels of scroll. Issue #59. The simulation page has no margin
+drawings at all, since its figures fill the width.
+
+Added a light / dark / system theme switcher (shadcn/ui dropdown plus `next-themes`) to the site header and the workshop
+header. Dark mode now follows the `.dark` class on `<html>` instead of only the OS setting (`@custom-variant dark` and the
+shadcn tokens in `globals.css`, `.dark` rules in `optimization.css`); the choice is remembered and defaults to the OS setting.
+New: `components.json`, `src/components/{mode-toggle,theme-provider}.tsx`, `src/components/ui/`, `src/lib/utils.ts`. Issue #60.
+
+Tightened the project lead's bio on the team page (same facts, smoother wording). Issue #61.
+
+Redrew the Section A-A margin schematic as a proper general-arrangement sheet: hull shell with inner deck and floor lines, raked
+transom and a hatch cover, real part shapes (motor with end bell and windings, avionics board with pins, battery cells and
+terminal, GPS puck, lidar on a mast, propeller blades, rudder with arm), numbered balloons with leaders, a parts list and a
+centre-of-gravity mark. The bow is a low, raked planing-hull stem with a small rounded head (no sharp tip). The driveline is an inboard motor with the shaft angled 14° aft and down through the hull bottom to a strut, propeller and rudder behind the transom. Issue #62.
+
 ## 0.7.1 — 2026-10-13
 
 Added faint blueprint-style boat schematics to the side margins of the public site (wide screens only), drawn

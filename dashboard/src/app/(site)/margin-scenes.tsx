@@ -210,30 +210,126 @@ function PlanView() {
   );
 }
 
+// Point on a cubic Bezier at t.
+const bez = (t: number, a: Pt, b: Pt, c: Pt, d: Pt): Pt => {
+  const u = 1 - t;
+  return [u * u * u * a[0] + 3 * u * u * t * b[0] + 3 * u * t * t * c[0] + t * t * t * d[0], u * u * u * a[1] + 3 * u * u * t * b[1] + 3 * u * t * t * c[1] + t * t * t * d[1]];
+};
+
+// General arrangement, profile view (stern left): hull shell, deck and hatch, the parts in their bays, numbered balloons
+// and a parts list, the way a real arrangement sheet is dimensioned and called out.
 function ProfileArrangement() {
   const x0 = 44, len = 232, y0 = 440;
+  const sheerCtl: [Pt, Pt, Pt, Pt] = [[x0 - 4, y0 - 60], [x0 + 110, y0 - 60], [x0 + 196, y0 - 68], [x0 + len - 6, y0 - 78]];
+  // Sheer height at x: bisect the Bezier parameter (x only increases along it).
+  const sheerY = (x: number) => {
+    let lo = 0, hi = 1;
+    for (let i = 0; i < 24; i++) {
+      const mid = (lo + hi) / 2;
+      if (bez(mid, ...sheerCtl)[0] < x) lo = mid; else hi = mid;
+    }
+    return bez(lo, ...sheerCtl)[1];
+  };
+  const along = (xa: number, xb: number, dy: number) =>
+    Array.from({ length: 13 }, (_, i): Pt => { const x = xa + ((xb - xa) * i) / 12; return [f(x), f(sheerY(x) + dy)]; });
+  const bx = (dx: number) => x0 + dx; // x offset from the transom
+  // Drivetrain: the motor sits inboard and the shaft runs aft and down at TH degrees, out through the hull bottom at E.
+  // The motor, shaft and propeller are drawn flat along the axis in a group rotated about E; `lw` maps a point
+  // on that axis (d along it toward the bow, h below it) to the drawing.
+  const TH = 14, cs = Math.cos((TH * Math.PI) / 180), sn = Math.sin((TH * Math.PI) / 180);
+  const E = bx(26);
+  const lx = (d: number) => E + d;
+  const lw = (d: number, h: number): Pt => [f(E + d * cs + h * sn), f(y0 - d * sn + h * cs)];
+  const propTip = lw(-35, -19);
+  const bearing = lw(-27, 0);
+  const gps = [bx(64), sheerY(bx(64)) - 3];
+  const lidar = [bx(199), sheerY(bx(199))];
+  const hatchTop = (dx: number) => sheerY(bx(dx)) - 3;
+  const row = y0 - 124; // balloon row
+  const lead = (x: number, y1: number, y2: number, n: number) => (
+    <>
+      <path d={line(x, y1 + (y2 > y1 ? 7 : -7), x, y2)} opacity={0.7} />
+      {dot(x, y2)}
+      {balloon(x, y1, n)}
+    </>
+  );
+  const parts = ["LIDAR", "GPS / IMU", "AVIONICS BOX", "BATTERY PACK", "MOTOR", "PROPELLER", "RUDDER", "HATCH COVER"];
+  const ty = y0 + 106;
   return (
     <>
       <T x={x0} y={y0 - 214} s={9}>SECTION A-A</T>
       <T x={x0} y={y0 - 200} s={8}>PROFILE, SCALE 1:10</T>
-      <D d={`M${x0},${y0 - 60}C${x0 + 120},${y0 - 56} ${x0 + 190},${y0 - 66} ${x0 + len},${y0 - 104}`} />
-      <D d={`M${x0},${y0}L${x0 + 150},${y0}C${x0 + 210},${y0} ${x0 + 235},${y0 - 36} ${x0 + len},${y0 - 104}`} />
-      <D d={line(x0, y0 - 60, x0, y0)} />
-      <path d={line(x0 - 14, y0 - 20, x0 + len + 8, y0 - 20)} strokeDasharray={CENTERLINE} opacity={0.7} />
-      <T x={x0 + len + 8} y={y0 - 24} a="end" s={8}>DWL</T>
-      <D d={`M${x0 + 96},${y0 - 90}h46v26h-46z`} opacity={0.8} />
-      <D d={`M${x0 + 186},${y0 - 104}h18v14h-18z${line(x0 + 195, y0 - 90, x0 + 195, y0 - 72)}`} />
-      <D d={`M${x0 + 119},${y0 - 90}V${y0 - 146}h-10`} opacity={0.7} />
-      <T x={x0 + 106} y={y0 - 143} a="end" s={8}>BATTERY / AVIONICS</T>
-      <D d={`M${x0 + 195},${y0 - 104}V${y0 - 146}h12`} opacity={0.7} />
-      <T x={x0 + 210} y={y0 - 143} s={8}>LIDAR</T>
-      <D d={`M${x0 + 24},${y0 - 38}h44v26h-44z`} opacity={0.8} />
-      <D d={line(x0 + 24, y0 - 25, x0 - 14, y0 - 25)} />
-      <D d={ell(x0 - 14, y0 - 25, 3, 9)} />
-      <D d={poly([[x0 - 28, y0 - 34], [x0 - 22, y0 - 34], [x0 - 22, y0 + 8], [x0 - 30, y0 + 4]])} />
-      <T x={x0 - 30} y={y0 + 30} s={8}>MOTOR / PROP / RUDDER</T>
-      <D d={dim(x0, y0 + 64, x0 + len, y0 + 64) + line(x0, y0 + 40, x0, y0 + 72) + line(x0 + len, y0 - 104, x0 + len, y0 + 72)} opacity={0.7} />
+
+      {/* Shell: sheer, keel with forefoot rocker, raked transom, and the inner deck and floor lines. */}
+      <D d={`M${f(sheerCtl[0][0])},${f(sheerCtl[0][1])}C${sheerCtl[1].map(f)} ${sheerCtl[2].map(f)} ${sheerCtl[3].map(f)}`} />
+      <D d={`M${x0},${y0}L${bx(148)},${y0}C${bx(196)},${y0} ${bx(226)},${y0 - 22} ${bx(len - 1)},${y0 - 70}`} />
+      <D d={`M${bx(len - 6)},${y0 - 78}Q${bx(len)},${y0 - 78} ${bx(len - 1)},${y0 - 70}`} />
+      <D d={line(x0 - 4, y0 - 60, x0, y0)} />
+      <D d={polyline(along(x0 + 2, bx(len - 40), 5))} opacity={0.45} />
+      <D d={line(x0 + 3, y0 - 5, bx(160), y0 - 5)} opacity={0.45} />
+      <D d={line(bx(52), y0 - 5, bx(52), sheerY(bx(52)) + 5) + line(bx(122), y0 - 5, bx(122), sheerY(bx(122)) + 5)} opacity={0.45} />
+
+      {/* Hatch cover lying on the deck, with its fasteners. */}
+      <D d={poly([...along(bx(20), bx(160), -3), ...along(bx(20), bx(160), 0).reverse()])} opacity={0.8} />
+      {[24, 156].map((dx) => <D key={dx} d={line(bx(dx), hatchTop(dx), bx(dx), sheerY(bx(dx)) + 5)} opacity={0.5} />)}
+
+      {/* Waterline. */}
+      <path d={line(x0 - 40, y0 - 20, bx(len + 8), y0 - 20)} strokeDasharray={CENTERLINE} opacity={0.7} />
+      <T x={bx(len + 8)} y={y0 - 24} a="end" s={8}>DWL</T>
+
+      {/* Drivetrain: motor and shaft inboard, angled down through the keel, strut, propeller and rudder aft of the hull. */}
+      <g transform={`rotate(${-TH} ${E} ${y0})`}>
+        <D d={line(lx(-35), y0, lx(62), y0)} />
+        <D d={`M${lx(-4)},${y0 - 4}h12v8h-12z`} opacity={0.8} />
+        <D d={`M${lx(38)},${y0 - 4}h10v8h-10z`} opacity={0.8} />
+        <D d={`M${lx(62)},${y0 - 9}h34v18h-34z${line(lx(56), y0 - 6.5, lx(62), y0 - 6.5)}${line(lx(56), y0 + 6.5, lx(62), y0 + 6.5)}${line(lx(56), y0 - 6.5, lx(56), y0 + 6.5)}`} opacity={0.8} />
+        <D d={[70, 76, 82, 88].map((d) => line(lx(d), y0 - 9, lx(d), y0 + 9)).join("")} opacity={0.4} />
+        <D d={`M${lx(-37)},${y0 - 3}h4v6h-4z`} />
+        <D d={`M${lx(-35)},${y0 - 3}C${lx(-31)},${y0 - 8} ${lx(-31)},${y0 - 14} ${lx(-35)},${y0 - 19}C${lx(-38)},${y0 - 14} ${lx(-38)},${y0 - 8} ${lx(-35)},${y0 - 3}Z`} />
+        <D d={`M${lx(-35)},${y0 + 3}C${lx(-31)},${y0 + 8} ${lx(-31)},${y0 + 14} ${lx(-35)},${y0 + 19}C${lx(-38)},${y0 + 14} ${lx(-38)},${y0 + 8} ${lx(-35)},${y0 + 3}Z`} />
+      </g>
+      <D d={`M${bx(16)},${y0}L${bearing[0]},${bearing[1]}L${bx(6)},${y0}`} />
+      <D d={`M${bx(-25)},${y0 - 4}L${bx(-33)},${y0 - 4}L${bx(-34)},${y0 + 28}L${bx(-27)},${y0 + 28}Z${line(bx(-29), y0 - 48, bx(-29), y0 - 4)}${line(bx(-29), y0 - 48, bx(-3), y0 - 48)}`} />
+
+      {/* Avionics box in the stern bay (board outline, connector pins); battery pack forward of the motor (cells, terminal). */}
+      <D d={`M${bx(12)},${y0 - 50}h32v28h-32zM${bx(16)},${y0 - 46}h24v20h-24z`} opacity={0.8} />
+      <D d={[0, 1, 2].map((i) => line(bx(44), y0 - 44 + i * 8, bx(48), y0 - 44 + i * 8)).join("")} opacity={0.7} />
+      <D d={`M${bx(128)},${y0 - 38}h46v28h-46z`} opacity={0.8} />
+      <D d={[1, 2, 3].map((i) => line(bx(128 + i * 11.5), y0 - 38, bx(128 + i * 11.5), y0 - 10)).join("") + `M${bx(174)},${y0 - 28}h4v8h-4z`} opacity={0.5} />
+      <path d={`M${bx(44)},${y0 - 36}L${bx(100)},${y0 - 36}L${bx(100)},${y0 - 26}M${bx(116)},${y0 - 24}L${bx(128)},${y0 - 24}`} fill="none" strokeDasharray="2 2" opacity={0.6} />
+
+      {/* Sensors on the deck: GPS / IMU puck on the hatch, lidar on a short mast at the bow. */}
+      <D d={`M${f(gps[0] - 7)},${f(gps[1])}a7,6 0 0 1 14,0z`} />
+      <D d={line(lidar[0], lidar[1], lidar[0], lidar[1] - 8) + `M${lidar[0] - 9},${f(lidar[1] - 19)}h18v11h-18z` + line(lidar[0] - 9, lidar[1] - 13.5, lidar[0] + 9, lidar[1] - 13.5)} />
+
+      {/* Centre of gravity. */}
+      <circle cx={bx(118)} cy={y0 - 42} r={4.5} className="acc" />
+      <path d={`M${bx(118) - 8},${y0 - 42}h16M${bx(118)},${y0 - 50}v16`} className="acc" />
+
+      {/* Balloons and leaders. */}
+      {lead(propTip[0], row + 52, propTip[1], 6)}
+      {lead(gps[0], row, gps[1] - 6, 2)}
+      {lead(bx(28), row, y0 - 50, 3)}
+      {lead(bx(98), row, hatchTop(98), 8)}
+      {lead(bx(150), row, y0 - 38, 4)}
+      {lead(lidar[0], row, lidar[1] - 19, 1)}
+      {lead(bx(102), y0 + 30, lw(70, 9)[1], 5)}
+      {lead(bx(-30), y0 + 46, y0 + 28, 7)}
+
+      <D d={dim(x0, y0 + 64, x0 + len, y0 + 64) + line(x0, y0 + 40, x0, y0 + 72) + line(x0 + len, y0 - 78, x0 + len, y0 + 72)} opacity={0.7} />
       <T x={x0 + len / 2} y={y0 + 58} a="middle" s={8}>LOA 1219 MM</T>
+
+      {/* Parts list. */}
+      <D d={`M${x0},${ty}h${len}v${parts.length * 13 + 14}h-${len}zM${x0},${ty + 14}h${len}M${x0 + 28},${ty}v${parts.length * 13 + 14}`} opacity={0.8} />
+      <T x={x0 + 14} y={ty + 10} a="middle" s={8}>ITEM</T>
+      <T x={x0 + 36} y={ty + 10} s={8}>PART</T>
+      {parts.map((name, i) => (
+        <g key={name}>
+          <T x={x0 + 14} y={ty + 24 + i * 13} a="middle" s={8}>{i + 1}</T>
+          <T x={x0 + 36} y={ty + 24 + i * 13} s={8}>{name}</T>
+        </g>
+      ))}
+
       <D d="M64,760h212v64H64zM64,788h212M196,788v36" opacity={0.8} />
       <T x={72} y={778} s={8}>HAAV HULL GENERAL ARRANGEMENT</T>
       <T x={72} y={810} s={8}>UW-MADISON 2027</T>

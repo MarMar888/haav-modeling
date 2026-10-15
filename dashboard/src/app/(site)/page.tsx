@@ -14,7 +14,7 @@ export default function Page() {
     <div className="space-y-20">
       <section className="pt-8">
         <h1 className="text-6xl font-semibold tracking-tight">Haav</h1>
-        <p className="mt-3 font-mono text-sm text-zinc-500">Highly Amphibious / Autonomous Vehicle</p>
+        <p className="mt-3 font-mono text-sm text-zinc-500">Highly Amphibious / Autonomous Vessel</p>
         <div className="mt-10 overflow-hidden rounded-lg border border-zinc-200 bg-white">
           <Image
             src="/haav-hull.webp"
@@ -38,6 +38,10 @@ export default function Page() {
         />
         <p className={prose}>
           The goal is a planing hull with a 30 pound added payload on a 2 mile long course.
+        </p>
+        <p className={prose}>
+          We are planning to participate in the PEP2027 Autonomous Uncrewed Division, a 2 mile point to point time
+          challenge.
         </p>
       </section>
 

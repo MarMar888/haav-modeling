@@ -1,6 +1,6 @@
 # Haav
 
-**Highly Amphibious / Autonomous Vehicle.** A 4-foot autonomous RIB. We build the hull ourselves: a 3D-printed deep-V shell used as a plug, glassed
+**Highly Amphibious / Autonomous Vessel.** A 4-foot autonomous RIB. We build the hull ourselves: a 3D-printed deep-V shell used as a plug, glassed
 outside as the skin and taped inside at the joints, with custom inflatable tubes along the sides and a
 plywood baseboard inside. Two Flipsky 65150 pods, each with its VESC built in, push it on 12S and steer
 it by differential thrust. Phase 2 adds a sensor tower and an autopilot that drives it over LTE.

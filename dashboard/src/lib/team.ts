@@ -6,7 +6,7 @@ export const TEAM = [
     name: "Marley Barrett",
     linkedin: "https://www.linkedin.com/in/marley-h-barrett/",
     role: "Project lead",
-    bio: "A computer engineering major with experience in software and project management. Interned in new product introduction and software engineering at Tesla and in project management at Fincantieri in Trieste, Italy. Has sailed competitively through college and started his own boat detailing business in high school.",
+    bio: "A computer engineering major who works across software and project management. Interned on new product introduction and software engineering at Tesla, and on project management at Fincantieri in Trieste, Italy. Has sailed competitively through college and started a boat detailing business in high school.",
   },
   {
     name: "Patrick Grunklee",

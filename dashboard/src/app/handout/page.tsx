@@ -65,7 +65,7 @@ export default function Page() {
         <header className="flex items-start justify-between">
           <div>
             <h1 className="text-[48px] font-bold leading-none tracking-tight">HaaV</h1>
-            <p className="mt-1.5 text-[13px]" style={{ color: SOFT }}>Highly amphibious / autonomous Vehicle</p>
+            <p className="mt-1.5 text-[13px]" style={{ color: SOFT }}>Highly amphibious / autonomous Vessel</p>
           </div>
           <div className="text-right">
             <div className="text-[26px] font-bold leading-none tracking-tight" style={{ color: RED }}>Team: UW–Madison</div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import pkg from "../../../package.json";
+import { ModeToggle } from "@/components/mode-toggle";
 import { MarginArt } from "./margin-art";
 
 const link = "text-sm text-zinc-600 hover:text-emerald-700 dark:text-zinc-400 dark:hover:text-emerald-400";
@@ -11,11 +12,12 @@ export default function SiteLayout({ children }: Readonly<{ children: React.Reac
       <div className="mx-auto flex min-h-full w-full max-w-2xl flex-1 flex-col px-6">
         <header className="flex items-baseline gap-6 py-6">
           <Link href="/" className="font-semibold tracking-tight">Haav</Link>
-          <nav className="ml-auto flex gap-6">
+          <nav className="ml-auto flex items-center gap-6">
             <Link href="/#timeline" className={link}>Timeline</Link>
             <Link href="/#team" className={link}>Team</Link>
             <Link href="/simulation" className={link}>Simulation</Link>
             <Link href="/#contact" className={link}>Contact</Link>
+            <ModeToggle />
           </nav>
         </header>
         <main className="flex-1">{children}</main>
@@ -23,6 +25,10 @@ export default function SiteLayout({ children }: Readonly<{ children: React.Reac
           <span>
             Contact:{" "}
             <a href="mailto:mhbarrett@wisc.edu" className="hover:text-emerald-700">mhbarrett@wisc.edu</a>
+          </span>
+          <span>
+            Affiliated with the DI Lab at UW-Madison (
+            <a href="https://making.engr.wisc.edu" className="hover:text-emerald-700">making.engr.wisc.edu</a>)
           </span>
           <span className="ml-auto tabular-nums">v{pkg.version}</span>
         </footer>

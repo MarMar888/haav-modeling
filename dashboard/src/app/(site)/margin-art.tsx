@@ -1,11 +1,14 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { LEFT_SCENES, RIGHT_SCENES } from "./margin-scenes";
 
 // Fixed schematics in the side margins that change as the page scrolls: each scene fades in as the reader reaches
 // its share of the page. Scroll progress is written to CSS variables (no React re-render per frame); globals.css
 // turns them into opacity, draw-in, drift and the planing-hull trim. Hidden where there is no margin to fill.
+// Only the long home page scrolls through the scenes; short pages would sweep them far too fast, so they hold the first.
+// The simulation page is full of its own figures, so it has none.
 
 const COUNT = LEFT_SCENES.length;
 const SPAN = 1 / (COUNT - 1);
@@ -13,15 +16,15 @@ const clamp = (n: number) => Math.min(1, Math.max(0, n));
 
 export function MarginArt() {
   const root = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const scrolls = pathname === "/";
+  const hidden = pathname === "/simulation";
 
   useEffect(() => {
     const el = root.current;
     if (!el) return;
     let frame = 0;
-    const update = () => {
-      frame = 0;
-      const range = document.documentElement.scrollHeight - window.innerHeight;
-      const p = range > 0 ? clamp(window.scrollY / range) : 0;
+    const apply = (p: number) => {
       el.style.setProperty("--p", p.toFixed(4));
       for (let i = 0; i < COUNT; i++) {
         const c = i * SPAN;
@@ -30,6 +33,15 @@ export function MarginArt() {
         el.style.setProperty(`--k${i}`, clamp((p - (c - SPAN / 2)) / SPAN).toFixed(3));
       }
     };
+    const update = () => {
+      frame = 0;
+      const range = document.documentElement.scrollHeight - window.innerHeight;
+      apply(range > 0 ? clamp(window.scrollY / range) : 0);
+    };
+    if (!scrolls) {
+      apply(0);
+      return;
+    }
     const queue = () => {
       if (!frame) frame = requestAnimationFrame(update);
     };
@@ -44,7 +56,7 @@ export function MarginArt() {
       resize.disconnect();
       if (frame) cancelAnimationFrame(frame);
     };
-  }, []);
+  }, [scrolls, hidden]);
 
   const side = (scenes: typeof LEFT_SCENES, align: string, edge: string) => (
     <div className={`absolute inset-y-0 w-[calc((100%-42rem)/2)] ${edge}`}>
@@ -55,6 +67,8 @@ export function MarginArt() {
       ))}
     </div>
   );
+
+  if (hidden) return null;
 
   return (
     <div ref={root} aria-hidden="true" className="ma pointer-events-none fixed inset-0 -z-10 hidden xl:block">
