@@ -70,7 +70,30 @@
   --ring: oklch(0.552 0.016 285.938);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+::selection {
+  background: #a7f3d0;
+  color: #064e3b;
+}
+h1,
+h2 {
+  text-wrap: balance;
+}
+
 body {
+  overflow-x: clip;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;

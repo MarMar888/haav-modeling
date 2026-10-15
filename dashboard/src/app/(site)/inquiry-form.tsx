@@ -5,7 +5,7 @@ import { INTERESTS } from "@/lib/sponsors";
 import { sendInquiry, type InquiryState } from "./actions";
 
 const field =
-  "mt-1 w-full rounded-md border border-zinc-300 bg-white px-3 py-2 text-sm outline-none focus:border-emerald-600 dark:border-zinc-700 dark:bg-zinc-900";
+  "mt-1 w-full rounded-md border border-zinc-300 bg-white px-3 py-2.5 text-base outline-none focus:border-emerald-600 sm:py-2 sm:text-sm dark:border-zinc-700 dark:bg-zinc-900";
 const label = "block text-sm font-medium";
 
 export function InquiryForm() {
@@ -47,15 +47,15 @@ export function InquiryForm() {
       </label>
       {/* honeypot: hidden from people, filled in by bots */}
       <input name="website" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
-      <div className="flex items-center gap-4 sm:col-span-2">
+      <div className="flex flex-col gap-4 sm:col-span-2 sm:flex-row sm:items-center">
         <button
           type="submit"
           disabled={pending}
-          className="rounded-md bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-700 disabled:opacity-60 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-emerald-400"
+          className="rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60 sm:py-2.5 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-emerald-400"
         >
           {pending ? "Sending…" : "Talk to the team"}
         </button>
-        {state.error && <p role="alert" className="text-sm text-red-600">{state.error}</p>}
+        {state.error && <p role="alert" className="text-sm text-red-600 dark:text-red-400">{state.error}</p>}
       </div>
     </form>
   );

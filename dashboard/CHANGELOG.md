@@ -3,6 +3,14 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.3 — 2026-10-15
+
+Six small UI polish changes to the public site, all responsive: the header is now sticky with a blurred backdrop and
+tighter nav spacing on phones; the timeline stacks each date above its milestone on small screens instead of reserving a
+wide left gutter; form fields use 16px text on phones (no iOS zoom-on-focus) and the submit button stacks below the fields; keyboard focus
+rings, smooth anchor scrolling (off under `prefers-reduced-motion`) and balanced headings were added in `globals.css`; footer links stack on
+phones and get hover underlines and dark-mode colours; anchor sections clear the sticky header.
+
 ## 0.7.2 — 2026-10-13
 
 Added a site footer line, "Affiliated with the DI Lab at UW-Madison (making.engr.wisc.edu)", linking to

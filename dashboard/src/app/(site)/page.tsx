@@ -5,7 +5,7 @@ import { TIMELINE } from "@/lib/timeline";
 import { InquiryForm } from "./inquiry-form";
 
 const h2 ="text-2xl font-semibold tracking-tight";
-const section = "scroll-mt-8 border-t border-zinc-200 pt-12 dark:border-zinc-800";
+const section = "scroll-mt-20 border-t border-zinc-200 pt-12 dark:border-zinc-800";
 const prose = "mt-4 text-lg leading-relaxed text-zinc-700 dark:text-zinc-300";
 
 
@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <div className="space-y-20">
       <section className="pt-8">
-        <h1 className="text-6xl font-semibold tracking-tight">Haav</h1>
+        <h1 className="text-5xl sm:text-6xl font-semibold tracking-tight">Haav</h1>
         <p className="mt-3 font-mono text-sm text-zinc-500">Highly Amphibious / Autonomous Vessel</p>
         <div className="mt-10 overflow-hidden rounded-lg border border-zinc-200 bg-white">
           <Image
@@ -74,7 +74,7 @@ export default function Page() {
       <section id="timeline" className={section}>
         <h2 className={h2}>Timeline</h2>
         {/* A rail with a marker per milestone: a filled dot for a day, a hollow ring for a stretch of work. */}
-        <ol className="relative ml-32 mt-8 border-l-2 border-zinc-200 dark:border-zinc-700">
+        <ol className="relative ml-3 mt-8 border-l-2 sm:ml-32 border-zinc-200 dark:border-zinc-700">
           {TIMELINE.map((m) => {
             const stretch = /–|^From |^Until /.test(m.when);
             return (
@@ -85,7 +85,7 @@ export default function Page() {
                     stretch ? "bg-white dark:bg-zinc-950" : "bg-emerald-600"
                   }`}
                 />
-                <time dateTime={m.date} className="absolute right-full top-1 mr-5 w-28 text-right text-sm text-zinc-500">
+                <time dateTime={m.date} className="block text-sm text-zinc-500 sm:absolute sm:right-full sm:top-1 sm:mr-5 sm:w-28 sm:text-right">
                   {m.when}
                 </time>
                 <div className="text-lg font-semibold leading-snug">{m.label}</div>
