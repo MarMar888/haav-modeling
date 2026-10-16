@@ -3,6 +3,13 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.4 — 2026-10-16
+
+Six more responsive UI tweaks to the public site: the hull render is a proper figure with a caption and a dark-mode border;
+the UW-Madison logo sits on a white chip so it stays visible in dark mode and shrinks on phones; the primary groups are a
+numbered card grid (two columns from `sm`, one on phones); team and advisor entries get initials avatars; form fields get
+a visible focus ring and placeholder colour; and a "Skip to content" link was added for keyboard users.
+
 ## 0.7.3 — 2026-10-15
 
 Six small UI polish changes to the public site, all responsive: the header is now sticky with a blurred backdrop and

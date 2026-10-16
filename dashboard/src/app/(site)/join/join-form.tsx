@@ -5,7 +5,7 @@ import { GROUPS } from "@/lib/team";
 import { sendApplication, type JoinState } from "./actions";
 
 const field =
-  "mt-1 w-full rounded-md border border-zinc-300 bg-white px-3 py-2.5 text-base outline-none focus:border-emerald-600 sm:py-2 sm:text-sm dark:border-zinc-700 dark:bg-zinc-900";
+  "mt-1 w-full rounded-md border border-zinc-300 bg-white px-3 py-2.5 text-base outline-none placeholder:text-zinc-400 focus:border-emerald-600 focus-visible:ring-2 focus-visible:ring-emerald-600/30 sm:py-2 sm:text-sm dark:border-zinc-700 dark:bg-zinc-900";
 const label = "block text-sm font-medium";
 
 export function JoinForm() {

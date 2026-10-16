@@ -15,7 +15,8 @@ export default function Page() {
       <section className="pt-8">
         <h1 className="text-5xl sm:text-6xl font-semibold tracking-tight">Haav</h1>
         <p className="mt-3 font-mono text-sm text-zinc-500">Highly Amphibious / Autonomous Vessel</p>
-        <div className="mt-10 overflow-hidden rounded-lg border border-zinc-200 bg-white">
+        <figure className="mt-10">
+        <div className="overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm dark:border-zinc-700">
           <Image
             src="/haav-hull.webp"
             alt="CAD rendering of the Haav hull, hybrid planing hull"
@@ -25,7 +26,8 @@ export default function Page() {
             className="mx-auto h-auto max-h-[24rem] w-full object-contain"
           />
         </div>
-        <p className="mt-2 text-sm text-zinc-500">Our current hull design.</p>
+        <figcaption className="mt-2 text-sm text-zinc-500">Our current hull design.</figcaption>
+        </figure>
         <p className="mt-10 text-xl leading-relaxed">
           We are a student team building an autonomous boat from the ground up at UW-Madison.
         </p>
@@ -34,7 +36,7 @@ export default function Page() {
           alt="University of Wisconsin–Madison"
           width={1542}
           height={527}
-          className="mt-4 h-auto w-64"
+          className="mt-4 h-auto w-48 max-w-full rounded bg-white p-2 sm:w-64"
         />
         <p className={prose}>
           The goal is a planing hull with a 30 pound added payload on a 2 mile long course.
@@ -54,11 +56,11 @@ export default function Page() {
 
       <section id="groups" className={section}>
         <h2 className={h2}>Primary groups</h2>
-        <ol className="mt-8 divide-y divide-zinc-200 border-y border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800">
+        <ol className="mt-8 grid gap-3 sm:grid-cols-2">
           {GROUPS.map((g, i) => (
-            <li key={g} className="flex items-baseline gap-x-6 py-3">
-              <span className="w-8 shrink-0 tabular-nums text-zinc-500">{i + 1}</span>
-              <span className="text-lg">{g}</span>
+            <li key={g} className="flex items-baseline gap-x-4 rounded-lg border border-zinc-200 px-4 py-3 transition-colors hover:border-emerald-600/60 dark:border-zinc-800">
+              <span className="shrink-0 font-mono text-sm tabular-nums text-emerald-700 dark:text-emerald-400">{String(i + 1).padStart(2, "0")}</span>
+              <span className="text-lg leading-snug">{g}</span>
             </li>
           ))}
         </ol>
@@ -127,7 +129,14 @@ function People({ people }: { people: readonly { name: string; role: string; bio
   return (
     <dl className="mt-8 space-y-8">
       {people.map((m) => (
-        <div key={m.name}>
+        <div key={m.name} className="flex gap-4">
+          <span
+            aria-hidden
+            className="mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-sm font-semibold text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300"
+          >
+            {m.name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("")}
+          </span>
+          <div className="min-w-0">
           <dt className="flex flex-wrap items-baseline gap-x-3">
             <span className="text-lg font-semibold">{m.name}</span>
             <span className="text-zinc-500">{m.role}</span>
@@ -146,6 +155,7 @@ function People({ people }: { people: readonly { name: string; role: string; bio
               </a>
             </dd>
           )}
+          </div>
         </div>
       ))}
     </dl>
