@@ -3,6 +3,12 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.5 — 2026-10-17
+
+Six more responsive UI tweaks: a branded 404 page; the Basic Spec section gets a row of spec chips; LinkedIn links are
+tappable pills (36px high); forms get a spinner while sending, a resizable textarea and a check mark on the success message;
+the footer gets a "Back to top" link; and the Become a member page gets a "Back to home" link.
+
 ## 0.7.4 — 2026-10-16
 
 Six more responsive UI tweaks to the public site: the hull render is a proper figure with a caption and a dark-mode border;

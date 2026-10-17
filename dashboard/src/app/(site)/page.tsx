@@ -52,6 +52,11 @@ export default function Page() {
         <p className={prose}>
           A 4-6 foot composite hull. Autonomy using GPS, IMU and LIDAR.
         </p>
+        <ul className="mt-6 flex flex-wrap gap-2 font-mono text-sm">
+          {["4–6 ft composite hull", "GPS", "IMU", "LIDAR", "30 lb payload", "2 mile course"].map((t) => (
+            <li key={t} className="rounded-full border border-zinc-200 px-3 py-1 text-zinc-600 dark:border-zinc-700 dark:text-zinc-400">{t}</li>
+          ))}
+        </ul>
       </section>
 
       <section id="groups" className={section}>
@@ -143,15 +148,15 @@ function People({ people }: { people: readonly { name: string; role: string; bio
           </dt>
           <dd className="mt-2 leading-relaxed text-zinc-700 dark:text-zinc-300">{m.bio}</dd>
           {m.linkedin && (
-            <dd className="mt-2 text-sm">
+            <dd className="mt-3 text-sm">
               <a
                 href={m.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${m.name} on LinkedIn`}
-                className="text-emerald-700 underline underline-offset-4 hover:text-emerald-600 dark:text-emerald-400"
+                className="inline-flex min-h-9 items-center rounded-full border border-emerald-600/40 px-3 text-emerald-700 transition-colors hover:bg-emerald-50 dark:text-emerald-400 dark:hover:bg-emerald-950"
               >
-                LinkedIn
+                LinkedIn ↗
               </a>
             </dd>
           )}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { JoinForm } from "./join-form";
 
 export const metadata: Metadata = { title: "Become a member" };
@@ -6,7 +7,10 @@ export const metadata: Metadata = { title: "Become a member" };
 export default function Page() {
   return (
     <section className="pt-8">
-      <h1 className="text-4xl font-semibold tracking-tight">Become a member</h1>
+      <Link href="/" className="inline-flex min-h-9 items-center text-sm text-zinc-500 underline-offset-4 hover:text-emerald-700 hover:underline dark:hover:text-emerald-400">
+        ← Back to home
+      </Link>
+      <h1 className="mt-2 text-4xl font-semibold tracking-tight">Become a member</h1>
       <p className="mt-4 text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
         We are a student team at UW-Madison building an autonomous boat. If you are a student and want to help build it,
         tell us a little about yourself and which group you would like to join.

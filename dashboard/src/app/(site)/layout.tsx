@@ -36,7 +36,10 @@ export default function SiteLayout({ children }: Readonly<{ children: React.Reac
             Affiliated with the DI Lab at UW-Madison (
             <a href="https://making.engr.wisc.edu" className="underline-offset-4 hover:text-emerald-700 hover:underline dark:hover:text-emerald-400">making.engr.wisc.edu</a>)
           </span>
-          <span className="tabular-nums sm:ml-auto">v{pkg.version}</span>
+          <span className="flex items-center gap-4 sm:ml-auto">
+            <a href="#main" className="underline-offset-4 hover:text-emerald-700 hover:underline dark:hover:text-emerald-400">Back to top ↑</a>
+            <span className="tabular-nums">v{pkg.version}</span>
+          </span>
         </footer>
       </div>
     </>
