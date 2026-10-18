@@ -37,11 +37,14 @@ export function InquiryForm() {
       </label>
       <label className={label}>
         How would you like to help?
-        <select name="interest" defaultValue={INTERESTS[0]} className={field}>
-          {INTERESTS.map((i) => (
-            <option key={i}>{i}</option>
-          ))}
-        </select>
+        <span className="relative block">
+          <select name="interest" defaultValue={INTERESTS[0]} className={`${field} appearance-none pr-9`}>
+            {INTERESTS.map((i) => (
+              <option key={i}>{i}</option>
+            ))}
+          </select>
+          <span aria-hidden className="pointer-events-none absolute right-3 top-1/2 mt-0.5 -translate-y-1/2 text-zinc-500">▾</span>
+        </span>
       </label>
       <label className={`${label} sm:col-span-2`}>
         Anything we should know <span className="font-normal text-zinc-500">(optional)</span>

@@ -37,11 +37,14 @@ export function JoinForm() {
       </label>
       <label className={label}>
         Which group interests you?
-        <select name="interest" defaultValue="Not sure yet" className={field}>
-          {[...GROUPS, "Not sure yet"].map((i) => (
-            <option key={i}>{i}</option>
-          ))}
-        </select>
+        <span className="relative block">
+          <select name="interest" defaultValue="Not sure yet" className={`${field} appearance-none pr-9`}>
+            {[...GROUPS, "Not sure yet"].map((i) => (
+              <option key={i}>{i}</option>
+            ))}
+          </select>
+          <span aria-hidden className="pointer-events-none absolute right-3 top-1/2 mt-0.5 -translate-y-1/2 text-zinc-500">▾</span>
+        </span>
       </label>
       <label className={`${label} sm:col-span-2`}>
         Anything we should know <span className="font-normal text-zinc-500">(optional)</span>

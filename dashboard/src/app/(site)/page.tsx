@@ -10,6 +10,7 @@ export const metadata: Metadata = pageMetadata({ description: SITE_DESCRIPTION, 
 
 const h2 ="text-2xl font-semibold tracking-tight";
 const section = "scroll-mt-20 border-t border-zinc-200 pt-12 dark:border-zinc-800";
+const cta = "inline-flex min-h-11 items-center justify-center rounded-md px-5 text-sm font-medium transition-colors sm:w-auto";
 const prose = "mt-4 text-lg leading-relaxed text-zinc-700 dark:text-zinc-300";
 
 
@@ -49,6 +50,14 @@ export default function Page() {
           We are planning to participate in the PEP2027 Autonomous Uncrewed Division, a 2 mile point to point time
           challenge.
         </p>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <Link href="/join" className={`${cta} bg-zinc-900 text-white hover:bg-emerald-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-emerald-400`}>
+            Become a member
+          </Link>
+          <Link href="/#contact" className={`${cta} border border-zinc-300 hover:border-emerald-600 hover:text-emerald-700 dark:border-zinc-700 dark:hover:text-emerald-400`}>
+            Sponsor the build
+          </Link>
+        </div>
       </section>
 
       <section id="boat" className={section}>
@@ -84,6 +93,10 @@ export default function Page() {
 
       <section id="timeline" className={section}>
         <h2 className={h2}>Timeline</h2>
+        <p className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1 text-sm text-zinc-500">
+          <span className="inline-flex items-center gap-2"><span aria-hidden className="size-3 rounded-full border-2 border-emerald-600 bg-emerald-600" />A single day</span>
+          <span className="inline-flex items-center gap-2"><span aria-hidden className="size-3 rounded-full border-2 border-emerald-600" />A stretch of work</span>
+        </p>
         {/* A rail with a marker per milestone: a filled dot for a day, a hollow ring for a stretch of work. */}
         <ol className="relative ml-3 mt-8 border-l-2 sm:ml-32 border-zinc-200 dark:border-zinc-700">
           {TIMELINE.map((m) => {

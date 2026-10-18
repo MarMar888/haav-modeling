@@ -3,6 +3,13 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.7 — 2026-10-18
+
+Six more responsive UI tweaks: "Become a member" and "Sponsor the build" buttons in the home page hero (stacked full width on
+phones); 44px nav tap targets that never wrap on narrow phones; a legend for the timeline markers; a visible chevron on the
+form dropdowns; the Simulation page gets a back link, an intro line, and charts that scroll sideways on phones instead of
+shrinking; and the footer clears the iOS home indicator.
+
 ## 0.7.6 — 2026-10-17
 
 Search and AI-crawler readiness (#67): `robots.txt` (public pages open to search engines and named AI crawlers, `/api/` closed),
