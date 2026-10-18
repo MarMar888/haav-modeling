@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Simulation",
   description: "Simulation studies for Haav, a four-foot autonomous boat built from the ground up.",
-};
+  path: "/simulation",
+});
 
 export default function Page() {
   return (

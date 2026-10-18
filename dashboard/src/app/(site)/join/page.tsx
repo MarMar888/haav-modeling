@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/site";
 import { JoinForm } from "./join-form";
 
-export const metadata: Metadata = { title: "Become a member" };
+export const metadata: Metadata = pageMetadata({
+  title: "Become a member",
+  description: "Join Haav, a UW-Madison student team building an autonomous boat. Tell us about yourself and which group you want to join.",
+  path: "/join",
+});
 
 export default function Page() {
   return (

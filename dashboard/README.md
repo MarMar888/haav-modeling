@@ -35,6 +35,11 @@ database read. `/sponsors` redirects to the form at the bottom of it.
   - Replying to the email replies to the visitor. The form has a hidden honeypot field against bots and no
     other spam protection.
 
+- **Search and AI crawlers** are served by `src/app/robots.ts`, `src/app/sitemap.ts`, the `llms.txt` and `llms-full.txt` routes,
+  and the JSON-LD in `src/app/(site)/layout.tsx`. The site origin, description and list of indexable pages live in
+  [`src/lib/site.ts`](src/lib/site.ts); a new public page needs an entry in `PUBLIC_PATHS` and `pageMetadata(...)`. The
+  workshop is `noindex`, not listed in the sitemap.
+
 ## The BOM
 
 The BOM is a Postgres database on Neon, and `/bom` is a table over it. Weight is up top;

@@ -1,20 +1,18 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-const site = process.env.VERCEL_PROJECT_PRODUCTION_URL
-  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : "http://localhost:3000";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(site),
-  title: { default: "Haav | Highly Amphibious / Autonomous Vessel", template: "%s | Haav" },
-  description:
-    "Haav (Highly Amphibious / Autonomous Vessel) is a student team building a 4-foot autonomous boat from the ground up, with every decision modeled before it is built.",
+  metadataBase: new URL(SITE_URL),
+  title: { default: SITE_TITLE, template: `%s | ${SITE_NAME}` },
+  applicationName: SITE_NAME,
+  keywords: ["Haav", "autonomous boat", "autonomous vessel", "student engineering team", "UW-Madison", "PEP2027", "planing hull", "marine robotics"],
+  description: SITE_DESCRIPTION,
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

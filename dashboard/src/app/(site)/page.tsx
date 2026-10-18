@@ -1,8 +1,12 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ADVISORS, GROUPS, TEAM } from "@/lib/team";
+import { SITE_DESCRIPTION, pageMetadata } from "@/lib/site";
 import { TIMELINE } from "@/lib/timeline";
 import { InquiryForm } from "./inquiry-form";
+
+export const metadata: Metadata = pageMetadata({ description: SITE_DESCRIPTION, path: "/" });
 
 const h2 ="text-2xl font-semibold tracking-tight";
 const section = "scroll-mt-20 border-t border-zinc-200 pt-12 dark:border-zinc-800";

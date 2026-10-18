@@ -1,13 +1,42 @@
 import Link from "next/link";
 import pkg from "../../../package.json";
 import { ModeToggle } from "@/components/mode-toggle";
+import { CONTACT_EMAIL, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import { MarginArt } from "./margin-art";
 
 const link = "py-2 text-sm text-zinc-600 hover:text-emerald-700 dark:text-zinc-400 dark:hover:text-emerald-400";
 
+// Structured data for search engines and AI answer engines: who we are and what the site is.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: SITE_NAME,
+      alternateName: "Highly Amphibious / Autonomous Vessel",
+      description: SITE_DESCRIPTION,
+      url: SITE_URL,
+      logo: `${SITE_URL}/icon.svg`,
+      email: CONTACT_EMAIL,
+      parentOrganization: { "@type": "CollegeOrUniversity", name: "University of Wisconsin–Madison", url: "https://www.wisc.edu" },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      description: SITE_DESCRIPTION,
+      inLanguage: "en",
+      publisher: { "@id": `${SITE_URL}/#organization` },
+    },
+  ],
+};
+
 export default function SiteLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <a
         href="#main"
         className="sr-only z-50 rounded-md bg-zinc-900 px-4 py-2 text-sm text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4 dark:bg-zinc-100 dark:text-zinc-900"

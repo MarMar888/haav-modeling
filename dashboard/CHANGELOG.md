@@ -3,6 +3,13 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.6 — 2026-10-17
+
+Search and AI-crawler readiness (#67): `robots.txt` (public pages open to search engines and named AI crawlers, `/api/` closed),
+`sitemap.xml`, `/llms.txt` and `/llms-full.txt` (markdown summaries built from the same team and timeline data as the pages),
+canonical URLs plus Open Graph and Twitter tags on every public page, and Organization and WebSite JSON-LD. The canonical
+origin is `https://haav.build`, set in `src/lib/site.ts`. The workshop stays `noindex`.
+
 ## 0.7.5 — 2026-10-17
 
 Six more responsive UI tweaks: a branded 404 page; the Basic Spec section gets a row of spec chips; LinkedIn links are
