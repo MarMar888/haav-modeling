@@ -76,6 +76,9 @@ html {
   scrollbar-gutter: stable;
   color-scheme: light;
   -webkit-tap-highlight-color: transparent;
+  /* No double-tap-to-zoom delay on buttons and links. */
+  touch-action: manipulation;
+  text-size-adjust: 100%;
 }
 html.dark {
   color-scheme: dark;

@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata({ description: SITE_DESCRIPTION, 
 const h2 ="text-2xl font-semibold tracking-tight";
 const section = "scroll-mt-20 border-t border-zinc-200 pt-12 dark:border-zinc-800";
 const cta = "inline-flex min-h-11 items-center justify-center rounded-md px-5 text-sm font-medium transition-colors sm:w-auto";
-const prose = "mt-4 text-lg leading-relaxed text-zinc-700 dark:text-zinc-300";
+const prose = "mt-4 text-pretty text-lg leading-relaxed text-zinc-700 dark:text-zinc-300";
 
 
 export default function Page() {
@@ -65,7 +65,7 @@ export default function Page() {
         <p className={prose}>
           A 4-6 foot composite hull. Autonomy using GPS, IMU and LIDAR.
         </p>
-        <ul className="mt-6 flex flex-wrap gap-2 font-mono text-sm">
+        <ul aria-label="Key specs" className="mt-6 flex flex-wrap gap-2 font-mono text-sm">
           {["4–6 ft composite hull", "GPS", "IMU", "LIDAR", "30 lb payload", "2 mile course"].map((t) => (
             <li key={t} className="rounded-full border border-zinc-200 px-3 py-1 text-zinc-600 dark:border-zinc-700 dark:text-zinc-400">{t}</li>
           ))}
@@ -76,7 +76,7 @@ export default function Page() {
         <h2 className={h2}>Primary groups</h2>
         <ol className="mt-8 grid gap-3 sm:grid-cols-2">
           {GROUPS.map((g, i) => (
-            <li key={g} className="flex items-baseline gap-x-4 rounded-lg border border-zinc-200 px-4 py-3 transition-colors hover:border-emerald-600/60 dark:border-zinc-800">
+            <li key={g} className="flex items-baseline gap-x-4 rounded-lg border border-zinc-200 px-4 py-3 transition-[border-color,transform] hover:border-emerald-600/60 motion-safe:hover:-translate-y-0.5 dark:border-zinc-800">
               <span className="shrink-0 font-mono text-sm tabular-nums text-emerald-700 dark:text-emerald-400">{String(i + 1).padStart(2, "0")}</span>
               <span className="text-lg leading-snug">{g}</span>
             </li>

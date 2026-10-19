@@ -45,7 +45,7 @@ export default function SiteLayout({ children }: Readonly<{ children: React.Reac
       <MarginArt />
       <div className="mx-auto flex min-h-full w-full max-w-2xl flex-1 flex-col px-6">
         <header data-site-chrome className="sticky top-0 z-30 flex items-center gap-3 border-b border-zinc-200/70 bg-white/80 py-3 backdrop-blur sm:gap-6 dark:border-zinc-800/70 dark:bg-zinc-950/80">
-          <Link href="/" className="font-semibold tracking-tight">Haav</Link>
+          <Link href="/" className="-mx-2 inline-flex min-h-11 items-center px-2 font-semibold tracking-tight">Haav</Link>
           <nav className="ml-auto flex items-center gap-x-2.5 sm:gap-x-6">
             <NavLinks />
             <ModeToggle />

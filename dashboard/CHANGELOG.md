@@ -3,6 +3,13 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.9 — 2026-10-19
+
+Six more responsive UI tweaks: the "Haav" home link in the header is a 44px tap target; taps no longer wait for double-tap-zoom
+and phones keep the text size on rotate; form fields that fail validation get a red border; the sponsor form uses the right
+mobile keyboard and capitalisation per field, and focus moves to the confirmation after sending; paragraphs wrap without
+orphan words; and the group cards lift slightly on hover (the spec chips are a labelled list for screen readers).
+
 ## 0.7.8 — 2026-10-19
 
 Six more responsive UI tweaks: the header link for the section in view (or the current page) is underlined and marked

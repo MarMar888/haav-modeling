@@ -1,20 +1,26 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { INTERESTS } from "@/lib/sponsors";
 import { sendInquiry, type InquiryState } from "./actions";
 
 const field =
-  "mt-1 w-full rounded-md border border-zinc-300 bg-white px-3 py-2.5 text-base outline-none placeholder:text-zinc-400 focus:border-emerald-600 focus-visible:ring-2 focus-visible:ring-emerald-600/30 sm:py-2 sm:text-sm dark:border-zinc-700 dark:bg-zinc-900";
+  "user-invalid:border-red-500 user-invalid:focus-visible:ring-red-500/30 mt-1 w-full rounded-md border border-zinc-300 bg-white px-3 py-2.5 text-base outline-none placeholder:text-zinc-400 focus:border-emerald-600 focus-visible:ring-2 focus-visible:ring-emerald-600/30 sm:py-2 sm:text-sm dark:border-zinc-700 dark:bg-zinc-900";
 const spinner = "mr-2 inline-block size-3.5 animate-spin rounded-full border-2 border-current border-t-transparent align-[-2px] motion-reduce:animate-none";
 const label = "block text-sm font-medium";
 
 export function InquiryForm() {
   const [state, action, pending] = useActionState<InquiryState, FormData>(sendInquiry, { ok: false });
 
+  const done = useRef<HTMLParagraphElement>(null);
+  // Move focus to the confirmation so keyboard and screen-reader users land on it, and it scrolls into view on phones.
+  useEffect(() => {
+    if (state.ok) done.current?.focus();
+  }, [state.ok]);
+
   if (state.ok) {
     return (
-      <p role="status" className="flex items-start gap-3 rounded-lg border border-emerald-600/40 bg-emerald-50 p-5 text-emerald-900 dark:bg-emerald-950 dark:text-emerald-100">
+      <p ref={done} tabIndex={-1} role="status" className="flex scroll-mt-24 items-start gap-3 rounded-lg outline-none border border-emerald-600/40 bg-emerald-50 p-5 text-emerald-900 dark:bg-emerald-950 dark:text-emerald-100">
         <span aria-hidden className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xs text-white">✓</span>
         <span>Thanks. Your message reached the team.</span>
       </p>
@@ -25,15 +31,15 @@ export function InquiryForm() {
     <form action={action} className="grid gap-4 sm:grid-cols-2">
       <label className={label}>
         Name
-        <input name="name" required maxLength={200} autoComplete="name" className={field} />
+        <input name="name" required maxLength={200} autoComplete="name" autoCapitalize="words" enterKeyHint="next" className={field} />
       </label>
       <label className={label}>
         Email
-        <input name="email" type="email" required maxLength={320} autoComplete="email" className={field} />
+        <input name="email" type="email" inputMode="email" required maxLength={320} autoComplete="email" autoCapitalize="none" spellCheck={false} enterKeyHint="next" className={field} />
       </label>
       <label className={label}>
         Company or organization <span className="font-normal text-zinc-500">(optional)</span>
-        <input name="org" maxLength={200} autoComplete="organization" className={field} />
+        <input name="org" maxLength={200} autoComplete="organization" autoCapitalize="words" enterKeyHint="next" className={field} />
       </label>
       <label className={label}>
         How would you like to help?
