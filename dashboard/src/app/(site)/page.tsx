@@ -28,6 +28,7 @@ export default function Page() {
             width={1202}
             height={1008}
             priority
+            sizes="(min-width: 672px) 624px, calc(100vw - 3rem)"
             className="mx-auto h-auto max-h-[24rem] w-full object-contain"
           />
         </div>

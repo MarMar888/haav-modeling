@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
@@ -13,6 +13,15 @@ export const metadata: Metadata = {
   applicationName: SITE_NAME,
   keywords: ["Haav", "autonomous boat", "autonomous vessel", "student engineering team", "UW-Madison", "PEP2027", "planing hull", "marine robotics"],
   description: SITE_DESCRIPTION,
+};
+
+// viewport-fit=cover lets env(safe-area-inset-*) work on notched phones; the browser bar takes on the page colour.
+export const viewport: Viewport = {
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

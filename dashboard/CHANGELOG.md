@@ -3,6 +3,13 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.10 — 2026-10-19
+
+Six more responsive UI tweaks: the viewport covers notched phones so the safe-area insets actually apply (the footer already
+used them); the page keeps its side padding clear of the notch in landscape; the browser bar takes the page colour in light
+and dark; a thin progress line under the header fills as you scroll; jumping to a section briefly highlights its heading; and
+the hull image requests a size that fits the screen, dark-mode text selection is readable, and the footer email wraps on narrow phones.
+
 ## 0.7.9 — 2026-10-19
 
 Six more responsive UI tweaks: the "Haav" home link in the header is a 44px tap target; taps no longer wait for double-tap-zoom
