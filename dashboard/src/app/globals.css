@@ -72,6 +72,50 @@
 
 html {
   scroll-behavior: smooth;
+  /* Reserve the scrollbar's width so pages of different length don't shift sideways, and let native controls follow the theme. */
+  scrollbar-gutter: stable;
+  color-scheme: light;
+  -webkit-tap-highlight-color: transparent;
+}
+html.dark {
+  color-scheme: dark;
+}
+
+/* Touch feedback: links and buttons that look like buttons dip slightly while pressed. */
+a[class*="min-h-11"][class*="justify-center"],
+button[type="submit"] {
+  transition: transform 80ms ease-out, background-color 150ms, color 150ms;
+}
+a[class*="min-h-11"][class*="justify-center"]:active,
+button[type="submit"]:not(:disabled):active {
+  transform: scale(0.97);
+}
+@media (prefers-reduced-motion: reduce) {
+  a[class*="min-h-11"][class*="justify-center"]:active,
+  button[type="submit"]:not(:disabled):active {
+    transform: none;
+  }
+}
+
+/* Printing: just the content, black on white, with link addresses spelled out. */
+@media print {
+  [data-site-chrome],
+  .ma {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+  main a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    word-break: break-all;
+  }
+  section,
+  li {
+    break-inside: avoid;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   html {

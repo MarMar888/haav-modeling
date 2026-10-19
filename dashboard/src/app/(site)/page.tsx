@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ADVISORS, GROUPS, TEAM } from "@/lib/team";
-import { SITE_DESCRIPTION, pageMetadata } from "@/lib/site";
+import { CONTACT_EMAIL, SITE_DESCRIPTION, pageMetadata } from "@/lib/site";
 import { TIMELINE } from "@/lib/timeline";
 import { InquiryForm } from "./inquiry-form";
 
@@ -142,6 +142,12 @@ As a sponsor, you can get your logo on our hull, merch and website, access to ou
         <div className="mt-8">
           <InquiryForm />
         </div>
+        <p className="mt-6 text-sm text-zinc-500">
+          Prefer email?{" "}
+          <a href={`mailto:${CONTACT_EMAIL}`} className="text-emerald-700 underline underline-offset-4 hover:text-emerald-600 dark:text-emerald-400">
+            {CONTACT_EMAIL}
+          </a>
+        </p>
       </section>
     </div>
   );

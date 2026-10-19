@@ -3,6 +3,14 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.8 — 2026-10-19
+
+Six more responsive UI tweaks: the header link for the section in view (or the current page) is underlined and marked
+`aria-current`; the theme toggle is a 44px tap target on phones; buttons dip slightly when pressed; the page reserves the
+scrollbar gutter (no sideways jump between short and long pages) and native controls follow the theme; a print stylesheet
+drops the header, footer and margin art and spells out link addresses; the footer links are 44px tall and the sponsor form
+has a plain "Prefer email?" fallback.
+
 ## 0.7.7 — 2026-10-18
 
 Six more responsive UI tweaks: "Become a member" and "Sponsor the build" buttons in the home page hero (stacked full width on
