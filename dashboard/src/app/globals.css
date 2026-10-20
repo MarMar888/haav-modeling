@@ -271,3 +271,38 @@ main a[href^="mailto:"] {
     background: Highlight;
   }
 }
+
+/* Scrollbars take the page palette instead of the browser default. */
+html {
+  scrollbar-color: #a1a1aa transparent;
+}
+html.dark {
+  scrollbar-color: #52525b transparent;
+}
+
+/* Text areas grow with what is typed (browsers with field-sizing) instead of forcing a scroll inside a small box. */
+@supports (field-sizing: content) {
+  textarea {
+    field-sizing: content;
+    max-height: 60svh;
+  }
+}
+
+/* Photos sit a little softer against the dark page. */
+.dark main img {
+  filter: brightness(0.9);
+}
+
+/* Links ease into their hover colour. */
+@media (prefers-reduced-motion: no-preference) {
+  main a,
+  footer a,
+  header a {
+    transition: color 0.15s ease;
+  }
+}
+
+/* Dates line up as the digits are the same width. */
+main time {
+  font-variant-numeric: tabular-nums;
+}

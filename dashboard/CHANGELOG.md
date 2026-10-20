@@ -3,6 +3,12 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.12 — 2026-10-20
+
+Six more responsive UI tweaks: scrollbars take the page palette in light and dark; text areas grow as you type; photos are
+slightly dimmed in dark mode; links ease into their hover colour; timeline dates use tabular digits; and the external
+DI Lab link in the footer carries a ↗ marker.
+
 ## 0.7.11 — 2026-10-20
 
 Six more responsive UI tweaks: form controls use the site's emerald accent; paragraphs hyphenate on narrow screens; the 404
