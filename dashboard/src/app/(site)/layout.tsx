@@ -38,7 +38,7 @@ export default function SiteLayout({ children }: Readonly<{ children: React.Reac
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <a
         href="#main"
-        className="sr-only z-50 rounded-md bg-zinc-900 px-4 py-2 text-sm text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4 dark:bg-zinc-100 dark:text-zinc-900"
+        className="sr-only z-50 min-h-11 items-center rounded-md bg-zinc-900 px-4 py-2 text-sm focus:inline-flex text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4 dark:bg-zinc-100 dark:text-zinc-900"
       >
         Skip to content
       </a>

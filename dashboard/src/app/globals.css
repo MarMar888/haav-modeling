@@ -79,6 +79,8 @@ html {
   /* No double-tap-to-zoom delay on buttons and links. */
   touch-action: manipulation;
   text-size-adjust: 100%;
+  /* Checkboxes, radios and range inputs use the site's emerald instead of the browser blue. */
+  accent-color: #10b981;
 }
 html.dark {
   color-scheme: dark;
@@ -234,4 +236,38 @@ body {
 }
 @media print {
   .scroll-progress::after { display: none; }
+}
+
+/* Long words break with a hyphen on narrow screens instead of leaving ragged gaps or overflowing. */
+main p {
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+main a[href^="mailto:"] {
+  hyphens: none;
+}
+
+/* Higher-contrast preference: stronger borders and a thicker focus ring. */
+@media (prefers-contrast: more) {
+  :root {
+    --border: oklch(0.55 0.01 286);
+    --input: oklch(0.55 0.01 286);
+  }
+  .dark {
+    --border: oklch(1 0 0 / 45%);
+    --input: oklch(1 0 0 / 55%);
+  }
+  :focus-visible {
+    outline-width: 3px;
+  }
+}
+
+/* Windows high-contrast mode: use system colours for the focus ring and the progress line. */
+@media (forced-colors: active) {
+  :focus-visible {
+    outline-color: Highlight;
+  }
+  .scroll-progress::after {
+    background: Highlight;
+  }
 }

@@ -3,6 +3,13 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.11 — 2026-10-20
+
+Six more responsive UI tweaks: form controls use the site's emerald accent; paragraphs hyphenate on narrow screens; the 404
+page respects the notch and offers a "Become a member" button next to "Back to Haav"; the skip link is a 44px target;
+a high-contrast preference strengthens borders and the focus ring; and Windows high-contrast mode gets system-colour focus
+and progress lines.
+
 ## 0.7.10 — 2026-10-19
 
 Six more responsive UI tweaks: the viewport covers notched phones so the safe-area insets actually apply (the footer already
