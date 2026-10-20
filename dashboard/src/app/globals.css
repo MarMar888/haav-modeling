@@ -306,3 +306,46 @@ html.dark {
 main time {
   font-variant-numeric: tabular-nums;
 }
+
+/* Autofilled fields keep the page palette instead of the browser's yellow/blue fill. */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: var(--foreground);
+  box-shadow: 0 0 0 1000px var(--background) inset;
+  caret-color: var(--foreground);
+}
+
+/* Placeholders are one solid, readable grey in both themes (Firefox fades them by default). */
+::placeholder {
+  opacity: 1;
+}
+.dark ::placeholder {
+  color: #71717a;
+}
+
+/* The text cursor in fields uses the site's emerald. */
+input,
+textarea {
+  caret-color: #10b981;
+}
+
+/* Text areas only stretch up and down, so they never overflow the form on a phone. */
+textarea {
+  resize: vertical;
+}
+
+/* Underlined links get a thin line that skips descenders. */
+main a.underline {
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink: auto;
+}
+
+/* No sideways rubber-band on touch screens and trackpads, and no text-selection or callout when tapping buttons. */
+html,
+body {
+  overscroll-behavior-x: none;
+}
+button {
+  -webkit-touch-callout: none;
+  user-select: none;
+}

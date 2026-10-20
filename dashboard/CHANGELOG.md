@@ -3,6 +3,12 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.13 — 2026-10-20
+
+Six more responsive UI tweaks: autofilled fields keep the page palette; placeholders are one readable grey in both themes;
+the text cursor in fields is emerald; text areas resize vertically only; underlined links get a thin line that skips
+descenders; and the page no longer rubber-bands sideways while buttons ignore long-press text selection.
+
 ## 0.7.12 — 2026-10-20
 
 Six more responsive UI tweaks: scrollbars take the page palette in light and dark; text areas grow as you type; photos are
