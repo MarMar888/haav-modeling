@@ -440,3 +440,45 @@ input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
   margin: 0;
 }
+
+/* Keyboard keys read as keys: a small bordered chip in the monospace font. */
+main kbd {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 0.85em;
+  padding: 0.1em 0.4em;
+  border: 1px solid currentColor;
+  border-radius: 0.3em;
+  white-space: nowrap;
+}
+
+/* Expandable sections: the whole summary line is a pointer target, with a comfortable touch height. */
+main summary {
+  cursor: pointer;
+  min-height: 2.75rem;
+  padding-block: 0.5rem;
+}
+
+/* Horizontal rules are one thin, muted line in both themes. */
+main hr {
+  border: 0;
+  border-top: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+}
+
+/* Abbreviations with a tooltip get a dotted underline so touch and mouse visitors both see they carry a definition. */
+abbr[title] {
+  text-decoration: underline dotted;
+  text-underline-offset: 0.2em;
+  cursor: help;
+}
+
+/* Captions balance their lines instead of leaving a short tail on narrow screens. */
+figcaption {
+  text-wrap: balance;
+}
+
+/* Labels, dropdowns and file-picker buttons show a pointer like other clickable controls. */
+label[for],
+select:not(:disabled),
+input[type="file"]::file-selector-button {
+  cursor: pointer;
+}

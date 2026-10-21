@@ -3,6 +3,12 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.16 — 2026-10-21
+
+Six more responsive UI tweaks: keyboard keys render as small chips; expandable summaries are full-width pointer targets with a
+touch-sized height; horizontal rules are one thin muted line; abbreviations with a tooltip get a dotted underline; figure
+captions balance their lines; and labels, dropdowns and file-picker buttons show a pointer.
+
 ## 0.7.15 — 2026-10-21
 
 Six more responsive UI tweaks: form controls inherit the page font and letter spacing; fields turn red only after the visitor
