@@ -3,6 +3,12 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.14 — 2026-10-21
+
+Six more responsive UI tweaks: paragraphs and list items avoid a lone last word; anchored sections and focused fields clear
+the sticky header; text renders crisper on macOS and iOS; buttons show a pointer and disabled ones look disabled; fields are
+16px on touch screens so iOS does not zoom on focus; and long words in headings wrap instead of overflowing.
+
 ## 0.7.13 — 2026-10-20
 
 Six more responsive UI tweaks: autofilled fields keep the page palette; placeholders are one readable grey in both themes;

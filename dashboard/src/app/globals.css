@@ -349,3 +349,45 @@ button {
   -webkit-touch-callout: none;
   user-select: none;
 }
+
+/* Paragraphs avoid a single orphaned word on the last line. */
+main p,
+main li {
+  text-wrap: pretty;
+}
+
+/* Anchored headings and the focused-field scroll clear the sticky header. */
+html {
+  scroll-padding-top: 5rem;
+}
+
+/* Crisper text on macOS and iOS. */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Buttons show a pointer; disabled ones look and feel disabled. */
+button:not(:disabled),
+[role="button"] {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Phones: fields are 16px so iOS Safari does not zoom the page when one is focused. */
+@media (pointer: coarse) {
+  input,
+  textarea,
+  select {
+    font-size: max(1rem, 16px);
+  }
+}
+
+/* Long words in headings wrap instead of pushing the page sideways on narrow phones. */
+main :is(h1, h2, h3) {
+  overflow-wrap: break-word;
+}
