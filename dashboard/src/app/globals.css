@@ -391,3 +391,52 @@ button:disabled {
 main :is(h1, h2, h3) {
   overflow-wrap: break-word;
 }
+
+/* Form controls inherit the page font and spacing instead of the browser's system font. */
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  letter-spacing: inherit;
+}
+
+/* A field the visitor has filled in wrongly turns red once they have interacted with it (not on first load). */
+input:user-invalid,
+textarea:user-invalid,
+select:user-invalid {
+  border-color: var(--destructive);
+  outline-color: var(--destructive);
+}
+
+/* Photos and embedded media never outgrow their column on a narrow screen. */
+main :is(img, video) {
+  max-width: 100%;
+}
+
+/* Code samples and preformatted text scroll inside their box rather than widening the page. */
+main pre {
+  overflow-x: auto;
+  max-width: 100%;
+}
+main code {
+  overflow-wrap: anywhere;
+}
+
+/* Disabled fields look and feel disabled, like disabled buttons. */
+input:disabled,
+textarea:disabled,
+select:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Number fields drop the tiny spinner arrows that are hard to hit on touch screens. */
+input[type="number"] {
+  appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}

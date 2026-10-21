@@ -3,6 +3,12 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.15 — 2026-10-21
+
+Six more responsive UI tweaks: form controls inherit the page font and letter spacing; fields turn red only after the visitor
+has filled them in wrongly; images and video never outgrow their column; code samples scroll inside their box; disabled fields
+look and feel disabled; and number fields drop the tiny spinner arrows that are hard to hit on touch screens.
+
 ## 0.7.14 — 2026-10-21
 
 Six more responsive UI tweaks: paragraphs and list items avoid a lone last word; anchored sections and focused fields clear
