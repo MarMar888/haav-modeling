@@ -1,0 +1,992 @@
+[
+  {
+    "team": "William & Mary",
+    "division": "Autonomy (2 miles, fully autonomous, 30 lb payload)",
+    "division_rank": 1,
+    "official_score": 88.7,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/WilliamMary",
+    "team_page_score_blocks": [
+      {
+        "competition": "Autonomy",
+        "Race Score": 60.0,
+        "Report Score": 14.0,
+        "Video Score": 14.7,
+        "Total Score": 68.4
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 40.0,
+        "Report Score": 17.7,
+        "Video Score": 18.3,
+        "Total Score": 79.0
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/autonomy_01_william-mary__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/WM/WilliamMary_White_Paper_2026.pdf",
+        "page_count": 15,
+        "char_count": 25542,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Virginia Commonwealth University",
+    "division": "Autonomy (2 miles, fully autonomous, 30 lb payload)",
+    "division_rank": 2,
+    "official_score": 73.0,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/VCU",
+    "team_page_score_blocks": [
+      {
+        "competition": "Autonomy",
+        "Race Score": 56.0,
+        "Report Score": 12.7,
+        "Video Score": 12.3,
+        "Total Score": 81.0
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 40.0,
+        "Report Score": 11.2,
+        "Video Score": 17.2,
+        "Total Score": 68.4
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/autonomy_02_virginia-commonwealth-university__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/VCU/VCU%20PEP26%20White%20Paper.pdf",
+        "page_count": 16,
+        "char_count": 25596,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Johns Hopkins University",
+    "division": "Autonomy (2 miles, fully autonomous, 30 lb payload)",
+    "division_rank": 3,
+    "official_score": 51.5,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/JHU",
+    "team_page_score_blocks": [
+      {
+        "competition": "Autonomy",
+        "Race Score": 18.0,
+        "Report Score": 18.0,
+        "Video Score": 17.5,
+        "Total Score": 53.5
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/autonomy_03_johns-hopkins-university__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/JHU/JHU_PEP26_WHITE_PAPER.pdf",
+        "page_count": 15,
+        "char_count": 27580,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "North Carolina State",
+    "division": "Autonomy (2 miles, fully autonomous, 30 lb payload)",
+    "division_rank": 4,
+    "official_score": 41.3,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/NCState",
+    "team_page_score_blocks": [
+      {
+        "competition": "Over-The-Horizon",
+        "Race Score": 0.0,
+        "Report Score": 17.0,
+        "Video Score": 17.5,
+        "Total Score": 34.5
+      },
+      {
+        "competition": "Autonomy",
+        "Race Score": 10.0,
+        "Report Score": 18.3,
+        "Video Score": 15.0,
+        "Total Score": 43.3
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 40.0,
+        "Report Score": 15.0,
+        "Video Score": 16.0,
+        "Total Score": 74.0
+      }
+    ],
+    "notes": "Page also lists an 'UPDATED White Papers' file, but it is the Over-the-Horizon RC boat paper (Flying Dutchman), so it is excluded.",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/autonomy_04_north-carolina-state__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/NCstate/NCSU_Autonomy_White_Paper.pdf",
+        "page_count": 15,
+        "char_count": 30598,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Univ. of Illinois",
+    "division": "Autonomy (2 miles, fully autonomous, 30 lb payload)",
+    "division_rank": 5,
+    "official_score": 40.8,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/Illinois",
+    "team_page_score_blocks": [
+      {
+        "competition": "Autonomy",
+        "Race Score": 10.0,
+        "Report Score": 16.3,
+        "Video Score": 16.5,
+        "Total Score": 42.8
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 20.0,
+        "Report Score": 17.5,
+        "Video Score": 15.5,
+        "Total Score": 56.0
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/autonomy_05_univ-of-illinois__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/UIUC/University%20of%20Illinois%20White%20Paper.pdf",
+        "page_count": 15,
+        "char_count": 28626,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Longwood University",
+    "division": "Autonomy (2 miles, fully autonomous, 30 lb payload)",
+    "division_rank": 6,
+    "official_score": 40.5,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/Longwood",
+    "team_page_score_blocks": [
+      {
+        "competition": "Autonomy",
+        "Race Score": 0.0,
+        "Report Score": 12.5,
+        "Video Score": 0.0,
+        "Total Score": 12.5
+      }
+    ],
+    "notes": "No white paper posted. Team page has an empty href for its 2026 PPT.",
+    "documents": []
+  },
+  {
+    "team": "UVA Autonomous Watercraft Club",
+    "division": "Autonomy (2 miles, fully autonomous, 30 lb payload)",
+    "division_rank": 7,
+    "official_score": 37.5,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/UVA",
+    "team_page_score_blocks": [
+      {
+        "competition": "Over-the-Horizon/Uncrewed",
+        "Race Score": 0.0,
+        "Report Score": 19.0,
+        "Video Score": 18.5,
+        "Total Score": 37.5
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 45.0,
+        "Report Score": 13.5,
+        "Video Score": 6.5,
+        "Total Score": 65.0
+      }
+    ],
+    "notes": "Top Engineering Presentation. Team page labels the 37.5 entry 'Over-the-Horizon/Uncrewed'.",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/autonomy_07_uva-autonomous-watercraft-club__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/UVa/UVA%20-%20PEP26%20White%20Paper%20Submission.pdf",
+        "page_count": 16,
+        "char_count": 36478,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Univ. of Pittsburgh",
+    "division": "Autonomy (2 miles, fully autonomous, 30 lb payload)",
+    "division_rank": 8,
+    "official_score": 34.0,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/PITT",
+    "team_page_score_blocks": [
+      {
+        "competition": "Autonomy",
+        "Race Score": 0.0,
+        "Report Score": 17.0,
+        "Video Score": 17.0,
+        "Total Score": 34.0
+      }
+    ],
+    "notes": "Tied. Document is titled a technical report.",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/autonomy_08_univ-of-pittsburgh__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/PITT/PITT_PEP_ASNE_Technical_Report.pdf",
+        "page_count": 14,
+        "char_count": 35998,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Stevens Institute",
+    "division": "Autonomy (2 miles, fully autonomous, 30 lb payload)",
+    "division_rank": 9,
+    "official_score": 34.0,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/Stevens",
+    "team_page_score_blocks": [
+      {
+        "competition": "Planing",
+        "Race Score": 52.0,
+        "Report Score": 16.5,
+        "Video Score": 17.5,
+        "Total Score": 86.0
+      },
+      {
+        "competition": "Autonomy",
+        "Race Score": 0.0,
+        "Report Score": 17.0,
+        "Video Score": 17.0,
+        "Total Score": 34.0
+      },
+      {
+        "competition": "Planing",
+        "Race Score": 60.0,
+        "Report Score": 12.5,
+        "Video Score": 16.5,
+        "Total Score": 92.0
+      }
+    ],
+    "notes": "Tied. Using the Unmanned paper, not the Manned/Planing one.",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/autonomy_09_stevens-institute__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/Stevens/Stevens%20FINAL%20PEP%202026%20Unmanned%20White%20Paper.pdf",
+        "page_count": 17,
+        "char_count": 22838,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Univ. of Kentucky",
+    "division": "Autonomy (2 miles, fully autonomous, 30 lb payload)",
+    "division_rank": 10,
+    "official_score": 33.3,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/Kentucky",
+    "team_page_score_blocks": [
+      {
+        "competition": "Autonomy",
+        "Race Score": 0.0,
+        "Report Score": 17.0,
+        "Video Score": 16.3,
+        "Total Score": 33.3
+      },
+      {
+        "competition": "Over-the-Horizon",
+        "Race Score": 0.0,
+        "Report Score": 14.25,
+        "Video Score": 15.5,
+        "Total Score": 29.75
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 53.0,
+        "Report Score": 8.7,
+        "Video Score": 12.7,
+        "Total Score": 74.3
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 30.0,
+        "Report Score": 16.5,
+        "Video Score": 13.0,
+        "Total Score": 59.5
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 0.0,
+        "Report Score": 16.0,
+        "Video Score": 17.3,
+        "Total Score": 33.3
+      }
+    ],
+    "notes": "Using the Aquanomous paper, not the Over-the-Horizon 'Project Ripple' paper.",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/autonomy_10_univ-of-kentucky__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/UK/UK-Aquanomous-PEP26%20Whitepaper.pdf",
+        "page_count": 16,
+        "char_count": 33012,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Virginia Tech",
+    "division": "Autonomy (2 miles, fully autonomous, 30 lb payload)",
+    "division_rank": 11,
+    "official_score": 24.0,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/VT",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed",
+        "Race Score": 0.0,
+        "Report Score": 17.0,
+        "Video Score": 7.0,
+        "Total Score": 24.0
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 45.0,
+        "Report Score": 14.5,
+        "Video Score": 13.5,
+        "Total Score": 76.0
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/autonomy_11_virginia-tech__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/VT/VT-Autoboat-PEP%202026%20WhitePaper.pdf",
+        "page_count": 21,
+        "char_count": 32417,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Princeton Electric Speedboating",
+    "division": "Autonomy (2 miles, fully autonomous, 30 lb payload)",
+    "division_rank": 12,
+    "official_score": 20.0,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/Princeton",
+    "team_page_score_blocks": [
+      {
+        "competition": "Planing",
+        "Race Score": 70.0,
+        "Report Score": 18.0,
+        "Video Score": 16.0,
+        "Total Score": 94.0
+      },
+      {
+        "competition": "Autonomy",
+        "Race Score": 0.0,
+        "Report Score": 11.0,
+        "Video Score": 9.0,
+        "Total Score": 20.0
+      },
+      {
+        "competition": "Displacement",
+        "Race Score": 0.0,
+        "Report Score": 12.5,
+        "Video Score": 0.0,
+        "Total Score": 12.5
+      },
+      {
+        "competition": "Over-the-Horizon",
+        "Race Score": 0.0,
+        "Report Score": 14.0,
+        "Video Score": 6.3,
+        "Total Score": 20.3
+      },
+      {
+        "competition": "Displacement",
+        "Race Score": 12.0,
+        "Report Score": 13.0,
+        "Video Score": 15.0,
+        "Total Score": 43.0
+      },
+      {
+        "competition": "Planing",
+        "Race Score": 24.0,
+        "Report Score": 16.0,
+        "Video Score": 17.5,
+        "Total Score": 60.5
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 0.0,
+        "Report Score": 13.0,
+        "Video Score": 16.7,
+        "Total Score": 32.7
+      }
+    ],
+    "notes": "Using the Unmanned_Autonomous paper only.",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/autonomy_12_princeton-electric-speedboating__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/Princeton/PES_Unmanned_Autonomous_PEP26_White%20Paper.pdf",
+        "page_count": 15,
+        "char_count": 20718,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Mass Maritime",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 1,
+    "official_score": 97.8,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/MassMaritime",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed",
+        "Race Score": 60.0,
+        "Report Score": 19.3,
+        "Video Score": 18.5,
+        "Total Score": 97.8
+      }
+    ],
+    "notes": "Tied Top Overall Paper.",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_01_mass-maritime__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/MassMaritime/Mass%20Maritime%20-%20Birddoggers%20White%20Paper%20PEP26.pdf",
+        "page_count": 16,
+        "char_count": 27271,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "East Carolina University",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 2,
+    "official_score": 93.0,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/ECU",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed Open",
+        "Race Score": 56.0,
+        "Report Score": 18.5,
+        "Video Score": 18.5,
+        "Total Score": 93.0
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_02_east-carolina-university__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/ECU/ECU%20PEP%20BOAT%20WHITE%20PAPER.pdf",
+        "page_count": 15,
+        "char_count": 44631,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Madison College",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 3,
+    "official_score": 83.7,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/MadisonCollege",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed",
+        "Race Score": 48.0,
+        "Report Score": 19.3,
+        "Video Score": 16.4,
+        "Total Score": 83.7
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 45.0,
+        "Report Score": 14.0,
+        "Video Score": 8.8,
+        "Total Score": 67.8
+      }
+    ],
+    "notes": "Tied Top Overall Paper.",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_03_madison-college__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/Madison/MATC%20PEP26%20White%20Paper.pdf",
+        "page_count": 16,
+        "char_count": 37692,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Robotics Club of Central Florida (UCF)",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 4,
+    "official_score": 78.5,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/UCF",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed",
+        "Race Score": 52.0,
+        "Report Score": 16.0,
+        "Video Score": 10.5,
+        "Total Score": 33.5
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 0.0,
+        "Report Score": 17.3,
+        "Video Score": 19.0,
+        "Total Score": 39.3
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_04_robotics-club-of-central-florida-ucf__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/UCF/PEP26-WhitePaper-RCCF.pdf",
+        "page_count": 15,
+        "char_count": 24270,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Norfolk State University",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 5,
+    "official_score": 57.7,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/NorfolkState",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed - Open",
+        "Race Score": 44.0,
+        "Report Score": 10.0,
+        "Video Score": 11.5,
+        "Total Score": 65.5
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_05_norfolk-state-university__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/NorfolkState/NorfolkState-PEP26-WhitePaper.pdf",
+        "page_count": 16,
+        "char_count": 47560,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Elon University",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 6,
+    "official_score": 43.3,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/Elon",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed",
+        "Race Score": 10.0,
+        "Report Score": 16.3,
+        "Video Score": 17.0,
+        "Total Score": 43.3
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 40.0,
+        "Report Score": 14.0,
+        "Video Score": 15.0,
+        "Total Score": 72.0
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_06_elon-university__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/Elon/Elon%20University%20White%20Paper.pdf",
+        "page_count": 12,
+        "char_count": 12897,
+        "pages_without_text": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "team": "Howard University",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 7,
+    "official_score": 42.0,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/Howard",
+    "team_page_score_blocks": [
+      {
+        "competition": "Autonomy",
+        "Race Score": 30.0,
+        "Report Score": 7.3,
+        "Video Score": 11.5,
+        "Total Score": 48.8
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 40.0,
+        "Report Score": 14.3,
+        "Video Score": 13.7,
+        "Total Score": 36.4
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_07_howard-university__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/Howard/White%20Paper%20Final%20Report%20-%20Howard%20University.pdf",
+        "page_count": 15,
+        "char_count": 17038,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Univ. of Alabama",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 8,
+    "official_score": 36.7,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/Alabama",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed",
+        "Race Score": 0.0,
+        "Report Score": 18.7,
+        "Video Score": 18.0,
+        "Total Score": 36.7
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 40.0,
+        "Report Score": 18.3,
+        "Video Score": 17.7,
+        "Total Score": 79.0
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_08_univ-of-alabama__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/AL/UA%20Saban%27s%20Sailors%20PEP%202026%20White%20Paper.pdf",
+        "page_count": 16,
+        "char_count": 39642,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Texas A&M",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 9,
+    "official_score": 36.3,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/TAMU",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed",
+        "Race Score": 10.0,
+        "Report Score": 15.7,
+        "Video Score": 10.7,
+        "Total Score": 36.3
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 0.0,
+        "Report Score": 18.0,
+        "Video Score": 14.0,
+        "Total Score": 32.0
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_09_texas-a-m__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/TAMU/PEP26%20TAMU%20White%20Paper.pdf",
+        "page_count": 16,
+        "char_count": 16303,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "NU Robotics (Northeastern)",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 10,
+    "official_score": 33.7,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/Northeastern",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed",
+        "Race Score": 0.0,
+        "Report Score": 17.0,
+        "Video Score": 16.7,
+        "Total Score": 33.7
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 5.0,
+        "Report Score": 17.5,
+        "Video Score": 18.0,
+        "Total Score": 43.5
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_10_nu-robotics-northeastern__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/NUrobotics/Northeastern%20University%20-%20PEP%202026%20White%20Paper.pdf",
+        "page_count": 16,
+        "char_count": 26014,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Univ. of Toledo",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 11,
+    "official_score": 29.5,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/Toledo",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed"
+      }
+    ],
+    "notes": "Paper is hosted under the UK/ folder on the site. Team page shows no score block.",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_11_univ-of-toledo__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/UK/Univeristy%20of%20Toledo%20%28Uncrewed%20Open%29%20PEP%20White%20Paper.pdf",
+        "page_count": 12,
+        "char_count": 19690,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Auburn",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 12,
+    "official_score": 26.0,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/Auburn",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed",
+        "Race Score": 0.0,
+        "Report Score": 13.7,
+        "Video Score": 13.0,
+        "Total Score": 26.7
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 65.0,
+        "Report Score": 16.0,
+        "Video Score": 16.0,
+        "Total Score": 95.0
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_12_auburn__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/Auburn/Auburn%20University%20White%20Paper.pdf",
+        "page_count": 19,
+        "char_count": 22781,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Univ. at Buffalo",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 13,
+    "official_score": 24.0,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/Buffalo",
+    "team_page_score_blocks": [
+      {
+        "competition": "Displacement",
+        "Race Score": 60.0,
+        "Report Score": 15.3,
+        "Video Score": 15.0,
+        "Total Score": 90.3
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 0.0,
+        "Report Score": 11.0,
+        "Video Score": 14.0,
+        "Total Score": 24.0
+      },
+      {
+        "competition": "Displacement",
+        "Race Score": 60.0,
+        "Report Score": 11.0,
+        "Video Score": 10.7,
+        "Total Score": 81.7
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 40.0,
+        "Report Score": 13.5,
+        "Video Score": 10.5,
+        "Total Score": 64.0
+      }
+    ],
+    "notes": "Using the Unmanned paper, not Crewed Displacement.",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_13_univ-at-buffalo__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/Buffalo/UB_Unmanned_PEP26_WhitePaper.pdf",
+        "page_count": 15,
+        "char_count": 25677,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "UCONN",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 14,
+    "official_score": 22.5,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/UCONN",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed",
+        "Race Score": 0.0,
+        "Report Score": 9.0,
+        "Video Score": 13.5,
+        "Total Score": 24.5
+      },
+      {
+        "competition": "Uncrewed",
+        "Race Score": 40.0,
+        "Report Score": 11.3,
+        "Video Score": 9.3,
+        "Total Score": 60.7
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_14_uconn__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/UCONN/UCONN-%20SD%20-%20White%20Paper.pdf",
+        "page_count": 21,
+        "char_count": 34214,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Univ. of Georgia",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 15,
+    "official_score": 20.5,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/Georgia",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed",
+        "Race Score": 52.0,
+        "Report Score": 5.0,
+        "Video Score": 9.0,
+        "Total Score": 66.0
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_15_univ-of-georgia__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/Georgia/UGA%20PEP26%20White%20Paper.pdf",
+        "page_count": 14,
+        "char_count": 17406,
+        "pages_without_text": []
+      }
+    ]
+  },
+  {
+    "team": "Univ. of Delaware",
+    "division": "Uncrewed Open (2 miles, remote controlled, 60 lb payload)",
+    "division_rank": 16,
+    "official_score": 13.7,
+    "official_score_source": "https://www.navalengineers.org/Education/PEP26",
+    "team_page": "https://www.navalengineers.org/Delaware",
+    "team_page_score_blocks": [
+      {
+        "competition": "Uncrewed",
+        "Race Score": 30.0,
+        "Report Score": 14.3,
+        "Video Score": 13.7,
+        "Total Score": 61.0
+      }
+    ],
+    "notes": "",
+    "documents": [
+      {
+        "document_type": "white_paper",
+        "json": "json/uncrewed_16_univ-of-delaware__white_paper.json",
+        "source_url": "https://www.navalengineers.org/Portals/16/PEP/2026/Delaware/University%20of%20Delaware%20ASNE26%20White%20Paper.pdf",
+        "page_count": 10,
+        "char_count": 15312,
+        "pages_without_text": []
+      }
+    ]
+  }
+]

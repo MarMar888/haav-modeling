@@ -5,7 +5,7 @@ outside as the skin and taped inside at the joints, with custom inflatable tubes
 plywood baseboard inside. Two Flipsky 65150 pods, each with its VESC built in, push it on 12S and steer
 it by differential thrust. Phase 2 adds a sensor tower and an autopilot that drives it over LTE.
 
-This repo holds four things, each documented where it lives, not here:
+This repo holds five things, each documented where it lives, not here:
 
 | Folder | What it is | Status |
 |---|---|---|
@@ -13,6 +13,7 @@ This repo holds four things, each documented where it lives, not here:
 | [`dashboard/`](dashboard/) | The BOM (a Postgres table on Neon, shown and edited on a Next.js site) and the optimizer results viewer | Live — the public project and sponsor pages, plus the team workshop you open day to day |
 | [`optimization/`](optimization/) | The boat-design optimizer: one model picks hull geometry, drive, battery and speed together | Working demo. The numbers are synthetic fixtures, not a design recommendation yet — see its README |
 | [`archive/`](archive/) | Earlier phases, kept for the reasoning, not the parts | Historical. The project started as a bought catamaran hull before becoming the RIB above |
+| [`PEP2026TeamExtractions/`](PEP2026TeamExtractions/) | Raw text of the PEP26 Autonomy and Uncrewed Open white papers, with charts of what the teams built (motors, batteries, race points) and a TFL SSS motor catalog | Research data, not part of the design. Doesn't version; see its README |
 | [`docs/`](docs/) | Reference material that isn't part of the design itself | [`docs/PEP-Rules/`](docs/PEP-Rules/) holds the official race rules; [`docs/white-paper/`](docs/white-paper/) is the scaffold for the required 20-point submission, unwritten so far |
 
 ## If you're new here
