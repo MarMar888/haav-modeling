@@ -341,7 +341,10 @@ explore notebook and does not import CAD geometry yet.
 
 `explore.ipynb` is a working model of the boat described in `optimization2.md` for exploring by hand: a prismatic
 hull with OpenPlaning for the planing balance, plus hydrostatics, propeller, battery voltage and the constraints, with
-sweeps, sliders and a small search. It is separate from the finalops solver above and uses placeholder component data. Its propeller has a small model (actuator-disk efficiency, mass that grows with diameter cubed, a tip-speed limit), so
+sweeps, sliders and a small search. It is separate from the finalops solver above and uses placeholder cell, speed controller and propeller data. The motor is real: one winding of one
+SSS brushless motor, chosen from the supplier spec sheet in `sss_motors.csv` (27 motors, 263 windings; the 33 whose resistance entry looks like a typo on the
+sheet are left out unless `INCLUDE_SUSPECT_R = True`). Kv, max current and voltage, continuous power and weight come from the sheet, and the motor's current and efficiency come from a DC
+motor model at the propeller's operating point, so the torque and rpm a propeller asks for now decide which motors can drive it. Its propeller has a small model (actuator-disk efficiency, mass that grows with diameter cubed, a tip-speed limit), so
 pitch and diameter are searched along with the hull, motor and battery.
 
 After section 7 the notebook has an eleven-chart overview of how the model operates (pipeline, propeller/thrust/motor drive, hull, mass and balance,
@@ -353,12 +356,32 @@ the seeds, a target speed and which designs to compare. The notebook then search
 `DESIGNS`. Every later chart reads from that dictionary, so adding your own design to `EXTRA_DESIGNS` puts it in all of them.
 Run All takes about two and a half minutes, most of it the searches.
 
+**Local setup:** after creating `optimization/.venv` as above, also run
+`optimization/.venv/bin/python -m pip install -r optimization/requirements-notebook.txt`. That adds `openplaning`, `ipywidgets`,
+`matplotlib`, `jupyterlab`, and `setuptools<81`. Without the pin, `from openplaning import PlaningBoat` fails with
+`ModuleNotFoundError: No module named 'pkg_resources'`, because newer virtualenvs no longer install `setuptools` and
+setuptools 81 and later no longer ship `pkg_resources`.
+
 **Colab:** `explore.ipynb` also runs in Google Colab with no setup. Open it with
 [this link](https://colab.research.google.com/github/MarMar888/hav/blob/master/optimization/explore.ipynb) and choose Runtime, Run all.
 Its first code cell installs `openplaning` (pinning `setuptools<81`, as `requirements-notebook.txt` does); Colab already has the rest.
+The notebook reads `sss_motors.csv` from beside itself, and falls back to the copy on GitHub when the file is not there (as in Colab).
 
 `openplaning-reference.ipynb` is a different, smaller notebook: a reference for the `PlaningBoat` class
 itself (what it takes as input vs what it computes, split into hull and propulsion), built on the
 openplaning README's own documented Savitsky '76 worked example rather than this project's hull - use it
 to understand the library before trusting `explore.ipynb`'s use of it. Same setup as above, just point
 `jupyter lab` at `optimization/openplaning-reference.ipynb` instead.
+
+`willmarley.ipynb` is a third, standalone notebook: one battery runtime equation,
+`minutes = 0.8 * Capacity(Ah) * Voltage(V) * battery efficiency / (load power(W) * motor efficiency) * 60`,
+with a lower and upper bound on each input and a sweep of each input on its own (others at their midpoint).
+It ends with one first-quadrant torque vs speed graph of the 5Y winding of every SSS motor on the supplier spec sheet,
+with the motors named in the PEP 2025 and 2026 white papers highlighted
+(27 models, 263 windings in all, typed into `sss_motors.csv`, which the notebook reads from its own folder;
+change `WINDING` to plot another winding). It needs only `numpy` and
+`matplotlib` and does not use `explore.ipynb`'s model. Its first code cell runs `%pip install -q matplotlib numpy`,
+which installs into whichever kernel runs it. In VS Code, open the notebook, choose Select Kernel, then Python
+Environments, and pick `optimization/.venv` (create it as in the setup above and add `ipykernel`). The notebook's
+kernel is the generic `python3`, so it follows that choice. Tracking issue:
+[#85](https://github.com/MarMar888/hav/issues/85).

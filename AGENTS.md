@@ -21,7 +21,7 @@ Charts, sweeps, widgets and other Part II storytelling do not change the model a
 How to do it:
 
 1. Edit the notebook, then edit the matching text in `explore-model.tex`. The main text explains in plain words;
-   the appendices hold the exact formulas (A), constants (B) and the twenty margins (C). Update every place a changed
+   the appendices hold the exact formulas (A), constants (B) and the twenty-three margins (C). Update every place a changed
    value appears, including the margin counts and group counts in the main text.
 2. If a change moves the baseline, re-run it and refresh the worked example tables (`fastest_feasible(DESIGN, FIXED)`).
    Do not hand-type the numbers.

@@ -64,19 +64,19 @@ Those make the boat heavier. A heavier boat needs more power to go the same spee
 You have to choose them together, along with the shape of the hull, and then see whether the whole thing works.
 
 That is what the model does. You give it a complete design. It works out how much the boat weighs, where the weight sits, how hard the water pushes back,
-how much power that takes and how much battery that uses. Then it checks the design against twenty-two rules. If the design passes, the model tells you how long the race would take.
+how much power that takes and how much battery that uses. Then it checks the design against twenty-three rules. If the design passes, the model tells you how long the race would take.
 
-One warning. Nothing here has been checked against a real boat. The battery cells, the motor weights and the propeller's blade losses and weight are all placeholders.
+One warning. Nothing here has been checked against a real boat. The motor is real data from the supplier's spec sheet, but the battery cells, the speed controller's efficiency and the propeller's blade losses and weight are placeholders.
 So read the answers as ``what the model believes,'' not ``what the boat will do.'' The model is more useful for something else: it shows which limits bite first,
 and which choices matter.
 
 \section*{What we get to choose}
 
-There are twelve choices, of five kinds. The shape of the hull: length, beam (the width), deadrise (the angle of the V on the bottom) and depth.
-Where the payload and the battery sit along the hull. The motor: its power and its efficiency. The propeller: its pitch and its diameter. And the battery: how many cells go in series, and how many of
+There are eleven choices, of five kinds. The shape of the hull: length, beam (the width), deadrise (the angle of the V on the bottom) and depth.
+Where the payload and the battery sit along the hull. The motor: which one winding of which SSS brushless motor from the supplier's spec sheet. The propeller: its pitch and its diameter. And the battery: how many cells go in series, and how many of
 those strings go in parallel. Series sets the voltage. Parallel sets the capacity, and how much current the pack can supply.
 
-Ten of the twelve vary continuously between bounds. The two battery counts are whole numbers.
+Eight of the eleven vary continuously between bounds. The two battery counts and the motor are whole numbers. The motor is a position in a list of 230 windings, ordered from the smallest motor to the largest. Each winding brings its own real numbers from the sheet: how fast it turns per volt, its current and voltage limits, its resistance, its power rating and its weight.
 
 \begin{table}[H]
 \centering\small
@@ -92,8 +92,7 @@ $\beta$    & \code{deadrise\_deg} & deg  & continuous & $[6,\ 16]$       & 10   
 $D$        & \code{depth\_in}     & in   & continuous & $[8,\ 20]$       & 12   & hull \\
 $\xi_p$    & \code{payload\_x}    & --   & continuous & $[0.25,\ 0.50]$  & 0.30 & placement (fraction of $L$ forward of transom) \\
 $\xi_b$    & \code{battery\_x}    & --   & continuous & $[0.25,\ 0.45]$  & 0.35 & placement (fraction of $L$ forward of transom) \\
-$P_m$      & \code{motor\_kw}     & kW   & continuous & $[2,\ 10]$       & 4.0  & motor rated shaft power \\
-$\eta_m$   & \code{motor\_eff}    & --   & continuous & $[0.85,\ 0.95]$  & 0.90 & motor peak efficiency \\
+$\mu$      & \code{motor}        & --   & integer    & $\{0,\dots,229\}$ & 222 & SSS winding: position in the catalog (baseline: 56154-V2 5Y) \\
 $p$        & \code{pitch\_in}     & in   & continuous & $[4,\ 16]$       & 10   & propeller pitch \\
 $d_p$      & \code{prop\_diam\_in} & in  & continuous & $[3,\ 10]$       & 6    & propeller diameter \\
 $S$        & \code{series}        & --   & integer    & $\{12,13,14\}$   & 14   & battery series cells \\
@@ -121,13 +120,13 @@ Think of it as a chain. Each link uses what came before. Figure~\ref{fig:flow} s
   box/.style={draw, rounded corners=2pt, align=center, font=\footnotesize, inner sep=5pt, text width=10.2cm},
   half/.style={draw, rounded corners=2pt, align=center, font=\footnotesize, inner sep=5pt, text width=4.8cm, minimum height=1.2cm},
   arr/.style={->, thick}]
-  \node[box, fill=blue!8] (dec) {\textbf{Twelve choices}\\ hull shape \ $\cdot$\ payload and battery position \ $\cdot$\ motor \ $\cdot$\ propeller \ $\cdot$\ battery cells};
+  \node[box, fill=blue!8] (dec) {\textbf{Eleven choices}\\ hull shape \ $\cdot$\ payload and battery position \ $\cdot$\ motor \ $\cdot$\ propeller \ $\cdot$\ battery cells};
   \node[box, below=0.45cm of dec] (mass) {\textbf{Weight and balance}\\ how heavy the boat is, and where its center of gravity sits};
   \node[half, anchor=north east] (hydro) at ([xshift=-0.15cm, yshift=-0.5cm]mass.south) {\textbf{Floating}\\ how deep it sits at rest, freeboard};
   \node[half, anchor=north west] (plan) at ([xshift=0.15cm, yshift=-0.5cm]mass.south) {\textbf{Planing}\\ trim angle, wet length, thrust needed};
   \node[box, anchor=north] (power) at ($(hydro.south)!0.5!(plan.south)-(0,0.5cm)$) {\textbf{Propeller, power, time and energy}\\ propeller efficiency \ $\cdot$\ battery power \ $\cdot$\ race time \ $\cdot$\ energy used};
   \node[box, below=0.45cm of power] (batt) {\textbf{Battery under load}\\ voltage sag, current, charge left at the finish};
-  \node[box, below=0.45cm of batt, fill=red!7] (cons) {\textbf{Twenty-two checks}\\ every one must be zero or more};
+  \node[box, below=0.45cm of batt, fill=red!7] (cons) {\textbf{Twenty-three checks}\\ every one must be zero or more};
   \node[box, below=0.45cm of cons, fill=green!8] (obj) {\textbf{Score}\\ race time at the fastest speed that passes every check};
   \draw[arr] (dec) -- (mass);
   \draw[arr] (hydro.north |- mass.south) -- (hydro.north);
@@ -143,8 +142,7 @@ Think of it as a chain. Each link uses what came before. Figure~\ref{fig:flow} s
 \end{figure}
 
 \paragraph{Weight and balance.} Start with weight. The hull's weight is its surface area times the weight of the fiberglass per square foot, plus a fixed allowance for structure.
-The battery's weight is the number of cells times the weight of one cell, plus 15\% for the case and wiring. The motor's weight comes from a made-up formula in which more power and
-more efficiency both make it heavier. That stops the search from simply picking the biggest, best motor. The propeller's weight grows with the cube of its diameter, so a bigger propeller is heavier, and it sits at the very back of the hull, which pulls the center of gravity aft.
+The battery's weight is the number of cells times the weight of one cell, plus 15\% for the case and wiring. The motor's weight is the weight the supplier lists for that motor, so a bigger, stronger motor costs boat weight. That stops the search from simply picking the biggest motor. The propeller's weight grows with the cube of its diameter, so a bigger propeller is heavier, and it sits at the very back of the hull, which pulls the center of gravity aft.
 Add the 30~lb payload and 8.8~lb of fixed equipment, and you have the total.
 
 Each part sits somewhere along the hull and at some height above the keel. Averaging by weight gives the center of gravity. Where it sits front to back matters a lot, as you'll see.
@@ -156,7 +154,7 @@ Subtract the draft from the hull's depth and you get freeboard: how much hull is
 and it has to do that without tipping the bow up or down. The angle the boat settles at is called trim. How much of the hull stays wet depends on trim, and the drag depends on how much is wet.
 
 We don't work this out ourselves. A library called OpenPlaning does it, using a method published by Savitsky. We give it the weight, the center of gravity, the beam, the deadrise and the speed.
-It gives back the trim, how much of the hull is wet, and the thrust the propeller must supply to keep going. For the default boat at about 22~mph the thrust is 110 newtons, and 97 of those are skin friction.
+It gives back the trim, how much of the hull is wet, and the thrust the propeller must supply to keep going. For the default boat at about 21~mph the thrust is 103 newtons, and 91 of those are skin friction.
 At this size most of the drag is just water rubbing along the bottom.
 
 \paragraph{The propeller.} Thrust times speed is the useful work the boat does each second. The propeller wastes some of it, and how much depends on the propeller. We start from the textbook ideal: a propeller is a disk that
@@ -165,8 +163,8 @@ Two placeholder factors sit on top of the ideal: blade losses, and a penalty whe
 The propeller also has to turn at a speed set by the boat's speed and its pitch (a coarser pitch turns slower), and the tip of the blade has a speed limit, because a tip moving too fast makes bubbles that ruin the thrust.
 That limit is what stops the search from simply choosing a huge, fast propeller. The propeller must also be no deeper than the hull.
 
-\paragraph{Power, time and energy.} The motor wastes some more; the default motor is 90\% efficient.
-Add 30 watts for electronics. What comes out is the power the battery must supply. The default boat needs about 1.9 kilowatts.
+\paragraph{Power, time and energy.} The motor wastes some more, and how much comes from the motor's own numbers. The propeller has to turn at the rpm that the boat's speed and pitch demand, and it asks for a torque (power divided by angular speed). A motor makes torque from current, and the newton-metres per amp are fixed by how fast it turns per volt. That current also runs through the winding's resistance and heats it, and a little current is always spent turning the motor with no load. So the motor's efficiency is worked out, not assumed. For the default boat, whose propeller turns slowly and so asks for a lot of torque, the motor is only about 63\% efficient. A speed controller between the battery and the motor loses another 3\%.
+Add 30 watts for electronics. What comes out is the power the battery must supply. The default boat needs about 2.5 kilowatts.
 
 Race time is distance divided by speed. We use speed over the ground, which is the speed through the water minus a 1~mph current, and add 20 seconds of allowance. Energy used is power times that time.
 The 20 seconds is charged at full cruise power, which is simple rather than realistic.
@@ -179,7 +177,7 @@ then how much charge and what cell voltage remain at the finish.
 
 \section*{What the boat has to obey}
 
-The model checks twenty-two things. Each is a number that has to be zero or more. We call it a margin: how much room is left before the rule is broken. A design is feasible if all twenty-two margins are nonnegative.
+The model checks twenty-three things. Each is a number that has to be zero or more. We call it a margin: how much room is left before the rule is broken. A design is feasible if all twenty-three margins are nonnegative.
 They come in four kinds. The exact formulas are in Appendix~\ref{sec:constraints}; here is what they mean.
 
 \paragraph{Competition rules (three).} Freeboard at rest must be at least 3 inches, plus half the 4-inch wave height, so 5 inches in all. The full-charge pack voltage must be at most 55.5 volts.
@@ -188,23 +186,22 @@ And the boat must make headway against the current.
 \paragraph{Being a boat (two).} The hull must be deeper than the height of its chine, the edge where the bottom meets the sides. Otherwise there is no hull above the chine to speak of.
 And the propeller must be no deeper than the hull.
 
-\paragraph{Hardware and balance (ten).} A fully charged pack must not exceed the motor's voltage rating. The race may use at most 70\% of the energy in the pack at the start. Shaft power must stay under 80\% of the motor's rating,
-and current under 80\% of both the battery's and the motor's ratings. That 20\% cushion is a design margin. The pack must be able to deliver the power at all; past a certain draw the voltage equation has no solution.
+\paragraph{Hardware and balance (eleven).} A fully charged pack must not exceed the motor winding's voltage rating on the sheet. The race may use at most 70\% of the energy in the pack at the start. Shaft power must stay under 80\% of the motor's continuous power rating, the battery's current under 80\% of the battery's rating, and the motor's current under 80\% of the winding's maximum current. The loaded battery must also be able to supply the voltage the motor needs at that speed: its back-voltage plus the drop across its own resistance. That 20\% cushion is a design margin. The pack must be able to deliver the power at all; past a certain draw the voltage equation has no solution.
 Each cell must stay above 3.0 volts at the finish. The propeller's blade tip must stay under 150 feet per second. And the center of gravity must sit between 30 and 45 percent of the hull's length from the back.
 
 \paragraph{Staying inside the method (seven).} Savitsky's formulas were fitted to experiments over a limited range, and outside it the library is guessing. So the model treats the edge of that range as a wall.
 The solver must find a balance at all. Trim must be between 2 and 15 degrees. The wetted length can be at most four beam-widths. A speed number built from speed and beam must lie between 0.6 and 13.
 And the wetted keel can't be longer than the hull.
 
-Seven of the twenty-two don't depend on speed at all: freeboard, hull depth, propeller fit, both voltage checks and both center-of-gravity checks. They decide whether a design has any legal speed.
-The other fifteen get harder as speed rises, and together they set the top speed.
+Seven of the twenty-three don't depend on speed at all: freeboard, hull depth, propeller fit, both voltage checks and both center-of-gravity checks. They decide whether a design has any legal speed.
+The other sixteen get harder as speed rises, and together they set the top speed.
 
 \section*{What we minimise}
 \label{sec:objective}
 
 Race time, and nothing else. There is no cost term, and no goal for weight beyond the limits above.
 
-For one design, the model finds the top speed like this. Try 8~mph, then 12, 16 and so on up to 60. Remember the highest speed at which all twenty-two checks pass. Then narrow in on the edge by repeated halving
+For one design, the model finds the top speed like this. Try 8~mph, then 12, 16 and so on up to 60. Remember the highest speed at which all twenty-three checks pass. Then narrow in on the edge by repeated halving
 until it is pinned down to a tenth of a mile per hour. The race time at that speed is the design's score. (Inside the search the scan is coarser, to be quicker.)
 
 If no speed passes, the design gets a score of 1000 plus a measure of how badly it breaks the rules at 20~mph. That nudges the search toward designs that work.
@@ -213,43 +210,45 @@ To search over designs we use differential evolution: keep a population of candi
 It is a good way to explore, but it doesn't prove that no better design exists. If three seeds agree, that is reassuring, not conclusive.
 
 Part II of the notebook also tries other ways of searching the same space (random search, dual annealing and a local search), and two other objectives.
-Both of those fix the speed at a target of 25~mph and ask a different question of the same twenty-two checks. One asks for the lightest boat that can run that speed. The other asks for the boat
+Both of those fix the speed at a target of 25~mph and ask a different question of the same twenty-three checks. One asks for the lightest boat that can run that speed. The other asks for the boat
 that uses the least energy over the course at that speed. An infeasible design scores 1000 plus 100 times how badly it breaks the rules. Race time stays the main objective, and the rest of this document is about it.
 
 \section*{An example}
 
-Take the default design: 8.5~ft long, 16-inch beam, 10-degree deadrise, a 4~kW motor, a 6-inch propeller of 10-inch pitch, 14 cells in series and 6 strings. It weighs 82~lb. Its top speed is 22.56~mph, and its race time is 354 seconds,
-under six minutes. The project's benchmark is seven.
+Take the default design: 8.5~ft long, 16-inch beam, 10-degree deadrise, an SSS 56154-V2 5Y motor (400~Kv, 14~kW continuous, 3.9~lb), a 6-inch propeller of 10-inch pitch, 14 cells in series and 6 strings. It weighs 79~lb. Its top speed is 21.38~mph, and its race time is 373 seconds,
+about six minutes. The project's benchmark is seven.
 
 \begin{table}[H]
 \centering\small
-\caption{Calculated values for the baseline design at $v^\star=22.56$ mph.}
+\caption{Calculated values for the baseline design at $v^\star=21.38$ mph.}
 \begin{tabular}{@{}l r l @{\qquad} l r l@{}}
 \toprule
 Quantity & Value & Unit & Quantity & Value & Unit \\
 \midrule
-hull mass $m_{\mathrm{hull}}$ & 20.43 & lb  & thrust $T$ & 110.1 & N \\
-battery mass $m_{\mathrm{bat}}$ & 14.88 & lb & running trim $\tau$ & 2.002 & deg \\
-motor mass $m_{\mathrm{mot}}$ & 7.40 & lb   & wetted length / beam $\lambda$ & 3.216 & -- \\
-total mass $m$ & 82.01 & lb                  & beam speed coeff.\ $C_v$ & 5.052 & -- \\
-$\lcg/L$ & 0.3373 & --                       & shaft power $\Pshaft$ & 1687 & W \\
-pack energy $\Epack$ & 1512 & Wh            & bus power $\Pbus$ & 1905 & W \\
-start charge $s_0$ & 75.5 & \%              & race time $\Trace$ & 353.9 & s \\
-$\Voc$ & 55.5 & V                           & energy used $\Eused$ & 187.2 & Wh \\
-static draft & 2.34 & in                     & loaded voltage $\Vload$ & 54.27 & V \\
-freeboard & 9.66 & in                        & bus current $I$ & 35.1 & A \\
-rated current $I_{\mathrm{rated}}$ & 88.2 & A & end charge $s_{\mathrm{end}}$ & 63.2 & \% \\
-$I_{\lim}$ & 90 & A                          & end voltage $\Vend$ & 52.80 & V \\
-propeller mass $m_{\mathrm{prop}}$ & 0.50 & lb & propeller efficiency $\eta_p$ & 0.658 & -- \\
-propeller rpm & 2803 & rpm                    & tip speed $v_{\mathrm{tip}}$ & 73.4 & ft/s \\
+hull mass $m_{\mathrm{hull}}$ & 20.43 & lb & thrust $T$ & 103.3 & N \\
+battery mass $m_{\mathrm{bat}}$ & 14.88 & lb & running trim $\tau$ & 2.004 & deg \\
+motor mass $m_{\mathrm{mot}}$ & 3.92 & lb & wetted length / beam $\lambda$ & 3.371 & -- \\
+total mass $m$ & 78.53 & lb & beam speed coeff.\ $C_v$ & 4.786 & -- \\
+$\lcg/L$ & 0.3478 & -- & shaft power $\Pshaft$ & 1501 & W \\
+pack energy $\Epack$ & 1512 & Wh & bus power $\Pbus$ & 2499 & W \\
+start charge $s_0$ & 75.5 & \% & race time $\Trace$ & 373.4 & s \\
+$\Voc$ & 55.5 & V & energy used $\Eused$ & 259.2 & Wh \\
+static draft & 2.27 & in & loaded voltage $\Vload$ & 53.88 & V \\
+freeboard & 9.73 & in & bus current $I$ & 46.4 & A \\
+motor torque $Q$ & 5.40 & N\,m & end charge $s_{\mathrm{end}}$ & 58.4 & \% \\
+motor current $I_m$ & 230 & A & end voltage $\Vend$ & 51.81 & V \\
+motor voltage needed $V_m$ & 10.4 & V & motor efficiency $\eta_m$ & 0.627 & -- \\
+$I_{\lim}$ & 90 & A & propeller efficiency $\eta_p$ & 0.657 & -- \\
+propeller mass $m_{\mathrm{prop}}$ & 0.50 & lb & tip speed $v_{\mathrm{tip}}$ & 69.5 & ft/s \\
+propeller rpm & 2656 & rpm & Kv needed ($\mathrm{rpm}/\Vload$) & 49 & rpm/V \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Now ask what stops it going faster. It isn't the motor, which is using about half of what it's allowed. It isn't the battery, which is using about half its allowed current and about a quarter of its allowed energy.
-What stops it is trim. At 22.56~mph the boat's trim is 2.002 degrees, and the method's floor is 2. Go a little faster and the boat flattens below 2 degrees, where the formulas are no longer trusted.
+Now ask what stops it going faster. It isn't the motor's power, which is only 11\% of its continuous rating. The motor's current is closer: 230~A against the 256~A it is allowed, because the slow propeller asks for a lot of torque. It isn't the battery, which is using about 64\% of its allowed current and about 32\% of its allowed energy.
+What stops it is trim. At 21.38~mph the boat's trim is 2.004 degrees, and the method's floor is 2. Go a little faster and the boat flattens below 2 degrees, where the formulas are no longer trusted.
 
-So the model says the top speed is where its own method stops being valid. That is an uncomfortable answer, because it says nothing about the hardware. Appendix~\ref{sec:constraints} lists all twenty-two margins for this design.
+So the model says the top speed is where its own method stops being valid. That is an uncomfortable answer, because it says nothing about the hardware. Appendix~\ref{sec:constraints} lists all twenty-three margins for this design.
 
 \section*{What to doubt}
 \label{sec:caveats}
@@ -259,10 +258,11 @@ So the model says the top speed is where its own method stops being valid. That 
         They would matter if the trim floor were relaxed.
   \item \textbf{Nothing stops the boat from being narrow.} There is no rule about stability, packaging or ride. The notebook reports that its searches take the narrowest beam and a high deadrise. When a variable ends up on its bound,
         the model is telling you it is missing a rule.
-  \item \textbf{Most inputs are placeholders.} The cell data, the motor weight formula, the propeller's blade losses, pitch penalty, weight law and tip-speed limit, the hull's fullness (prismatic coefficient), the wave height, the current, the heights of components and the laminate weights.
+  \item \textbf{Most inputs are placeholders.} The cell data, the speed controller's efficiency, the propeller's blade losses, pitch penalty, weight law and tip-speed limit, the hull's fullness (prismatic coefficient), the wave height, the current, the heights of components and the laminate weights.
         Appendix~\ref{sec:fixed} marks each one.
   \item \textbf{One check is zero by construction.} The charge level is chosen so the pack voltage lands exactly on 55.5 volts, so for 14 cells the voltage margin is zero up to rounding. It passes only because the arithmetic rounds the right way.
         A check written as ``at least zero'' on a number that is zero by design is fragile.
+  \item \textbf{The motor data is only as good as the sheet.} It was typed from the supplier's spec sheet. 33 of the 263 windings have a resistance entry that looks like a dropped digit, and they are left out: a winding is dropped when its maximum current times its resistance is under 1\% or over 30\% of its maximum voltage, because the search would otherwise pick a motor that only looks efficient through a typo. The no-load current is the sheet's 11.1~V value, held constant. The drive is direct, with no gearbox, so the motor turns at the propeller's rpm. A real controller would let the motor run above or below the pack voltage; here it only has to be covered.
   \item \textbf{The propeller model is a sketch.} The structure is physical (ideal disk efficiency falls with loading, tip speed is $\pi d\cdot\mathrm{rpm}$, mass grows with volume), but the blade losses, the preferred pitch-to-diameter ratio, the mass law and the tip-speed limit are guesses,
         and the rpm still comes from a fixed slip factor rather than from the blade's own thrust curve. Real propellers also have cavitation, ventilation and blade-area effects it ignores. Wave height matters only through freeboard.
   \item \textbf{The speed scan trusts the highest passing speed.} It doesn't check that the speeds below it also pass. A design that passes at 12 and 20~mph but not at 16 would be scored at about 20.
@@ -272,7 +272,7 @@ So the model says the top speed is where its own method stops being valid. That 
 
 \section*{What to replace next}
 
-Real cell data first: resistance, continuous current and the voltage curve. Then a real motor weight formula and voltage rating, a propeller map in place of the placeholder propeller model, and the hull's fullness. Then the wave height and current for the actual venue,
+Real cell data first: resistance, continuous current and the voltage curve. Then confirm the sheet's doubtful resistance entries with the supplier, add a gearbox ratio, the controller's real efficiency, a propeller map in place of the placeholder propeller model, and the hull's fullness. Then the wave height and current for the actual venue,
 and real component heights. The notebook leaves out transom beam, bow deadrise and keel curve because OpenPlaning can't use them.
 
 \appendix
@@ -281,7 +281,7 @@ and real component heights. The notebook leaves out transom beam, bow deadrise a
 % =============================================================================
 
 These are the exact formulas behind the chain described in the main text, in the order the notebook computes them. Nothing here is
-chosen. Every value follows from the twelve decisions, the constants in Appendix~\ref{sec:fixed} and the values before it.
+chosen. Every value follows from the eleven decisions, the constants in Appendix~\ref{sec:fixed} and the values before it.
 
 \subsection{Hull geometry and mass}
 The hull is prismatic: a V-bottom section of chine beam $b$ and deadrise $\beta$ with vertical sides up to the depth $D$,
@@ -327,13 +327,20 @@ For the baseline, $S=14$ gives $14\times4.2=58.8>55.5\,\mathrm V$, so the pack i
 For $S=12,13$ the pack starts full.
 
 \subsection{Motor and propeller}
+The motor is one winding $\mu$ of the catalog (\code{CATALOG[d.motor]}), read from the supplier's spec sheet (\code{sss\_motors.csv}). The sheet gives its constants:
+$K_v$ (rpm per volt), maximum current $I_{m,\max}$, maximum voltage $V_{m,\max}$, winding resistance $R_m$, no-load current $I_0$, continuous power $P_{\mathrm{cont}}$ and weight. Its mass is that weight,
 \begin{equation}
-  m_{\mathrm{mot}} = (1 + 1.6\,P_m)\bigl(1 + 6(\eta_m - 0.90)\bigr)\ [\mathrm{lb}], \qquad
-  I_{\mathrm{rated}} = \frac{1000\,P_m}{\eta_m\,S\,V_{\mathrm{nom}}}\ [\mathrm A].
+  m_{\mathrm{mot}} = \frac{\text{weight in grams}}{453.592}\ [\mathrm{lb}] \qquad (\code{motor\_mass\_lb}).
   \label{eq:motor}
 \end{equation}
-The mass fit is a placeholder: it rises with rated power and with efficiency so the search cannot simply take the biggest,
-most efficient motor. The rated bus current $I_{\mathrm{rated}}$ uses the \emph{nominal} pack voltage.
+The drive is direct: the motor turns at the propeller's rpm \eqref{eq:prop}. To put the shaft power $\Pshaft$ \eqref{eq:power} on the shaft at that rpm, the DC motor model gives
+\begin{align}
+  \omega &= \frac{2\pi\,\mathrm{rpm}}{60}, \qquad Q = \frac{\Pshaft}{\omega}, \qquad K_t = \frac{60}{2\pi K_v}, \label{eq:dctorque}\\
+  I_m &= \frac{Q}{K_t} + I_0, \qquad V_m = \frac{\mathrm{rpm}}{K_v} + I_m R_m, \qquad
+  P_{\mathrm{el}} = V_m\,I_m, \qquad \eta_m = \frac{\Pshaft}{P_{\mathrm{el}}}. \label{eq:dcmotor}
+\end{align}
+Torque comes from the current beyond the no-load current, and the voltage has to cover the back-voltage $\mathrm{rpm}/K_v$ plus the drop across the winding. The no-load current $I_0$, measured by the supplier at 11.1~V,
+is held constant. This is \code{motor\_point} in the notebook, and $\eta_m$ is a result, not an input.
 The propeller has pitch $p$ and diameter $d_p$ (both in inches). Its rpm, tip speed and the motor constant it demands are
 \begin{equation}
   \mathrm{rpm} = \frac{1056\,v}{p\,\sigma_s}, \qquad
@@ -341,7 +348,7 @@ The propeller has pitch $p$ and diameter $d_p$ (both in inches). Its rpm, tip sp
   K_v = \frac{\mathrm{rpm}}{\Vload}.
   \label{eq:prop}
 \end{equation}
-The tip speed is limited by the margin \code{tip\_speed} (Appendix~\ref{sec:constraints}). The propeller's mass scales with diameter cubed,
+The motor constant $K_v$ here is the one the propeller \emph{demands}; the winding's own $K_v$ is a property of the catalog entry. The tip speed is limited by the margin \code{tip\_speed} (Appendix~\ref{sec:constraints}). The propeller's mass scales with diameter cubed,
 \begin{equation}
   m_{\mathrm{prop}} = m_{\mathrm{ref}}\Bigl(\frac{d_p}{d_{\mathrm{ref}}}\Bigr)^{3}\ [\mathrm{lb}] \qquad (\code{prop\_mass\_lb}),
   \label{eq:propmass}
@@ -468,11 +475,11 @@ Here $v$ is the speed through the water. With the defaults, $D_c=2\,\mathrm{mi}$
 \subsection{Power chain and energy}
 \begin{equation}
   \Pshaft = \frac{T\cdot 0.44704\,v}{\eta_p(T,v)}\ [\mathrm W],\qquad
-  \Pbus = \frac{\Pshaft}{\eta_m} + P_h\ [\mathrm W],\qquad
+  \Pbus = \frac{P_{\mathrm{el}}}{\eta_d} + P_h\ [\mathrm W],\qquad
   \Eused = \frac{\Pbus\,\Trace}{3600}\ [\mathrm{Wh}].
   \label{eq:power}
 \end{equation}
-The propeller efficiency $\eta_p$ \eqref{eq:propeff} depends on the thrust, the speed, the diameter and the pitch, so both propeller choices change the power.
+The propeller efficiency $\eta_p$ \eqref{eq:propeff} depends on the thrust, the speed, the diameter and the pitch, so both propeller choices change the power. The motor's electrical power $P_{\mathrm{el}}$ comes from \eqref{eq:dcmotor}, and $\eta_d$ is the speed controller's efficiency (Appendix~\ref{sec:fixed}).
 
 \subsection{Battery under load}
 Solving $V = \Voc - I\,\Rpack$ with $I=\Pbus/V$ gives $V^2-\Voc V+\Rpack\Pbus=0$, whose larger root is
@@ -495,7 +502,7 @@ rate-dependent capacity model.
 \subsection{Index: what each calculated value depends on}
 \begin{table}[H]
 \centering\small
-\caption{Calculated values and the decision variables they depend on. ``$\ast$'' means all twelve searched variables.}
+\caption{Calculated values and the decision variables they depend on. ``$\ast$'' means all eleven searched variables.}
 \label{tab:index}
 \begin{tabularx}{\textwidth}{@{}l l X@{}}
 \toprule
@@ -504,10 +511,11 @@ Quantity & Equation & Depends on \\
 $h_c$, $A_{\mathrm{shell}}$, $m_{\mathrm{hull}}$ & \eqref{eq:chine}, \eqref{eq:hull} & $L,\ b,\ \beta,\ D$ (and $h_c$ only on $b,\beta$) \\
 $\Epack$, $m_{\mathrm{bat}}$, $\Rpack$, $I_{\lim}$ & \eqref{eq:pack} & $S,\ n_p$ \\
 $s_0$, $\Voc$ & \eqref{eq:soc0} & $S$ only \\
-$m_{\mathrm{mot}}$, $I_{\mathrm{rated}}$ & \eqref{eq:motor} & $P_m,\ \eta_m$ (and $S$ for $I_{\mathrm{rated}}$) \\
+$m_{\mathrm{mot}}$ & \eqref{eq:motor} & $\mu$ only \\
+$Q,\ I_m,\ V_m,\ P_{\mathrm{el}},\ \eta_m$ & \eqref{eq:dctorque}, \eqref{eq:dcmotor} & $\ast$ and $v$ \\
 $m_{\mathrm{prop}}$ & \eqref{eq:propmass} & $d_p$ only \\
 rpm, $v_{\mathrm{tip}}$ & \eqref{eq:prop} & $p,\ d_p$ and $v$ \\
-$m$, $\lcg$, $\vcg$ & \eqref{eq:balance} & $L,\ b,\ \beta,\ D,\ \xi_p,\ \xi_b,\ P_m,\ \eta_m,\ d_p,\ S,\ n_p$ \\
+$m$, $\lcg$, $\vcg$ & \eqref{eq:balance} & $L,\ b,\ \beta,\ D,\ \xi_p,\ \xi_b,\ \mu,\ d_p,\ S,\ n_p$ \\
 static draft, freeboard & \eqref{eq:draft} & $m$ (so all of $\ast$), $L,\ b,\ \beta,\ D$ \\
 $\tau,\ T,\ \lambda,\ L_K,\ C_v$ & \eqref{eq:savitsky}--\eqref{eq:thrust} & $\ast$ and $v$ \\
 $\Trace$ & \eqref{eq:racetime} & $v$ only \\
@@ -570,8 +578,8 @@ $k_{pd}$           & \code{prop\_pd\_penalty} & -- & 0.15$^\dagger$ & Efficiency
 $m_{\mathrm{ref}}$ & \code{prop\_mass\_ref\_lb} & lb & 0.5$^\dagger$ & Mass of a propeller of the reference diameter \\
 $d_{\mathrm{ref}}$ & \code{prop\_ref\_diam\_in} & in & 6.0$^\dagger$ & Reference diameter for the mass law \\
 $v_{\mathrm{tip},\max}$ & \code{max\_tip\_speed\_fps} & ft/s & 150$^\dagger$ & Blade tip-speed limit (cavitation and noise) \\
-\multicolumn{5}{@{}l}{\emph{Motor}}\\
-$V_{m,\max}$       & \code{motor\_max\_voltage\_v} & V & 60$^\dagger$ & Motor maximum voltage \\
+\multicolumn{5}{@{}l}{\emph{Motor and drive}}\\
+$\eta_d$           & \code{drive\_eff}        & -- & 0.97$^\dagger$ & Speed controller efficiency, battery bus to motor terminals \\
 $\sigma_s$         & \code{slip\_factor}      & -- & 0.85 & Slip factor in the rpm equation \\
 \multicolumn{5}{@{}l}{\emph{Cell (generic 21700, \code{Cell})}}\\
 $q_c$              & \code{ah}                & Ah & 5.0$^\dagger$ & Cell capacity \\
@@ -596,18 +604,20 @@ Cell $\mathrm{OCV}(s)$ (V) & 3.00 & 3.45 & 3.55 & 3.65 & 3.75 & 3.92 & 4.00 & 4.
 Component positions that are hard-coded inside \code{evaluate()} (fractions of $L$ forward of the transom):
 hull $0.45$, motor $0.10$, propeller $0.00$, fixed equipment $0.40$. Only the payload and battery positions are decisions.
 
+Motor data. The motor itself is not in \code{Fixed}. It is one row of \code{sss\_motors.csv}, which was typed from the supplier's spec sheet (27 motor models, 263 windings). A winding is \code{r\_suspect} when $I_{m,\max}R_m/V_{m,\max}$ is outside $[0.01,\ 0.30]$, and those 33 windings are left out of the catalog unless \code{INCLUDE\_SUSPECT\_R = True}, leaving 230. The baseline winding, 56154-V2 5Y, has $K_v=400$~rpm/V, $I_{m,\max}=320$~A, $V_{m,\max}=62$~V, $R_m=0.0165\,\Omega$, $I_0=3.5$~A, $P_{\mathrm{cont}}=14000$~W and a mass of 3.92~lb.
+
 Unit conversions: $1\,\mathrm{lbf}=4.44822162\,\mathrm N$, $1\,\mathrm{in}=0.0254\,\mathrm m$,
 $1\,\mathrm{ft}=0.3048\,\mathrm m$, $1\,\mathrm{mph}=0.44704\,\mathrm{m/s}$, $1\,\mathrm{lb/ft^3}=16.01846\,\mathrm{kg/m^3}$.
 
 
-\section{The twenty-two margins}
+\section{The twenty-three margins}
 \label{sec:constraints}
 % =============================================================================
 
 Each check is a margin $g_k(x,v)$, positive when it passes, with a scale $\sigma_k$. A design at speed $v$ is
 \emph{feasible} if
 \begin{equation}
-  g_k(x,v) \ge 0 \quad \text{for all } k = 1,\dots,22,
+  g_k(x,v) \ge 0 \quad \text{for all } k = 1,\dots,23,
   \label{eq:feasible}
 \end{equation}
 and its \emph{total violation} (used only to steer the search toward feasibility) is
@@ -620,7 +630,7 @@ group is switchable through \code{ENFORCE\_VALIDITY}, which is \code{True} by de
 
 \Needspace{12\baselineskip}
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{3.1cm} >{\raggedright\arraybackslash}p{1.7cm} >{\raggedright\arraybackslash}p{4.9cm} >{\raggedright\arraybackslash}p{3.0cm} >{\raggedright\arraybackslash}p{1.9cm}@{}}
-\caption{All 22 margins, in the order the notebook creates them. ``Depends on $v$'' says whether the margin changes with speed.}
+\caption{All 23 margins, in the order the notebook creates them. ``Depends on $v$'' says whether the margin changes with speed.}
 \label{tab:margins}\\
 \toprule
 Code name & Group & Margin $g_k \ge 0$ & Scale $\sigma_k$ & Depends on $v$\\
@@ -642,11 +652,12 @@ Code name & Group & Margin $g_k \ge 0$ & Scale $\sigma_k$ & Depends on $v$\\
 \code{depth\_over\_chine} & geometry & $D - 12\,h_c$ & $12.0$ & no \\
 \code{prop\_fits} & geometry & $D - d_p$ & $D$ & no \\
 \multicolumn{5}{@{}l}{\emph{Propulsion, battery and balance limits}}\\
-\code{motor\_max\_voltage} & limit & $V_{m,\max} - S\,V_{\mathrm{full}}$ & $V_{m,\max}$ & no (only $S$) \\
+\code{motor\_max\_voltage} & limit & $V_{m,\max} - S\,V_{\mathrm{full}}$ & $V_{m,\max}$ & no (only $S,\ \mu$) \\
 \code{energy}         & limit & $\epsilon_u\,\Epack\,s_0 - \Eused$ & $\max(\epsilon_u\Epack s_0,\ 1)$ & yes \\
-\code{shaft\_power}   & limit & $\rho_r\cdot1000\,P_m - \Pshaft$ & $1000\,P_m$ & yes \\
+\code{shaft\_power}   & limit & $\rho_r\,P_{\mathrm{cont}} - \Pshaft$ & $P_{\mathrm{cont}}$ & yes \\
 \code{battery\_current} & limit & $\rho_r\,I_{\lim} - I$ & $I_{\lim}$ & yes \\
-\code{motor\_current} & limit & $\rho_r\,I_{\mathrm{rated}} - I$ & $I_{\mathrm{rated}}$ & yes \\
+\code{motor\_current} & limit & $\rho_r\,I_{m,\max} - I_m$ & $I_{m,\max}$ & yes \\
+\code{motor\_voltage} & limit & $\Vload - V_m$ ($-1$ if $\Vload$ undefined) & $V_{m,\max}$ & yes \\
 \code{pack\_can\_deliver} & limit & $+1$ if $\Voc^2 \ge 4\Rpack\Pbus$, else $-1$ & $1$ & yes \\
 \code{end\_cell\_voltage} & limit & $\Vend/S - V_{c,\min}$ ($-1$ if $\Vend$ undefined) & $1$ & yes \\
 \code{tip\_speed}      & limit & $v_{\mathrm{tip},\max} - v_{\mathrm{tip}}$ & $v_{\mathrm{tip},\max}$ & yes \\
@@ -667,33 +678,34 @@ Here are the same margins for the default design at its top speed.
 
 \begin{table}[H]
 \centering\small
-\caption{Margins of the baseline at $v^\star=22.56$ mph. The last column is $g_k/\sigma_k$. \code{voltage\_rule} is $0$ by construction (see ``What to doubt''), so the binding constraint is the smallest ratio among the rest: \code{trim\_min}.}
+\caption{Margins of the baseline at $v^\star=21.38$ mph. The last column is $g_k/\sigma_k$. \code{voltage\_rule} is $0$ by construction (see ``What to doubt''), so the binding constraint is the smallest ratio among the rest: \code{trim\_min}.}
 \begin{tabular}{@{}l l r r r@{}}
 \toprule
 Constraint & Group & Margin $g_k$ & Scale $\sigma_k$ & $g_k/\sigma_k$ \\
 \midrule
-\code{freeboard} & rule & 4.658 & 3 & 1.553 \\
+\code{freeboard} & rule & 4.727 & 3 & 1.576 \\
 \code{depth\_over\_chine} & geometry & 10.59 & 12 & 0.882 \\
 \code{prop\_fits} & geometry & 6 & 12 & 0.500 \\
-\code{ground\_speed} & rule & 21.56 & 5 & 4.312 \\
+\code{ground\_speed} & rule & 20.38 & 5 & 4.075 \\
 \code{voltage\_rule} & rule & 0 & 55.5 & 0.000 \\
-\code{motor\_max\_voltage} & limit & 1.2 & 60 & 0.020 \\
-\code{energy} & limit & 612.2 & 799.5 & 0.766 \\
-\code{shaft\_power} & limit & 1513 & 4000 & 0.378 \\
-\code{battery\_current} & limit & 36.91 & 90 & 0.410 \\
-\code{motor\_current} & limit & 35.45 & 88.18 & 0.402 \\
+\code{motor\_max\_voltage} & limit & 3.2 & 62 & 0.052 \\
+\code{energy} & limit & 540.3 & 799.5 & 0.676 \\
+\code{shaft\_power} & limit & 9699 & 14000 & 0.693 \\
+\code{battery\_current} & limit & 25.62 & 90 & 0.285 \\
+\code{motor\_current} & limit & 26.35 & 320 & 0.082 \\
+\code{motor\_voltage} & limit & 43.45 & 62 & 0.701 \\
 \code{pack\_can\_deliver} & limit & 1 & 1 & 1.000 \\
-\code{end\_cell\_voltage} & limit & 0.7716 & 1 & 0.772 \\
-\code{tip\_speed} & limit & 76.62 & 150 & 0.511 \\
-\code{lcg\_min} & limit & 0.03729 & 0.1 & 0.373 \\
-\code{lcg\_max} & limit & 0.1127 & 0.1 & 1.127 \\
+\code{end\_cell\_voltage} & limit & 0.7008 & 1 & 0.701 \\
+\code{tip\_speed} & limit & 80.48 & 150 & 0.537 \\
+\code{lcg\_min} & limit & 0.0478 & 0.1 & 0.478 \\
+\code{lcg\_max} & limit & 0.1022 & 0.1 & 1.022 \\
 \code{solver\_ok} & validity & 1 & 1 & 1.000 \\
-\code{trim\_min} & validity & 0.002044 & 2 & \textbf{0.001} \\
-\code{trim\_max} & validity & 13 & 15 & 0.867 \\
-\code{wetted\_length\_ratio} & validity & 0.7835 & 4 & 0.196 \\
-\code{cv\_min} & validity & 4.452 & 0.6 & 7.421 \\
-\code{cv\_max} & validity & 7.948 & 13 & 0.611 \\
-\code{keel\_within\_hull} & validity & 0.954 & 2.591 & 0.368 \\
+\code{trim\_min} & validity & 0.003585 & 2 & \textbf{0.002} \\
+\code{trim\_max} & validity & 13 & 15 & 0.866 \\
+\code{wetted\_length\_ratio} & validity & 0.6291 & 4 & 0.157 \\
+\code{cv\_min} & validity & 4.186 & 0.6 & 6.977 \\
+\code{cv\_max} & validity & 8.214 & 13 & 0.632 \\
+\code{keel\_within\_hull} & validity & 0.8915 & 2.591 & 0.344 \\
 \bottomrule
 \end{tabular}
 \end{table}

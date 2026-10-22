@@ -3,6 +3,30 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.1.7 — 2026-10-22
+
+`explore.ipynb`: the placeholder motor is replaced by the real SSS motors from the supplier spec sheet (`sss_motors.csv`, 27 motors, 263 windings; weights added to the file).
+The motor is now one integer decision, `motor`, an index into the catalog (smallest motor first), replacing the two continuous variables `motor_kw` and `motor_eff`, so there are
+eleven decision variables. The winding's Kv, max current, max voltage, resistance, no-load current, continuous power and weight come from the sheet; motor mass is the listed weight.
+Motor efficiency and current are no longer fixed numbers: a DC motor model (`motor_point`) gives the torque, current, voltage needed and efficiency at the propeller's rpm, and bus power
+now includes a placeholder speed controller efficiency (`Fixed.drive_eff`, 0.97). `Fixed.motor_max_voltage_v` is gone. Three margins now read the sheet (`motor_max_voltage`, `shaft_power`,
+`motor_current`) and one is new, `motor_voltage` (loaded pack voltage must cover the back-voltage plus the winding drop), so there are twenty-three margins. The 33 windings with a
+doubtful resistance entry on the sheet are left out of the catalog by default. The baseline top speed moves from 22.56 to 21.38 mph because the real motor is lighter than the old placeholder.
+Charts and sweeps that used `motor_kw` and `motor_eff` now use the catalog.
+Added a "Why the search chose this design" cell after the search (which constraints bind, how hard the motor is working against its own and the strongest winding's torque ceiling,
+and what every other winding would do for the same boat), and fixed the interactive panel, whose callback broke after Part II rebound the global name `out`.
+
+Updated `explore-model.tex` and rebuilt `explore-model.pdf`: eleven choices, the motor data and DC motor model, twenty-three margins, the changed constants, and the worked example tables recomputed from
+`fastest_feasible(DESIGN, FIXED)`. Tracking issue: #86.
+
+## 0.1.6 — 2026-10-22
+
+Added `willmarley.ipynb`: a standalone battery runtime notebook built on one equation,
+`0.8 * Capacity (Ah) * Voltage (V) * battery efficiency / (load power * motor efficiency) * 60`, with bounds on each
+input and a sweep of each input on its own, plus a torque vs speed graph of the 5Y winding of every SSS motor on the supplier
+spec sheet, highlighting the motors earlier PEP teams used (27 models, 263 windings, data in `sss_motors.csv`)
+(#85). No changes to `explore.ipynb` or its model/write-up.
+
 ## 0.1.5 — 2026-10-21
 
 Added a standalone local Savitsky sample calculator in `savitsky/`, with editable
