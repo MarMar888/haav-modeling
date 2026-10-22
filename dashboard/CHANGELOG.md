@@ -3,6 +3,10 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.20 — 2026-10-22
+
+The timeline legend now names its two markers: a filled dot is a "Milestone" and a hollow ring is a "Phase".
+
 ## 0.7.19 — 2026-10-22
 
 Six more responsive UI tweaks: fieldsets lose the browser frame and min-width so form groups fit a phone; small print is

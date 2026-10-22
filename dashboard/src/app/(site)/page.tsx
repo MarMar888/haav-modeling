@@ -95,10 +95,10 @@ export default function Page() {
       <section id="timeline" className={section}>
         <h2 className={h2}>Timeline</h2>
         <p className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1 text-sm text-zinc-500">
-          <span className="inline-flex items-center gap-2"><span aria-hidden className="size-3 rounded-full border-2 border-emerald-600 bg-emerald-600" />A single day</span>
-          <span className="inline-flex items-center gap-2"><span aria-hidden className="size-3 rounded-full border-2 border-emerald-600" />A stretch of work</span>
+          <span className="inline-flex items-center gap-2"><span aria-hidden className="size-3 rounded-full border-2 border-emerald-600 bg-emerald-600" />Milestone</span>
+          <span className="inline-flex items-center gap-2"><span aria-hidden className="size-3 rounded-full border-2 border-emerald-600" />Phase</span>
         </p>
-        {/* A rail with a marker per milestone: a filled dot for a day, a hollow ring for a stretch of work. */}
+        {/* A rail with a marker per entry: a filled dot for a milestone (a single day), a hollow ring for a phase (a stretch of work). */}
         <ol className="relative ml-3 mt-8 border-l-2 sm:ml-32 border-zinc-200 dark:border-zinc-700">
           {TIMELINE.map((m) => {
             const stretch = /–|^From |^Until /.test(m.when);
