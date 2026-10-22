@@ -3,6 +3,12 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.18 — 2026-10-22
+
+Six more responsive UI tweaks: inline code becomes a muted chip that breaks inside long identifiers; table headers and captions
+align to the column start; bold text gets a firmer weight; deleted and inserted text are styled as edits; definition lists get
+bold terms and indented definitions; and progress and meter bars take the emerald and never overflow a phone.
+
 ## 0.7.17 — 2026-10-22
 
 Six more responsive UI tweaks: block quotes get an emerald rule; table numbers line up and wide tables scroll inside their

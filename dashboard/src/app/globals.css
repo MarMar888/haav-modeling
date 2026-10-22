@@ -524,3 +524,55 @@ main mark {
     transition: scale 0.08s ease;
   }
 }
+
+/* Inline code reads as a small muted chip and breaks inside long identifiers instead of widening the page. */
+main :not(pre) > code {
+  background: color-mix(in srgb, currentColor 8%, transparent);
+  padding: 0.1em 0.35em;
+  border-radius: 0.3em;
+  overflow-wrap: anywhere;
+}
+
+/* Table headers align with their columns and stay bold; captions sit muted above the table. */
+main th {
+  text-align: start;
+  font-weight: 600;
+}
+main caption {
+  caption-side: top;
+  text-align: start;
+  opacity: 0.7;
+  padding-block-end: 0.5rem;
+}
+
+/* Strong text is clearly bolder than body copy in both themes. */
+main :is(strong, b) {
+  font-weight: 600;
+}
+
+/* Edits: deleted text is struck through and muted, inserted text is underlined in the emerald. */
+main del {
+  opacity: 0.65;
+  text-decoration-thickness: 1px;
+}
+main ins {
+  text-decoration: underline;
+  text-decoration-color: #10b981;
+  text-underline-offset: 0.2em;
+}
+
+/* Definition lists: terms are bold, definitions indent a little, with room between entries. */
+main dt {
+  font-weight: 600;
+}
+main dd {
+  margin-inline-start: 1rem;
+  margin-block-end: 0.5rem;
+}
+
+/* Native progress and meter bars take the emerald and round their corners. */
+progress,
+meter {
+  accent-color: #10b981;
+  max-width: 100%;
+}
