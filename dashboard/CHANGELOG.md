@@ -3,6 +3,12 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.19 — 2026-10-22
+
+Six more responsive UI tweaks: fieldsets lose the browser frame and min-width so form groups fit a phone; small print is
+smaller and muted; citations stay italic while addresses read upright; embedded media is capped to its container; text areas
+resize vertically only; and dialogs fit the viewport with a dimmed, softly blurred backdrop.
+
 ## 0.7.18 — 2026-10-22
 
 Six more responsive UI tweaks: inline code becomes a muted chip that breaks inside long identifiers; table headers and captions

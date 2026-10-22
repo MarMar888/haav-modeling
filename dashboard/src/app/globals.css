@@ -576,3 +576,50 @@ meter {
   accent-color: #10b981;
   max-width: 100%;
 }
+
+/* Fieldsets drop the browser's frame and min-content width so form groups never overflow a phone; legends read as labels. */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+legend {
+  font-weight: 600;
+  padding: 0;
+}
+
+/* Small print is smaller and muted. */
+main small {
+  font-size: 0.875em;
+  opacity: 0.75;
+}
+
+/* Citations stay italic; addresses and quotes read as plain text rather than inheriting the browser's italics. */
+main cite {
+  font-style: italic;
+}
+main address {
+  font-style: normal;
+}
+
+/* Embedded media never outgrows its container. */
+main :is(iframe, canvas, audio, embed, object) {
+  max-width: 100%;
+}
+
+/* Text areas only resize vertically, so dragging the handle can't push the layout sideways on small screens. */
+textarea {
+  resize: vertical;
+  max-width: 100%;
+}
+
+/* Dialogs fit the viewport, and their backdrop dims and softly blurs the page behind. */
+dialog {
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100dvh - 2rem);
+}
+dialog::backdrop {
+  background: rgb(0 0 0 / 0.5);
+  backdrop-filter: blur(2px);
+}
