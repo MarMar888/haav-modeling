@@ -1,0 +1,2609 @@
+{
+  "competition_year": 2025,
+  "team": "College of the Florida Keys",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/FloridaKeys",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2025/FloridaKeys/FloridaKeys-LepidopteranWhitePaper.pdf",
+  "filename": "FloridaKeys-LepidopteranWhitePaper.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "15"
+  },
+  "page_count": 15,
+  "pages_without_text": [],
+  "char_count": 32332,
+  "pages": [
+    {
+      "page": 1,
+      "text": "Design and Construction of Lepidopteran, an\nElectric Unmanned Hydrofoil Vessel\nRobert Saylor1 and Lauren Zitzman2\nFlorida Keys – Unmanned Category\n1 College of the Florida Keys\n2 University of FloridaLepidopteran 2\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": "TABLE OF CONTENTS\nIntroduction ........................................................................................................................................... 2\nDesign.................................................................................................................................................... 3\nHull .................................................................................................................................................... 3\nWeight and Balance ............................................................................................................................ 3\nBattery................................................................................................................................................ 3\nFoils ................................................................................................................................................... 4\nSection............................................................................................................................................ 4\nArea and Span ................................................................................................................................. 6\nDrive System....................................................................................................................................... 7\nTransmission................................................................................................................................... 8\nPropeller ......................................................................................................................................... 8\nConstruction ........................................................................................................................................ 10\nPower Storage and Transmission ....................................................................................................... 10\nGearcase and Mounting .................................................................................................................... 11\nControls ........................................................................................................................................... 12\nFoils ................................................................................................................................................. 12\nTesting and Evaluation .......................................................................................................................... 13\nRisks .................................................................................................................................................... 13\nFuture Developments ........................................................................................................................... 14\nLiterature Cited .................................................................................................................................... 14\nINTRODUCTION\nHydrofoils provide two main advantages to a vessel. First, the reduced wetted area decreases drag and\nincreases maximum speed. At 50 kn, the lift to drag ratio of a hydrofoil design is about twice that of a\nconventional planing design (Clement, 1964). Second, by elevating the hull above the crest of waves,\nmaximum speed is effectively decoupled from sea state. Since electric vessels have lower energy storage\ndensity than combustion fuels, maximizing efficiency is important to achieve usable ranges.\nSubmerged foils are usually more efficient than surface piercing designs because they tend to have higher\naspect ratios; and operate below the surface, instead of at the surface, which reduces ventilation. While\nflapped foils can operate at larger ranges of lift coefficients, they tend to be higher drag and weaker because\nof the hinge assembly. An all-moving design, like the Shutt strut (Vellinga, 2009) can be either subcavitating Lepidopteran 3\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "or supercavitating. The Shutt strut also has the advantage of only using a single pivot point as the height\nfinding mechanism, eliminating complicated electronic or hydraulic pitch control systems.\nThe statement of requirements for the Lepidopteran is as follows: Total cost must be no more than $5500;\nthe vessel should be easily handled by two people, and preferably car-toppable; cruise speed should be 15\nm/s (30 kn) and 20 m/s (40 kn) should be achievable for short bursts; and total battery capacity must be\nenough to complete the 2 mile course with a 100% reserve.\nTherefore, the general design chosen was to be an all-moving hydrofoil of the conventional airplane\nconfiguration, as this layout is most efficient (TR 463-1). The hydrofoils would be solid, instead of flapped,\nso that they could be upgraded to a supercavitating design in the future. We stuck with a more conservative\nsubcavitating design for our submission to avoid taking on too many risky points of failure for a new team. In\ngeneral, our philosophy has been to find inexpensive simple solutions where available (such as the\nwindsurfer hull) to focus our efforts on specific systems with the most potential reward, like the foils and\npropeller.\nDESIGN\nHull\nDesirable characteristics of the hull include: light weight; high stability; and low drag. A used windsurf board\nmeets all of these requirements, while being inexpensive. The 2007 TIGA HyperX acquired for the project\nweighs 8kg, has a length of 242 cm, and beam of 81 cm. The hull volume of 130 L is enough to support the\nweight of a person sailing the board. This weight, 85 kg (~850 N), provides an approximate upper bound of\nan acceptable all-up weight. The board’s flat bottom promotes early planing, and the low profile reduces\naerodynamic drag.\nA custom-built hull was considered, but the cost was prohibitive for only marginal gains over the $50 Tiga.\nConservatively, a proposed 8ft scow hull would require at least $430 in materials (foam $90, carbon fiber\n$240, resin $100) and 40 man-hours.\nWeight and Balance\nTable 1 shows the weights of the major components. The vessel was\nfloated and loaded with weights to produce a slightly bow-up pitch at\nrest. The center of gravity was then measured, and the components\nplaced to maintain that CoG. The payload can then be shifted fore-and\u0002aft during testing for optimum performance underway.\nBattery\nDue to the weight sensitivity of foiling vessels, cell weight was the primary consideration. This immediately\neliminated lead-acid chemistry and put lithium-iron-phosphate at a disadvantage. Despite their good\nperformance, most prismatic cells were also eliminated by high weight and cost when configured in series.\nContinuous current rating needed to be higher than the cruise motor current, and preferably higher than the\nmaximum motor current. The total energy stored had to be enough to complete the course with a 100%\nreserve capacity. At a cruise speed of 15 m/s and current draw of 100 A at a nominal voltage of 48V, the 2-\nmile course would be completed in 0.06 h, resulting in a power expenditure of 286 Wh.\nTable 1: Weights\nItem Weight (Kg)\nHull 8.2\nBattery 11.8\nPayload 13.6\nElectronics 8\nMotor 11.4\nGearcase 10.5\nFoils 8\nTotal: 71.5Lepidopteran 4\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": "Table 2 compares some of the competitive options available online.\nTable 2: Battery Comparison\nCell/Battery Name Cell V Cell\n#\nTotal V Capacity\n(Wh)\nCost\n($)\nWeight\n(kg)\nCurrent\n(A)\nWh/kg Wh/$ Water\ncooled\nKia EV6 NMC 4.15 12 49.8 5328 300 21.8 390 (Int) 244.43 17.76 No\nINR18650M29 LG 3.67 13 47.71 2991 200 20.3 132 147.36 14.96 Optional\nLG NMC 48V Proterra 3.6 12 43.2 4600 325 25 165 184.00 14.15 Yes\nToyota Rav4 Tesla NCA 3.625 12 43.5 5394 230 32.5 300 165.97 23.45 Yes\nToyota Rav4 15s 3.625 15 54.375 6742 495 42.8 300 157.54 13.62 Yes\nPanasonic 14S 3.65 14 51.1 1770 400 11.8 400 (Int) 150.00 4.43 No\nSamsung INR 3.6 13 46.8 505 130 3.6 132 140.28 3.88 No\nSamsung SDI Construct 3.7 15 55.5 3330 885 27.75 100 120.00 3.76 No\nUR18650ZK V52A 3.7 15 55.5 2000 50 17.2 25 116.28 40.00 No\nBMW i3 NMC 3.7 12 44.4 2797 225 24.5 114.17 12.43 No\nJLEV-74AH Construct 3.2 17 54.4 4025 748 36.89 180 109.12 5.38 No\nPanasonic LMO 3.7 15 55.5 1332 400 13.6 150 97.94 3.33 No\nLG Juicy 3.65 14 51.1 307 58 7.3 81.6 42.05 5.29 No\nWhile the capacity of the Panasonic 14s with respect to weight and cost is only middling, in absolute terms\nit has the lightest weight while still meeting the current requirements and an acceptable reserve capacity.\nThe Samsung INR was a close second, but it would’ve needed to be doubled in parallel to meet the reserve\ncapacity requirements. It still would’ve been very competitive in terms of both absolute cost and weight, but\nultimately the Panasonic 14s was chosen to avoid the complication of extra wiring and because the\nprismatic cells would be easier to cool.\nDue to concerns about keeping the electronics watertight in case of a capsize, the battery does not have air\ncooling. If testing shows that battery temperatures are unacceptable, a water-cooling plate will be added.\nFoils\nSection\nFoil section choice drives the lift, drag, pitching moment, cavitation, and structural characteristics of the 3-\ndimensional hydrofoil. Lifting foils need to produce lift equal to the weight of the vessel, while vertical struts\nneed to support the lifting foils and resist side loads induced by turns. Xflr5 was used to produce lift and drag\nestimates, as well as pressure distributions that were then plotted in gnuplot to produce the cavitation\ndiagrams. Re = 1.38 million.\nTable 3: Lifting Section Comparison\nThickness (%) At (%) Camber (%) At (%)\nEppler 817 10.98 32.83 2.88 68.87\nSpeer H105 12.55 39.54 1.69 65.17\nNACA 63-412 12.00 34.93 2.20 50.05\nTable 3 shows the summary information for the three lifting foils considered. Lepidopteran 5\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "Table 4 shows the second moment of inertia for each section, in terms of a percentage compared to a\nrectangular section length 1 and thickness 0.12. A higher value is advantageous as stiffer sections can\nachieve higher aspect ratios and therefore higher lift to drag ratios. The moment is influenced by the section\nthickness, camber, and distribution of area.\nCavitation is caused by local pressure dropping below the vapor pressure of\nwater. The water boils, reducing lift and causing erosion of the hydrofoil\nsurface. This can occur on the upper surface at approximately the maximum\nthickness (caused by high speeds), on the top of the leading edge (caused by\nhigh AoA) or below the leading edge (caused by low AoA). Figure 1 is the\ncavitation diagram for the three selected lifting foils. The dashed lines\nrepresent freestream velocity (vessel speed) while the dotted lines represent\nfoil loading. If the foil loading intercepts the left side of the cavitation curve,\nthis represents cavitation on the bottom of the leading edge; if the foil loading\nintercepts the right side of the curve, this represents upper leading-edge\ncavitation; and if the foil loading intercepts the bottom of the curve this\nrepresents high speed upper surface cavitation. The region inside the bucket\nis cavitation-free operation. It is immediately apparent that the Speer H105\noffers superior performance in every practical operating regime.\nFigure 1: Lifting Section Cavitation Comparison\nFigure 2 is the cavitation diagram for symmetrical sections. Note that the operating demands for the\nsymmetrical sections are different since they spend the majority of the time producing no (or relatively small\nTable 4: Moment\nComparison\nSection Second\nMoment of\nInertia (%)\n16-012 52.7\n64-012 42.1\n64-012A 44.2\n65-012 43.8\n66-012 47.9\n63-412 42.6\nH105 54.6\nE817 35.0Lepidopteran 6\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "amounts of) lift. All the sections except for the NACA 0012 perform acceptably with respect to cavitation,\nand the criteria will instead depend on the lift and drag performance, and structural and ease of construction\nconcerns. The NACA 16-012 and NACA 66-012 had slightly deeper but very narrow drag buckets, and were\neliminated because of the difficulty of keeping them operating in such a narrow range of lift coefficients. The\nNACA 64-012, 64-012A, and 65-012 had practically indistinguishable lift to drag curves. Therefore, the 64-\n012A was selected for the aft foil because of the marginally higher sectional modulus and the thicker tail\nbeing easier to manufacture.\nThe section NACA 16-012 was selected for the forward foil struts. Because turns make up only a very small\nportion of the race, the struts operate close to zero AoA almost all of the time, and a lower minimum drag is\na beneficial trade-off. The considerably higher sectional modulus also means the strut can be made thinner\nfor the same structural requirements, reducing drag.\nFigure 2: symmetrical Sections Cavitation Diagram\nArea and Span\nForward\nFoil area is driven by the amount of lift required (and therefore weight of the vessel) and desired take-off\nspeed. The forward foil bears 80% of the vessel weight, and is sized to operate at 15 m/s at a Cl of 0.5 (Cl/Cd Lepidopteran 7\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "= 62) . This results in a combined planform area of 116 cm2. Cl/Cd at 20 m/s is 46 (Cl = 0.28) and take-off\noccurs at 9.7 m/s at a Cl/Cd of 69 (Cl = 1.2). Peak Cl/Cd is 76 at Cl = 0.95, corresponding to 10.9 m/s.\nFor each forward foil considered separately, a span of 24 cm and area of 58 cm2results in an aspect ratio of\n9.9. Because the previous planform area calculations assume an infinite wing, this area must be adjusted\nfor finite wingspans. Also, the upper surface of the foil at the struct junction has reduced lift generation. The\narea is therefore increased to make up for these losses (Vellinga, 2009) to 80.6 cm2 and the span to 27 cm.\nAft\nThe main role of the aft foil is pitch stability, and it is sized to operate at a wing loading one half of the forward\nfoil. This reduced wing loading causes automatic pitch stability, as any pitching of the vessel would cause\nrelatively larger changes of Cl and therefore lift on the more lightly loaded aft foil. (Vellinga, 2009). That area\nof 58 cm2results in a Cl/Cd of 30 (Cl = 0.25) at 15 m/s and a Cl/Cd of 22 (Cl = 0.14) at 20 m/s. Take-off speed\nwould be 6.85 m/s at a Cl/Cd of 68 (Cl = 1.2). Because this speed is lower than the take-off speed of the main\nfoil, the vessel would have sufficient pitch authority to avoid squatting during take-off.\nThe same aspect ratio adjustments were made to the aft foil. Because of the difficulty of constructing long\nmolds, both foils were considered to be span-limited and were given an elliptical planform with no washout\n(Speer, n.d.).\nA SolidWorks Simulation (Figure 3) was performed to estimate the maximum stress imparted on the foil. At\na steady state load of 167.2 N, the maximum stress on the part was 1.476 x 108 compared to a maximum\nallowable stress of 8 x 108for carbon fiber reinforced plastic (Vellinga, 2009), resulting in a factor of safety\nof 5.4.\nFigure 3: Aft Foil Stress FEA\nDrive System\nJet pumps have been used many times in hydrofoil applications, most notably the Boeing 929 Jetfoil, PGH\u00022, and Pegasus class (Williams, 1983). However, a jet pump small enough to fit the Lepidopteran would be\nvery difficult to source and would require a water pickup to be integrated into hydrofoil. A straight shaft Lepidopteran 8\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": "inboard system would reduce transmission losses but would require a very long strut and accompanying\nhigh drag loses while still producing a poor thrust angle. Therefore, an off-the-shelf gasoline outboard was\nselected. The midsection and lower unit were mated to the electric motor, while the cowling, powerhead,\nand controls were discarded. The driveshaft-mounted impeller was removed to reduce drag. Instead,\ncoolant water will be picked up from the same inlet and circulated by a 12v pump.\nTransmission\nThe lower unit has a ratio of 2.42 to 1 and a maximum input speed of 6000 RPM, resulting in an output speed\nof 2600 RPM. Because it is difficult to find the exact motor that has peak power at 6000 RPM, the motor was\nmated to the driveshaft with a Gates HTD timing belt. This gives more flexibility with motor selection and\nallows changes in RPM and torque during testing. Although the factory input speed limit is 6000 RPM, this is\nonly limited by bearing rating. If torque is kept below the gearset limits, the input shaft speed could\npotentially be expanded past the factory limit with pulley ratio changes.\nMotor\nThe motor was sized based on the power demands required by the propeller, and the rated power of the\ndonor outboard (10 hp, 7.4 kW). Two motors were considered: the 5 kW BLDC from GoldenMotor, and the\nBadAss 6245-155Kv from Innov8tive Designs. While the 6245 had a rated continuous output of 4.7 kW and\nmore favorable motor velocity constant, we decided against it due to concerns about exceeding the duty\ncycle of such a lightly constructed motor, as well as the difficulty of cooling and mounting an outrunner. A\nnumber of no-name BLDC motors are available from outlets such as Amazon or Flipsky, but these products\nwere not even considered due to a lack of quality control and documentation.\nPropeller\nThe factory propeller has three blades and measures 9.5 inches (24 cm) in diameter and 10 inches (25.4 cm)\nin pitch. Assuming a slip of 5% and input shaft speed of 6000 RPM, this gives a maximum boat speed of only\n9.4 m/s (18.2 kn). Aftermarket propellers are available with up to 12 inches of pitch. With the same\nparameters, the maximum boat speed would be 11.8 m/s (23.0 kn). To meet the speed goal of 20 m/s, either\nthe existing propeller options must be spun twice as fast, or a higher pitch propeller must be designed. The\nmost common series, the Wageningen B-series, only covers P/D ratios up to 1.4. Other series, such as the\nGawn, KCA, and Newton-Rader, cover P/D ratios up to 2. The Newton-Rader series was selected because\nthey published both cavitation data and tabulated figures that were easier to work with. However, the Gawn\nand KCA series offered similar performance. While a propeller with a diameter of 24 cm and a pitch of 50 cm\nwould reach the 20 m/s goal at a propeller shaft speed of 2500 RPM, it would do so with a power requirement\nof over 20 kW. Thus, a compromise approach is necessary: The gearbox will run at a 50% overspeed to turn\na propeller 16 cm in diameter and 33.3 cm in pitch. At a full propeller RPM of 3750, the propeller will produce\n341 N of thrust at an input power of 7.85 kW. This excess above the 5 kW motor rating is acceptable for short\nduty cycle sprint speed goal of 20 kn. At a cruise speed of 15 m/s and propeller RPM of 3000, the propeller\nwill produce 286 N of thrust at an input power of 4.8 kW.\nThe Newton-Rader series assumes a hub to diameter ratio of 16.7%, while our lower unit geometry fixes hub\ndiameter at 6.6 cm. In lieu of a more advanced treatment, it was assumed that the thrust produced and\ntorque required would be reduced in proportion to the reduction in propulsor disk area. This 15% reduction\nhas already been accounted for in the calculations and figures. Wake fraction and thrust deduction were\nboth assumed to be zero, due to the high speed of the vessel and minimal hull interference. Lepidopteran 9\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "Figure 4 shows the amount of thrust produced as a function of vessel speed and propeller RPM, and figure\n5 shows the same with the power required. The J values of 1.5 and 2.05 represent the lower and upper bound\nof the 70% η efficiency band, while the 1.8 advance line is the peak operating point of 78% η efficiency.\nFigure 4: Thrust Produced as a Function of Speed and RPM\nFigure 5: Power Required as a Function of Speed and RPMLepidopteran 10\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 10,
+      "text": "It can be seen that the propeller operates within the high efficiency and rated power regime for the cruise\ntarget range of 12.5 to 17.5 m/s. All of these calculations were derived using the following equations, and\nothers, taken from Carlton (2018) and Lewis (1988):\n𝐽 =\n𝑉𝑎\n𝐷∗𝑁\n𝐾𝑡 =\n𝑇\n𝜌∗𝑛2∗𝐷4 𝐾𝑞 =\n𝑄\n𝜌∗𝑛2∗𝐷5\nFigure 6: Vessel Thrust and Drag as a Function of Speed\nFigure 6 superimposes the thrust produced by the Newton-Rader 16 x 33.3 at different thrusts with the\nestimated drag from the foils, struts, and gear case. This was done using the drag equation with Cd values\ngenerated by xflr5. Notably, this does not include aerodynamic or hull drag, and the gearcase portion of the\ndrag is probably not very accurate, due to the irregular shape of the housing and ventilation fences.\nResistance towing tests were planned, but bad weather prevented any actual data collection, even though\nthis would’ve provided very accurate results. However, this figure does indicate that the speed goals are\nfeasible.\nCONSTRUCTION\nPower Storage and Transmission\nA Husky storage container is used as a waterproof container for the electronics. The battery and other\ncomponents are bolted to the box which is then bolted to the deck. The battery negative terminal is wired to\na Jiabaida JBD-AP21S002 battery management system. This BMS monitors cell voltage imbalances, state of\ncharge, charge and discharge current, and battery temperature. It automatically isolates the battery if\nvoltage is ever too high or too low and features a customizable software fuse, set to 200 A. The positive Lepidopteran 11\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 11,
+      "text": "terminal of the battery has a 400 A fusible link connected to a 400A contactor energized by a disconnect\nbutton accessible on top of the vessel. The 4 AWG wire used is rated for 160 A continuous duty3, well in\nexcess of the 150 A intermittent and 100 A continuous motor demands. The speed controller is a Golden\nMotor EZkontrol B48800, rated for a working voltage of 48 V (max 75V) and bus current of 400 A.\nFigure 7: Electronics Compartment View with Labels\nA 52V 14S Intelligent Lithium Smart Charger from HPCBikes provides a slow but reliable and inexpensive\ncharging current of 3 A.\nGearcase and Mounting\nA sheet of G10 FRP was laminated to the top aft surface of the board with 8 layers of 4oz unidirectional\ncarbon fiber. A custom pivot tube was fabricated from aluminum plate and tube to replace the bulky and\nheavy factory outboard mounting system. The tiller arm was cut off, and the assembly bolted to the mounting\nplate. The lower unit was disassembled, the gear surfaces and bearings were inspected for wear, and\nreassembled. The motor mounting plate was fabricated out of ¼” aluminum plate, and a bearing pressed\ninto the plate to support the driveshaft.\nA Gates HTD 5mm pitch timing belt with a 15mm width was selected. The 25mm width would’ve allowed\nmore margin of safety on the allowable torque transmitted, but the 25mm width had a much worse selection\nof pulleys. Instead of aluminum, they were cast steel, and there were fewer different teeth counts available.\nThe two ratios selected were 1.94:1 and 3:1, which roughly corresponds4 with spinning the driveshaft at 6000\nand 9000 RPM from a loaded motor RPM of 2900. Also, intermediate ratios of 2.25:1 and 2.58:1 could be\nachieved by mixing pulleys between the two sets, in case optimum performance is somewhere in between.\nBelt tension is achieved by rotating the motor in the housing, much like an automotive v-belt. Unfortunately,\n3 United States Coast Guard Electrical System Compliance Guideline\n4 The exact ratios desired could not be sourced because not every tooth number pulley is manufactured, we had to\nround to the closest ones available.Lepidopteran 12\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 12,
+      "text": "as of the writing for this report, we are still waiting for the pulleys to be bored to fit the respective shafts\nbefore being able to do on-the-water testing.\nFigure 8: Gearbox, Motor, Mount, and Steering System\nThe Newton-Rader 16x33 propeller was modelled in SolidWorks to mate with a SOLAS RBX-A20 hub. The file\nwas then sent to the casting house to be 3D printed and investment cast in stainless steel.\nControls\nSteering is controlled with a Savox SB-2290SG servo. It is rated for 70.0 kg-cm of\ntorque at 8.4 V. A bracket was fabricated and bolted to the outboard midsection\nand a linkage connects to the servo arm.\nThe radio transmitter is a RadioMaster MT12 and the receiver is a RadioMaster\nER5C-i. They use the ELRS 2.4 GHz protocol, which offers superior flexibility for\nprogramming and telemetry. A Speedybee F405 flight controller provides an\ninterface for telemetry data and (so far unutilized) autopilot functions. A Foxtech\nHV BEC converts the main battery voltage to 8.4 V for the RC electronics and 12\nV for the coolant pump.\nThe BLDC controller cannot interface directly with any of the RC electronics. The radio receiver outputs a 1\nto 2 millisecond PWM signal, while the controller expects a 0-5v analog\ninput. Instead, the receiver drives a throttle servo which mechanically\nactuates a potentiometer to provide the necessary analog signal.\nFoils\nThe foils are being constructed by vacuum bagged wet layup inside a\nfemale half mold. The layup consists of 2 layers of 9 oz biaxial (±45 to the\nFigure 9: N-R 16 x 33\nRendering\nFigure 10: Aft Foil Mold RenderingLepidopteran 13\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 13,
+      "text": "span axis) on the outside skin and the remaining interior of unidirectional fabric oriented along the span axis.\nThe parts will then be demolded, flattened along the neutral plane, and then bonded together. The struts will\nthen be bonded to the lifting foils, while the aft foil will be bolted directly to the lower unit cavitation plate.\nThe female molds have been 3d printed, and construction is currently ongoing.\nTESTING AND EVALUATION\nDue to many delays in fund processing, material delivery, and part fabrication, no on-the-water testing has\nyet been done. However, everything is in order to perform testing and tuning over the next three weeks\nleading into the competition. The questions that need to be answered are:\n1. Which pulley ratios provide the best performance?\n2. Which propeller provides the best performance?\n3. What is the optimal CoG position?\n4. Are motor, battery, and ESC cooling sufficient?\n5. Is steering authority sufficient?\nWe can evaluate these conditions by running the vessel while changing one variable at a time. We can\ndirectly monitor GPS speed, RPM, and component temperatures. By calculating slip from RPM and speed,\nwe can also find if the propeller is actually operating in an efficient regime. If battery cooling is insufficient,\na coolant plate can be added, and if the ESC and motor cooling is insufficient, the water pump could be\nupgraded to a higher flow rate.\nRISKS\nThere are three main weaknesses in our design:\n1. The steering servo may have insufficient range or torque. The trade-off between torque and steering\nrange can be modified by lengthening or shortening the moment arm of either bracket. However,\nwhile under load there will be much more force on the steering system than at rest, and it may prove\nto be too much for the Savox servo. In that case, the servo can be replaced by a geared DC motor\nwith a reversible speed control that can output the torque required. However, since the race format\ndoes not prioritize turning ability, it may be acceptable to just slow down for each turn.\n2. Center of gravity may be too far aft. This can be determined by checking performance after relocating\nthe payload weight. If this is the case, the battery box could be moved further forward, which would\nrequire new power cables; or the weight of the motor mounting plates and the outboard midsection\ncould be reduced by drilling lightening holes. Also, if there is extra buoyancy in the forward areas of\nthe hull, extra ballast could just be carried at the bow, or even extended in front of the bow on a sprit\nstructure. In the future, this imbalance could be mitigated by moving the motor forward of the pivot\npoint, but we chose the current location to simplify fabrication of the mounting plate and fitting of\nthe drive belt.\n3. The gearbox may not be able to handle an input speed of 9000 RPM. We could not find any literature\ndiscussing exactly why almost all outboard engines are limited to 6000 RPM, but hypothesize that is\nonly because of limitation in the combustion powerhead. The gear sets are typically limited by\ntorque, not RPM, and bearings of the size used in the lower unit usually have speed limits well over\n10,000 RPM. Since this 50% was the only practical way to hit our speed targets, we considered this\nan acceptable risk, especially considering the short duration of the race. By intentionally running the\nlower unit under more demanding conditions during testing than during the race, by performing Lepidopteran 14\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 14,
+      "text": "frequent oil changes, and by examining the gears and bearings for abnormal wear, we will find out if\nrunning at the elevated speed is acceptable. If not, we will simply run the race at reduced speed.\nFUTURE DEVELOPMENT\nLepidopteran is ripe for ongoing modification and use. The manageable size, high speed, good endurance,\nand payload capacity mean it could be used for other marine projects as well as future PEP competitions.\nThe following are some of the avenues that we think may be worth pursuing:\n1. Hydrofoils\na. The foil section, planform, or lift distribution could be improved. Particularly of interest may\nbe changing the elliptical planform to a bell-shaped lift distribution, which would be more\nefficient with respect to strength.\nb. The foil manufacturing process could be improved. Perhaps they could be milled out of billet\nstainless steel (some of the latest Moth hydrofoils have done this), or just laid up with an\nimproved method, like VARTM.\nc. The subcavitating foils could be changed to supercavitating. They would be more inefficient\nbut offer the possibility to break the 50 kn barrier.\nd. The entire foil system could be switched to a surface piercing configuration.\n2. Gearbox – the current lower unit gearbox is probably the single biggest area for improvement. The\noutboard that we chose uses a through hub exhaust, which is bulky and increases drag of the lower\nunit, while providing zero utility to an electric system. Also, the very low gear ratio of 2.42 to 1 is more\nsuited for a sailboat or a dinghy than a performance high speed vessel. Both of these aspects could\nbe improved by selecting a lower unit similar to those used by racing boats.\nLITERATURE CITED\nVermeulen J. C., Barr, R. A., & Martin M. (1964). Hydrodynamics of Hydrofoil Craft Subcavitating Hydrofoil\nSystems (Technical Report 463-1). HYDRONAUTICS, Incorporated.\nAuslaender, J. (1962). Low Drag Supercavitating Hydrofoil Sections (Technical Report 001-7).\nHYDRONAUTICS, Incorporated.\nVellinga, R. (2009). Hydrofoils: Design, Build, Fly. Peacock Hill Publishing.\nSpeer, T. [tspeer]. (2020, January 20). There's a lot of information on that chart, so I'll break it down.\n[Comment on forum post Foil section? For foil board] Boatdesign.net.\nhttps://www.boatdesign.net/threads/foil-section-for-foil-board.63233/\nShen, Y. T. & Wermter, R. (1976). Recent Studies of Struts and Foils for High Speed Hydrofoils (76-851).\nAIAA/SNAME Advanced Marine Vehicles Conference.\nClement, E. P. (1964). A Lifting Surface Approach to Planing Boat Design. (Report 1902). David Taylor Model\nBasin, Department of the Navy, Research and Development Report. Hydromechanics Laboratory.\nCarlton, J. (2018). Marine propellers and propulsion. Butterworth-Heinemann.\nSpeer, T. (n.d.). Minimum Induced Drag of Sail Rigs and Hydrofoils. Tom Speer's Home Page.\nhttps://web.archive.org/web/20231002165208/http://www.tspeer.com/Planforms/Planar.htmLepidopteran 15\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 15,
+      "text": "Feifel, W. M. Advanced Numerical Methods Hydrofoil System Design and Experimental Verification. Boeing\nMarine Systems.\nAbbott Ira, H., & Von Doenhoff, A. E. (1959). Theory of Wing Sections: Including a Summary of Airfoil Data.\nDover Publications, Inc.\nGawn, R.W.L. (1953). Effect of pitch and blade width on propeller performance. Trans. RINA.\nGawn, R.W.L., Burrill, L.C. (1957). Effect of cavitation on the performance of a series of 16 in. model\npropellers. Trans. RINA.\nNewton, R.N., Rader, H.P. (1961). Performance data of propellers for high speed craft. Trans. RINA, 103.\nLewis, E. V. (1988). Principles of naval architecture second revision. Jersey: Sname, 2, 152-157.\nWilliams, J. W. (1984). Propeller Drives for Hydrofoil Ships - A Position Paper. Boeing.\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Design and Construction of Lepidopteran, an"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Electric Unmanned Hydrofoil Vessel"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Robert Saylor1 and Lauren Zitzman2"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Florida Keys – Unmanned Category"
+    },
+    {
+      "line": 4,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "1 College of the Florida Keys"
+    },
+    {
+      "line": 5,
+      "page_start": 0,
+      "page_end": 1,
+      "text": "2 University of FloridaLepidopteran 2"
+    },
+    {
+      "line": 6,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "TABLE OF CONTENTS"
+    },
+    {
+      "line": 7,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Introduction ........................................................................................................................................... 2"
+    },
+    {
+      "line": 8,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Design.................................................................................................................................................... 3"
+    },
+    {
+      "line": 9,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Hull .................................................................................................................................................... 3"
+    },
+    {
+      "line": 10,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Weight and Balance ............................................................................................................................ 3"
+    },
+    {
+      "line": 11,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Battery................................................................................................................................................ 3"
+    },
+    {
+      "line": 12,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Foils ................................................................................................................................................... 4"
+    },
+    {
+      "line": 13,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Section............................................................................................................................................ 4"
+    },
+    {
+      "line": 14,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Area and Span ................................................................................................................................. 6"
+    },
+    {
+      "line": 15,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Drive System....................................................................................................................................... 7"
+    },
+    {
+      "line": 16,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Transmission................................................................................................................................... 8"
+    },
+    {
+      "line": 17,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Propeller ......................................................................................................................................... 8"
+    },
+    {
+      "line": 18,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Construction ........................................................................................................................................ 10"
+    },
+    {
+      "line": 19,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Power Storage and Transmission ....................................................................................................... 10"
+    },
+    {
+      "line": 20,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Gearcase and Mounting .................................................................................................................... 11"
+    },
+    {
+      "line": 21,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Controls ........................................................................................................................................... 12"
+    },
+    {
+      "line": 22,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Foils ................................................................................................................................................. 12"
+    },
+    {
+      "line": 23,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Testing and Evaluation .......................................................................................................................... 13"
+    },
+    {
+      "line": 24,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Risks .................................................................................................................................................... 13"
+    },
+    {
+      "line": 25,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Future Developments ........................................................................................................................... 14"
+    },
+    {
+      "line": 26,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Literature Cited .................................................................................................................................... 14"
+    },
+    {
+      "line": 27,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "INTRODUCTION"
+    },
+    {
+      "line": 28,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Hydrofoils provide two main advantages to a vessel. First, the reduced wetted area decreases drag and"
+    },
+    {
+      "line": 29,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "increases maximum speed. At 50 kn, the lift to drag ratio of a hydrofoil design is about twice that of a"
+    },
+    {
+      "line": 30,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "conventional planing design (Clement, 1964). Second, by elevating the hull above the crest of waves,"
+    },
+    {
+      "line": 31,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "maximum speed is effectively decoupled from sea state. Since electric vessels have lower energy storage"
+    },
+    {
+      "line": 32,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "density than combustion fuels, maximizing efficiency is important to achieve usable ranges."
+    },
+    {
+      "line": 33,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Submerged foils are usually more efficient than surface piercing designs because they tend to have higher"
+    },
+    {
+      "line": 34,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "aspect ratios; and operate below the surface, instead of at the surface, which reduces ventilation. While"
+    },
+    {
+      "line": 35,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "flapped foils can operate at larger ranges of lift coefficients, they tend to be higher drag and weaker because"
+    },
+    {
+      "line": 36,
+      "page_start": 1,
+      "page_end": 2,
+      "text": "of the hinge assembly. An all-moving design, like the Shutt strut (Vellinga, 2009) can be either subcavitating Lepidopteran 3"
+    },
+    {
+      "line": 37,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "or supercavitating. The Shutt strut also has the advantage of only using a single pivot point as the height"
+    },
+    {
+      "line": 38,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "finding mechanism, eliminating complicated electronic or hydraulic pitch control systems."
+    },
+    {
+      "line": 39,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "The statement of requirements for the Lepidopteran is as follows: Total cost must be no more than $5500;"
+    },
+    {
+      "line": 40,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "the vessel should be easily handled by two people, and preferably car-toppable; cruise speed should be 15"
+    },
+    {
+      "line": 41,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "m/s (30 kn) and 20 m/s (40 kn) should be achievable for short bursts; and total battery capacity must be"
+    },
+    {
+      "line": 42,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "enough to complete the 2 mile course with a 100% reserve."
+    },
+    {
+      "line": 43,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Therefore, the general design chosen was to be an all-moving hydrofoil of the conventional airplane"
+    },
+    {
+      "line": 44,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "configuration, as this layout is most efficient (TR 463-1). The hydrofoils would be solid, instead of flapped,"
+    },
+    {
+      "line": 45,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "so that they could be upgraded to a supercavitating design in the future. We stuck with a more conservative"
+    },
+    {
+      "line": 46,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "subcavitating design for our submission to avoid taking on too many risky points of failure for a new team. In"
+    },
+    {
+      "line": 47,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "general, our philosophy has been to find inexpensive simple solutions where available (such as the"
+    },
+    {
+      "line": 48,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "windsurfer hull) to focus our efforts on specific systems with the most potential reward, like the foils and"
+    },
+    {
+      "line": 49,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "propeller."
+    },
+    {
+      "line": 50,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "DESIGN"
+    },
+    {
+      "line": 51,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Hull"
+    },
+    {
+      "line": 52,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Desirable characteristics of the hull include: light weight; high stability; and low drag. A used windsurf board"
+    },
+    {
+      "line": 53,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "meets all of these requirements, while being inexpensive. The 2007 TIGA HyperX acquired for the project"
+    },
+    {
+      "line": 54,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "weighs 8kg, has a length of 242 cm, and beam of 81 cm. The hull volume of 130 L is enough to support the"
+    },
+    {
+      "line": 55,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "weight of a person sailing the board. This weight, 85 kg (~850 N), provides an approximate upper bound of"
+    },
+    {
+      "line": 56,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "an acceptable all-up weight. The board’s flat bottom promotes early planing, and the low profile reduces"
+    },
+    {
+      "line": 57,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "aerodynamic drag."
+    },
+    {
+      "line": 58,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "A custom-built hull was considered, but the cost was prohibitive for only marginal gains over the $50 Tiga."
+    },
+    {
+      "line": 59,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Conservatively, a proposed 8ft scow hull would require at least $430 in materials (foam $90, carbon fiber"
+    },
+    {
+      "line": 60,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "$240, resin $100) and 40 man-hours."
+    },
+    {
+      "line": 61,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Weight and Balance"
+    },
+    {
+      "line": 62,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Table 1 shows the weights of the major components. The vessel was"
+    },
+    {
+      "line": 63,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "floated and loaded with weights to produce a slightly bow-up pitch at"
+    },
+    {
+      "line": 64,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "rest. The center of gravity was then measured, and the components"
+    },
+    {
+      "line": 65,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "placed to maintain that CoG. The payload can then be shifted fore-and\u0002aft during testing for optimum performance underway."
+    },
+    {
+      "line": 66,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Battery"
+    },
+    {
+      "line": 67,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Due to the weight sensitivity of foiling vessels, cell weight was the primary consideration. This immediately"
+    },
+    {
+      "line": 68,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "eliminated lead-acid chemistry and put lithium-iron-phosphate at a disadvantage. Despite their good"
+    },
+    {
+      "line": 69,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "performance, most prismatic cells were also eliminated by high weight and cost when configured in series."
+    },
+    {
+      "line": 70,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Continuous current rating needed to be higher than the cruise motor current, and preferably higher than the"
+    },
+    {
+      "line": 71,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "maximum motor current. The total energy stored had to be enough to complete the course with a 100%"
+    },
+    {
+      "line": 72,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "reserve capacity. At a cruise speed of 15 m/s and current draw of 100 A at a nominal voltage of 48V, the 2-"
+    },
+    {
+      "line": 73,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "mile course would be completed in 0.06 h, resulting in a power expenditure of 286 Wh."
+    },
+    {
+      "line": 74,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Table 1: Weights"
+    },
+    {
+      "line": 75,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Item Weight (Kg)"
+    },
+    {
+      "line": 76,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Hull 8.2"
+    },
+    {
+      "line": 77,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Battery 11.8"
+    },
+    {
+      "line": 78,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Payload 13.6"
+    },
+    {
+      "line": 79,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Electronics 8"
+    },
+    {
+      "line": 80,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Motor 11.4"
+    },
+    {
+      "line": 81,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Gearcase 10.5"
+    },
+    {
+      "line": 82,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Foils 8"
+    },
+    {
+      "line": 83,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "Total: 71.5Lepidopteran 4"
+    },
+    {
+      "line": 84,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Table 2 compares some of the competitive options available online."
+    },
+    {
+      "line": 85,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Table 2: Battery Comparison"
+    },
+    {
+      "line": 86,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Cell/Battery Name Cell V Cell"
+    },
+    {
+      "line": 87,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "#"
+    },
+    {
+      "line": 88,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Total V Capacity"
+    },
+    {
+      "line": 89,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "(Wh)"
+    },
+    {
+      "line": 90,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Cost"
+    },
+    {
+      "line": 91,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "($)"
+    },
+    {
+      "line": 92,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Weight"
+    },
+    {
+      "line": 93,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "(kg)"
+    },
+    {
+      "line": 94,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Current"
+    },
+    {
+      "line": 95,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "(A)"
+    },
+    {
+      "line": 96,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Wh/kg Wh/$ Water"
+    },
+    {
+      "line": 97,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "cooled"
+    },
+    {
+      "line": 98,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Kia EV6 NMC 4.15 12 49.8 5328 300 21.8 390 (Int) 244.43 17.76 No"
+    },
+    {
+      "line": 99,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "INR18650M29 LG 3.67 13 47.71 2991 200 20.3 132 147.36 14.96 Optional"
+    },
+    {
+      "line": 100,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "LG NMC 48V Proterra 3.6 12 43.2 4600 325 25 165 184.00 14.15 Yes"
+    },
+    {
+      "line": 101,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Toyota Rav4 Tesla NCA 3.625 12 43.5 5394 230 32.5 300 165.97 23.45 Yes"
+    },
+    {
+      "line": 102,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Toyota Rav4 15s 3.625 15 54.375 6742 495 42.8 300 157.54 13.62 Yes"
+    },
+    {
+      "line": 103,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Panasonic 14S 3.65 14 51.1 1770 400 11.8 400 (Int) 150.00 4.43 No"
+    },
+    {
+      "line": 104,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Samsung INR 3.6 13 46.8 505 130 3.6 132 140.28 3.88 No"
+    },
+    {
+      "line": 105,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Samsung SDI Construct 3.7 15 55.5 3330 885 27.75 100 120.00 3.76 No"
+    },
+    {
+      "line": 106,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "UR18650ZK V52A 3.7 15 55.5 2000 50 17.2 25 116.28 40.00 No"
+    },
+    {
+      "line": 107,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "BMW i3 NMC 3.7 12 44.4 2797 225 24.5 114.17 12.43 No"
+    },
+    {
+      "line": 108,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "JLEV-74AH Construct 3.2 17 54.4 4025 748 36.89 180 109.12 5.38 No"
+    },
+    {
+      "line": 109,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Panasonic LMO 3.7 15 55.5 1332 400 13.6 150 97.94 3.33 No"
+    },
+    {
+      "line": 110,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "LG Juicy 3.65 14 51.1 307 58 7.3 81.6 42.05 5.29 No"
+    },
+    {
+      "line": 111,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "While the capacity of the Panasonic 14s with respect to weight and cost is only middling, in absolute terms"
+    },
+    {
+      "line": 112,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "it has the lightest weight while still meeting the current requirements and an acceptable reserve capacity."
+    },
+    {
+      "line": 113,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "The Samsung INR was a close second, but it would’ve needed to be doubled in parallel to meet the reserve"
+    },
+    {
+      "line": 114,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "capacity requirements. It still would’ve been very competitive in terms of both absolute cost and weight, but"
+    },
+    {
+      "line": 115,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "ultimately the Panasonic 14s was chosen to avoid the complication of extra wiring and because the"
+    },
+    {
+      "line": 116,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "prismatic cells would be easier to cool."
+    },
+    {
+      "line": 117,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Due to concerns about keeping the electronics watertight in case of a capsize, the battery does not have air"
+    },
+    {
+      "line": 118,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "cooling. If testing shows that battery temperatures are unacceptable, a water-cooling plate will be added."
+    },
+    {
+      "line": 119,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Foils"
+    },
+    {
+      "line": 120,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Section"
+    },
+    {
+      "line": 121,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Foil section choice drives the lift, drag, pitching moment, cavitation, and structural characteristics of the 3-"
+    },
+    {
+      "line": 122,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "dimensional hydrofoil. Lifting foils need to produce lift equal to the weight of the vessel, while vertical struts"
+    },
+    {
+      "line": 123,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "need to support the lifting foils and resist side loads induced by turns. Xflr5 was used to produce lift and drag"
+    },
+    {
+      "line": 124,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "estimates, as well as pressure distributions that were then plotted in gnuplot to produce the cavitation"
+    },
+    {
+      "line": 125,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "diagrams. Re = 1.38 million."
+    },
+    {
+      "line": 126,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Table 3: Lifting Section Comparison"
+    },
+    {
+      "line": 127,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Thickness (%) At (%) Camber (%) At (%)"
+    },
+    {
+      "line": 128,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Eppler 817 10.98 32.83 2.88 68.87"
+    },
+    {
+      "line": 129,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Speer H105 12.55 39.54 1.69 65.17"
+    },
+    {
+      "line": 130,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "NACA 63-412 12.00 34.93 2.20 50.05"
+    },
+    {
+      "line": 131,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "Table 3 shows the summary information for the three lifting foils considered. Lepidopteran 5"
+    },
+    {
+      "line": 132,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Table 4 shows the second moment of inertia for each section, in terms of a percentage compared to a"
+    },
+    {
+      "line": 133,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "rectangular section length 1 and thickness 0.12. A higher value is advantageous as stiffer sections can"
+    },
+    {
+      "line": 134,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "achieve higher aspect ratios and therefore higher lift to drag ratios. The moment is influenced by the section"
+    },
+    {
+      "line": 135,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "thickness, camber, and distribution of area."
+    },
+    {
+      "line": 136,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Cavitation is caused by local pressure dropping below the vapor pressure of"
+    },
+    {
+      "line": 137,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "water. The water boils, reducing lift and causing erosion of the hydrofoil"
+    },
+    {
+      "line": 138,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "surface. This can occur on the upper surface at approximately the maximum"
+    },
+    {
+      "line": 139,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "thickness (caused by high speeds), on the top of the leading edge (caused by"
+    },
+    {
+      "line": 140,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "high AoA) or below the leading edge (caused by low AoA). Figure 1 is the"
+    },
+    {
+      "line": 141,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "cavitation diagram for the three selected lifting foils. The dashed lines"
+    },
+    {
+      "line": 142,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "represent freestream velocity (vessel speed) while the dotted lines represent"
+    },
+    {
+      "line": 143,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "foil loading. If the foil loading intercepts the left side of the cavitation curve,"
+    },
+    {
+      "line": 144,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "this represents cavitation on the bottom of the leading edge; if the foil loading"
+    },
+    {
+      "line": 145,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "intercepts the right side of the curve, this represents upper leading-edge"
+    },
+    {
+      "line": 146,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "cavitation; and if the foil loading intercepts the bottom of the curve this"
+    },
+    {
+      "line": 147,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "represents high speed upper surface cavitation. The region inside the bucket"
+    },
+    {
+      "line": 148,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "is cavitation-free operation. It is immediately apparent that the Speer H105"
+    },
+    {
+      "line": 149,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "offers superior performance in every practical operating regime."
+    },
+    {
+      "line": 150,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Figure 1: Lifting Section Cavitation Comparison"
+    },
+    {
+      "line": 151,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Figure 2 is the cavitation diagram for symmetrical sections. Note that the operating demands for the"
+    },
+    {
+      "line": 152,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "symmetrical sections are different since they spend the majority of the time producing no (or relatively small"
+    },
+    {
+      "line": 153,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Table 4: Moment"
+    },
+    {
+      "line": 154,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Comparison"
+    },
+    {
+      "line": 155,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Section Second"
+    },
+    {
+      "line": 156,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Moment of"
+    },
+    {
+      "line": 157,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Inertia (%)"
+    },
+    {
+      "line": 158,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "16-012 52.7"
+    },
+    {
+      "line": 159,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "64-012 42.1"
+    },
+    {
+      "line": 160,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "64-012A 44.2"
+    },
+    {
+      "line": 161,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "65-012 43.8"
+    },
+    {
+      "line": 162,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "66-012 47.9"
+    },
+    {
+      "line": 163,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "63-412 42.6"
+    },
+    {
+      "line": 164,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "H105 54.6"
+    },
+    {
+      "line": 165,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "E817 35.0Lepidopteran 6"
+    },
+    {
+      "line": 166,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "amounts of) lift. All the sections except for the NACA 0012 perform acceptably with respect to cavitation,"
+    },
+    {
+      "line": 167,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "and the criteria will instead depend on the lift and drag performance, and structural and ease of construction"
+    },
+    {
+      "line": 168,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "concerns. The NACA 16-012 and NACA 66-012 had slightly deeper but very narrow drag buckets, and were"
+    },
+    {
+      "line": 169,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "eliminated because of the difficulty of keeping them operating in such a narrow range of lift coefficients. The"
+    },
+    {
+      "line": 170,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "NACA 64-012, 64-012A, and 65-012 had practically indistinguishable lift to drag curves. Therefore, the 64-"
+    },
+    {
+      "line": 171,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "012A was selected for the aft foil because of the marginally higher sectional modulus and the thicker tail"
+    },
+    {
+      "line": 172,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "being easier to manufacture."
+    },
+    {
+      "line": 173,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "The section NACA 16-012 was selected for the forward foil struts. Because turns make up only a very small"
+    },
+    {
+      "line": 174,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "portion of the race, the struts operate close to zero AoA almost all of the time, and a lower minimum drag is"
+    },
+    {
+      "line": 175,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "a beneficial trade-off. The considerably higher sectional modulus also means the strut can be made thinner"
+    },
+    {
+      "line": 176,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "for the same structural requirements, reducing drag."
+    },
+    {
+      "line": 177,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Figure 2: symmetrical Sections Cavitation Diagram"
+    },
+    {
+      "line": 178,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Area and Span"
+    },
+    {
+      "line": 179,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Forward"
+    },
+    {
+      "line": 180,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Foil area is driven by the amount of lift required (and therefore weight of the vessel) and desired take-off"
+    },
+    {
+      "line": 181,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "speed. The forward foil bears 80% of the vessel weight, and is sized to operate at 15 m/s at a Cl of 0.5 (Cl/Cd Lepidopteran 7"
+    },
+    {
+      "line": 182,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "= 62) . This results in a combined planform area of 116 cm2. Cl/Cd at 20 m/s is 46 (Cl = 0.28) and take-off"
+    },
+    {
+      "line": 183,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "occurs at 9.7 m/s at a Cl/Cd of 69 (Cl = 1.2). Peak Cl/Cd is 76 at Cl = 0.95, corresponding to 10.9 m/s."
+    },
+    {
+      "line": 184,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "For each forward foil considered separately, a span of 24 cm and area of 58 cm2results in an aspect ratio of"
+    },
+    {
+      "line": 185,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "9.9. Because the previous planform area calculations assume an infinite wing, this area must be adjusted"
+    },
+    {
+      "line": 186,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "for finite wingspans. Also, the upper surface of the foil at the struct junction has reduced lift generation. The"
+    },
+    {
+      "line": 187,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "area is therefore increased to make up for these losses (Vellinga, 2009) to 80.6 cm2 and the span to 27 cm."
+    },
+    {
+      "line": 188,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Aft"
+    },
+    {
+      "line": 189,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "The main role of the aft foil is pitch stability, and it is sized to operate at a wing loading one half of the forward"
+    },
+    {
+      "line": 190,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "foil. This reduced wing loading causes automatic pitch stability, as any pitching of the vessel would cause"
+    },
+    {
+      "line": 191,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "relatively larger changes of Cl and therefore lift on the more lightly loaded aft foil. (Vellinga, 2009). That area"
+    },
+    {
+      "line": 192,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "of 58 cm2results in a Cl/Cd of 30 (Cl = 0.25) at 15 m/s and a Cl/Cd of 22 (Cl = 0.14) at 20 m/s. Take-off speed"
+    },
+    {
+      "line": 193,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "would be 6.85 m/s at a Cl/Cd of 68 (Cl = 1.2). Because this speed is lower than the take-off speed of the main"
+    },
+    {
+      "line": 194,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "foil, the vessel would have sufficient pitch authority to avoid squatting during take-off."
+    },
+    {
+      "line": 195,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "The same aspect ratio adjustments were made to the aft foil. Because of the difficulty of constructing long"
+    },
+    {
+      "line": 196,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "molds, both foils were considered to be span-limited and were given an elliptical planform with no washout"
+    },
+    {
+      "line": 197,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "(Speer, n.d.)."
+    },
+    {
+      "line": 198,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "A SolidWorks Simulation (Figure 3) was performed to estimate the maximum stress imparted on the foil. At"
+    },
+    {
+      "line": 199,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "a steady state load of 167.2 N, the maximum stress on the part was 1.476 x 108 compared to a maximum"
+    },
+    {
+      "line": 200,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "allowable stress of 8 x 108for carbon fiber reinforced plastic (Vellinga, 2009), resulting in a factor of safety"
+    },
+    {
+      "line": 201,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "of 5.4."
+    },
+    {
+      "line": 202,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Figure 3: Aft Foil Stress FEA"
+    },
+    {
+      "line": 203,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Drive System"
+    },
+    {
+      "line": 204,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Jet pumps have been used many times in hydrofoil applications, most notably the Boeing 929 Jetfoil, PGH\u00022, and Pegasus class (Williams, 1983). However, a jet pump small enough to fit the Lepidopteran would be"
+    },
+    {
+      "line": 205,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "very difficult to source and would require a water pickup to be integrated into hydrofoil. A straight shaft Lepidopteran 8"
+    },
+    {
+      "line": 206,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "inboard system would reduce transmission losses but would require a very long strut and accompanying"
+    },
+    {
+      "line": 207,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "high drag loses while still producing a poor thrust angle. Therefore, an off-the-shelf gasoline outboard was"
+    },
+    {
+      "line": 208,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "selected. The midsection and lower unit were mated to the electric motor, while the cowling, powerhead,"
+    },
+    {
+      "line": 209,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "and controls were discarded. The driveshaft-mounted impeller was removed to reduce drag. Instead,"
+    },
+    {
+      "line": 210,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "coolant water will be picked up from the same inlet and circulated by a 12v pump."
+    },
+    {
+      "line": 211,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Transmission"
+    },
+    {
+      "line": 212,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "The lower unit has a ratio of 2.42 to 1 and a maximum input speed of 6000 RPM, resulting in an output speed"
+    },
+    {
+      "line": 213,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "of 2600 RPM. Because it is difficult to find the exact motor that has peak power at 6000 RPM, the motor was"
+    },
+    {
+      "line": 214,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "mated to the driveshaft with a Gates HTD timing belt. This gives more flexibility with motor selection and"
+    },
+    {
+      "line": 215,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "allows changes in RPM and torque during testing. Although the factory input speed limit is 6000 RPM, this is"
+    },
+    {
+      "line": 216,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "only limited by bearing rating. If torque is kept below the gearset limits, the input shaft speed could"
+    },
+    {
+      "line": 217,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "potentially be expanded past the factory limit with pulley ratio changes."
+    },
+    {
+      "line": 218,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Motor"
+    },
+    {
+      "line": 219,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "The motor was sized based on the power demands required by the propeller, and the rated power of the"
+    },
+    {
+      "line": 220,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "donor outboard (10 hp, 7.4 kW). Two motors were considered: the 5 kW BLDC from GoldenMotor, and the"
+    },
+    {
+      "line": 221,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "BadAss 6245-155Kv from Innov8tive Designs. While the 6245 had a rated continuous output of 4.7 kW and"
+    },
+    {
+      "line": 222,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "more favorable motor velocity constant, we decided against it due to concerns about exceeding the duty"
+    },
+    {
+      "line": 223,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "cycle of such a lightly constructed motor, as well as the difficulty of cooling and mounting an outrunner. A"
+    },
+    {
+      "line": 224,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "number of no-name BLDC motors are available from outlets such as Amazon or Flipsky, but these products"
+    },
+    {
+      "line": 225,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "were not even considered due to a lack of quality control and documentation."
+    },
+    {
+      "line": 226,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Propeller"
+    },
+    {
+      "line": 227,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "The factory propeller has three blades and measures 9.5 inches (24 cm) in diameter and 10 inches (25.4 cm)"
+    },
+    {
+      "line": 228,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "in pitch. Assuming a slip of 5% and input shaft speed of 6000 RPM, this gives a maximum boat speed of only"
+    },
+    {
+      "line": 229,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "9.4 m/s (18.2 kn). Aftermarket propellers are available with up to 12 inches of pitch. With the same"
+    },
+    {
+      "line": 230,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "parameters, the maximum boat speed would be 11.8 m/s (23.0 kn). To meet the speed goal of 20 m/s, either"
+    },
+    {
+      "line": 231,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "the existing propeller options must be spun twice as fast, or a higher pitch propeller must be designed. The"
+    },
+    {
+      "line": 232,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "most common series, the Wageningen B-series, only covers P/D ratios up to 1.4. Other series, such as the"
+    },
+    {
+      "line": 233,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Gawn, KCA, and Newton-Rader, cover P/D ratios up to 2. The Newton-Rader series was selected because"
+    },
+    {
+      "line": 234,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "they published both cavitation data and tabulated figures that were easier to work with. However, the Gawn"
+    },
+    {
+      "line": 235,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "and KCA series offered similar performance. While a propeller with a diameter of 24 cm and a pitch of 50 cm"
+    },
+    {
+      "line": 236,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "would reach the 20 m/s goal at a propeller shaft speed of 2500 RPM, it would do so with a power requirement"
+    },
+    {
+      "line": 237,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "of over 20 kW. Thus, a compromise approach is necessary: The gearbox will run at a 50% overspeed to turn"
+    },
+    {
+      "line": 238,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "a propeller 16 cm in diameter and 33.3 cm in pitch. At a full propeller RPM of 3750, the propeller will produce"
+    },
+    {
+      "line": 239,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "341 N of thrust at an input power of 7.85 kW. This excess above the 5 kW motor rating is acceptable for short"
+    },
+    {
+      "line": 240,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "duty cycle sprint speed goal of 20 kn. At a cruise speed of 15 m/s and propeller RPM of 3000, the propeller"
+    },
+    {
+      "line": 241,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "will produce 286 N of thrust at an input power of 4.8 kW."
+    },
+    {
+      "line": 242,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "The Newton-Rader series assumes a hub to diameter ratio of 16.7%, while our lower unit geometry fixes hub"
+    },
+    {
+      "line": 243,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "diameter at 6.6 cm. In lieu of a more advanced treatment, it was assumed that the thrust produced and"
+    },
+    {
+      "line": 244,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "torque required would be reduced in proportion to the reduction in propulsor disk area. This 15% reduction"
+    },
+    {
+      "line": 245,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "has already been accounted for in the calculations and figures. Wake fraction and thrust deduction were"
+    },
+    {
+      "line": 246,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "both assumed to be zero, due to the high speed of the vessel and minimal hull interference. Lepidopteran 9"
+    },
+    {
+      "line": 247,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Figure 4 shows the amount of thrust produced as a function of vessel speed and propeller RPM, and figure"
+    },
+    {
+      "line": 248,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "5 shows the same with the power required. The J values of 1.5 and 2.05 represent the lower and upper bound"
+    },
+    {
+      "line": 249,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "of the 70% η efficiency band, while the 1.8 advance line is the peak operating point of 78% η efficiency."
+    },
+    {
+      "line": 250,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Figure 4: Thrust Produced as a Function of Speed and RPM"
+    },
+    {
+      "line": 251,
+      "page_start": 8,
+      "page_end": 9,
+      "text": "Figure 5: Power Required as a Function of Speed and RPMLepidopteran 10"
+    },
+    {
+      "line": 252,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "It can be seen that the propeller operates within the high efficiency and rated power regime for the cruise"
+    },
+    {
+      "line": 253,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "target range of 12.5 to 17.5 m/s. All of these calculations were derived using the following equations, and"
+    },
+    {
+      "line": 254,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "others, taken from Carlton (2018) and Lewis (1988):"
+    },
+    {
+      "line": 255,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "𝐽 ="
+    },
+    {
+      "line": 256,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "𝑉𝑎"
+    },
+    {
+      "line": 257,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "𝐷∗𝑁"
+    },
+    {
+      "line": 258,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "𝐾𝑡 ="
+    },
+    {
+      "line": 259,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "𝑇"
+    },
+    {
+      "line": 260,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "𝜌∗𝑛2∗𝐷4 𝐾𝑞 ="
+    },
+    {
+      "line": 261,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "𝑄"
+    },
+    {
+      "line": 262,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "𝜌∗𝑛2∗𝐷5"
+    },
+    {
+      "line": 263,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Figure 6: Vessel Thrust and Drag as a Function of Speed"
+    },
+    {
+      "line": 264,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Figure 6 superimposes the thrust produced by the Newton-Rader 16 x 33.3 at different thrusts with the"
+    },
+    {
+      "line": 265,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "estimated drag from the foils, struts, and gear case. This was done using the drag equation with Cd values"
+    },
+    {
+      "line": 266,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "generated by xflr5. Notably, this does not include aerodynamic or hull drag, and the gearcase portion of the"
+    },
+    {
+      "line": 267,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "drag is probably not very accurate, due to the irregular shape of the housing and ventilation fences."
+    },
+    {
+      "line": 268,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Resistance towing tests were planned, but bad weather prevented any actual data collection, even though"
+    },
+    {
+      "line": 269,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "this would’ve provided very accurate results. However, this figure does indicate that the speed goals are"
+    },
+    {
+      "line": 270,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "feasible."
+    },
+    {
+      "line": 271,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "CONSTRUCTION"
+    },
+    {
+      "line": 272,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Power Storage and Transmission"
+    },
+    {
+      "line": 273,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "A Husky storage container is used as a waterproof container for the electronics. The battery and other"
+    },
+    {
+      "line": 274,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "components are bolted to the box which is then bolted to the deck. The battery negative terminal is wired to"
+    },
+    {
+      "line": 275,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "a Jiabaida JBD-AP21S002 battery management system. This BMS monitors cell voltage imbalances, state of"
+    },
+    {
+      "line": 276,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "charge, charge and discharge current, and battery temperature. It automatically isolates the battery if"
+    },
+    {
+      "line": 277,
+      "page_start": 9,
+      "page_end": 10,
+      "text": "voltage is ever too high or too low and features a customizable software fuse, set to 200 A. The positive Lepidopteran 11"
+    },
+    {
+      "line": 278,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "terminal of the battery has a 400 A fusible link connected to a 400A contactor energized by a disconnect"
+    },
+    {
+      "line": 279,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "button accessible on top of the vessel. The 4 AWG wire used is rated for 160 A continuous duty3, well in"
+    },
+    {
+      "line": 280,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "excess of the 150 A intermittent and 100 A continuous motor demands. The speed controller is a Golden"
+    },
+    {
+      "line": 281,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Motor EZkontrol B48800, rated for a working voltage of 48 V (max 75V) and bus current of 400 A."
+    },
+    {
+      "line": 282,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Figure 7: Electronics Compartment View with Labels"
+    },
+    {
+      "line": 283,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "A 52V 14S Intelligent Lithium Smart Charger from HPCBikes provides a slow but reliable and inexpensive"
+    },
+    {
+      "line": 284,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "charging current of 3 A."
+    },
+    {
+      "line": 285,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Gearcase and Mounting"
+    },
+    {
+      "line": 286,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "A sheet of G10 FRP was laminated to the top aft surface of the board with 8 layers of 4oz unidirectional"
+    },
+    {
+      "line": 287,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "carbon fiber. A custom pivot tube was fabricated from aluminum plate and tube to replace the bulky and"
+    },
+    {
+      "line": 288,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "heavy factory outboard mounting system. The tiller arm was cut off, and the assembly bolted to the mounting"
+    },
+    {
+      "line": 289,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "plate. The lower unit was disassembled, the gear surfaces and bearings were inspected for wear, and"
+    },
+    {
+      "line": 290,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "reassembled. The motor mounting plate was fabricated out of ¼” aluminum plate, and a bearing pressed"
+    },
+    {
+      "line": 291,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "into the plate to support the driveshaft."
+    },
+    {
+      "line": 292,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "A Gates HTD 5mm pitch timing belt with a 15mm width was selected. The 25mm width would’ve allowed"
+    },
+    {
+      "line": 293,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "more margin of safety on the allowable torque transmitted, but the 25mm width had a much worse selection"
+    },
+    {
+      "line": 294,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "of pulleys. Instead of aluminum, they were cast steel, and there were fewer different teeth counts available."
+    },
+    {
+      "line": 295,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "The two ratios selected were 1.94:1 and 3:1, which roughly corresponds4 with spinning the driveshaft at 6000"
+    },
+    {
+      "line": 296,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "and 9000 RPM from a loaded motor RPM of 2900. Also, intermediate ratios of 2.25:1 and 2.58:1 could be"
+    },
+    {
+      "line": 297,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "achieved by mixing pulleys between the two sets, in case optimum performance is somewhere in between."
+    },
+    {
+      "line": 298,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Belt tension is achieved by rotating the motor in the housing, much like an automotive v-belt. Unfortunately,"
+    },
+    {
+      "line": 299,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "3 United States Coast Guard Electrical System Compliance Guideline"
+    },
+    {
+      "line": 300,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "4 The exact ratios desired could not be sourced because not every tooth number pulley is manufactured, we had to"
+    },
+    {
+      "line": 301,
+      "page_start": 10,
+      "page_end": 11,
+      "text": "round to the closest ones available.Lepidopteran 12"
+    },
+    {
+      "line": 302,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "as of the writing for this report, we are still waiting for the pulleys to be bored to fit the respective shafts"
+    },
+    {
+      "line": 303,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "before being able to do on-the-water testing."
+    },
+    {
+      "line": 304,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Figure 8: Gearbox, Motor, Mount, and Steering System"
+    },
+    {
+      "line": 305,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "The Newton-Rader 16x33 propeller was modelled in SolidWorks to mate with a SOLAS RBX-A20 hub. The file"
+    },
+    {
+      "line": 306,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "was then sent to the casting house to be 3D printed and investment cast in stainless steel."
+    },
+    {
+      "line": 307,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Controls"
+    },
+    {
+      "line": 308,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Steering is controlled with a Savox SB-2290SG servo. It is rated for 70.0 kg-cm of"
+    },
+    {
+      "line": 309,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "torque at 8.4 V. A bracket was fabricated and bolted to the outboard midsection"
+    },
+    {
+      "line": 310,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "and a linkage connects to the servo arm."
+    },
+    {
+      "line": 311,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "The radio transmitter is a RadioMaster MT12 and the receiver is a RadioMaster"
+    },
+    {
+      "line": 312,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "ER5C-i. They use the ELRS 2.4 GHz protocol, which offers superior flexibility for"
+    },
+    {
+      "line": 313,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "programming and telemetry. A Speedybee F405 flight controller provides an"
+    },
+    {
+      "line": 314,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "interface for telemetry data and (so far unutilized) autopilot functions. A Foxtech"
+    },
+    {
+      "line": 315,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "HV BEC converts the main battery voltage to 8.4 V for the RC electronics and 12"
+    },
+    {
+      "line": 316,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "V for the coolant pump."
+    },
+    {
+      "line": 317,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "The BLDC controller cannot interface directly with any of the RC electronics. The radio receiver outputs a 1"
+    },
+    {
+      "line": 318,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "to 2 millisecond PWM signal, while the controller expects a 0-5v analog"
+    },
+    {
+      "line": 319,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "input. Instead, the receiver drives a throttle servo which mechanically"
+    },
+    {
+      "line": 320,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "actuates a potentiometer to provide the necessary analog signal."
+    },
+    {
+      "line": 321,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Foils"
+    },
+    {
+      "line": 322,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "The foils are being constructed by vacuum bagged wet layup inside a"
+    },
+    {
+      "line": 323,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "female half mold. The layup consists of 2 layers of 9 oz biaxial (±45 to the"
+    },
+    {
+      "line": 324,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Figure 9: N-R 16 x 33"
+    },
+    {
+      "line": 325,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Rendering"
+    },
+    {
+      "line": 326,
+      "page_start": 11,
+      "page_end": 12,
+      "text": "Figure 10: Aft Foil Mold RenderingLepidopteran 13"
+    },
+    {
+      "line": 327,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "span axis) on the outside skin and the remaining interior of unidirectional fabric oriented along the span axis."
+    },
+    {
+      "line": 328,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "The parts will then be demolded, flattened along the neutral plane, and then bonded together. The struts will"
+    },
+    {
+      "line": 329,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "then be bonded to the lifting foils, while the aft foil will be bolted directly to the lower unit cavitation plate."
+    },
+    {
+      "line": 330,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "The female molds have been 3d printed, and construction is currently ongoing."
+    },
+    {
+      "line": 331,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "TESTING AND EVALUATION"
+    },
+    {
+      "line": 332,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Due to many delays in fund processing, material delivery, and part fabrication, no on-the-water testing has"
+    },
+    {
+      "line": 333,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "yet been done. However, everything is in order to perform testing and tuning over the next three weeks"
+    },
+    {
+      "line": 334,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "leading into the competition. The questions that need to be answered are:"
+    },
+    {
+      "line": 335,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "1. Which pulley ratios provide the best performance?"
+    },
+    {
+      "line": 336,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "2. Which propeller provides the best performance?"
+    },
+    {
+      "line": 337,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "3. What is the optimal CoG position?"
+    },
+    {
+      "line": 338,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "4. Are motor, battery, and ESC cooling sufficient?"
+    },
+    {
+      "line": 339,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "5. Is steering authority sufficient?"
+    },
+    {
+      "line": 340,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "We can evaluate these conditions by running the vessel while changing one variable at a time. We can"
+    },
+    {
+      "line": 341,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "directly monitor GPS speed, RPM, and component temperatures. By calculating slip from RPM and speed,"
+    },
+    {
+      "line": 342,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "we can also find if the propeller is actually operating in an efficient regime. If battery cooling is insufficient,"
+    },
+    {
+      "line": 343,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "a coolant plate can be added, and if the ESC and motor cooling is insufficient, the water pump could be"
+    },
+    {
+      "line": 344,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "upgraded to a higher flow rate."
+    },
+    {
+      "line": 345,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "RISKS"
+    },
+    {
+      "line": 346,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "There are three main weaknesses in our design:"
+    },
+    {
+      "line": 347,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "1. The steering servo may have insufficient range or torque. The trade-off between torque and steering"
+    },
+    {
+      "line": 348,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "range can be modified by lengthening or shortening the moment arm of either bracket. However,"
+    },
+    {
+      "line": 349,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "while under load there will be much more force on the steering system than at rest, and it may prove"
+    },
+    {
+      "line": 350,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "to be too much for the Savox servo. In that case, the servo can be replaced by a geared DC motor"
+    },
+    {
+      "line": 351,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "with a reversible speed control that can output the torque required. However, since the race format"
+    },
+    {
+      "line": 352,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "does not prioritize turning ability, it may be acceptable to just slow down for each turn."
+    },
+    {
+      "line": 353,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "2. Center of gravity may be too far aft. This can be determined by checking performance after relocating"
+    },
+    {
+      "line": 354,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "the payload weight. If this is the case, the battery box could be moved further forward, which would"
+    },
+    {
+      "line": 355,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "require new power cables; or the weight of the motor mounting plates and the outboard midsection"
+    },
+    {
+      "line": 356,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "could be reduced by drilling lightening holes. Also, if there is extra buoyancy in the forward areas of"
+    },
+    {
+      "line": 357,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "the hull, extra ballast could just be carried at the bow, or even extended in front of the bow on a sprit"
+    },
+    {
+      "line": 358,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "structure. In the future, this imbalance could be mitigated by moving the motor forward of the pivot"
+    },
+    {
+      "line": 359,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "point, but we chose the current location to simplify fabrication of the mounting plate and fitting of"
+    },
+    {
+      "line": 360,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "the drive belt."
+    },
+    {
+      "line": 361,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "3. The gearbox may not be able to handle an input speed of 9000 RPM. We could not find any literature"
+    },
+    {
+      "line": 362,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "discussing exactly why almost all outboard engines are limited to 6000 RPM, but hypothesize that is"
+    },
+    {
+      "line": 363,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "only because of limitation in the combustion powerhead. The gear sets are typically limited by"
+    },
+    {
+      "line": 364,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "torque, not RPM, and bearings of the size used in the lower unit usually have speed limits well over"
+    },
+    {
+      "line": 365,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "10,000 RPM. Since this 50% was the only practical way to hit our speed targets, we considered this"
+    },
+    {
+      "line": 366,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "an acceptable risk, especially considering the short duration of the race. By intentionally running the"
+    },
+    {
+      "line": 367,
+      "page_start": 12,
+      "page_end": 13,
+      "text": "lower unit under more demanding conditions during testing than during the race, by performing Lepidopteran 14"
+    },
+    {
+      "line": 368,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "frequent oil changes, and by examining the gears and bearings for abnormal wear, we will find out if"
+    },
+    {
+      "line": 369,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "running at the elevated speed is acceptable. If not, we will simply run the race at reduced speed."
+    },
+    {
+      "line": 370,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "FUTURE DEVELOPMENT"
+    },
+    {
+      "line": 371,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Lepidopteran is ripe for ongoing modification and use. The manageable size, high speed, good endurance,"
+    },
+    {
+      "line": 372,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "and payload capacity mean it could be used for other marine projects as well as future PEP competitions."
+    },
+    {
+      "line": 373,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "The following are some of the avenues that we think may be worth pursuing:"
+    },
+    {
+      "line": 374,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "1. Hydrofoils"
+    },
+    {
+      "line": 375,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "a. The foil section, planform, or lift distribution could be improved. Particularly of interest may"
+    },
+    {
+      "line": 376,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "be changing the elliptical planform to a bell-shaped lift distribution, which would be more"
+    },
+    {
+      "line": 377,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "efficient with respect to strength."
+    },
+    {
+      "line": 378,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "b. The foil manufacturing process could be improved. Perhaps they could be milled out of billet"
+    },
+    {
+      "line": 379,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "stainless steel (some of the latest Moth hydrofoils have done this), or just laid up with an"
+    },
+    {
+      "line": 380,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "improved method, like VARTM."
+    },
+    {
+      "line": 381,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "c. The subcavitating foils could be changed to supercavitating. They would be more inefficient"
+    },
+    {
+      "line": 382,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "but offer the possibility to break the 50 kn barrier."
+    },
+    {
+      "line": 383,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "d. The entire foil system could be switched to a surface piercing configuration."
+    },
+    {
+      "line": 384,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "2. Gearbox – the current lower unit gearbox is probably the single biggest area for improvement. The"
+    },
+    {
+      "line": 385,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "outboard that we chose uses a through hub exhaust, which is bulky and increases drag of the lower"
+    },
+    {
+      "line": 386,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "unit, while providing zero utility to an electric system. Also, the very low gear ratio of 2.42 to 1 is more"
+    },
+    {
+      "line": 387,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "suited for a sailboat or a dinghy than a performance high speed vessel. Both of these aspects could"
+    },
+    {
+      "line": 388,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "be improved by selecting a lower unit similar to those used by racing boats."
+    },
+    {
+      "line": 389,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "LITERATURE CITED"
+    },
+    {
+      "line": 390,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Vermeulen J. C., Barr, R. A., & Martin M. (1964). Hydrodynamics of Hydrofoil Craft Subcavitating Hydrofoil"
+    },
+    {
+      "line": 391,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Systems (Technical Report 463-1). HYDRONAUTICS, Incorporated."
+    },
+    {
+      "line": 392,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Auslaender, J. (1962). Low Drag Supercavitating Hydrofoil Sections (Technical Report 001-7)."
+    },
+    {
+      "line": 393,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "HYDRONAUTICS, Incorporated."
+    },
+    {
+      "line": 394,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Vellinga, R. (2009). Hydrofoils: Design, Build, Fly. Peacock Hill Publishing."
+    },
+    {
+      "line": 395,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Speer, T. [tspeer]. (2020, January 20). There's a lot of information on that chart, so I'll break it down."
+    },
+    {
+      "line": 396,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "[Comment on forum post Foil section? For foil board] Boatdesign.net."
+    },
+    {
+      "line": 397,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "https://www.boatdesign.net/threads/foil-section-for-foil-board.63233/"
+    },
+    {
+      "line": 398,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Shen, Y. T. & Wermter, R. (1976). Recent Studies of Struts and Foils for High Speed Hydrofoils (76-851)."
+    },
+    {
+      "line": 399,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "AIAA/SNAME Advanced Marine Vehicles Conference."
+    },
+    {
+      "line": 400,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Clement, E. P. (1964). A Lifting Surface Approach to Planing Boat Design. (Report 1902). David Taylor Model"
+    },
+    {
+      "line": 401,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Basin, Department of the Navy, Research and Development Report. Hydromechanics Laboratory."
+    },
+    {
+      "line": 402,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Carlton, J. (2018). Marine propellers and propulsion. Butterworth-Heinemann."
+    },
+    {
+      "line": 403,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Speer, T. (n.d.). Minimum Induced Drag of Sail Rigs and Hydrofoils. Tom Speer's Home Page."
+    },
+    {
+      "line": 404,
+      "page_start": 13,
+      "page_end": 14,
+      "text": "https://web.archive.org/web/20231002165208/http://www.tspeer.com/Planforms/Planar.htmLepidopteran 15"
+    },
+    {
+      "line": 405,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Feifel, W. M. Advanced Numerical Methods Hydrofoil System Design and Experimental Verification. Boeing"
+    },
+    {
+      "line": 406,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Marine Systems."
+    },
+    {
+      "line": 407,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Abbott Ira, H., & Von Doenhoff, A. E. (1959). Theory of Wing Sections: Including a Summary of Airfoil Data."
+    },
+    {
+      "line": 408,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Dover Publications, Inc."
+    },
+    {
+      "line": 409,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Gawn, R.W.L. (1953). Effect of pitch and blade width on propeller performance. Trans. RINA."
+    },
+    {
+      "line": 410,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Gawn, R.W.L., Burrill, L.C. (1957). Effect of cavitation on the performance of a series of 16 in. model"
+    },
+    {
+      "line": 411,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "propellers. Trans. RINA."
+    },
+    {
+      "line": 412,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Newton, R.N., Rader, H.P. (1961). Performance data of propellers for high speed craft. Trans. RINA, 103."
+    },
+    {
+      "line": 413,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Lewis, E. V. (1988). Principles of naval architecture second revision. Jersey: Sname, 2, 152-157."
+    },
+    {
+      "line": 414,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Williams, J. W. (1984). Propeller Drives for Hydrofoil Ships - A Position Paper. Boeing."
+    }
+  ],
+  "source_line_count": 415,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}

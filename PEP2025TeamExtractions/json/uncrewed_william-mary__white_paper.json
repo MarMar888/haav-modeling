@@ -1,0 +1,1271 @@
+{
+  "competition_year": 2025,
+  "team": "William & Mary",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/WilliamMary",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/William_Mary/WilliamAndMary-PEP-CompetitionWhitePaper.pdf",
+  "filename": "WilliamAndMary-PEP-CompetitionWhitePaper.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "10"
+  },
+  "page_count": 10,
+  "pages_without_text": [],
+  "char_count": 17076,
+  "pages": [
+    {
+      "page": 1,
+      "text": "Pesce Volante\nThe College of William and Mary PEP Race Team\nWhite Paper Report\n25 March 2025Background Research:\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": "Many members of our team are versed in the world of motorsports. Most of our plans for\nthe design of the boat hull were made through observing motorsports and seeing how different\nhulls were designed and how they performed. We also wanted to make sure our hull was not\noverly-complex, but still had the ability to perform well. Weight was a big consideration in\nwhatever design we chose, so we wanted to use lightweight materials for the inside of the boat\nand something stronger for the hull. Research led us to use carbon fiber as the main structural\ncomponent of our hull, supported by insulating foam strong enough to hold shape while still\nbeing light enough to not interfere with buoyancy.\nThe electronics and wiring were kept very similar to boats that the William & Mary\nracing team has made in the past. Fuse and breaker size were determined from calculations done\nregarding our battery outputs and current draw at different load levels. Certain components are\nimplemented after a pair of downstepping DC power supplies that draw directly from the\nbatteries 48V output in order to give them the required voltage to function, such as the telemetry\nand radio transceiver. The team also understood that the electric devices that we had on-hand\nfrom previous boat projects (power switches, electronic speed controllers, water pumps, and\nmotors) all were working properly when other boats were tested and were still good to use.\nObviously there are budget concerns surrounding acquiring components, so we eventually\ndecided that it was still effective to use old systems rather than completely replace them with\nnew ones. The batteries we used were also researched, and we found that using 4 rechargeable\nlithium iron diesel batteries, pushing 48V at 100Ah would be more than enough to power the\nUSV. However, we wanted a solution with more punch. We began looking into transitioning to\nlithium polymer batteries for their higher discharge rates, and, working closely with several\nmanufacturers to determine our needs, have a custom LiPo cell on the way.\nThe placement of electronics and components inside the hull of our ship was also\nresearched. We wanted to optimize the center of mass of the USV mostly, so we planned out\nwhere everything would go before we started building our hull.\nFor the drivetrain and propellers, we wanted something stable at high speeds while also\navoiding too much vibration of the USV. To accomplish this, we implemented a two stage\ndrivetrain with differing internal and external components. The internal drivetrain is a solitary\ndriven aluminum shaft, connected at the motor with a U-joint and again near the stern transom\nwith another. Aluminum was chosen because of its light weight and ease of machining, allowing\nus easy iteration and a reduction in rotational moment. At the stern end of the internal shaft we\ntransition - again via U-joint - to a stainless steel through shaft, extending from the inside of the\nboat through a pair of marine grade flanges and seals to the outside of the hull. This step\nsimplified the variable geometry of the stern, caused by the less than precise production of the\nhull, and prepared us for the implementation of the outboard final drive. Once again using\nstainless steel, the outboard driveshafts are mating mechanisms for our propellers, using splines\nand a retaining nut to transfer thrust as is common in many marine applications, these shafts are\nsuspended by monocoque struts attached to the underside of the hull, affording us precise controlof the final trim and toe angle of our thrust. These struts are 3D printed like many other\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "components of the vessel, and require extreme strength and rigidity for our inherently high\nvibration application. As such, material choice was critical. Current iterations are produced from\ncarbon fiber reinforced nylon-12 after conducting an in house study regarding the integrity of\ndifferent 3D printed materials (ASA-CF, PETG-CF, ABS-CF, and PA12-CF) after exposure to\ncorrosive environments. A similar consideration had to be made for the propellers, along with\ninvestigations into different shapes and styles. We have iterated and tested everything from\nsimple three bladed designs without complex blade curvature to standard five bladed surface\npiercing profiles all the way to toroidal blade shapes as seen in Sharrow Marine’s propellers.\nDesign Process:\nFor the hull of the USV, we decided to model a few different types of hull styles in\nFusion 360. We then ran FEA and CFD tests to see which hull had the best potential at the high\nspeeds that we intended to reach. This led us to a catamaran-style hull, as it had very good\nplaning capabilities and promised high maneuverability at high speeds. Before we built the actual\nhull, we decided to build a small model of the USV to see how it operated in water.\nFigure 1 - Hull Modeling and Simulation Setups\nWe felt that the tests showed sufficient evidence that the catamaran-style hull would be our best\noption, so we have kept it as such. We never intended to change the design of the hull after it was\nmade, only intending to tweak the internal and external components if small problems arose.\nFigure 2 - Light 2D SimulationsParing an efficient hull design with effective propellers is paramount to high performance\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": "in a marine environment. Having developed an efficient hull, the challenge to increase theoretical\ntop speed became developing geometry that could propel us there. Using our fleet of 3D printers\nand some directed enthusiasm, we began churning out iteration after iteration of propeller design\nout of material after material. We attempted to cast these shapes into aluminum early in the\ndesign process to determine its feasibility.\nFigure 3 - Lackluster Results\nThese attempts did not yield what we were looking for, so we continued down the route\nof additive manufacturing. This meant needing an effective material, and we have the best.\nPA12CF is the bleeding edge of 3D printing filament, water resistant and exceptionally tough.\nThis is what our final propellers will be produced from.\nFigure 4 - Final Propeller Design\nThe shape as it stands now is the result of redesign after redesign, modelled after the best\ndocumentation regarding surface piercing propellers we could find. Knowing that our hull would\nbe mostly to entirely out of the water for the race and understanding that the angle of thedriveshaft puts our propeller half in, half out of the water, this is the only geometry that makes\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "sense. Running copious fluid dynamics simulations confirmed our beliefs.\n\\\nFigure 5 - Result of an Ansys Simulation\nWe also found after rigorous testing at a bollard station that diameter is strongly\ncorrelated with thrust output. This information I’m sure comes as a shock, but we intend to use\nevery bit of available diameter while maintaining safe operating conditions. As a side note, our\npropeller designer was very enthusiastic about the potential efficiency benefits of a toroidal\ndesign, and came up with a very impressive imitation of Sharrow Marine’s MX-A, but after\ntesting this design in a surface piercing environment the motion was scrapped.\nFigure 6 - Love’s Labour Lost\nCurrent Systems Design:\nPower Storage: We are currently powering the USV with 4 Lithium Iron batteries that supply\n48V for 100Ah. These batteries contribute to the most weight of our USV, as they each weigh\naround 50 pounds. We have already put in an order for a new battery that will be arriving to us at\nthe beginning of April. We decided to get a new battery both because we discovered that we\ncould get away with less voltage, and because these new batteries will weigh much less andallow us to further optimize the center of mass needed for consistent planing. This will also help\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "us to get up to top speeds faster than with the older batteries. The new battery will be a lithium\npolymer cell with slightly more voltage, but less than half the capacity. This saves a veritable ton\nof weight\nWe are running the positive end of our batteries into a fuse at the beginning of the\nelectronics chain, which then is connected to our main power switch. The power then goes\nthrough a thermal breaker, and then to a positive hub. The positive hub connects to our voltage\ndividers and our two switches for both the port and starboard ESC’s. Of course, we also have a\nnegative hub for all of these systems to ground to.\nFigure 7 - Messes, Methods, and Madness\nDuring testing, we have had some issues with tripping the thermal breaker, leading us to\ninvestigate whether the breaker is faulty, or if our USV is becoming too hot on the inside. We\nhave done numerous tests without this breaker and found both that the boat was drawing more\namps and that there was no overheating of the vessel. We have since discovered that, due to the\nthermal breaker being relatively cheap and not as accurate as we would like, that we will\ncontinue testing the vessel without the thermal breaker, using the one fuse only. Our fuses are\nrated at 400 amps, and our motors draw a maximum of 600 amps, though we have not reached a\n400 amp draw currently during testing.\nCooling System: Our cooling systems from the beginning of the Fall have consisted of two\npumps and two reservoirs on either side of the inside of the vessel. Water from the reservoirs\nruns directly into both of our motors and speed controllers before flowing back to the pump,providing continuing cooling to the motors. We were able to run our USV at 25% throttle for\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "around 15 minutes without overheating or tripping the thermal breaker, which is what we want\nfor the race. However, we wanted to streamline the process of filling the reservoirs. Because of\nthis, we have added two new quarter-turn caps that allow easy access to the cooling reservoirs,\nallowing the addition of ice to be much easier as we do not need to completely remove the\nreservoirs every time they are filled. We also plan on using new tubing in a way that will prevent\nkinks so that the flow of water is unrestricted. We have also recently added two new air vents on\nthe top of each pontoon external to the vessel, along with a vent and fan on the stern of the\nvessel. This will be used to move heat away from the electronics where the cooling system is not\nconnected, as air will pass over the electronics and out the back of the vessel. Both of these\nsystems work together to ensure that heat can be removed effectively, and we calculated early on\nthat a certain amount of ice can be used to provide enough cooling for the entire race.Figures 8,9,10 - Napkin-back Thermodynamics\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": "Motor and Drivetrain: The beginnings of our motor and drivetrain consisted of two motors,\ntwo sections of aluminum rods connected with u-joints, and adjustable external drivetrain\nsupports. This was done so that we could test and adjust the supports to find an angle that\noptimized our speed for the vessel. As we did further testing, we soon realized that these\nadjustable supports were not stable at high speeds and caused vibrations that were inhibiting the\nperformance of our vessel. We decided that our first step was to create more permanent and\nsturdy supports. As mentioned above, we settled on making our struts out of PA12CF. These\nsupports were designed and manufactured not only for intrinsic strength, but also to\naccommodate small diameter, pultruded carbon fiber shafts for extra resistance to any bending\nmoment.\nRecently, we discovered a problem with the drivetrain assembly, severe enough that it\ndamaged one of our motors beyond repair. We discovered that the ball bearings, attached to the\nexternal drivetrain supports, were not preventing perpendicular forces from going directly into\nthe motor along the shaft. We soon learned that this problem had been happening since we first\nstarted testing the boat, as the propellers were putting too much force on the motors, and the\nwear on the motors finally caught up to us. Luckily, we had a spare motor, but major changes\nneeded to be made to the drivetrain besides just the ball bearings. We also felt that there were\nsome imprecise measurements and holes drilled into our shafts that could also have worn out the\nmotors. With this in mind, we integrate thrust bearings alongside our radial bearing to relieve the\naxial load from the drivetrain. This means that our external drivetrain supports must be re-sized\nfor these new bearings. We are still in the process of rebuilding this new drivetrain, but we\nexpect it to be done soon so that we can go back to open water testing without damaging the\nmotors.Risks: During the fabrication of our USV, we wanted to make sure to mitigate as many risks as\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "possible. We accounted for as many risks as we could, and what we have come up with to\nmitigate them are as follows:\n● Power Storage: With our wiring of the batteries to the main components of our USV, we\nhave included both a fuse and a thermal breaker, which will stop the USV in case of too\nmuch heat or too much power draw.\n● External Control System: In our design of our external electronics casing, we have\nmodeled a connection that acts as a clamp for wires that are connected to the inside of the\nboat. This will mitigate tensions on the wires and prevent wires from becoming detached\nso as not to lose control of the USV\n● Propulsion: We have discovered that the propellers are putting lots of strain on the\nmotors. We hope to mitigate this by implementing thrust bearings on our external\ndrivetrain supports. However, the vibrations from the motor still have a chance to detach\nour motors from their mounts. We hope to prevent this by making the mounting\nconnections sturdier by attaching them to carbon fiber that will be laid inside the hull to\nprevent the motors from vibrating too much.\n● Cooling System: There is a chance that our cooling system can not draw enough heat\naway from the motors and cause them to overheat. We are dealing with this issue with\nfuture tests of our cooling and seeing how long the USV can run with or without ice\nbeing needed. We do not plan on running the vessel with inadequate cooling, so further\ntesting will help us narrow down the correct solution to this issue. The same applies to\nthe new air vents of the vessel. Both systems act in tandem, and we do not foresee both\nsystems failing at the same time, though further testing is still necessary.\n● Water Ingress: With the addition of air vents both at the bow and stern of the USV, there\nis a chance that, during testing, water is able to get into the vessel and negatively affect\nthe electronics and other systems present. As the vents are relatively new, we plan on\nseeing if any water enters the boat through our usual testing. This can be remedied\nthrough the addition of more sealant to the inside and outside of the vessel, but we will\nnot know for certain until more testing is done and more information is provided.\n● Hull Damage: In case there are unforeseen obstacles on the racecourse or inefficient\ncontrol of the USV, the hull could become damaged. The outside hull of our USV is made\nwith carbon fiber and resin, and while it is shear resistant, it is not puncture resistant.\nThere is a chance that an object could puncture the hull and allow water to leak inside the\nvessel. This issue is mitigated by correct control of the USV and being able to see what is\nin front of the vessel, which will be done using a GoPro camera that we have been using\nduring our weekly tests. We have also done a few puncture tests, and with the addition of\nresin on the carbon fiber coating, the hull is still very resistant to puncture damage, so\nregular wear and tear during the race should not damage the hull.● Propeller Damage: If obstacles appear on the racecourse and the USV can not pilot\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 10,
+      "text": "around them, there is a chance that the propellers could become damaged. It is also true\nthat at high speeds, the propellers could break themselves when given too much torque to\ndeal with. We have done repeated testing and iteration of our propellers, and we will\nknow the maximum torque of our propellers and the maximum force that can be exerted\non the drivetrain shafts through torque tests and USV tests. We do not plan on piloting\nour USV without knowing the limits of forces exerted on its drivetrain and propellers.\n● Safety Features: A main-power disconnect is mandatory for this race, and we have gone\nthrough many ideas of how to work this into our wiring design. Currently, we have one\nlarge power switch that can be turned off and stop the flow of electricity to the electronics\nof the USV. To streamline this process, we plan on using a removable piece of wire that\ncan be accessed easily on the outside of the vessel. Once this wire is pulled off, the power\nto the main system is disconnected and the vessel will stop working. We plan on testing\nthis feature more in the coming weeks to ensure that it is effective. Either way, the team\nalways has access to a main-power disconnect that can be used effectively.\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Pesce Volante"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "The College of William and Mary PEP Race Team"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "White Paper Report"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 1,
+      "text": "25 March 2025Background Research:"
+    },
+    {
+      "line": 4,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Many members of our team are versed in the world of motorsports. Most of our plans for"
+    },
+    {
+      "line": 5,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "the design of the boat hull were made through observing motorsports and seeing how different"
+    },
+    {
+      "line": 6,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "hulls were designed and how they performed. We also wanted to make sure our hull was not"
+    },
+    {
+      "line": 7,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "overly-complex, but still had the ability to perform well. Weight was a big consideration in"
+    },
+    {
+      "line": 8,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "whatever design we chose, so we wanted to use lightweight materials for the inside of the boat"
+    },
+    {
+      "line": 9,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "and something stronger for the hull. Research led us to use carbon fiber as the main structural"
+    },
+    {
+      "line": 10,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "component of our hull, supported by insulating foam strong enough to hold shape while still"
+    },
+    {
+      "line": 11,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "being light enough to not interfere with buoyancy."
+    },
+    {
+      "line": 12,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "The electronics and wiring were kept very similar to boats that the William & Mary"
+    },
+    {
+      "line": 13,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "racing team has made in the past. Fuse and breaker size were determined from calculations done"
+    },
+    {
+      "line": 14,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "regarding our battery outputs and current draw at different load levels. Certain components are"
+    },
+    {
+      "line": 15,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "implemented after a pair of downstepping DC power supplies that draw directly from the"
+    },
+    {
+      "line": 16,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "batteries 48V output in order to give them the required voltage to function, such as the telemetry"
+    },
+    {
+      "line": 17,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "and radio transceiver. The team also understood that the electric devices that we had on-hand"
+    },
+    {
+      "line": 18,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "from previous boat projects (power switches, electronic speed controllers, water pumps, and"
+    },
+    {
+      "line": 19,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "motors) all were working properly when other boats were tested and were still good to use."
+    },
+    {
+      "line": 20,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Obviously there are budget concerns surrounding acquiring components, so we eventually"
+    },
+    {
+      "line": 21,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "decided that it was still effective to use old systems rather than completely replace them with"
+    },
+    {
+      "line": 22,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "new ones. The batteries we used were also researched, and we found that using 4 rechargeable"
+    },
+    {
+      "line": 23,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "lithium iron diesel batteries, pushing 48V at 100Ah would be more than enough to power the"
+    },
+    {
+      "line": 24,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "USV. However, we wanted a solution with more punch. We began looking into transitioning to"
+    },
+    {
+      "line": 25,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "lithium polymer batteries for their higher discharge rates, and, working closely with several"
+    },
+    {
+      "line": 26,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "manufacturers to determine our needs, have a custom LiPo cell on the way."
+    },
+    {
+      "line": 27,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "The placement of electronics and components inside the hull of our ship was also"
+    },
+    {
+      "line": 28,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "researched. We wanted to optimize the center of mass of the USV mostly, so we planned out"
+    },
+    {
+      "line": 29,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "where everything would go before we started building our hull."
+    },
+    {
+      "line": 30,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "For the drivetrain and propellers, we wanted something stable at high speeds while also"
+    },
+    {
+      "line": 31,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "avoiding too much vibration of the USV. To accomplish this, we implemented a two stage"
+    },
+    {
+      "line": 32,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "drivetrain with differing internal and external components. The internal drivetrain is a solitary"
+    },
+    {
+      "line": 33,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "driven aluminum shaft, connected at the motor with a U-joint and again near the stern transom"
+    },
+    {
+      "line": 34,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "with another. Aluminum was chosen because of its light weight and ease of machining, allowing"
+    },
+    {
+      "line": 35,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "us easy iteration and a reduction in rotational moment. At the stern end of the internal shaft we"
+    },
+    {
+      "line": 36,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "transition - again via U-joint - to a stainless steel through shaft, extending from the inside of the"
+    },
+    {
+      "line": 37,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "boat through a pair of marine grade flanges and seals to the outside of the hull. This step"
+    },
+    {
+      "line": 38,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "simplified the variable geometry of the stern, caused by the less than precise production of the"
+    },
+    {
+      "line": 39,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "hull, and prepared us for the implementation of the outboard final drive. Once again using"
+    },
+    {
+      "line": 40,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "stainless steel, the outboard driveshafts are mating mechanisms for our propellers, using splines"
+    },
+    {
+      "line": 41,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "and a retaining nut to transfer thrust as is common in many marine applications, these shafts are"
+    },
+    {
+      "line": 42,
+      "page_start": 1,
+      "page_end": 2,
+      "text": "suspended by monocoque struts attached to the underside of the hull, affording us precise controlof the final trim and toe angle of our thrust. These struts are 3D printed like many other"
+    },
+    {
+      "line": 43,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "components of the vessel, and require extreme strength and rigidity for our inherently high"
+    },
+    {
+      "line": 44,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "vibration application. As such, material choice was critical. Current iterations are produced from"
+    },
+    {
+      "line": 45,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "carbon fiber reinforced nylon-12 after conducting an in house study regarding the integrity of"
+    },
+    {
+      "line": 46,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "different 3D printed materials (ASA-CF, PETG-CF, ABS-CF, and PA12-CF) after exposure to"
+    },
+    {
+      "line": 47,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "corrosive environments. A similar consideration had to be made for the propellers, along with"
+    },
+    {
+      "line": 48,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "investigations into different shapes and styles. We have iterated and tested everything from"
+    },
+    {
+      "line": 49,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "simple three bladed designs without complex blade curvature to standard five bladed surface"
+    },
+    {
+      "line": 50,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "piercing profiles all the way to toroidal blade shapes as seen in Sharrow Marine’s propellers."
+    },
+    {
+      "line": 51,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Design Process:"
+    },
+    {
+      "line": 52,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "For the hull of the USV, we decided to model a few different types of hull styles in"
+    },
+    {
+      "line": 53,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Fusion 360. We then ran FEA and CFD tests to see which hull had the best potential at the high"
+    },
+    {
+      "line": 54,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "speeds that we intended to reach. This led us to a catamaran-style hull, as it had very good"
+    },
+    {
+      "line": 55,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "planing capabilities and promised high maneuverability at high speeds. Before we built the actual"
+    },
+    {
+      "line": 56,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "hull, we decided to build a small model of the USV to see how it operated in water."
+    },
+    {
+      "line": 57,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Figure 1 - Hull Modeling and Simulation Setups"
+    },
+    {
+      "line": 58,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "We felt that the tests showed sufficient evidence that the catamaran-style hull would be our best"
+    },
+    {
+      "line": 59,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "option, so we have kept it as such. We never intended to change the design of the hull after it was"
+    },
+    {
+      "line": 60,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "made, only intending to tweak the internal and external components if small problems arose."
+    },
+    {
+      "line": 61,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "Figure 2 - Light 2D SimulationsParing an efficient hull design with effective propellers is paramount to high performance"
+    },
+    {
+      "line": 62,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "in a marine environment. Having developed an efficient hull, the challenge to increase theoretical"
+    },
+    {
+      "line": 63,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "top speed became developing geometry that could propel us there. Using our fleet of 3D printers"
+    },
+    {
+      "line": 64,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "and some directed enthusiasm, we began churning out iteration after iteration of propeller design"
+    },
+    {
+      "line": 65,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "out of material after material. We attempted to cast these shapes into aluminum early in the"
+    },
+    {
+      "line": 66,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "design process to determine its feasibility."
+    },
+    {
+      "line": 67,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Figure 3 - Lackluster Results"
+    },
+    {
+      "line": 68,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "These attempts did not yield what we were looking for, so we continued down the route"
+    },
+    {
+      "line": 69,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "of additive manufacturing. This meant needing an effective material, and we have the best."
+    },
+    {
+      "line": 70,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "PA12CF is the bleeding edge of 3D printing filament, water resistant and exceptionally tough."
+    },
+    {
+      "line": 71,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "This is what our final propellers will be produced from."
+    },
+    {
+      "line": 72,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Figure 4 - Final Propeller Design"
+    },
+    {
+      "line": 73,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "The shape as it stands now is the result of redesign after redesign, modelled after the best"
+    },
+    {
+      "line": 74,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "documentation regarding surface piercing propellers we could find. Knowing that our hull would"
+    },
+    {
+      "line": 75,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "be mostly to entirely out of the water for the race and understanding that the angle of thedriveshaft puts our propeller half in, half out of the water, this is the only geometry that makes"
+    },
+    {
+      "line": 76,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "sense. Running copious fluid dynamics simulations confirmed our beliefs."
+    },
+    {
+      "line": 77,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "\\"
+    },
+    {
+      "line": 78,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Figure 5 - Result of an Ansys Simulation"
+    },
+    {
+      "line": 79,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "We also found after rigorous testing at a bollard station that diameter is strongly"
+    },
+    {
+      "line": 80,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "correlated with thrust output. This information I’m sure comes as a shock, but we intend to use"
+    },
+    {
+      "line": 81,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "every bit of available diameter while maintaining safe operating conditions. As a side note, our"
+    },
+    {
+      "line": 82,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "propeller designer was very enthusiastic about the potential efficiency benefits of a toroidal"
+    },
+    {
+      "line": 83,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "design, and came up with a very impressive imitation of Sharrow Marine’s MX-A, but after"
+    },
+    {
+      "line": 84,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "testing this design in a surface piercing environment the motion was scrapped."
+    },
+    {
+      "line": 85,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Figure 6 - Love’s Labour Lost"
+    },
+    {
+      "line": 86,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Current Systems Design:"
+    },
+    {
+      "line": 87,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Power Storage: We are currently powering the USV with 4 Lithium Iron batteries that supply"
+    },
+    {
+      "line": 88,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "48V for 100Ah. These batteries contribute to the most weight of our USV, as they each weigh"
+    },
+    {
+      "line": 89,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "around 50 pounds. We have already put in an order for a new battery that will be arriving to us at"
+    },
+    {
+      "line": 90,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "the beginning of April. We decided to get a new battery both because we discovered that we"
+    },
+    {
+      "line": 91,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "could get away with less voltage, and because these new batteries will weigh much less andallow us to further optimize the center of mass needed for consistent planing. This will also help"
+    },
+    {
+      "line": 92,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "us to get up to top speeds faster than with the older batteries. The new battery will be a lithium"
+    },
+    {
+      "line": 93,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "polymer cell with slightly more voltage, but less than half the capacity. This saves a veritable ton"
+    },
+    {
+      "line": 94,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "of weight"
+    },
+    {
+      "line": 95,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "We are running the positive end of our batteries into a fuse at the beginning of the"
+    },
+    {
+      "line": 96,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "electronics chain, which then is connected to our main power switch. The power then goes"
+    },
+    {
+      "line": 97,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "through a thermal breaker, and then to a positive hub. The positive hub connects to our voltage"
+    },
+    {
+      "line": 98,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "dividers and our two switches for both the port and starboard ESC’s. Of course, we also have a"
+    },
+    {
+      "line": 99,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "negative hub for all of these systems to ground to."
+    },
+    {
+      "line": 100,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Figure 7 - Messes, Methods, and Madness"
+    },
+    {
+      "line": 101,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "During testing, we have had some issues with tripping the thermal breaker, leading us to"
+    },
+    {
+      "line": 102,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "investigate whether the breaker is faulty, or if our USV is becoming too hot on the inside. We"
+    },
+    {
+      "line": 103,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "have done numerous tests without this breaker and found both that the boat was drawing more"
+    },
+    {
+      "line": 104,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "amps and that there was no overheating of the vessel. We have since discovered that, due to the"
+    },
+    {
+      "line": 105,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "thermal breaker being relatively cheap and not as accurate as we would like, that we will"
+    },
+    {
+      "line": 106,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "continue testing the vessel without the thermal breaker, using the one fuse only. Our fuses are"
+    },
+    {
+      "line": 107,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "rated at 400 amps, and our motors draw a maximum of 600 amps, though we have not reached a"
+    },
+    {
+      "line": 108,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "400 amp draw currently during testing."
+    },
+    {
+      "line": 109,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Cooling System: Our cooling systems from the beginning of the Fall have consisted of two"
+    },
+    {
+      "line": 110,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "pumps and two reservoirs on either side of the inside of the vessel. Water from the reservoirs"
+    },
+    {
+      "line": 111,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "runs directly into both of our motors and speed controllers before flowing back to the pump,providing continuing cooling to the motors. We were able to run our USV at 25% throttle for"
+    },
+    {
+      "line": 112,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "around 15 minutes without overheating or tripping the thermal breaker, which is what we want"
+    },
+    {
+      "line": 113,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "for the race. However, we wanted to streamline the process of filling the reservoirs. Because of"
+    },
+    {
+      "line": 114,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "this, we have added two new quarter-turn caps that allow easy access to the cooling reservoirs,"
+    },
+    {
+      "line": 115,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "allowing the addition of ice to be much easier as we do not need to completely remove the"
+    },
+    {
+      "line": 116,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "reservoirs every time they are filled. We also plan on using new tubing in a way that will prevent"
+    },
+    {
+      "line": 117,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "kinks so that the flow of water is unrestricted. We have also recently added two new air vents on"
+    },
+    {
+      "line": 118,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "the top of each pontoon external to the vessel, along with a vent and fan on the stern of the"
+    },
+    {
+      "line": 119,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "vessel. This will be used to move heat away from the electronics where the cooling system is not"
+    },
+    {
+      "line": 120,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "connected, as air will pass over the electronics and out the back of the vessel. Both of these"
+    },
+    {
+      "line": 121,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "systems work together to ensure that heat can be removed effectively, and we calculated early on"
+    },
+    {
+      "line": 122,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "that a certain amount of ice can be used to provide enough cooling for the entire race.Figures 8,9,10 - Napkin-back Thermodynamics"
+    },
+    {
+      "line": 123,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Motor and Drivetrain: The beginnings of our motor and drivetrain consisted of two motors,"
+    },
+    {
+      "line": 124,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "two sections of aluminum rods connected with u-joints, and adjustable external drivetrain"
+    },
+    {
+      "line": 125,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "supports. This was done so that we could test and adjust the supports to find an angle that"
+    },
+    {
+      "line": 126,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "optimized our speed for the vessel. As we did further testing, we soon realized that these"
+    },
+    {
+      "line": 127,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "adjustable supports were not stable at high speeds and caused vibrations that were inhibiting the"
+    },
+    {
+      "line": 128,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "performance of our vessel. We decided that our first step was to create more permanent and"
+    },
+    {
+      "line": 129,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "sturdy supports. As mentioned above, we settled on making our struts out of PA12CF. These"
+    },
+    {
+      "line": 130,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "supports were designed and manufactured not only for intrinsic strength, but also to"
+    },
+    {
+      "line": 131,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "accommodate small diameter, pultruded carbon fiber shafts for extra resistance to any bending"
+    },
+    {
+      "line": 132,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "moment."
+    },
+    {
+      "line": 133,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Recently, we discovered a problem with the drivetrain assembly, severe enough that it"
+    },
+    {
+      "line": 134,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "damaged one of our motors beyond repair. We discovered that the ball bearings, attached to the"
+    },
+    {
+      "line": 135,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "external drivetrain supports, were not preventing perpendicular forces from going directly into"
+    },
+    {
+      "line": 136,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "the motor along the shaft. We soon learned that this problem had been happening since we first"
+    },
+    {
+      "line": 137,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "started testing the boat, as the propellers were putting too much force on the motors, and the"
+    },
+    {
+      "line": 138,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "wear on the motors finally caught up to us. Luckily, we had a spare motor, but major changes"
+    },
+    {
+      "line": 139,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "needed to be made to the drivetrain besides just the ball bearings. We also felt that there were"
+    },
+    {
+      "line": 140,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "some imprecise measurements and holes drilled into our shafts that could also have worn out the"
+    },
+    {
+      "line": 141,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "motors. With this in mind, we integrate thrust bearings alongside our radial bearing to relieve the"
+    },
+    {
+      "line": 142,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "axial load from the drivetrain. This means that our external drivetrain supports must be re-sized"
+    },
+    {
+      "line": 143,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "for these new bearings. We are still in the process of rebuilding this new drivetrain, but we"
+    },
+    {
+      "line": 144,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "expect it to be done soon so that we can go back to open water testing without damaging the"
+    },
+    {
+      "line": 145,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "motors.Risks: During the fabrication of our USV, we wanted to make sure to mitigate as many risks as"
+    },
+    {
+      "line": 146,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "possible. We accounted for as many risks as we could, and what we have come up with to"
+    },
+    {
+      "line": 147,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "mitigate them are as follows:"
+    },
+    {
+      "line": 148,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● Power Storage: With our wiring of the batteries to the main components of our USV, we"
+    },
+    {
+      "line": 149,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "have included both a fuse and a thermal breaker, which will stop the USV in case of too"
+    },
+    {
+      "line": 150,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "much heat or too much power draw."
+    },
+    {
+      "line": 151,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● External Control System: In our design of our external electronics casing, we have"
+    },
+    {
+      "line": 152,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "modeled a connection that acts as a clamp for wires that are connected to the inside of the"
+    },
+    {
+      "line": 153,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "boat. This will mitigate tensions on the wires and prevent wires from becoming detached"
+    },
+    {
+      "line": 154,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "so as not to lose control of the USV"
+    },
+    {
+      "line": 155,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● Propulsion: We have discovered that the propellers are putting lots of strain on the"
+    },
+    {
+      "line": 156,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "motors. We hope to mitigate this by implementing thrust bearings on our external"
+    },
+    {
+      "line": 157,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "drivetrain supports. However, the vibrations from the motor still have a chance to detach"
+    },
+    {
+      "line": 158,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "our motors from their mounts. We hope to prevent this by making the mounting"
+    },
+    {
+      "line": 159,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "connections sturdier by attaching them to carbon fiber that will be laid inside the hull to"
+    },
+    {
+      "line": 160,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "prevent the motors from vibrating too much."
+    },
+    {
+      "line": 161,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● Cooling System: There is a chance that our cooling system can not draw enough heat"
+    },
+    {
+      "line": 162,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "away from the motors and cause them to overheat. We are dealing with this issue with"
+    },
+    {
+      "line": 163,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "future tests of our cooling and seeing how long the USV can run with or without ice"
+    },
+    {
+      "line": 164,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "being needed. We do not plan on running the vessel with inadequate cooling, so further"
+    },
+    {
+      "line": 165,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "testing will help us narrow down the correct solution to this issue. The same applies to"
+    },
+    {
+      "line": 166,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "the new air vents of the vessel. Both systems act in tandem, and we do not foresee both"
+    },
+    {
+      "line": 167,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "systems failing at the same time, though further testing is still necessary."
+    },
+    {
+      "line": 168,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● Water Ingress: With the addition of air vents both at the bow and stern of the USV, there"
+    },
+    {
+      "line": 169,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "is a chance that, during testing, water is able to get into the vessel and negatively affect"
+    },
+    {
+      "line": 170,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "the electronics and other systems present. As the vents are relatively new, we plan on"
+    },
+    {
+      "line": 171,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "seeing if any water enters the boat through our usual testing. This can be remedied"
+    },
+    {
+      "line": 172,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "through the addition of more sealant to the inside and outside of the vessel, but we will"
+    },
+    {
+      "line": 173,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "not know for certain until more testing is done and more information is provided."
+    },
+    {
+      "line": 174,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● Hull Damage: In case there are unforeseen obstacles on the racecourse or inefficient"
+    },
+    {
+      "line": 175,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "control of the USV, the hull could become damaged. The outside hull of our USV is made"
+    },
+    {
+      "line": 176,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "with carbon fiber and resin, and while it is shear resistant, it is not puncture resistant."
+    },
+    {
+      "line": 177,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "There is a chance that an object could puncture the hull and allow water to leak inside the"
+    },
+    {
+      "line": 178,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "vessel. This issue is mitigated by correct control of the USV and being able to see what is"
+    },
+    {
+      "line": 179,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "in front of the vessel, which will be done using a GoPro camera that we have been using"
+    },
+    {
+      "line": 180,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "during our weekly tests. We have also done a few puncture tests, and with the addition of"
+    },
+    {
+      "line": 181,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "resin on the carbon fiber coating, the hull is still very resistant to puncture damage, so"
+    },
+    {
+      "line": 182,
+      "page_start": 8,
+      "page_end": 9,
+      "text": "regular wear and tear during the race should not damage the hull.● Propeller Damage: If obstacles appear on the racecourse and the USV can not pilot"
+    },
+    {
+      "line": 183,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "around them, there is a chance that the propellers could become damaged. It is also true"
+    },
+    {
+      "line": 184,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "that at high speeds, the propellers could break themselves when given too much torque to"
+    },
+    {
+      "line": 185,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "deal with. We have done repeated testing and iteration of our propellers, and we will"
+    },
+    {
+      "line": 186,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "know the maximum torque of our propellers and the maximum force that can be exerted"
+    },
+    {
+      "line": 187,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "on the drivetrain shafts through torque tests and USV tests. We do not plan on piloting"
+    },
+    {
+      "line": 188,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "our USV without knowing the limits of forces exerted on its drivetrain and propellers."
+    },
+    {
+      "line": 189,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "● Safety Features: A main-power disconnect is mandatory for this race, and we have gone"
+    },
+    {
+      "line": 190,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "through many ideas of how to work this into our wiring design. Currently, we have one"
+    },
+    {
+      "line": 191,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "large power switch that can be turned off and stop the flow of electricity to the electronics"
+    },
+    {
+      "line": 192,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "of the USV. To streamline this process, we plan on using a removable piece of wire that"
+    },
+    {
+      "line": 193,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "can be accessed easily on the outside of the vessel. Once this wire is pulled off, the power"
+    },
+    {
+      "line": 194,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "to the main system is disconnected and the vessel will stop working. We plan on testing"
+    },
+    {
+      "line": 195,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "this feature more in the coming weeks to ensure that it is effective. Either way, the team"
+    },
+    {
+      "line": 196,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "always has access to a main-power disconnect that can be used effectively."
+    }
+  ],
+  "source_line_count": 197,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}

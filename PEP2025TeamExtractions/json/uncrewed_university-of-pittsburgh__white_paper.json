@@ -1,0 +1,1385 @@
+{
+  "competition_year": 2025,
+  "team": "University of Pittsburgh",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/PITT",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/PITT/PittsburghElectricPropulsionPaper.pdf",
+  "filename": "PittsburghElectricPropulsionPaper.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "9"
+  },
+  "page_count": 9,
+  "pages_without_text": [],
+  "char_count": 16167,
+  "pages": [
+    {
+      "page": 1,
+      "text": "Pittsburgh Electric Propulsion\nUniversity of Pittsburgh\n1. Background Research\nFor the PEP25 competition, our main goals were to keep the boat stable and fast. To lead\nour research into hull design, we followed High Performance Marine Vehicles by Liang Yun and\nAlan Bliault. The book goes through the different hull designs, their advantages and\ndisadvantages. Based on advantages and disadvantages presented in the paper, our team chose to\ndesign a trimaran hull. The trimaran hull design presents an optimal balance of speed and\nstability, making it an ideal candidate for the unmanned competition portion of PEP25. The\nunique hull geometry minimizes hydrodynamic drag, increasing energy efficiency and extending\nbattery life – which is critical for electric propulsion. Furthermore, the enhanced stability of the\ntrimaran configuration improves operational safety. This innovative approach aligns with the\ngrowing demand for sustainable marine solutions, positioning it as a competitive and\nmarket-viable design.\nRegarding control systems, after much initial research, it was decided to base the\nautonomy stack on the popular robotics framework ROS2 Humble due to its node architecture\nwith various forms of internodal data streams allowing for easy communication between\ndiffering sections of the autonomy and controls stack. Likewise, initial research regarding the\ndesired hardware, in consideration with the project’s budget, was done, involving searching for\nan onboard computer, microcontrollers, and sensors.\n2. Design & Analysis\n2.1 Propulsion System & Hull Design\nA brushless DC motor was selected as the type of motor for the boat. It offers high\nefficiency along with precise control. After viewing many different companies, Electric\nMotorsport was chosen. Their ME 1117 motor operates in the 48V range and runs at 6 hp, which\nis well within the range our electrical system is designed for. Below is the motor curve for the\nME 1117 with our operating point highlighted.The motor offers a solid rotational speed, 3000 rpm, fit for a propeller and substantial\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": "torque that works well within our operating conditions. No gear box will be required for this\nmotor. A picture of the motor is shown below.For our hull design, our team took inspiration from the USS Independence, an aircraft\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "carrier that was a trimaran hull with a larger central hull and smaller side amas for added\nstability. Since our main goal for PEP25 is to achieve the fastest time, we decided to modify the\ncentral hull to be a planing hull such that we could achieve the fastest times. For the design of the\ncentral hull, our team took inspiration from a hydroplane called “Rocket”, which was designed\nby William D. Jackson. “Rocket” was a common hydroplane for many boating enthusiasts as it\nwas relatively fast and inexpensive to manufacture.\nTo lead our propeller design, we followed The Propeller Handbook by Dave Gerr. The\nbook goes through all important steps and considerations to design a propeller. The key design\nchoices that were advised by this book were propeller type, number of blades, propeller diameter,\nand propeller pitch. For propeller type, we chose a fixed-pitch propeller as they were common in\nboats our size. A 3-blade propeller was also strongly recommended for boats in our size range, so\nwe decided to go with that. There are equations used for diameter and pitch in the book, which\nwe followed and are shown below.\n𝐷 =\n632.7 * 𝑃\n0.2\n𝑛\n0.6 =\n632.7 * 6\n0.2\n3000\n0.6 = 7. 42 𝑖𝑛. ≈ 7. 5 𝑖𝑛.\nWhere,\nD = Propeller Diameter [in]\nP = Motor Power [hp]\nn = Motor Speed [rpm]\n𝑃 = 0. 46 * 𝐷 * 𝑉\n0.26 = 0. 46 * 7. 5 * 21. 7 = 7. 68 𝑖𝑛.\n𝑟𝑜𝑡\nWhere,\nP = Propeller Pitch [in/rot]\nV = Desired Boat Speed [knots]\nFrom these specifications, we were able to design our propeller. The pitch allowed us to\ncalculate the propeller angle across each blade, which was key in CAD design. An image of our\nmodel is shown below.3. Overview of Build & Fabrication Processes\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": "3.1 Power Storage & Powertrain\nThe power storage system will be made up of two separate batteries, an off the shelf 12V\nbattery and a custom 48V battery. The 12V battery powers all low voltage systems, including the\nautonomous hardware, servo motor, battery management system, and low voltage side of the\nmotor controller. The 48V battery powers only the boat’s powertrain.The 48V motor is built in a 13s5p configuration using Molicel P45B Li-ion cells. Based\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "on the values from the datasheet, we calculated a typical run time of 36 minutes and a run time of\n12 minutes assuming the motor runs at top speed for the entire run. Estimates of motor power\nwere taken from the motor dynamometer curve above and calculations for run time are shown\nbelow.\n16. 2𝑊ℎ 𝑝𝑒𝑟 𝑐𝑒𝑙𝑙 · 65 𝑐𝑒𝑙𝑙𝑠 = 1053𝑊ℎ 𝑝𝑎𝑐𝑘 𝑒𝑛𝑒𝑟𝑔𝑦\n60 𝑚𝑖𝑛𝑢𝑡𝑒𝑠\nℎ𝑜𝑢𝑟\n·\n1053𝑊ℎ 𝑝𝑎𝑐𝑘 𝑒𝑛𝑒𝑟𝑔𝑦\n1750𝑊 𝑡𝑦𝑝𝑖𝑐𝑎𝑙 𝑚𝑜𝑡𝑜𝑟 𝑝𝑜𝑤𝑒𝑟 = 36 𝑚𝑖𝑛𝑢𝑡𝑒𝑠\n60 𝑚𝑖𝑛𝑢𝑡𝑒𝑠\nℎ𝑜𝑢𝑟\n·\n1053𝑊ℎ 𝑝𝑎𝑐𝑘 𝑒𝑛𝑒𝑟𝑔𝑦\n5400𝑊 𝑝𝑒𝑎𝑘 𝑚𝑜𝑡𝑜𝑟 𝑝𝑜𝑤𝑒𝑟 = 12 𝑚𝑖𝑛𝑢𝑡𝑒𝑠\nIn terms of propulsion, the boat will feature an inboard. An inboard allows for a very\ncompact internal design, though it typically sacrifices some efficiency as the propeller is unable\nto be completely horizontal with the water. Our design features a pair of universal joints that\nallow the propeller to find that horizontal position, making an inboard extremely favorable to the\nboat. Shown below is an isolated view of the inboard.\nTo support the inboard, there are two bearings. A shaft bearing is mounted along the\nangled shaft to provide radial support. There is also a thrust bearing at the lower, propeller shaft.The thrust bearing provides all axial support necessary for the boat to function. The motor is\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "mounted to a custom motor mount and secured to the boat with screws. With this design, all\nportions of the shafts are completely supported to limit any inefficiency in the power\ntransmission.\nOther powertrain components, including the battery and motor controller, will be securely\nmounted with screws inside the boat. Given the boat is 3D Printed, we were able to fully\nintegrate the mounting holes using heat set inserts, which are pressed in with a soldering iron and\nhave the filament melt around it. The components were strategically placed to minimize wire\nlength and simplify routing. The battery was placed inside of our electrical enclosure, which\nincludes, the BMS, LV battery, and contactor along with it.\nFor cooling, there are two components that must be considered: the battery and motor. To\ndetermine the requirements of the system for the battery, we can look at its specifications. As\npreviously mentioned, we are using Molicel P45B cells, which have an internal resistance of 15\nmΩ. At most, the battery will pull 100 amps of current in total, which splits up to 20 amps per\ncell, given we are running in a 5-parallel configuration. Thus, the heat generated per cell is,\n𝑄𝑐𝑒𝑙𝑙 = 𝐼\n2\n𝑐𝑒𝑙𝑙\n* 𝑅\n𝑐𝑒𝑙𝑙 = 20\n2\n* . 015 = 6 𝑊𝑎𝑡𝑡𝑠\nIn total, the pack will generate,\n𝑄𝑝𝑎𝑐𝑘 = 65 * 𝑄𝑐𝑒𝑙𝑙 = 65 * 6 = 390 𝑊𝑎𝑡𝑡𝑠\nThis is a very low overall heat. With supporting simulation data from Batemo, which we\nunfortunately cannot share, the cell temperature will only increase by 10ºC without cooling.\nEven assuming a very high outside temperature of 40ºC (104ºF), the battery temperature should\nstay within the safe operating temperature of the cells, which have a maximum operating\ntemperature of 60ºC. Thus, cooling is not necessary for the battery pack.\nFor the motor, there are integrated cooling fans in the design. For this reason, we also do\nnot have to consider cooling system design for the motor.\n3.2 Controls & Propulsion\nTo fabricate the propulsion system, we relied on mainly off-the-shelf components and\ncampus resources. The universal joints, angled shaft, and motor were purchased directly. The\nmotor mount, propeller shaft, and propeller were all manufactured and machined in-house. The\nmotor mount was manufactured by OshCut, a company based on Utah. The propeller shaft was\npurchased online and machined down by SCPI, an on-campus machine shop. The propeller was\nresin 3D printed by OpenLab, an on-campus makerspace.\nControlling the boat’s propulsion and rudder has been split into three primary\ncomponents that compose the entire autonomy stack. The perception software is responsible forestablishing and maintaining a constant stream of data from the boat’s sensors, ensuring the boat\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "has an accurate idea of its location relative to its initial point and the two buoys. This also\nincludes an object detection model to notify the boat of upcoming buoys. This information is\nthen sent to the path-planning code, which determines the next location of the boat. To get to the\nnext state of the boat, the controls stack interfaces with the motor and rudder, physically moving\nthe boat.\n4. Risk Identification & Mitigation\nOur club started the academic year facing serious financial constraints and a lack of\nfunding from our university, limiting our resources and design capabilities. Our financial account\npreviously started on a fiscal year basis, with funds depleting at the end of each school year.\nAdditionally, the same university organization that funded our club decided to cut our desired\nbudget and grant us only half of what we needed. The design process was able to continue;\nhowever, using student-sponsored licenses, such as Orca3D, SolidWorks, and Ansys simulation\nproducts. Although the fall semester was manageable, the upcoming build process for the\ncompetition loomed on us, as our budget was far below what was needed to compete.\nAfter months of communication and persuasion between university departments and\ncorporate connections, our business lead was able to land the club adequate funding from several\ndifferent sources. Not only was our club now funded, but different sources prevented the club\nfrom being virtually bankrupt the next academic year because portions of the funds would roll\nover. This came just in time, as the build process began almost immediately upon receiving\nmoney. Purchases have been occurring frequently and supporting our sub-teams with the\nproducts they need to build respective parts is a vital aspect of management of the club.\nThe main electrical risks are overcurrent, battery faults, and a breakdown of isolation\nfrom either a short circuit or water intrusion. These risks are each mitigated using multiple parts\nof the system, providing a level of redundancy.\nBattery output current is constantly monitored by the BMS and motor phase current is\nmonitored by the motor controller. Both of these devices have programmed current limits, so if\nthe current measured exceeds that limit, they will shut down the battery or motor respectively.\nThe motor controller directly cuts power to the motor while the BMS controls a contactor on the\nbattery positive terminal which can disconnect the battery in the event of a fault. Should either of\nthese fail or if there is a sudden short, then a 150A fuse on the positive terminal of the battery\nwill blow, protecting the rest of the circuit and preventing a potential fire.\nThe condition of the 48V is constantly monitored by the BMS including by checking\nindividual cell voltages, total pack voltage, pack output current, and pack temperature. Each of\nthese characteristics have set limits based on our design calculations and on the datasheet for the\nMolicel P45B. If these limits are exceeded, the BMS will act accordingly. In the event of most\nsafety critical faults, such as overcurrent or overtemperature, it will respond by opening the\ncontactor on the positive terminal of the battery, cutting it off from the rest of the circuit.Isolation between the 48V system and the rest of the boat is critical to ensuring proper\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": "functionality of the boat’s systems. All of the electrical components on the boat are insulated and\nkept as water-resistant as possible. If this insulation fails, the BMS has a built-in isolation\nmonitor which checks the electrical resistance between the battery terminals and the low voltage\nground. If this resistance falls below the programmed value, the BMS will assume that the\ninsulation between the 48V system and the rest of the boat has somehow failed, either due to\nwater intrusion or contact between a component on the 48V system and the rest of the boat. Most\nmetallic components on the boat that are not part of the electrical system are connected to the\nlow voltage ground (excluding some fasteners). This means that the BMS can detect whenever\nany large metallic components are accidentally energized by the 48V system, so it can shut down\nthe battery.\nThe entire boat is 3D Printed with a mix of PLA and PETG filaments with about 5%\ninfill. Though this is quite weak, it doesn’t matter because the inside of the boat is primarily\nserving as a mold. The goal of 3D printing is to easily integrate mounting holes and the inboard\ninto the boat. The entire structural integrity of the boat comes from the fiberglass added to the\noutside of the hull. Several layers were added to increase strength and smooth the outside of the\nboat, reducing drag. Because fiberglass is not waterproof, layers of glass reinforced body filler,\nor bondo, were added to the outside. The combination of the bondo and fiberglass not only\nensures the boat will be strong enough in the water, but also that it can perform well in a marine\nenvironment. On top of the bondo, layers of automotive paint were added. This makes the boat\nlook a lot nicer, along with smoothing the outside more, so it can perform better in the water.\nThere are three other points in the boat that require waterproofing, and we have different\nsolutions for each. For the lid, we have a gasket running around the entire outside that is\ncompressed when the lid is bolted into place. At the back of the boat, the rudder rod has an open\nhole, which is covered with a tapered bellow. This allows the rod to easily move while also being\ncovered. The propeller shaft also has an open hole where it leaves the boat, which is covered\nwith shaft seal. Thus the entire boat is waterproof.\nThe only other mechanical risks would be mechanical failure of the propeller and\nmechanical failure of the rudder, which undergo the largest forces of any component on the boat.\nAs previously mentioned, the propeller is resin printed, which should be strong enough to face\nthe water. The rudder is made of aluminum, so it should also have no problem in the water. The\npieces mounting the rudder will also undergo significant bending stress, so they are made with\naluminum and resin.\nDue to the complexity and workload of developing an autonomous boat software stack,\nthe entire system was divided into four primary subteams (perception, path-planning, controls,\nand simulation), with work then divided amongst individual members. To limit communication\nfailures that would later harm the integration of the entire autonomy stack, frequent architecture\ndiscussions were held between the members of each subteam. This, in addition to frequently\ncreating visual representations of the software system and how each member’s contribution\nwould integrate with the others, was addressed early on before posing a larger problem.In terms of bugs and issues in the actual software itself, iterative unit and integration\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "testing was employed to ensure each module of the autonomy stack functioned as intended\nindividually and in combination with the others. Gazebo, a popular industry choice for robotics\nsimulation, was utilized to ensure our perception and path-planning worked as intended, with\nreal-time monitoring and data-logging using the visualizer Rviz2 confirming that the boat was\nfunctioning correctly.\nThe primary risk regarding the autonomy stack was sensor failure. Each stream of data,\nincluding GPS, IMU, and the manual RC controller receiver, has a form of data verification that\nensures the received serial data streams are not corrupted. Likewise, there are safeguards set in\nplace to ensure that the boat automatically shuts off when it fails to receive the information\nnecessary to operate safely. For instance, if the boat fails to receive GPS and RC controller data\nstreams for a set duration of time, the boat will act as if an emergency stop button was pressed.\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Pittsburgh Electric Propulsion"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "University of Pittsburgh"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "1. Background Research"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "For the PEP25 competition, our main goals were to keep the boat stable and fast. To lead"
+    },
+    {
+      "line": 4,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "our research into hull design, we followed High Performance Marine Vehicles by Liang Yun and"
+    },
+    {
+      "line": 5,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Alan Bliault. The book goes through the different hull designs, their advantages and"
+    },
+    {
+      "line": 6,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "disadvantages. Based on advantages and disadvantages presented in the paper, our team chose to"
+    },
+    {
+      "line": 7,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "design a trimaran hull. The trimaran hull design presents an optimal balance of speed and"
+    },
+    {
+      "line": 8,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "stability, making it an ideal candidate for the unmanned competition portion of PEP25. The"
+    },
+    {
+      "line": 9,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "unique hull geometry minimizes hydrodynamic drag, increasing energy efficiency and extending"
+    },
+    {
+      "line": 10,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "battery life – which is critical for electric propulsion. Furthermore, the enhanced stability of the"
+    },
+    {
+      "line": 11,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "trimaran configuration improves operational safety. This innovative approach aligns with the"
+    },
+    {
+      "line": 12,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "growing demand for sustainable marine solutions, positioning it as a competitive and"
+    },
+    {
+      "line": 13,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "market-viable design."
+    },
+    {
+      "line": 14,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Regarding control systems, after much initial research, it was decided to base the"
+    },
+    {
+      "line": 15,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "autonomy stack on the popular robotics framework ROS2 Humble due to its node architecture"
+    },
+    {
+      "line": 16,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "with various forms of internodal data streams allowing for easy communication between"
+    },
+    {
+      "line": 17,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "differing sections of the autonomy and controls stack. Likewise, initial research regarding the"
+    },
+    {
+      "line": 18,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "desired hardware, in consideration with the project’s budget, was done, involving searching for"
+    },
+    {
+      "line": 19,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "an onboard computer, microcontrollers, and sensors."
+    },
+    {
+      "line": 20,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "2. Design & Analysis"
+    },
+    {
+      "line": 21,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "2.1 Propulsion System & Hull Design"
+    },
+    {
+      "line": 22,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "A brushless DC motor was selected as the type of motor for the boat. It offers high"
+    },
+    {
+      "line": 23,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "efficiency along with precise control. After viewing many different companies, Electric"
+    },
+    {
+      "line": 24,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Motorsport was chosen. Their ME 1117 motor operates in the 48V range and runs at 6 hp, which"
+    },
+    {
+      "line": 25,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "is well within the range our electrical system is designed for. Below is the motor curve for the"
+    },
+    {
+      "line": 26,
+      "page_start": 0,
+      "page_end": 1,
+      "text": "ME 1117 with our operating point highlighted.The motor offers a solid rotational speed, 3000 rpm, fit for a propeller and substantial"
+    },
+    {
+      "line": 27,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "torque that works well within our operating conditions. No gear box will be required for this"
+    },
+    {
+      "line": 28,
+      "page_start": 1,
+      "page_end": 2,
+      "text": "motor. A picture of the motor is shown below.For our hull design, our team took inspiration from the USS Independence, an aircraft"
+    },
+    {
+      "line": 29,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "carrier that was a trimaran hull with a larger central hull and smaller side amas for added"
+    },
+    {
+      "line": 30,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "stability. Since our main goal for PEP25 is to achieve the fastest time, we decided to modify the"
+    },
+    {
+      "line": 31,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "central hull to be a planing hull such that we could achieve the fastest times. For the design of the"
+    },
+    {
+      "line": 32,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "central hull, our team took inspiration from a hydroplane called “Rocket”, which was designed"
+    },
+    {
+      "line": 33,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "by William D. Jackson. “Rocket” was a common hydroplane for many boating enthusiasts as it"
+    },
+    {
+      "line": 34,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "was relatively fast and inexpensive to manufacture."
+    },
+    {
+      "line": 35,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "To lead our propeller design, we followed The Propeller Handbook by Dave Gerr. The"
+    },
+    {
+      "line": 36,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "book goes through all important steps and considerations to design a propeller. The key design"
+    },
+    {
+      "line": 37,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "choices that were advised by this book were propeller type, number of blades, propeller diameter,"
+    },
+    {
+      "line": 38,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "and propeller pitch. For propeller type, we chose a fixed-pitch propeller as they were common in"
+    },
+    {
+      "line": 39,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "boats our size. A 3-blade propeller was also strongly recommended for boats in our size range, so"
+    },
+    {
+      "line": 40,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "we decided to go with that. There are equations used for diameter and pitch in the book, which"
+    },
+    {
+      "line": 41,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "we followed and are shown below."
+    },
+    {
+      "line": 42,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "𝐷 ="
+    },
+    {
+      "line": 43,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "632.7 * 𝑃"
+    },
+    {
+      "line": 44,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "0.2"
+    },
+    {
+      "line": 45,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "𝑛"
+    },
+    {
+      "line": 46,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "0.6 ="
+    },
+    {
+      "line": 47,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "632.7 * 6"
+    },
+    {
+      "line": 48,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "0.2"
+    },
+    {
+      "line": 49,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "3000"
+    },
+    {
+      "line": 50,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "0.6 = 7. 42 𝑖𝑛. ≈ 7. 5 𝑖𝑛."
+    },
+    {
+      "line": 51,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Where,"
+    },
+    {
+      "line": 52,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "D = Propeller Diameter [in]"
+    },
+    {
+      "line": 53,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "P = Motor Power [hp]"
+    },
+    {
+      "line": 54,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "n = Motor Speed [rpm]"
+    },
+    {
+      "line": 55,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "𝑃 = 0. 46 * 𝐷 * 𝑉"
+    },
+    {
+      "line": 56,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "0.26 = 0. 46 * 7. 5 * 21. 7 = 7. 68 𝑖𝑛."
+    },
+    {
+      "line": 57,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "𝑟𝑜𝑡"
+    },
+    {
+      "line": 58,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Where,"
+    },
+    {
+      "line": 59,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "P = Propeller Pitch [in/rot]"
+    },
+    {
+      "line": 60,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "V = Desired Boat Speed [knots]"
+    },
+    {
+      "line": 61,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "From these specifications, we were able to design our propeller. The pitch allowed us to"
+    },
+    {
+      "line": 62,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "calculate the propeller angle across each blade, which was key in CAD design. An image of our"
+    },
+    {
+      "line": 63,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "model is shown below.3. Overview of Build & Fabrication Processes"
+    },
+    {
+      "line": 64,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "3.1 Power Storage & Powertrain"
+    },
+    {
+      "line": 65,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "The power storage system will be made up of two separate batteries, an off the shelf 12V"
+    },
+    {
+      "line": 66,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "battery and a custom 48V battery. The 12V battery powers all low voltage systems, including the"
+    },
+    {
+      "line": 67,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "autonomous hardware, servo motor, battery management system, and low voltage side of the"
+    },
+    {
+      "line": 68,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "motor controller. The 48V battery powers only the boat’s powertrain.The 48V motor is built in a 13s5p configuration using Molicel P45B Li-ion cells. Based"
+    },
+    {
+      "line": 69,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "on the values from the datasheet, we calculated a typical run time of 36 minutes and a run time of"
+    },
+    {
+      "line": 70,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "12 minutes assuming the motor runs at top speed for the entire run. Estimates of motor power"
+    },
+    {
+      "line": 71,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "were taken from the motor dynamometer curve above and calculations for run time are shown"
+    },
+    {
+      "line": 72,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "below."
+    },
+    {
+      "line": 73,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "16. 2𝑊ℎ 𝑝𝑒𝑟 𝑐𝑒𝑙𝑙 · 65 𝑐𝑒𝑙𝑙𝑠 = 1053𝑊ℎ 𝑝𝑎𝑐𝑘 𝑒𝑛𝑒𝑟𝑔𝑦"
+    },
+    {
+      "line": 74,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "60 𝑚𝑖𝑛𝑢𝑡𝑒𝑠"
+    },
+    {
+      "line": 75,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "ℎ𝑜𝑢𝑟"
+    },
+    {
+      "line": 76,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "·"
+    },
+    {
+      "line": 77,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "1053𝑊ℎ 𝑝𝑎𝑐𝑘 𝑒𝑛𝑒𝑟𝑔𝑦"
+    },
+    {
+      "line": 78,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "1750𝑊 𝑡𝑦𝑝𝑖𝑐𝑎𝑙 𝑚𝑜𝑡𝑜𝑟 𝑝𝑜𝑤𝑒𝑟 = 36 𝑚𝑖𝑛𝑢𝑡𝑒𝑠"
+    },
+    {
+      "line": 79,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "60 𝑚𝑖𝑛𝑢𝑡𝑒𝑠"
+    },
+    {
+      "line": 80,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "ℎ𝑜𝑢𝑟"
+    },
+    {
+      "line": 81,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "·"
+    },
+    {
+      "line": 82,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "1053𝑊ℎ 𝑝𝑎𝑐𝑘 𝑒𝑛𝑒𝑟𝑔𝑦"
+    },
+    {
+      "line": 83,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "5400𝑊 𝑝𝑒𝑎𝑘 𝑚𝑜𝑡𝑜𝑟 𝑝𝑜𝑤𝑒𝑟 = 12 𝑚𝑖𝑛𝑢𝑡𝑒𝑠"
+    },
+    {
+      "line": 84,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "In terms of propulsion, the boat will feature an inboard. An inboard allows for a very"
+    },
+    {
+      "line": 85,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "compact internal design, though it typically sacrifices some efficiency as the propeller is unable"
+    },
+    {
+      "line": 86,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "to be completely horizontal with the water. Our design features a pair of universal joints that"
+    },
+    {
+      "line": 87,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "allow the propeller to find that horizontal position, making an inboard extremely favorable to the"
+    },
+    {
+      "line": 88,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "boat. Shown below is an isolated view of the inboard."
+    },
+    {
+      "line": 89,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "To support the inboard, there are two bearings. A shaft bearing is mounted along the"
+    },
+    {
+      "line": 90,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "angled shaft to provide radial support. There is also a thrust bearing at the lower, propeller shaft.The thrust bearing provides all axial support necessary for the boat to function. The motor is"
+    },
+    {
+      "line": 91,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "mounted to a custom motor mount and secured to the boat with screws. With this design, all"
+    },
+    {
+      "line": 92,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "portions of the shafts are completely supported to limit any inefficiency in the power"
+    },
+    {
+      "line": 93,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "transmission."
+    },
+    {
+      "line": 94,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Other powertrain components, including the battery and motor controller, will be securely"
+    },
+    {
+      "line": 95,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "mounted with screws inside the boat. Given the boat is 3D Printed, we were able to fully"
+    },
+    {
+      "line": 96,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "integrate the mounting holes using heat set inserts, which are pressed in with a soldering iron and"
+    },
+    {
+      "line": 97,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "have the filament melt around it. The components were strategically placed to minimize wire"
+    },
+    {
+      "line": 98,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "length and simplify routing. The battery was placed inside of our electrical enclosure, which"
+    },
+    {
+      "line": 99,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "includes, the BMS, LV battery, and contactor along with it."
+    },
+    {
+      "line": 100,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "For cooling, there are two components that must be considered: the battery and motor. To"
+    },
+    {
+      "line": 101,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "determine the requirements of the system for the battery, we can look at its specifications. As"
+    },
+    {
+      "line": 102,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "previously mentioned, we are using Molicel P45B cells, which have an internal resistance of 15"
+    },
+    {
+      "line": 103,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "mΩ. At most, the battery will pull 100 amps of current in total, which splits up to 20 amps per"
+    },
+    {
+      "line": 104,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "cell, given we are running in a 5-parallel configuration. Thus, the heat generated per cell is,"
+    },
+    {
+      "line": 105,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "𝑄𝑐𝑒𝑙𝑙 = 𝐼"
+    },
+    {
+      "line": 106,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "2"
+    },
+    {
+      "line": 107,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "𝑐𝑒𝑙𝑙"
+    },
+    {
+      "line": 108,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "* 𝑅"
+    },
+    {
+      "line": 109,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "𝑐𝑒𝑙𝑙 = 20"
+    },
+    {
+      "line": 110,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "2"
+    },
+    {
+      "line": 111,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "* . 015 = 6 𝑊𝑎𝑡𝑡𝑠"
+    },
+    {
+      "line": 112,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "In total, the pack will generate,"
+    },
+    {
+      "line": 113,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "𝑄𝑝𝑎𝑐𝑘 = 65 * 𝑄𝑐𝑒𝑙𝑙 = 65 * 6 = 390 𝑊𝑎𝑡𝑡𝑠"
+    },
+    {
+      "line": 114,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "This is a very low overall heat. With supporting simulation data from Batemo, which we"
+    },
+    {
+      "line": 115,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "unfortunately cannot share, the cell temperature will only increase by 10ºC without cooling."
+    },
+    {
+      "line": 116,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Even assuming a very high outside temperature of 40ºC (104ºF), the battery temperature should"
+    },
+    {
+      "line": 117,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "stay within the safe operating temperature of the cells, which have a maximum operating"
+    },
+    {
+      "line": 118,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "temperature of 60ºC. Thus, cooling is not necessary for the battery pack."
+    },
+    {
+      "line": 119,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "For the motor, there are integrated cooling fans in the design. For this reason, we also do"
+    },
+    {
+      "line": 120,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "not have to consider cooling system design for the motor."
+    },
+    {
+      "line": 121,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "3.2 Controls & Propulsion"
+    },
+    {
+      "line": 122,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "To fabricate the propulsion system, we relied on mainly off-the-shelf components and"
+    },
+    {
+      "line": 123,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "campus resources. The universal joints, angled shaft, and motor were purchased directly. The"
+    },
+    {
+      "line": 124,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "motor mount, propeller shaft, and propeller were all manufactured and machined in-house. The"
+    },
+    {
+      "line": 125,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "motor mount was manufactured by OshCut, a company based on Utah. The propeller shaft was"
+    },
+    {
+      "line": 126,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "purchased online and machined down by SCPI, an on-campus machine shop. The propeller was"
+    },
+    {
+      "line": 127,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "resin 3D printed by OpenLab, an on-campus makerspace."
+    },
+    {
+      "line": 128,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Controlling the boat’s propulsion and rudder has been split into three primary"
+    },
+    {
+      "line": 129,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "components that compose the entire autonomy stack. The perception software is responsible forestablishing and maintaining a constant stream of data from the boat’s sensors, ensuring the boat"
+    },
+    {
+      "line": 130,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "has an accurate idea of its location relative to its initial point and the two buoys. This also"
+    },
+    {
+      "line": 131,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "includes an object detection model to notify the boat of upcoming buoys. This information is"
+    },
+    {
+      "line": 132,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "then sent to the path-planning code, which determines the next location of the boat. To get to the"
+    },
+    {
+      "line": 133,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "next state of the boat, the controls stack interfaces with the motor and rudder, physically moving"
+    },
+    {
+      "line": 134,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "the boat."
+    },
+    {
+      "line": 135,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "4. Risk Identification & Mitigation"
+    },
+    {
+      "line": 136,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Our club started the academic year facing serious financial constraints and a lack of"
+    },
+    {
+      "line": 137,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "funding from our university, limiting our resources and design capabilities. Our financial account"
+    },
+    {
+      "line": 138,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "previously started on a fiscal year basis, with funds depleting at the end of each school year."
+    },
+    {
+      "line": 139,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Additionally, the same university organization that funded our club decided to cut our desired"
+    },
+    {
+      "line": 140,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "budget and grant us only half of what we needed. The design process was able to continue;"
+    },
+    {
+      "line": 141,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "however, using student-sponsored licenses, such as Orca3D, SolidWorks, and Ansys simulation"
+    },
+    {
+      "line": 142,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "products. Although the fall semester was manageable, the upcoming build process for the"
+    },
+    {
+      "line": 143,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "competition loomed on us, as our budget was far below what was needed to compete."
+    },
+    {
+      "line": 144,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "After months of communication and persuasion between university departments and"
+    },
+    {
+      "line": 145,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "corporate connections, our business lead was able to land the club adequate funding from several"
+    },
+    {
+      "line": 146,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "different sources. Not only was our club now funded, but different sources prevented the club"
+    },
+    {
+      "line": 147,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "from being virtually bankrupt the next academic year because portions of the funds would roll"
+    },
+    {
+      "line": 148,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "over. This came just in time, as the build process began almost immediately upon receiving"
+    },
+    {
+      "line": 149,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "money. Purchases have been occurring frequently and supporting our sub-teams with the"
+    },
+    {
+      "line": 150,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "products they need to build respective parts is a vital aspect of management of the club."
+    },
+    {
+      "line": 151,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "The main electrical risks are overcurrent, battery faults, and a breakdown of isolation"
+    },
+    {
+      "line": 152,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "from either a short circuit or water intrusion. These risks are each mitigated using multiple parts"
+    },
+    {
+      "line": 153,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "of the system, providing a level of redundancy."
+    },
+    {
+      "line": 154,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Battery output current is constantly monitored by the BMS and motor phase current is"
+    },
+    {
+      "line": 155,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "monitored by the motor controller. Both of these devices have programmed current limits, so if"
+    },
+    {
+      "line": 156,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "the current measured exceeds that limit, they will shut down the battery or motor respectively."
+    },
+    {
+      "line": 157,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "The motor controller directly cuts power to the motor while the BMS controls a contactor on the"
+    },
+    {
+      "line": 158,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "battery positive terminal which can disconnect the battery in the event of a fault. Should either of"
+    },
+    {
+      "line": 159,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "these fail or if there is a sudden short, then a 150A fuse on the positive terminal of the battery"
+    },
+    {
+      "line": 160,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "will blow, protecting the rest of the circuit and preventing a potential fire."
+    },
+    {
+      "line": 161,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "The condition of the 48V is constantly monitored by the BMS including by checking"
+    },
+    {
+      "line": 162,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "individual cell voltages, total pack voltage, pack output current, and pack temperature. Each of"
+    },
+    {
+      "line": 163,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "these characteristics have set limits based on our design calculations and on the datasheet for the"
+    },
+    {
+      "line": 164,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Molicel P45B. If these limits are exceeded, the BMS will act accordingly. In the event of most"
+    },
+    {
+      "line": 165,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "safety critical faults, such as overcurrent or overtemperature, it will respond by opening the"
+    },
+    {
+      "line": 166,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "contactor on the positive terminal of the battery, cutting it off from the rest of the circuit.Isolation between the 48V system and the rest of the boat is critical to ensuring proper"
+    },
+    {
+      "line": 167,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "functionality of the boat’s systems. All of the electrical components on the boat are insulated and"
+    },
+    {
+      "line": 168,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "kept as water-resistant as possible. If this insulation fails, the BMS has a built-in isolation"
+    },
+    {
+      "line": 169,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "monitor which checks the electrical resistance between the battery terminals and the low voltage"
+    },
+    {
+      "line": 170,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "ground. If this resistance falls below the programmed value, the BMS will assume that the"
+    },
+    {
+      "line": 171,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "insulation between the 48V system and the rest of the boat has somehow failed, either due to"
+    },
+    {
+      "line": 172,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "water intrusion or contact between a component on the 48V system and the rest of the boat. Most"
+    },
+    {
+      "line": 173,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "metallic components on the boat that are not part of the electrical system are connected to the"
+    },
+    {
+      "line": 174,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "low voltage ground (excluding some fasteners). This means that the BMS can detect whenever"
+    },
+    {
+      "line": 175,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "any large metallic components are accidentally energized by the 48V system, so it can shut down"
+    },
+    {
+      "line": 176,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "the battery."
+    },
+    {
+      "line": 177,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "The entire boat is 3D Printed with a mix of PLA and PETG filaments with about 5%"
+    },
+    {
+      "line": 178,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "infill. Though this is quite weak, it doesn’t matter because the inside of the boat is primarily"
+    },
+    {
+      "line": 179,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "serving as a mold. The goal of 3D printing is to easily integrate mounting holes and the inboard"
+    },
+    {
+      "line": 180,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "into the boat. The entire structural integrity of the boat comes from the fiberglass added to the"
+    },
+    {
+      "line": 181,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "outside of the hull. Several layers were added to increase strength and smooth the outside of the"
+    },
+    {
+      "line": 182,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "boat, reducing drag. Because fiberglass is not waterproof, layers of glass reinforced body filler,"
+    },
+    {
+      "line": 183,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "or bondo, were added to the outside. The combination of the bondo and fiberglass not only"
+    },
+    {
+      "line": 184,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "ensures the boat will be strong enough in the water, but also that it can perform well in a marine"
+    },
+    {
+      "line": 185,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "environment. On top of the bondo, layers of automotive paint were added. This makes the boat"
+    },
+    {
+      "line": 186,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "look a lot nicer, along with smoothing the outside more, so it can perform better in the water."
+    },
+    {
+      "line": 187,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "There are three other points in the boat that require waterproofing, and we have different"
+    },
+    {
+      "line": 188,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "solutions for each. For the lid, we have a gasket running around the entire outside that is"
+    },
+    {
+      "line": 189,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "compressed when the lid is bolted into place. At the back of the boat, the rudder rod has an open"
+    },
+    {
+      "line": 190,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "hole, which is covered with a tapered bellow. This allows the rod to easily move while also being"
+    },
+    {
+      "line": 191,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "covered. The propeller shaft also has an open hole where it leaves the boat, which is covered"
+    },
+    {
+      "line": 192,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "with shaft seal. Thus the entire boat is waterproof."
+    },
+    {
+      "line": 193,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "The only other mechanical risks would be mechanical failure of the propeller and"
+    },
+    {
+      "line": 194,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "mechanical failure of the rudder, which undergo the largest forces of any component on the boat."
+    },
+    {
+      "line": 195,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "As previously mentioned, the propeller is resin printed, which should be strong enough to face"
+    },
+    {
+      "line": 196,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "the water. The rudder is made of aluminum, so it should also have no problem in the water. The"
+    },
+    {
+      "line": 197,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "pieces mounting the rudder will also undergo significant bending stress, so they are made with"
+    },
+    {
+      "line": 198,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "aluminum and resin."
+    },
+    {
+      "line": 199,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Due to the complexity and workload of developing an autonomous boat software stack,"
+    },
+    {
+      "line": 200,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "the entire system was divided into four primary subteams (perception, path-planning, controls,"
+    },
+    {
+      "line": 201,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "and simulation), with work then divided amongst individual members. To limit communication"
+    },
+    {
+      "line": 202,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "failures that would later harm the integration of the entire autonomy stack, frequent architecture"
+    },
+    {
+      "line": 203,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "discussions were held between the members of each subteam. This, in addition to frequently"
+    },
+    {
+      "line": 204,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "creating visual representations of the software system and how each member’s contribution"
+    },
+    {
+      "line": 205,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "would integrate with the others, was addressed early on before posing a larger problem.In terms of bugs and issues in the actual software itself, iterative unit and integration"
+    },
+    {
+      "line": 206,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "testing was employed to ensure each module of the autonomy stack functioned as intended"
+    },
+    {
+      "line": 207,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "individually and in combination with the others. Gazebo, a popular industry choice for robotics"
+    },
+    {
+      "line": 208,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "simulation, was utilized to ensure our perception and path-planning worked as intended, with"
+    },
+    {
+      "line": 209,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "real-time monitoring and data-logging using the visualizer Rviz2 confirming that the boat was"
+    },
+    {
+      "line": 210,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "functioning correctly."
+    },
+    {
+      "line": 211,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "The primary risk regarding the autonomy stack was sensor failure. Each stream of data,"
+    },
+    {
+      "line": 212,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "including GPS, IMU, and the manual RC controller receiver, has a form of data verification that"
+    },
+    {
+      "line": 213,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "ensures the received serial data streams are not corrupted. Likewise, there are safeguards set in"
+    },
+    {
+      "line": 214,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "place to ensure that the boat automatically shuts off when it fails to receive the information"
+    },
+    {
+      "line": 215,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "necessary to operate safely. For instance, if the boat fails to receive GPS and RC controller data"
+    },
+    {
+      "line": 216,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "streams for a set duration of time, the boat will act as if an emergency stop button was pressed."
+    }
+  ],
+  "source_line_count": 217,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}

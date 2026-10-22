@@ -1,0 +1,2351 @@
+{
+  "competition_year": 2025,
+  "team": "Arkansas Tech University",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/ArkansasTech",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/ArkansasTech/ATU-unmannedPEP2025-WhitePaper.pdf",
+  "filename": "ATU-unmannedPEP2025-WhitePaper.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "16"
+  },
+  "page_count": 16,
+  "pages_without_text": [],
+  "char_count": 28946,
+  "pages": [
+    {
+      "page": 1,
+      "text": "Arkansas Tech University Unmanned\nPEP 2025 White Paper\nTeam Members:\nIsaac Broadway - isaacbroadway85@gmail.com\nCharles Davis - charles13.davis@gmail.com\nTreys Smedley - TreysSmedley3@gmail.com\nEthan Wooldrige - ethanbw172003@gmail.com\nLyndon Youngblood - lyoungblood03@gmail.com\nSpecial Thanks:\nDr. Mohammad Amjadi - mamjadi@atu.edu\nDr. Mathew Young - myoung@atu.edu1\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": "Background\nThis paper explores the development of an electric-powered, remote-controlled,\nunmanned watercraft built to compete in a two-mile open ocean race. The design centers around\nthe innovative use of an existing stand-up jet ski hull and jet pump system, repurposed to support\nelectric propulsion and efficient motor cooling. The jet ski hull, originally engineered for high\nspeed and maneuverability, provides a robust structural foundation capable of accommodating\nheavier components such as batteries and the electric motor. Choosing a larger hull—unlike any\nused in previous years—offers greater stability in open ocean conditions and the potential for\nincreased speed.\nA key innovation lies in the adaptation of the original jet pump, which was initially used\nto propel the watercraft and cool a gas-powered engine. In our design, the jet pump's water\ncirculation system has been repurposed to cool the electric motor. Copper coils were wrapped\naround the motor, allowing cool water to flow through and draw heat away during operation.\nThis ensures the motor remains at a safe operating temperature, even under high loads. This\napproach not only simplifies the cooling system but also reduces overall weight and system\ncomplexity. By utilizing pre-existing jet ski components, the design remains efficient, reliable,\nand easier to maintain. The integration of the propulsion and cooling systems into a single,\ncohesive unit marks a significant improvement over traditional electric watercraft designs.\nTogether, these features—using a large, stable hull and a repurposed jet pump for motor\ncooling—form the foundation of an innovative and competitive ocean racing platform.\nDesign & Analysis\nHull Stability & Efficiency\nHull design played a pivotal role in the success of our electric-powered,\nremote-controlled watercraft. After reviewing feedback from previous competitions, our team\nidentified hull stability as a critical factor—particularly in open-ocean conditions. Many teams\nreported that their smaller crafts struggled to withstand large waves, with some capsizing\nmid-race. With this in mind, we prioritized a larger, more stable platform capable of handling\nunpredictable water conditions while supporting the weight of a high-power motor and a2\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "60-pound payload. We selected a stand-up jet ski hull due to its proven performance in\nhigh-speed marine environments. Jet skis are designed to carry the weight of a full-grown rider,\nmaintain balance in rough water, and cut efficiently through waves. The hull’s size gave us\nample space for component layout and weight distribution, offering a perfect balance between\nsize, stability, and performance. The hull’s V-shaped design features a pointed bow that tapers\ninto a flatter rear section. This geometry provides several performance advantages across various\nspeeds. At low speeds, the wider rear creates greater surface area and buoyancy, enhancing\nside-to-side stability and reducing the chance of tipping—especially during idle or tight turns. As\nthe craft accelerates, the hull transitions into planing mode, shifting more of the weight to the\nrear. This reduces drag and allows the watercraft to ride on top of the water, resulting in a\nsmoother and more efficient ride. The sharp V-shaped bow also acts as a cutting edge, slicing\nthrough waves and reducing hydrodynamic resistance, which contributes to greater speed and\nimproved handling in choppy conditions.\nDespite the inherent stability of the jet ski hull, initial testing revealed a tendency for the\ncraft to roll side to side more than expected. This was largely due to the elevated center of\ngravity caused by the placement of batteries and other heavy components. To address this issue,\nwe installed outriggers to widen the craft’s base. These significantly improved roll stability,\nparticularly at low speeds or while stationary. Although this modification increased drag and\nslightly reduced our top-end speed, the trade-off in improved safety and control was well worth\nit.\nBeyond stability, the hull’s overall shape and construction were critical for efficiency.\nThe curvature—or deadrise—of the hull is optimized to minimize the wetted surface area,\nreducing drag force as the watercraft moves forward. Jet skis typically use a deep-V or\nmodified-V design, which generates lift and allows the vessel to skim across the water surface\nrather than plow through it. This reduces energy consumption and improves speed. The\nintegration of the jet pump into the hull further enhances hydrodynamic performance. The jet\npump draws water from directly beneath the hull, where pressure is highest, and propels it\nthrough a nozzle to generate thrust. This efficient propulsion method minimizes turbulence and\ncontributes to smoother acceleration. Additionally, the hull’s smooth, sanded, and repainted\nsurface reduces friction with the water, further boosting efficiency and top-end speed.3\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": "In summary, the jet ski hull served as a critical foundation for our design—offering the\nperfect combination of stability, structural support, and hydrodynamic efficiency. From cutting\nthrough waves with a sharp bow to gliding across the surface at speed, the hull's design\nsupported our mission to build a high-performing, ocean-capable electric watercraft.\nRadio Frequency Control System\nIn order to achieve remote operation, we had to carefully choose our electrical\ncomponents for compatibility. The block diagram in Figure 1 explains the control system.\nFigure 1: Radio Frequency Block Diagram.\nThe transmitter we chose was a Taranis X9D, which operates on the 2.4 GHz band and\nhas a transmission range of approximately 2.5 kilometers. The movement of the joysticks on the\ntransmitter sends radio signals to the receiver. We selected the Archer Plus R8 receiver, which is\nfully compatible with the transmitter and outputs smooth Pulse Width Modulation (PWM)\nsignals. A PWM signal is a digital voltage signal that rapidly switches between high and low\nstates. Although it is not truly analog, varying the proportion of time the signal stays high within\neach cycle—known as the duty cycle—can be used to simulate an analog voltage. For example, a\n50% duty cycle means the signal is high for half of each cycle and low for the other half,\nresulting in an average voltage that is approximately 50% of the maximum, shown below in\nFigure 2. Since our system operates with a digital voltage range of 0–5V, a 50% duty cycle\nyields an average voltage of around 2.5V.\nFigure 2: Duty cycle visualization.4\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "The microcontroller we chose was an Arduino Uno R4, which is capable of both reading PWM\ninput signals and generating PWM outputs. The microcontroller receives power from a 12V\nbattery. Using C++ code, we mapped the PWM outputs from the receiver and generated new\nPWM signals for motor control.\nPrimary Power Calculations\nTo determine the appropriate motor and battery configuration for our boat, we first\ncalculated the required horsepower to achieve our target speed of 15 miles per hour, which would\nallow us to finish the race in approximately 8 minutes. This involved using power Equation 1.\n𝑃 = 𝐹 (1) 𝑑𝑣\nIn the equation, P is our electrical power, Fdis our drag force, and v is our target velocity. In\norder to calculate our drag force acting on the hull, we used the standard drag Equation 2.\n𝐹 (2) 𝑑 =\n1\n2\n𝑝𝐶\n𝑑\n𝐴𝑣\n2\nWhere p is the density of water, Cdis the drag coefficient of our hull, A is the frontal area of the\nhull contributing to drag, and v is the target velocity. After researching similarly sized hulls, we\nestimated our drag coefficient to be 0.15 and our frontal area contributing to drag to be 0.35. This\nyields a drag force of 1178 N. Going back to the power equation, this means we would need 7.9\ncontinuous kW of power.\nBased on this, we selected two 48V, 30Ah lithium phosphate batteries wired in parallel,\nproviding a total capacity of 48V, 60Ah. We chose lithium phosphate batteries because they are\nlighter than other chemistries. The selected batteries support a continuous discharge rate of 2.67C\n(about 80A). Substituting into Ohm’s law yields a maximum power output of:\n𝑃 = 𝐼𝑉 = 80𝐴 × 48𝑉 = 3. 84 𝑘𝑊 𝑝𝑒𝑟 𝑏𝑎𝑡𝑡𝑒𝑟𝑦\nWith both batteries, this puts us close to our 7.9 kW requirement and gives us about 20 minutes\nof runtime, providing a solid margin above our 8-minute race duration while maintaining\nefficiency and avoiding battery over-discharge.\nThermal Management\nOne of the key lessons we learned from last year’s competition was the importance of\nthermal management. Several teams experienced motor overheating, which led to component\nfailure and ultimately prevented them from finishing the race. With this in mind, we made5\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "reliable motor cooling a top priority in our design. During early design discussions, our team\nrecognized that a jet ski offered a unique advantage—its built-in cooling system. In traditional\ngas-powered jet skis, the jet pump is used not only for propulsion but also to circulate cool water\nthrough the internal combustion engine to regulate temperature. We realized this existing system\ncould be adapted for our electric motor.\nThe jet pump works by using the impeller to force water through the intake and into the\nhull. As high-pressure water exits through the nozzle, it creates a natural vacuum that pulls more\nwater through the system. We used this continuous flow to our advantage by routing the water\nthrough ¼” copper tubing coiled tightly around the electric motor. As the cool water flows\nthrough the copper coils, it absorbs the heat generated by the motor during operation. This heat\nexchange process effectively pulls thermal energy away from the motor, maintaining a safe\noperating temperature even under high loads. The use of copper tubing was\nintentional—copper’s excellent thermal conductivity makes it ideal for transferring heat quickly\nand efficiently. This passive cooling method is simple, reliable, and efficient. By repurposing the\njet ski’s original plumbing and cooling functionality, we were able to create an integrated thermal\nmanagement system without adding unnecessary weight or mechanical complexity. As a result,\nour electric motor stays cooler, performs more efficiently, and is far less likely to overheat during\nthe demanding two-mile ocean race.\nHeat Transfer Calculation\nTo understand and validate the effectiveness of our design, we analyzed the three stages\nof heat transfer occurring between the motor and the water:\n1. Conductive heat transfer from the stator to the aluminum housing\n2. Conductive heat transfer from the aluminum housing to the copper tubing\n3. Convective heat transfer from the copper tubing to the turbulent water flow\nBased on Fourier’s Law, the temperature of the motor can be calculated by Equation 3\nT1 = 𝒒 * RTotal + T2 (3)\nWhere:6\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "𝒒 = heat generated by the motor\nRTotal = total thermal resistance of the system\nT2 = ambient water temperature\nOur motor ran at 51V and 120A, producing 6.12 kW of electrical power. We knew that our motor\nwould not operate at 100% efficiency, so after discussing efficiency ratings with the motor\nmanufacturer, we confirmed that our motor operates at approximately 85% efficiency. Using this\n85% efficiency, we found that the motor produced 5.2 kW of mechanical power. The difference\nbetween the two powers:\n𝒒 = 6.12 kW−5.2 kW = 918 W (4)\nThis represents the heat that is generated during the operation of our motor. The T2 value could\nbe approximated using previous years' water temperature data at Virginia Beach. The\nsurrounding ocean water during the competition is estimated to be 62°F (289.82 K).\nThe first step is finding the thermal resistance (R-Value) of our motor’s aluminum\nhousing, RAlum. Thermal resistance can be calculated using the following equation:\nRAlum = 𝐿/(𝑘 * 𝐴) (5)\nWhere:\nL = material thickness\nk = thermal conductivity\nA= contact area\nNow finding these values leads to a housing thickness of 5 mm, a thermal conductivity of 237\nW/m·K for aluminum, and contact area of 0.095 m2. Plugging in these values results in a\nR-Value of RAlum = 2.23*10-4 m²·K/W The next level of heat transfer can be solved in a similar\nfashion using Equation 5 but this time solving for the R-Value between the aluminum and copper\ntubing, RA2C. Given that we using ¼” copper tubing, the thickness is 1.245 mm, the thermal\nconductivity is 401 W/m·K, and the contact area is 0.0635 m2. These values result in a R-Value\nof RA2C = 7.743*10-5 m²·K/W. The last level of heat transfer between the copper tubing and the7\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": "fresh flowing water is a little easier since the R-Value can be easily calculated. The overall heat\ntransfer coefficient, U, is a known value which is 450 W/m2·K. The R-Value can be found now\nsince the R-Value is equal to the inverse of U. The result is RC2W = 0.0022 m²·K/W.\nFinally, the total R-Value can be found by summing all R-Values which results in Rtotal = 0.00252\nm²·K/W. Using this new found Rtotal in Fourier's Law equation along with our calculated heat\ngeneration and predicted water temperature will result in a temperature of our motor. Our\nthermal model predicted a motor surface temperature of 66°F, which closely matched the\nexperimental data collected during an hour-long test under continuous load. This confirms the\neffectiveness of our passive cooling system and validates our design approach.\nBuild Overview & Fabrication\nDisassembly and Inspection\nOnce our team committed to the jet ski-based design for the electric-powered,\nremote-controlled watercraft, we began searching for a suitable hull. After exploring various\noptions, we were fortunate to connect with a friend of a team member's father, who offered us an\nold, “well-used” jet ski in exchange for repairing another one he owned. We quickly accepted the\noffer and acquired the ski to begin the build process shown below in Figure 3.\nFigure 3: Jet Ski Acquired.\nUpon receiving the jet ski, we completely disassembled it, removing all components that\nwere damaged, outdated, or unnecessary for our electric design. The craft had been sitting in a\nfield for several years, and the interior cavity was filled with standing water, resulting in\nsignificant corrosion to most of the internal components. After stripping the hull bare, we\nconducted a full damage assessment. Fortunately, the structural integrity of the ski was largely8\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "intact, although we identified a large crack on the upper hull and several smaller cracks in the\nhood. We began repairs by sanding all cracked areas and drilling relief holes at the ends of each\ncrack to prevent further spreading. Multiple layers of long-strand fiberglass were then applied to\nreinforce these sections. Once cured, the fiberglass was sanded smooth to blend seamlessly with\nthe original hull, rendering the repairs nearly invisible. We followed this with a full cleaning of\nthe jet ski—removing decals, and rubber linings, and sanding down the entire surface in\npreparation for repainting. To ensure durability, the hull was coated with six layers of\nhigh-strength, scratch-resistant paint commonly used on tractor trailers.\nMotor and Power Storage\nWith the hull structure restored, we took precise measurements of the internal cavity and\nstand-up area to plan the placement of major components. These dimensions helped guide our\nselection of the largest possible motor and battery configuration that could fit within the\nconstraints of the hull. After evaluating several power options and performing calculations based\non weight, voltage, and power demands, we determined that a 48V, 8-horsepower brushed DC\nmotor—capable of peaking at 15 horsepower—would be ideal for our application. To support\nthis motor, we selected two 48V batteries that could deliver the necessary current and fit within\nthe stand-up section of the hull. Once we secured funding for the competition, we ordered all\nmajor components, including the motor, batteries, repair tooling, and various hardware items.\nSteering and Motor Input\nTo steer the jet ski, we repurposed the existing steering cable that was originally\nconnected to the handlebars. Since the jet ski needed to be unmanned, we designed a system to\ncontrol steering a remote input. This system uses a linear actuator, Figure 4, mounted inside the\nhull, which connects directly to the steering cable. A motor driver, which is powered by the same\n12V battery that powers the Arduino, receives PWM input signals from the control system, and\nwith custom motor control logic written in C++, we direct the actuator's movement. When the\nactuator extends, it pulls the steering cable in one direction, turning the nozzle—and the jet\nski—left. When it retracts, the nozzle turns right. The primary motor is controlled using similar\nlogic to the steering actuator. A separate, higher-powered motor driver receives PWM input\nsignals from the control system. Using motor control logic written in C++, we adjust the motor's9\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 10,
+      "text": "speed based on these inputs. Due to the impeller-based propulsion system of the jet ski, there is\nno capability for reverse thrust.\nFigure 4: Linear Actuator.\nMechanical Fabrication and Repair\nDuring a mechanical inspection, we discovered that the driveshaft was producing a\ngrinding noise. Disassembly of the carrier and jet pump revealed that the seals had become\nbrittle, and the bearings were severely corroded. We researched and ordered parts to totally repair\nboth components. The impeller was also scratched and chipped, so we hand-sanded and polished\nit to improve efficiency. The rebuilt jet pump and carrier were reassembled and installed, with\nimpeller clearance adjusted to five-thousandths of an inch for optimal performance. The original\ncoupler was heavily corroded, with jagged teeth that risked damaging the motor shaft. We\nreplaced it with a CNC machined aluminum coupler for improved durability and precision. The\ndriveshaft, which was covered in rust, was also sanded and polished to a mirror-like finish to\nensure smooth operation and proper mating surface for seals.\nOnce we received the motor, we began designing the motor mount. We quickly realized\nthat our original concept wouldn't work due to a clearance issue. We pivoted to a vertical leg\nmount design that would support the motor from the top rather than the bottom. Since our motor\nis designed for vertical mounting, we fabricated a flat mounting plate from 1/4\" thick steel,\nrepurposed from a SmartBoard stand. To maximize clearance at the bottom of the ski, the plate\nwas shaped with a fillet radius to match the motor's base. Our motor has 3.2 mm extrusions\naround the mounting holes, so we face-milled a recessed dish in the plate to match the diameter\nof the motor's mounting face. This allowed the plate to sit completely flush against the motor and10\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 11,
+      "text": "ensured a solid, play-free connection. After cutting the four legs, we mocked everything\nup—only to discover the legs didn’t fit correctly.\nAfter reevaluating the setup, we spoke with one of our team member’s bosses, who\nrecommended scanning the interior of the hull to precisely measure each motor mount location\nrelative to the driveshaft centerline. Using a 3D scanner and PolyWorks, shown in Figure 5 (a),\nwe discovered that the motor mounts were not symmetrical—they were offset by 5/16\" in the\nfront and 1/16\" in the back. This meant each leg had to be custom-cut to fit its exact position.\nWith that data, we fabricated specific legs for each corner, then tacked and welded them to the\nmotor cage shown in Figure 5 (b).\nFigure 5: (a) CAD model of Jetski interior (b) Welded Motor mount\nFollowing final welding, we reinstalled the motor—only to find that the coupler spacing\nwas now slightly off, likely due to minor warping from welding. We determined that the motor\nneeded to be shimmed up by 1.17 mm to correct the alignment. Without access to precision\nshims, we improvised with one of the most reliable materials available to college students: Red\nBull cans. We cut 1\" x 1.5\" aluminum squares from the cans and shimmed the legs until the\ncouplers had only 0.04 mm of side-to-side deviation. This final alignment ensured that the motor\nwas properly centered, allowing it to deliver maximum power to the driveshaft with minimal\nvibration. The result was a solid, custom motor mounting system built from scratch with\ncreativity, precision, and a little caffeine.\nCooling System\nTo install the cooling system on our jet ski, we began by rebuilding the jet pump with\nhigh-quality Nachi bearings and new seals to ensure optimal performance. The pump's interior11\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 12,
+      "text": "was sanded and polished for smoother water flow. It featured two 1/4\" brass ports—an inlet near\nthe impeller and an outlet at the rear—connected to the jet ski’s original hard-lined tubing using\nflexible fuel lines. Since our electric motor would be cooled by copper coils, we needed at least\n¼” of clearance between the motor and the hull. Before receiving funding for the motor, we\ncreated a cardboard scale model to test fitment. This revealed clearance issues, so we notched out\nthe battery retainer and carefully sanded the cavity floor to gain the necessary space. To form the\ncooling coil, we wrapped ¼” copper tubing around a slightly smaller diameter pipe so it would\ncoil tightly around the motor. We then installed the coils on to the motor with heat sink paste to\nmaximize heat transfer. With the jet pump rebuilt and the coils installed, we plumbed the system\nto complete a functional open-loop water cooling setup.\nElectrical Fabrication and Installation\nTo ensure solid electrical connections and minimize clutter in the cavity, we fabricated\ncustom-length wires using 2 AWG marine-grade cable to handle the high current demands.\nCreating these cables required flux, solder, and a blowtorch.\nTo monitor live current draw and battery capacity, we installed a shunt on the ground side\nof the primary power system. We also built a custom mount for the primary motor driver, along\nwith a dedicated mount for the steering actuator. Additionally, a separate mounting plate was\ndesigned to securely hold a high-current fuse and contactor. Figure 6 is a full wiring diagram.\nFigure 6: Full Wiring Diagram12\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 13,
+      "text": "Testing and Refining\nAfter completing our initial setup of our craft, we began testing to evaluate its\nperformance. Our testing was conducted in progressively more intense stages. This started with a\nsimple floating and balancing test, and worked up to a full 30 minutes of untethered driving.\nDuring testing we quickly discovered a few issues, including several small holes creating\nleakage, some excessive vibrations, and turning issues. To address the leaks, we sealed the holes\nwith silicone caulking as we found them through routine cavity checks during testing. When\ntrouble shooting the excessive vibrations we noticed that the coupler was misaligned by around 1\nmm. We solved this problem by cutting out some metal shims out of aluminum cans and raising\nthe motor mount. This small adjustment tremendously reduced the vibration. Lastly, we\ntheorized that turning issues were stemming from improper mounting of the steering cable. After\nremounting the cable, the steering issue was solved as well.\nRisk\nHigh-performance watercraft are subject to a wide range of risks, including water\nleakage, overheating of critical components, electrical failure, and instability during operation.\nThis section provides a detailed account of the risks addressed during the design and build\nstages, as well as the risks that will be actively controlled during the race.\nWater Leakage\nOne of the main risks to address in the design is water intrusion. If water enters the hull,\nit can damage critical components—such as the electrical systems and motor—potentially\nleading to malfunctions, electrical shorts, or total system failure. To prevent this, several\nstrategies were implemented during the design and build phase. Generous amounts of silicone\nsealant were applied to seams, joints, and other vulnerable areas to ensure a watertight structure.\nIn spots requiring additional reinforcement, “Flex Tape” glue was used to create extra layers of\nprotection. Custom 3D-printed components were also installed to cover pre-existing openings in\nthe hull, such as those for the gas cap, handlebars, and exhaust. These parts provide a lightweight\nyet reliable way to maintain structural integrity. To further enhance water resistance, weather13\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 14,
+      "text": "stripping was added between the hood and cavity, creating a secure seal when the hood is\nlatched.\nCooling Systems\nOverheating is another risk that can have a serious impact on performance, especially\nwithin our motor and battery design. To keep temperatures in check, copper coils are wrapped\naround the motor to help dissipate heat through heat transfer. Cold water from the jet pump is\npumped through these coils to keep the motor cool during operation as shown in Figure 7 (a),\neven under high stress. The jet pump plays a crucial role by circulating the water through the\ncoils, ensuring the motor doesn’t overheat, which would lead to a decline in performance or\npermanent damage.\nElectrical Concerns\nThe battery, which powers the primary drive system, was tested to ensure it can last\nthrough the full 2-mile race without overheating or depleting prematurely. We installed a shunt\nthrough the primary motor wiring that allows us to monitor the current draw via an onboard\ndisplay as shown in Figure 7 (b). With the current data, we can determine safe temperature\nlevels.\nFigure 7: (a) Motor Cooling System (b) Battery Monitoring Display\nElectrical efficiency is a critical factor in ensuring the smooth operation of the watercraft.\nThe system must handle high current loads without overheating, so 2 AWG wiring was selected\nto minimize heat buildup and maintain safe operating temperatures. To protect against current14\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 15,
+      "text": "surges, fuses and contactors were installed—these safety components will either blow or\ndisconnect the circuit if current levels exceed safe thresholds. Our batteries also have a built in\nbattery management system (BMS) that helps discharge current at a healthy rate without\noverworking our batteries and causing malfunctions. Component compatibility was also a key\nconsideration during the design phase. Every element of the electrical system—from the fuse and\ncontactor to the driver and motor—was carefully chosen to ensure seamless integration and\nreliable performance.\nHull Stability\nStability is a critical concern for the watercraft, especially at high speeds. Weight\ndistribution was carefully evaluated, and a preliminary weight test was conducted to determine\nthe optimal placement for the batteries and other payloads. Initial testing revealed insufficient\nlateral stability, prompting the installation of outriggers (Figure 8 (b)). These outriggers\nsignificantly enhance the vessel’s balance, helping it stay upright and stable during sharp turns\nand sudden maneuvers. Also, in the event of a capsize, the battery box was designed to remain\nsecure during rapid acceleration and wave impacts. All electrical connections inside the box are\ninsulated with rubber caps and firmly fastened to reduce the risk of short-circuiting or other\nfailures caused by water exposure. To enhance safety—and in compliance with competition\nregulations—an emergency stop button was integrated into the battery box, allowing the circuit\nto be manually shut off in a worst-case scenario (Figure 8 (b)). The box itself is constructed from\nhigh-strength plastic and sealed with waterproof gaskets to ensure durability and protect the\nbatteries in harsh conditions.\nFigure 8: a) Adjustable Outriggers, b) Battery box design featuring E-Stop Button15\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 16,
+      "text": "Finally, the watercraft had to be structurally reinforced to support the motor, withstand the\nweight of the batteries and payload, and endure the stress of waves. When we first acquired the\nwatercraft, there was a large crack in the hull and several smaller cracks in the hood. These\nissues needed to be addressed to ensure the structural integrity of the craft during extended use.\nTo repair the damage, multiple layers of long-strand fiberglass were applied, then sanded smooth\nand repainted to restore the original finish seamlessly.\nOnce the watercraft is in operation, there are still several risks that need to be carefully\nmonitored and controlled in real time, especially during a race. Signal strength is one of these\nrisks. Losing communication between the watercraft and the controller can lead to operational\nfailures. To ensure strong, reliable communication, a long-range transmitter and receiver were\nacquired so that the craft could reach distances of almost a mile.\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Arkansas Tech University Unmanned"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "PEP 2025 White Paper"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Team Members:"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Isaac Broadway - isaacbroadway85@gmail.com"
+    },
+    {
+      "line": 4,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Charles Davis - charles13.davis@gmail.com"
+    },
+    {
+      "line": 5,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Treys Smedley - TreysSmedley3@gmail.com"
+    },
+    {
+      "line": 6,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Ethan Wooldrige - ethanbw172003@gmail.com"
+    },
+    {
+      "line": 7,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Lyndon Youngblood - lyoungblood03@gmail.com"
+    },
+    {
+      "line": 8,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Special Thanks:"
+    },
+    {
+      "line": 9,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Dr. Mohammad Amjadi - mamjadi@atu.edu"
+    },
+    {
+      "line": 10,
+      "page_start": 0,
+      "page_end": 1,
+      "text": "Dr. Mathew Young - myoung@atu.edu1"
+    },
+    {
+      "line": 11,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Background"
+    },
+    {
+      "line": 12,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "This paper explores the development of an electric-powered, remote-controlled,"
+    },
+    {
+      "line": 13,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "unmanned watercraft built to compete in a two-mile open ocean race. The design centers around"
+    },
+    {
+      "line": 14,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "the innovative use of an existing stand-up jet ski hull and jet pump system, repurposed to support"
+    },
+    {
+      "line": 15,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "electric propulsion and efficient motor cooling. The jet ski hull, originally engineered for high"
+    },
+    {
+      "line": 16,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "speed and maneuverability, provides a robust structural foundation capable of accommodating"
+    },
+    {
+      "line": 17,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "heavier components such as batteries and the electric motor. Choosing a larger hull—unlike any"
+    },
+    {
+      "line": 18,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "used in previous years—offers greater stability in open ocean conditions and the potential for"
+    },
+    {
+      "line": 19,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "increased speed."
+    },
+    {
+      "line": 20,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "A key innovation lies in the adaptation of the original jet pump, which was initially used"
+    },
+    {
+      "line": 21,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "to propel the watercraft and cool a gas-powered engine. In our design, the jet pump's water"
+    },
+    {
+      "line": 22,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "circulation system has been repurposed to cool the electric motor. Copper coils were wrapped"
+    },
+    {
+      "line": 23,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "around the motor, allowing cool water to flow through and draw heat away during operation."
+    },
+    {
+      "line": 24,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "This ensures the motor remains at a safe operating temperature, even under high loads. This"
+    },
+    {
+      "line": 25,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "approach not only simplifies the cooling system but also reduces overall weight and system"
+    },
+    {
+      "line": 26,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "complexity. By utilizing pre-existing jet ski components, the design remains efficient, reliable,"
+    },
+    {
+      "line": 27,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "and easier to maintain. The integration of the propulsion and cooling systems into a single,"
+    },
+    {
+      "line": 28,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "cohesive unit marks a significant improvement over traditional electric watercraft designs."
+    },
+    {
+      "line": 29,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Together, these features—using a large, stable hull and a repurposed jet pump for motor"
+    },
+    {
+      "line": 30,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "cooling—form the foundation of an innovative and competitive ocean racing platform."
+    },
+    {
+      "line": 31,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Design & Analysis"
+    },
+    {
+      "line": 32,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Hull Stability & Efficiency"
+    },
+    {
+      "line": 33,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Hull design played a pivotal role in the success of our electric-powered,"
+    },
+    {
+      "line": 34,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "remote-controlled watercraft. After reviewing feedback from previous competitions, our team"
+    },
+    {
+      "line": 35,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "identified hull stability as a critical factor—particularly in open-ocean conditions. Many teams"
+    },
+    {
+      "line": 36,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "reported that their smaller crafts struggled to withstand large waves, with some capsizing"
+    },
+    {
+      "line": 37,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "mid-race. With this in mind, we prioritized a larger, more stable platform capable of handling"
+    },
+    {
+      "line": 38,
+      "page_start": 1,
+      "page_end": 2,
+      "text": "unpredictable water conditions while supporting the weight of a high-power motor and a2"
+    },
+    {
+      "line": 39,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "60-pound payload. We selected a stand-up jet ski hull due to its proven performance in"
+    },
+    {
+      "line": 40,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "high-speed marine environments. Jet skis are designed to carry the weight of a full-grown rider,"
+    },
+    {
+      "line": 41,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "maintain balance in rough water, and cut efficiently through waves. The hull’s size gave us"
+    },
+    {
+      "line": 42,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "ample space for component layout and weight distribution, offering a perfect balance between"
+    },
+    {
+      "line": 43,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "size, stability, and performance. The hull’s V-shaped design features a pointed bow that tapers"
+    },
+    {
+      "line": 44,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "into a flatter rear section. This geometry provides several performance advantages across various"
+    },
+    {
+      "line": 45,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "speeds. At low speeds, the wider rear creates greater surface area and buoyancy, enhancing"
+    },
+    {
+      "line": 46,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "side-to-side stability and reducing the chance of tipping—especially during idle or tight turns. As"
+    },
+    {
+      "line": 47,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "the craft accelerates, the hull transitions into planing mode, shifting more of the weight to the"
+    },
+    {
+      "line": 48,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "rear. This reduces drag and allows the watercraft to ride on top of the water, resulting in a"
+    },
+    {
+      "line": 49,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "smoother and more efficient ride. The sharp V-shaped bow also acts as a cutting edge, slicing"
+    },
+    {
+      "line": 50,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "through waves and reducing hydrodynamic resistance, which contributes to greater speed and"
+    },
+    {
+      "line": 51,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "improved handling in choppy conditions."
+    },
+    {
+      "line": 52,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Despite the inherent stability of the jet ski hull, initial testing revealed a tendency for the"
+    },
+    {
+      "line": 53,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "craft to roll side to side more than expected. This was largely due to the elevated center of"
+    },
+    {
+      "line": 54,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "gravity caused by the placement of batteries and other heavy components. To address this issue,"
+    },
+    {
+      "line": 55,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "we installed outriggers to widen the craft’s base. These significantly improved roll stability,"
+    },
+    {
+      "line": 56,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "particularly at low speeds or while stationary. Although this modification increased drag and"
+    },
+    {
+      "line": 57,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "slightly reduced our top-end speed, the trade-off in improved safety and control was well worth"
+    },
+    {
+      "line": 58,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "it."
+    },
+    {
+      "line": 59,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Beyond stability, the hull’s overall shape and construction were critical for efficiency."
+    },
+    {
+      "line": 60,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "The curvature—or deadrise—of the hull is optimized to minimize the wetted surface area,"
+    },
+    {
+      "line": 61,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "reducing drag force as the watercraft moves forward. Jet skis typically use a deep-V or"
+    },
+    {
+      "line": 62,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "modified-V design, which generates lift and allows the vessel to skim across the water surface"
+    },
+    {
+      "line": 63,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "rather than plow through it. This reduces energy consumption and improves speed. The"
+    },
+    {
+      "line": 64,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "integration of the jet pump into the hull further enhances hydrodynamic performance. The jet"
+    },
+    {
+      "line": 65,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "pump draws water from directly beneath the hull, where pressure is highest, and propels it"
+    },
+    {
+      "line": 66,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "through a nozzle to generate thrust. This efficient propulsion method minimizes turbulence and"
+    },
+    {
+      "line": 67,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "contributes to smoother acceleration. Additionally, the hull’s smooth, sanded, and repainted"
+    },
+    {
+      "line": 68,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "surface reduces friction with the water, further boosting efficiency and top-end speed.3"
+    },
+    {
+      "line": 69,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "In summary, the jet ski hull served as a critical foundation for our design—offering the"
+    },
+    {
+      "line": 70,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "perfect combination of stability, structural support, and hydrodynamic efficiency. From cutting"
+    },
+    {
+      "line": 71,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "through waves with a sharp bow to gliding across the surface at speed, the hull's design"
+    },
+    {
+      "line": 72,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "supported our mission to build a high-performing, ocean-capable electric watercraft."
+    },
+    {
+      "line": 73,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Radio Frequency Control System"
+    },
+    {
+      "line": 74,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "In order to achieve remote operation, we had to carefully choose our electrical"
+    },
+    {
+      "line": 75,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "components for compatibility. The block diagram in Figure 1 explains the control system."
+    },
+    {
+      "line": 76,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Figure 1: Radio Frequency Block Diagram."
+    },
+    {
+      "line": 77,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "The transmitter we chose was a Taranis X9D, which operates on the 2.4 GHz band and"
+    },
+    {
+      "line": 78,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "has a transmission range of approximately 2.5 kilometers. The movement of the joysticks on the"
+    },
+    {
+      "line": 79,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "transmitter sends radio signals to the receiver. We selected the Archer Plus R8 receiver, which is"
+    },
+    {
+      "line": 80,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "fully compatible with the transmitter and outputs smooth Pulse Width Modulation (PWM)"
+    },
+    {
+      "line": 81,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "signals. A PWM signal is a digital voltage signal that rapidly switches between high and low"
+    },
+    {
+      "line": 82,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "states. Although it is not truly analog, varying the proportion of time the signal stays high within"
+    },
+    {
+      "line": 83,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "each cycle—known as the duty cycle—can be used to simulate an analog voltage. For example, a"
+    },
+    {
+      "line": 84,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "50% duty cycle means the signal is high for half of each cycle and low for the other half,"
+    },
+    {
+      "line": 85,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "resulting in an average voltage that is approximately 50% of the maximum, shown below in"
+    },
+    {
+      "line": 86,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Figure 2. Since our system operates with a digital voltage range of 0–5V, a 50% duty cycle"
+    },
+    {
+      "line": 87,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "yields an average voltage of around 2.5V."
+    },
+    {
+      "line": 88,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "Figure 2: Duty cycle visualization.4"
+    },
+    {
+      "line": 89,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "The microcontroller we chose was an Arduino Uno R4, which is capable of both reading PWM"
+    },
+    {
+      "line": 90,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "input signals and generating PWM outputs. The microcontroller receives power from a 12V"
+    },
+    {
+      "line": 91,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "battery. Using C++ code, we mapped the PWM outputs from the receiver and generated new"
+    },
+    {
+      "line": 92,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "PWM signals for motor control."
+    },
+    {
+      "line": 93,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Primary Power Calculations"
+    },
+    {
+      "line": 94,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "To determine the appropriate motor and battery configuration for our boat, we first"
+    },
+    {
+      "line": 95,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "calculated the required horsepower to achieve our target speed of 15 miles per hour, which would"
+    },
+    {
+      "line": 96,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "allow us to finish the race in approximately 8 minutes. This involved using power Equation 1."
+    },
+    {
+      "line": 97,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "𝑃 = 𝐹 (1) 𝑑𝑣"
+    },
+    {
+      "line": 98,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "In the equation, P is our electrical power, Fdis our drag force, and v is our target velocity. In"
+    },
+    {
+      "line": 99,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "order to calculate our drag force acting on the hull, we used the standard drag Equation 2."
+    },
+    {
+      "line": 100,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "𝐹 (2) 𝑑 ="
+    },
+    {
+      "line": 101,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "1"
+    },
+    {
+      "line": 102,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "2"
+    },
+    {
+      "line": 103,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "𝑝𝐶"
+    },
+    {
+      "line": 104,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "𝑑"
+    },
+    {
+      "line": 105,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "𝐴𝑣"
+    },
+    {
+      "line": 106,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "2"
+    },
+    {
+      "line": 107,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Where p is the density of water, Cdis the drag coefficient of our hull, A is the frontal area of the"
+    },
+    {
+      "line": 108,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "hull contributing to drag, and v is the target velocity. After researching similarly sized hulls, we"
+    },
+    {
+      "line": 109,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "estimated our drag coefficient to be 0.15 and our frontal area contributing to drag to be 0.35. This"
+    },
+    {
+      "line": 110,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "yields a drag force of 1178 N. Going back to the power equation, this means we would need 7.9"
+    },
+    {
+      "line": 111,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "continuous kW of power."
+    },
+    {
+      "line": 112,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Based on this, we selected two 48V, 30Ah lithium phosphate batteries wired in parallel,"
+    },
+    {
+      "line": 113,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "providing a total capacity of 48V, 60Ah. We chose lithium phosphate batteries because they are"
+    },
+    {
+      "line": 114,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "lighter than other chemistries. The selected batteries support a continuous discharge rate of 2.67C"
+    },
+    {
+      "line": 115,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "(about 80A). Substituting into Ohm’s law yields a maximum power output of:"
+    },
+    {
+      "line": 116,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "𝑃 = 𝐼𝑉 = 80𝐴 × 48𝑉 = 3. 84 𝑘𝑊 𝑝𝑒𝑟 𝑏𝑎𝑡𝑡𝑒𝑟𝑦"
+    },
+    {
+      "line": 117,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "With both batteries, this puts us close to our 7.9 kW requirement and gives us about 20 minutes"
+    },
+    {
+      "line": 118,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "of runtime, providing a solid margin above our 8-minute race duration while maintaining"
+    },
+    {
+      "line": 119,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "efficiency and avoiding battery over-discharge."
+    },
+    {
+      "line": 120,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Thermal Management"
+    },
+    {
+      "line": 121,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "One of the key lessons we learned from last year’s competition was the importance of"
+    },
+    {
+      "line": 122,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "thermal management. Several teams experienced motor overheating, which led to component"
+    },
+    {
+      "line": 123,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "failure and ultimately prevented them from finishing the race. With this in mind, we made5"
+    },
+    {
+      "line": 124,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "reliable motor cooling a top priority in our design. During early design discussions, our team"
+    },
+    {
+      "line": 125,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "recognized that a jet ski offered a unique advantage—its built-in cooling system. In traditional"
+    },
+    {
+      "line": 126,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "gas-powered jet skis, the jet pump is used not only for propulsion but also to circulate cool water"
+    },
+    {
+      "line": 127,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "through the internal combustion engine to regulate temperature. We realized this existing system"
+    },
+    {
+      "line": 128,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "could be adapted for our electric motor."
+    },
+    {
+      "line": 129,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "The jet pump works by using the impeller to force water through the intake and into the"
+    },
+    {
+      "line": 130,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "hull. As high-pressure water exits through the nozzle, it creates a natural vacuum that pulls more"
+    },
+    {
+      "line": 131,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "water through the system. We used this continuous flow to our advantage by routing the water"
+    },
+    {
+      "line": 132,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "through ¼” copper tubing coiled tightly around the electric motor. As the cool water flows"
+    },
+    {
+      "line": 133,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "through the copper coils, it absorbs the heat generated by the motor during operation. This heat"
+    },
+    {
+      "line": 134,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "exchange process effectively pulls thermal energy away from the motor, maintaining a safe"
+    },
+    {
+      "line": 135,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "operating temperature even under high loads. The use of copper tubing was"
+    },
+    {
+      "line": 136,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "intentional—copper’s excellent thermal conductivity makes it ideal for transferring heat quickly"
+    },
+    {
+      "line": 137,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "and efficiently. This passive cooling method is simple, reliable, and efficient. By repurposing the"
+    },
+    {
+      "line": 138,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "jet ski’s original plumbing and cooling functionality, we were able to create an integrated thermal"
+    },
+    {
+      "line": 139,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "management system without adding unnecessary weight or mechanical complexity. As a result,"
+    },
+    {
+      "line": 140,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "our electric motor stays cooler, performs more efficiently, and is far less likely to overheat during"
+    },
+    {
+      "line": 141,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "the demanding two-mile ocean race."
+    },
+    {
+      "line": 142,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Heat Transfer Calculation"
+    },
+    {
+      "line": 143,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "To understand and validate the effectiveness of our design, we analyzed the three stages"
+    },
+    {
+      "line": 144,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "of heat transfer occurring between the motor and the water:"
+    },
+    {
+      "line": 145,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "1. Conductive heat transfer from the stator to the aluminum housing"
+    },
+    {
+      "line": 146,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "2. Conductive heat transfer from the aluminum housing to the copper tubing"
+    },
+    {
+      "line": 147,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "3. Convective heat transfer from the copper tubing to the turbulent water flow"
+    },
+    {
+      "line": 148,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Based on Fourier’s Law, the temperature of the motor can be calculated by Equation 3"
+    },
+    {
+      "line": 149,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "T1 = 𝒒 * RTotal + T2 (3)"
+    },
+    {
+      "line": 150,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "Where:6"
+    },
+    {
+      "line": 151,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "𝒒 = heat generated by the motor"
+    },
+    {
+      "line": 152,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "RTotal = total thermal resistance of the system"
+    },
+    {
+      "line": 153,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "T2 = ambient water temperature"
+    },
+    {
+      "line": 154,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Our motor ran at 51V and 120A, producing 6.12 kW of electrical power. We knew that our motor"
+    },
+    {
+      "line": 155,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "would not operate at 100% efficiency, so after discussing efficiency ratings with the motor"
+    },
+    {
+      "line": 156,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "manufacturer, we confirmed that our motor operates at approximately 85% efficiency. Using this"
+    },
+    {
+      "line": 157,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "85% efficiency, we found that the motor produced 5.2 kW of mechanical power. The difference"
+    },
+    {
+      "line": 158,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "between the two powers:"
+    },
+    {
+      "line": 159,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "𝒒 = 6.12 kW−5.2 kW = 918 W (4)"
+    },
+    {
+      "line": 160,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "This represents the heat that is generated during the operation of our motor. The T2 value could"
+    },
+    {
+      "line": 161,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "be approximated using previous years' water temperature data at Virginia Beach. The"
+    },
+    {
+      "line": 162,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "surrounding ocean water during the competition is estimated to be 62°F (289.82 K)."
+    },
+    {
+      "line": 163,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "The first step is finding the thermal resistance (R-Value) of our motor’s aluminum"
+    },
+    {
+      "line": 164,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "housing, RAlum. Thermal resistance can be calculated using the following equation:"
+    },
+    {
+      "line": 165,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "RAlum = 𝐿/(𝑘 * 𝐴) (5)"
+    },
+    {
+      "line": 166,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Where:"
+    },
+    {
+      "line": 167,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "L = material thickness"
+    },
+    {
+      "line": 168,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "k = thermal conductivity"
+    },
+    {
+      "line": 169,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "A= contact area"
+    },
+    {
+      "line": 170,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Now finding these values leads to a housing thickness of 5 mm, a thermal conductivity of 237"
+    },
+    {
+      "line": 171,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "W/m·K for aluminum, and contact area of 0.095 m2. Plugging in these values results in a"
+    },
+    {
+      "line": 172,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "R-Value of RAlum = 2.23*10-4 m²·K/W The next level of heat transfer can be solved in a similar"
+    },
+    {
+      "line": 173,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "fashion using Equation 5 but this time solving for the R-Value between the aluminum and copper"
+    },
+    {
+      "line": 174,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "tubing, RA2C. Given that we using ¼” copper tubing, the thickness is 1.245 mm, the thermal"
+    },
+    {
+      "line": 175,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "conductivity is 401 W/m·K, and the contact area is 0.0635 m2. These values result in a R-Value"
+    },
+    {
+      "line": 176,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "of RA2C = 7.743*10-5 m²·K/W. The last level of heat transfer between the copper tubing and the7"
+    },
+    {
+      "line": 177,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "fresh flowing water is a little easier since the R-Value can be easily calculated. The overall heat"
+    },
+    {
+      "line": 178,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "transfer coefficient, U, is a known value which is 450 W/m2·K. The R-Value can be found now"
+    },
+    {
+      "line": 179,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "since the R-Value is equal to the inverse of U. The result is RC2W = 0.0022 m²·K/W."
+    },
+    {
+      "line": 180,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Finally, the total R-Value can be found by summing all R-Values which results in Rtotal = 0.00252"
+    },
+    {
+      "line": 181,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "m²·K/W. Using this new found Rtotal in Fourier's Law equation along with our calculated heat"
+    },
+    {
+      "line": 182,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "generation and predicted water temperature will result in a temperature of our motor. Our"
+    },
+    {
+      "line": 183,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "thermal model predicted a motor surface temperature of 66°F, which closely matched the"
+    },
+    {
+      "line": 184,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "experimental data collected during an hour-long test under continuous load. This confirms the"
+    },
+    {
+      "line": 185,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "effectiveness of our passive cooling system and validates our design approach."
+    },
+    {
+      "line": 186,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Build Overview & Fabrication"
+    },
+    {
+      "line": 187,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Disassembly and Inspection"
+    },
+    {
+      "line": 188,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Once our team committed to the jet ski-based design for the electric-powered,"
+    },
+    {
+      "line": 189,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "remote-controlled watercraft, we began searching for a suitable hull. After exploring various"
+    },
+    {
+      "line": 190,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "options, we were fortunate to connect with a friend of a team member's father, who offered us an"
+    },
+    {
+      "line": 191,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "old, “well-used” jet ski in exchange for repairing another one he owned. We quickly accepted the"
+    },
+    {
+      "line": 192,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "offer and acquired the ski to begin the build process shown below in Figure 3."
+    },
+    {
+      "line": 193,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Figure 3: Jet Ski Acquired."
+    },
+    {
+      "line": 194,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Upon receiving the jet ski, we completely disassembled it, removing all components that"
+    },
+    {
+      "line": 195,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "were damaged, outdated, or unnecessary for our electric design. The craft had been sitting in a"
+    },
+    {
+      "line": 196,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "field for several years, and the interior cavity was filled with standing water, resulting in"
+    },
+    {
+      "line": 197,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "significant corrosion to most of the internal components. After stripping the hull bare, we"
+    },
+    {
+      "line": 198,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "conducted a full damage assessment. Fortunately, the structural integrity of the ski was largely8"
+    },
+    {
+      "line": 199,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "intact, although we identified a large crack on the upper hull and several smaller cracks in the"
+    },
+    {
+      "line": 200,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "hood. We began repairs by sanding all cracked areas and drilling relief holes at the ends of each"
+    },
+    {
+      "line": 201,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "crack to prevent further spreading. Multiple layers of long-strand fiberglass were then applied to"
+    },
+    {
+      "line": 202,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "reinforce these sections. Once cured, the fiberglass was sanded smooth to blend seamlessly with"
+    },
+    {
+      "line": 203,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "the original hull, rendering the repairs nearly invisible. We followed this with a full cleaning of"
+    },
+    {
+      "line": 204,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "the jet ski—removing decals, and rubber linings, and sanding down the entire surface in"
+    },
+    {
+      "line": 205,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "preparation for repainting. To ensure durability, the hull was coated with six layers of"
+    },
+    {
+      "line": 206,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "high-strength, scratch-resistant paint commonly used on tractor trailers."
+    },
+    {
+      "line": 207,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Motor and Power Storage"
+    },
+    {
+      "line": 208,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "With the hull structure restored, we took precise measurements of the internal cavity and"
+    },
+    {
+      "line": 209,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "stand-up area to plan the placement of major components. These dimensions helped guide our"
+    },
+    {
+      "line": 210,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "selection of the largest possible motor and battery configuration that could fit within the"
+    },
+    {
+      "line": 211,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "constraints of the hull. After evaluating several power options and performing calculations based"
+    },
+    {
+      "line": 212,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "on weight, voltage, and power demands, we determined that a 48V, 8-horsepower brushed DC"
+    },
+    {
+      "line": 213,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "motor—capable of peaking at 15 horsepower—would be ideal for our application. To support"
+    },
+    {
+      "line": 214,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "this motor, we selected two 48V batteries that could deliver the necessary current and fit within"
+    },
+    {
+      "line": 215,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "the stand-up section of the hull. Once we secured funding for the competition, we ordered all"
+    },
+    {
+      "line": 216,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "major components, including the motor, batteries, repair tooling, and various hardware items."
+    },
+    {
+      "line": 217,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Steering and Motor Input"
+    },
+    {
+      "line": 218,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "To steer the jet ski, we repurposed the existing steering cable that was originally"
+    },
+    {
+      "line": 219,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "connected to the handlebars. Since the jet ski needed to be unmanned, we designed a system to"
+    },
+    {
+      "line": 220,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "control steering a remote input. This system uses a linear actuator, Figure 4, mounted inside the"
+    },
+    {
+      "line": 221,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "hull, which connects directly to the steering cable. A motor driver, which is powered by the same"
+    },
+    {
+      "line": 222,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "12V battery that powers the Arduino, receives PWM input signals from the control system, and"
+    },
+    {
+      "line": 223,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "with custom motor control logic written in C++, we direct the actuator's movement. When the"
+    },
+    {
+      "line": 224,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "actuator extends, it pulls the steering cable in one direction, turning the nozzle—and the jet"
+    },
+    {
+      "line": 225,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "ski—left. When it retracts, the nozzle turns right. The primary motor is controlled using similar"
+    },
+    {
+      "line": 226,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "logic to the steering actuator. A separate, higher-powered motor driver receives PWM input"
+    },
+    {
+      "line": 227,
+      "page_start": 8,
+      "page_end": 9,
+      "text": "signals from the control system. Using motor control logic written in C++, we adjust the motor's9"
+    },
+    {
+      "line": 228,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "speed based on these inputs. Due to the impeller-based propulsion system of the jet ski, there is"
+    },
+    {
+      "line": 229,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "no capability for reverse thrust."
+    },
+    {
+      "line": 230,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Figure 4: Linear Actuator."
+    },
+    {
+      "line": 231,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Mechanical Fabrication and Repair"
+    },
+    {
+      "line": 232,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "During a mechanical inspection, we discovered that the driveshaft was producing a"
+    },
+    {
+      "line": 233,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "grinding noise. Disassembly of the carrier and jet pump revealed that the seals had become"
+    },
+    {
+      "line": 234,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "brittle, and the bearings were severely corroded. We researched and ordered parts to totally repair"
+    },
+    {
+      "line": 235,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "both components. The impeller was also scratched and chipped, so we hand-sanded and polished"
+    },
+    {
+      "line": 236,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "it to improve efficiency. The rebuilt jet pump and carrier were reassembled and installed, with"
+    },
+    {
+      "line": 237,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "impeller clearance adjusted to five-thousandths of an inch for optimal performance. The original"
+    },
+    {
+      "line": 238,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "coupler was heavily corroded, with jagged teeth that risked damaging the motor shaft. We"
+    },
+    {
+      "line": 239,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "replaced it with a CNC machined aluminum coupler for improved durability and precision. The"
+    },
+    {
+      "line": 240,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "driveshaft, which was covered in rust, was also sanded and polished to a mirror-like finish to"
+    },
+    {
+      "line": 241,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "ensure smooth operation and proper mating surface for seals."
+    },
+    {
+      "line": 242,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Once we received the motor, we began designing the motor mount. We quickly realized"
+    },
+    {
+      "line": 243,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "that our original concept wouldn't work due to a clearance issue. We pivoted to a vertical leg"
+    },
+    {
+      "line": 244,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "mount design that would support the motor from the top rather than the bottom. Since our motor"
+    },
+    {
+      "line": 245,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "is designed for vertical mounting, we fabricated a flat mounting plate from 1/4\" thick steel,"
+    },
+    {
+      "line": 246,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "repurposed from a SmartBoard stand. To maximize clearance at the bottom of the ski, the plate"
+    },
+    {
+      "line": 247,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "was shaped with a fillet radius to match the motor's base. Our motor has 3.2 mm extrusions"
+    },
+    {
+      "line": 248,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "around the mounting holes, so we face-milled a recessed dish in the plate to match the diameter"
+    },
+    {
+      "line": 249,
+      "page_start": 9,
+      "page_end": 10,
+      "text": "of the motor's mounting face. This allowed the plate to sit completely flush against the motor and10"
+    },
+    {
+      "line": 250,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "ensured a solid, play-free connection. After cutting the four legs, we mocked everything"
+    },
+    {
+      "line": 251,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "up—only to discover the legs didn’t fit correctly."
+    },
+    {
+      "line": 252,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "After reevaluating the setup, we spoke with one of our team member’s bosses, who"
+    },
+    {
+      "line": 253,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "recommended scanning the interior of the hull to precisely measure each motor mount location"
+    },
+    {
+      "line": 254,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "relative to the driveshaft centerline. Using a 3D scanner and PolyWorks, shown in Figure 5 (a),"
+    },
+    {
+      "line": 255,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "we discovered that the motor mounts were not symmetrical—they were offset by 5/16\" in the"
+    },
+    {
+      "line": 256,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "front and 1/16\" in the back. This meant each leg had to be custom-cut to fit its exact position."
+    },
+    {
+      "line": 257,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "With that data, we fabricated specific legs for each corner, then tacked and welded them to the"
+    },
+    {
+      "line": 258,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "motor cage shown in Figure 5 (b)."
+    },
+    {
+      "line": 259,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Figure 5: (a) CAD model of Jetski interior (b) Welded Motor mount"
+    },
+    {
+      "line": 260,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Following final welding, we reinstalled the motor—only to find that the coupler spacing"
+    },
+    {
+      "line": 261,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "was now slightly off, likely due to minor warping from welding. We determined that the motor"
+    },
+    {
+      "line": 262,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "needed to be shimmed up by 1.17 mm to correct the alignment. Without access to precision"
+    },
+    {
+      "line": 263,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "shims, we improvised with one of the most reliable materials available to college students: Red"
+    },
+    {
+      "line": 264,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Bull cans. We cut 1\" x 1.5\" aluminum squares from the cans and shimmed the legs until the"
+    },
+    {
+      "line": 265,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "couplers had only 0.04 mm of side-to-side deviation. This final alignment ensured that the motor"
+    },
+    {
+      "line": 266,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "was properly centered, allowing it to deliver maximum power to the driveshaft with minimal"
+    },
+    {
+      "line": 267,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "vibration. The result was a solid, custom motor mounting system built from scratch with"
+    },
+    {
+      "line": 268,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "creativity, precision, and a little caffeine."
+    },
+    {
+      "line": 269,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Cooling System"
+    },
+    {
+      "line": 270,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "To install the cooling system on our jet ski, we began by rebuilding the jet pump with"
+    },
+    {
+      "line": 271,
+      "page_start": 10,
+      "page_end": 11,
+      "text": "high-quality Nachi bearings and new seals to ensure optimal performance. The pump's interior11"
+    },
+    {
+      "line": 272,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "was sanded and polished for smoother water flow. It featured two 1/4\" brass ports—an inlet near"
+    },
+    {
+      "line": 273,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "the impeller and an outlet at the rear—connected to the jet ski’s original hard-lined tubing using"
+    },
+    {
+      "line": 274,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "flexible fuel lines. Since our electric motor would be cooled by copper coils, we needed at least"
+    },
+    {
+      "line": 275,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "¼” of clearance between the motor and the hull. Before receiving funding for the motor, we"
+    },
+    {
+      "line": 276,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "created a cardboard scale model to test fitment. This revealed clearance issues, so we notched out"
+    },
+    {
+      "line": 277,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "the battery retainer and carefully sanded the cavity floor to gain the necessary space. To form the"
+    },
+    {
+      "line": 278,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "cooling coil, we wrapped ¼” copper tubing around a slightly smaller diameter pipe so it would"
+    },
+    {
+      "line": 279,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "coil tightly around the motor. We then installed the coils on to the motor with heat sink paste to"
+    },
+    {
+      "line": 280,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "maximize heat transfer. With the jet pump rebuilt and the coils installed, we plumbed the system"
+    },
+    {
+      "line": 281,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "to complete a functional open-loop water cooling setup."
+    },
+    {
+      "line": 282,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Electrical Fabrication and Installation"
+    },
+    {
+      "line": 283,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "To ensure solid electrical connections and minimize clutter in the cavity, we fabricated"
+    },
+    {
+      "line": 284,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "custom-length wires using 2 AWG marine-grade cable to handle the high current demands."
+    },
+    {
+      "line": 285,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Creating these cables required flux, solder, and a blowtorch."
+    },
+    {
+      "line": 286,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "To monitor live current draw and battery capacity, we installed a shunt on the ground side"
+    },
+    {
+      "line": 287,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "of the primary power system. We also built a custom mount for the primary motor driver, along"
+    },
+    {
+      "line": 288,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "with a dedicated mount for the steering actuator. Additionally, a separate mounting plate was"
+    },
+    {
+      "line": 289,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "designed to securely hold a high-current fuse and contactor. Figure 6 is a full wiring diagram."
+    },
+    {
+      "line": 290,
+      "page_start": 11,
+      "page_end": 12,
+      "text": "Figure 6: Full Wiring Diagram12"
+    },
+    {
+      "line": 291,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Testing and Refining"
+    },
+    {
+      "line": 292,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "After completing our initial setup of our craft, we began testing to evaluate its"
+    },
+    {
+      "line": 293,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "performance. Our testing was conducted in progressively more intense stages. This started with a"
+    },
+    {
+      "line": 294,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "simple floating and balancing test, and worked up to a full 30 minutes of untethered driving."
+    },
+    {
+      "line": 295,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "During testing we quickly discovered a few issues, including several small holes creating"
+    },
+    {
+      "line": 296,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "leakage, some excessive vibrations, and turning issues. To address the leaks, we sealed the holes"
+    },
+    {
+      "line": 297,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "with silicone caulking as we found them through routine cavity checks during testing. When"
+    },
+    {
+      "line": 298,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "trouble shooting the excessive vibrations we noticed that the coupler was misaligned by around 1"
+    },
+    {
+      "line": 299,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "mm. We solved this problem by cutting out some metal shims out of aluminum cans and raising"
+    },
+    {
+      "line": 300,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "the motor mount. This small adjustment tremendously reduced the vibration. Lastly, we"
+    },
+    {
+      "line": 301,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "theorized that turning issues were stemming from improper mounting of the steering cable. After"
+    },
+    {
+      "line": 302,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "remounting the cable, the steering issue was solved as well."
+    },
+    {
+      "line": 303,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Risk"
+    },
+    {
+      "line": 304,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "High-performance watercraft are subject to a wide range of risks, including water"
+    },
+    {
+      "line": 305,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "leakage, overheating of critical components, electrical failure, and instability during operation."
+    },
+    {
+      "line": 306,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "This section provides a detailed account of the risks addressed during the design and build"
+    },
+    {
+      "line": 307,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "stages, as well as the risks that will be actively controlled during the race."
+    },
+    {
+      "line": 308,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Water Leakage"
+    },
+    {
+      "line": 309,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "One of the main risks to address in the design is water intrusion. If water enters the hull,"
+    },
+    {
+      "line": 310,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "it can damage critical components—such as the electrical systems and motor—potentially"
+    },
+    {
+      "line": 311,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "leading to malfunctions, electrical shorts, or total system failure. To prevent this, several"
+    },
+    {
+      "line": 312,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "strategies were implemented during the design and build phase. Generous amounts of silicone"
+    },
+    {
+      "line": 313,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "sealant were applied to seams, joints, and other vulnerable areas to ensure a watertight structure."
+    },
+    {
+      "line": 314,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "In spots requiring additional reinforcement, “Flex Tape” glue was used to create extra layers of"
+    },
+    {
+      "line": 315,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "protection. Custom 3D-printed components were also installed to cover pre-existing openings in"
+    },
+    {
+      "line": 316,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "the hull, such as those for the gas cap, handlebars, and exhaust. These parts provide a lightweight"
+    },
+    {
+      "line": 317,
+      "page_start": 12,
+      "page_end": 13,
+      "text": "yet reliable way to maintain structural integrity. To further enhance water resistance, weather13"
+    },
+    {
+      "line": 318,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "stripping was added between the hood and cavity, creating a secure seal when the hood is"
+    },
+    {
+      "line": 319,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "latched."
+    },
+    {
+      "line": 320,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Cooling Systems"
+    },
+    {
+      "line": 321,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Overheating is another risk that can have a serious impact on performance, especially"
+    },
+    {
+      "line": 322,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "within our motor and battery design. To keep temperatures in check, copper coils are wrapped"
+    },
+    {
+      "line": 323,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "around the motor to help dissipate heat through heat transfer. Cold water from the jet pump is"
+    },
+    {
+      "line": 324,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "pumped through these coils to keep the motor cool during operation as shown in Figure 7 (a),"
+    },
+    {
+      "line": 325,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "even under high stress. The jet pump plays a crucial role by circulating the water through the"
+    },
+    {
+      "line": 326,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "coils, ensuring the motor doesn’t overheat, which would lead to a decline in performance or"
+    },
+    {
+      "line": 327,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "permanent damage."
+    },
+    {
+      "line": 328,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Electrical Concerns"
+    },
+    {
+      "line": 329,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "The battery, which powers the primary drive system, was tested to ensure it can last"
+    },
+    {
+      "line": 330,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "through the full 2-mile race without overheating or depleting prematurely. We installed a shunt"
+    },
+    {
+      "line": 331,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "through the primary motor wiring that allows us to monitor the current draw via an onboard"
+    },
+    {
+      "line": 332,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "display as shown in Figure 7 (b). With the current data, we can determine safe temperature"
+    },
+    {
+      "line": 333,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "levels."
+    },
+    {
+      "line": 334,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Figure 7: (a) Motor Cooling System (b) Battery Monitoring Display"
+    },
+    {
+      "line": 335,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Electrical efficiency is a critical factor in ensuring the smooth operation of the watercraft."
+    },
+    {
+      "line": 336,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "The system must handle high current loads without overheating, so 2 AWG wiring was selected"
+    },
+    {
+      "line": 337,
+      "page_start": 13,
+      "page_end": 14,
+      "text": "to minimize heat buildup and maintain safe operating temperatures. To protect against current14"
+    },
+    {
+      "line": 338,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "surges, fuses and contactors were installed—these safety components will either blow or"
+    },
+    {
+      "line": 339,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "disconnect the circuit if current levels exceed safe thresholds. Our batteries also have a built in"
+    },
+    {
+      "line": 340,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "battery management system (BMS) that helps discharge current at a healthy rate without"
+    },
+    {
+      "line": 341,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "overworking our batteries and causing malfunctions. Component compatibility was also a key"
+    },
+    {
+      "line": 342,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "consideration during the design phase. Every element of the electrical system—from the fuse and"
+    },
+    {
+      "line": 343,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "contactor to the driver and motor—was carefully chosen to ensure seamless integration and"
+    },
+    {
+      "line": 344,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "reliable performance."
+    },
+    {
+      "line": 345,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Hull Stability"
+    },
+    {
+      "line": 346,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Stability is a critical concern for the watercraft, especially at high speeds. Weight"
+    },
+    {
+      "line": 347,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "distribution was carefully evaluated, and a preliminary weight test was conducted to determine"
+    },
+    {
+      "line": 348,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "the optimal placement for the batteries and other payloads. Initial testing revealed insufficient"
+    },
+    {
+      "line": 349,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "lateral stability, prompting the installation of outriggers (Figure 8 (b)). These outriggers"
+    },
+    {
+      "line": 350,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "significantly enhance the vessel’s balance, helping it stay upright and stable during sharp turns"
+    },
+    {
+      "line": 351,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "and sudden maneuvers. Also, in the event of a capsize, the battery box was designed to remain"
+    },
+    {
+      "line": 352,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "secure during rapid acceleration and wave impacts. All electrical connections inside the box are"
+    },
+    {
+      "line": 353,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "insulated with rubber caps and firmly fastened to reduce the risk of short-circuiting or other"
+    },
+    {
+      "line": 354,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "failures caused by water exposure. To enhance safety—and in compliance with competition"
+    },
+    {
+      "line": 355,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "regulations—an emergency stop button was integrated into the battery box, allowing the circuit"
+    },
+    {
+      "line": 356,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "to be manually shut off in a worst-case scenario (Figure 8 (b)). The box itself is constructed from"
+    },
+    {
+      "line": 357,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "high-strength plastic and sealed with waterproof gaskets to ensure durability and protect the"
+    },
+    {
+      "line": 358,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "batteries in harsh conditions."
+    },
+    {
+      "line": 359,
+      "page_start": 14,
+      "page_end": 15,
+      "text": "Figure 8: a) Adjustable Outriggers, b) Battery box design featuring E-Stop Button15"
+    },
+    {
+      "line": 360,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "Finally, the watercraft had to be structurally reinforced to support the motor, withstand the"
+    },
+    {
+      "line": 361,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "weight of the batteries and payload, and endure the stress of waves. When we first acquired the"
+    },
+    {
+      "line": 362,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "watercraft, there was a large crack in the hull and several smaller cracks in the hood. These"
+    },
+    {
+      "line": 363,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "issues needed to be addressed to ensure the structural integrity of the craft during extended use."
+    },
+    {
+      "line": 364,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "To repair the damage, multiple layers of long-strand fiberglass were applied, then sanded smooth"
+    },
+    {
+      "line": 365,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "and repainted to restore the original finish seamlessly."
+    },
+    {
+      "line": 366,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "Once the watercraft is in operation, there are still several risks that need to be carefully"
+    },
+    {
+      "line": 367,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "monitored and controlled in real time, especially during a race. Signal strength is one of these"
+    },
+    {
+      "line": 368,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "risks. Losing communication between the watercraft and the controller can lead to operational"
+    },
+    {
+      "line": 369,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "failures. To ensure strong, reliable communication, a long-range transmitter and receiver were"
+    },
+    {
+      "line": 370,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "acquired so that the craft could reach distances of almost a mile."
+    }
+  ],
+  "source_line_count": 371,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}

@@ -1,0 +1,2267 @@
+{
+  "competition_year": 2025,
+  "team": "Princeton Electric Speedboating — Tiger RC",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/Princeton",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year. The link label says Le Papillon, but the linked document title is Tiger, Autonomous Division; the 2025 event page groups it under Uncrewed.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Princeton/Princeton%20-%202025%20Tiger%20RC%20White%20Paper.pdf",
+  "filename": "Princeton - 2025 Tiger RC White Paper.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "15"
+  },
+  "page_count": 15,
+  "pages_without_text": [],
+  "char_count": 25753,
+  "pages": [
+    {
+      "page": 1,
+      "text": "Princeton Electric Speedboating’s “Tiger”\nPrinceton University\nAutonomous Division\nThe Team:\nAutonomous System:\n• Calvin Nyugen\n• Yash Iyer\nMechanical Design\n• Rihan Sajid\n• Sean Lee\n• Aidan Astudillo\n• Andrew Robbins\n• Stephen Burns\n• Evan Callas\n• Andrei Bazavan\nElectrical Design\n● Norah Smith\n● Antoun Salib\n● Reiko Zhang\n● Andre Graves\n● Han Lee\n● Tom Wang\n● Brandon Wilk\n● Nigel Hu\n● Luke Hathaway\n● Max MachadoBackground & Planing Hull\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": "For the 2025 Promoting Electric Propulsion Manned Planning division PES has chosen to\nbring Tiger. Tiger is a 12’ long D Stock hydroplane built in the early 2000’s. PES chose this hull\nfor a variety of reasons, including but not limited to its efficiency, rough water handling,\nflexibility in powertrain, and familiarity.\nFirstly the hull is incredibly efficient. In traditional race trim with a gas outboard the\nboat's specs are: 50 hp, 550 lbs (with driver), and a top speed of ~80 mph. These values give a\nCouch’s constant of 265 which is far higher than all other comparably sized hulls we looked at.\nFor example the Couch’s constant of a comparable outboard runabout is just 216 and a flat\nbottom Jon boat is as low as 136. The Couch’s constant is a non-dimensional term that quantifies\nhow efficient a hull is based on how fast it goes and the hp it has and its weight. In addition to\nbeing highly efficient in a straight line the hydroplane design is ideal for the 1 mile oval race\ncourse of PEP. The hydroplane is sculpted to turn as hard while maintaining higher corner speeds\nunlike a tunnel hull that while it turns tighter will lose more speed in the process.\nSecondly PEP historically has not been a totally flat race course. During the 2024 PEP\nmanned planning event Big Bird (PES’s previous entry) was airborne multiple times at speeds\nexceeding 65 mph. This was at a race weight of 990 lbs! In contrast the completed boat with the\ndriver is <500 lbs this year. Thus we needed a hull that would allow us to go fast with limited\npower while maintaining control at high speeds. This D Stock hydroplane offers a nice balance\nwith it having significantly better rough water handling as compared to its smaller C and B stock\nbrothers while not being significantly heavier than those crafts.\nFurthermore the outboard hydroplane platform offers tremendous opportunities for\npowertrain development as the design is simply restricted to an outboard based motor. Thus we\ncan get wild with our outboard and battery pack (inside the hull) design and have it easily bolt up\nto the transom without worry of making motor mounts or propshaft alignment.\nLastly PES is very familiar with the hydroplane hull. Over the last 5 years we have\nimproved our knowledge of the hull type and how to maximize it’s performance in multiple\nmodes of operation. Each year making small improvements that compound into significant\nincreases in speed.\nWhile the hull is a great platform to start from, it needed to be modified to fit our needs.\nFirst the transom height was far too low for our outboard design and we have increased the\nheight of the transom by adding to the existing transom with a plywood and fiberglass composite\nto keep it light and strong. Additionally we painted the bottom of the boat with SpeedCoat49\nwhich is a coating often used by racing teams to reduce drag. It is especially helpful in the\ncorners when the boat sets down and has a significantly larger wetted area than when aired out\non the straights.Lastly we significantly improved the turnfin on the left side of the hull. Originally it was\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "perfectly vertically mounted. To improve it we made a billet aluminum mount that canted the fin\nat 5 degrees inward. This helps to keep the inner side of the hull close to the water during the\nturns, allowing for higher cornering forces without concern of the boat becoming unstable.\nAdditionally we machined a new turnfin from 7075 aluminum which allowed us to make an even\nstiffer fin that is slightly thinner than the original piece and reduces drag.\nPropeller\nThe motor choice was driven by the range of available propellers and the propellers are\nthen derived from the final motor selection. For 2025 the electric motor makes peak power at\n~10,500 rpm, thus under ideal conditions the motor would spend the majority of its time on the\nrace course near this rpm. This is pretty high for a marine propeller of our size. Thus we have a\n1.54:1 reduction in the lower unit to bring the propeller speed down to ~6,800 rpm. While still\nquite fast this is within the range of typical outboard racing craft. Our target average speed for\nthe race course is 50 mph and when assuming 15% slip this gives a propeller pitch of slightly\nunder 10” of pitch. This fits well with the propellers for the 125cc PRO Outboard Hydroplane\nand Runabout classes. They typically run a 10-10.5” pitch propeller. Thus we have 4 125cc PRO\nprops for testing and race days. These vary in diameter from 6.5-7”. Allowing us to change the\npropeller to accommodate the water conditions present on the course that day.Mechanical Systems\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": "The Princeton Electric Speed Boating Mechanical team has made several improvements\nfrom last year. Last year, the design had many components that led to possible misalignment and\nvibrations due to poor tolerancing and the use of bolts to create unnecessary connections. This\nwas somewhat driven by the fact that we machined our old outboard entirely in house. However,\nthis year we went with a combination of in-house manufacturing and outsourcing. This allowed\nus to keep tighter tolerances and have complex parts in our design with alignment features to\nguide the assembly. This year, we also went in a new direction with our design philosophy. Last\nyear, we made an outboard that optimized the aerodynamics of the boat by making the outboard\nstationary in areas where it was exposed to air. Our new outboard has a greater focus on a\ncompact, space-efficient, and portable outboard.\nWe have chosen to use two coupled outrunner motors which have shaped the direction of\nthe outboard’s design. This setup prevents the motors from being mounted by its outer body, so a\nmore complex design is required. Figure _ shows an assembly that holds the bottom motor while\nallowing its body to freely rotate. The motors are visibly housed inside of a clear polycarbonate\ntube which not only adds a unique aesthetic twist to the outboard, but also allows us to quickly\nspot any water leaks that may compromise the motors.\nFigure _: Outboard assemblyFigure _: example of FEA on a part receiving thrust load\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "The cooling system includes a plate heat exchanger and pump. Cold raw water runs from\nthe lower unit to the heat exchanger to cool a closed-loop flow running through the inverters,\nbattery pack, and motors.\nThe motor cowling is designed to provide a waterproof, aerodynamic cover for the\ninterior components of the outboard. It was fabricated using a fiberglass wet layup. A mold was\nconstructed from several 3D-printed components with bolted connections. It was then prepped\nby applying body filler and primer before wet sanding. Then mold release was applied and the\nfiberglass laid up on top. Once finished, a 3D printed interface rim was adhered to the cowl to\nlatch it down to the outboard with an O-ring sealing mechanism. The cowling also features a port\nfor all cabling between the battery pack in the boat. The cowling is easily removable to access\nthe interior system. This presented a risk as any easy release latching mechanism was potentially\nless secure, or provided less compressive force than a bolted connection and could result in poor\nwaterproofing or even part failure.\nMany parts that make up the outboard motor have been designed and outsourced to a\nmachining company called RapidDirect located in Shenzhen, China. As a result, we’ve learned\nhow to create engineering drawings and tolerance dimensions for proper assembly. We have also\nfurther developed our ability to use machine shop resources.\nThere are several risks involved with the design. First, the assembly is more complex due\nto using two coupled outrunners. This adds complexity with motor alignment and billet\naluminum parts. Second, it was the team’s first time ordering parts from RapidDirect, so there\nwas risk of receiving incorrectly machined parts. Third, the choice to house the motors inside a\nclear tube increases risk of water leakage through edges. This will be thoroughly tested to ensure\nconfident sealing for competition day, however there are unexpected mishaps that may occur. Electrical Systems\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "Low Voltage System\nThe low voltage system for Tiger is built to facilitate the running of small electrical\ncomponents on board the boat. It comprises one Dakota Lithium 12V 20AH USB deep cycle\nLIFEPO4 battery which acts as a switch for the high voltage contactors, and powers all cooling\nand RC circuits. We chose this battery because it has the requisite voltage and current for all of\nour low power applications (inverter, RC components, coolant pumps) without excessive heating\nor servicing. Moreover, it is lightweight and compact, allowing us to fit it in the watertight high\nvoltage battery pack. Power distribution is controlled by three switches on the dashboard,\nlabelled LV, HV, Cooling. The LV switch manages system power for the inverters, and must be\nclosed for any startup to occur. The HV switch begins precharge and allows for ignition and\npower flow from the batteries to the motor, and the Cooling switch allows power to flow from\nthe LV battery to the coolant pumps. Built into the low voltage system is a remote kill switch\nwhich allows us to safely operate the boat remote control. The switch is a dstfuy long distance\nremote DC switch rated for a maximum of 30 amps\nHigh Voltage System\nBecause of the changes in PEP requirements for the 2024-2025 season, our high voltage\nsystem must be able to run larger amounts of current than we had previously dealt with in order\nto provide sufficient power to our motors to reach the speeds we want. This changed our design\nfor the high voltage system. The HV system is designed to operate at 55V, 400A continuous, and\ndistributes power from the batteries to two inverters and motors. We were very conscious of the\nrisks of running high current through this system, and chose high capacity contactors and wires\nwith very high current carrying capacity to allow the system to operate safely. We are using the\nRincon REC35P1MX Contactor which is rated for 32-95V, 500A continuous, and two 3Schul\nMotors C1000 Inverters, which are rated for 36-126V, 500A DC, 1000A Phase. This ensures that\nwe can run sufficient current through the system for our power needs, but that the contactor trips\nlong before we damage our electronics with high current. The inverters run on the VESC\nsoftware, allowing us to use a suite of established tools to monitor our battery and motor\nperformance in real time through an app. A phone holder is built into the dashboard so that we\ncan receive constant speed, temperature, and battery level information in the cockpit. Moreover,\nthe use of VESC software has allowed us to draw inspiration from similar high voltage projects,\nsuch as electric skateboards and motorcycles through online forums. This has helped us design\nour high voltage system while learning from the experiences of other users.\nOur speed is controlled by a Single Channel EV West Billet Aluminum Throttle\nPotentiometer, which sends signals to our inverters when the RC system is not on. The hand\nthrottle rotates 90 degrees, allowing us to easily control the speed. Potentiometer signals are\ncompatible with our VESC based inverters, and the signal is sent in parallel to both inverters.Motors\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "For our motors, we used two LMT7065 motors. We chose the 7065 because they are the\nhighest power density motors that we could find at 55V. They fit within our RPM range of 6000-\n12000 revolutions per minute which works with the gear boxes we have available. As we were\nworking with these motors, we had to make some adjustments to our mechanical system, since\nthese motors operate at the upper end of our RPM range, making it challenging to get peak\nperformance. Another reason we chose these motors is that the power range is also compatible\nwith our system. Our target is 20-25 kw continuous, and each motor is rated to do 10-15kw\ncontinuous, which we will be able to utilize.\nRemote Control\nCompetition Updates:\nThe PEP Unmanned Boat Competition has introduced substantial changes for the 2025\nseason, influencing both mechanical and electrical design. Each team must now complete two 1-\nmile laps around two buoys, with the additional requirement of transporting a 30 to 60 lb payload\nas well as maintaining a maximum voltage of 55.5 volts.\nThis paper outlines the lessons learned from our 2024 implementation, the changes made\nfor 2025, and the integration and software processes that led to a more reliable, performance\u0002focused, and user-friendly unmanned marine system.\n2024 Challenges Recap:\nDuring the 2024 competition, our design was centered around the Teensy microcontroller\nand a PandaRC VT5805 module to facilitate remote communication. The control flow consisted\nof:\n● A Teensy microcontroller connected to the PandaRC VT5805, handling RC\ncommunication\n● A second Teensy interfacing with voltage regulators as well as a analog to digital\nconverter, which in turn controlled linear actuators for steering as well as send out a\nanalog 5v signal for throttle\n● A laptop, via USB, linked to another PandaRC VT5805 module for land-based control\nDespite being theoretically rated for a 5-mile range, the PandaRC system demonstrated\nan effective range of only 0.5 miles. Additionally, the RC module proved physically fragile—\nfailing under real-world pressure during competition and stalling the boat. The requirement for a\ntethered laptop further complicated deployment and usability.Key failure points included:\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": "● Unreliable RC communication and fragile hardware\n● Limited signal range\n● Cumbersome setup requiring a laptop for operation\n● Inability to complete the race due to communication breakdown\n2025 System Improvements\nOur revised 2025 system focuses on reliability and robust communication. The goal was\nto eliminate the need for fragile hardware and replace it with industry-standard, high\u0002performance components. We also prioritized modularity and safety in both hardware and\nsoftware.\nHardware Selection & Rationale\nCube Orange Flight Controller\n● The Cube Orange is the core of our unmanned system. It supports open-source software\n(ArduPilot and Mission Planner) which allow us to write our own programs and scripts.\n● The onboard sensors including the accelerometer, gyroscope, GPS, etc, enable advanced\nfeatures such as PID tuning, telemetry, and autonomous decision-making.\nKey Features:\n● Sensors: Accelerometer, Gyroscope, Compass, Barometer\n● Input Voltage: 4.1–5.7V at 2.5A\n● Power Output: 14W\n● Servo Rail Voltage: 3.3V / 5V\n● USB Input: 4–5.7V at 250mA\n● Operating Temp: -10°C to 55°C\n● Cube Herelink Transmission SystemCube Herelink Transmission System\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "Replacing the fragile PandaRC module, the Cube Herelink system integrates both RC and HD\nvideo transmission in a single device. It features an onboard controller running Mission Planner,\neliminating the need for a laptop.\nAdvantages:\n● Range: 12.5 miles\n● Protocol: MAVLink (highly reliable and widely supported)\n● Built-in 4950 mAh battery\n● HD video feed with low latency\n● Easy integration with Cube flight controller\nGoPro Hero 12\n● Chosen for its availability in our arsenal and HDR video capability. It also allows us to\nrecord tests and runs and stream to our flight controller via micro-HDMi for visual\nfeedback and diagnostics.\nODrive S1 + M8325 Motor Kit\nOur mechanical requirements demanded a torque output of 50 Nm. Unfortunately, the servo\nmotors we found online were unable to meet this requirement. Therefore we opted to go for a\nbrushless DC motor such as the M8325 (5 Nm torque) with a 10:1 gear ratio which allowed us to\nachieve the required performance. Additionally, It allows us to easily fix position since the motor\nis free spinning rather than locked in.\nSpecifications:\n● DC Voltage Range: 16–48V (compliant with competition rules)\n● Modulation Depth: 78%\n● Operating Motor Current: 20–80A\n● Positional Accuracy via encoder feedback\n● Supports self-homing for autonomous operation\n●\nSystem Integration & Power\nPower Architecture\n● Flight Controller: Powered via a 5V buck converter● Herelink System: Powered with a 12V buck converter\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 10,
+      "text": "● Servo Rail (PWM output): Separate 5V supply for stable PWM signaling\n● ODrive Motor Controller: Powered directly via a regulated 16V DC source\nSignal and Data Interfacing\n● SBUS cable between Herelink and Cube Orange for RC signal\n● Video feed routed from GoPro to Herelink via Micro-HDMI\n● PWM outputs using 3 pin J connectors from Cube to ODrive controller for throttle and\nsteering\nCAD and Waterproof Housing\nCustom CAD enclosures were designed and 3D printed to house:\n● Main Box: Flight controller, power electronics\n● Antenna Box: Herelink video and RC transmitter\nBoth housings feature gaskets and sealing mechanisms to ensure waterproofing and\ndurability in marine environments.\nSoftware Development\nUsing the open-source ArduPilot ecosystem, we developed our own control scripts and\nlogic suited for our competition environment.\n● Safety Protocols:We modified Mission Planner to only allow system arming upon manual\nactivation. This prevents accidental activation as well as confirmation that the system is\noff when working near the boat.● PWM Optimization: PWM signals for throttle and steering were tuned for signal stability\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 11,
+      "text": "and responsiveness. Signal frequencies and duty cycles (0–100%) were customized for\neach motor output.\n● ODrive Self-Homing\n○ A custom startup routine enables the steering motor to self-home\n○ At boot, the ODrive spins the motor until a mechanical switch is triggered. This\ndefines the “zero” position. Subsequent movement is calculated via encoder\nfeedback, allowing precise autonomous steering\nSystem Risks\nWhile the current design is a significant improvement over the previous year, there are still key\nrisks that could impact system performance and mission success:\nPower Drain from Steering Motor\n● The steering motor, powered at 16V, may draw excessive current under load—especially\nduring continuous or sharp maneuvering since the increase in torque will induce an\nincrease in current (back EMF), drawing more power. This can lead to accelerated\nbattery depletion, risking power loss mid-race as well as potential risk of overheating.\nMitigation\n● This was mitigated by the use of an increased low voltage battery size that could handle\nall of the possible energy loss from our unmanned system as well as the installation of\nfuses that safeguard the current flowing into our unmanned system.\nLoss of RC Communication Link\n● Although the Cube Herelink system is rated for long-distance communication (up to 12.5\nmiles), unforeseen interference—such as electromagnetic noise from onboard systems—\ncould disrupt the RC or video signals. In such an event, the system is designed to enter a\nfailsafe mode and shut down, which could prematurely terminate the mission.\n● High-frequency interference from the onboard inverter or motor controller may affect\nnearby PWM and RC signal lines\nMitigation:\n● Unlike last year, we moved the entire unmanned system to the front of the boat, leaving\nthe inverter and battery near the middle and back of the boat. Therefore, the\nelectromagnetic interference is significantly lowered. Mechanical Forces Impacting Signal Integrity\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 12,
+      "text": "● At high speeds or during aggressive turns, the boat experiences significant inertial and\nvibrational forces. These could affect signal connectors, wiring, or cause temporary\ndisconnections in poorly secured systems—leading to signal loss or erratic behavior.\nMitigation\n● The entire wiring harness of the unmanned is created using twisted pair signal wires as\nwell as click on connectors, meaning there is no way for any cable to be disconnected.\nBy identifying and preparing for these potential risks, we aim to ensure both system safety and\nmission continuity during the 2025 PEP competition. Custom Battery Pack\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 13,
+      "text": "Figure: Modular INR-21700-P45B Battery Pack\nDesign and Analysis\nThe design of the battery pack is optimized for thermal management and structural\nintegrity. The pack consists of 405 3.6V lithium-ion cells1arranged in a configuration with 15 in\nseries and 27 in parallel to achieve a nominal voltage of 54V and motor current draw\nrequirements. With each cell rated for 45A discharge, the pack is able to comfortably supply\n500A for the duration of the competition. This configuration allows for a modular design such\nthat groupings of 27 cells could be constructed independently and slid into a structural skeleton.\nDue to this modularization, structural components could be 3D printed locally to allow for rapid\ndesign iteration, while also enabling ease of maintenance by being able to remove each rack of\ncells.\nAir cooling was chosen due to its lightweight, cost-effectiveness, and simplicity\ncompared to liquid cooling. This design incorporates ventilation channels and strategically\norganized cell placement, building on thermal airflow research2to optimize cooling efficiency.\nTo facilitate active cooling, eight fans3 draw air through a closed airflow loop, optimized for\ntheir high static pressure and airflow characteristics during peak load conditions. Originally built\nfor desktop computer cooling systems, these fans cycle air through a radiator (connected to an\n1 Molicel INR-21700-P45B\n2 Zhao, G., & Wang, X. (2022). A design optimization study of an air-cooling battery thermal management system\nfor electric vehicles. Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile\nEngineering. https://doi.org/10.1177/09544089221116418\n3 Noctua NF-A14 iPPC-3000 PWMexternal water cooling system), between the cells, and finally through a return duct along the\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 14,
+      "text": "outside of the pack. Thermal simulation models4allowed us to design to the pack such that\ntemperature differences across the cooling path remained relatively constant to avoid uneven\nthermal load on the cells.\nTo manage the charging and balancing of the 15 individual cell modules, a BMS system5\nwas used in a Distributed Group configuration. This system allows for individual module\nmonitoring and balancing using just 1 G1 Control Unit and 1 CAN Group Module, ensuring even\ncharge distribution while having simplicity. This system connects to temperature sensors\nthroughout the pack as well as module taps which monitor and adjust the voltage at different\npoints in the series connection. This BMS is also compatible with the VESC software used in\nthe motor inverters, enabling an all-in-one control and monitoring system.\nManufacturing Processes\nThe structure of the battery pack consists primarily of 3D printed ASA components,\nwhich were chosen due to their excellent shock absorption and heat resistance properties. These\ncomponents ensure that the batteries remain securely in place during operation. A watertight\ncowling, inspired by Danecca battery packs, was implemented to protect the battery from water\ningress. This allows the internal structure and functionality of the pack to be separated from the\nenclosure, which serves as a protective housing and directs airflow for cooling.\nElectrical connections between cells within the battery were carefully designed to\nminimize resistance and prevent overheating due to varied current draw. Running across the top\nof each adjacent 27-cell parallel group is a waterjet sheet of nickel plated copper6. This unique\nmaterial features low internal resistance (ρ = 2.874 x 10-8 Ωm) to minimize operational losses to\nheat while having a high surface resistance to facilitate easy heat generation during the spot\nwelding process. Additionally, its high flexibility (UTS = 368 MPa) allows the connections to be\nrobust to use in rough environments, a necessary feature for a pack onboard a boat crashing\nthrough waves. Spot welding was employed to establish high-quality bonds between cells and\ncustom waterjet buses and terminals. Additionally, positioning pins on printed cell holders were\nadded to position the busbar plates while spot welding. Dimples were added to busbar plate tabs\nto decrease the resistance between parallel tabs when spot welding, allowing for cleaner welds to\ngo through the battery with lower current.\n4 Models used are from About Energy https://www.aboutenergy.io/\n5 EMUS G1 BMS\n6 SIGMACLAD 60 from Engineered Materials SolutionsFigure: 3x9 Parallel Module & Modular Rack\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 15,
+      "text": "Risks and Mitigation Strategies\nOne of the primary risks associated with the battery pack is thermal runaway, a product\nof drawing too much current from the cells. To mitigate this, temperature sensors were placed\nwithin the ventilation channels at various points to monitor and report critical temperatures and\ncutoff operation past a given threshold. Mechanical failure due to vibrations or in the event of a\ncrash posed another challenge. Having an independent pack design from the rigid outer enclosure\nallows it to act as an exoskeleton protecting the internal components. Having several channels\nrunning along the length of the cell modules provides a robust attachment point to prevent the\nbattery from moving around.. In case of extreme jostling and deflection, though the components\nshould not break, adhesive neoprene insulators along the intermodular conductors between\nvertical racks to provide short-circuit protection, and enclosed channels for terminal busbars\nwere used to isolate the battery pack from the aluminum baseplate.\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Princeton Electric Speedboating’s “Tiger”"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Princeton University"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Autonomous Division"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "The Team:"
+    },
+    {
+      "line": 4,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Autonomous System:"
+    },
+    {
+      "line": 5,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "• Calvin Nyugen"
+    },
+    {
+      "line": 6,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "• Yash Iyer"
+    },
+    {
+      "line": 7,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Mechanical Design"
+    },
+    {
+      "line": 8,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "• Rihan Sajid"
+    },
+    {
+      "line": 9,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "• Sean Lee"
+    },
+    {
+      "line": 10,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "• Aidan Astudillo"
+    },
+    {
+      "line": 11,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "• Andrew Robbins"
+    },
+    {
+      "line": 12,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "• Stephen Burns"
+    },
+    {
+      "line": 13,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "• Evan Callas"
+    },
+    {
+      "line": 14,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "• Andrei Bazavan"
+    },
+    {
+      "line": 15,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Electrical Design"
+    },
+    {
+      "line": 16,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "● Norah Smith"
+    },
+    {
+      "line": 17,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "● Antoun Salib"
+    },
+    {
+      "line": 18,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "● Reiko Zhang"
+    },
+    {
+      "line": 19,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "● Andre Graves"
+    },
+    {
+      "line": 20,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "● Han Lee"
+    },
+    {
+      "line": 21,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "● Tom Wang"
+    },
+    {
+      "line": 22,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "● Brandon Wilk"
+    },
+    {
+      "line": 23,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "● Nigel Hu"
+    },
+    {
+      "line": 24,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "● Luke Hathaway"
+    },
+    {
+      "line": 25,
+      "page_start": 0,
+      "page_end": 1,
+      "text": "● Max MachadoBackground & Planing Hull"
+    },
+    {
+      "line": 26,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "For the 2025 Promoting Electric Propulsion Manned Planning division PES has chosen to"
+    },
+    {
+      "line": 27,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "bring Tiger. Tiger is a 12’ long D Stock hydroplane built in the early 2000’s. PES chose this hull"
+    },
+    {
+      "line": 28,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "for a variety of reasons, including but not limited to its efficiency, rough water handling,"
+    },
+    {
+      "line": 29,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "flexibility in powertrain, and familiarity."
+    },
+    {
+      "line": 30,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Firstly the hull is incredibly efficient. In traditional race trim with a gas outboard the"
+    },
+    {
+      "line": 31,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "boat's specs are: 50 hp, 550 lbs (with driver), and a top speed of ~80 mph. These values give a"
+    },
+    {
+      "line": 32,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Couch’s constant of 265 which is far higher than all other comparably sized hulls we looked at."
+    },
+    {
+      "line": 33,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "For example the Couch’s constant of a comparable outboard runabout is just 216 and a flat"
+    },
+    {
+      "line": 34,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "bottom Jon boat is as low as 136. The Couch’s constant is a non-dimensional term that quantifies"
+    },
+    {
+      "line": 35,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "how efficient a hull is based on how fast it goes and the hp it has and its weight. In addition to"
+    },
+    {
+      "line": 36,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "being highly efficient in a straight line the hydroplane design is ideal for the 1 mile oval race"
+    },
+    {
+      "line": 37,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "course of PEP. The hydroplane is sculpted to turn as hard while maintaining higher corner speeds"
+    },
+    {
+      "line": 38,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "unlike a tunnel hull that while it turns tighter will lose more speed in the process."
+    },
+    {
+      "line": 39,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Secondly PEP historically has not been a totally flat race course. During the 2024 PEP"
+    },
+    {
+      "line": 40,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "manned planning event Big Bird (PES’s previous entry) was airborne multiple times at speeds"
+    },
+    {
+      "line": 41,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "exceeding 65 mph. This was at a race weight of 990 lbs! In contrast the completed boat with the"
+    },
+    {
+      "line": 42,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "driver is <500 lbs this year. Thus we needed a hull that would allow us to go fast with limited"
+    },
+    {
+      "line": 43,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "power while maintaining control at high speeds. This D Stock hydroplane offers a nice balance"
+    },
+    {
+      "line": 44,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "with it having significantly better rough water handling as compared to its smaller C and B stock"
+    },
+    {
+      "line": 45,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "brothers while not being significantly heavier than those crafts."
+    },
+    {
+      "line": 46,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Furthermore the outboard hydroplane platform offers tremendous opportunities for"
+    },
+    {
+      "line": 47,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "powertrain development as the design is simply restricted to an outboard based motor. Thus we"
+    },
+    {
+      "line": 48,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "can get wild with our outboard and battery pack (inside the hull) design and have it easily bolt up"
+    },
+    {
+      "line": 49,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "to the transom without worry of making motor mounts or propshaft alignment."
+    },
+    {
+      "line": 50,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Lastly PES is very familiar with the hydroplane hull. Over the last 5 years we have"
+    },
+    {
+      "line": 51,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "improved our knowledge of the hull type and how to maximize it’s performance in multiple"
+    },
+    {
+      "line": 52,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "modes of operation. Each year making small improvements that compound into significant"
+    },
+    {
+      "line": 53,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "increases in speed."
+    },
+    {
+      "line": 54,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "While the hull is a great platform to start from, it needed to be modified to fit our needs."
+    },
+    {
+      "line": 55,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "First the transom height was far too low for our outboard design and we have increased the"
+    },
+    {
+      "line": 56,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "height of the transom by adding to the existing transom with a plywood and fiberglass composite"
+    },
+    {
+      "line": 57,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "to keep it light and strong. Additionally we painted the bottom of the boat with SpeedCoat49"
+    },
+    {
+      "line": 58,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "which is a coating often used by racing teams to reduce drag. It is especially helpful in the"
+    },
+    {
+      "line": 59,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "corners when the boat sets down and has a significantly larger wetted area than when aired out"
+    },
+    {
+      "line": 60,
+      "page_start": 1,
+      "page_end": 2,
+      "text": "on the straights.Lastly we significantly improved the turnfin on the left side of the hull. Originally it was"
+    },
+    {
+      "line": 61,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "perfectly vertically mounted. To improve it we made a billet aluminum mount that canted the fin"
+    },
+    {
+      "line": 62,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "at 5 degrees inward. This helps to keep the inner side of the hull close to the water during the"
+    },
+    {
+      "line": 63,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "turns, allowing for higher cornering forces without concern of the boat becoming unstable."
+    },
+    {
+      "line": 64,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Additionally we machined a new turnfin from 7075 aluminum which allowed us to make an even"
+    },
+    {
+      "line": 65,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "stiffer fin that is slightly thinner than the original piece and reduces drag."
+    },
+    {
+      "line": 66,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Propeller"
+    },
+    {
+      "line": 67,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "The motor choice was driven by the range of available propellers and the propellers are"
+    },
+    {
+      "line": 68,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "then derived from the final motor selection. For 2025 the electric motor makes peak power at"
+    },
+    {
+      "line": 69,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "~10,500 rpm, thus under ideal conditions the motor would spend the majority of its time on the"
+    },
+    {
+      "line": 70,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "race course near this rpm. This is pretty high for a marine propeller of our size. Thus we have a"
+    },
+    {
+      "line": 71,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "1.54:1 reduction in the lower unit to bring the propeller speed down to ~6,800 rpm. While still"
+    },
+    {
+      "line": 72,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "quite fast this is within the range of typical outboard racing craft. Our target average speed for"
+    },
+    {
+      "line": 73,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "the race course is 50 mph and when assuming 15% slip this gives a propeller pitch of slightly"
+    },
+    {
+      "line": 74,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "under 10” of pitch. This fits well with the propellers for the 125cc PRO Outboard Hydroplane"
+    },
+    {
+      "line": 75,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "and Runabout classes. They typically run a 10-10.5” pitch propeller. Thus we have 4 125cc PRO"
+    },
+    {
+      "line": 76,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "props for testing and race days. These vary in diameter from 6.5-7”. Allowing us to change the"
+    },
+    {
+      "line": 77,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "propeller to accommodate the water conditions present on the course that day.Mechanical Systems"
+    },
+    {
+      "line": 78,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "The Princeton Electric Speed Boating Mechanical team has made several improvements"
+    },
+    {
+      "line": 79,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "from last year. Last year, the design had many components that led to possible misalignment and"
+    },
+    {
+      "line": 80,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "vibrations due to poor tolerancing and the use of bolts to create unnecessary connections. This"
+    },
+    {
+      "line": 81,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "was somewhat driven by the fact that we machined our old outboard entirely in house. However,"
+    },
+    {
+      "line": 82,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "this year we went with a combination of in-house manufacturing and outsourcing. This allowed"
+    },
+    {
+      "line": 83,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "us to keep tighter tolerances and have complex parts in our design with alignment features to"
+    },
+    {
+      "line": 84,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "guide the assembly. This year, we also went in a new direction with our design philosophy. Last"
+    },
+    {
+      "line": 85,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "year, we made an outboard that optimized the aerodynamics of the boat by making the outboard"
+    },
+    {
+      "line": 86,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "stationary in areas where it was exposed to air. Our new outboard has a greater focus on a"
+    },
+    {
+      "line": 87,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "compact, space-efficient, and portable outboard."
+    },
+    {
+      "line": 88,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "We have chosen to use two coupled outrunner motors which have shaped the direction of"
+    },
+    {
+      "line": 89,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "the outboard’s design. This setup prevents the motors from being mounted by its outer body, so a"
+    },
+    {
+      "line": 90,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "more complex design is required. Figure _ shows an assembly that holds the bottom motor while"
+    },
+    {
+      "line": 91,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "allowing its body to freely rotate. The motors are visibly housed inside of a clear polycarbonate"
+    },
+    {
+      "line": 92,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "tube which not only adds a unique aesthetic twist to the outboard, but also allows us to quickly"
+    },
+    {
+      "line": 93,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "spot any water leaks that may compromise the motors."
+    },
+    {
+      "line": 94,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "Figure _: Outboard assemblyFigure _: example of FEA on a part receiving thrust load"
+    },
+    {
+      "line": 95,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "The cooling system includes a plate heat exchanger and pump. Cold raw water runs from"
+    },
+    {
+      "line": 96,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "the lower unit to the heat exchanger to cool a closed-loop flow running through the inverters,"
+    },
+    {
+      "line": 97,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "battery pack, and motors."
+    },
+    {
+      "line": 98,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "The motor cowling is designed to provide a waterproof, aerodynamic cover for the"
+    },
+    {
+      "line": 99,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "interior components of the outboard. It was fabricated using a fiberglass wet layup. A mold was"
+    },
+    {
+      "line": 100,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "constructed from several 3D-printed components with bolted connections. It was then prepped"
+    },
+    {
+      "line": 101,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "by applying body filler and primer before wet sanding. Then mold release was applied and the"
+    },
+    {
+      "line": 102,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "fiberglass laid up on top. Once finished, a 3D printed interface rim was adhered to the cowl to"
+    },
+    {
+      "line": 103,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "latch it down to the outboard with an O-ring sealing mechanism. The cowling also features a port"
+    },
+    {
+      "line": 104,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "for all cabling between the battery pack in the boat. The cowling is easily removable to access"
+    },
+    {
+      "line": 105,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "the interior system. This presented a risk as any easy release latching mechanism was potentially"
+    },
+    {
+      "line": 106,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "less secure, or provided less compressive force than a bolted connection and could result in poor"
+    },
+    {
+      "line": 107,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "waterproofing or even part failure."
+    },
+    {
+      "line": 108,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Many parts that make up the outboard motor have been designed and outsourced to a"
+    },
+    {
+      "line": 109,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "machining company called RapidDirect located in Shenzhen, China. As a result, we’ve learned"
+    },
+    {
+      "line": 110,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "how to create engineering drawings and tolerance dimensions for proper assembly. We have also"
+    },
+    {
+      "line": 111,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "further developed our ability to use machine shop resources."
+    },
+    {
+      "line": 112,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "There are several risks involved with the design. First, the assembly is more complex due"
+    },
+    {
+      "line": 113,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "to using two coupled outrunners. This adds complexity with motor alignment and billet"
+    },
+    {
+      "line": 114,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "aluminum parts. Second, it was the team’s first time ordering parts from RapidDirect, so there"
+    },
+    {
+      "line": 115,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "was risk of receiving incorrectly machined parts. Third, the choice to house the motors inside a"
+    },
+    {
+      "line": 116,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "clear tube increases risk of water leakage through edges. This will be thoroughly tested to ensure"
+    },
+    {
+      "line": 117,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "confident sealing for competition day, however there are unexpected mishaps that may occur. Electrical Systems"
+    },
+    {
+      "line": 118,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Low Voltage System"
+    },
+    {
+      "line": 119,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "The low voltage system for Tiger is built to facilitate the running of small electrical"
+    },
+    {
+      "line": 120,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "components on board the boat. It comprises one Dakota Lithium 12V 20AH USB deep cycle"
+    },
+    {
+      "line": 121,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "LIFEPO4 battery which acts as a switch for the high voltage contactors, and powers all cooling"
+    },
+    {
+      "line": 122,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "and RC circuits. We chose this battery because it has the requisite voltage and current for all of"
+    },
+    {
+      "line": 123,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "our low power applications (inverter, RC components, coolant pumps) without excessive heating"
+    },
+    {
+      "line": 124,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "or servicing. Moreover, it is lightweight and compact, allowing us to fit it in the watertight high"
+    },
+    {
+      "line": 125,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "voltage battery pack. Power distribution is controlled by three switches on the dashboard,"
+    },
+    {
+      "line": 126,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "labelled LV, HV, Cooling. The LV switch manages system power for the inverters, and must be"
+    },
+    {
+      "line": 127,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "closed for any startup to occur. The HV switch begins precharge and allows for ignition and"
+    },
+    {
+      "line": 128,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "power flow from the batteries to the motor, and the Cooling switch allows power to flow from"
+    },
+    {
+      "line": 129,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "the LV battery to the coolant pumps. Built into the low voltage system is a remote kill switch"
+    },
+    {
+      "line": 130,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "which allows us to safely operate the boat remote control. The switch is a dstfuy long distance"
+    },
+    {
+      "line": 131,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "remote DC switch rated for a maximum of 30 amps"
+    },
+    {
+      "line": 132,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "High Voltage System"
+    },
+    {
+      "line": 133,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Because of the changes in PEP requirements for the 2024-2025 season, our high voltage"
+    },
+    {
+      "line": 134,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "system must be able to run larger amounts of current than we had previously dealt with in order"
+    },
+    {
+      "line": 135,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "to provide sufficient power to our motors to reach the speeds we want. This changed our design"
+    },
+    {
+      "line": 136,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "for the high voltage system. The HV system is designed to operate at 55V, 400A continuous, and"
+    },
+    {
+      "line": 137,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "distributes power from the batteries to two inverters and motors. We were very conscious of the"
+    },
+    {
+      "line": 138,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "risks of running high current through this system, and chose high capacity contactors and wires"
+    },
+    {
+      "line": 139,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "with very high current carrying capacity to allow the system to operate safely. We are using the"
+    },
+    {
+      "line": 140,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Rincon REC35P1MX Contactor which is rated for 32-95V, 500A continuous, and two 3Schul"
+    },
+    {
+      "line": 141,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Motors C1000 Inverters, which are rated for 36-126V, 500A DC, 1000A Phase. This ensures that"
+    },
+    {
+      "line": 142,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "we can run sufficient current through the system for our power needs, but that the contactor trips"
+    },
+    {
+      "line": 143,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "long before we damage our electronics with high current. The inverters run on the VESC"
+    },
+    {
+      "line": 144,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "software, allowing us to use a suite of established tools to monitor our battery and motor"
+    },
+    {
+      "line": 145,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "performance in real time through an app. A phone holder is built into the dashboard so that we"
+    },
+    {
+      "line": 146,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "can receive constant speed, temperature, and battery level information in the cockpit. Moreover,"
+    },
+    {
+      "line": 147,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "the use of VESC software has allowed us to draw inspiration from similar high voltage projects,"
+    },
+    {
+      "line": 148,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "such as electric skateboards and motorcycles through online forums. This has helped us design"
+    },
+    {
+      "line": 149,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "our high voltage system while learning from the experiences of other users."
+    },
+    {
+      "line": 150,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Our speed is controlled by a Single Channel EV West Billet Aluminum Throttle"
+    },
+    {
+      "line": 151,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Potentiometer, which sends signals to our inverters when the RC system is not on. The hand"
+    },
+    {
+      "line": 152,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "throttle rotates 90 degrees, allowing us to easily control the speed. Potentiometer signals are"
+    },
+    {
+      "line": 153,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "compatible with our VESC based inverters, and the signal is sent in parallel to both inverters.Motors"
+    },
+    {
+      "line": 154,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "For our motors, we used two LMT7065 motors. We chose the 7065 because they are the"
+    },
+    {
+      "line": 155,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "highest power density motors that we could find at 55V. They fit within our RPM range of 6000-"
+    },
+    {
+      "line": 156,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "12000 revolutions per minute which works with the gear boxes we have available. As we were"
+    },
+    {
+      "line": 157,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "working with these motors, we had to make some adjustments to our mechanical system, since"
+    },
+    {
+      "line": 158,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "these motors operate at the upper end of our RPM range, making it challenging to get peak"
+    },
+    {
+      "line": 159,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "performance. Another reason we chose these motors is that the power range is also compatible"
+    },
+    {
+      "line": 160,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "with our system. Our target is 20-25 kw continuous, and each motor is rated to do 10-15kw"
+    },
+    {
+      "line": 161,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "continuous, which we will be able to utilize."
+    },
+    {
+      "line": 162,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Remote Control"
+    },
+    {
+      "line": 163,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Competition Updates:"
+    },
+    {
+      "line": 164,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "The PEP Unmanned Boat Competition has introduced substantial changes for the 2025"
+    },
+    {
+      "line": 165,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "season, influencing both mechanical and electrical design. Each team must now complete two 1-"
+    },
+    {
+      "line": 166,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "mile laps around two buoys, with the additional requirement of transporting a 30 to 60 lb payload"
+    },
+    {
+      "line": 167,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "as well as maintaining a maximum voltage of 55.5 volts."
+    },
+    {
+      "line": 168,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "This paper outlines the lessons learned from our 2024 implementation, the changes made"
+    },
+    {
+      "line": 169,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "for 2025, and the integration and software processes that led to a more reliable, performance\u0002focused, and user-friendly unmanned marine system."
+    },
+    {
+      "line": 170,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "2024 Challenges Recap:"
+    },
+    {
+      "line": 171,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "During the 2024 competition, our design was centered around the Teensy microcontroller"
+    },
+    {
+      "line": 172,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "and a PandaRC VT5805 module to facilitate remote communication. The control flow consisted"
+    },
+    {
+      "line": 173,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "of:"
+    },
+    {
+      "line": 174,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "● A Teensy microcontroller connected to the PandaRC VT5805, handling RC"
+    },
+    {
+      "line": 175,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "communication"
+    },
+    {
+      "line": 176,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "● A second Teensy interfacing with voltage regulators as well as a analog to digital"
+    },
+    {
+      "line": 177,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "converter, which in turn controlled linear actuators for steering as well as send out a"
+    },
+    {
+      "line": 178,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "analog 5v signal for throttle"
+    },
+    {
+      "line": 179,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "● A laptop, via USB, linked to another PandaRC VT5805 module for land-based control"
+    },
+    {
+      "line": 180,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Despite being theoretically rated for a 5-mile range, the PandaRC system demonstrated"
+    },
+    {
+      "line": 181,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "an effective range of only 0.5 miles. Additionally, the RC module proved physically fragile—"
+    },
+    {
+      "line": 182,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "failing under real-world pressure during competition and stalling the boat. The requirement for a"
+    },
+    {
+      "line": 183,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "tethered laptop further complicated deployment and usability.Key failure points included:"
+    },
+    {
+      "line": 184,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "● Unreliable RC communication and fragile hardware"
+    },
+    {
+      "line": 185,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "● Limited signal range"
+    },
+    {
+      "line": 186,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "● Cumbersome setup requiring a laptop for operation"
+    },
+    {
+      "line": 187,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "● Inability to complete the race due to communication breakdown"
+    },
+    {
+      "line": 188,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "2025 System Improvements"
+    },
+    {
+      "line": 189,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Our revised 2025 system focuses on reliability and robust communication. The goal was"
+    },
+    {
+      "line": 190,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "to eliminate the need for fragile hardware and replace it with industry-standard, high\u0002performance components. We also prioritized modularity and safety in both hardware and"
+    },
+    {
+      "line": 191,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "software."
+    },
+    {
+      "line": 192,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Hardware Selection & Rationale"
+    },
+    {
+      "line": 193,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Cube Orange Flight Controller"
+    },
+    {
+      "line": 194,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "● The Cube Orange is the core of our unmanned system. It supports open-source software"
+    },
+    {
+      "line": 195,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "(ArduPilot and Mission Planner) which allow us to write our own programs and scripts."
+    },
+    {
+      "line": 196,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "● The onboard sensors including the accelerometer, gyroscope, GPS, etc, enable advanced"
+    },
+    {
+      "line": 197,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "features such as PID tuning, telemetry, and autonomous decision-making."
+    },
+    {
+      "line": 198,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Key Features:"
+    },
+    {
+      "line": 199,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "● Sensors: Accelerometer, Gyroscope, Compass, Barometer"
+    },
+    {
+      "line": 200,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "● Input Voltage: 4.1–5.7V at 2.5A"
+    },
+    {
+      "line": 201,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "● Power Output: 14W"
+    },
+    {
+      "line": 202,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "● Servo Rail Voltage: 3.3V / 5V"
+    },
+    {
+      "line": 203,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "● USB Input: 4–5.7V at 250mA"
+    },
+    {
+      "line": 204,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "● Operating Temp: -10°C to 55°C"
+    },
+    {
+      "line": 205,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "● Cube Herelink Transmission SystemCube Herelink Transmission System"
+    },
+    {
+      "line": 206,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Replacing the fragile PandaRC module, the Cube Herelink system integrates both RC and HD"
+    },
+    {
+      "line": 207,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "video transmission in a single device. It features an onboard controller running Mission Planner,"
+    },
+    {
+      "line": 208,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "eliminating the need for a laptop."
+    },
+    {
+      "line": 209,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Advantages:"
+    },
+    {
+      "line": 210,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● Range: 12.5 miles"
+    },
+    {
+      "line": 211,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● Protocol: MAVLink (highly reliable and widely supported)"
+    },
+    {
+      "line": 212,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● Built-in 4950 mAh battery"
+    },
+    {
+      "line": 213,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● HD video feed with low latency"
+    },
+    {
+      "line": 214,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● Easy integration with Cube flight controller"
+    },
+    {
+      "line": 215,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "GoPro Hero 12"
+    },
+    {
+      "line": 216,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● Chosen for its availability in our arsenal and HDR video capability. It also allows us to"
+    },
+    {
+      "line": 217,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "record tests and runs and stream to our flight controller via micro-HDMi for visual"
+    },
+    {
+      "line": 218,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "feedback and diagnostics."
+    },
+    {
+      "line": 219,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "ODrive S1 + M8325 Motor Kit"
+    },
+    {
+      "line": 220,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Our mechanical requirements demanded a torque output of 50 Nm. Unfortunately, the servo"
+    },
+    {
+      "line": 221,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "motors we found online were unable to meet this requirement. Therefore we opted to go for a"
+    },
+    {
+      "line": 222,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "brushless DC motor such as the M8325 (5 Nm torque) with a 10:1 gear ratio which allowed us to"
+    },
+    {
+      "line": 223,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "achieve the required performance. Additionally, It allows us to easily fix position since the motor"
+    },
+    {
+      "line": 224,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "is free spinning rather than locked in."
+    },
+    {
+      "line": 225,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Specifications:"
+    },
+    {
+      "line": 226,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● DC Voltage Range: 16–48V (compliant with competition rules)"
+    },
+    {
+      "line": 227,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● Modulation Depth: 78%"
+    },
+    {
+      "line": 228,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● Operating Motor Current: 20–80A"
+    },
+    {
+      "line": 229,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● Positional Accuracy via encoder feedback"
+    },
+    {
+      "line": 230,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "● Supports self-homing for autonomous operation"
+    },
+    {
+      "line": 231,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "●"
+    },
+    {
+      "line": 232,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "System Integration & Power"
+    },
+    {
+      "line": 233,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Power Architecture"
+    },
+    {
+      "line": 234,
+      "page_start": 8,
+      "page_end": 9,
+      "text": "● Flight Controller: Powered via a 5V buck converter● Herelink System: Powered with a 12V buck converter"
+    },
+    {
+      "line": 235,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "● Servo Rail (PWM output): Separate 5V supply for stable PWM signaling"
+    },
+    {
+      "line": 236,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "● ODrive Motor Controller: Powered directly via a regulated 16V DC source"
+    },
+    {
+      "line": 237,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Signal and Data Interfacing"
+    },
+    {
+      "line": 238,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "● SBUS cable between Herelink and Cube Orange for RC signal"
+    },
+    {
+      "line": 239,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "● Video feed routed from GoPro to Herelink via Micro-HDMI"
+    },
+    {
+      "line": 240,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "● PWM outputs using 3 pin J connectors from Cube to ODrive controller for throttle and"
+    },
+    {
+      "line": 241,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "steering"
+    },
+    {
+      "line": 242,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "CAD and Waterproof Housing"
+    },
+    {
+      "line": 243,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Custom CAD enclosures were designed and 3D printed to house:"
+    },
+    {
+      "line": 244,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "● Main Box: Flight controller, power electronics"
+    },
+    {
+      "line": 245,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "● Antenna Box: Herelink video and RC transmitter"
+    },
+    {
+      "line": 246,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Both housings feature gaskets and sealing mechanisms to ensure waterproofing and"
+    },
+    {
+      "line": 247,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "durability in marine environments."
+    },
+    {
+      "line": 248,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Software Development"
+    },
+    {
+      "line": 249,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Using the open-source ArduPilot ecosystem, we developed our own control scripts and"
+    },
+    {
+      "line": 250,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "logic suited for our competition environment."
+    },
+    {
+      "line": 251,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "● Safety Protocols:We modified Mission Planner to only allow system arming upon manual"
+    },
+    {
+      "line": 252,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "activation. This prevents accidental activation as well as confirmation that the system is"
+    },
+    {
+      "line": 253,
+      "page_start": 9,
+      "page_end": 10,
+      "text": "off when working near the boat.● PWM Optimization: PWM signals for throttle and steering were tuned for signal stability"
+    },
+    {
+      "line": 254,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "and responsiveness. Signal frequencies and duty cycles (0–100%) were customized for"
+    },
+    {
+      "line": 255,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "each motor output."
+    },
+    {
+      "line": 256,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "● ODrive Self-Homing"
+    },
+    {
+      "line": 257,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "○ A custom startup routine enables the steering motor to self-home"
+    },
+    {
+      "line": 258,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "○ At boot, the ODrive spins the motor until a mechanical switch is triggered. This"
+    },
+    {
+      "line": 259,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "defines the “zero” position. Subsequent movement is calculated via encoder"
+    },
+    {
+      "line": 260,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "feedback, allowing precise autonomous steering"
+    },
+    {
+      "line": 261,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "System Risks"
+    },
+    {
+      "line": 262,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "While the current design is a significant improvement over the previous year, there are still key"
+    },
+    {
+      "line": 263,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "risks that could impact system performance and mission success:"
+    },
+    {
+      "line": 264,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Power Drain from Steering Motor"
+    },
+    {
+      "line": 265,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "● The steering motor, powered at 16V, may draw excessive current under load—especially"
+    },
+    {
+      "line": 266,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "during continuous or sharp maneuvering since the increase in torque will induce an"
+    },
+    {
+      "line": 267,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "increase in current (back EMF), drawing more power. This can lead to accelerated"
+    },
+    {
+      "line": 268,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "battery depletion, risking power loss mid-race as well as potential risk of overheating."
+    },
+    {
+      "line": 269,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Mitigation"
+    },
+    {
+      "line": 270,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "● This was mitigated by the use of an increased low voltage battery size that could handle"
+    },
+    {
+      "line": 271,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "all of the possible energy loss from our unmanned system as well as the installation of"
+    },
+    {
+      "line": 272,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "fuses that safeguard the current flowing into our unmanned system."
+    },
+    {
+      "line": 273,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Loss of RC Communication Link"
+    },
+    {
+      "line": 274,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "● Although the Cube Herelink system is rated for long-distance communication (up to 12.5"
+    },
+    {
+      "line": 275,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "miles), unforeseen interference—such as electromagnetic noise from onboard systems—"
+    },
+    {
+      "line": 276,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "could disrupt the RC or video signals. In such an event, the system is designed to enter a"
+    },
+    {
+      "line": 277,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "failsafe mode and shut down, which could prematurely terminate the mission."
+    },
+    {
+      "line": 278,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "● High-frequency interference from the onboard inverter or motor controller may affect"
+    },
+    {
+      "line": 279,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "nearby PWM and RC signal lines"
+    },
+    {
+      "line": 280,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Mitigation:"
+    },
+    {
+      "line": 281,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "● Unlike last year, we moved the entire unmanned system to the front of the boat, leaving"
+    },
+    {
+      "line": 282,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "the inverter and battery near the middle and back of the boat. Therefore, the"
+    },
+    {
+      "line": 283,
+      "page_start": 10,
+      "page_end": 11,
+      "text": "electromagnetic interference is significantly lowered. Mechanical Forces Impacting Signal Integrity"
+    },
+    {
+      "line": 284,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "● At high speeds or during aggressive turns, the boat experiences significant inertial and"
+    },
+    {
+      "line": 285,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "vibrational forces. These could affect signal connectors, wiring, or cause temporary"
+    },
+    {
+      "line": 286,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "disconnections in poorly secured systems—leading to signal loss or erratic behavior."
+    },
+    {
+      "line": 287,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Mitigation"
+    },
+    {
+      "line": 288,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "● The entire wiring harness of the unmanned is created using twisted pair signal wires as"
+    },
+    {
+      "line": 289,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "well as click on connectors, meaning there is no way for any cable to be disconnected."
+    },
+    {
+      "line": 290,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "By identifying and preparing for these potential risks, we aim to ensure both system safety and"
+    },
+    {
+      "line": 291,
+      "page_start": 11,
+      "page_end": 12,
+      "text": "mission continuity during the 2025 PEP competition. Custom Battery Pack"
+    },
+    {
+      "line": 292,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Figure: Modular INR-21700-P45B Battery Pack"
+    },
+    {
+      "line": 293,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Design and Analysis"
+    },
+    {
+      "line": 294,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "The design of the battery pack is optimized for thermal management and structural"
+    },
+    {
+      "line": 295,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "integrity. The pack consists of 405 3.6V lithium-ion cells1arranged in a configuration with 15 in"
+    },
+    {
+      "line": 296,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "series and 27 in parallel to achieve a nominal voltage of 54V and motor current draw"
+    },
+    {
+      "line": 297,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "requirements. With each cell rated for 45A discharge, the pack is able to comfortably supply"
+    },
+    {
+      "line": 298,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "500A for the duration of the competition. This configuration allows for a modular design such"
+    },
+    {
+      "line": 299,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "that groupings of 27 cells could be constructed independently and slid into a structural skeleton."
+    },
+    {
+      "line": 300,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Due to this modularization, structural components could be 3D printed locally to allow for rapid"
+    },
+    {
+      "line": 301,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "design iteration, while also enabling ease of maintenance by being able to remove each rack of"
+    },
+    {
+      "line": 302,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "cells."
+    },
+    {
+      "line": 303,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Air cooling was chosen due to its lightweight, cost-effectiveness, and simplicity"
+    },
+    {
+      "line": 304,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "compared to liquid cooling. This design incorporates ventilation channels and strategically"
+    },
+    {
+      "line": 305,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "organized cell placement, building on thermal airflow research2to optimize cooling efficiency."
+    },
+    {
+      "line": 306,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "To facilitate active cooling, eight fans3 draw air through a closed airflow loop, optimized for"
+    },
+    {
+      "line": 307,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "their high static pressure and airflow characteristics during peak load conditions. Originally built"
+    },
+    {
+      "line": 308,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "for desktop computer cooling systems, these fans cycle air through a radiator (connected to an"
+    },
+    {
+      "line": 309,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "1 Molicel INR-21700-P45B"
+    },
+    {
+      "line": 310,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "2 Zhao, G., & Wang, X. (2022). A design optimization study of an air-cooling battery thermal management system"
+    },
+    {
+      "line": 311,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "for electric vehicles. Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile"
+    },
+    {
+      "line": 312,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Engineering. https://doi.org/10.1177/09544089221116418"
+    },
+    {
+      "line": 313,
+      "page_start": 12,
+      "page_end": 13,
+      "text": "3 Noctua NF-A14 iPPC-3000 PWMexternal water cooling system), between the cells, and finally through a return duct along the"
+    },
+    {
+      "line": 314,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "outside of the pack. Thermal simulation models4allowed us to design to the pack such that"
+    },
+    {
+      "line": 315,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "temperature differences across the cooling path remained relatively constant to avoid uneven"
+    },
+    {
+      "line": 316,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "thermal load on the cells."
+    },
+    {
+      "line": 317,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "To manage the charging and balancing of the 15 individual cell modules, a BMS system5"
+    },
+    {
+      "line": 318,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "was used in a Distributed Group configuration. This system allows for individual module"
+    },
+    {
+      "line": 319,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "monitoring and balancing using just 1 G1 Control Unit and 1 CAN Group Module, ensuring even"
+    },
+    {
+      "line": 320,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "charge distribution while having simplicity. This system connects to temperature sensors"
+    },
+    {
+      "line": 321,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "throughout the pack as well as module taps which monitor and adjust the voltage at different"
+    },
+    {
+      "line": 322,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "points in the series connection. This BMS is also compatible with the VESC software used in"
+    },
+    {
+      "line": 323,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "the motor inverters, enabling an all-in-one control and monitoring system."
+    },
+    {
+      "line": 324,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Manufacturing Processes"
+    },
+    {
+      "line": 325,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "The structure of the battery pack consists primarily of 3D printed ASA components,"
+    },
+    {
+      "line": 326,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "which were chosen due to their excellent shock absorption and heat resistance properties. These"
+    },
+    {
+      "line": 327,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "components ensure that the batteries remain securely in place during operation. A watertight"
+    },
+    {
+      "line": 328,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "cowling, inspired by Danecca battery packs, was implemented to protect the battery from water"
+    },
+    {
+      "line": 329,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "ingress. This allows the internal structure and functionality of the pack to be separated from the"
+    },
+    {
+      "line": 330,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "enclosure, which serves as a protective housing and directs airflow for cooling."
+    },
+    {
+      "line": 331,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Electrical connections between cells within the battery were carefully designed to"
+    },
+    {
+      "line": 332,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "minimize resistance and prevent overheating due to varied current draw. Running across the top"
+    },
+    {
+      "line": 333,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "of each adjacent 27-cell parallel group is a waterjet sheet of nickel plated copper6. This unique"
+    },
+    {
+      "line": 334,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "material features low internal resistance (ρ = 2.874 x 10-8 Ωm) to minimize operational losses to"
+    },
+    {
+      "line": 335,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "heat while having a high surface resistance to facilitate easy heat generation during the spot"
+    },
+    {
+      "line": 336,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "welding process. Additionally, its high flexibility (UTS = 368 MPa) allows the connections to be"
+    },
+    {
+      "line": 337,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "robust to use in rough environments, a necessary feature for a pack onboard a boat crashing"
+    },
+    {
+      "line": 338,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "through waves. Spot welding was employed to establish high-quality bonds between cells and"
+    },
+    {
+      "line": 339,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "custom waterjet buses and terminals. Additionally, positioning pins on printed cell holders were"
+    },
+    {
+      "line": 340,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "added to position the busbar plates while spot welding. Dimples were added to busbar plate tabs"
+    },
+    {
+      "line": 341,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "to decrease the resistance between parallel tabs when spot welding, allowing for cleaner welds to"
+    },
+    {
+      "line": 342,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "go through the battery with lower current."
+    },
+    {
+      "line": 343,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "4 Models used are from About Energy https://www.aboutenergy.io/"
+    },
+    {
+      "line": 344,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "5 EMUS G1 BMS"
+    },
+    {
+      "line": 345,
+      "page_start": 13,
+      "page_end": 14,
+      "text": "6 SIGMACLAD 60 from Engineered Materials SolutionsFigure: 3x9 Parallel Module & Modular Rack"
+    },
+    {
+      "line": 346,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Risks and Mitigation Strategies"
+    },
+    {
+      "line": 347,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "One of the primary risks associated with the battery pack is thermal runaway, a product"
+    },
+    {
+      "line": 348,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "of drawing too much current from the cells. To mitigate this, temperature sensors were placed"
+    },
+    {
+      "line": 349,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "within the ventilation channels at various points to monitor and report critical temperatures and"
+    },
+    {
+      "line": 350,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "cutoff operation past a given threshold. Mechanical failure due to vibrations or in the event of a"
+    },
+    {
+      "line": 351,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "crash posed another challenge. Having an independent pack design from the rigid outer enclosure"
+    },
+    {
+      "line": 352,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "allows it to act as an exoskeleton protecting the internal components. Having several channels"
+    },
+    {
+      "line": 353,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "running along the length of the cell modules provides a robust attachment point to prevent the"
+    },
+    {
+      "line": 354,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "battery from moving around.. In case of extreme jostling and deflection, though the components"
+    },
+    {
+      "line": 355,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "should not break, adhesive neoprene insulators along the intermodular conductors between"
+    },
+    {
+      "line": 356,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "vertical racks to provide short-circuit protection, and enclosed channels for terminal busbars"
+    },
+    {
+      "line": 357,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "were used to isolate the battery pack from the aluminum baseplate."
+    }
+  ],
+  "source_line_count": 358,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}

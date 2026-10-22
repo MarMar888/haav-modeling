@@ -1,0 +1,2237 @@
+{
+  "competition_year": 2025,
+  "team": "University of Illinois",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/Illinois",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Illinois/UIUC-2025.3.25_ASNE_WhitePaper.pdf?ver=ZKMX6Ku6GoxzC4g3jfHb9Q%3D%3D",
+  "filename": "UIUC-2025.3.25_ASNE_WhitePaper.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "15"
+  },
+  "page_count": 15,
+  "pages_without_text": [],
+  "char_count": 30814,
+  "pages": [
+    {
+      "page": 1,
+      "text": "USS Illini\nUniversity of Illinois Urbana-Champaign\nSection: Uncrewed Craft\nMatthew Bianchi, Noah Brody, Carter Eid, Sebastian Sanchez, Allan\nZhu, Ethan Cho, Xiaorui Gu, Hongbo Nie, Kevin Ho, Drew Stadelman\n Contents\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": "Introduction ..................................................................................................................................... 3\nBackground Research ..................................................................................................................... 3\nHull Selection.............................................................................................................................. 3\nCooling System ........................................................................................................................... 4\nWater Sealing .............................................................................................................................. 5\nDesign & Analysis .......................................................................................................................... 5\nHull Selection & Modification.................................................................................................... 5\nComponent Layout...................................................................................................................... 6\nPropulsion Selection ................................................................................................................... 7\nCooling Selection ........................................................................................................................ 8\nElectronic Equipment.................................................................................................................. 9\nOverview of Build, Fabrication & Testing .................................................................................. 10\nComponent Layout & Hull Floatation ...................................................................................... 10\nElectronic Fabrication Process and Testing .............................................................................. 10\nCooling System Fabrication and Testing .................................................................................. 11\nPropulsion System Fabrication and Testing ............................................................................. 11\nRisk ............................................................................................................................................... 12\nHull and Component Layout ..................................................................................................... 12\nElectronics................................................................................................................................. 13\nPropulsion ................................................................................................................................. 13\nCooling ...................................................................................................................................... 13\nAppendix ....................................................................................................................................... 14\nReferences ................................................................................................................................. 14\n Introduction\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "The University of Illinois has dedicated ten undergraduate seniors in mechanical engineering to\ncomplete the unmanned watercraft that was started in the Spring of 2024, such that it may race in\nApril of 2025. Through the two previous semesters, some responsibilities of building a competitor\nfrom scratch have been relieved, while many remain for us to address.\nOur team has been provided with functional motors, batteries, transmitter, receiver, a workshop,\nand other miscellaneous components. We have damaged electronic speed controllers and a\nunseaworthy boat hull.\nBackground Research\nMany of our breakthroughs in development were products of quality questions asked and extensive\nresearch undertaken. Initially, our most pressing questions related to general fabrication and design\ndirections.\nHull Selection\nWe needed to settle upon a hull shape that prioritized stability as to protect our vital electronics\nand payload. Thus, our search became a question of which boat hull provided the greatest level of\nstability when exposed to external forces. Stability is defined by Sunaryo et al. [1] as the natural\nself-righting force of a body that results from a moment pair between the center of gravity of the\nboat and its instantaneous center of buoyancy. See Figure 1 below.\nFigure 1. Positive and Negative Self-Righting Force\nIt is clear to see that a stable hull design would have a sharp increase in the righting moment as a\nfunction of the heeling angle of the boat. Essentially, a stable hull design will aggressively attempt\nto righten itself even at small rocking angles. To analyze this property, Sunaryo et al. used Maxsurf\nsoftware to plot the self-righting moment of the catamaran style boat as a function of heeling angle,\nshown in Figure 2. The steep increase in rightening moment at small heeling angles is readily\nobserved. Figure 2. Self-Righting Moment vs. Heeling Angle\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": "The catamaran is composed of two thin hydrodynamic hulls mounted side by side. The wide base\nof the catamaran explains the great level of stability present in Figure 2. The simulation ran by\nSunaryo et al. provided insight to our team to help select a proper hull. Namely, we were to search\nfor a hull that strongly and quickly wanted to righten itself even when rocked.\nCooling System\nFor the motors, batteries, and electronics system to not overheat, an efficient cooling system is\nrequired. Sufficient literature was found on paraffin wax, as well as open and closed loop cooling\nsystems. These are therefore assumed to be the cooling systems most frequently seen on this type\nof watercraft.\nBased on the section 4.4 of “A review of thermal performance improving methods of lithium-ion\nbattery: Electrode modification and thermal management system” written by Zhao, Zhang, et al.\n[2], paraffin wax is the most researched method for Li-ion battery cooling for a stationary system.\nThis solution has a low cost, but it does add substantial weight. A disadvantage of this method is\nthat paraffin wax has low heat conductivity, meaning not much heat is removed from the system\nbut rather is stored in the paraffin wax itself. This means that heat surges and extended runtimes\ncan lead to heat buildup in the wax, increased operating temperature and battery damage.\nTo compensate, we will be combining our paraffin wax cooling with active heat removal in the\nform of an open-water heat exchanger system. We used a patent [3] as reference, which we plan\non improving in our implementation. The patent discusses a system in which water is pumped\nfrom the lake through the cooling system and then back out into the lake–without affecting the\npropeller. The craft that the patent was designed for is similar in size to ours with similar needs.\nHowever, the patent warns about shallow waters that may have branches, vegetation, rocks, or\nreefs. Our sponsor indicated that for competition in Virginia such items would not be\nencountered. Nevertheless, the inlet for the open loop will be covered with a fine mesh, allowing\nwater to flow freely with minimal minor losses while preventing debris and aquatic flora from\nentering and damaging our water pumps. Bang, Jerng, et al. conducted a study [4] on whether open loop or closed loop systems were more\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "effective in heat removal and overall efficiency. They found that both systems provided sufficient\ncooling for their application, and the open system performed better for heat-removal performance.\nThey warned that with open systems flow instability or different water patterns could affect the\nefficiency of the system. However, such aspects are not expected to be seen in the water on\ncompetition day.\nWater Sealing\nTo ensure that the sensitive electronics are protected from splashing, proper water sealing of\ninternal components is necessary. On a small boat, sealing can be broken down into three parts:\nwaterproofing of the hull; internal waterproofing of the batteries, wires, and electronics; and active\nremoval of water using a bilge pump.\nIn the chapter “Sealants” in the Engineered Materials Handbook Desk Edition [5], the ASM\nprovides an in-depth analysis of different types of sealants. Pure silicones, as used in the previous\niteration, have excellent performance and can strain more than 25% prior to failure. This process\nis critical for a boat hull where waves can create impact loading on the hull. Additionally, silicone\nsealants typically last over 10 years, operate at a wide range of temperatures up to 400 °F, and\nbond to most surfaces without a primer, although they do take several days to fully cure. Another\noption would be to use vinyl plastisol, commonly found in threaded pipe connectors. These also\nhave excellent flexibility and vibrational resistance, making them an equally viable option for a\nboat hull.\nA potential plan for the water removal system is from patents such as [6]. This patent proposes a\nlightweight bilge pump that can be temporarily fastened anywhere in the bilge, the lowest part of\na vessel to collect water through an integrated strainer. Water is pumped through a low-voltage\ninline pump and attachable hose, removing the water over the rails rather than holes drilled in the\nhull.\nThe research done during the background stage provided our team with insight to make grounded\ndecisions when it came to the design of our boat.\nDesign & Analysis\nHull Selection & Modification\nHull selected factored in price, workability, hydrodynamics, weight capacity, and size. In the end,\na modified Wave 60 Youth Kayak from Lifetime Fitness was selected as the hull for its competitive\npricing, compact size, and streamlined shape. The kayak was constructed from two layers of blow\u0002molded high-density polyethylene (HDPE). HDPE has exceptional strength-to-weight ratio,\ndurability, and chemical resistance, while retaining good workability. The team removed the\ntopmost layer to make room for the boat’s components, lowering the center of gravity and making waterproofing easier. Plastic welding was used to patch drainage holes that were in the hull. An\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "acrylic lid lays on top of the hull and protects the internal components from splashes and large\nwaves.\nInspired by the previous team, we also plan to mount catamaran-style stabilizers on either side of\nthe kayak, as shown in Figure 3. This will greatly increase the hull’s stability on the roll axis.\nFigure 3: Rightening Moment Provided by Catamaran-Style Hulls\nA quick word on the math shown in the above figure: with the buoy just fully submerged, the force\nof buoyancy is a product of gravity, volume of the buoy, and the difference in density between the\nbuoy and water. The rightening moment is this buoyancy force times the horizontal distance to the\nboat. Given that our boat does not have a lot of rotational inertia in the perpendicular axis, the\nbuoys are modeled to stabilize the boat well.\nComponent Layout\nTo maintain a center of gravity in the geometrical center of the boat, the components were\napproximated as point-masses and the center of gravity was calculated, as shown in Figure 4.Figure 4. Center of Mass Approximation\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "Selecting the position of masses B and C, representing the batteries and propulsion equipment\nrespectively, the position of the payload was solved to be 1.74 meters from the back of the boat.\nSince the boat is 1.83 meters, it will be placed in the front of the boat to counteract the mass of the\nbatteries and propulsion in the rear.\nPropulsion Selection\nThe twin-motor propulsion system is powered by two 56-series 56123/550KV motors from SSS\nmotors. As these motors are capable of spinning at up to 24,420 RPM with the 44.4V batteries\nselected by the electrical team, a 4:1 gearbox from Neugart was selected to improve torque and\nreduce the motor speed. However, as the gearbox is only rated to spin at 18,000 RPM, the final\nshaft speed becomes 4,500 RPM.\nThe design team opted for a belt-drive propulsion system, selecting timing belts with a 0.2” pitch\nand ⅜” width. A 17” belt diameter was chosen to allow for a propeller clearance of 15% of the\npropeller diameter. This allows the team to keep the motors within the hull walls for balance and\nwaterproofing. The research done on hull sealing will ensure that the housing for the belt is\nproperly attached and sealed against the outer surface of the hull. Figure 5 shows a CAD design\nof the complete propulsion system. Figure 5. CAD design of the complete propulsion system\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": "The propulsion team was left with limited choices for a propeller. With a twin-engine setup, both\nleft- and right-handed propellers were necessary for smooth operation. Such combinations of\npropellers proved difficult to obtain through online shopping, as most boat propellers available\nwere either hobby-size propellers with a diameter of below 10cm, large, expensive propellers of\ndiameters of over 30cm intended for manned boats, or available in only left-handed or right-handed,\nbut not both.\nAs such, the team opted to 3-D print an open-source propeller design, mirroring the CAD file to\nreverse the direction of the propeller and adding additional holes to accommodate the 10mm shaft.\nCooling Selection\nTo effectively keep our electric propulsion boat cool during operation, we decided to integrate a\ndual-strategy approach centered around an open-water heat exchanger system and paraffin wax as\na phase-change cooling agent, inspired and validated by extensive literature review.\nStarting with the paraffin wax, this method comes into play due to its proven effectiveness in\nthermal management for lithium-ion batteries, as described by Zhao, Zhang, et al [2]. The use of\nparaffin wax is particularly appealing because of its low cost, substantial latent heat capacity, and\nlow toxicity. It is ideal for absorbing and distributing heat during peak load times, as the high latent\nheat capacity absorbs large amounts of energy without raising the temperature. Unlike the previous\nteam’s implementation, we increased the submersion of the batteries from one-third to almost the entire battery, increasing the total heat capacity of the wax and providing a greater area for the heat\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "to transfer from the batteries into the wax.\nFor active cooling, we employed an open-water heat exchanger system, as outlined in the patent\nwe found. This system will use lake water, pumped through dual cooling lines, to absorb heat\ndirectly from the motors, ESCs, and batteries. The design of this system considered the patent’s\ndiscussion on environmental considerations, ensuring that our intake and expulsion mechanisms\nwill adequately handle potential blockages, despite anticipating clean competition waters. This\nmethod was particularly appealing due to the effectiveness of open systems in heat removal, as\nconfirmed by the study from Bang, Jerng, et al., who noted that open systems, despite their\nsusceptibility to flow instability, performed superiorly in their test conditions which are akin to\nour competition scenario. In addition to the performance advantages of a open-loop cooling system,\nwe deemed that it is less complex and lighter than a close-loop cooling system.\nThese combined methods—utilizing the passive cooling properties of paraffin wax and the\ndynamic, active cooling from lake water—ensuring that all high-power components within our\nboat remain below the critical temperature threshold of 110°C.\nElectronic Design\nWhile many components were inherited from previous teams such that our freedom of selection\nwas limited, we had to understand exactly what we were working with such that we could\nsupplement our existing materials with compatible components.\nOur team has (8) 44.4v 10000mAh LiPo batteries, with a C rating of 30. With at most (4) batteries\nwired in parallel per motor, the effective voltage would remain at 44.4v, while the capacity would\njump to 40000mAh. We chose parallel wiring because keeping the voltage constant and increasing\nour battery capacity aligned more with our team’s values of prioritizing completion of the race\nover speed. The C-rating indicates a peak current to 1200A for 2 minutes from the four-battery\ncircuit, although each circuit would include at least 15 ohms of resistance through the high-current\nconnectors our team is using. Thus, the maximum current that could be delivered to the electronic\ncomponents would be ~3A, via Ohm’s law.\nWith these numbers in mind, our team is currently searching for electronic speed controllers that\ncan handle 12S LiPo configuration, as that is the voltage of our battery. With each LiPo cell\nmeasuring 3.7V, 12 cells wired in series would sum to 44.4v. Ideally, the speed controllers would\nbe waterproof, but this would be a risk we would have to mitigate otherwise.\nOur Flysky transmitter talks with our Flysky receiver on two channels, both supporting pulse\u0002width modulation via joystick control. The receiver is powered by a small onboard 4.8V battery.\nThe two channels will serve to control the left and right motor speed. Simplicity was chosen to\navoid programming errors that may arise from the implementation of more intricate software to\nhost more intuitive controls. Overview of Build, Fabrication & Testing\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 10,
+      "text": "Component Layout & Hull Flotation\nOur team is not yet ready to assemble with the appropriate components from mentioned above. To\ntest, water buckets were used to simulate the weight of the final systems, and the boat was placed\nin a pool to test floatation. Freeboard length is measured, as well as stability by measuring the rate\nat which the boat recovered from external forces rocking it. Different forms of waterproofing were\ntested on the previous boat hull as they are the exact same model. Different combinations of\nsilicones and plastic welding were used on different holes to check watertightness. An additional\nHDPE panel was used to seal off the back end of the hull where the waterline rose to about an inch\nfrom the top edge.\nElectronic Fabrication Process and Testing\nThe batteries are wired to a bus bar that collects all the batteries’ current, and outputs them through\n8 AWG aluminum wires in conduit, suitable for roughly 50A. There are 150A fuses wired in series\nwith the main cables to prevent overcurrent. The busbar is shown below in Figure 5.\nFigure 5. Battery Bus bar with fuses\nTo test the busbar, several batteries are wired to it, and the output leads are connected to a test\nESC. The ESC is connected to the motor, and controlled using the transmitter to cycle the motor\nthrough the slowest speed setting through the fastest. The motor, ESC, and batteries are monitored\nfor excess heat accumulation as well as current and voltage using a multimeter. We are in the process of selecting and purchasing functional ESCs that fit the criteria mentioned\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 11,
+      "text": "above. When we have them, we will test them by replacing the test ESC in the busbar test described\nin the above paragraph.\nCooling System Fabrication and Testing\nFor the passive cooling component, we've selected paraffin wax for its thermal energy storage\ncapacity. The paraffin wax left over from the previous semester has hardened and requires\nsignificant effort to reuse, so we will use fresh wax to submerge the batteries in a custom-designed\nbattery box. This box fits within our hull and is built with a durable Delrin base and acrylic sides,\nallowing for easy monitoring of the battery and wax condition.\nOn the active cooling front, we leveraged existing resources and new purchases to assemble our\nsystem. The pumps were inherited from a previous semester, providing a foundation for the\ncooling mechanism. However, we needed to purchase additional components to complete the\nsystem, including cooling lines and adapters, to connect and extend the functionality of the existing\npumps. We also developed a dual cooling line system that utilizes lake water as a coolant,\nintegrating insights from a relevant patent and our specific design needs. A crucial component of\nthis system is the customized four-pronged intake system, produced using 3D printing technology.\nThis intake is connected to mesh-lined cooling lines, specifically designed to prevent clogs from\nnatural debris like seaweed. This setup is tailored to maximize water flow while minimizing the\nrisk of blockages, ensuring reliable cooling under the demanding conditions of race environments.\nPropulsion System Fabrication and Testing\nThe team decided to use a dual propeller system with left and right propellers that spin in opposite\ndirections. This system will increase stability and balance in the boat's movement. The team was\nnot able to find pre-machined left and right propellers of the desired size. The propulsion team\ndecided that the propellers would be 3D printed. This ensured that the propellers could be made to\nexact specifications, within printing tolerances. Both ABS and PETG were used and tested for\nthese propellers. Informal testing determined ABS to be the most optimal choice for its impact\nresistance. Nylon was considered as a third material if the ABS and PETG were found to be of\ninsufficient strength.\nThe selected propeller design features a 200mm diameter, 317mm pitch, and an airfoil design to\nmaximize speed and efficiency. Therefore, not accounting for slippage, the theoretical speed of\nthe vessel would be:\n317mm/revolution * 4,500 revolutions/minute = 1,426,500 mm/minute = 53.18 miles per hour.\nThe actual speed will likely be significantly slower due to slippage, motor resistance, and\nefficiency concerns. This also does not consider the weight of the boat. However, the presence of\ntwo motors is likely to mitigate concerns regarding motor resistance. A custom mount was 3-D printed to incorporate the motor, pulley, and gearbox. ABS was chosen\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 12,
+      "text": "for its superior heat resistance compared to PLA and PETG.\nAs mentioned before, the belt system was selected mainly to keep the motors completely dry. The\nlower part of the propulsion system includes the belt drive system below the surface of the boat.\nPETG was selected for the 3-D printed shell due to its strong layer adhesion and resistance to\nleakage.\nTo waterproof the propulsion system, the propulsion team plans to laser cut custom EPDM rubber\ngaskets between submerged components to mitigate leakage. Rubberized washers were also used\nto mitigate leakage for individual holes.\nHowever, the areas of most concern are the propeller shafts, which must spin at over 4000 RPM\nwhile still maintaining watertightness. The propulsion team utilized a stuffing box packed with\nmarine grease to seal the propeller shaft. This technique is used by many remote-controlled boats\nand is effective due to the hydrophobic properties of grease.\nTo assess potential leakage, the propulsion team conducted an experiment using a power drill to\nspin the shaft. One end of the stuffing box was mounted in a plastic tub filled with water,\neffectively submerging that end. The grease-packed stuffing box underwent over 30 minutes of\nconstant rotation from the power drill without a single drop of leakage – enough to drain two fully\ncharged drill batteries.\nRisk\nLike all engineering tasks, there exists a difference between the optimal situation and the present\nsituation. Without unlimited time, money, and manpower, there are existing risks that we must be\naware of. We aim to mitigate the damages of risks that we identify early, during the design and\nfabrication stage. Also, there will be inevitable uncertainties on race day that we will have to\ncontrol to maintain the highest odds of success. It is in our best interest to be well aware of these\nconcerns. Maintaining consistency, this chapter will be broken up into subsystems for an intuitive\nlayout.\nHull and Component Layout\nThe heavy components matter the most when considering the layout. The batteries are completely\nenclosed and will be secured with a custom holder to ensure they stay in place. The batteries and\nthe required payload will be placed as close to the centerline of the boat as possible to ensure\nstability.\nTo create space for all of the internal components, the inner layer of the kayak was cut out.\nAlthough this solved our spacing problem, it significantly weakened the structural integrity of the\nhull. To minimize the risk of hull warpage, the hull team reinforced the hull with aluminum extrusions. However, this method introduced another protentional risk. Holes had to be drilled\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 13,
+      "text": "directly into the underside of the hull, creating numerous other avenues for water intrusion. To\nmitigate this issue, bonded rubber washers were used on the exterior in conjunction with an EPDM\ngasket on the interior. Near competition day, applying a layer of marine sealant over each holes\nfurther improve watertightness. Testing proved that even with approximately 100 pounds of weight,\nthis was sufficient to keep water out.\nElectronics\nDue to the conductive nature of water, electronics are the most delicate components of the boat.\nThis means both taking precautions for the individual electronics themselves and managing overall\nwater leakage into the boat.\nFor the low-voltage related components, this is most applicable to the ESCs that interface between\nthe high-voltage battery (energy storage) system and the propulsion system. The precaution that\nhas been taken is by purchasing and installing ESCs that are waterproof. A receiver will be attached\nto the ESC to take signals from our RC controller, which means that jumper wires and header pins\nwill be present. We will be placing these physical circuits in a waterproof container and installing\nholes for necessary cables to run in and out, in which the holes will have watertight seals formed\naround them.\nRisk related to electronic performance can be related to ensuring that the electronics will have the\nendurance required to stay running during the entire race. These risks are well manageable as the\nESCs can be endurance tested before the race, and simulations dealing with ESC thresholds and\nengagement levels can be implemented during these testing sessions.\nPropulsion\nTransmission of rotational power from withinthe hull to the outside necessitates large openings on\nthe hull. We utilized EPDM rubber gaskets between each submerged component to mitigate\nleakage. Bonded sealing washers were also used to mitigate leakage for screw holes that penetrate\nthe hull. Furthermore, a stuffing box for each propeller shaft ensures that no water enters the hull\nthrough the shaft and belt housing. As mentioned before, the stuffing box uses marine grease due\nto its hydrophobic properties.\nRust is not a big worry because the boat will ideally not be submerged long enough for this to\nbecome a problem. The entire boat will be flushed and cleaned after testing to reduce component\ndegradation before and after the competition.\nCooling\nBlockages in the open-water heat exchanger system present one critical risk we must mitigate,\nstemming from our use of lake water which might carry debris like seaweed that could clog the\nintake or cooling lines. To counter this, we developed a filter that employs a large metal mesh held\nin a 3D-printed housing. This design is engineered to deflect larger debris and sustain water intake in the event a large piece of debris does get caught on the filter. We will continuously test and\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 14,
+      "text": "refine this system based on trial runs to ensure optimal functionality and efficiency.\nAnother manageable risk is inefficient heat transfer due to insufficient submersion in paraffin wax.\nOur design utilizes paraffin wax as a passive cooling agent for the batteries, based on its proven\neffectiveness in literature. However, not submerging the batteries sufficiently could lead to\nsuboptimal heat absorption. Learning from both literature and previous team experiences, we will\nenhance the submersion from one-fifth to between one-third and one-half, thus ensuring more\neffective heat distribution and mitigation of overheating risks.\nThere are also risks from potential leakage at external cooling system connections. Our mitigation\nstrategy includes using reinforced, watertight connections that have been tested to withstand\nimpacts up to our specified safety threshold. By choosing materials and designs that exceed\nstandard requirements, we aim to ensure durability and prevent leakage.\nHowever, some risks may need ongoing monitoring due to their less predictable nature. Flow\ninstability in our open water system is one such challenge. Despite the effectiveness of open\nsystems in removing heat, unpredictable water conditions will influence their performance. Our\nresponse involves optimizing the intake design to reduce sensitivity to flow variations and\nconducting extensive tests under different conditions to gauge potential impacts on performance.\nAnother concern is the extended cooling times associated with paraffin wax during unexpected\npeaks in heat generation. While we have optimized the amount of wax and its distribution, the\ninherent properties of paraffin wax limit its ability to quickly absorb and dissipate heat. This issue\nwill be closely monitored during testing phases to determine if additional cooling strategies or\nbackup measures are necessary.\nAppendix\nReferences\n[1]S. Sunaryo and F. Yusro, “Hull Design of Solar Powered Recreational Electric Boat for\nIndonesian Waters,” E3S Web of Conferences, vol. 67, p. 03010, 2018, doi:\nhttps://doi.org/10.1051/e3sconf/20186703010.\n[2] R. Zhao, S. Zhang, J. Liu, and J. Gu, \"A review of thermal performance improving methods\nof lithium ion battery: Electrode modification and thermal management system,\" Journal of\nPower Sources, vol. 299, pp. 557-577, Sep. 2015.\n[3] C. Angelle, B Bridge, “Boat Hull Cooling and Marine-Drive System with Auxiliary Raw\nWater Cooling Reservoir,” US Patent 10,947,890 B2, Mar. 16, 2021\n[4] J. Bang, D.-W. Jerng, and H. Kim, \"Comparisons of performance and operation\ncharacteristics for closed- and open-loop passive containment cooling system design,\" Nuclear Engineering and Technology, vol. 53, no. 8, pp. 2499-2508, Aug. 2021.\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 15,
+      "text": "https://www.sciencedirect.com/science/article/pii/S1738573321000656\n[5] ASM International, “Sealants” in Engineered Materials Handbook Desk Edition. ASM\nDigital Library. [Online]. Available: https://doi\u0002org.proxy2.library.illinois.edu/10.31399/asm.hb.emde.a0003048\n[6] M. H. Irving and J. A. Kenney, “Battery operated small craft bilge pump,” U.S. Patent\n11878770 B2, Jan. 23, 2024\n[7] E. Johnson and C. Brown, “Boat shaft seal system,” U.S. Patent 11655014 B2, May 23, 2023\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "USS Illini"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "University of Illinois Urbana-Champaign"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Section: Uncrewed Craft"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Matthew Bianchi, Noah Brody, Carter Eid, Sebastian Sanchez, Allan"
+    },
+    {
+      "line": 4,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Zhu, Ethan Cho, Xiaorui Gu, Hongbo Nie, Kevin Ho, Drew Stadelman"
+    },
+    {
+      "line": 5,
+      "page_start": 0,
+      "page_end": 1,
+      "text": " Contents"
+    },
+    {
+      "line": 6,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Introduction ..................................................................................................................................... 3"
+    },
+    {
+      "line": 7,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Background Research ..................................................................................................................... 3"
+    },
+    {
+      "line": 8,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Hull Selection.............................................................................................................................. 3"
+    },
+    {
+      "line": 9,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Cooling System ........................................................................................................................... 4"
+    },
+    {
+      "line": 10,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Water Sealing .............................................................................................................................. 5"
+    },
+    {
+      "line": 11,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Design & Analysis .......................................................................................................................... 5"
+    },
+    {
+      "line": 12,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Hull Selection & Modification.................................................................................................... 5"
+    },
+    {
+      "line": 13,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Component Layout...................................................................................................................... 6"
+    },
+    {
+      "line": 14,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Propulsion Selection ................................................................................................................... 7"
+    },
+    {
+      "line": 15,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Cooling Selection ........................................................................................................................ 8"
+    },
+    {
+      "line": 16,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Electronic Equipment.................................................................................................................. 9"
+    },
+    {
+      "line": 17,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Overview of Build, Fabrication & Testing .................................................................................. 10"
+    },
+    {
+      "line": 18,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Component Layout & Hull Floatation ...................................................................................... 10"
+    },
+    {
+      "line": 19,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Electronic Fabrication Process and Testing .............................................................................. 10"
+    },
+    {
+      "line": 20,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Cooling System Fabrication and Testing .................................................................................. 11"
+    },
+    {
+      "line": 21,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Propulsion System Fabrication and Testing ............................................................................. 11"
+    },
+    {
+      "line": 22,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Risk ............................................................................................................................................... 12"
+    },
+    {
+      "line": 23,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Hull and Component Layout ..................................................................................................... 12"
+    },
+    {
+      "line": 24,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Electronics................................................................................................................................. 13"
+    },
+    {
+      "line": 25,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Propulsion ................................................................................................................................. 13"
+    },
+    {
+      "line": 26,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Cooling ...................................................................................................................................... 13"
+    },
+    {
+      "line": 27,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Appendix ....................................................................................................................................... 14"
+    },
+    {
+      "line": 28,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "References ................................................................................................................................. 14"
+    },
+    {
+      "line": 29,
+      "page_start": 1,
+      "page_end": 2,
+      "text": " Introduction"
+    },
+    {
+      "line": 30,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "The University of Illinois has dedicated ten undergraduate seniors in mechanical engineering to"
+    },
+    {
+      "line": 31,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "complete the unmanned watercraft that was started in the Spring of 2024, such that it may race in"
+    },
+    {
+      "line": 32,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "April of 2025. Through the two previous semesters, some responsibilities of building a competitor"
+    },
+    {
+      "line": 33,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "from scratch have been relieved, while many remain for us to address."
+    },
+    {
+      "line": 34,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Our team has been provided with functional motors, batteries, transmitter, receiver, a workshop,"
+    },
+    {
+      "line": 35,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "and other miscellaneous components. We have damaged electronic speed controllers and a"
+    },
+    {
+      "line": 36,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "unseaworthy boat hull."
+    },
+    {
+      "line": 37,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Background Research"
+    },
+    {
+      "line": 38,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Many of our breakthroughs in development were products of quality questions asked and extensive"
+    },
+    {
+      "line": 39,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "research undertaken. Initially, our most pressing questions related to general fabrication and design"
+    },
+    {
+      "line": 40,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "directions."
+    },
+    {
+      "line": 41,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Hull Selection"
+    },
+    {
+      "line": 42,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "We needed to settle upon a hull shape that prioritized stability as to protect our vital electronics"
+    },
+    {
+      "line": 43,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "and payload. Thus, our search became a question of which boat hull provided the greatest level of"
+    },
+    {
+      "line": 44,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "stability when exposed to external forces. Stability is defined by Sunaryo et al. [1] as the natural"
+    },
+    {
+      "line": 45,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "self-righting force of a body that results from a moment pair between the center of gravity of the"
+    },
+    {
+      "line": 46,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "boat and its instantaneous center of buoyancy. See Figure 1 below."
+    },
+    {
+      "line": 47,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Figure 1. Positive and Negative Self-Righting Force"
+    },
+    {
+      "line": 48,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "It is clear to see that a stable hull design would have a sharp increase in the righting moment as a"
+    },
+    {
+      "line": 49,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "function of the heeling angle of the boat. Essentially, a stable hull design will aggressively attempt"
+    },
+    {
+      "line": 50,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "to righten itself even at small rocking angles. To analyze this property, Sunaryo et al. used Maxsurf"
+    },
+    {
+      "line": 51,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "software to plot the self-righting moment of the catamaran style boat as a function of heeling angle,"
+    },
+    {
+      "line": 52,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "shown in Figure 2. The steep increase in rightening moment at small heeling angles is readily"
+    },
+    {
+      "line": 53,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "observed. Figure 2. Self-Righting Moment vs. Heeling Angle"
+    },
+    {
+      "line": 54,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "The catamaran is composed of two thin hydrodynamic hulls mounted side by side. The wide base"
+    },
+    {
+      "line": 55,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "of the catamaran explains the great level of stability present in Figure 2. The simulation ran by"
+    },
+    {
+      "line": 56,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Sunaryo et al. provided insight to our team to help select a proper hull. Namely, we were to search"
+    },
+    {
+      "line": 57,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "for a hull that strongly and quickly wanted to righten itself even when rocked."
+    },
+    {
+      "line": 58,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Cooling System"
+    },
+    {
+      "line": 59,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "For the motors, batteries, and electronics system to not overheat, an efficient cooling system is"
+    },
+    {
+      "line": 60,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "required. Sufficient literature was found on paraffin wax, as well as open and closed loop cooling"
+    },
+    {
+      "line": 61,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "systems. These are therefore assumed to be the cooling systems most frequently seen on this type"
+    },
+    {
+      "line": 62,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "of watercraft."
+    },
+    {
+      "line": 63,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Based on the section 4.4 of “A review of thermal performance improving methods of lithium-ion"
+    },
+    {
+      "line": 64,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "battery: Electrode modification and thermal management system” written by Zhao, Zhang, et al."
+    },
+    {
+      "line": 65,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "[2], paraffin wax is the most researched method for Li-ion battery cooling for a stationary system."
+    },
+    {
+      "line": 66,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "This solution has a low cost, but it does add substantial weight. A disadvantage of this method is"
+    },
+    {
+      "line": 67,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "that paraffin wax has low heat conductivity, meaning not much heat is removed from the system"
+    },
+    {
+      "line": 68,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "but rather is stored in the paraffin wax itself. This means that heat surges and extended runtimes"
+    },
+    {
+      "line": 69,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "can lead to heat buildup in the wax, increased operating temperature and battery damage."
+    },
+    {
+      "line": 70,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "To compensate, we will be combining our paraffin wax cooling with active heat removal in the"
+    },
+    {
+      "line": 71,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "form of an open-water heat exchanger system. We used a patent [3] as reference, which we plan"
+    },
+    {
+      "line": 72,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "on improving in our implementation. The patent discusses a system in which water is pumped"
+    },
+    {
+      "line": 73,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "from the lake through the cooling system and then back out into the lake–without affecting the"
+    },
+    {
+      "line": 74,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "propeller. The craft that the patent was designed for is similar in size to ours with similar needs."
+    },
+    {
+      "line": 75,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "However, the patent warns about shallow waters that may have branches, vegetation, rocks, or"
+    },
+    {
+      "line": 76,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "reefs. Our sponsor indicated that for competition in Virginia such items would not be"
+    },
+    {
+      "line": 77,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "encountered. Nevertheless, the inlet for the open loop will be covered with a fine mesh, allowing"
+    },
+    {
+      "line": 78,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "water to flow freely with minimal minor losses while preventing debris and aquatic flora from"
+    },
+    {
+      "line": 79,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "entering and damaging our water pumps. Bang, Jerng, et al. conducted a study [4] on whether open loop or closed loop systems were more"
+    },
+    {
+      "line": 80,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "effective in heat removal and overall efficiency. They found that both systems provided sufficient"
+    },
+    {
+      "line": 81,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "cooling for their application, and the open system performed better for heat-removal performance."
+    },
+    {
+      "line": 82,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "They warned that with open systems flow instability or different water patterns could affect the"
+    },
+    {
+      "line": 83,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "efficiency of the system. However, such aspects are not expected to be seen in the water on"
+    },
+    {
+      "line": 84,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "competition day."
+    },
+    {
+      "line": 85,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Water Sealing"
+    },
+    {
+      "line": 86,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "To ensure that the sensitive electronics are protected from splashing, proper water sealing of"
+    },
+    {
+      "line": 87,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "internal components is necessary. On a small boat, sealing can be broken down into three parts:"
+    },
+    {
+      "line": 88,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "waterproofing of the hull; internal waterproofing of the batteries, wires, and electronics; and active"
+    },
+    {
+      "line": 89,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "removal of water using a bilge pump."
+    },
+    {
+      "line": 90,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "In the chapter “Sealants” in the Engineered Materials Handbook Desk Edition [5], the ASM"
+    },
+    {
+      "line": 91,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "provides an in-depth analysis of different types of sealants. Pure silicones, as used in the previous"
+    },
+    {
+      "line": 92,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "iteration, have excellent performance and can strain more than 25% prior to failure. This process"
+    },
+    {
+      "line": 93,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "is critical for a boat hull where waves can create impact loading on the hull. Additionally, silicone"
+    },
+    {
+      "line": 94,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "sealants typically last over 10 years, operate at a wide range of temperatures up to 400 °F, and"
+    },
+    {
+      "line": 95,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "bond to most surfaces without a primer, although they do take several days to fully cure. Another"
+    },
+    {
+      "line": 96,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "option would be to use vinyl plastisol, commonly found in threaded pipe connectors. These also"
+    },
+    {
+      "line": 97,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "have excellent flexibility and vibrational resistance, making them an equally viable option for a"
+    },
+    {
+      "line": 98,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "boat hull."
+    },
+    {
+      "line": 99,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "A potential plan for the water removal system is from patents such as [6]. This patent proposes a"
+    },
+    {
+      "line": 100,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "lightweight bilge pump that can be temporarily fastened anywhere in the bilge, the lowest part of"
+    },
+    {
+      "line": 101,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "a vessel to collect water through an integrated strainer. Water is pumped through a low-voltage"
+    },
+    {
+      "line": 102,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "inline pump and attachable hose, removing the water over the rails rather than holes drilled in the"
+    },
+    {
+      "line": 103,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "hull."
+    },
+    {
+      "line": 104,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "The research done during the background stage provided our team with insight to make grounded"
+    },
+    {
+      "line": 105,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "decisions when it came to the design of our boat."
+    },
+    {
+      "line": 106,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Design & Analysis"
+    },
+    {
+      "line": 107,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Hull Selection & Modification"
+    },
+    {
+      "line": 108,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Hull selected factored in price, workability, hydrodynamics, weight capacity, and size. In the end,"
+    },
+    {
+      "line": 109,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "a modified Wave 60 Youth Kayak from Lifetime Fitness was selected as the hull for its competitive"
+    },
+    {
+      "line": 110,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "pricing, compact size, and streamlined shape. The kayak was constructed from two layers of blow\u0002molded high-density polyethylene (HDPE). HDPE has exceptional strength-to-weight ratio,"
+    },
+    {
+      "line": 111,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "durability, and chemical resistance, while retaining good workability. The team removed the"
+    },
+    {
+      "line": 112,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "topmost layer to make room for the boat’s components, lowering the center of gravity and making waterproofing easier. Plastic welding was used to patch drainage holes that were in the hull. An"
+    },
+    {
+      "line": 113,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "acrylic lid lays on top of the hull and protects the internal components from splashes and large"
+    },
+    {
+      "line": 114,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "waves."
+    },
+    {
+      "line": 115,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Inspired by the previous team, we also plan to mount catamaran-style stabilizers on either side of"
+    },
+    {
+      "line": 116,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "the kayak, as shown in Figure 3. This will greatly increase the hull’s stability on the roll axis."
+    },
+    {
+      "line": 117,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Figure 3: Rightening Moment Provided by Catamaran-Style Hulls"
+    },
+    {
+      "line": 118,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "A quick word on the math shown in the above figure: with the buoy just fully submerged, the force"
+    },
+    {
+      "line": 119,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "of buoyancy is a product of gravity, volume of the buoy, and the difference in density between the"
+    },
+    {
+      "line": 120,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "buoy and water. The rightening moment is this buoyancy force times the horizontal distance to the"
+    },
+    {
+      "line": 121,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "boat. Given that our boat does not have a lot of rotational inertia in the perpendicular axis, the"
+    },
+    {
+      "line": 122,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "buoys are modeled to stabilize the boat well."
+    },
+    {
+      "line": 123,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Component Layout"
+    },
+    {
+      "line": 124,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "To maintain a center of gravity in the geometrical center of the boat, the components were"
+    },
+    {
+      "line": 125,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "approximated as point-masses and the center of gravity was calculated, as shown in Figure 4.Figure 4. Center of Mass Approximation"
+    },
+    {
+      "line": 126,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Selecting the position of masses B and C, representing the batteries and propulsion equipment"
+    },
+    {
+      "line": 127,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "respectively, the position of the payload was solved to be 1.74 meters from the back of the boat."
+    },
+    {
+      "line": 128,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Since the boat is 1.83 meters, it will be placed in the front of the boat to counteract the mass of the"
+    },
+    {
+      "line": 129,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "batteries and propulsion in the rear."
+    },
+    {
+      "line": 130,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Propulsion Selection"
+    },
+    {
+      "line": 131,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "The twin-motor propulsion system is powered by two 56-series 56123/550KV motors from SSS"
+    },
+    {
+      "line": 132,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "motors. As these motors are capable of spinning at up to 24,420 RPM with the 44.4V batteries"
+    },
+    {
+      "line": 133,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "selected by the electrical team, a 4:1 gearbox from Neugart was selected to improve torque and"
+    },
+    {
+      "line": 134,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "reduce the motor speed. However, as the gearbox is only rated to spin at 18,000 RPM, the final"
+    },
+    {
+      "line": 135,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "shaft speed becomes 4,500 RPM."
+    },
+    {
+      "line": 136,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "The design team opted for a belt-drive propulsion system, selecting timing belts with a 0.2” pitch"
+    },
+    {
+      "line": 137,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "and ⅜” width. A 17” belt diameter was chosen to allow for a propeller clearance of 15% of the"
+    },
+    {
+      "line": 138,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "propeller diameter. This allows the team to keep the motors within the hull walls for balance and"
+    },
+    {
+      "line": 139,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "waterproofing. The research done on hull sealing will ensure that the housing for the belt is"
+    },
+    {
+      "line": 140,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "properly attached and sealed against the outer surface of the hull. Figure 5 shows a CAD design"
+    },
+    {
+      "line": 141,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "of the complete propulsion system. Figure 5. CAD design of the complete propulsion system"
+    },
+    {
+      "line": 142,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "The propulsion team was left with limited choices for a propeller. With a twin-engine setup, both"
+    },
+    {
+      "line": 143,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "left- and right-handed propellers were necessary for smooth operation. Such combinations of"
+    },
+    {
+      "line": 144,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "propellers proved difficult to obtain through online shopping, as most boat propellers available"
+    },
+    {
+      "line": 145,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "were either hobby-size propellers with a diameter of below 10cm, large, expensive propellers of"
+    },
+    {
+      "line": 146,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "diameters of over 30cm intended for manned boats, or available in only left-handed or right-handed,"
+    },
+    {
+      "line": 147,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "but not both."
+    },
+    {
+      "line": 148,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "As such, the team opted to 3-D print an open-source propeller design, mirroring the CAD file to"
+    },
+    {
+      "line": 149,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "reverse the direction of the propeller and adding additional holes to accommodate the 10mm shaft."
+    },
+    {
+      "line": 150,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Cooling Selection"
+    },
+    {
+      "line": 151,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "To effectively keep our electric propulsion boat cool during operation, we decided to integrate a"
+    },
+    {
+      "line": 152,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "dual-strategy approach centered around an open-water heat exchanger system and paraffin wax as"
+    },
+    {
+      "line": 153,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "a phase-change cooling agent, inspired and validated by extensive literature review."
+    },
+    {
+      "line": 154,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Starting with the paraffin wax, this method comes into play due to its proven effectiveness in"
+    },
+    {
+      "line": 155,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "thermal management for lithium-ion batteries, as described by Zhao, Zhang, et al [2]. The use of"
+    },
+    {
+      "line": 156,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "paraffin wax is particularly appealing because of its low cost, substantial latent heat capacity, and"
+    },
+    {
+      "line": 157,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "low toxicity. It is ideal for absorbing and distributing heat during peak load times, as the high latent"
+    },
+    {
+      "line": 158,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "heat capacity absorbs large amounts of energy without raising the temperature. Unlike the previous"
+    },
+    {
+      "line": 159,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "team’s implementation, we increased the submersion of the batteries from one-third to almost the entire battery, increasing the total heat capacity of the wax and providing a greater area for the heat"
+    },
+    {
+      "line": 160,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "to transfer from the batteries into the wax."
+    },
+    {
+      "line": 161,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "For active cooling, we employed an open-water heat exchanger system, as outlined in the patent"
+    },
+    {
+      "line": 162,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "we found. This system will use lake water, pumped through dual cooling lines, to absorb heat"
+    },
+    {
+      "line": 163,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "directly from the motors, ESCs, and batteries. The design of this system considered the patent’s"
+    },
+    {
+      "line": 164,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "discussion on environmental considerations, ensuring that our intake and expulsion mechanisms"
+    },
+    {
+      "line": 165,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "will adequately handle potential blockages, despite anticipating clean competition waters. This"
+    },
+    {
+      "line": 166,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "method was particularly appealing due to the effectiveness of open systems in heat removal, as"
+    },
+    {
+      "line": 167,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "confirmed by the study from Bang, Jerng, et al., who noted that open systems, despite their"
+    },
+    {
+      "line": 168,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "susceptibility to flow instability, performed superiorly in their test conditions which are akin to"
+    },
+    {
+      "line": 169,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "our competition scenario. In addition to the performance advantages of a open-loop cooling system,"
+    },
+    {
+      "line": 170,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "we deemed that it is less complex and lighter than a close-loop cooling system."
+    },
+    {
+      "line": 171,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "These combined methods—utilizing the passive cooling properties of paraffin wax and the"
+    },
+    {
+      "line": 172,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "dynamic, active cooling from lake water—ensuring that all high-power components within our"
+    },
+    {
+      "line": 173,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "boat remain below the critical temperature threshold of 110°C."
+    },
+    {
+      "line": 174,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Electronic Design"
+    },
+    {
+      "line": 175,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "While many components were inherited from previous teams such that our freedom of selection"
+    },
+    {
+      "line": 176,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "was limited, we had to understand exactly what we were working with such that we could"
+    },
+    {
+      "line": 177,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "supplement our existing materials with compatible components."
+    },
+    {
+      "line": 178,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Our team has (8) 44.4v 10000mAh LiPo batteries, with a C rating of 30. With at most (4) batteries"
+    },
+    {
+      "line": 179,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "wired in parallel per motor, the effective voltage would remain at 44.4v, while the capacity would"
+    },
+    {
+      "line": 180,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "jump to 40000mAh. We chose parallel wiring because keeping the voltage constant and increasing"
+    },
+    {
+      "line": 181,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "our battery capacity aligned more with our team’s values of prioritizing completion of the race"
+    },
+    {
+      "line": 182,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "over speed. The C-rating indicates a peak current to 1200A for 2 minutes from the four-battery"
+    },
+    {
+      "line": 183,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "circuit, although each circuit would include at least 15 ohms of resistance through the high-current"
+    },
+    {
+      "line": 184,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "connectors our team is using. Thus, the maximum current that could be delivered to the electronic"
+    },
+    {
+      "line": 185,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "components would be ~3A, via Ohm’s law."
+    },
+    {
+      "line": 186,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "With these numbers in mind, our team is currently searching for electronic speed controllers that"
+    },
+    {
+      "line": 187,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "can handle 12S LiPo configuration, as that is the voltage of our battery. With each LiPo cell"
+    },
+    {
+      "line": 188,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "measuring 3.7V, 12 cells wired in series would sum to 44.4v. Ideally, the speed controllers would"
+    },
+    {
+      "line": 189,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "be waterproof, but this would be a risk we would have to mitigate otherwise."
+    },
+    {
+      "line": 190,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Our Flysky transmitter talks with our Flysky receiver on two channels, both supporting pulse\u0002width modulation via joystick control. The receiver is powered by a small onboard 4.8V battery."
+    },
+    {
+      "line": 191,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "The two channels will serve to control the left and right motor speed. Simplicity was chosen to"
+    },
+    {
+      "line": 192,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "avoid programming errors that may arise from the implementation of more intricate software to"
+    },
+    {
+      "line": 193,
+      "page_start": 8,
+      "page_end": 9,
+      "text": "host more intuitive controls. Overview of Build, Fabrication & Testing"
+    },
+    {
+      "line": 194,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Component Layout & Hull Flotation"
+    },
+    {
+      "line": 195,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Our team is not yet ready to assemble with the appropriate components from mentioned above. To"
+    },
+    {
+      "line": 196,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "test, water buckets were used to simulate the weight of the final systems, and the boat was placed"
+    },
+    {
+      "line": 197,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "in a pool to test floatation. Freeboard length is measured, as well as stability by measuring the rate"
+    },
+    {
+      "line": 198,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "at which the boat recovered from external forces rocking it. Different forms of waterproofing were"
+    },
+    {
+      "line": 199,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "tested on the previous boat hull as they are the exact same model. Different combinations of"
+    },
+    {
+      "line": 200,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "silicones and plastic welding were used on different holes to check watertightness. An additional"
+    },
+    {
+      "line": 201,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "HDPE panel was used to seal off the back end of the hull where the waterline rose to about an inch"
+    },
+    {
+      "line": 202,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "from the top edge."
+    },
+    {
+      "line": 203,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Electronic Fabrication Process and Testing"
+    },
+    {
+      "line": 204,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "The batteries are wired to a bus bar that collects all the batteries’ current, and outputs them through"
+    },
+    {
+      "line": 205,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "8 AWG aluminum wires in conduit, suitable for roughly 50A. There are 150A fuses wired in series"
+    },
+    {
+      "line": 206,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "with the main cables to prevent overcurrent. The busbar is shown below in Figure 5."
+    },
+    {
+      "line": 207,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Figure 5. Battery Bus bar with fuses"
+    },
+    {
+      "line": 208,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "To test the busbar, several batteries are wired to it, and the output leads are connected to a test"
+    },
+    {
+      "line": 209,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "ESC. The ESC is connected to the motor, and controlled using the transmitter to cycle the motor"
+    },
+    {
+      "line": 210,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "through the slowest speed setting through the fastest. The motor, ESC, and batteries are monitored"
+    },
+    {
+      "line": 211,
+      "page_start": 9,
+      "page_end": 10,
+      "text": "for excess heat accumulation as well as current and voltage using a multimeter. We are in the process of selecting and purchasing functional ESCs that fit the criteria mentioned"
+    },
+    {
+      "line": 212,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "above. When we have them, we will test them by replacing the test ESC in the busbar test described"
+    },
+    {
+      "line": 213,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "in the above paragraph."
+    },
+    {
+      "line": 214,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Cooling System Fabrication and Testing"
+    },
+    {
+      "line": 215,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "For the passive cooling component, we've selected paraffin wax for its thermal energy storage"
+    },
+    {
+      "line": 216,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "capacity. The paraffin wax left over from the previous semester has hardened and requires"
+    },
+    {
+      "line": 217,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "significant effort to reuse, so we will use fresh wax to submerge the batteries in a custom-designed"
+    },
+    {
+      "line": 218,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "battery box. This box fits within our hull and is built with a durable Delrin base and acrylic sides,"
+    },
+    {
+      "line": 219,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "allowing for easy monitoring of the battery and wax condition."
+    },
+    {
+      "line": 220,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "On the active cooling front, we leveraged existing resources and new purchases to assemble our"
+    },
+    {
+      "line": 221,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "system. The pumps were inherited from a previous semester, providing a foundation for the"
+    },
+    {
+      "line": 222,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "cooling mechanism. However, we needed to purchase additional components to complete the"
+    },
+    {
+      "line": 223,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "system, including cooling lines and adapters, to connect and extend the functionality of the existing"
+    },
+    {
+      "line": 224,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "pumps. We also developed a dual cooling line system that utilizes lake water as a coolant,"
+    },
+    {
+      "line": 225,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "integrating insights from a relevant patent and our specific design needs. A crucial component of"
+    },
+    {
+      "line": 226,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "this system is the customized four-pronged intake system, produced using 3D printing technology."
+    },
+    {
+      "line": 227,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "This intake is connected to mesh-lined cooling lines, specifically designed to prevent clogs from"
+    },
+    {
+      "line": 228,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "natural debris like seaweed. This setup is tailored to maximize water flow while minimizing the"
+    },
+    {
+      "line": 229,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "risk of blockages, ensuring reliable cooling under the demanding conditions of race environments."
+    },
+    {
+      "line": 230,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Propulsion System Fabrication and Testing"
+    },
+    {
+      "line": 231,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "The team decided to use a dual propeller system with left and right propellers that spin in opposite"
+    },
+    {
+      "line": 232,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "directions. This system will increase stability and balance in the boat's movement. The team was"
+    },
+    {
+      "line": 233,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "not able to find pre-machined left and right propellers of the desired size. The propulsion team"
+    },
+    {
+      "line": 234,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "decided that the propellers would be 3D printed. This ensured that the propellers could be made to"
+    },
+    {
+      "line": 235,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "exact specifications, within printing tolerances. Both ABS and PETG were used and tested for"
+    },
+    {
+      "line": 236,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "these propellers. Informal testing determined ABS to be the most optimal choice for its impact"
+    },
+    {
+      "line": 237,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "resistance. Nylon was considered as a third material if the ABS and PETG were found to be of"
+    },
+    {
+      "line": 238,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "insufficient strength."
+    },
+    {
+      "line": 239,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "The selected propeller design features a 200mm diameter, 317mm pitch, and an airfoil design to"
+    },
+    {
+      "line": 240,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "maximize speed and efficiency. Therefore, not accounting for slippage, the theoretical speed of"
+    },
+    {
+      "line": 241,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "the vessel would be:"
+    },
+    {
+      "line": 242,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "317mm/revolution * 4,500 revolutions/minute = 1,426,500 mm/minute = 53.18 miles per hour."
+    },
+    {
+      "line": 243,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "The actual speed will likely be significantly slower due to slippage, motor resistance, and"
+    },
+    {
+      "line": 244,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "efficiency concerns. This also does not consider the weight of the boat. However, the presence of"
+    },
+    {
+      "line": 245,
+      "page_start": 10,
+      "page_end": 11,
+      "text": "two motors is likely to mitigate concerns regarding motor resistance. A custom mount was 3-D printed to incorporate the motor, pulley, and gearbox. ABS was chosen"
+    },
+    {
+      "line": 246,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "for its superior heat resistance compared to PLA and PETG."
+    },
+    {
+      "line": 247,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "As mentioned before, the belt system was selected mainly to keep the motors completely dry. The"
+    },
+    {
+      "line": 248,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "lower part of the propulsion system includes the belt drive system below the surface of the boat."
+    },
+    {
+      "line": 249,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "PETG was selected for the 3-D printed shell due to its strong layer adhesion and resistance to"
+    },
+    {
+      "line": 250,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "leakage."
+    },
+    {
+      "line": 251,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "To waterproof the propulsion system, the propulsion team plans to laser cut custom EPDM rubber"
+    },
+    {
+      "line": 252,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "gaskets between submerged components to mitigate leakage. Rubberized washers were also used"
+    },
+    {
+      "line": 253,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "to mitigate leakage for individual holes."
+    },
+    {
+      "line": 254,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "However, the areas of most concern are the propeller shafts, which must spin at over 4000 RPM"
+    },
+    {
+      "line": 255,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "while still maintaining watertightness. The propulsion team utilized a stuffing box packed with"
+    },
+    {
+      "line": 256,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "marine grease to seal the propeller shaft. This technique is used by many remote-controlled boats"
+    },
+    {
+      "line": 257,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "and is effective due to the hydrophobic properties of grease."
+    },
+    {
+      "line": 258,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "To assess potential leakage, the propulsion team conducted an experiment using a power drill to"
+    },
+    {
+      "line": 259,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "spin the shaft. One end of the stuffing box was mounted in a plastic tub filled with water,"
+    },
+    {
+      "line": 260,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "effectively submerging that end. The grease-packed stuffing box underwent over 30 minutes of"
+    },
+    {
+      "line": 261,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "constant rotation from the power drill without a single drop of leakage – enough to drain two fully"
+    },
+    {
+      "line": 262,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "charged drill batteries."
+    },
+    {
+      "line": 263,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Risk"
+    },
+    {
+      "line": 264,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Like all engineering tasks, there exists a difference between the optimal situation and the present"
+    },
+    {
+      "line": 265,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "situation. Without unlimited time, money, and manpower, there are existing risks that we must be"
+    },
+    {
+      "line": 266,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "aware of. We aim to mitigate the damages of risks that we identify early, during the design and"
+    },
+    {
+      "line": 267,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "fabrication stage. Also, there will be inevitable uncertainties on race day that we will have to"
+    },
+    {
+      "line": 268,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "control to maintain the highest odds of success. It is in our best interest to be well aware of these"
+    },
+    {
+      "line": 269,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "concerns. Maintaining consistency, this chapter will be broken up into subsystems for an intuitive"
+    },
+    {
+      "line": 270,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "layout."
+    },
+    {
+      "line": 271,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Hull and Component Layout"
+    },
+    {
+      "line": 272,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "The heavy components matter the most when considering the layout. The batteries are completely"
+    },
+    {
+      "line": 273,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "enclosed and will be secured with a custom holder to ensure they stay in place. The batteries and"
+    },
+    {
+      "line": 274,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "the required payload will be placed as close to the centerline of the boat as possible to ensure"
+    },
+    {
+      "line": 275,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "stability."
+    },
+    {
+      "line": 276,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "To create space for all of the internal components, the inner layer of the kayak was cut out."
+    },
+    {
+      "line": 277,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Although this solved our spacing problem, it significantly weakened the structural integrity of the"
+    },
+    {
+      "line": 278,
+      "page_start": 11,
+      "page_end": 12,
+      "text": "hull. To minimize the risk of hull warpage, the hull team reinforced the hull with aluminum extrusions. However, this method introduced another protentional risk. Holes had to be drilled"
+    },
+    {
+      "line": 279,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "directly into the underside of the hull, creating numerous other avenues for water intrusion. To"
+    },
+    {
+      "line": 280,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "mitigate this issue, bonded rubber washers were used on the exterior in conjunction with an EPDM"
+    },
+    {
+      "line": 281,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "gasket on the interior. Near competition day, applying a layer of marine sealant over each holes"
+    },
+    {
+      "line": 282,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "further improve watertightness. Testing proved that even with approximately 100 pounds of weight,"
+    },
+    {
+      "line": 283,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "this was sufficient to keep water out."
+    },
+    {
+      "line": 284,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Electronics"
+    },
+    {
+      "line": 285,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Due to the conductive nature of water, electronics are the most delicate components of the boat."
+    },
+    {
+      "line": 286,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "This means both taking precautions for the individual electronics themselves and managing overall"
+    },
+    {
+      "line": 287,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "water leakage into the boat."
+    },
+    {
+      "line": 288,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "For the low-voltage related components, this is most applicable to the ESCs that interface between"
+    },
+    {
+      "line": 289,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "the high-voltage battery (energy storage) system and the propulsion system. The precaution that"
+    },
+    {
+      "line": 290,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "has been taken is by purchasing and installing ESCs that are waterproof. A receiver will be attached"
+    },
+    {
+      "line": 291,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "to the ESC to take signals from our RC controller, which means that jumper wires and header pins"
+    },
+    {
+      "line": 292,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "will be present. We will be placing these physical circuits in a waterproof container and installing"
+    },
+    {
+      "line": 293,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "holes for necessary cables to run in and out, in which the holes will have watertight seals formed"
+    },
+    {
+      "line": 294,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "around them."
+    },
+    {
+      "line": 295,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Risk related to electronic performance can be related to ensuring that the electronics will have the"
+    },
+    {
+      "line": 296,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "endurance required to stay running during the entire race. These risks are well manageable as the"
+    },
+    {
+      "line": 297,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "ESCs can be endurance tested before the race, and simulations dealing with ESC thresholds and"
+    },
+    {
+      "line": 298,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "engagement levels can be implemented during these testing sessions."
+    },
+    {
+      "line": 299,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Propulsion"
+    },
+    {
+      "line": 300,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Transmission of rotational power from withinthe hull to the outside necessitates large openings on"
+    },
+    {
+      "line": 301,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "the hull. We utilized EPDM rubber gaskets between each submerged component to mitigate"
+    },
+    {
+      "line": 302,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "leakage. Bonded sealing washers were also used to mitigate leakage for screw holes that penetrate"
+    },
+    {
+      "line": 303,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "the hull. Furthermore, a stuffing box for each propeller shaft ensures that no water enters the hull"
+    },
+    {
+      "line": 304,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "through the shaft and belt housing. As mentioned before, the stuffing box uses marine grease due"
+    },
+    {
+      "line": 305,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "to its hydrophobic properties."
+    },
+    {
+      "line": 306,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Rust is not a big worry because the boat will ideally not be submerged long enough for this to"
+    },
+    {
+      "line": 307,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "become a problem. The entire boat will be flushed and cleaned after testing to reduce component"
+    },
+    {
+      "line": 308,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "degradation before and after the competition."
+    },
+    {
+      "line": 309,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Cooling"
+    },
+    {
+      "line": 310,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Blockages in the open-water heat exchanger system present one critical risk we must mitigate,"
+    },
+    {
+      "line": 311,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "stemming from our use of lake water which might carry debris like seaweed that could clog the"
+    },
+    {
+      "line": 312,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "intake or cooling lines. To counter this, we developed a filter that employs a large metal mesh held"
+    },
+    {
+      "line": 313,
+      "page_start": 12,
+      "page_end": 13,
+      "text": "in a 3D-printed housing. This design is engineered to deflect larger debris and sustain water intake in the event a large piece of debris does get caught on the filter. We will continuously test and"
+    },
+    {
+      "line": 314,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "refine this system based on trial runs to ensure optimal functionality and efficiency."
+    },
+    {
+      "line": 315,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Another manageable risk is inefficient heat transfer due to insufficient submersion in paraffin wax."
+    },
+    {
+      "line": 316,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Our design utilizes paraffin wax as a passive cooling agent for the batteries, based on its proven"
+    },
+    {
+      "line": 317,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "effectiveness in literature. However, not submerging the batteries sufficiently could lead to"
+    },
+    {
+      "line": 318,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "suboptimal heat absorption. Learning from both literature and previous team experiences, we will"
+    },
+    {
+      "line": 319,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "enhance the submersion from one-fifth to between one-third and one-half, thus ensuring more"
+    },
+    {
+      "line": 320,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "effective heat distribution and mitigation of overheating risks."
+    },
+    {
+      "line": 321,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "There are also risks from potential leakage at external cooling system connections. Our mitigation"
+    },
+    {
+      "line": 322,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "strategy includes using reinforced, watertight connections that have been tested to withstand"
+    },
+    {
+      "line": 323,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "impacts up to our specified safety threshold. By choosing materials and designs that exceed"
+    },
+    {
+      "line": 324,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "standard requirements, we aim to ensure durability and prevent leakage."
+    },
+    {
+      "line": 325,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "However, some risks may need ongoing monitoring due to their less predictable nature. Flow"
+    },
+    {
+      "line": 326,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "instability in our open water system is one such challenge. Despite the effectiveness of open"
+    },
+    {
+      "line": 327,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "systems in removing heat, unpredictable water conditions will influence their performance. Our"
+    },
+    {
+      "line": 328,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "response involves optimizing the intake design to reduce sensitivity to flow variations and"
+    },
+    {
+      "line": 329,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "conducting extensive tests under different conditions to gauge potential impacts on performance."
+    },
+    {
+      "line": 330,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Another concern is the extended cooling times associated with paraffin wax during unexpected"
+    },
+    {
+      "line": 331,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "peaks in heat generation. While we have optimized the amount of wax and its distribution, the"
+    },
+    {
+      "line": 332,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "inherent properties of paraffin wax limit its ability to quickly absorb and dissipate heat. This issue"
+    },
+    {
+      "line": 333,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "will be closely monitored during testing phases to determine if additional cooling strategies or"
+    },
+    {
+      "line": 334,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "backup measures are necessary."
+    },
+    {
+      "line": 335,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Appendix"
+    },
+    {
+      "line": 336,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "References"
+    },
+    {
+      "line": 337,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "[1]S. Sunaryo and F. Yusro, “Hull Design of Solar Powered Recreational Electric Boat for"
+    },
+    {
+      "line": 338,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Indonesian Waters,” E3S Web of Conferences, vol. 67, p. 03010, 2018, doi:"
+    },
+    {
+      "line": 339,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "https://doi.org/10.1051/e3sconf/20186703010."
+    },
+    {
+      "line": 340,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "[2] R. Zhao, S. Zhang, J. Liu, and J. Gu, \"A review of thermal performance improving methods"
+    },
+    {
+      "line": 341,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "of lithium ion battery: Electrode modification and thermal management system,\" Journal of"
+    },
+    {
+      "line": 342,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Power Sources, vol. 299, pp. 557-577, Sep. 2015."
+    },
+    {
+      "line": 343,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "[3] C. Angelle, B Bridge, “Boat Hull Cooling and Marine-Drive System with Auxiliary Raw"
+    },
+    {
+      "line": 344,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Water Cooling Reservoir,” US Patent 10,947,890 B2, Mar. 16, 2021"
+    },
+    {
+      "line": 345,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "[4] J. Bang, D.-W. Jerng, and H. Kim, \"Comparisons of performance and operation"
+    },
+    {
+      "line": 346,
+      "page_start": 13,
+      "page_end": 14,
+      "text": "characteristics for closed- and open-loop passive containment cooling system design,\" Nuclear Engineering and Technology, vol. 53, no. 8, pp. 2499-2508, Aug. 2021."
+    },
+    {
+      "line": 347,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "https://www.sciencedirect.com/science/article/pii/S1738573321000656"
+    },
+    {
+      "line": 348,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "[5] ASM International, “Sealants” in Engineered Materials Handbook Desk Edition. ASM"
+    },
+    {
+      "line": 349,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Digital Library. [Online]. Available: https://doi\u0002org.proxy2.library.illinois.edu/10.31399/asm.hb.emde.a0003048"
+    },
+    {
+      "line": 350,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "[6] M. H. Irving and J. A. Kenney, “Battery operated small craft bilge pump,” U.S. Patent"
+    },
+    {
+      "line": 351,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "11878770 B2, Jan. 23, 2024"
+    },
+    {
+      "line": 352,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "[7] E. Johnson and C. Brown, “Boat shaft seal system,” U.S. Patent 11655014 B2, May 23, 2023"
+    }
+  ],
+  "source_line_count": 353,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}

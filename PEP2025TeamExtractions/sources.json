@@ -1,0 +1,570 @@
+{
+  "competition_year": 2025,
+  "source": "https://www.navalengineers.org/PEP25",
+  "discovered_at": "2026-10-21",
+  "scope": "Publicly linked PEP25 uncrewed papers; includes earlier papers for relevant PEP26 teams and additional PEP25 competitors. Not asserted to be a complete 30-entry roster.",
+  "teams": [
+    {
+      "team": "William & Mary",
+      "slug": "WilliamMary",
+      "team_page": "https://www.navalengineers.org/WilliamMary",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/William_Mary/WilliamAndMary-PEP-CompetitionWhitePaper.pdf",
+          "link_label": "Click here to look at their 2025 white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 10
+        }
+      ]
+    },
+    {
+      "team": "Virginia Commonwealth University",
+      "slug": "VCU",
+      "team_page": "https://www.navalengineers.org/VCU",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/VCU/VCU-PEP25-WhitePaperFinal_Compressed.pdf",
+          "link_label": "Click here to look at their 2025 white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 17
+        }
+      ]
+    },
+    {
+      "team": "North Carolina State",
+      "slug": "NCState",
+      "team_page": "https://www.navalengineers.org/NCState",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. SharePoint link: browser retrieval could not access the document; sign-in may be required.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://navalengineers.sharepoint.com/%3Ab%3A/g/EQPLyrU7dqROouenSizomMIBbrYtnm8G5i2GIX-s3gCI9A",
+          "link_label": "Click here to look at their 2025 white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": false,
+          "web_page_count": null
+        }
+      ]
+    },
+    {
+      "team": "University of Illinois",
+      "slug": "Illinois",
+      "team_page": "https://www.navalengineers.org/Illinois",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Illinois/UIUC-2025.3.25_ASNE_WhitePaper.pdf?ver=ZKMX6Ku6GoxzC4g3jfHb9Q%3D%3D",
+          "link_label": "Click here to look at their 2025 white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 15
+        }
+      ]
+    },
+    {
+      "team": "University of Virginia",
+      "slug": "UVA",
+      "team_page": "https://www.navalengineers.org/UVA",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/UVa/UVA-PEP2025FinalPaper_Min.pdf",
+          "link_label": "Click here to look at their 2025 white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": false,
+          "web_page_count": null
+        }
+      ]
+    },
+    {
+      "team": "University of Pittsburgh",
+      "slug": "PITT",
+      "team_page": "https://www.navalengineers.org/PITT",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/PITT/PittsburghElectricPropulsionPaper.pdf",
+          "link_label": "Click here to look at their 2025 white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 9
+        }
+      ]
+    },
+    {
+      "team": "Virginia Tech",
+      "slug": "VT",
+      "team_page": "https://www.navalengineers.org/VT",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. SharePoint link: browser retrieval could not access the document; sign-in may be required.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://navalengineers.sharepoint.com/%3Ab%3A/g/ESR8ieAE3xxFtXXA91xttOcBl0uOoN0GD_6nXYLl8zb4rg",
+          "link_label": "Click here to look at their 2025 white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": false,
+          "web_page_count": null
+        }
+      ]
+    },
+    {
+      "team": "Princeton Electric Speedboating — Tiger RC",
+      "slug": "Princeton",
+      "team_page": "https://www.navalengineers.org/Princeton",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year. The link label says Le Papillon, but the linked document title is Tiger, Autonomous Division; the 2025 event page groups it under Uncrewed.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Princeton/Princeton%20-%202025%20Tiger%20RC%20White%20Paper.pdf",
+          "link_label": "Click here to read the Le Papillon white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 15
+        }
+      ]
+    },
+    {
+      "team": "Madison College",
+      "slug": "MadisonCollege",
+      "team_page": "https://www.navalengineers.org/MadisonCollege",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/MadisonCollege/MadisonCollege-White%20Paper.pdf",
+          "link_label": "Click here to look at their 2025 white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 15
+        }
+      ]
+    },
+    {
+      "team": "Robotics Club of Central Florida (UCF)",
+      "slug": "UCF",
+      "team_page": "https://www.navalengineers.org/UCF",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/UCF/UCF-Robotic%20Clube%20of%20Centeral%20Florida%20at%20UCF%20White%20Paper.pdf",
+          "link_label": "White Paper PDF",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 15
+        }
+      ]
+    },
+    {
+      "team": "Elon University",
+      "slug": "Elon",
+      "team_page": "https://www.navalengineers.org/Elon",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2025/Elon/ElonWhitePaper.pdf",
+          "link_label": "White Paper PDF",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": false,
+          "web_page_count": null
+        }
+      ]
+    },
+    {
+      "team": "Howard University",
+      "slug": "Howard",
+      "team_page": "https://www.navalengineers.org/Howard",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Howard/Howard-TidalTitans-WhitePaper-PEP25.pdf",
+          "link_label": "Click here to look at their 2025 white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 15
+        }
+      ]
+    },
+    {
+      "team": "University of Alabama",
+      "slug": "Alabama",
+      "team_page": "https://www.navalengineers.org/Alabama",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Alabama/UAlabama-TideChasersWhitePaper.pdf",
+          "link_label": "Click here to look at their 2025 white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 28
+        }
+      ]
+    },
+    {
+      "team": "Texas A&M",
+      "slug": "TAMU",
+      "team_page": "https://www.navalengineers.org/TAMU",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/LinkClick.aspx?fileticket=bAjqlNeqiWA%3D&portalid=16",
+          "link_label": "Click here to look at their 2025 white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": false,
+          "web_page_count": null
+        }
+      ]
+    },
+    {
+      "team": "Northeastern University",
+      "slug": "Northeastern",
+      "team_page": "https://www.navalengineers.org/Northeastern",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Northeastern/NUWave_PEP_2025_Whitepaper-compressed.pdf",
+          "link_label": "Click here to look at their 2025 white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 15
+        }
+      ]
+    },
+    {
+      "team": "Auburn University",
+      "slug": "Auburn",
+      "team_page": "https://www.navalengineers.org/Auburn",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Auburn/Auburn-PEPWhitePaper-2025FinalCopy.pdf",
+          "link_label": "Click here to look at their 2025 white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 16
+        }
+      ]
+    },
+    {
+      "team": "University at Buffalo",
+      "slug": "Buffalo",
+      "team_page": "https://www.navalengineers.org/Buffalo",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Buffalo/University%20at%20Buffalo%20PEP%20Uncrewed%20White%20Paper.pdf",
+          "link_label": "Click here to look at the The Furnas 2025 white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 11
+        }
+      ]
+    },
+    {
+      "team": "University of Connecticut",
+      "slug": "UCONN",
+      "team_page": "https://www.navalengineers.org/UCONN",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/UCONN/UCONN_EBC_WhitePaper_ASNE.pdf",
+          "link_label": "Click here to look at their white paper.",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": false,
+          "web_page_count": null
+        }
+      ]
+    },
+    {
+      "team": "University of Kentucky — Hydro Hustlers",
+      "slug": "Kentucky-120",
+      "team_page": "https://www.navalengineers.org/Kentucky",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Kentucky/HydroHustler-UK-WhitePaper.pdf",
+          "link_label": "2025 team paper",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": false,
+          "web_page_count": null
+        }
+      ]
+    },
+    {
+      "team": "University of Kentucky — Gato Del Barro",
+      "slug": "Kentucky-122",
+      "team_page": "https://www.navalengineers.org/Kentucky",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Kentucky/Kentucky-GatoDelBarro-ElectricMudboatTeam%20-Uncrewed-White%20Paper.pdf",
+          "link_label": "2025 team paper",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": false,
+          "web_page_count": null
+        }
+      ]
+    },
+    {
+      "team": "University of Kentucky — The Deciduous",
+      "slug": "Kentucky-124",
+      "team_page": "https://www.navalengineers.org/Kentucky",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Kentucky/UnivKentucky-Deciduous-WhitePaper.pdf",
+          "link_label": "2025 team paper",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": false,
+          "web_page_count": null
+        }
+      ]
+    },
+    {
+      "team": "Arkansas Tech University",
+      "slug": "ArkansasTech",
+      "team_page": "https://www.navalengineers.org/ArkansasTech",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/ArkansasTech/ATU-unmannedPEP2025-WhitePaper.pdf",
+          "link_label": "2025 team paper",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 16
+        }
+      ]
+    },
+    {
+      "team": "College of the Florida Keys",
+      "slug": "FloridaKeys",
+      "team_page": "https://www.navalengineers.org/FloridaKeys",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2025/FloridaKeys/FloridaKeys-LepidopteranWhitePaper.pdf",
+          "link_label": "2025 team paper",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 15
+        }
+      ]
+    },
+    {
+      "team": "University of Rhode Island",
+      "slug": "URI",
+      "team_page": "https://www.navalengineers.org/URI",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/URI/URI-Naruto-Innovative_Electric_Propulsion_System_for_High_Speed_Vessel_Naruto.pdf",
+          "link_label": "2025 team paper",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": true,
+          "web_page_count": 13
+        }
+      ]
+    },
+    {
+      "team": "Stony Brook University",
+      "slug": "StonyBrook",
+      "team_page": "https://www.navalengineers.org/StonyBrook",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/StonyBrook/StonyBrook-PEP%202025%20Unmanned%20WhitePaper.pdf",
+          "link_label": "2025 team paper",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": false,
+          "web_page_count": null
+        }
+      ]
+    },
+    {
+      "team": "University of Notre Dame",
+      "slug": "NotreDame",
+      "team_page": "https://www.navalengineers.org/NotreDame",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/NotreDame/NotreDame-2025-WhitePaper.pdf",
+          "link_label": "2025 team paper",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": false,
+          "web_page_count": null
+        }
+      ]
+    },
+    {
+      "team": "University of Iowa",
+      "slug": "Iowa",
+      "team_page": "https://www.navalengineers.org/Iowa",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+      "documents": [
+        {
+          "document_type": "white_paper",
+          "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Iowa/Iowa-PEP%20White%20Paper%20UIOWA%20submission.pdf",
+          "link_label": "2025 team paper",
+          "year_evidence": "2025 section of source team page",
+          "web_pdf_readable": false,
+          "web_page_count": null
+        }
+      ]
+    },
+    {
+      "team": "University of Delaware",
+      "slug": "Delaware",
+      "team_page": "https://www.navalengineers.org/Delaware",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 archive section has a presentation but no paper link.",
+      "documents": []
+    },
+    {
+      "team": "Vanderbilt University",
+      "slug": "Vanderbilt",
+      "team_page": "https://www.navalengineers.org/Vanderbilt",
+      "competition_year": 2025,
+      "division": "Uncrewed",
+      "division_rank": null,
+      "official_score": null,
+      "notes": "2025 white-paper label is present but has no clickable link.",
+      "documents": []
+    }
+  ]
+}

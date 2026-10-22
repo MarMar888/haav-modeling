@@ -3,6 +3,15 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.1.5 — 2026-10-21
+
+Added a standalone local Savitsky sample calculator in `savitsky/`, with editable
+SI inputs, a speed sweep starting at zero, trim and effective-power plots, CSV
+export and dependency-free Node JSON reports. Low-speed displacement resistance
+is explicitly unavailable; extrapolations and geometry violations are flagged.
+The calm-water engine adapts OpenPlaning equations and is checked against its
+published worked example. No changes to `explore.ipynb` or its model/write-up.
+
 ## 0.1.4 — 2026-10-02
 
 `explore.ipynb`: added a propeller model, so pitch and diameter now change the answer. Efficiency comes from ideal

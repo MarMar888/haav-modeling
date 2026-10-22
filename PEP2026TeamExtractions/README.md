@@ -16,6 +16,11 @@ linked from <https://www.navalengineers.org/Education/PEP26>. Race results are f
 
 ## Notes
 
+- The same `extract.py` now accepts `--year 2025` and reads the separate
+  [`../PEP2025TeamExtractions/sources.json`](../PEP2025TeamExtractions/sources.json)
+  manifest. That year's PDFs, extracted JSON, and run status stay in the 2025
+  folder. The default remains 2026; existing 2026 extractions were not regenerated.
+
 - Only the paper linked as the team's white paper is extracted; resumes, slide decks and other divisions' papers are skipped. Longwood posted no paper.
 - Text only. Figures and tables that are images are not captured.
 - Official scores come from the PEP26 page. The team pages sometimes disagree (VCU, Norfolk State, JHU, NC State, Illinois, Longwood); both are kept in `index.json`.

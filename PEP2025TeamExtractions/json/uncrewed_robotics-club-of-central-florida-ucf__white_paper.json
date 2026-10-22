@@ -1,0 +1,1913 @@
+{
+  "competition_year": 2025,
+  "team": "Robotics Club of Central Florida (UCF)",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/UCF",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/UCF/UCF-Robotic%20Clube%20of%20Centeral%20Florida%20at%20UCF%20White%20Paper.pdf",
+  "filename": "UCF-Robotic Clube of Centeral Florida at UCF White Paper.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "15"
+  },
+  "page_count": 15,
+  "pages_without_text": [],
+  "char_count": 25476,
+  "pages": [
+    {
+      "page": 1,
+      "text": "Promoting Electric Propulsion (2025) | Unmanned Division 1\nRapid 3D: AnElectric Vessel Engineered by the Robotics Club of Central Florida\nBrandon Zhang, Caicheng Li, Dwight Howard II, James Dylan Kaney, Lee Marshall, Oli Marquez\nValenzuela, Matthew Barrs, and Michael LePrell\nRobotics Club of Central Florida at the University of Central Florida\nMarch 25, 2025\nFigure 1: A picture of the RCCF PEP25 team. Due to various scheduling conflicts only (from left to right)\nMatthew Barrs, Caicheng Li, and Dwight Howard II were able to show up for the picture.Rapid 3D: A 3D Printed Vessel 2\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": "Abstract\nWhether one is prototyping, recreating, or even creating a new unique item there is no question\nthat 3D printing is a positively helpful tool in the process of an item going from a fantastical idea to\nreality. The Robotics Club of Central Florida (RCCF) has found 3D printing an essential part of bringing\nforth an idea to the real world; however, this process is not without its challenges. With this paper,\nRCCF’s Rapid 3D team presents the challenges of designing, developing, and testing a fully custom 3D\nprinted hull designed around a central direct drive electric propulsion system. This system is based upon\nRCCF’s direct expertise in robotics, specifically the need to keep component interactions simple,\nfunctional, and reliable. With that in mind, the drive assembly of the boat (Rapid 3D) features an\noptimized propeller, selected based on diameter and pitch to maximize thrust efficiency, a submersible\npod electric motor for direct drive propulsion, and a custom-geared rudder system for both enhance\nmaneuverability and control. The power system integrates 4 LiFePO₄ and a LiPo battery, ensuring a\nbalance of power efficiency, safety, and redundancy.Rapid 3D: A 3D Printed Vessel 3\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "Background and Design Research\nPod Motors\nPod motors eliminate the need for complex gearing systems at the cost of increasing\nhydrodynamic drag by being fully submerged. Research from Candela Boats highlights the efficiency\nadvantages of pod motor systems, demonstrating that direct-drive, water-cooled pod motors reduce\nenergy losses and improve overall system longevity (Candela, 2023). The C-Pod motor, for instance,\nachieves near-total efficiency in power transmission by eliminating mechanical losses associated with\ntraditional propeller shafts (Candela, 2023). Based on these findings, the team selected the APISQUEEN\n70167 E-foil motor, which shares key characteristics with high-efficiency pod motors while offering\nadaptability for our specific application. In choosing APISQUEEN 70167, a submergible motor, as Rapid\n3D’s motor the team eliminated the need for a complex drive shaft, and bosting 10.1 horsepower this\nmotor gives us more than enough power to traverse 2 miles in 50 minutes. This selection represents an\ninnovative departure from the conventional electric boat propulsion systems, as most existing designs rely\non a shaft system or an outboard electric motor rather than fully submerged pod systems.\nPropellers\nThe basis of any marine propulsion system is the propeller, as it directly influences the efficiency\nand thrust output of the vessel. Extensive research in marine hydrodynamics has demonstrated that\npropeller diameter and pitch are key factors affecting performance (Techet, 2005). Larger-diameter\npropellers generate greater thrust due to increased interaction with the surrounding water, but they also\nrequire more torque to operate efficiently. Additionally, higher-pitch propellers improve forward\nmovement per rotation but can lead to cavitation if not properly optimized (Carlton, 2018). With that in\nmind, the team’s research into propeller designs eventually led them to select the propeller on a Flipsky\n65111. The propeller on the 65111 is configured for both torque and speed as it was designed for use on a\npod-like Efoil motor, much like ours. This was a uniquely beneficial find for the team as, utilizing another\nmotor’s propeller in a similar but way more powerful motor does not always turn out positively, but in the\nteam’s case, it did. Providing more thrust while reducing cavitations when pushing the motor to its\nmaximum speed.\nElectrical Power System\nDifferent types of batteries have wildly different energy densities, discharge rates, and overall\ndurability this is why picking the correct battery is paramount to a successful electric vessel. With that in\nmind, the team investigated various battery types including lithium-ion, lithium polymer (LiPo), lithium Rapid 3D: A 3D Printed Vessel 4\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": "iron phosphate (LiFePO₄), and even solid-state batteries. As it would turn out multiple studies indicated\nthat LiFePO₄ batteries offer significant advantages over other traditional lithium-ion cells. With LiFePO₄\nbatteries offer enhanced thermal stability, longer cycle life, and greater safety under high-current loads\n(Li-Xia et al., 2011). The only other battery that would compare in its properties would be solid-state\nbatteries (Xiqian et al., 2023), however, due to their relatively rare and expensive nature the team decided\non LiFePO₄.\nLiFePO₄ batteries are particularly suitable for electric vessels as, in a marine context, durability\nand reliability far outweigh anything else. That is to say that LiFePO₄ batteries are not the ideal battery in\nall contexts as they typically exhibit lower energy density compared to standard LiPo batteries, which\nprovide higher discharge rates but are more susceptible to thermal runaway (Xiqian et al., 2023). Given\nthese trade-offs, our design integrates both LiFePO₄ and LiPo batteries, with LiFePO₄ serving as the\nprimary energy source for propulsion and LiPo batteries supplying power to control electronics and\nauxiliary systems. This unique hybrid approach maximizes energy efficiency while ensuring system\nredundancy and safety as the main motor pulls from the much safer LiFePO₄ battery system while the\ncontrol electronics pull from the much more electrically dense LiPo battery.\nDesign and Analysis\nWith a drive system in mind, the team needed to create a hull capable of supporting or even\nboosting the drive assembly’s performance. As the team’s budget didn’t allow for multiple hulls to be\nbuilt the initial design was paramount. In lieu of that fact, the team aimed to draw inspiration from the\nhull performance of tried-and-true race boats offered by P1 Offshore, a race boat company, and first\ncreate a model of the desired vessel in Solid Works.\nFigure 2: A reference picture the team used to draw inspiration from.Rapid 3D: A 3D Printed Vessel 5\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "Designing the Hull\nUtilizing P1’s hull design, the team began creating their own hull based upon but uniquely\ndifferent from P1’s designs. From P1’s design, the team recreated the single-hull catamaran shape of the\nP1, consisting of a left and right pontoon conjoined with a midsection giving a single hull design with 2\ndistinct pontoons. However, modifications to P1’s designs had to be made as it could not incorporate our\ndrive assembly and electrical system fully.\nFigure 3: The initial hull design based upon P1's\nModifications - Drive Assembly Requirements\nTo attach the actual drive assembly two aluminum extrusions were designed to fit into the hull\nfrom its mating surface. The first much thicker and larger extrusion acts as a structural beam while the\nsecond much wider but thinner extrusion acts as the actual mounting point for the drive assembly. This\nsecond extrusion, much like the first, goes across from one hull to the next, leaving enough room for the\ndrive assembly in the middle to be attached using 4 bolts and locking nuts. The extrusions themselves\nmust mount into the hull as well so another modification to the hull was made. Two “extrusion port holes”\nof differing sizes were added to both hull pontoons to accommodate the excursion, making the aluminum\nextrusion the connecting piece between the left and right pontoon and the midsection. These extrusions\nare friction-fitted in and then bolted in place using extrusion t-nuts and rubber-joined washers to ensure\nwater does not leak into the two pontoons through the mounting holes.\nFigure 4: Side profile of one of the pontoons showing the cuts for the extrusions\nModifications - Electrical Requirements\nAfter creating a system to mount the drive assembly, what came next was the electrical system.\nThe first thing the team did was create access hatches into the pontoons themselves after which they Rapid 3D: A 3D Printed Vessel 6\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "realized that the original width of P1’s design was too narrow to accommodate the size of the batteries the\ndrive assembly needed. After an increase in the pontoon’s width and depth the team then created a\nplatform and holder walls for the batteries. To keep the batteries from jumping out of the battery\ncompartment the team then created a simple clamp bar on top of the batteries, simply utilizing two screws\nto make the bar removable.\nFigure 5: Show cases the battery compartment along with the screw holes for the battery clamp\nThe hull can now accommodate the batteries and drive assembly, the next item on the list is the\nbrains of the vessel, the control electronics. To mount the control electronics the team chose to mount it\nwithin the midsection, in between the batteries and the drive assembly, to both shorten the required cables\nand to improve the center mass of the vessel. For cables to go from either pontoon to the midsection a\ncable through hole was created, designed to accommodate a thick, custom, rubber O-ring to ensure that\nwater does not get into either the midsection or the pontoons. For extra protection against water, the\ncontrol electronics are kept within a waterproof electronics box which is then slotted and glued into the\nmidsection.\nFigure 6: Shows the cable through Hole\nAs the team has chosen the FLIPSKY 75200 FOC a liquid-cooled electronic speed controller\n(ESC), either a water inlet or a radiator must be mounted to the hull. The team ended up choosing to use a Rapid 3D: A 3D Printed Vessel 7\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "radiator as they had noticed that a water inlet is unreliable at best, due to clogging of being above the\nwater line, and at worst, melting from within due to its own heat. With that in mind, the team needed a\nplace to mount the radiator and chose the midsection as it was closest to the electrical box and allowed for\nshort and simple water tubing. To mount the radiator to the midsection the team created a chamber in\nwhich the radiator is connected on the outside before being slotted in and locked into place with a\nchamber cap. Within the chamber air is guided into the hull and then back out from the top, effectively\ncreating high airflow as the vessel picks up speed.\nFigure 7: Shows the radiator chamber\nStructural and Human Modifications\nOnce the hull design could accommodate the propulsion (drive assembly) and electrical systems\nthe team turned their attention to structural concerns as the hull was only ¼in thick. The team felt that\nstructural components were needed to ensure durability on waves and wake. The team started by creating\nan endoskeleton for the pontoons, modeling structural ribs to keep the hull from collapsing inward and\ncreating a structural column within the hull to alleviate compressive forces caused by the bobbing motion\nin water. This column also served a double purpose as it was then modified again to contain a 30lb\npayload.\nFigure 8: Shows the numerous structural ribs & the column\nAfter ensuring the survivability of the hull the team then turned their attention to the human\naspects of the hull, more specifically how a human is going to pick up, lower, and generally carry the\nvessel. Sitting at a 7 and ½ feet the vessel was not one that could be handled by just a single person;\ntherefore, the decision was made that the vessel would be handled by 4 people, resulting in 4 heavy duty Rapid 3D: A 3D Printed Vessel 8\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": "handles being modeled and integrated into the hull to not introduce any additional air drag. The same\nmodeling process was then applied to the towing point conveniently located on the very tip of the\nmidsection.\nFigure 9: shows the handles and tow point of mid-section\nAssembly Modifications\nAssembling a 7 and ½ feet vessel is not an easy task so the team began planning ahead on how\nthe hull is to be assembled. For ease of handling and construction the team decided to create the hull in\nsections which brought up an issue: how would the sections line up? Trying to join multiple sections of a\n7 and ½ feet free hand accurately would be an impossible task. After debating the team came up with the\nnovel idea to include another aluminum extrusion, which is guaranteed to be straight, within the pontoons\nto act as a guide rail for the different sections. For the smaller sections and the midsection, the team\ndecided to create a bolt point in the middle of each structural rib enabling the section to be bolted together\nbefore conjoining, ensuring alignment. To make assembly even easier the team also separated the\nmidsection into its own part. This made the hull much more transportable and created a simple modular\nsystem in which the team could swap out either pontoons or midsection should they warrant repair or\nfurther modifications.\nFigure 10: Shows the bolt holes and internal extrusionRapid 3D: A 3D Printed Vessel 9\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "Analysis of the Hull\nThroughout the design process, the team ensured that the model they were creating would\nrealistically float and effectively drive in water. They did this by running simulations and calculations\nbased on the model they were creating.\nCalculation\nDue to the hull of the vessel being modeled in solid works allowed the team to quickly calculate\nthe water line of the vessel and determine if the vessel would even float. The team took an absolute worst\u0002case scenario weight of 300lb and calculated the proportional volume of water using a density of\n0.037 𝑙𝑏\n𝑖𝑛3\n. Giving that 300lb of water has a volume of displacement of 8108.1. Relating that volume to the\nmodel gives a water line of 6.8 inches, ensuring that the vessel will at least float\nSimulation\nThe flow simulation done on SolidWorks works as a method of determining how efficient the\nboat will perform in the water before the actual testing. To make the wizard work, a list of conditions\nneeded to be included. This was an external analysis that included gravity, was time-dependent, and was\nfree-surface. A couple of parameters were set such as velocity, 6 knots in the Z direction, and setting the\nwater line to be 6.8 inches. This was the estimated water line based on the Archimedes principle.\nFinishing the conditions and running the wizard produces the simulated result shown below:\nFigure 11: Water friction simulation done on the boat with the calculated water lineRapid 3D: A 3D Printed Vessel 10\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 10,
+      "text": "The image shows a CFD of the boat or the Volume Fraction of Water, a visual representation of\nthe fluid distribution within a small domain created by the user. The legend bar corresponds to the\nproportion of water in that cell. This image shows the water gathered toward the back center of the boat\ndue to the gap between the hulls.\nFabrication\nHull\nDue to the nature of simulations and the complexities of the real world, any design of a hull will\nnot be one-to-one with simulations and calculations. As such the team aimed to create an optimized hull\nin a way that is most reflective of simulations and calculations. Enter 3D printing, a method that allows\nfor a 3D model of practically anything to change from ones and zeros into a physical object one can hold\nand use. With 3D printing, the team was able to replicate their exact design in the real world. This,\nhowever, is not without its own complicated processes and decisions.\nThe Printer\nThe first decision the team had to make was on what printer would the hull be printed on. The 3D\nprinter the team decided on was the Neptune 4 Max by Elegoo. This decision was based on its massive\nprint volume (16.5×16.5×18.9in3) that was able to accommodate the sectioned portion of the hull and\nmidsection. On top of this, the Neptune 4 series of printers are known to be reliable, consistent, and most\nimportantly extremely fast, being able to print at 500 mm/s when the average 3D printer operates around\n50-150 mm/s.\nMaterial\nThe second decision the team had to make was on the material of the hull itself. The team\nconsidered utilizing PLA, ASA, ABS, and other specialized plastic composites but eventually settled on\nutilizing PETG. On one hand, PLA is easy to work with and print, however, it is extremely weak to heat\nand doesn’t have much in terms of impact resistance on the other hand ASA and ABS are known for their\nextreme durability in exterior environments, however, it is extremely hard to work with and, depending\non the material manufacturer, would produce toxic fumes while being melted by the printer (Kopar &\nYildiz, 2023). PETG is a material that is easier to work with when compared to ASA and ABS and is\nknown to be durable enough for exterior use (Kopar & Yildiz, 2023). To increase print times and impact Rapid 3D: A 3D Printed Vessel 11\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 11,
+      "text": "resistance the team specifically went with Elegoo’s Rapid PETG, making the hull easier and faster to\nmanufacture while being more durable.\nConstruction\n Once all the sections of the hull are printed everything is first sanded and cleaned before being\nslotted into the internal aluminum extrusion or loosely bolted together to ensure alignment. The team then\nused JB Weld Plastic Bonder to permanently bond the sections together forming a uniform, 3D-printed,\nhull and midsection. Once the pontoons and hull are completed the team then used heat inserts to create\nsecure and permanent bolt threads. This is to aid in the longevity and strength of the 3D-printed access\nhatches of the hull and the battery clamp bar. Once the lids are attached and their seam taped off the team\nwill then use clear epoxy to coat the whole hull, utilizing fiberglass on specific stress points such as the\nhandles.\nFigure 12: A sanded and taped off pontoon ready for epoxy\nElectrical\nThe fabrication of the electrical system is divided into two subsystems, the High Voltage and\nsteering system and the low voltage control and communications system.Rapid 3D: A 3D Printed Vessel 12\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 12,
+      "text": "Power Storage\nThe high voltage power storage system is constructed of four 12.8V, 100Ah LiFePO₄ batteries\nconnected in series, providing 51.2V for the main motor and rudder. While the low voltage system power\nstorage system simply consists of a 3S LiPo battery.\nFigure 13: one of four 12.8V batteries\nDrive Assembly - Power Train\n With 55V the team chose the APISQUEEN 70167 electric motor, a 7,500W, 10.1 HP Efoil motor\nthat is then attached to the Flipsky 65111 propeller. This motor assembly is then attached using two\nmounting bolts and lock nuts onto the drive assembly’s aluminum extrusion. The motor assembly’s cone\nis then attached on the opposite side using four standard extrusion t-nuts and M6 bolts. Two extrusions are\nthen attached above the motor assembly to form supports for the rutter. The rutter is then bolted onto the\n90° gearbox before the gearbox and rutter supports are bolted onto the two extrusions above the motor.\nThis completes the drive assembly and attaching 90° brackets at the very top of the main drive assembly\nextrusion finally forms the drive assembly.\nControls and Connections\n Diagrams of both the high-voltage and low-voltage systems can be found below. The team\ncreated these diagrams and used them as a guide when putting together the systems.\nThe low-voltage system is contained within the electronics box. It contains the 3S LiPo which is\nconnected to the 12V water cooling system via a relay and to a 12V->5V buck converter. This buck\nconverter provides regulated 5V power to The Cube flight controller and Raspberry Pi. The GPS, Arduino\nfor stepper control, and RC receiver are powered by the flight controller. The PWM signal for the main Rapid 3D: A 3D Printed Vessel 13\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 13,
+      "text": "motor and the stepper signals for the rudder control are connected from the flight controller and Arduino\nto the VESC and stepper driver respectively.\nThe high-voltage system is connected to a bus bar to allow for easy distribution. All power from the\nbatteries runs through the fuse and contactor before reaching the bus bar so that the batteries are\ncompletely cut off in the event of a power shutoff. The bus bar then provides power to the VESC and a\n48V regulator to the stepper driver.\nFigure 14: Electrical box wiring diagram\nTesting\n Before fully assembling the boat the team actively tests the electrical components outside of the\nhull to verify that they are operating nominally. The first thing the team will test is the battery’s voltage to\ncheck for any inconsistencies that would result in damaging parts. They would do this by using a multi\u0002meter and cross-checking the result with a battery management system (BMS). The team will run\nperformance tests on the thrust motor under two scenarios: one that simulates the failure of the water\npump, observing how fast the ESC would heat up under different loads, and then the team would activate\nthe pump cooling the ESC to gauge the change in temperature. This is done in order to find the ideal\noperating temperature of the ESC and the temperature that would indicate pump failure. It is also during\nthis test that the team will come to know the normal operational current and voltages in relation to the\namount of thrust the drive assembly produces.\nAssembly\n To put the whole boat together, the team starts by grabbing either the left or right pontoon and\nattaching the two connecting aluminum extrusions, locking both in place using extrusion t-nuts, rubber\nbonded washers, M6, and M8 bolts. The team then grabs the radiator, connecting it’s tubing before Rapid 3D: A 3D Printed Vessel 14\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 14,
+      "text": "inserting it into the radiator chamber and locking it in place with the radiator chamber cap. Laying the\npontoon on its side so that the extrusions are facing up, the midsection is then slid across the extrusion\nuntil it fully presses on the pontoon, it is also then locked into place using the same method. To complete\nthe hull the other pontoon is slid into the extrusion and attached in the same manner as the first. To test if\nthe hull has been securely attached to each other two team members are asked to tug away from each\nother in an attempt to separate the two pontoons and midsection.\n Now that the hull is all put together, the team inserts the four main batteries and the electrical box\ninto their respective compartments before securing them in place using the battery clamp bars. Cables are\nthen attached to the batteries and run through the “cable through” hole into the midsection and connected\nto the electrical box. The team then utilized the drive assembly’s 90° bracket to bolt and lock the drive\nassembly onto the middle back of the boat. After checking connections and signal, the two 30lb payloads\nare then lowered into their chambers and locked into place. Once the payloads are locked in the lids are\nthen securely bolted into their respective locations and locked into place.\nRisks\nMitigated\nThe team has run into a variety of risks in designing Rapid 3D especially in engineering a hull\nthat is to be 3D printed thankfully almost all of the risks that come with a 3D printed hull can be\nmitigated. One of the biggest risks of a 3D printed hull is its durability, thankfully during the design and\nbuild phase of the hull the team mitigated it; by designing mounting points to avoid sheering forces and\nutilizing epoxy resign as both a waterproofing and strengthening agent. Another risk mitigated by epoxy\nis the water resistance of a 3D printed craft, by itself 3D prints are at most water resistant and will\neventually leak but with epoxy, the team essentially completely sealed the outside of the vessel creating a\nwaterproof hull.\nControllable\n Although the team accounts for quite a bit of risks there are still risks when it comes to such a\nunique vessel. For one due to the nature of the gearbox and how power is transferred into the rudder,\nturning the vessel may result in the gears potentially skipping resulting in an offset rudder. This will cause\nthe vessel to start turning even though the operator is not turning. This risk can be controlled during the\nrace by correcting the offset values on our controller so that the vessel assumes the middle is offset by a\ngiven angular degree.Rapid 3D: A 3D Printed Vessel 15\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 15,
+      "text": "References\nCandela. (2023, January 5). Candela Tech Talks | Episode 3, the C-Pod Motor. YouTube.\nhttps://www.youtube.com/watch?v=jmaSrTV52yo\nCarlton, J. (2018). Marine propellers and propulsion. Butterworth-Heinemann.\nKopar, M. & Yildiz, A. (2023). Experimental investigation of mechanical properties of PLA, ABS, and\nPETG 3-d printing materials using fused deposition modeling technique. Materials Testing,\n65(12), 1795-1804.\nLi-Xia, Y., Zhao-Hui, W., Wu-Xing, Z., et al. (2011). Development and challenges of LiFePO4 cathode\nmaterial for lithium-ion batteries. Energy & Environmental Science.\nTechet, A. H. (2005). Marine propellers and propulsion principles. Massachusetts Institute of Technology.\nWorkshop Insider. (2022, August 17). Guide to ships rudder and steering gear. Retrieved from\nhttps://workshopinsider.com/ship-rudder-and-steering\nXiqian, Y., Rusong, C., Luyu, G., et al. (2023). Battery Safety: From Lithium-Ion to Solid-State Batteries.\nEngineering, Volume 21, Pages 9-14\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Promoting Electric Propulsion (2025) | Unmanned Division 1"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Rapid 3D: AnElectric Vessel Engineered by the Robotics Club of Central Florida"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Brandon Zhang, Caicheng Li, Dwight Howard II, James Dylan Kaney, Lee Marshall, Oli Marquez"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Valenzuela, Matthew Barrs, and Michael LePrell"
+    },
+    {
+      "line": 4,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Robotics Club of Central Florida at the University of Central Florida"
+    },
+    {
+      "line": 5,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "March 25, 2025"
+    },
+    {
+      "line": 6,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Figure 1: A picture of the RCCF PEP25 team. Due to various scheduling conflicts only (from left to right)"
+    },
+    {
+      "line": 7,
+      "page_start": 0,
+      "page_end": 1,
+      "text": "Matthew Barrs, Caicheng Li, and Dwight Howard II were able to show up for the picture.Rapid 3D: A 3D Printed Vessel 2"
+    },
+    {
+      "line": 8,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Abstract"
+    },
+    {
+      "line": 9,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Whether one is prototyping, recreating, or even creating a new unique item there is no question"
+    },
+    {
+      "line": 10,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "that 3D printing is a positively helpful tool in the process of an item going from a fantastical idea to"
+    },
+    {
+      "line": 11,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "reality. The Robotics Club of Central Florida (RCCF) has found 3D printing an essential part of bringing"
+    },
+    {
+      "line": 12,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "forth an idea to the real world; however, this process is not without its challenges. With this paper,"
+    },
+    {
+      "line": 13,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "RCCF’s Rapid 3D team presents the challenges of designing, developing, and testing a fully custom 3D"
+    },
+    {
+      "line": 14,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "printed hull designed around a central direct drive electric propulsion system. This system is based upon"
+    },
+    {
+      "line": 15,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "RCCF’s direct expertise in robotics, specifically the need to keep component interactions simple,"
+    },
+    {
+      "line": 16,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "functional, and reliable. With that in mind, the drive assembly of the boat (Rapid 3D) features an"
+    },
+    {
+      "line": 17,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "optimized propeller, selected based on diameter and pitch to maximize thrust efficiency, a submersible"
+    },
+    {
+      "line": 18,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "pod electric motor for direct drive propulsion, and a custom-geared rudder system for both enhance"
+    },
+    {
+      "line": 19,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "maneuverability and control. The power system integrates 4 LiFePO₄ and a LiPo battery, ensuring a"
+    },
+    {
+      "line": 20,
+      "page_start": 1,
+      "page_end": 2,
+      "text": "balance of power efficiency, safety, and redundancy.Rapid 3D: A 3D Printed Vessel 3"
+    },
+    {
+      "line": 21,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Background and Design Research"
+    },
+    {
+      "line": 22,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Pod Motors"
+    },
+    {
+      "line": 23,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Pod motors eliminate the need for complex gearing systems at the cost of increasing"
+    },
+    {
+      "line": 24,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "hydrodynamic drag by being fully submerged. Research from Candela Boats highlights the efficiency"
+    },
+    {
+      "line": 25,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "advantages of pod motor systems, demonstrating that direct-drive, water-cooled pod motors reduce"
+    },
+    {
+      "line": 26,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "energy losses and improve overall system longevity (Candela, 2023). The C-Pod motor, for instance,"
+    },
+    {
+      "line": 27,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "achieves near-total efficiency in power transmission by eliminating mechanical losses associated with"
+    },
+    {
+      "line": 28,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "traditional propeller shafts (Candela, 2023). Based on these findings, the team selected the APISQUEEN"
+    },
+    {
+      "line": 29,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "70167 E-foil motor, which shares key characteristics with high-efficiency pod motors while offering"
+    },
+    {
+      "line": 30,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "adaptability for our specific application. In choosing APISQUEEN 70167, a submergible motor, as Rapid"
+    },
+    {
+      "line": 31,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "3D’s motor the team eliminated the need for a complex drive shaft, and bosting 10.1 horsepower this"
+    },
+    {
+      "line": 32,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "motor gives us more than enough power to traverse 2 miles in 50 minutes. This selection represents an"
+    },
+    {
+      "line": 33,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "innovative departure from the conventional electric boat propulsion systems, as most existing designs rely"
+    },
+    {
+      "line": 34,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "on a shaft system or an outboard electric motor rather than fully submerged pod systems."
+    },
+    {
+      "line": 35,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Propellers"
+    },
+    {
+      "line": 36,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "The basis of any marine propulsion system is the propeller, as it directly influences the efficiency"
+    },
+    {
+      "line": 37,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "and thrust output of the vessel. Extensive research in marine hydrodynamics has demonstrated that"
+    },
+    {
+      "line": 38,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "propeller diameter and pitch are key factors affecting performance (Techet, 2005). Larger-diameter"
+    },
+    {
+      "line": 39,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "propellers generate greater thrust due to increased interaction with the surrounding water, but they also"
+    },
+    {
+      "line": 40,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "require more torque to operate efficiently. Additionally, higher-pitch propellers improve forward"
+    },
+    {
+      "line": 41,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "movement per rotation but can lead to cavitation if not properly optimized (Carlton, 2018). With that in"
+    },
+    {
+      "line": 42,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "mind, the team’s research into propeller designs eventually led them to select the propeller on a Flipsky"
+    },
+    {
+      "line": 43,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "65111. The propeller on the 65111 is configured for both torque and speed as it was designed for use on a"
+    },
+    {
+      "line": 44,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "pod-like Efoil motor, much like ours. This was a uniquely beneficial find for the team as, utilizing another"
+    },
+    {
+      "line": 45,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "motor’s propeller in a similar but way more powerful motor does not always turn out positively, but in the"
+    },
+    {
+      "line": 46,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "team’s case, it did. Providing more thrust while reducing cavitations when pushing the motor to its"
+    },
+    {
+      "line": 47,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "maximum speed."
+    },
+    {
+      "line": 48,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Electrical Power System"
+    },
+    {
+      "line": 49,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Different types of batteries have wildly different energy densities, discharge rates, and overall"
+    },
+    {
+      "line": 50,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "durability this is why picking the correct battery is paramount to a successful electric vessel. With that in"
+    },
+    {
+      "line": 51,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "mind, the team investigated various battery types including lithium-ion, lithium polymer (LiPo), lithium Rapid 3D: A 3D Printed Vessel 4"
+    },
+    {
+      "line": 52,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "iron phosphate (LiFePO₄), and even solid-state batteries. As it would turn out multiple studies indicated"
+    },
+    {
+      "line": 53,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "that LiFePO₄ batteries offer significant advantages over other traditional lithium-ion cells. With LiFePO₄"
+    },
+    {
+      "line": 54,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "batteries offer enhanced thermal stability, longer cycle life, and greater safety under high-current loads"
+    },
+    {
+      "line": 55,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "(Li-Xia et al., 2011). The only other battery that would compare in its properties would be solid-state"
+    },
+    {
+      "line": 56,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "batteries (Xiqian et al., 2023), however, due to their relatively rare and expensive nature the team decided"
+    },
+    {
+      "line": 57,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "on LiFePO₄."
+    },
+    {
+      "line": 58,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "LiFePO₄ batteries are particularly suitable for electric vessels as, in a marine context, durability"
+    },
+    {
+      "line": 59,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "and reliability far outweigh anything else. That is to say that LiFePO₄ batteries are not the ideal battery in"
+    },
+    {
+      "line": 60,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "all contexts as they typically exhibit lower energy density compared to standard LiPo batteries, which"
+    },
+    {
+      "line": 61,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "provide higher discharge rates but are more susceptible to thermal runaway (Xiqian et al., 2023). Given"
+    },
+    {
+      "line": 62,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "these trade-offs, our design integrates both LiFePO₄ and LiPo batteries, with LiFePO₄ serving as the"
+    },
+    {
+      "line": 63,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "primary energy source for propulsion and LiPo batteries supplying power to control electronics and"
+    },
+    {
+      "line": 64,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "auxiliary systems. This unique hybrid approach maximizes energy efficiency while ensuring system"
+    },
+    {
+      "line": 65,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "redundancy and safety as the main motor pulls from the much safer LiFePO₄ battery system while the"
+    },
+    {
+      "line": 66,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "control electronics pull from the much more electrically dense LiPo battery."
+    },
+    {
+      "line": 67,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Design and Analysis"
+    },
+    {
+      "line": 68,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "With a drive system in mind, the team needed to create a hull capable of supporting or even"
+    },
+    {
+      "line": 69,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "boosting the drive assembly’s performance. As the team’s budget didn’t allow for multiple hulls to be"
+    },
+    {
+      "line": 70,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "built the initial design was paramount. In lieu of that fact, the team aimed to draw inspiration from the"
+    },
+    {
+      "line": 71,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "hull performance of tried-and-true race boats offered by P1 Offshore, a race boat company, and first"
+    },
+    {
+      "line": 72,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "create a model of the desired vessel in Solid Works."
+    },
+    {
+      "line": 73,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "Figure 2: A reference picture the team used to draw inspiration from.Rapid 3D: A 3D Printed Vessel 5"
+    },
+    {
+      "line": 74,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Designing the Hull"
+    },
+    {
+      "line": 75,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Utilizing P1’s hull design, the team began creating their own hull based upon but uniquely"
+    },
+    {
+      "line": 76,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "different from P1’s designs. From P1’s design, the team recreated the single-hull catamaran shape of the"
+    },
+    {
+      "line": 77,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "P1, consisting of a left and right pontoon conjoined with a midsection giving a single hull design with 2"
+    },
+    {
+      "line": 78,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "distinct pontoons. However, modifications to P1’s designs had to be made as it could not incorporate our"
+    },
+    {
+      "line": 79,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "drive assembly and electrical system fully."
+    },
+    {
+      "line": 80,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Figure 3: The initial hull design based upon P1's"
+    },
+    {
+      "line": 81,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Modifications - Drive Assembly Requirements"
+    },
+    {
+      "line": 82,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "To attach the actual drive assembly two aluminum extrusions were designed to fit into the hull"
+    },
+    {
+      "line": 83,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "from its mating surface. The first much thicker and larger extrusion acts as a structural beam while the"
+    },
+    {
+      "line": 84,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "second much wider but thinner extrusion acts as the actual mounting point for the drive assembly. This"
+    },
+    {
+      "line": 85,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "second extrusion, much like the first, goes across from one hull to the next, leaving enough room for the"
+    },
+    {
+      "line": 86,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "drive assembly in the middle to be attached using 4 bolts and locking nuts. The extrusions themselves"
+    },
+    {
+      "line": 87,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "must mount into the hull as well so another modification to the hull was made. Two “extrusion port holes”"
+    },
+    {
+      "line": 88,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "of differing sizes were added to both hull pontoons to accommodate the excursion, making the aluminum"
+    },
+    {
+      "line": 89,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "extrusion the connecting piece between the left and right pontoon and the midsection. These extrusions"
+    },
+    {
+      "line": 90,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "are friction-fitted in and then bolted in place using extrusion t-nuts and rubber-joined washers to ensure"
+    },
+    {
+      "line": 91,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "water does not leak into the two pontoons through the mounting holes."
+    },
+    {
+      "line": 92,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Figure 4: Side profile of one of the pontoons showing the cuts for the extrusions"
+    },
+    {
+      "line": 93,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Modifications - Electrical Requirements"
+    },
+    {
+      "line": 94,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "After creating a system to mount the drive assembly, what came next was the electrical system."
+    },
+    {
+      "line": 95,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "The first thing the team did was create access hatches into the pontoons themselves after which they Rapid 3D: A 3D Printed Vessel 6"
+    },
+    {
+      "line": 96,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "realized that the original width of P1’s design was too narrow to accommodate the size of the batteries the"
+    },
+    {
+      "line": 97,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "drive assembly needed. After an increase in the pontoon’s width and depth the team then created a"
+    },
+    {
+      "line": 98,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "platform and holder walls for the batteries. To keep the batteries from jumping out of the battery"
+    },
+    {
+      "line": 99,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "compartment the team then created a simple clamp bar on top of the batteries, simply utilizing two screws"
+    },
+    {
+      "line": 100,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "to make the bar removable."
+    },
+    {
+      "line": 101,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Figure 5: Show cases the battery compartment along with the screw holes for the battery clamp"
+    },
+    {
+      "line": 102,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "The hull can now accommodate the batteries and drive assembly, the next item on the list is the"
+    },
+    {
+      "line": 103,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "brains of the vessel, the control electronics. To mount the control electronics the team chose to mount it"
+    },
+    {
+      "line": 104,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "within the midsection, in between the batteries and the drive assembly, to both shorten the required cables"
+    },
+    {
+      "line": 105,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "and to improve the center mass of the vessel. For cables to go from either pontoon to the midsection a"
+    },
+    {
+      "line": 106,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "cable through hole was created, designed to accommodate a thick, custom, rubber O-ring to ensure that"
+    },
+    {
+      "line": 107,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "water does not get into either the midsection or the pontoons. For extra protection against water, the"
+    },
+    {
+      "line": 108,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "control electronics are kept within a waterproof electronics box which is then slotted and glued into the"
+    },
+    {
+      "line": 109,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "midsection."
+    },
+    {
+      "line": 110,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Figure 6: Shows the cable through Hole"
+    },
+    {
+      "line": 111,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "As the team has chosen the FLIPSKY 75200 FOC a liquid-cooled electronic speed controller"
+    },
+    {
+      "line": 112,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "(ESC), either a water inlet or a radiator must be mounted to the hull. The team ended up choosing to use a Rapid 3D: A 3D Printed Vessel 7"
+    },
+    {
+      "line": 113,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "radiator as they had noticed that a water inlet is unreliable at best, due to clogging of being above the"
+    },
+    {
+      "line": 114,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "water line, and at worst, melting from within due to its own heat. With that in mind, the team needed a"
+    },
+    {
+      "line": 115,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "place to mount the radiator and chose the midsection as it was closest to the electrical box and allowed for"
+    },
+    {
+      "line": 116,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "short and simple water tubing. To mount the radiator to the midsection the team created a chamber in"
+    },
+    {
+      "line": 117,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "which the radiator is connected on the outside before being slotted in and locked into place with a"
+    },
+    {
+      "line": 118,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "chamber cap. Within the chamber air is guided into the hull and then back out from the top, effectively"
+    },
+    {
+      "line": 119,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "creating high airflow as the vessel picks up speed."
+    },
+    {
+      "line": 120,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Figure 7: Shows the radiator chamber"
+    },
+    {
+      "line": 121,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Structural and Human Modifications"
+    },
+    {
+      "line": 122,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Once the hull design could accommodate the propulsion (drive assembly) and electrical systems"
+    },
+    {
+      "line": 123,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "the team turned their attention to structural concerns as the hull was only ¼in thick. The team felt that"
+    },
+    {
+      "line": 124,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "structural components were needed to ensure durability on waves and wake. The team started by creating"
+    },
+    {
+      "line": 125,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "an endoskeleton for the pontoons, modeling structural ribs to keep the hull from collapsing inward and"
+    },
+    {
+      "line": 126,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "creating a structural column within the hull to alleviate compressive forces caused by the bobbing motion"
+    },
+    {
+      "line": 127,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "in water. This column also served a double purpose as it was then modified again to contain a 30lb"
+    },
+    {
+      "line": 128,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "payload."
+    },
+    {
+      "line": 129,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Figure 8: Shows the numerous structural ribs & the column"
+    },
+    {
+      "line": 130,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "After ensuring the survivability of the hull the team then turned their attention to the human"
+    },
+    {
+      "line": 131,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "aspects of the hull, more specifically how a human is going to pick up, lower, and generally carry the"
+    },
+    {
+      "line": 132,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "vessel. Sitting at a 7 and ½ feet the vessel was not one that could be handled by just a single person;"
+    },
+    {
+      "line": 133,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "therefore, the decision was made that the vessel would be handled by 4 people, resulting in 4 heavy duty Rapid 3D: A 3D Printed Vessel 8"
+    },
+    {
+      "line": 134,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "handles being modeled and integrated into the hull to not introduce any additional air drag. The same"
+    },
+    {
+      "line": 135,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "modeling process was then applied to the towing point conveniently located on the very tip of the"
+    },
+    {
+      "line": 136,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "midsection."
+    },
+    {
+      "line": 137,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Figure 9: shows the handles and tow point of mid-section"
+    },
+    {
+      "line": 138,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Assembly Modifications"
+    },
+    {
+      "line": 139,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Assembling a 7 and ½ feet vessel is not an easy task so the team began planning ahead on how"
+    },
+    {
+      "line": 140,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "the hull is to be assembled. For ease of handling and construction the team decided to create the hull in"
+    },
+    {
+      "line": 141,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "sections which brought up an issue: how would the sections line up? Trying to join multiple sections of a"
+    },
+    {
+      "line": 142,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "7 and ½ feet free hand accurately would be an impossible task. After debating the team came up with the"
+    },
+    {
+      "line": 143,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "novel idea to include another aluminum extrusion, which is guaranteed to be straight, within the pontoons"
+    },
+    {
+      "line": 144,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "to act as a guide rail for the different sections. For the smaller sections and the midsection, the team"
+    },
+    {
+      "line": 145,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "decided to create a bolt point in the middle of each structural rib enabling the section to be bolted together"
+    },
+    {
+      "line": 146,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "before conjoining, ensuring alignment. To make assembly even easier the team also separated the"
+    },
+    {
+      "line": 147,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "midsection into its own part. This made the hull much more transportable and created a simple modular"
+    },
+    {
+      "line": 148,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "system in which the team could swap out either pontoons or midsection should they warrant repair or"
+    },
+    {
+      "line": 149,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "further modifications."
+    },
+    {
+      "line": 150,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "Figure 10: Shows the bolt holes and internal extrusionRapid 3D: A 3D Printed Vessel 9"
+    },
+    {
+      "line": 151,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Analysis of the Hull"
+    },
+    {
+      "line": 152,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Throughout the design process, the team ensured that the model they were creating would"
+    },
+    {
+      "line": 153,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "realistically float and effectively drive in water. They did this by running simulations and calculations"
+    },
+    {
+      "line": 154,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "based on the model they were creating."
+    },
+    {
+      "line": 155,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Calculation"
+    },
+    {
+      "line": 156,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Due to the hull of the vessel being modeled in solid works allowed the team to quickly calculate"
+    },
+    {
+      "line": 157,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "the water line of the vessel and determine if the vessel would even float. The team took an absolute worst\u0002case scenario weight of 300lb and calculated the proportional volume of water using a density of"
+    },
+    {
+      "line": 158,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "0.037 𝑙𝑏"
+    },
+    {
+      "line": 159,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "𝑖𝑛3"
+    },
+    {
+      "line": 160,
+      "page_start": 8,
+      "page_end": 8,
+      "text": ". Giving that 300lb of water has a volume of displacement of 8108.1. Relating that volume to the"
+    },
+    {
+      "line": 161,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "model gives a water line of 6.8 inches, ensuring that the vessel will at least float"
+    },
+    {
+      "line": 162,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Simulation"
+    },
+    {
+      "line": 163,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "The flow simulation done on SolidWorks works as a method of determining how efficient the"
+    },
+    {
+      "line": 164,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "boat will perform in the water before the actual testing. To make the wizard work, a list of conditions"
+    },
+    {
+      "line": 165,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "needed to be included. This was an external analysis that included gravity, was time-dependent, and was"
+    },
+    {
+      "line": 166,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "free-surface. A couple of parameters were set such as velocity, 6 knots in the Z direction, and setting the"
+    },
+    {
+      "line": 167,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "water line to be 6.8 inches. This was the estimated water line based on the Archimedes principle."
+    },
+    {
+      "line": 168,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Finishing the conditions and running the wizard produces the simulated result shown below:"
+    },
+    {
+      "line": 169,
+      "page_start": 8,
+      "page_end": 9,
+      "text": "Figure 11: Water friction simulation done on the boat with the calculated water lineRapid 3D: A 3D Printed Vessel 10"
+    },
+    {
+      "line": 170,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "The image shows a CFD of the boat or the Volume Fraction of Water, a visual representation of"
+    },
+    {
+      "line": 171,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "the fluid distribution within a small domain created by the user. The legend bar corresponds to the"
+    },
+    {
+      "line": 172,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "proportion of water in that cell. This image shows the water gathered toward the back center of the boat"
+    },
+    {
+      "line": 173,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "due to the gap between the hulls."
+    },
+    {
+      "line": 174,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Fabrication"
+    },
+    {
+      "line": 175,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Hull"
+    },
+    {
+      "line": 176,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Due to the nature of simulations and the complexities of the real world, any design of a hull will"
+    },
+    {
+      "line": 177,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "not be one-to-one with simulations and calculations. As such the team aimed to create an optimized hull"
+    },
+    {
+      "line": 178,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "in a way that is most reflective of simulations and calculations. Enter 3D printing, a method that allows"
+    },
+    {
+      "line": 179,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "for a 3D model of practically anything to change from ones and zeros into a physical object one can hold"
+    },
+    {
+      "line": 180,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "and use. With 3D printing, the team was able to replicate their exact design in the real world. This,"
+    },
+    {
+      "line": 181,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "however, is not without its own complicated processes and decisions."
+    },
+    {
+      "line": 182,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "The Printer"
+    },
+    {
+      "line": 183,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "The first decision the team had to make was on what printer would the hull be printed on. The 3D"
+    },
+    {
+      "line": 184,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "printer the team decided on was the Neptune 4 Max by Elegoo. This decision was based on its massive"
+    },
+    {
+      "line": 185,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "print volume (16.5×16.5×18.9in3) that was able to accommodate the sectioned portion of the hull and"
+    },
+    {
+      "line": 186,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "midsection. On top of this, the Neptune 4 series of printers are known to be reliable, consistent, and most"
+    },
+    {
+      "line": 187,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "importantly extremely fast, being able to print at 500 mm/s when the average 3D printer operates around"
+    },
+    {
+      "line": 188,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "50-150 mm/s."
+    },
+    {
+      "line": 189,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Material"
+    },
+    {
+      "line": 190,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "The second decision the team had to make was on the material of the hull itself. The team"
+    },
+    {
+      "line": 191,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "considered utilizing PLA, ASA, ABS, and other specialized plastic composites but eventually settled on"
+    },
+    {
+      "line": 192,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "utilizing PETG. On one hand, PLA is easy to work with and print, however, it is extremely weak to heat"
+    },
+    {
+      "line": 193,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "and doesn’t have much in terms of impact resistance on the other hand ASA and ABS are known for their"
+    },
+    {
+      "line": 194,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "extreme durability in exterior environments, however, it is extremely hard to work with and, depending"
+    },
+    {
+      "line": 195,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "on the material manufacturer, would produce toxic fumes while being melted by the printer (Kopar &"
+    },
+    {
+      "line": 196,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Yildiz, 2023). PETG is a material that is easier to work with when compared to ASA and ABS and is"
+    },
+    {
+      "line": 197,
+      "page_start": 9,
+      "page_end": 10,
+      "text": "known to be durable enough for exterior use (Kopar & Yildiz, 2023). To increase print times and impact Rapid 3D: A 3D Printed Vessel 11"
+    },
+    {
+      "line": 198,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "resistance the team specifically went with Elegoo’s Rapid PETG, making the hull easier and faster to"
+    },
+    {
+      "line": 199,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "manufacture while being more durable."
+    },
+    {
+      "line": 200,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Construction"
+    },
+    {
+      "line": 201,
+      "page_start": 10,
+      "page_end": 10,
+      "text": " Once all the sections of the hull are printed everything is first sanded and cleaned before being"
+    },
+    {
+      "line": 202,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "slotted into the internal aluminum extrusion or loosely bolted together to ensure alignment. The team then"
+    },
+    {
+      "line": 203,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "used JB Weld Plastic Bonder to permanently bond the sections together forming a uniform, 3D-printed,"
+    },
+    {
+      "line": 204,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "hull and midsection. Once the pontoons and hull are completed the team then used heat inserts to create"
+    },
+    {
+      "line": 205,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "secure and permanent bolt threads. This is to aid in the longevity and strength of the 3D-printed access"
+    },
+    {
+      "line": 206,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "hatches of the hull and the battery clamp bar. Once the lids are attached and their seam taped off the team"
+    },
+    {
+      "line": 207,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "will then use clear epoxy to coat the whole hull, utilizing fiberglass on specific stress points such as the"
+    },
+    {
+      "line": 208,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "handles."
+    },
+    {
+      "line": 209,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Figure 12: A sanded and taped off pontoon ready for epoxy"
+    },
+    {
+      "line": 210,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Electrical"
+    },
+    {
+      "line": 211,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "The fabrication of the electrical system is divided into two subsystems, the High Voltage and"
+    },
+    {
+      "line": 212,
+      "page_start": 10,
+      "page_end": 11,
+      "text": "steering system and the low voltage control and communications system.Rapid 3D: A 3D Printed Vessel 12"
+    },
+    {
+      "line": 213,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Power Storage"
+    },
+    {
+      "line": 214,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "The high voltage power storage system is constructed of four 12.8V, 100Ah LiFePO₄ batteries"
+    },
+    {
+      "line": 215,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "connected in series, providing 51.2V for the main motor and rudder. While the low voltage system power"
+    },
+    {
+      "line": 216,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "storage system simply consists of a 3S LiPo battery."
+    },
+    {
+      "line": 217,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Figure 13: one of four 12.8V batteries"
+    },
+    {
+      "line": 218,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Drive Assembly - Power Train"
+    },
+    {
+      "line": 219,
+      "page_start": 11,
+      "page_end": 11,
+      "text": " With 55V the team chose the APISQUEEN 70167 electric motor, a 7,500W, 10.1 HP Efoil motor"
+    },
+    {
+      "line": 220,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "that is then attached to the Flipsky 65111 propeller. This motor assembly is then attached using two"
+    },
+    {
+      "line": 221,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "mounting bolts and lock nuts onto the drive assembly’s aluminum extrusion. The motor assembly’s cone"
+    },
+    {
+      "line": 222,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "is then attached on the opposite side using four standard extrusion t-nuts and M6 bolts. Two extrusions are"
+    },
+    {
+      "line": 223,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "then attached above the motor assembly to form supports for the rutter. The rutter is then bolted onto the"
+    },
+    {
+      "line": 224,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "90° gearbox before the gearbox and rutter supports are bolted onto the two extrusions above the motor."
+    },
+    {
+      "line": 225,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "This completes the drive assembly and attaching 90° brackets at the very top of the main drive assembly"
+    },
+    {
+      "line": 226,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "extrusion finally forms the drive assembly."
+    },
+    {
+      "line": 227,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Controls and Connections"
+    },
+    {
+      "line": 228,
+      "page_start": 11,
+      "page_end": 11,
+      "text": " Diagrams of both the high-voltage and low-voltage systems can be found below. The team"
+    },
+    {
+      "line": 229,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "created these diagrams and used them as a guide when putting together the systems."
+    },
+    {
+      "line": 230,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "The low-voltage system is contained within the electronics box. It contains the 3S LiPo which is"
+    },
+    {
+      "line": 231,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "connected to the 12V water cooling system via a relay and to a 12V->5V buck converter. This buck"
+    },
+    {
+      "line": 232,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "converter provides regulated 5V power to The Cube flight controller and Raspberry Pi. The GPS, Arduino"
+    },
+    {
+      "line": 233,
+      "page_start": 11,
+      "page_end": 12,
+      "text": "for stepper control, and RC receiver are powered by the flight controller. The PWM signal for the main Rapid 3D: A 3D Printed Vessel 13"
+    },
+    {
+      "line": 234,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "motor and the stepper signals for the rudder control are connected from the flight controller and Arduino"
+    },
+    {
+      "line": 235,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "to the VESC and stepper driver respectively."
+    },
+    {
+      "line": 236,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "The high-voltage system is connected to a bus bar to allow for easy distribution. All power from the"
+    },
+    {
+      "line": 237,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "batteries runs through the fuse and contactor before reaching the bus bar so that the batteries are"
+    },
+    {
+      "line": 238,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "completely cut off in the event of a power shutoff. The bus bar then provides power to the VESC and a"
+    },
+    {
+      "line": 239,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "48V regulator to the stepper driver."
+    },
+    {
+      "line": 240,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Figure 14: Electrical box wiring diagram"
+    },
+    {
+      "line": 241,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Testing"
+    },
+    {
+      "line": 242,
+      "page_start": 12,
+      "page_end": 12,
+      "text": " Before fully assembling the boat the team actively tests the electrical components outside of the"
+    },
+    {
+      "line": 243,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "hull to verify that they are operating nominally. The first thing the team will test is the battery’s voltage to"
+    },
+    {
+      "line": 244,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "check for any inconsistencies that would result in damaging parts. They would do this by using a multi\u0002meter and cross-checking the result with a battery management system (BMS). The team will run"
+    },
+    {
+      "line": 245,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "performance tests on the thrust motor under two scenarios: one that simulates the failure of the water"
+    },
+    {
+      "line": 246,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "pump, observing how fast the ESC would heat up under different loads, and then the team would activate"
+    },
+    {
+      "line": 247,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "the pump cooling the ESC to gauge the change in temperature. This is done in order to find the ideal"
+    },
+    {
+      "line": 248,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "operating temperature of the ESC and the temperature that would indicate pump failure. It is also during"
+    },
+    {
+      "line": 249,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "this test that the team will come to know the normal operational current and voltages in relation to the"
+    },
+    {
+      "line": 250,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "amount of thrust the drive assembly produces."
+    },
+    {
+      "line": 251,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Assembly"
+    },
+    {
+      "line": 252,
+      "page_start": 12,
+      "page_end": 12,
+      "text": " To put the whole boat together, the team starts by grabbing either the left or right pontoon and"
+    },
+    {
+      "line": 253,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "attaching the two connecting aluminum extrusions, locking both in place using extrusion t-nuts, rubber"
+    },
+    {
+      "line": 254,
+      "page_start": 12,
+      "page_end": 13,
+      "text": "bonded washers, M6, and M8 bolts. The team then grabs the radiator, connecting it’s tubing before Rapid 3D: A 3D Printed Vessel 14"
+    },
+    {
+      "line": 255,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "inserting it into the radiator chamber and locking it in place with the radiator chamber cap. Laying the"
+    },
+    {
+      "line": 256,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "pontoon on its side so that the extrusions are facing up, the midsection is then slid across the extrusion"
+    },
+    {
+      "line": 257,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "until it fully presses on the pontoon, it is also then locked into place using the same method. To complete"
+    },
+    {
+      "line": 258,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "the hull the other pontoon is slid into the extrusion and attached in the same manner as the first. To test if"
+    },
+    {
+      "line": 259,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "the hull has been securely attached to each other two team members are asked to tug away from each"
+    },
+    {
+      "line": 260,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "other in an attempt to separate the two pontoons and midsection."
+    },
+    {
+      "line": 261,
+      "page_start": 13,
+      "page_end": 13,
+      "text": " Now that the hull is all put together, the team inserts the four main batteries and the electrical box"
+    },
+    {
+      "line": 262,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "into their respective compartments before securing them in place using the battery clamp bars. Cables are"
+    },
+    {
+      "line": 263,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "then attached to the batteries and run through the “cable through” hole into the midsection and connected"
+    },
+    {
+      "line": 264,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "to the electrical box. The team then utilized the drive assembly’s 90° bracket to bolt and lock the drive"
+    },
+    {
+      "line": 265,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "assembly onto the middle back of the boat. After checking connections and signal, the two 30lb payloads"
+    },
+    {
+      "line": 266,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "are then lowered into their chambers and locked into place. Once the payloads are locked in the lids are"
+    },
+    {
+      "line": 267,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "then securely bolted into their respective locations and locked into place."
+    },
+    {
+      "line": 268,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Risks"
+    },
+    {
+      "line": 269,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Mitigated"
+    },
+    {
+      "line": 270,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "The team has run into a variety of risks in designing Rapid 3D especially in engineering a hull"
+    },
+    {
+      "line": 271,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "that is to be 3D printed thankfully almost all of the risks that come with a 3D printed hull can be"
+    },
+    {
+      "line": 272,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "mitigated. One of the biggest risks of a 3D printed hull is its durability, thankfully during the design and"
+    },
+    {
+      "line": 273,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "build phase of the hull the team mitigated it; by designing mounting points to avoid sheering forces and"
+    },
+    {
+      "line": 274,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "utilizing epoxy resign as both a waterproofing and strengthening agent. Another risk mitigated by epoxy"
+    },
+    {
+      "line": 275,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "is the water resistance of a 3D printed craft, by itself 3D prints are at most water resistant and will"
+    },
+    {
+      "line": 276,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "eventually leak but with epoxy, the team essentially completely sealed the outside of the vessel creating a"
+    },
+    {
+      "line": 277,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "waterproof hull."
+    },
+    {
+      "line": 278,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Controllable"
+    },
+    {
+      "line": 279,
+      "page_start": 13,
+      "page_end": 13,
+      "text": " Although the team accounts for quite a bit of risks there are still risks when it comes to such a"
+    },
+    {
+      "line": 280,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "unique vessel. For one due to the nature of the gearbox and how power is transferred into the rudder,"
+    },
+    {
+      "line": 281,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "turning the vessel may result in the gears potentially skipping resulting in an offset rudder. This will cause"
+    },
+    {
+      "line": 282,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "the vessel to start turning even though the operator is not turning. This risk can be controlled during the"
+    },
+    {
+      "line": 283,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "race by correcting the offset values on our controller so that the vessel assumes the middle is offset by a"
+    },
+    {
+      "line": 284,
+      "page_start": 13,
+      "page_end": 14,
+      "text": "given angular degree.Rapid 3D: A 3D Printed Vessel 15"
+    },
+    {
+      "line": 285,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "References"
+    },
+    {
+      "line": 286,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Candela. (2023, January 5). Candela Tech Talks | Episode 3, the C-Pod Motor. YouTube."
+    },
+    {
+      "line": 287,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "https://www.youtube.com/watch?v=jmaSrTV52yo"
+    },
+    {
+      "line": 288,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Carlton, J. (2018). Marine propellers and propulsion. Butterworth-Heinemann."
+    },
+    {
+      "line": 289,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Kopar, M. & Yildiz, A. (2023). Experimental investigation of mechanical properties of PLA, ABS, and"
+    },
+    {
+      "line": 290,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "PETG 3-d printing materials using fused deposition modeling technique. Materials Testing,"
+    },
+    {
+      "line": 291,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "65(12), 1795-1804."
+    },
+    {
+      "line": 292,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Li-Xia, Y., Zhao-Hui, W., Wu-Xing, Z., et al. (2011). Development and challenges of LiFePO4 cathode"
+    },
+    {
+      "line": 293,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "material for lithium-ion batteries. Energy & Environmental Science."
+    },
+    {
+      "line": 294,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Techet, A. H. (2005). Marine propellers and propulsion principles. Massachusetts Institute of Technology."
+    },
+    {
+      "line": 295,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Workshop Insider. (2022, August 17). Guide to ships rudder and steering gear. Retrieved from"
+    },
+    {
+      "line": 296,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "https://workshopinsider.com/ship-rudder-and-steering"
+    },
+    {
+      "line": 297,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Xiqian, Y., Rusong, C., Luyu, G., et al. (2023). Battery Safety: From Lithium-Ion to Solid-State Batteries."
+    },
+    {
+      "line": 298,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Engineering, Volume 21, Pages 9-14"
+    }
+  ],
+  "source_line_count": 299,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}

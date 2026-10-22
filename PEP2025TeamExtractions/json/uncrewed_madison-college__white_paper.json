@@ -1,0 +1,4369 @@
+{
+  "competition_year": 2025,
+  "team": "Madison College",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/MadisonCollege",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/MadisonCollege/MadisonCollege-White%20Paper.pdf",
+  "filename": "MadisonCollege-White Paper.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "15"
+  },
+  "page_count": 15,
+  "pages_without_text": [
+    10
+  ],
+  "char_count": 22056,
+  "pages": [
+    {
+      "page": 1,
+      "text": "Madison Area Technical College PEP Team\n2025\n“The Underwater Pink Pony”\nASNE: PEP 25 (Unmanned Division)\nMadison Area Technical College\nMarch 25, 2025\nChase Noe, Griffin Rafferty, Meghan Sweeney, Xander Godar2\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": "Table of Contents\nMadison Area Technical College PEP Team 2025 .............................................................1\n“The Underwater Pink Pony” ..........................................................................................1\nHull Design...................................................................................................................3\nThrusters/Propulsion................................................................................................... 11\nApisqueen AQ1020 .................................................................................................. 11\nBlue Robotics T500 .................................................................................................. 11\nOther Considered Options........................................................................................ 13\nOne Thruster and Rutter ........................................................................................... 13\nRotating Thruster ..................................................................................................... 13\nPower System............................................................................................................. 13\nControl System........................................................................................................... 14\nProject Conclusion ..................................................................................................... 14\nAcknowledgments ...................................................................................................... 153\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "Hull Design\nThis section is split into three distinct sections: In-House Design, Market Options,\nand Final Hull Customizations. The full justification for this organization will become\nclearer as details in each section are disclosed, but in short, our initial evaluation made\nclear that the best choice for a hull would be one that was designed in-house to our\nspecific needs. This decision is somewhat obvious before time & money are considered but\ngiven the high personnel and budget cost of designing and fabricating a hull, it was a tough\nchoice. We reserved the idea of re-evaluating market options due to these costs and\nmoved forward with in-house design until it became clear that we would not be able to line\nup manufacturers for our mold plug-in time. At that point, we went back to the drawing\nboard and looked at what could be bought to serve as our hull, eventually landing on a\nwhitewater kayak for a variety of reasons. This kayak, though, was not perfect, and thus we\ndecided to make some additional parts to fit the remaining needs.\nIn-House Design\nFrom our first meeting in October, we had our eyes on the hull: it had been designed\nin-house the year before but had a myriad of problems including but not limited to low\ndisplacement given additional payload, lack of optimization for speed, and difficulties with\nwaterlogging. Given this, one of the first things that we did was evaluate our general\noptions; we came up with this table of pros and cons:\nIn-House Purchased Re-used\nDisplacement as decided\nby design—can\naccommodate however\nmuch weight is decided to\nbe necessary\nApproximately correct\ndisplacement—is not\ninfinitely customizable, but\ncan be chosen according to\nneeds\nPrecariously low\ndisplacement—may see\nfailure of catamaran multi\u0002hull design resulting in\nimmense drag\nIdealized shape—can plane\nor be displacement-based,\nas stable as needed, etc\nShape compromised—\nThough a decision can be\nmade on format, it will likely\ninvolve compromises in one\nor more areas\nSub-ideal shape—\ncatamaran hull is built\nprimarily for\nstability/reliability rather\nthan speed. Though this is\ngood, it is not what we need\nfor the competition\nCustomizable material—As\ndecided by team, can be\nIndustrial standard\nmaterial—Though we would\nnot be able to decide our\nFine material—The hull we\ninherited was made of ABS\nplastic, which was chosen 4\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": "adjusted to preference\nbased on cost, rigidity, etc\nmaterial, the industry has\ncome to conclusions on\nwhat materials work best\nfor a given application, and\nthat may be plenty good for\nour use-case\ndue to its durability and\nease of manufacturing.\nThough it may or may not be\nthe best, it is certainly\nsuitable.\nGiven the various pros and cons of each use-case, we decided to dive into the\ndesign of a hull. The first step was to define a general concept for our hull, and for that we\ndevised a series of rough, engineering diagram-style sketches:\nAnd, based off those sketches and research into the shapes and their attributes, we\ncame up with the following table:\nI II III IV V VI\nThough V\u0002Bottomed\nhulls often\nlack\nThe\ncatamaran\nhull is\ndesigned\nFlat-bottom\nhulls are good\nfor stability in\ncalm water,\nRound-Bottom\nhulls are\nslightly more\nable to cope\nA pontoon,\nlike a\ncatamaran,\nis designed\nHydrofoil/skimming\nhulls are bad for\nstability in certain\nconditions, but the 5\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "stability,\nthe\naddition of\nstabilizers\nwould\nallow for a\nwell\u0002rounded,\nstable hull\nexplicitly\nfor stability,\nand thus\nthis would\nbe\nmaximized\nfor it\nbut in VA\nBeach’s\nwaves, it\nwould likely\ncapsize\nwith waves\nthan flat\u0002bottoms, but\ntend to rock\nwildly without\nmuch\nresistance\nfor stability\nand would\nthusly be\nmaximized\nfor it\nlifted hull means\nthat minor waves\nwould not affect it\nmajorly as they\nwould with other\nhulls\nDue to its\nability to\nskim\nsomewhat,\nthe hull\nlifting out\nof the\nwater\nresults in a\nrelatively\nlow drag\ncoefficient\nDue to its\ndesign\nfocus on\nstability,\nthe\ncatamaran\nhull is poor\nin terms of\ndrag\nDue to its\nability to skim\nsomewhat,\nthe hull lifting\nout of the\nwater results\nin a relatively\nlow drag\ncoefficient\nDue to its\nability to skim\nsomewhat,\nthe hull lifting\nout of the\nwater results\nin a relatively\nlow drag\ncoefficient\nSame as\nthe\ncatamaran,\nthe drag\ncoefficient\nof the\npontoon\nhull is\nquite high\nThe design of a\nhydrofoil/\nskimming hull is\nmaximized for low\ndrag, meaning that\nit would be the best\noption for this\nconsideration\nA V\u0002shaped\nhull w/\nstabilizers\nis fairly\nsimple to\ndesign as\nthe shape\nis largely\nalready\ndecided\nA\ncatamaran\nhull is\nsomewhat\nsimple to\ndesign,\nthough\ndecisions\non how\nmany hulls\nto include\nin a multi\u0002hull and\ntheir exact\ndimensions\nbecome\ncomplex\nA flat\u0002bottomed hull\nis largely\npredetermined\nin design, with\nthe only\nvariable\ndimensions\nbeing width,\nlength and the\nangle of the\nwalls, but\nthese\ndimensions\ncould be\ndifficult to\ndecide\nA round\u0002bottom hull\nprovides\nvarious points\nof difficulty\nincluding radii\nof various\nsections,\nwidth : length\nratio, and\ndifficulties\nenclosing/\nensuring\nwatertightness\nA pontoon\nhull is\nquite\nsimple to\ndesign,\ngiven that\nwaterline\ndetermines\ntop speed,\nmaximizing\nfor length\nwould be a\npriority\nA hydrofoil would\nbe incredibly\ndifficult to design,\nas a slight misstep\nmay mean that not\nenough lift is\ngenerated, whether\ndue to insufficient\ncoefficient, too\nmuch drag, or\ninsufficient thrust\nor an unbalanced\nlift generated,\nmeaning capsizing6\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "Given the overall balance of complexity, stability, and drag, we decided on a v\u0002bottomed hull with stabilizers. This shape would offer a low drag thanks to the lift\ngenerated by the fins and main shape alike and have a low chance of roll thanks to the drag\ngenerated by lateral motion in regions of instantaneous change of slope (bottom edge,\nfins). With that decided, several drafts were modeled in SolidWorks by the team, eventually\ndeciding on the following:\n*Models show only the starboard side, port side was intended to be an exact mirroring of\nthe above7\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "This design was sufficiently hydrodynamic and aerodynamic to provide the least\ndrag as could be reasonably expected while providing enough displacement (120 lbs when\nthe waterline is 4 inches below the leading point of the hull) to allow for this and following\nyear’s weight requirements. This was determined through several drafts of models and\nSolidWorks flow simulations which were used to determine high- and low-pressure points,\neach of which was then targeted with the following model for ironing out.\nWith our finalized design in hand, we went looking for manufacturers. It was around\nmid-December at that time, and we sent out feelers to several companies and people,\nincluding wooden boat builders, wood furniture makers, and general carpenters. A week or\ntwo later, we heard back one-by-one that they were unable to accommodate our project in\nthe timeline we needed, which, in hindsight, is something we should’ve expected. We\ndecided that rather than research more manufacturers and hope for them to have time in\ntheir schedules, we would come together and re-define our needs to choose a market\u0002available hull that would fit them best. In this process, we decided on a few of the most\nimportant aspects: stability, drag, ease of retrofitting to watertightness, weight limit, and\ninternal space.\nMarket Options\nGiven those priorities, we came up with this table:\nKayak Sports\nKayak\nAluminum\nFishing\nHull\nCompetition\nRowing Hull\nUsed\nRacing\nBoat Hull\nWidely\navailable on\nthe market—a\ngeneralized\nkayak could be\nfound to suit\nany needs we\nhave because\nthey are so\ncommon\nFairly\nprominent\nmarket—the\nmore\nspecialized\nform of kayak\nis less\nprevalent, and\nhas less\noptions\nFairly\nprominent,\ncollapsed\nmarket—\nthough there is\na decent-sized\nmarket, all\nproducts are\napproximately\nidentical\nSlim market—Very\nfew sold, and have\nlittle to no\nvariance due to\ncompetition\nregulations\nNon-existent\nmarket—in\norder to find\none of these,\nwe would\nmost likely\nneed to have\ncontact with a\nboat racing\nteam, which\nwe do not\nInexpensive\nrelative to\nother hulls\nSlightly more\nexpensive than\nkayak, still\nbelow average\nFairly\nexpensive,\nwould take\nMay fit in budget,\nbut only barely\nBudget\nbreakingly\nexpensive8\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": "majority of\nbudget\nFairly stable—\nKayaks are\ngenerally\ndesigned for\ncalm waters,\nand thus may\nnot fare\nspectacularly\nin choppy\nwaters like\nVirginia Beach,\nbut unlikely to\ncapsize\nDesigned for\nstability—\nSports kayaks\nare meant to\nbe taken into\nwhitewater\nrapids, the\nmost difficult\nof waters short\nof a tsunami,\nand therefore\nare not only\nincredibly\nstable, but\nself-righting\nwith the\ncorrect weight\ndistribution,\nbut they come\nwith the\ndrawbacks of a\nflat-bottomed\nhull\nFairly stable—\naluminum\nfishing hulls are\nunlikely to\ncapsize, but\nextremely rocky\nin any type of\nwave, which\nmay encourage\nwater to come\ninto the wide\u0002open top\nFairly stable—\nrowing hulls are\nbuilt similarly to\ncanoes, and thus\nquite stable, but\nthey are not\ndesigned for the\ndifferential thrust\nwe planned on\nusing, and\ntherefore may\nhave unexpected\ndifficulties given\nchoppy waters\nand differential\nthrust\nStable\nenough—\nthough\nprecarious in\nbalance,\nracing hulls\nare designed\nto survive the\nexact\nconditions\nthat we will be\nracing in, only\nat higher\nspeeds, which\nmeans they\ncould hand\nthese\nconditions\nLow drag—\nslim profile\nmeans that\nkayaks cut\nthrough the\nwater\nefficiently\nMedium\ndrag—though\nnot as narrow\nas a regular\nkayak, these\nare flat\u0002bottomed,\nallowing them\nto sit higher\nand even\nplane at high\nspeed\nMedium drag—\nGenerally v\u0002bottomed hulls,\nmeaning that if\nenough speed\nwas generated\nthey would\nplane\nLow drag—the\nsame slim profile\nas kayaks, only\nbetter, as these\nare designed for\nspeed\nMinimum\ndrag—these\nhyper-efficient\nplaners are\ndesigned to be\nthe fastest\nthings in the\nwater\nEasy to\nwaterproof—a\nsmall hole in\nthe top is easy\nto cover with a\nlarge rubber\nEasy to\nwaterproof—a\nsmall hole in\nthe top is easy\nto cover with a\nlarge rubber\nDifficult to\nwaterproof—\nentirely open\non top,\nmeaning that\nthere is no way\nof\nDifficult to\nwaterproof—\nentirely open on\ntop, meaning that\nthere is no way of\nwaterproofing\nother than\nEnclosed—no\nwork\nnecessary9\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "band and\nplastic\nband and\nplastic\nwaterproofing\nother than\nmanufacturing\na large cover\nmanufacturing a\nlarge cover\nVariable weight\nlimit & internal\nspace—\nvariable by\nmodel, can\nsuit any needs\nVariable\nweight limit &\ninternal\nspace—\nvariable by\nmodel, can\nsuit any needs\nOversized—can\nfit any load, but\nstability will be\ncompromised\nas they are\ndesigned for\nmuch more\nthan we can\nput in it\nPerfect size—\nelectronics would\nlikely be snug and\nweight would be\naround the\nintended amount\nOversized—\nwithout the\npower-train or\ndriver, our\nboat would be\nmassively\nunderweight\nAnd so, for its size, stability, drag, cost, and water resistance, we chose a whitewater\nkayak designed for a <120lb athlete. This weight limit allows for considerable expansion on\ninternals, so future years shouldn’t have to consider their hull unless they choose to. The\ndrag of a kayak is similar to what we would have had with our in-house hull, depending on\nhow much either would have lifted out of the water, its cost was only ~$1,300, which left\nconsiderable room for electronics, and its small open area made for easy plans to design a\nwaterproofing solution. However, this option did leave us with one issue: as it has a flat\nbottom, the kayak may be easy to capsize temporarily, which, though its self-righting may\nfix, is still sub-ideal. Because of this, we decided that alongside thruster mounts, we would\ndesign fins to largely rid ourselves of this problem using their large lateral drag coefficients.\nFinal Hull Customizations\nFor fins, we did not do anything extraordinary: fins have a fairly standard shape, and\nso when modeling for our 3D print, we simply followed that design. That is, we followed it\nuntil the idea to mount thrusters on the side of our fins was pitched. This change would\nsimplify our design process, reduce failure points, and allow for extra fin space if we\nneeded yet more stability. That led us to this 3D model*.\n*3D model is accurate at the time of submission, but may be changed by competition, as\nmaterials are cheap and readily available1011\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 10,
+      "text": "",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 11,
+      "text": "Thrusters/Propulsion\nThe thrusters that were originally chosen for our boat were chosen to accommodate the\nlarger hull and more weight, as well as give the boat a general power advantage. We ran into late\nissues with these thrusters and their compatibility with the Electronic Speed Controllers we\noriginally used. Unfortunately, with how late this happened and budget issues, the only choice\nthat we were left with was to reuse the thrusters from last year. The boat will be steered with\ndifferential thrust to each thruster using an electronic speed controller connected to each motor.\nApisqueen AQ1020\nThe original thruster that was chosen was the Apisqueen AQ1020. As said above, this\nthruster proved to be the most optimal for the setup that was first planned to run. Many things\nhave changed with the overall boat setup, which also now includes the thrusters. The AQ 1020\noutputs 53 lbs of force at 50V, making it optimal to match with the batteries chosen and the\nweight of the vessel. The major issue that was discovered was the non-compatibility with the\nESCs, causing us to switch. These thrusters came with a plastic mounting block as pictured\nbelow. The thruster would have been mounted sideways on the fins that come off the bottom of\nthe boat. The benefits of this thruster are more power and a fully metal construction. The\ndownsides are the inability to connect with the current ESCs, questionable stability and the large\nfootprint leading to more drag.\n*AQ1020 Thruster\nBlue Robotics T500\nThe Blue Robotics T500 was the thruster package used by the 2023-24 PEP team at\nMadison College. They chose this thruster due to it being light enough to fit on their boat and it\nis an incredibly stable thruster. They also saw it is the best mix of power to the weight of the boat 12\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 12,
+      "text": "as well as the mounting ease and small design. This thruster also is compatible with the\nelectronic speed controllers chosen for both last year and this current year. The T500 outputs\n35.5 lbs of force at 24.4 volts. These thrusters are mounted sideways onto the fin, just as the\nAQ1020 would have been. The benefits of this thruster are its smaller, more hydrodynamic\ndesign, better stability, and less expensive. The downsides are some parts being made from\nplastic and less power.\n*T500 Thruster\nThere is a risk in running these thrusters that the much heavier weight of the boat will be\ntoo much for the T500 thruster to handle in taller waves and currents. Based on the calculations\nthat have been done, on flat water the thrusters will propel the boat at an estimation of 6-8 mph,\nnot including outside drag from currents, waves, etc. Even with taller waves and currents, the\nboat is expected to handle well due to the hull shape.\nAn issue that the 2024-25 team planned to address this year was achieving better water\nflow to the thruster. The 2023-24 team had the thruster mounted too close to the bottom of the\nhull making the water that flowed through the thruster would be very turbulent and the thrusters\nwouldn’t be as efficient. They also mounted the thrusters on an object that was not\nhydrodynamic. The updated version has the thrusters about 8 inches from the bottom of the hull\nwith a sleeker mounting system that doubles to keep the boat on track while driving. The\nelectrical cord for each thruster will follow the mounting fin up into the boat, to its ESC and\nbattery pack.13\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 13,
+      "text": "Other Considered Options\nOne Thruster and Rutter\nThe team considered a few options before landing on the dual thruster set up with\ndifferential thrust for steering. The main competitor to our option was a one-fixed thruster that\nwas far more powerful than the options we decided on. This system would be steered via rutter.\nThe downsides to this were the unreliability of a one-thruster set up compared to a two-thruster\nset up should one fail and the rutter is a very complicated part when considering how to make it\nstable and effective. Overall, the two-thruster system had far more positives than the one-thruster\nsystem.\nRotating Thruster\nThe other choice we liked was having one or two thrusters that could rotate to steer. This system\nwould have been very similar to a trolling motor on a fishing boat. We soon realized while\nlooking into this type of system that it would not be the best option. The big issues are trying to\nfind a rotating thruster or finding a way to rotate a thruster from its fixed point. We couldn’t find\nenough information on this outside of trolling motors which are not allowed under the\ncompetition rules.\nPower System\nFrom the previous year's power system, we inherited roughly 98 18650 Li-ion battery\ncells. Due to the success of the previous team and the high energy density and lower cost of Li\u0002ion batteries, we decided to use the same battery chemistry to build two identical battery packs,\none for each thruster. In addition, the cells we are using have BMS protection which limits the\ncurrent output and will protect the battery from short circuits.\nDespite the fact that we had inherited usable batteries, the old cells were not ideal\nor completely safe to use. Once the battery was disassembled each cell was at a different voltage.\nBecause of this, it was unsafe to spot-weld the cells in parallel, as that can lead to overheating in\nthe battery, damaging it. We found it better to buy new cells to reduce risk, so we bought new\nSamsung 30Q18650 batteries.\nWe had hoped to initially build a battery with 12 cells in series and 8 in parallel. This\nwould make each battery have a total voltage of 44.4V and a capacity of 24Ah. This system had\nideal power for our original thrusters, which ran on 48V. However, due to our need to change the\nthrusters and use our inherited thruster, our battery design had to change. The battery now had to\nbe designed to have a maximum voltage of 24V, so our final battery layout includes 6 cells in\nseries and 8 cells in parallel. This battery layout also provides a larger variety of options for ESC\nand chargers, while still allowing us to increase the capacity if needed. 14\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 14,
+      "text": "The final voltage of our battery is 22.2V with a capacity of 24Ah. The cells are aligned\nwith spacers and are spot-welded together with 0.15mm nickel strips. The welded battery is\nwrapped in rubber sheets which will help in reducing the vibration of the cells, then wrapped in\nheat shrink to form a solid package. After charging to their full capacity, the batteries will be\nmounted to the boat inside of a waterproof box.\nControl System\nOur control system uses the MT12 surface radio made by Radio Master as the transmitter and the\nreceiver we used is the ER5C-1 channel receiver by the same manufacturer. The RadioMaster\nMT12 is the first open-source surface radio to officially be supported by EdgeTX, ExpressLRS,\nand the Multi-module project. With 10 physical inputs and the capability to handle up to 32\nchannels, the MT12 can handle a wide array of surface models, from cars and trucks to boats and\nbeyond. Due to its extensive customizability, the MT12 is prepared to excel in almost every\nscenario, making it the obvious choice for our boat control system.\nProject Conclusion\nThis project was definitely a new experience for all of us. We didn’t have a great idea of\nwhere to start on this project and when we did start we had a lot of waiting for responses.\nWe definitely got into a time jam on this project but we learned a great deal from being\nthrown into the fire. We hope that future groups can learn from our mistakes and keep\ncreating better boats down the road.15\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 15,
+      "text": "Acknowledgments\nOur project has been a great learning experience for the team in all aspects of\nengineering and we are greatly appreciative to be a part of the ASNE PEP program to help\nfurther our knowledge of electric propulsion. Our team wants to thank Michael Briscoe and\nthe ASNE for making this opportunity possible. The Madison College STEM Center and its\nemployees Carolyn Kosabucki, Tom Fleming, and Levi Lee have been incredible in their\nhelp and dedication to the success of this year's team. We cannot give enough thanks to\neveryone involved in this project and making it a reality.\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Madison Area Technical College PEP Team"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "2025"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "“The Underwater Pink Pony”"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "ASNE: PEP 25 (Unmanned Division)"
+    },
+    {
+      "line": 4,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Madison Area Technical College"
+    },
+    {
+      "line": 5,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "March 25, 2025"
+    },
+    {
+      "line": 6,
+      "page_start": 0,
+      "page_end": 1,
+      "text": "Chase Noe, Griffin Rafferty, Meghan Sweeney, Xander Godar2"
+    },
+    {
+      "line": 7,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Table of Contents"
+    },
+    {
+      "line": 8,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Madison Area Technical College PEP Team 2025 .............................................................1"
+    },
+    {
+      "line": 9,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "“The Underwater Pink Pony” ..........................................................................................1"
+    },
+    {
+      "line": 10,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Hull Design...................................................................................................................3"
+    },
+    {
+      "line": 11,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Thrusters/Propulsion................................................................................................... 11"
+    },
+    {
+      "line": 12,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Apisqueen AQ1020 .................................................................................................. 11"
+    },
+    {
+      "line": 13,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Blue Robotics T500 .................................................................................................. 11"
+    },
+    {
+      "line": 14,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Other Considered Options........................................................................................ 13"
+    },
+    {
+      "line": 15,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "One Thruster and Rutter ........................................................................................... 13"
+    },
+    {
+      "line": 16,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Rotating Thruster ..................................................................................................... 13"
+    },
+    {
+      "line": 17,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Power System............................................................................................................. 13"
+    },
+    {
+      "line": 18,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Control System........................................................................................................... 14"
+    },
+    {
+      "line": 19,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Project Conclusion ..................................................................................................... 14"
+    },
+    {
+      "line": 20,
+      "page_start": 1,
+      "page_end": 2,
+      "text": "Acknowledgments ...................................................................................................... 153"
+    },
+    {
+      "line": 21,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Hull Design"
+    },
+    {
+      "line": 22,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "This section is split into three distinct sections: In-House Design, Market Options,"
+    },
+    {
+      "line": 23,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "and Final Hull Customizations. The full justification for this organization will become"
+    },
+    {
+      "line": 24,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "clearer as details in each section are disclosed, but in short, our initial evaluation made"
+    },
+    {
+      "line": 25,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "clear that the best choice for a hull would be one that was designed in-house to our"
+    },
+    {
+      "line": 26,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "specific needs. This decision is somewhat obvious before time & money are considered but"
+    },
+    {
+      "line": 27,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "given the high personnel and budget cost of designing and fabricating a hull, it was a tough"
+    },
+    {
+      "line": 28,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "choice. We reserved the idea of re-evaluating market options due to these costs and"
+    },
+    {
+      "line": 29,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "moved forward with in-house design until it became clear that we would not be able to line"
+    },
+    {
+      "line": 30,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "up manufacturers for our mold plug-in time. At that point, we went back to the drawing"
+    },
+    {
+      "line": 31,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "board and looked at what could be bought to serve as our hull, eventually landing on a"
+    },
+    {
+      "line": 32,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "whitewater kayak for a variety of reasons. This kayak, though, was not perfect, and thus we"
+    },
+    {
+      "line": 33,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "decided to make some additional parts to fit the remaining needs."
+    },
+    {
+      "line": 34,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "In-House Design"
+    },
+    {
+      "line": 35,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "From our first meeting in October, we had our eyes on the hull: it had been designed"
+    },
+    {
+      "line": 36,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "in-house the year before but had a myriad of problems including but not limited to low"
+    },
+    {
+      "line": 37,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "displacement given additional payload, lack of optimization for speed, and difficulties with"
+    },
+    {
+      "line": 38,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "waterlogging. Given this, one of the first things that we did was evaluate our general"
+    },
+    {
+      "line": 39,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "options; we came up with this table of pros and cons:"
+    },
+    {
+      "line": 40,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "In-House Purchased Re-used"
+    },
+    {
+      "line": 41,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Displacement as decided"
+    },
+    {
+      "line": 42,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "by design—can"
+    },
+    {
+      "line": 43,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "accommodate however"
+    },
+    {
+      "line": 44,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "much weight is decided to"
+    },
+    {
+      "line": 45,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "be necessary"
+    },
+    {
+      "line": 46,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Approximately correct"
+    },
+    {
+      "line": 47,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "displacement—is not"
+    },
+    {
+      "line": 48,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "infinitely customizable, but"
+    },
+    {
+      "line": 49,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "can be chosen according to"
+    },
+    {
+      "line": 50,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "needs"
+    },
+    {
+      "line": 51,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Precariously low"
+    },
+    {
+      "line": 52,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "displacement—may see"
+    },
+    {
+      "line": 53,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "failure of catamaran multi\u0002hull design resulting in"
+    },
+    {
+      "line": 54,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "immense drag"
+    },
+    {
+      "line": 55,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Idealized shape—can plane"
+    },
+    {
+      "line": 56,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "or be displacement-based,"
+    },
+    {
+      "line": 57,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "as stable as needed, etc"
+    },
+    {
+      "line": 58,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Shape compromised—"
+    },
+    {
+      "line": 59,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Though a decision can be"
+    },
+    {
+      "line": 60,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "made on format, it will likely"
+    },
+    {
+      "line": 61,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "involve compromises in one"
+    },
+    {
+      "line": 62,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "or more areas"
+    },
+    {
+      "line": 63,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Sub-ideal shape—"
+    },
+    {
+      "line": 64,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "catamaran hull is built"
+    },
+    {
+      "line": 65,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "primarily for"
+    },
+    {
+      "line": 66,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "stability/reliability rather"
+    },
+    {
+      "line": 67,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "than speed. Though this is"
+    },
+    {
+      "line": 68,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "good, it is not what we need"
+    },
+    {
+      "line": 69,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "for the competition"
+    },
+    {
+      "line": 70,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Customizable material—As"
+    },
+    {
+      "line": 71,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "decided by team, can be"
+    },
+    {
+      "line": 72,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Industrial standard"
+    },
+    {
+      "line": 73,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "material—Though we would"
+    },
+    {
+      "line": 74,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "not be able to decide our"
+    },
+    {
+      "line": 75,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Fine material—The hull we"
+    },
+    {
+      "line": 76,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "inherited was made of ABS"
+    },
+    {
+      "line": 77,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "plastic, which was chosen 4"
+    },
+    {
+      "line": 78,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "adjusted to preference"
+    },
+    {
+      "line": 79,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "based on cost, rigidity, etc"
+    },
+    {
+      "line": 80,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "material, the industry has"
+    },
+    {
+      "line": 81,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "come to conclusions on"
+    },
+    {
+      "line": 82,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "what materials work best"
+    },
+    {
+      "line": 83,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "for a given application, and"
+    },
+    {
+      "line": 84,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "that may be plenty good for"
+    },
+    {
+      "line": 85,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "our use-case"
+    },
+    {
+      "line": 86,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "due to its durability and"
+    },
+    {
+      "line": 87,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "ease of manufacturing."
+    },
+    {
+      "line": 88,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Though it may or may not be"
+    },
+    {
+      "line": 89,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "the best, it is certainly"
+    },
+    {
+      "line": 90,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "suitable."
+    },
+    {
+      "line": 91,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Given the various pros and cons of each use-case, we decided to dive into the"
+    },
+    {
+      "line": 92,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "design of a hull. The first step was to define a general concept for our hull, and for that we"
+    },
+    {
+      "line": 93,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "devised a series of rough, engineering diagram-style sketches:"
+    },
+    {
+      "line": 94,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "And, based off those sketches and research into the shapes and their attributes, we"
+    },
+    {
+      "line": 95,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "came up with the following table:"
+    },
+    {
+      "line": 96,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "I II III IV V VI"
+    },
+    {
+      "line": 97,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Though V\u0002Bottomed"
+    },
+    {
+      "line": 98,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "hulls often"
+    },
+    {
+      "line": 99,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "lack"
+    },
+    {
+      "line": 100,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "The"
+    },
+    {
+      "line": 101,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "catamaran"
+    },
+    {
+      "line": 102,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "hull is"
+    },
+    {
+      "line": 103,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "designed"
+    },
+    {
+      "line": 104,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Flat-bottom"
+    },
+    {
+      "line": 105,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "hulls are good"
+    },
+    {
+      "line": 106,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "for stability in"
+    },
+    {
+      "line": 107,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "calm water,"
+    },
+    {
+      "line": 108,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Round-Bottom"
+    },
+    {
+      "line": 109,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "hulls are"
+    },
+    {
+      "line": 110,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "slightly more"
+    },
+    {
+      "line": 111,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "able to cope"
+    },
+    {
+      "line": 112,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "A pontoon,"
+    },
+    {
+      "line": 113,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "like a"
+    },
+    {
+      "line": 114,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "catamaran,"
+    },
+    {
+      "line": 115,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "is designed"
+    },
+    {
+      "line": 116,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Hydrofoil/skimming"
+    },
+    {
+      "line": 117,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "hulls are bad for"
+    },
+    {
+      "line": 118,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "stability in certain"
+    },
+    {
+      "line": 119,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "conditions, but the 5"
+    },
+    {
+      "line": 120,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "stability,"
+    },
+    {
+      "line": 121,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "the"
+    },
+    {
+      "line": 122,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "addition of"
+    },
+    {
+      "line": 123,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "stabilizers"
+    },
+    {
+      "line": 124,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "would"
+    },
+    {
+      "line": 125,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "allow for a"
+    },
+    {
+      "line": 126,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "well\u0002rounded,"
+    },
+    {
+      "line": 127,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "stable hull"
+    },
+    {
+      "line": 128,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "explicitly"
+    },
+    {
+      "line": 129,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "for stability,"
+    },
+    {
+      "line": 130,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "and thus"
+    },
+    {
+      "line": 131,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "this would"
+    },
+    {
+      "line": 132,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "be"
+    },
+    {
+      "line": 133,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "maximized"
+    },
+    {
+      "line": 134,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "for it"
+    },
+    {
+      "line": 135,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "but in VA"
+    },
+    {
+      "line": 136,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Beach’s"
+    },
+    {
+      "line": 137,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "waves, it"
+    },
+    {
+      "line": 138,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "would likely"
+    },
+    {
+      "line": 139,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "capsize"
+    },
+    {
+      "line": 140,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "with waves"
+    },
+    {
+      "line": 141,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "than flat\u0002bottoms, but"
+    },
+    {
+      "line": 142,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "tend to rock"
+    },
+    {
+      "line": 143,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "wildly without"
+    },
+    {
+      "line": 144,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "much"
+    },
+    {
+      "line": 145,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "resistance"
+    },
+    {
+      "line": 146,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "for stability"
+    },
+    {
+      "line": 147,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "and would"
+    },
+    {
+      "line": 148,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "thusly be"
+    },
+    {
+      "line": 149,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "maximized"
+    },
+    {
+      "line": 150,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "for it"
+    },
+    {
+      "line": 151,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "lifted hull means"
+    },
+    {
+      "line": 152,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "that minor waves"
+    },
+    {
+      "line": 153,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "would not affect it"
+    },
+    {
+      "line": 154,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "majorly as they"
+    },
+    {
+      "line": 155,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "would with other"
+    },
+    {
+      "line": 156,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "hulls"
+    },
+    {
+      "line": 157,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Due to its"
+    },
+    {
+      "line": 158,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "ability to"
+    },
+    {
+      "line": 159,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "skim"
+    },
+    {
+      "line": 160,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "somewhat,"
+    },
+    {
+      "line": 161,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "the hull"
+    },
+    {
+      "line": 162,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "lifting out"
+    },
+    {
+      "line": 163,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "of the"
+    },
+    {
+      "line": 164,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "water"
+    },
+    {
+      "line": 165,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "results in a"
+    },
+    {
+      "line": 166,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "relatively"
+    },
+    {
+      "line": 167,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "low drag"
+    },
+    {
+      "line": 168,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "coefficient"
+    },
+    {
+      "line": 169,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Due to its"
+    },
+    {
+      "line": 170,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "design"
+    },
+    {
+      "line": 171,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "focus on"
+    },
+    {
+      "line": 172,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "stability,"
+    },
+    {
+      "line": 173,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "the"
+    },
+    {
+      "line": 174,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "catamaran"
+    },
+    {
+      "line": 175,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "hull is poor"
+    },
+    {
+      "line": 176,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "in terms of"
+    },
+    {
+      "line": 177,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "drag"
+    },
+    {
+      "line": 178,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Due to its"
+    },
+    {
+      "line": 179,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "ability to skim"
+    },
+    {
+      "line": 180,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "somewhat,"
+    },
+    {
+      "line": 181,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "the hull lifting"
+    },
+    {
+      "line": 182,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "out of the"
+    },
+    {
+      "line": 183,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "water results"
+    },
+    {
+      "line": 184,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "in a relatively"
+    },
+    {
+      "line": 185,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "low drag"
+    },
+    {
+      "line": 186,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "coefficient"
+    },
+    {
+      "line": 187,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Due to its"
+    },
+    {
+      "line": 188,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "ability to skim"
+    },
+    {
+      "line": 189,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "somewhat,"
+    },
+    {
+      "line": 190,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "the hull lifting"
+    },
+    {
+      "line": 191,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "out of the"
+    },
+    {
+      "line": 192,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "water results"
+    },
+    {
+      "line": 193,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "in a relatively"
+    },
+    {
+      "line": 194,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "low drag"
+    },
+    {
+      "line": 195,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "coefficient"
+    },
+    {
+      "line": 196,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Same as"
+    },
+    {
+      "line": 197,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "the"
+    },
+    {
+      "line": 198,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "catamaran,"
+    },
+    {
+      "line": 199,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "the drag"
+    },
+    {
+      "line": 200,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "coefficient"
+    },
+    {
+      "line": 201,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "of the"
+    },
+    {
+      "line": 202,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "pontoon"
+    },
+    {
+      "line": 203,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "hull is"
+    },
+    {
+      "line": 204,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "quite high"
+    },
+    {
+      "line": 205,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "The design of a"
+    },
+    {
+      "line": 206,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "hydrofoil/"
+    },
+    {
+      "line": 207,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "skimming hull is"
+    },
+    {
+      "line": 208,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "maximized for low"
+    },
+    {
+      "line": 209,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "drag, meaning that"
+    },
+    {
+      "line": 210,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "it would be the best"
+    },
+    {
+      "line": 211,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "option for this"
+    },
+    {
+      "line": 212,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "consideration"
+    },
+    {
+      "line": 213,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "A V\u0002shaped"
+    },
+    {
+      "line": 214,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "hull w/"
+    },
+    {
+      "line": 215,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "stabilizers"
+    },
+    {
+      "line": 216,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "is fairly"
+    },
+    {
+      "line": 217,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "simple to"
+    },
+    {
+      "line": 218,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "design as"
+    },
+    {
+      "line": 219,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "the shape"
+    },
+    {
+      "line": 220,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "is largely"
+    },
+    {
+      "line": 221,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "already"
+    },
+    {
+      "line": 222,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "decided"
+    },
+    {
+      "line": 223,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "A"
+    },
+    {
+      "line": 224,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "catamaran"
+    },
+    {
+      "line": 225,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "hull is"
+    },
+    {
+      "line": 226,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "somewhat"
+    },
+    {
+      "line": 227,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "simple to"
+    },
+    {
+      "line": 228,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "design,"
+    },
+    {
+      "line": 229,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "though"
+    },
+    {
+      "line": 230,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "decisions"
+    },
+    {
+      "line": 231,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "on how"
+    },
+    {
+      "line": 232,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "many hulls"
+    },
+    {
+      "line": 233,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "to include"
+    },
+    {
+      "line": 234,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "in a multi\u0002hull and"
+    },
+    {
+      "line": 235,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "their exact"
+    },
+    {
+      "line": 236,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "dimensions"
+    },
+    {
+      "line": 237,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "become"
+    },
+    {
+      "line": 238,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "complex"
+    },
+    {
+      "line": 239,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "A flat\u0002bottomed hull"
+    },
+    {
+      "line": 240,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "is largely"
+    },
+    {
+      "line": 241,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "predetermined"
+    },
+    {
+      "line": 242,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "in design, with"
+    },
+    {
+      "line": 243,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "the only"
+    },
+    {
+      "line": 244,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "variable"
+    },
+    {
+      "line": 245,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "dimensions"
+    },
+    {
+      "line": 246,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "being width,"
+    },
+    {
+      "line": 247,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "length and the"
+    },
+    {
+      "line": 248,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "angle of the"
+    },
+    {
+      "line": 249,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "walls, but"
+    },
+    {
+      "line": 250,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "these"
+    },
+    {
+      "line": 251,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "dimensions"
+    },
+    {
+      "line": 252,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "could be"
+    },
+    {
+      "line": 253,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "difficult to"
+    },
+    {
+      "line": 254,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "decide"
+    },
+    {
+      "line": 255,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "A round\u0002bottom hull"
+    },
+    {
+      "line": 256,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "provides"
+    },
+    {
+      "line": 257,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "various points"
+    },
+    {
+      "line": 258,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "of difficulty"
+    },
+    {
+      "line": 259,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "including radii"
+    },
+    {
+      "line": 260,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "of various"
+    },
+    {
+      "line": 261,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "sections,"
+    },
+    {
+      "line": 262,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "width : length"
+    },
+    {
+      "line": 263,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "ratio, and"
+    },
+    {
+      "line": 264,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "difficulties"
+    },
+    {
+      "line": 265,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "enclosing/"
+    },
+    {
+      "line": 266,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "ensuring"
+    },
+    {
+      "line": 267,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "watertightness"
+    },
+    {
+      "line": 268,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "A pontoon"
+    },
+    {
+      "line": 269,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "hull is"
+    },
+    {
+      "line": 270,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "quite"
+    },
+    {
+      "line": 271,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "simple to"
+    },
+    {
+      "line": 272,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "design,"
+    },
+    {
+      "line": 273,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "given that"
+    },
+    {
+      "line": 274,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "waterline"
+    },
+    {
+      "line": 275,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "determines"
+    },
+    {
+      "line": 276,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "top speed,"
+    },
+    {
+      "line": 277,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "maximizing"
+    },
+    {
+      "line": 278,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "for length"
+    },
+    {
+      "line": 279,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "would be a"
+    },
+    {
+      "line": 280,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "priority"
+    },
+    {
+      "line": 281,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "A hydrofoil would"
+    },
+    {
+      "line": 282,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "be incredibly"
+    },
+    {
+      "line": 283,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "difficult to design,"
+    },
+    {
+      "line": 284,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "as a slight misstep"
+    },
+    {
+      "line": 285,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "may mean that not"
+    },
+    {
+      "line": 286,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "enough lift is"
+    },
+    {
+      "line": 287,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "generated, whether"
+    },
+    {
+      "line": 288,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "due to insufficient"
+    },
+    {
+      "line": 289,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "coefficient, too"
+    },
+    {
+      "line": 290,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "much drag, or"
+    },
+    {
+      "line": 291,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "insufficient thrust"
+    },
+    {
+      "line": 292,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "or an unbalanced"
+    },
+    {
+      "line": 293,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "lift generated,"
+    },
+    {
+      "line": 294,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "meaning capsizing6"
+    },
+    {
+      "line": 295,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Given the overall balance of complexity, stability, and drag, we decided on a v\u0002bottomed hull with stabilizers. This shape would offer a low drag thanks to the lift"
+    },
+    {
+      "line": 296,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "generated by the fins and main shape alike and have a low chance of roll thanks to the drag"
+    },
+    {
+      "line": 297,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "generated by lateral motion in regions of instantaneous change of slope (bottom edge,"
+    },
+    {
+      "line": 298,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "fins). With that decided, several drafts were modeled in SolidWorks by the team, eventually"
+    },
+    {
+      "line": 299,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "deciding on the following:"
+    },
+    {
+      "line": 300,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "*Models show only the starboard side, port side was intended to be an exact mirroring of"
+    },
+    {
+      "line": 301,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "the above7"
+    },
+    {
+      "line": 302,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "This design was sufficiently hydrodynamic and aerodynamic to provide the least"
+    },
+    {
+      "line": 303,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "drag as could be reasonably expected while providing enough displacement (120 lbs when"
+    },
+    {
+      "line": 304,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "the waterline is 4 inches below the leading point of the hull) to allow for this and following"
+    },
+    {
+      "line": 305,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "year’s weight requirements. This was determined through several drafts of models and"
+    },
+    {
+      "line": 306,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "SolidWorks flow simulations which were used to determine high- and low-pressure points,"
+    },
+    {
+      "line": 307,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "each of which was then targeted with the following model for ironing out."
+    },
+    {
+      "line": 308,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "With our finalized design in hand, we went looking for manufacturers. It was around"
+    },
+    {
+      "line": 309,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "mid-December at that time, and we sent out feelers to several companies and people,"
+    },
+    {
+      "line": 310,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "including wooden boat builders, wood furniture makers, and general carpenters. A week or"
+    },
+    {
+      "line": 311,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "two later, we heard back one-by-one that they were unable to accommodate our project in"
+    },
+    {
+      "line": 312,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "the timeline we needed, which, in hindsight, is something we should’ve expected. We"
+    },
+    {
+      "line": 313,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "decided that rather than research more manufacturers and hope for them to have time in"
+    },
+    {
+      "line": 314,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "their schedules, we would come together and re-define our needs to choose a market\u0002available hull that would fit them best. In this process, we decided on a few of the most"
+    },
+    {
+      "line": 315,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "important aspects: stability, drag, ease of retrofitting to watertightness, weight limit, and"
+    },
+    {
+      "line": 316,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "internal space."
+    },
+    {
+      "line": 317,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Market Options"
+    },
+    {
+      "line": 318,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Given those priorities, we came up with this table:"
+    },
+    {
+      "line": 319,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Kayak Sports"
+    },
+    {
+      "line": 320,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Kayak"
+    },
+    {
+      "line": 321,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Aluminum"
+    },
+    {
+      "line": 322,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Fishing"
+    },
+    {
+      "line": 323,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Hull"
+    },
+    {
+      "line": 324,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Competition"
+    },
+    {
+      "line": 325,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Rowing Hull"
+    },
+    {
+      "line": 326,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Used"
+    },
+    {
+      "line": 327,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Racing"
+    },
+    {
+      "line": 328,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Boat Hull"
+    },
+    {
+      "line": 329,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Widely"
+    },
+    {
+      "line": 330,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "available on"
+    },
+    {
+      "line": 331,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "the market—a"
+    },
+    {
+      "line": 332,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "generalized"
+    },
+    {
+      "line": 333,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "kayak could be"
+    },
+    {
+      "line": 334,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "found to suit"
+    },
+    {
+      "line": 335,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "any needs we"
+    },
+    {
+      "line": 336,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "have because"
+    },
+    {
+      "line": 337,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "they are so"
+    },
+    {
+      "line": 338,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "common"
+    },
+    {
+      "line": 339,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Fairly"
+    },
+    {
+      "line": 340,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "prominent"
+    },
+    {
+      "line": 341,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "market—the"
+    },
+    {
+      "line": 342,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "more"
+    },
+    {
+      "line": 343,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "specialized"
+    },
+    {
+      "line": 344,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "form of kayak"
+    },
+    {
+      "line": 345,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "is less"
+    },
+    {
+      "line": 346,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "prevalent, and"
+    },
+    {
+      "line": 347,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "has less"
+    },
+    {
+      "line": 348,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "options"
+    },
+    {
+      "line": 349,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Fairly"
+    },
+    {
+      "line": 350,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "prominent,"
+    },
+    {
+      "line": 351,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "collapsed"
+    },
+    {
+      "line": 352,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "market—"
+    },
+    {
+      "line": 353,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "though there is"
+    },
+    {
+      "line": 354,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "a decent-sized"
+    },
+    {
+      "line": 355,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "market, all"
+    },
+    {
+      "line": 356,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "products are"
+    },
+    {
+      "line": 357,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "approximately"
+    },
+    {
+      "line": 358,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "identical"
+    },
+    {
+      "line": 359,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Slim market—Very"
+    },
+    {
+      "line": 360,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "few sold, and have"
+    },
+    {
+      "line": 361,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "little to no"
+    },
+    {
+      "line": 362,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "variance due to"
+    },
+    {
+      "line": 363,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "competition"
+    },
+    {
+      "line": 364,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "regulations"
+    },
+    {
+      "line": 365,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Non-existent"
+    },
+    {
+      "line": 366,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "market—in"
+    },
+    {
+      "line": 367,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "order to find"
+    },
+    {
+      "line": 368,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "one of these,"
+    },
+    {
+      "line": 369,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "we would"
+    },
+    {
+      "line": 370,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "most likely"
+    },
+    {
+      "line": 371,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "need to have"
+    },
+    {
+      "line": 372,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "contact with a"
+    },
+    {
+      "line": 373,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "boat racing"
+    },
+    {
+      "line": 374,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "team, which"
+    },
+    {
+      "line": 375,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "we do not"
+    },
+    {
+      "line": 376,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Inexpensive"
+    },
+    {
+      "line": 377,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "relative to"
+    },
+    {
+      "line": 378,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "other hulls"
+    },
+    {
+      "line": 379,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Slightly more"
+    },
+    {
+      "line": 380,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "expensive than"
+    },
+    {
+      "line": 381,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "kayak, still"
+    },
+    {
+      "line": 382,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "below average"
+    },
+    {
+      "line": 383,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Fairly"
+    },
+    {
+      "line": 384,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "expensive,"
+    },
+    {
+      "line": 385,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "would take"
+    },
+    {
+      "line": 386,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "May fit in budget,"
+    },
+    {
+      "line": 387,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "but only barely"
+    },
+    {
+      "line": 388,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Budget"
+    },
+    {
+      "line": 389,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "breakingly"
+    },
+    {
+      "line": 390,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "expensive8"
+    },
+    {
+      "line": 391,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "majority of"
+    },
+    {
+      "line": 392,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "budget"
+    },
+    {
+      "line": 393,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Fairly stable—"
+    },
+    {
+      "line": 394,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Kayaks are"
+    },
+    {
+      "line": 395,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "generally"
+    },
+    {
+      "line": 396,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "designed for"
+    },
+    {
+      "line": 397,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "calm waters,"
+    },
+    {
+      "line": 398,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "and thus may"
+    },
+    {
+      "line": 399,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "not fare"
+    },
+    {
+      "line": 400,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "spectacularly"
+    },
+    {
+      "line": 401,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "in choppy"
+    },
+    {
+      "line": 402,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "waters like"
+    },
+    {
+      "line": 403,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Virginia Beach,"
+    },
+    {
+      "line": 404,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "but unlikely to"
+    },
+    {
+      "line": 405,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "capsize"
+    },
+    {
+      "line": 406,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Designed for"
+    },
+    {
+      "line": 407,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "stability—"
+    },
+    {
+      "line": 408,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Sports kayaks"
+    },
+    {
+      "line": 409,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "are meant to"
+    },
+    {
+      "line": 410,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "be taken into"
+    },
+    {
+      "line": 411,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "whitewater"
+    },
+    {
+      "line": 412,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "rapids, the"
+    },
+    {
+      "line": 413,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "most difficult"
+    },
+    {
+      "line": 414,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "of waters short"
+    },
+    {
+      "line": 415,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "of a tsunami,"
+    },
+    {
+      "line": 416,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "and therefore"
+    },
+    {
+      "line": 417,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "are not only"
+    },
+    {
+      "line": 418,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "incredibly"
+    },
+    {
+      "line": 419,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "stable, but"
+    },
+    {
+      "line": 420,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "self-righting"
+    },
+    {
+      "line": 421,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "with the"
+    },
+    {
+      "line": 422,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "correct weight"
+    },
+    {
+      "line": 423,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "distribution,"
+    },
+    {
+      "line": 424,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "but they come"
+    },
+    {
+      "line": 425,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "with the"
+    },
+    {
+      "line": 426,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "drawbacks of a"
+    },
+    {
+      "line": 427,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "flat-bottomed"
+    },
+    {
+      "line": 428,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "hull"
+    },
+    {
+      "line": 429,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Fairly stable—"
+    },
+    {
+      "line": 430,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "aluminum"
+    },
+    {
+      "line": 431,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "fishing hulls are"
+    },
+    {
+      "line": 432,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "unlikely to"
+    },
+    {
+      "line": 433,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "capsize, but"
+    },
+    {
+      "line": 434,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "extremely rocky"
+    },
+    {
+      "line": 435,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "in any type of"
+    },
+    {
+      "line": 436,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "wave, which"
+    },
+    {
+      "line": 437,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "may encourage"
+    },
+    {
+      "line": 438,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "water to come"
+    },
+    {
+      "line": 439,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "into the wide\u0002open top"
+    },
+    {
+      "line": 440,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Fairly stable—"
+    },
+    {
+      "line": 441,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "rowing hulls are"
+    },
+    {
+      "line": 442,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "built similarly to"
+    },
+    {
+      "line": 443,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "canoes, and thus"
+    },
+    {
+      "line": 444,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "quite stable, but"
+    },
+    {
+      "line": 445,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "they are not"
+    },
+    {
+      "line": 446,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "designed for the"
+    },
+    {
+      "line": 447,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "differential thrust"
+    },
+    {
+      "line": 448,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "we planned on"
+    },
+    {
+      "line": 449,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "using, and"
+    },
+    {
+      "line": 450,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "therefore may"
+    },
+    {
+      "line": 451,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "have unexpected"
+    },
+    {
+      "line": 452,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "difficulties given"
+    },
+    {
+      "line": 453,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "choppy waters"
+    },
+    {
+      "line": 454,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "and differential"
+    },
+    {
+      "line": 455,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "thrust"
+    },
+    {
+      "line": 456,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Stable"
+    },
+    {
+      "line": 457,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "enough—"
+    },
+    {
+      "line": 458,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "though"
+    },
+    {
+      "line": 459,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "precarious in"
+    },
+    {
+      "line": 460,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "balance,"
+    },
+    {
+      "line": 461,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "racing hulls"
+    },
+    {
+      "line": 462,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "are designed"
+    },
+    {
+      "line": 463,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "to survive the"
+    },
+    {
+      "line": 464,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "exact"
+    },
+    {
+      "line": 465,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "conditions"
+    },
+    {
+      "line": 466,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "that we will be"
+    },
+    {
+      "line": 467,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "racing in, only"
+    },
+    {
+      "line": 468,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "at higher"
+    },
+    {
+      "line": 469,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "speeds, which"
+    },
+    {
+      "line": 470,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "means they"
+    },
+    {
+      "line": 471,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "could hand"
+    },
+    {
+      "line": 472,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "these"
+    },
+    {
+      "line": 473,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "conditions"
+    },
+    {
+      "line": 474,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Low drag—"
+    },
+    {
+      "line": 475,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "slim profile"
+    },
+    {
+      "line": 476,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "means that"
+    },
+    {
+      "line": 477,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "kayaks cut"
+    },
+    {
+      "line": 478,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "through the"
+    },
+    {
+      "line": 479,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "water"
+    },
+    {
+      "line": 480,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "efficiently"
+    },
+    {
+      "line": 481,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Medium"
+    },
+    {
+      "line": 482,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "drag—though"
+    },
+    {
+      "line": 483,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "not as narrow"
+    },
+    {
+      "line": 484,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "as a regular"
+    },
+    {
+      "line": 485,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "kayak, these"
+    },
+    {
+      "line": 486,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "are flat\u0002bottomed,"
+    },
+    {
+      "line": 487,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "allowing them"
+    },
+    {
+      "line": 488,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "to sit higher"
+    },
+    {
+      "line": 489,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "and even"
+    },
+    {
+      "line": 490,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "plane at high"
+    },
+    {
+      "line": 491,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "speed"
+    },
+    {
+      "line": 492,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Medium drag—"
+    },
+    {
+      "line": 493,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Generally v\u0002bottomed hulls,"
+    },
+    {
+      "line": 494,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "meaning that if"
+    },
+    {
+      "line": 495,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "enough speed"
+    },
+    {
+      "line": 496,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "was generated"
+    },
+    {
+      "line": 497,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "they would"
+    },
+    {
+      "line": 498,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "plane"
+    },
+    {
+      "line": 499,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Low drag—the"
+    },
+    {
+      "line": 500,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "same slim profile"
+    },
+    {
+      "line": 501,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "as kayaks, only"
+    },
+    {
+      "line": 502,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "better, as these"
+    },
+    {
+      "line": 503,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "are designed for"
+    },
+    {
+      "line": 504,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "speed"
+    },
+    {
+      "line": 505,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Minimum"
+    },
+    {
+      "line": 506,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "drag—these"
+    },
+    {
+      "line": 507,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "hyper-efficient"
+    },
+    {
+      "line": 508,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "planers are"
+    },
+    {
+      "line": 509,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "designed to be"
+    },
+    {
+      "line": 510,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "the fastest"
+    },
+    {
+      "line": 511,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "things in the"
+    },
+    {
+      "line": 512,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "water"
+    },
+    {
+      "line": 513,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Easy to"
+    },
+    {
+      "line": 514,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "waterproof—a"
+    },
+    {
+      "line": 515,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "small hole in"
+    },
+    {
+      "line": 516,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "the top is easy"
+    },
+    {
+      "line": 517,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "to cover with a"
+    },
+    {
+      "line": 518,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "large rubber"
+    },
+    {
+      "line": 519,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Easy to"
+    },
+    {
+      "line": 520,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "waterproof—a"
+    },
+    {
+      "line": 521,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "small hole in"
+    },
+    {
+      "line": 522,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "the top is easy"
+    },
+    {
+      "line": 523,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "to cover with a"
+    },
+    {
+      "line": 524,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "large rubber"
+    },
+    {
+      "line": 525,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Difficult to"
+    },
+    {
+      "line": 526,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "waterproof—"
+    },
+    {
+      "line": 527,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "entirely open"
+    },
+    {
+      "line": 528,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "on top,"
+    },
+    {
+      "line": 529,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "meaning that"
+    },
+    {
+      "line": 530,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "there is no way"
+    },
+    {
+      "line": 531,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "of"
+    },
+    {
+      "line": 532,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Difficult to"
+    },
+    {
+      "line": 533,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "waterproof—"
+    },
+    {
+      "line": 534,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "entirely open on"
+    },
+    {
+      "line": 535,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "top, meaning that"
+    },
+    {
+      "line": 536,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "there is no way of"
+    },
+    {
+      "line": 537,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "waterproofing"
+    },
+    {
+      "line": 538,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "other than"
+    },
+    {
+      "line": 539,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Enclosed—no"
+    },
+    {
+      "line": 540,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "work"
+    },
+    {
+      "line": 541,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "necessary9"
+    },
+    {
+      "line": 542,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "band and"
+    },
+    {
+      "line": 543,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "plastic"
+    },
+    {
+      "line": 544,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "band and"
+    },
+    {
+      "line": 545,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "plastic"
+    },
+    {
+      "line": 546,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "waterproofing"
+    },
+    {
+      "line": 547,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "other than"
+    },
+    {
+      "line": 548,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "manufacturing"
+    },
+    {
+      "line": 549,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "a large cover"
+    },
+    {
+      "line": 550,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "manufacturing a"
+    },
+    {
+      "line": 551,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "large cover"
+    },
+    {
+      "line": 552,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Variable weight"
+    },
+    {
+      "line": 553,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "limit & internal"
+    },
+    {
+      "line": 554,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "space—"
+    },
+    {
+      "line": 555,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "variable by"
+    },
+    {
+      "line": 556,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "model, can"
+    },
+    {
+      "line": 557,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "suit any needs"
+    },
+    {
+      "line": 558,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Variable"
+    },
+    {
+      "line": 559,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "weight limit &"
+    },
+    {
+      "line": 560,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "internal"
+    },
+    {
+      "line": 561,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "space—"
+    },
+    {
+      "line": 562,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "variable by"
+    },
+    {
+      "line": 563,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "model, can"
+    },
+    {
+      "line": 564,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "suit any needs"
+    },
+    {
+      "line": 565,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Oversized—can"
+    },
+    {
+      "line": 566,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "fit any load, but"
+    },
+    {
+      "line": 567,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "stability will be"
+    },
+    {
+      "line": 568,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "compromised"
+    },
+    {
+      "line": 569,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "as they are"
+    },
+    {
+      "line": 570,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "designed for"
+    },
+    {
+      "line": 571,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "much more"
+    },
+    {
+      "line": 572,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "than we can"
+    },
+    {
+      "line": 573,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "put in it"
+    },
+    {
+      "line": 574,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Perfect size—"
+    },
+    {
+      "line": 575,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "electronics would"
+    },
+    {
+      "line": 576,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "likely be snug and"
+    },
+    {
+      "line": 577,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "weight would be"
+    },
+    {
+      "line": 578,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "around the"
+    },
+    {
+      "line": 579,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "intended amount"
+    },
+    {
+      "line": 580,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Oversized—"
+    },
+    {
+      "line": 581,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "without the"
+    },
+    {
+      "line": 582,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "power-train or"
+    },
+    {
+      "line": 583,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "driver, our"
+    },
+    {
+      "line": 584,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "boat would be"
+    },
+    {
+      "line": 585,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "massively"
+    },
+    {
+      "line": 586,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "underweight"
+    },
+    {
+      "line": 587,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "And so, for its size, stability, drag, cost, and water resistance, we chose a whitewater"
+    },
+    {
+      "line": 588,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "kayak designed for a <120lb athlete. This weight limit allows for considerable expansion on"
+    },
+    {
+      "line": 589,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "internals, so future years shouldn’t have to consider their hull unless they choose to. The"
+    },
+    {
+      "line": 590,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "drag of a kayak is similar to what we would have had with our in-house hull, depending on"
+    },
+    {
+      "line": 591,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "how much either would have lifted out of the water, its cost was only ~$1,300, which left"
+    },
+    {
+      "line": 592,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "considerable room for electronics, and its small open area made for easy plans to design a"
+    },
+    {
+      "line": 593,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "waterproofing solution. However, this option did leave us with one issue: as it has a flat"
+    },
+    {
+      "line": 594,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "bottom, the kayak may be easy to capsize temporarily, which, though its self-righting may"
+    },
+    {
+      "line": 595,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "fix, is still sub-ideal. Because of this, we decided that alongside thruster mounts, we would"
+    },
+    {
+      "line": 596,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "design fins to largely rid ourselves of this problem using their large lateral drag coefficients."
+    },
+    {
+      "line": 597,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Final Hull Customizations"
+    },
+    {
+      "line": 598,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "For fins, we did not do anything extraordinary: fins have a fairly standard shape, and"
+    },
+    {
+      "line": 599,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "so when modeling for our 3D print, we simply followed that design. That is, we followed it"
+    },
+    {
+      "line": 600,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "until the idea to mount thrusters on the side of our fins was pitched. This change would"
+    },
+    {
+      "line": 601,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "simplify our design process, reduce failure points, and allow for extra fin space if we"
+    },
+    {
+      "line": 602,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "needed yet more stability. That led us to this 3D model*."
+    },
+    {
+      "line": 603,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "*3D model is accurate at the time of submission, but may be changed by competition, as"
+    },
+    {
+      "line": 604,
+      "page_start": 8,
+      "page_end": 10,
+      "text": "materials are cheap and readily available1011"
+    },
+    {
+      "line": 605,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Thrusters/Propulsion"
+    },
+    {
+      "line": 606,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "The thrusters that were originally chosen for our boat were chosen to accommodate the"
+    },
+    {
+      "line": 607,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "larger hull and more weight, as well as give the boat a general power advantage. We ran into late"
+    },
+    {
+      "line": 608,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "issues with these thrusters and their compatibility with the Electronic Speed Controllers we"
+    },
+    {
+      "line": 609,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "originally used. Unfortunately, with how late this happened and budget issues, the only choice"
+    },
+    {
+      "line": 610,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "that we were left with was to reuse the thrusters from last year. The boat will be steered with"
+    },
+    {
+      "line": 611,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "differential thrust to each thruster using an electronic speed controller connected to each motor."
+    },
+    {
+      "line": 612,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Apisqueen AQ1020"
+    },
+    {
+      "line": 613,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "The original thruster that was chosen was the Apisqueen AQ1020. As said above, this"
+    },
+    {
+      "line": 614,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "thruster proved to be the most optimal for the setup that was first planned to run. Many things"
+    },
+    {
+      "line": 615,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "have changed with the overall boat setup, which also now includes the thrusters. The AQ 1020"
+    },
+    {
+      "line": 616,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "outputs 53 lbs of force at 50V, making it optimal to match with the batteries chosen and the"
+    },
+    {
+      "line": 617,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "weight of the vessel. The major issue that was discovered was the non-compatibility with the"
+    },
+    {
+      "line": 618,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "ESCs, causing us to switch. These thrusters came with a plastic mounting block as pictured"
+    },
+    {
+      "line": 619,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "below. The thruster would have been mounted sideways on the fins that come off the bottom of"
+    },
+    {
+      "line": 620,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "the boat. The benefits of this thruster are more power and a fully metal construction. The"
+    },
+    {
+      "line": 621,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "downsides are the inability to connect with the current ESCs, questionable stability and the large"
+    },
+    {
+      "line": 622,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "footprint leading to more drag."
+    },
+    {
+      "line": 623,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "*AQ1020 Thruster"
+    },
+    {
+      "line": 624,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Blue Robotics T500"
+    },
+    {
+      "line": 625,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "The Blue Robotics T500 was the thruster package used by the 2023-24 PEP team at"
+    },
+    {
+      "line": 626,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Madison College. They chose this thruster due to it being light enough to fit on their boat and it"
+    },
+    {
+      "line": 627,
+      "page_start": 10,
+      "page_end": 11,
+      "text": "is an incredibly stable thruster. They also saw it is the best mix of power to the weight of the boat 12"
+    },
+    {
+      "line": 628,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "as well as the mounting ease and small design. This thruster also is compatible with the"
+    },
+    {
+      "line": 629,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "electronic speed controllers chosen for both last year and this current year. The T500 outputs"
+    },
+    {
+      "line": 630,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "35.5 lbs of force at 24.4 volts. These thrusters are mounted sideways onto the fin, just as the"
+    },
+    {
+      "line": 631,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "AQ1020 would have been. The benefits of this thruster are its smaller, more hydrodynamic"
+    },
+    {
+      "line": 632,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "design, better stability, and less expensive. The downsides are some parts being made from"
+    },
+    {
+      "line": 633,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "plastic and less power."
+    },
+    {
+      "line": 634,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "*T500 Thruster"
+    },
+    {
+      "line": 635,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "There is a risk in running these thrusters that the much heavier weight of the boat will be"
+    },
+    {
+      "line": 636,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "too much for the T500 thruster to handle in taller waves and currents. Based on the calculations"
+    },
+    {
+      "line": 637,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "that have been done, on flat water the thrusters will propel the boat at an estimation of 6-8 mph,"
+    },
+    {
+      "line": 638,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "not including outside drag from currents, waves, etc. Even with taller waves and currents, the"
+    },
+    {
+      "line": 639,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "boat is expected to handle well due to the hull shape."
+    },
+    {
+      "line": 640,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "An issue that the 2024-25 team planned to address this year was achieving better water"
+    },
+    {
+      "line": 641,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "flow to the thruster. The 2023-24 team had the thruster mounted too close to the bottom of the"
+    },
+    {
+      "line": 642,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "hull making the water that flowed through the thruster would be very turbulent and the thrusters"
+    },
+    {
+      "line": 643,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "wouldn’t be as efficient. They also mounted the thrusters on an object that was not"
+    },
+    {
+      "line": 644,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "hydrodynamic. The updated version has the thrusters about 8 inches from the bottom of the hull"
+    },
+    {
+      "line": 645,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "with a sleeker mounting system that doubles to keep the boat on track while driving. The"
+    },
+    {
+      "line": 646,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "electrical cord for each thruster will follow the mounting fin up into the boat, to its ESC and"
+    },
+    {
+      "line": 647,
+      "page_start": 11,
+      "page_end": 12,
+      "text": "battery pack.13"
+    },
+    {
+      "line": 648,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Other Considered Options"
+    },
+    {
+      "line": 649,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "One Thruster and Rutter"
+    },
+    {
+      "line": 650,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "The team considered a few options before landing on the dual thruster set up with"
+    },
+    {
+      "line": 651,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "differential thrust for steering. The main competitor to our option was a one-fixed thruster that"
+    },
+    {
+      "line": 652,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "was far more powerful than the options we decided on. This system would be steered via rutter."
+    },
+    {
+      "line": 653,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "The downsides to this were the unreliability of a one-thruster set up compared to a two-thruster"
+    },
+    {
+      "line": 654,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "set up should one fail and the rutter is a very complicated part when considering how to make it"
+    },
+    {
+      "line": 655,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "stable and effective. Overall, the two-thruster system had far more positives than the one-thruster"
+    },
+    {
+      "line": 656,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "system."
+    },
+    {
+      "line": 657,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Rotating Thruster"
+    },
+    {
+      "line": 658,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "The other choice we liked was having one or two thrusters that could rotate to steer. This system"
+    },
+    {
+      "line": 659,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "would have been very similar to a trolling motor on a fishing boat. We soon realized while"
+    },
+    {
+      "line": 660,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "looking into this type of system that it would not be the best option. The big issues are trying to"
+    },
+    {
+      "line": 661,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "find a rotating thruster or finding a way to rotate a thruster from its fixed point. We couldn’t find"
+    },
+    {
+      "line": 662,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "enough information on this outside of trolling motors which are not allowed under the"
+    },
+    {
+      "line": 663,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "competition rules."
+    },
+    {
+      "line": 664,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Power System"
+    },
+    {
+      "line": 665,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "From the previous year's power system, we inherited roughly 98 18650 Li-ion battery"
+    },
+    {
+      "line": 666,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "cells. Due to the success of the previous team and the high energy density and lower cost of Li\u0002ion batteries, we decided to use the same battery chemistry to build two identical battery packs,"
+    },
+    {
+      "line": 667,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "one for each thruster. In addition, the cells we are using have BMS protection which limits the"
+    },
+    {
+      "line": 668,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "current output and will protect the battery from short circuits."
+    },
+    {
+      "line": 669,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Despite the fact that we had inherited usable batteries, the old cells were not ideal"
+    },
+    {
+      "line": 670,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "or completely safe to use. Once the battery was disassembled each cell was at a different voltage."
+    },
+    {
+      "line": 671,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Because of this, it was unsafe to spot-weld the cells in parallel, as that can lead to overheating in"
+    },
+    {
+      "line": 672,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "the battery, damaging it. We found it better to buy new cells to reduce risk, so we bought new"
+    },
+    {
+      "line": 673,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Samsung 30Q18650 batteries."
+    },
+    {
+      "line": 674,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "We had hoped to initially build a battery with 12 cells in series and 8 in parallel. This"
+    },
+    {
+      "line": 675,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "would make each battery have a total voltage of 44.4V and a capacity of 24Ah. This system had"
+    },
+    {
+      "line": 676,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "ideal power for our original thrusters, which ran on 48V. However, due to our need to change the"
+    },
+    {
+      "line": 677,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "thrusters and use our inherited thruster, our battery design had to change. The battery now had to"
+    },
+    {
+      "line": 678,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "be designed to have a maximum voltage of 24V, so our final battery layout includes 6 cells in"
+    },
+    {
+      "line": 679,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "series and 8 cells in parallel. This battery layout also provides a larger variety of options for ESC"
+    },
+    {
+      "line": 680,
+      "page_start": 12,
+      "page_end": 13,
+      "text": "and chargers, while still allowing us to increase the capacity if needed. 14"
+    },
+    {
+      "line": 681,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "The final voltage of our battery is 22.2V with a capacity of 24Ah. The cells are aligned"
+    },
+    {
+      "line": 682,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "with spacers and are spot-welded together with 0.15mm nickel strips. The welded battery is"
+    },
+    {
+      "line": 683,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "wrapped in rubber sheets which will help in reducing the vibration of the cells, then wrapped in"
+    },
+    {
+      "line": 684,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "heat shrink to form a solid package. After charging to their full capacity, the batteries will be"
+    },
+    {
+      "line": 685,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "mounted to the boat inside of a waterproof box."
+    },
+    {
+      "line": 686,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Control System"
+    },
+    {
+      "line": 687,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Our control system uses the MT12 surface radio made by Radio Master as the transmitter and the"
+    },
+    {
+      "line": 688,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "receiver we used is the ER5C-1 channel receiver by the same manufacturer. The RadioMaster"
+    },
+    {
+      "line": 689,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "MT12 is the first open-source surface radio to officially be supported by EdgeTX, ExpressLRS,"
+    },
+    {
+      "line": 690,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "and the Multi-module project. With 10 physical inputs and the capability to handle up to 32"
+    },
+    {
+      "line": 691,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "channels, the MT12 can handle a wide array of surface models, from cars and trucks to boats and"
+    },
+    {
+      "line": 692,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "beyond. Due to its extensive customizability, the MT12 is prepared to excel in almost every"
+    },
+    {
+      "line": 693,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "scenario, making it the obvious choice for our boat control system."
+    },
+    {
+      "line": 694,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Project Conclusion"
+    },
+    {
+      "line": 695,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "This project was definitely a new experience for all of us. We didn’t have a great idea of"
+    },
+    {
+      "line": 696,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "where to start on this project and when we did start we had a lot of waiting for responses."
+    },
+    {
+      "line": 697,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "We definitely got into a time jam on this project but we learned a great deal from being"
+    },
+    {
+      "line": 698,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "thrown into the fire. We hope that future groups can learn from our mistakes and keep"
+    },
+    {
+      "line": 699,
+      "page_start": 13,
+      "page_end": 14,
+      "text": "creating better boats down the road.15"
+    },
+    {
+      "line": 700,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Acknowledgments"
+    },
+    {
+      "line": 701,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Our project has been a great learning experience for the team in all aspects of"
+    },
+    {
+      "line": 702,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "engineering and we are greatly appreciative to be a part of the ASNE PEP program to help"
+    },
+    {
+      "line": 703,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "further our knowledge of electric propulsion. Our team wants to thank Michael Briscoe and"
+    },
+    {
+      "line": 704,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "the ASNE for making this opportunity possible. The Madison College STEM Center and its"
+    },
+    {
+      "line": 705,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "employees Carolyn Kosabucki, Tom Fleming, and Levi Lee have been incredible in their"
+    },
+    {
+      "line": 706,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "help and dedication to the success of this year's team. We cannot give enough thanks to"
+    },
+    {
+      "line": 707,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "everyone involved in this project and making it a reality."
+    }
+  ],
+  "source_line_count": 708,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}

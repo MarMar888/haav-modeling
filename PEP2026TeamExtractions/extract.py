@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-"""Download PEP26 team white papers from navalengineers.org and write one raw JSON per PDF.
+"""Download PEP team white papers and write one raw JSON per PDF.
 
 Usage: python3 extract.py            (from anywhere; writes next to this file)
+       python3 extract.py --year 2025 (uses ../PEP2025TeamExtractions/sources.json)
 Needs: poppler (pdftotext, pdfinfo, pdfimages). PDFs are cached in <repo>/.context/pep26_pdfs (gitignored).
 """
+import argparse
+import hashlib
 import html
 import json
 import re
+import shutil
 import subprocess
 import urllib.parse
 import urllib.request
@@ -55,19 +59,32 @@ TEAMS = [
 
 
 def url_for(path):
-    return BASE + urllib.parse.quote(path)
+    return urllib.parse.urljoin(BASE, urllib.parse.quote(path, safe="/:?=&%"))
 
 
 def fetch(url, dest):
     if dest.exists() and dest.stat().st_size > 0:
         return
     dest.parent.mkdir(parents=True, exist_ok=True)
-    with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=120) as r:
-        dest.write_bytes(r.read())
+    with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30) as r:
+        data = r.read()
+    if dest.suffix.lower() == ".pdf" and not data.startswith(b"%PDF-"):
+        raise ValueError(f"Expected a PDF, received another format from {url}")
+    partial = dest.with_suffix(dest.suffix + ".part")
+    partial.write_bytes(data)
+    partial.replace(dest)
 
 
 def run(*cmd):
-    return subprocess.run(cmd, capture_output=True, text=True, errors="replace").stdout
+    binary = shutil.which(cmd[0])
+    if not binary:
+        bundled = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/poppler/bin" / cmd[0]
+        if bundled.is_file():
+            binary = str(bundled)
+    if not binary:
+        raise FileNotFoundError(f"Missing Poppler executable: {cmd[0]}")
+    return subprocess.run((binary, *cmd[1:]), capture_output=True, text=True,
+                          errors="replace", check=True).stdout
 
 
 def pdfinfo(pdf):
@@ -120,16 +137,42 @@ def slugify(s):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--year", type=int, choices=(2025, 2026), default=2026)
+    parser.add_argument("--web-text", type=Path, help="Import a complete, page-indexed web PDF text bundle; unavailable layout/image fields remain null")
+    args = parser.parse_args()
+    year = args.year
+    web_documents = None
+    if args.web_text:
+        bundle = json.loads(args.web_text.read_text())
+        if bundle["competition_year"] != year:
+            raise ValueError("Web text year does not match requested year")
+        web_documents = {url_for(d["source_url"]): d for d in bundle["documents"]}
+    output = HERE if year == 2026 else HERE.parent / "PEP2025TeamExtractions"
+    source = f"{BASE}/Education/PEP26" if year == 2026 else f"{BASE}/PEP25"
+    teams = TEAMS
+    if year == 2025:
+        manifest = json.loads((output / "sources.json").read_text())
+        if manifest["competition_year"] != year:
+            raise ValueError("Manifest competition year does not match requested year")
+        teams = [(t["division_rank"], t["team"], t["slug"], t["division"],
+                  t["official_score"], t["notes"],
+                  [(d["document_type"], d["source_url"]) for d in t["documents"]])
+                 for t in manifest["teams"]]
+    output.mkdir(parents=True, exist_ok=True)
     index = []
-    for rank, team, slug, division, score, notes, docs in TEAMS:
-        scores = page_scores(slug)
+    failures = []
+    for rank, team, slug, division, score, notes, docs in teams:
+        # Existing page_scores includes multiple years. Never attach it to 2025 records.
+        scores = page_scores(slug) if year == 2026 else []
         base = {
+            "competition_year": year,
             "team": team,
             "division": division,
             "division_rank": rank,
             "official_score": score,
-            "official_score_source": f"{BASE}/Education/PEP26",
-            "team_page": f"{BASE}/{slug}",
+            "official_score_source": source,
+            "team_page": f"{BASE}/{slug.split('-')[0]}",
             "team_page_score_blocks": scores,
             "notes": notes,
         }
@@ -139,43 +182,90 @@ def main():
         entry_docs = []
         for doc_type, path in docs:
             url = url_for(path)
-            pdf = CACHE / slug / Path(path).name
-            fetch(url, pdf)
-            txt = pages_of(pdf)
-            lay = pages_of(pdf, "-layout")
-            imgs = image_counts(pdf)
+            filename = Path(urllib.parse.unquote(urllib.parse.urlsplit(url).path)).name
+            if not filename.lower().endswith(".pdf"):
+                filename = f"{slug}_{year}_{doc_type}.pdf"
+            pdf = (CACHE if year == 2026 else HERE.parent / ".context" / "pep25_pdfs") / slug / filename
+            try:
+                if web_documents is not None:
+                    if url not in web_documents:
+                        raise ValueError("Paper text unavailable from web reader; direct download blocked by DNS")
+                    web_doc = web_documents[url]
+                    lines = web_doc["lines"]
+                    if [line["line"] for line in lines] != list(range(web_doc["total_lines"])):
+                        raise ValueError("Incomplete or unordered web source lines")
+                    info = {"Pages": str(web_doc["page_count"])}
+                    txt = ["" for _ in range(web_doc["page_count"])]
+                    for line in lines:
+                        if not 0 <= line["page_start"] <= line["page_end"] < len(txt):
+                            raise ValueError("Invalid source page span")
+                        txt[line["page_start"]] += line["text"] + "\n"
+                    lay = [None] * len(txt)
+                    imgs = {}
+                else:
+                    fetch(url, pdf)
+                    if not pdf.read_bytes().startswith(b"%PDF-"):
+                        raise ValueError("Cached file is not a PDF")
+                    info = pdfinfo(pdf)
+                    txt = pages_of(pdf)
+                    lay = pages_of(pdf, "-layout")
+                    imgs = image_counts(pdf)
+                if not txt or len(txt) != int(info["Pages"]) or len(lay) != len(txt):
+                    raise ValueError("Extracted page count does not match PDF metadata")
+            except (OSError, ValueError, KeyError, subprocess.CalledProcessError) as exc:
+                failure = {"team": team, "source_url": url, "error": str(exc)}
+                failures.append(failure)
+                entry_docs.append({"document_type": doc_type, "source_url": url,
+                                   "status": "failed", "error": str(exc)})
+                print(f"FAILED {team}: {exc}", flush=True)
+                continue
             n = max(len(txt), len(lay))
             pages = [
                 {
                     "page": i + 1,
                     "text": txt[i] if i < len(txt) else "",
                     "text_layout": lay[i] if i < len(lay) else "",
-                    "embedded_images": imgs.get(i + 1, 0),
+                    "embedded_images": imgs.get(i + 1, 0) if web_documents is None else None,
                 }
                 for i in range(n)
             ]
             empty = [p["page"] for p in pages if not p["text"].strip()]
-            out = HERE / "json" / f"{division.split()[0].lower()}_{rank:02d}_{slugify(team)}__{doc_type}.json"
+            rank_part = f"{rank:02d}_" if rank is not None else ""
+            out = output / "json" / f"{division.split()[0].lower()}_{rank_part}{slugify(team)}__{doc_type}.json"
             out.parent.mkdir(exist_ok=True)
             doc = {
                 **base,
                 "document_type": doc_type,
                 "source_url": url,
-                "filename": Path(path).name,
+                "filename": filename,
+                "sha256": hashlib.sha256(pdf.read_bytes()).hexdigest() if web_documents is None else None,
                 "extracted_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-                "extractor": "pdftotext (poppler); text = reading order, text_layout = -layout",
-                "pdf_info": pdfinfo(pdf),
+                "extractor": "pdftotext (poppler); text = reading order, text_layout = -layout" if web_documents is None else "Web PDF text reader; complete indexed source lines",
+                "pdf_info": info,
                 "page_count": n,
                 "pages_without_text": empty,
                 "char_count": sum(len(p["text"]) for p in pages),
                 "pages": pages,
             }
+            if web_documents is not None:
+                doc["source_lines"] = lines
+                doc["source_line_count"] = web_doc["total_lines"]
+                doc["extraction_notes"] = "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
             out.write_text(json.dumps(doc, indent=2, ensure_ascii=False))
-            entry_docs.append({"document_type": doc_type, "json": f"json/{out.name}", "source_url": url, "page_count": n, "char_count": doc["char_count"], "pages_without_text": empty})
+            entry_docs.append({"document_type": doc_type, "status": "extracted", "json": f"json/{out.name}", "source_url": url, "page_count": n, "char_count": doc["char_count"], "pages_without_text": empty})
             print(f"{team:40s} {doc_type:20s} pages={n:3d} chars={doc['char_count']:7d} no_text={empty}")
         index.append({**base, "documents": entry_docs})
-    (HERE / "index.json").write_text(json.dumps(index, indent=2, ensure_ascii=False))
-    print(f"\n{sum(len(t['documents']) for t in index)} documents -> {HERE}")
+    (output / "index.json").write_text(json.dumps(index, indent=2, ensure_ascii=False))
+    extracted = sum("json" in d for t in index for d in t["documents"])
+    (output / "extraction-status.json").write_text(json.dumps({
+        "competition_year": year,
+        "attempted_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "extracted": extracted, "failed": len(failures), "failures": failures,
+        "entries_without_paper_link": sum(not t["documents"] for t in index),
+    }, indent=2))
+    print(f"\n{extracted} extracted, {len(failures)} failed -> {output}")
+    if failures:
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

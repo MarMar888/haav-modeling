@@ -1,0 +1,2465 @@
+{
+  "competition_year": 2025,
+  "team": "Virginia Commonwealth University",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/VCU",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/VCU/VCU-PEP25-WhitePaperFinal_Compressed.pdf",
+  "filename": "VCU-PEP25-WhitePaperFinal_Compressed.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "17"
+  },
+  "page_count": 17,
+  "pages_without_text": [],
+  "char_count": 43201,
+  "pages": [
+    {
+      "page": 1,
+      "text": "Promoting Electric Propulsion for Small Watercraft\nSeaRam-1 - Unmanned\nPrepared for:\nMentor – Mike Briscoe and the American Society of Naval Engineers\nSponsor Organization – Office of Naval Research\nBy:\nMatt Savell, Andres Calvetty, Alyson Bonsu, Rey Vasquez\nUnder the supervision of\nAssociate Professor, Department of Mechanical and Nuclear Engineering:\nHong Zhao\nWith Assistance From: The VCU Makers Studio and Garage\nMarch 25, 2025 Background\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": " The continuously evolving global trends in technology define our daily lives, along with the ones who are tasked to defend\nthem. As such, public and private U.S. defense stakeholders have taken key observations from past and current conflicts to create\nsolutions that will set the pace for what is needed to secure the future. To meet the needs of tomorrow’s challenges, the Office of\nNaval Research (ONR) in partnership with the American Society of Naval Engineers (ASNE) have created the Promoting\nElectric Propulsion (PEP) competition.\n While PEP is a constructed learning opportunity and friendly competition, there are greater challenges it seeks to address.\nThese include cost-effective, modular, scalable, systems for naval technology. The U.S. military in particular is pivoting to\nhighly efficient systems that maximize funding and size, partially in the unmanned realm. Numerous lessons learned from past\nand present conflicts, including Ukraine and Russia, have driven this doctrinal refocusing to be ready for threats on the horizon\n[1]. The focus on electric based propulsion also has environmental significance through the reduction of pollution sourced from\nvehicles’ emissions can significantly advance efforts to improve our planet's health and economic benefits from the electric sector\nand job creation. Electric power is one of the leading capabilities being researched to achieve this [2]. Accordingly, the U.S. The\nNavy, among other military branches, is attempting to set the pace through climate-based commitments [3].\n Given this reality the VCU PEP team has taken these challenges into consideration when designing the university's second\nentry into the competition. From the onset, a balance of performance, reliability, and efficiency were set as pillars of the team’s\nwatercraft. Using the hull passed down from the previous team allowed for greater work to be done on other systems while\nreducing the uncertainty of creating a hull without experience or sufficient knowledge. The use of a non-custom hull also proves\nthat our design can be placed into many other hulls with minimal redesign. The power supply of Li-Po batteries ensures a\nscalable electric energy source that is readily available and proven to work. The drive-train for the boat has been designed to\nmaximize efficiency while meeting the demands of a significant payload and high speed maneuvering that is critical in many\nmodern naval applications. Special attention has been given to this section as the previous year’s team had a competition-ending\nfailure in this regard. The team’s electrical subsystems are based in reliable integration and safety to ensure all components work\nwith each other as seamlessly as possible to maximize performance and reduring danger to the users. The payload will be held\nby a custom housing unit that can be easily adjusted to allow for mission-based modularity. The payload carriage system and\nother custom parts such a battery trays, and turn fins highlight originality of the team and their capability to create high quality\nsolutions from the ground up.\nDesign & Analysis\nDrivetrain Design\n The motors serve as the core components of the drivetrain. The current design utilizes two 500 kV, 6-pole brushless motors\n(SSS 56123-V2 KV500) Figure 1 to power and propel the craft. The combination of a higher pole count and a 500 kV rating\nprovides increased torque, which is critical for accelerating the vehicle while carrying a payload between 30–60 lbs. The\ndual-motor configuration enhances acceleration and top speed, improves overall stability, and introduces redundancy in case of\nmotor failure. In PEP 2024, a single 53100 1450 kV 8-pole brushless motor was used. For the 2025 iteration, a thrust analysis\nwas conducted using this motor, which yielded approximately 16 lbs of thrust at full throttle. The resulting thrust-to-weight ratio,\naccounting for a 30 lb payload, was calculated to be 0.34. Given that the desired thrust-to-weight ratio was determined to be\nbetween 0.6 and 1.0, the team explored alternative propulsion systems. Following consultation with industry experts and internal\nanalysis, a dual-motor system utilizing two 500 kV, 6-pole brushless motors was selected to balance torque and speed. The\ndecision was validated through a thrust calculation based on The Propeller Handbook by Dave Gerr. Key assumptions in the\nanalysis included a target speed of 60 mph (used as a competitive benchmark), a drivetrain and propeller efficiency of 0.5 (to represent worst-case performance), a hull wake drag coefficient of 0.95, and a motor power output of 15,000 W. The analysis\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "produced a calculated thrust of 66.25 lbs per motor, or 132.5 lbs total for the dual system. This results in a thrust-to-weight ratio\nof 1.12, slightly above the target range but acceptable due to the conservative nature of the assumptions and minor additional\nlosses from the drive cable and mechanical friction.\nFigure 1: Twin SSS 56123-V2 KV500 Motors Mounted Figure 2: Thrust - Weight Calculations\n The rudder assembly plays a critical role in the drivetrain system. The current design features a dual-strut rudder assembly\nFigure 2, which increases the total surface area in the water. This enhancement improves directional stability and control,\nparticularly during high-speed runs and sharp turns. In PEP 2024, a single stinger rudder assembly was used. For PEP 2025, due\nto the increased payload of 30–60 lbs, the design was upgraded to a dual-strut rudder system to maintain performance and\nprevent washout during aggressive maneuvers. This configuration includes adjustable strut mounts for the drive cable, enabling\nfine-tuning of motor angle for improved efficiency. Each rudder is also equipped with two water pickups, providing active\ncooling to both ESCs and motors, which helps maintain consistent thermal management across the system. The drive cable is a\nvital component in transmitting motor power efficiently. The current design uses two ¼ inch Hughey Drive Cables, chosen for\ntheir ability to resist twisting under high torque. The increased diameter ensures consistent power delivery and reduces the risk of\nfailure under load. In the 2024 setup, a smaller drive cable was used, which led to a catastrophic failure during competition\nFigure 3. As a result, the design was upgraded to a more robust ¼ in drive cable for 2025. The Hughey cable offers superior\nstrength and durability, significantly lowering the likelihood of mechanical failure and ensuring reliable operation under high\ntorque conditions. Figure 3: Failure from PEP 2024\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": " The propeller, or prop, offers some of the most complexity and impact when it comes to drivetrain design and choice. Based\non the team’s research two categories of propeller variables yield the most influence while also being the most customizable.\nThese categories are propeller diameter and pitch or the theoretical distance a propeller would move forward in one revolution if\nit were moving through a solid medium [4]. Propeller design from scratch is a highly cumbersome task, however, a large number\nof options exist, as seen in Figure 4 that allow the team to sift through and optimize based on hull and drivetrain characteristics\nThe first prop variable that was optimized was the diameter. Using the calculations in Figure 5, an idealized size range was\nfound by incorporating the power needed based on hull length. To find the ideal pitch the calculations in Figure 6 were\nperformed. The equation used a variable boat speed, motor gear ratio (set as 1 since the team’s design is direct), engine rotation,\nan assumed slip percentage (a type of pitch inefficiency), and a conversion constant. The calculation was repeated for an ideal no\nslip condition as well an assumed slip condition. All results were averaged across a set of low to high speeds to achieve the most\nbalanced pitch for all possible conditions. Thus, two propeller designs were chosen from over a hundred options, one with the\noriginal diameter (65mm), and a second based on the ideal pitch (4 in.) and an incrementally increased diameter (71mm) to\nreduce cavitation while not interfering with the dual motor/propeller setup.\nFigure 4: Section of Supplier’s Propeller Chart Figure 5: Propeller Diameter Calculation Figure 6: Propeller Pitch Calculations\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "Electrical and Power System Design\n The RC boat’s original electrical system, based on a previous team’s design, had inefficiencies in weight distribution and\npower management. It used ten batteries, adding excessive mass without proportional performance gains, and lacked adequate\ncircuit protection. To improve efficiency while meeting competition constraints, the new design optimizes power use, reduces\nweight, and enhances safety. The battery count was reduced to eight, maintaining power output while lowering weight. A fuse\nbox and a waterproof 300A circuit breaker were added for protection. The improved system features eight 10,000 mAh, 6S-25C,\n22.2V batteries in parallel, keeping voltage under the 55V limit. The propulsion system includes kV500 motors with neodymium\nmagnets, delivering up to 15,800W. The OM-300 AHV 300A RC Boat ESC ensures efficient motor control, while 6 AWG and 8\nAWG wiring with XT90 and EC8 connectors handle high currents. For control, a Spektrum DX6C transmitter and SR515\nreceiver provide precise maneuverability. To reduce receiver load, hydraulic pumps (1000 cc/min flow rate) use an external\nbattery. These improvements enhance power management, reliability, and compliance with performance and safety requirements.\nPayload Design\n Research on payload systems for boats turned up minimal existing designs that were applicable. Full size systems for large\nvessels were not feasible for the team’s boat size of 84 inches. For small model and RC boats, the most extensive systems simply\nput weight on top of the hull meaning a fully original design was needed for the year’s weight requirements. Some military\napplications exist but their specifics are not open source. To be in line with the direction of modern naval systems’ priority of\nscalability and modularity, the payload system for the team’s boat focuses on flexible placement of multiple weights, secure lock\ndown during maneuvers, and an adaptable core set of parts that can be adjusted as needed. One of the largest challenges of the\npayload system was overcoming the angled shape of our V-hull design. A method of cut and angled 2x4 wood beams was chosen\nto level each side of the boat and create a stable foundation. This allowed for aluminum rails to be mounted giving way to the\nuse of heavy-duty locking rail carriages. Four carriages are used to create balanced and stable linear movement for each payload\nwhile being able to lock in place when necessary. Multiple iterations of 3D printed risers are used to overcome spacing and\nclearance issues such as with the locking mechanism of the carriage and the main drivetrain and battery elements in the center of\nthe boat. For the actual payload, 30lb ruck weights are used as they are an optional combination of a small form factor without\nmovement from a medium such as sandbags. Each weight is secured to the rest of the design through ¾ inch plywood, 3D\nprinted supports, ¼ inch bolts, and quick release nuts to ensure the payload’s stability when the boat is in motion. An overview\nof the design is shown in Figure 7. Notably, the overall design permits two of the described systems giving the team the\nflexibility to choose between carrying 30lbs or 60lbs. Figure 7: Payload System Overview\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "Hydromatic Addition Design\n Turn fins, most commonly found on miniature race boats, are fixed past the transom of the craft to provide additional surface area\nto create a counter-force when it makes turns. Many varying versions of turn fins exist, but few offer a size that the team deemed\noptimal through a general observation of hull length to turn fin length ratios of about 1:11. To accommodate, the team 3D modeled\nmultiple sets of common turn fins in addition to creating an original design based on fish and rocket fins. The design combines the\nlow aspect and taper ratios (1:1.7) found in rocket fins and shark fins (sharks are optimal for comparison as they are more stiff than\nother fish, resembling a boat better), with the higher ratios (1:7) found in wind sails. This shape mimics dorsal fins found in what\nresearch has shown to be faster fish as well as the “shark fin” of F1 race cars of the past. To mount the turn fins a custom design\nwas created to permit the best range of motion of adjusting the fins’ angle. The trim tab design utilizes locking hinges that can be\nset at any angle from 0 to 180 degrees. Sizing was determined by recommendations of one inch of span per foot of hull length.\nFigure 8: Hydrodynamic Addition Overview\nCustom Mounting Designs\n  A custom mount was designed to secure the stuffing tubes and house the circuit breakers Figure 9. This setup was chosen to\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "maximize internal space while also providing easy access to the circuit breakers in case they trip during operation. Additionally,\nthe mount keeps the stuffing tubes firmly in place, helping to minimize vibration and unwanted movement while the craft is\nrunning.\nFigure 9: Custom Mount for Drive Cables and ESC’s\n To help optimize the boat weight and improve efficiency of the electrical system, custom battery mounts were modelled using\nSOLIDWORKS then 3D printed, as shown in Figure 10. Two mounts were printed, each able to hold up to four batteries. Each\nbattery will be held in a separate slot and secured by a custom harness utilizing a velcro strip connected to a scaled belt buckle, as\nshown in Figure 11. This harness system allows for quick installation and removal of each battery, which could be critical for\npreserving integrity of various components or systems inside the boat. One slot in each set is angled and has a smaller slot\nembossed into the angled end, allowing for the other security system to activate. This system is a spring lock mechanism located\ninside the angled end of the battery slot base, as shown in Figure 12. A spring block connected to an external grip will be pushed\ninto the angled slot by two internal springs, which can be compressed via the external grip when removal is desired. Each set of\nslots will be connected to a wood locking block underneath, which will link each set of four slots and act as a secondary form of\nsecurity simultaneously.\n\n Figure 10: Overview of Battery Mount. Figure 11: Belt Buckle/Strip Harness System.\nFigure 12: Spring Lock Mechanism. Hull\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": " To provide extra visualization and a foundation for expected boat performance, hydrodynamic and vector analysis was\nconducted. The hydrodynamic analysis of the boat hull was conducted first to visualize the benefit of hull strakes and gain a basic\nunderstanding of what performance to expect at peak operational condition. A simplified version of the boat model was recreated\nwith and without strakes while water conditions were studied at the site of operation, shown in Figure 13 and 14. Preliminary\nhydrodynamic diffraction was conducted before hydrodynamic responses were studied. The frequency of the wave movement\nwhile moving was adjusted alongside the water speed to help visualize how the boat will react to the expected conditions. The\nresults of this hydrodynamic analysis were significant in estimating the performance of the boat when including the weight of the\npayload alongside the internals. The hull studied without strakes was shown to drift to one side, with a longer simulation resulting\nin the boat tipping. The hull with strakes included showed much better performance stability wise, with minimal drifting that\ncould easily be accounted for with trim settings. To further visualize and study the boat’s performance under operational\nconditions, a multi-phase flow vector analysis was conducted. The analysis was conducted with the hull with strakes included\nutilized in the previous analysis at the peak expected operational speed. The results of the simulation yielded promising results,\nwith a wake expected to pass around but not over the boat, which is expected to improve as planning is achieved. The vector field\nof the expected wake is shown in Figure 15. The wake is also expected to keep the propeller submerged despite the amount of\nwater displaced, further contributing to the planning potential. Utilizing the built in characteristics calculator in ANSYS Fluent\npost alongside material and weight data, the expected drag force was able to be determined, which is around 40 lb (177 N) when\ntravelling at 48 mph.\n\n Figure 13: Simplified Hull w/o Strakes Figure 14: Simplified Hull With Strakes\nFigure 15: Vector Field of Multi-Phase Flow Analysis\nDrivetrain Analysis\n The team plotted the thrust output of the motors across various speeds Figure 16 to better understand their performance\ncharacteristics under different operating conditions. This visualization provides a clear representation of how thrust varies with\nspeed, enabling identification of the motor’s efficiency range and highlighting the speeds at which performance peaks or begins to taper off. By analyzing this data, the team was able to determine the optimal throttle settings that balance power consumption\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "with propulsion efficiency—particularly important when operating under payload conditions between 30–60 lbs. The resulting\nthrust curve also informed decisions regarding battery selection and propeller choice, ensuring that the drivetrain operates within\nits most effective range. Additionally, having access to this data allows for the simulation of different mission profiles and\nprovides insight into how the system will respond in real-world conditions, such as accelerating out of turns or maintaining high\nspeeds during straight-line sprints. Ultimately, this analysis is crucial for fine-tuning the craft to optimize both performance and\nreliability.\n\nFigure 16: Thrust - Speed Data Figure 17: Thrust - Speed Graph\nElectrical and Power System Analysis\n The redesigned electrical and power system significantly enhances the RC boat’s performance, efficiency, and reliability while\nmeeting all competition constraints. One of the most important improvements was the optimization of the battery configuration.\nBy reducing the battery count from ten to eight, the system achieves a more efficient power-to-weight ratio without\ncompromising performance. This adjustment lowers the overall mass of the boat, improving buoyancy and maneuverability while\nmaintaining sufficient power output. The parallel battery configuration ensures consistent voltage levels, providing stable power\ndelivery to the propulsion and auxiliary systems. A key consideration in the design was circuit protection. The inclusion of a\nwaterproof 300A circuit breaker and fuse box mitigates the risk of electrical failures, safeguarding both the components and\noverall system integrity. This protection is essential given the high current demands of the propulsion system, which operates at\npeak loads nearing 15,800W. Without adequate circuit protection, excessive current draw could lead to overheating, component\ndamage, or system shutdowns, all of which could jeopardize the boat’s performance during the competition. The selection of the\nkV500 motors and OM-300 AHV, 300A ESC was based on a balance between power efficiency and control precision. The\nmotors, equipped with neodymium magnets, offer high torque and energy efficiency, enabling the boat to maintain optimal thrust\nwithout unnecessary power losses. The ESC further enhances performance by regulating motor speed and ensuring smooth\nacceleration and deceleration, critical for maintaining control over the boat during the 2-mile course. The use of 6 AWG and 8\nAWG wiring minimizes resistive losses, preventing voltage drops that could otherwise impact motor efficiency and system\nstability. Another critical improvement was the separation of the hydraulic pumps from the main power system by assigning\nthem an external battery source. This prevents excessive current draw from interfering with the propulsion system, reducing the\nrisk of power fluctuations that could impair maneuverability. The integration of the Spektrum DX6C transmitter and SR515\nreceiver provides precise control, allowing for accurate adjustments to steering and throttle inputs. These enhancements\ncollectively ensure the RC boat operates efficiently while maintaining the necessary power levels for propulsion and auxiliary\nfunctions. To provide a clear representation of the electrical layout, a schematic diagram of the system is included below, Figures 18 and 19. This schematic illustrates the connections between the batteries, circuit protection elements, ESC, motors,\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 10,
+      "text": "hydraulic pumps, and control components. Key aspects highlighted in the diagram include: Power Distribution, Circuit\nProtection, Motor & ESC Connections, Control System.\n\nFigure 18: Parallel Battery Schematic Figure 19: Main Electronic component Section\nOverall, the redesigned electrical and power system successfully addresses the inefficiencies of the previous\niteration by optimizing power distribution, implementing robust circuit protection, and improving energy efficiency. These\nimprovements contribute to a more reliable and high-performing vessel capable of completing the 2-mile course within the\nrequired 55-minute time frame while adhering to all competition constraints.\nPayload Analysis\n Given the need for reliability within the payload system an simulation based analysis of various the key structural components\nwas done in SolidWorks. Using a full 3D render allowed the team to pinpoint the most crucial elements of the design within a\ngreater visual context. The following simulations were completed by reducing a 30lb distributed load along the top surface:\ndeformation analysis, stress analysis, strain analysis, and a factor of safety (FOS) analysis shown in Figure 20. Since the 3D\nmodel used to simulate the payload system was a 1:1 working digital version of what would become the actual system, accurate\nmaterial properties were compiled into the software to allow each component to be realistically depicted under load. The results\nof the simulation yield a deformation range of 3.9x10 to 1.1x inches with the max occurring at the center of the plywood −32 10−4\nsupport. The stress ranged from 1.2x10 to 8.6x psi with a section of the aluminum rails under most force per area. The −3 101\nstrain results ranged from 3.9x10 to 1.7x with the highest amounts occurring at the edges of the large 3D printed risers. −9 10−5\nTo better contextualize these results the FOS results offer the most insight. With a range of 4.6x10 to 8.8x , most of the 1\n106\nsystem lay within the lower end of the FOS, however, this value is still significantly large and permitted the team to move\nforward with the design with greater confidence. Figure 20: Structural Analysis via Solidworks\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 11,
+      "text": "Propeller Analysis\n To visualize and confirm the performance improvements of larger propellers, simulation utilizing ANSYS Fluent was\nconducted. The study was dedicated to comparing the set of 2.5 inch diameter propellers with a 3.5 inch pitch to an upgraded 2.7\ninch diameter set of propellers with a 4.32 inch pitch. The main point of focus for each simulation was the amount of thrust and\ntorque each propeller can output. Pressure contours and water velocity vector fields were also synthesized for supporting\nanalysis. These characteristics were determined to be the most relevant points of study due to their potential impact on the boat\nthroughout operation. Both propellers will experience 11,000 RPM at 40 mph to simulate close to maximum expected operational\nconditions, with all movement other than rotation on the Z axis locked. Due to the focus on geometry, material properties will not\nbe relevant throughout this study despite being accurately assigned. Initial research of the impact of an increased diameter and\npitch showed that the increased diameter will have a greater thrust and torque but experience greater drag, while the increased\npitch would allow for a higher top speed at the cost of a slower acceleration. The results of the study yielded promising\nresults, with the 2.7 in diameter propeller demonstrating an average thrust of around 875 N (~196 lbf) after achieving stable\noperation 1 second after startup, both of which are shown on Figure 21. The 2.7 in propeller achieved an average torque of\naround 12 Nm (~106 in-lb), shown in Figure 22. The 2.5 in propeller yielded expected results, with an average thrust of around\n462.5 N (~104 lbf) after reaching stability half a second after startup, as shown in Figure 23. The 2.5 in propeller achieved an\naverage torque of around 8 Nm (~70 in-lb) after reaching stability in a similar time frame to the thrust graph as shown in Figure\n24. Each force and torque graph pair share a very similar curve due to the thrust and torque applied being proportional to each\nother. These simulations confirm the validity of the initial research, as the 2.7 in propeller had greater amount of thrust and torque\ncompared to the 2.5 in propeller while experiencing a slower acceleration to stability by half a second. Water velocity vector\nprofiles and pressure contours were also synthesized for study. Figures 25 and 26 show the face and back pressure contours for\nthe 2.5 in propeller, with the back side of the propeller being of note due to the presence of multiple smaller low pressure zones\nhaving a high potential to cause cavitation during physical operation. Figures 27 and 28 show the face and back pressure\ncontours for the 2.7 in propeller, which show more consistent pressure zones. These pressure zones being more consistent\ntranslates to less cavitation at the operational RPM, solidifying the 2.7 in diameter propeller as beneficial and necessary for\noptimal operation. Figures 29 and 30 show the water velocity vector profiles for the 2.5 and 2.7 inch propellers respectively. The\nwater movement around the 2.5 in propeller is faster in comparison to the 2.7 in propeller, which confirms that a smaller diameter\npropeller will be faster and produce less drag than a larger diameter propeller, but will reduce the amount of torque output.\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 12,
+      "text": "Figure 21: 2.7 in Diameter Propeller Thrust Graph Figure 22: 2.7 in Diameter Propeller Torque Graph\nFigure 23: 2.5 in Diameter Propeller Thrust Graph Figure 24: 2.5 in Diameter Propeller Torque Graph\n Figure 25: face side pressure contour of 2.5 in Prop Figure 26: back side pressure contour of 2.5 in Prop\n\n Figure 27: face side pressure contour of 2.7 in Prop Figure 28: back side pressure contour of 2.7 in Prop Figure 29: Water Velocity Vector Field of 2.5 in Propeller Figure 30: Water Velocity Vector Field of 2.7 in Propeller\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 13,
+      "text": "Build & Fabrication\nDrivetrain\n The majority of the build and fabrication phase of this project was focused on the drivetrain. The first step was mounting the\nrudder, as its position determined the alignment and fitment of the remaining components. Next, the team fiberglassed wood\nstringers into the hull, providing a rigid and secure base for all components without needing to drill directly into the boat itself.\nFollowing that, the motors were mounted to the stingers using custom CNC-machined aluminum mounts. They were set at a\n5-degree downward angle to help reduce cavitation and ensure efficient power transmission Figure 1. We then bent and installed\nthe stuffing tubes using our custom mount. The tubes were shaped in an S-curve to help reduce vibration from the flexible drive\nshaft. Final steps included installing Teflon washers to minimize friction between the struts and props. The drive cables were\ngreased, inserted through the stuffing tubes, and secured to the motors. Lastly, the props were attached and locked in place using\nnylon locking nuts.\nElectrical and Power System\n During the building and fabrication of the unmanned boat, the placement of electronic components was carefully determined\nafter implementing the drivetrain, which occupied a significant amount of space near the transom. With the batteries positioned at\nthe nose of the boat to aid in weight distribution, the remaining electronics had to be rearranged to fit efficiently within the\navailable space. As a result, the ESC was positioned directly underneath the motor, while the circuit breaker was mounted on\ncustom-made stuffing tube mounts. These placement decisions were influenced by several critical factors, including balance, heat\ndissipation, and accessibility for maintenance. Placing the ESC under the motor minimized wiring complexity by reducing the\nlength of connections between key components, which helped optimize power delivery and system efficiency. Additionally, this\nlocation provided adequate airflow to help dissipate heat generated during operation, preventing potential overheating issues. The\ncircuit breaker was strategically mounted on the stuffing tube mounts to ensure it remained secure while also being easily\naccessible for maintenance and troubleshooting. This placement facilitated quick power isolation if needed, enhancing both\nsafety and ease of operation. Overall, these design choices allowed for an efficient, well-organized layout that balanced\nperformance, thermal management, and serviceability within the spatial constraints of the vessel. Payload\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 14,
+      "text": " The foundation of the payload system hindered upon the size, space, and geometry of the hull. Internal measurements were\ntaken to set a baseline for design and fabrication. Most importantly, each side of the hull was measured which produced unique\nangles due. While only minimally different with the left side being 15 degrees and the right being 18 degrees, accounting for this\ndifference was critical for the rest of the design. This was displayed most critically in the wood supports that used 2x4 studs cut\nusing a table saw into right triangles with each of aforementioned angles thus leveling each side. The supports were then\nfiberglassed into the hull to create a high-strength base. The even surface created by the supports allows the rail system to\noperate as smoothly as possible. Said rail system is mounted using M5 bolts/screws/nuts. It was decided to have the screws\ncome from the bottom of the wood support to prevent them from being easily ripped out. This decision required countersunk\nholes to keep the critical angle alignment. Additionally, the first set of 3D printed risers were created to allow the rails to sit\nhigher above the wood allowing the locking mechanism of the rail carriage to operate. The second set of risers were made larger\nand more robust to copacetically fit with the rail carriages while supporting the load and providing clearance above the drivetrain\nand electrical systems. M4 screws/nuts were used to fix these items together. The main ¾ inch plywood support was cut to the\nlargest size that could fit inside the access point of the hull to maximize the distribution of the load. Mounting holes were then\ndrilled along a calculated pattern that permitted the plywood to be fixed to the larger rise supports. Additional supports for the\npayload were 3D printed to lock the ruck weight in place and prevent displacements through multiple degrees of motion. These\nelements were then assembled with ¼ inch bolts/nuts to ensure strength and stability. A ¼ inch plywood sheet was then used as a\nlid with the same hole pattern. The design intentionally let the bolts show above the lit which permits the use of specially quick\nrelease, push-button ¼ inch nuts to be used for locking the weight in.\nCustom Mounting\n Design of the custom battery mount needed to take the boat stringers and boat geometry into account, which was done through\nmeasurements taken before design was initiated. The critical measurements taken were the distance between the stringers (insert\nhere) and an internal angle of 20 degrees inside the boat. The first step to assembly was gluing the mounting bases together,\nwhich was done using Weld-On 16 acrylic cement due to the nature of its chemical bond providing unmatched strength. At the\nsame time, the wood locking base was cut from stock wood and glued together with wood glue. After the bonding time had\npassed, the mounting base and wood locking base was tested to confirm correct sizing. The battery slot assemblies were then\nassembled as parts were delivered, utilizing a plastic hinge and a velcro strip connected to the belt clip. The clip and harness base\nwere both secured to each slot with 8 total M4x8 screws. Once the mounting slots and wood locking base are complete, they will\nbe glued together with a thin coat of a universal adhesive. Before the mounting base is glued onto a wood base inside the boat,\nthe spring lock system will be assembled with Weld-On 16. Epoxy resin will be used to glue the mounting base to the wood base,\nwhich will then be attached to the boat internally in a similar fashion.\nHydrodynamic Additions\n Turnfins and trimtabs will be 3D printed for testing. An infill of 50% or greater will be used to provide the greatest strength\nand reliability. Once the final designs are determined, the turn fins and trimtabs will be CNC machined out of an aluminum alloy\nmetal. The turn fins and trim tabs will be mounted to the rear of the craft. Mounting holes will be drilled to allow M4 screws to\npass through, and the components will be secured using nylon locking nuts. To ensure a watertight seal and prevent any leaks,\n3M marine sealant will be applied around the mounting points during installation. The actual additions will be 3D printed at high\ninfill percentages for the highest quality results. Testing\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 15,
+      "text": " A series of tests will be conducted to verify the boat’s seaworthiness, endurance, and overall performance. Testing will take\nplace at either Swan Lake or Robious Landing Park, both locations provide calm waters and sufficient space for full-capacity\noperation. The first test will involve placing the boat in the water to check for leaks and ensure all systems are functioning\ncorrectly, including the motors, ESCs, rudder, and water pumps. A force gauge will be attached to measure thrust at various\nthrottle levels.The second test will assess the boat’s endurance by verifying it can travel 2 miles without any added payload. The\nthird and fourth tests will evaluate performance under load: first with a 30-pound payload, then with a 60-pound payload, each\nover a 2-mile course. Additional tests will focus on maneuverability and handling to familiarize the team with boat operation and\nto identify and address any potential issues prior to competition.\nRisk\nDrivetrain\n For the motors, the primary risk lies in power consumption. Due to their high-performance nature, they draw significant\npower, which could lead to rapid battery drain. To mitigate this, we plan to test various throttle settings and optimize our battery\nusage accordingly. Additionally, we aim to implement battery telemetry for real-time voltage monitoring to prevent unexpected\npower loss during operation. For the rudder, the main concern is increased drag. Since we are using a dual rudder setup, there is\nmore surface area in the water, which slightly increases resistance. However, given the high thrust output from the motors, this\nadditional drag is minimal and considered negligible in terms of overall performance. The risk associated with the drive shaft is\nexcessive friction and mechanical stress, which could lead to failure. To address this, we will follow a strict maintenance\nroutine—cleaning and drying the shaft after each use and applying fresh grease before every run to ensure smooth operation and\nlongevity. For the props, the risk is potential loosening or imbalance during operation. To prevent this, we use nylon locking nuts\nto secure the props and inspect them regularly for wear or damage. Ensuring they are properly torqued and balanced helps\nmaintain efficiency and avoid mechanical issues at high speeds.\nElectrical and Power System\n To address the risks associated with the electrical components and power systems, several design strategies and preventative\nmeasures were implemented to enhance the safety, reliability, and performance of the unmanned boat. One of the primary\nconcerns was heat buildup due to the ESC’s placement directly underneath the motor. To mitigate this, adequate ventilation was\nensured by allowing sufficient airflow around the ESC and motor, enabling natural heat dissipation. Additionally, a heat sink was\ninstalled on the ESC to improve thermal regulation and prevent overheating during extended operation. The circuit breaker’s\nlocation on custom-made stuffing tube mounts initially posed a risk of mechanical stress and vibrations from the drivetrain,\nwhich could lead to unintentional tripping or premature wear. To counter this, vibration-dampening materials were integrated into\nthe mounting system, reducing excessive movement and preventing accidental breaker trips. The breaker was also strategically\npositioned to remain easily accessible for maintenance while being securely fastened to prevent disconnections due to mechanical\nstrain. Another potential risk was electromagnetic interference (EMI) affecting signal integrity due to the proximity of\nhigh-current components. To resolve this, shielded cables were used for critical wiring, particularly for data and control lines,\nwhile power cables were routed separately to minimize interference. Additionally, secure cable management techniques,\nincluding zip ties and protective tubing, were employed to prevent accidental disconnections, wire fatigue, or damage from\nvibrations. By implementing these mitigation strategies, the risks associated with the electrical and power systems were\neffectively reduced, ensuring stable performance, reliability, and longevity of the unmanned boat’s electrical components. Payload\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 16,
+      "text": " The payload presents a number of risks, most prominently from unwanted displacements and structural failure. Having a\nmovable payload is critical for accessing other elements and testing the optimal position for operation. Since a moveable payload\nis so critical for the design, the application of locking rail carriages to fix the payload in place was essential in addressing any\nconcerns. The carriages are also rated to withstand a large amount of force from pitching, yawing, and rolling motions,\nespecially when used congruently in multiples. Material selection and geometric design was done in a fashion that combined\ndesirable traits and distributed loads over larger areas while resisting deformation. The load simulations run helped confirm that\nthe team adequately addressed any risk related to the loads. As was also mentioned above, 3D printing allowed many elements to\nbe iterated upon reducing the risk of impeding on other critical components. The strategic use of push-button quick-release nuts\nalso gives the team a faster way to prepare the payload during the five minutes allowed after the weight-in stage. This reduces\nthe risk of the team being penalized for a time violation without compromising structural integrity.\nCustom Mounting\n The primary risk associated with the battery mounting system is structural failure. Fatigue and stress failure concerns are\npresent throughout the system but the most critical is fatigue failure in the belt clip. The belt clip system is capable of supporting\nthe battery when the full weight of the battery is placed on it, but over multiple unlocking and locking cycles the belt clip prongs\nwill begin to experience plastic deformation, loosening the clip until it could potentially be shaken free or snap from overuse.\nThis potential failure point Is alleviated by increasing the size of the belt clip system, increasing the yield strength of the prongs\nand allowing for longer continued use. Another potential point of failure is stress failure of the wood base holding the mounting\nsystem inside the boat. Due to the weight of the batteries on the mount there is potential for either the wood base to snap, or the\nepoxy resin to fail. If time permits, a successful solution would involve creating a vertical support below the base, utilizing the\nbottom of the boat to alleviate the stress the wood base would experience.\nHydrodynamic Additions\n The primary risk of the hydrodynamic additions is structural failure. Most pre-made versions of these designs use CNC\ntechnology. This is an option that the current team will keep on the table and pass on to future teams. However, given the current\nset of time and monetary constraints, 3D printing offers the most viable solution. As mentioned in the fabrication section, high\ninfill rates will increase the density of the prints ensuring a more durable construction. Furthermore, a cross-compatible\nmounting design for the original trim tabs will be used to allow them to be interchangeable with the procured version, limiting the\nrisk of unnecessary hull patching. A secondary risk associated with the trim tabs and turn fins is improper alignment or\ninstallation, which can lead to handling instability or inefficient hydrodynamics. If the trim tabs are not correctly leveled, the craft\nmay experience uneven lift or porpoising at high speeds. Similarly, misaligned turn fins can cause unpredictable turning behavior\nor increased drag. To mitigate these risks, precise measurement and alignment will be performed during installation, and all\nhardware will be securely fastened using nylon locking nuts and marine sealant to prevent shifting during operation. Regular\ninspections will be conducted to ensure components remain tight and properly positioned after each run. Another potential risk is\nwater leakage through the mounting holes; this will be addressed by applying 3M marine-grade sealant around all screw holes to\nmaintain watertight integrity.Citations\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 17,
+      "text": "[1] Two years of War in Ukraine: What the Pentagon has learned - The Washington Post,\nhttps://www.washingtonpost.com/national-security/2024/02/22/ukraine-war-pentagon-lessons-learned/ (accessed Oct. 4, 2024).\n[2] EPA, https://www.epa.gov/greenvehicles/electric-vehicle-myths (accessed Oct. 4, 2024).\n[3] “Department of the Navy releases Climate action 2030,” United States Navy,\nhttps://www.navy.mil/Press-Office/Press-Releases/display-pressreleases/Article/3041221/department-of-the-navy-releases-climat\ne-action-2030/ (accessed Oct. 4, 2024).\n[4] “Understanding a Boat’s Propeller Pitch,” Discover Boating. https://www.discoverboating.com/resources/propeller-pitch\n[5] D. Gerr, Propeller Handbook: The Complete Reference for Choosing, Installing, and Understanding Boat Propellers.\nInternational Marine Publishing, 1989.\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Promoting Electric Propulsion for Small Watercraft"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "SeaRam-1 - Unmanned"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Prepared for:"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Mentor – Mike Briscoe and the American Society of Naval Engineers"
+    },
+    {
+      "line": 4,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Sponsor Organization – Office of Naval Research"
+    },
+    {
+      "line": 5,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "By:"
+    },
+    {
+      "line": 6,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Matt Savell, Andres Calvetty, Alyson Bonsu, Rey Vasquez"
+    },
+    {
+      "line": 7,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Under the supervision of"
+    },
+    {
+      "line": 8,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Associate Professor, Department of Mechanical and Nuclear Engineering:"
+    },
+    {
+      "line": 9,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Hong Zhao"
+    },
+    {
+      "line": 10,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "With Assistance From: The VCU Makers Studio and Garage"
+    },
+    {
+      "line": 11,
+      "page_start": 0,
+      "page_end": 1,
+      "text": "March 25, 2025 Background"
+    },
+    {
+      "line": 12,
+      "page_start": 1,
+      "page_end": 1,
+      "text": " The continuously evolving global trends in technology define our daily lives, along with the ones who are tasked to defend"
+    },
+    {
+      "line": 13,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "them. As such, public and private U.S. defense stakeholders have taken key observations from past and current conflicts to create"
+    },
+    {
+      "line": 14,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "solutions that will set the pace for what is needed to secure the future. To meet the needs of tomorrow’s challenges, the Office of"
+    },
+    {
+      "line": 15,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Naval Research (ONR) in partnership with the American Society of Naval Engineers (ASNE) have created the Promoting"
+    },
+    {
+      "line": 16,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Electric Propulsion (PEP) competition."
+    },
+    {
+      "line": 17,
+      "page_start": 1,
+      "page_end": 1,
+      "text": " While PEP is a constructed learning opportunity and friendly competition, there are greater challenges it seeks to address."
+    },
+    {
+      "line": 18,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "These include cost-effective, modular, scalable, systems for naval technology. The U.S. military in particular is pivoting to"
+    },
+    {
+      "line": 19,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "highly efficient systems that maximize funding and size, partially in the unmanned realm. Numerous lessons learned from past"
+    },
+    {
+      "line": 20,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "and present conflicts, including Ukraine and Russia, have driven this doctrinal refocusing to be ready for threats on the horizon"
+    },
+    {
+      "line": 21,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "[1]. The focus on electric based propulsion also has environmental significance through the reduction of pollution sourced from"
+    },
+    {
+      "line": 22,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "vehicles’ emissions can significantly advance efforts to improve our planet's health and economic benefits from the electric sector"
+    },
+    {
+      "line": 23,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "and job creation. Electric power is one of the leading capabilities being researched to achieve this [2]. Accordingly, the U.S. The"
+    },
+    {
+      "line": 24,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Navy, among other military branches, is attempting to set the pace through climate-based commitments [3]."
+    },
+    {
+      "line": 25,
+      "page_start": 1,
+      "page_end": 1,
+      "text": " Given this reality the VCU PEP team has taken these challenges into consideration when designing the university's second"
+    },
+    {
+      "line": 26,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "entry into the competition. From the onset, a balance of performance, reliability, and efficiency were set as pillars of the team’s"
+    },
+    {
+      "line": 27,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "watercraft. Using the hull passed down from the previous team allowed for greater work to be done on other systems while"
+    },
+    {
+      "line": 28,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "reducing the uncertainty of creating a hull without experience or sufficient knowledge. The use of a non-custom hull also proves"
+    },
+    {
+      "line": 29,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "that our design can be placed into many other hulls with minimal redesign. The power supply of Li-Po batteries ensures a"
+    },
+    {
+      "line": 30,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "scalable electric energy source that is readily available and proven to work. The drive-train for the boat has been designed to"
+    },
+    {
+      "line": 31,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "maximize efficiency while meeting the demands of a significant payload and high speed maneuvering that is critical in many"
+    },
+    {
+      "line": 32,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "modern naval applications. Special attention has been given to this section as the previous year’s team had a competition-ending"
+    },
+    {
+      "line": 33,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "failure in this regard. The team’s electrical subsystems are based in reliable integration and safety to ensure all components work"
+    },
+    {
+      "line": 34,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "with each other as seamlessly as possible to maximize performance and reduring danger to the users. The payload will be held"
+    },
+    {
+      "line": 35,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "by a custom housing unit that can be easily adjusted to allow for mission-based modularity. The payload carriage system and"
+    },
+    {
+      "line": 36,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "other custom parts such a battery trays, and turn fins highlight originality of the team and their capability to create high quality"
+    },
+    {
+      "line": 37,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "solutions from the ground up."
+    },
+    {
+      "line": 38,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Design & Analysis"
+    },
+    {
+      "line": 39,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Drivetrain Design"
+    },
+    {
+      "line": 40,
+      "page_start": 1,
+      "page_end": 1,
+      "text": " The motors serve as the core components of the drivetrain. The current design utilizes two 500 kV, 6-pole brushless motors"
+    },
+    {
+      "line": 41,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "(SSS 56123-V2 KV500) Figure 1 to power and propel the craft. The combination of a higher pole count and a 500 kV rating"
+    },
+    {
+      "line": 42,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "provides increased torque, which is critical for accelerating the vehicle while carrying a payload between 30–60 lbs. The"
+    },
+    {
+      "line": 43,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "dual-motor configuration enhances acceleration and top speed, improves overall stability, and introduces redundancy in case of"
+    },
+    {
+      "line": 44,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "motor failure. In PEP 2024, a single 53100 1450 kV 8-pole brushless motor was used. For the 2025 iteration, a thrust analysis"
+    },
+    {
+      "line": 45,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "was conducted using this motor, which yielded approximately 16 lbs of thrust at full throttle. The resulting thrust-to-weight ratio,"
+    },
+    {
+      "line": 46,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "accounting for a 30 lb payload, was calculated to be 0.34. Given that the desired thrust-to-weight ratio was determined to be"
+    },
+    {
+      "line": 47,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "between 0.6 and 1.0, the team explored alternative propulsion systems. Following consultation with industry experts and internal"
+    },
+    {
+      "line": 48,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "analysis, a dual-motor system utilizing two 500 kV, 6-pole brushless motors was selected to balance torque and speed. The"
+    },
+    {
+      "line": 49,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "decision was validated through a thrust calculation based on The Propeller Handbook by Dave Gerr. Key assumptions in the"
+    },
+    {
+      "line": 50,
+      "page_start": 1,
+      "page_end": 2,
+      "text": "analysis included a target speed of 60 mph (used as a competitive benchmark), a drivetrain and propeller efficiency of 0.5 (to represent worst-case performance), a hull wake drag coefficient of 0.95, and a motor power output of 15,000 W. The analysis"
+    },
+    {
+      "line": 51,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "produced a calculated thrust of 66.25 lbs per motor, or 132.5 lbs total for the dual system. This results in a thrust-to-weight ratio"
+    },
+    {
+      "line": 52,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "of 1.12, slightly above the target range but acceptable due to the conservative nature of the assumptions and minor additional"
+    },
+    {
+      "line": 53,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "losses from the drive cable and mechanical friction."
+    },
+    {
+      "line": 54,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Figure 1: Twin SSS 56123-V2 KV500 Motors Mounted Figure 2: Thrust - Weight Calculations"
+    },
+    {
+      "line": 55,
+      "page_start": 2,
+      "page_end": 2,
+      "text": " The rudder assembly plays a critical role in the drivetrain system. The current design features a dual-strut rudder assembly"
+    },
+    {
+      "line": 56,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Figure 2, which increases the total surface area in the water. This enhancement improves directional stability and control,"
+    },
+    {
+      "line": 57,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "particularly during high-speed runs and sharp turns. In PEP 2024, a single stinger rudder assembly was used. For PEP 2025, due"
+    },
+    {
+      "line": 58,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "to the increased payload of 30–60 lbs, the design was upgraded to a dual-strut rudder system to maintain performance and"
+    },
+    {
+      "line": 59,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "prevent washout during aggressive maneuvers. This configuration includes adjustable strut mounts for the drive cable, enabling"
+    },
+    {
+      "line": 60,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "fine-tuning of motor angle for improved efficiency. Each rudder is also equipped with two water pickups, providing active"
+    },
+    {
+      "line": 61,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "cooling to both ESCs and motors, which helps maintain consistent thermal management across the system. The drive cable is a"
+    },
+    {
+      "line": 62,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "vital component in transmitting motor power efficiently. The current design uses two ¼ inch Hughey Drive Cables, chosen for"
+    },
+    {
+      "line": 63,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "their ability to resist twisting under high torque. The increased diameter ensures consistent power delivery and reduces the risk of"
+    },
+    {
+      "line": 64,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "failure under load. In the 2024 setup, a smaller drive cable was used, which led to a catastrophic failure during competition"
+    },
+    {
+      "line": 65,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Figure 3. As a result, the design was upgraded to a more robust ¼ in drive cable for 2025. The Hughey cable offers superior"
+    },
+    {
+      "line": 66,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "strength and durability, significantly lowering the likelihood of mechanical failure and ensuring reliable operation under high"
+    },
+    {
+      "line": 67,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "torque conditions. Figure 3: Failure from PEP 2024"
+    },
+    {
+      "line": 68,
+      "page_start": 3,
+      "page_end": 3,
+      "text": " The propeller, or prop, offers some of the most complexity and impact when it comes to drivetrain design and choice. Based"
+    },
+    {
+      "line": 69,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "on the team’s research two categories of propeller variables yield the most influence while also being the most customizable."
+    },
+    {
+      "line": 70,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "These categories are propeller diameter and pitch or the theoretical distance a propeller would move forward in one revolution if"
+    },
+    {
+      "line": 71,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "it were moving through a solid medium [4]. Propeller design from scratch is a highly cumbersome task, however, a large number"
+    },
+    {
+      "line": 72,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "of options exist, as seen in Figure 4 that allow the team to sift through and optimize based on hull and drivetrain characteristics"
+    },
+    {
+      "line": 73,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "The first prop variable that was optimized was the diameter. Using the calculations in Figure 5, an idealized size range was"
+    },
+    {
+      "line": 74,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "found by incorporating the power needed based on hull length. To find the ideal pitch the calculations in Figure 6 were"
+    },
+    {
+      "line": 75,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "performed. The equation used a variable boat speed, motor gear ratio (set as 1 since the team’s design is direct), engine rotation,"
+    },
+    {
+      "line": 76,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "an assumed slip percentage (a type of pitch inefficiency), and a conversion constant. The calculation was repeated for an ideal no"
+    },
+    {
+      "line": 77,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "slip condition as well an assumed slip condition. All results were averaged across a set of low to high speeds to achieve the most"
+    },
+    {
+      "line": 78,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "balanced pitch for all possible conditions. Thus, two propeller designs were chosen from over a hundred options, one with the"
+    },
+    {
+      "line": 79,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "original diameter (65mm), and a second based on the ideal pitch (4 in.) and an incrementally increased diameter (71mm) to"
+    },
+    {
+      "line": 80,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "reduce cavitation while not interfering with the dual motor/propeller setup."
+    },
+    {
+      "line": 81,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "Figure 4: Section of Supplier’s Propeller Chart Figure 5: Propeller Diameter Calculation Figure 6: Propeller Pitch Calculations"
+    },
+    {
+      "line": 82,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Electrical and Power System Design"
+    },
+    {
+      "line": 83,
+      "page_start": 4,
+      "page_end": 4,
+      "text": " The RC boat’s original electrical system, based on a previous team’s design, had inefficiencies in weight distribution and"
+    },
+    {
+      "line": 84,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "power management. It used ten batteries, adding excessive mass without proportional performance gains, and lacked adequate"
+    },
+    {
+      "line": 85,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "circuit protection. To improve efficiency while meeting competition constraints, the new design optimizes power use, reduces"
+    },
+    {
+      "line": 86,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "weight, and enhances safety. The battery count was reduced to eight, maintaining power output while lowering weight. A fuse"
+    },
+    {
+      "line": 87,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "box and a waterproof 300A circuit breaker were added for protection. The improved system features eight 10,000 mAh, 6S-25C,"
+    },
+    {
+      "line": 88,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "22.2V batteries in parallel, keeping voltage under the 55V limit. The propulsion system includes kV500 motors with neodymium"
+    },
+    {
+      "line": 89,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "magnets, delivering up to 15,800W. The OM-300 AHV 300A RC Boat ESC ensures efficient motor control, while 6 AWG and 8"
+    },
+    {
+      "line": 90,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "AWG wiring with XT90 and EC8 connectors handle high currents. For control, a Spektrum DX6C transmitter and SR515"
+    },
+    {
+      "line": 91,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "receiver provide precise maneuverability. To reduce receiver load, hydraulic pumps (1000 cc/min flow rate) use an external"
+    },
+    {
+      "line": 92,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "battery. These improvements enhance power management, reliability, and compliance with performance and safety requirements."
+    },
+    {
+      "line": 93,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Payload Design"
+    },
+    {
+      "line": 94,
+      "page_start": 4,
+      "page_end": 4,
+      "text": " Research on payload systems for boats turned up minimal existing designs that were applicable. Full size systems for large"
+    },
+    {
+      "line": 95,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "vessels were not feasible for the team’s boat size of 84 inches. For small model and RC boats, the most extensive systems simply"
+    },
+    {
+      "line": 96,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "put weight on top of the hull meaning a fully original design was needed for the year’s weight requirements. Some military"
+    },
+    {
+      "line": 97,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "applications exist but their specifics are not open source. To be in line with the direction of modern naval systems’ priority of"
+    },
+    {
+      "line": 98,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "scalability and modularity, the payload system for the team’s boat focuses on flexible placement of multiple weights, secure lock"
+    },
+    {
+      "line": 99,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "down during maneuvers, and an adaptable core set of parts that can be adjusted as needed. One of the largest challenges of the"
+    },
+    {
+      "line": 100,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "payload system was overcoming the angled shape of our V-hull design. A method of cut and angled 2x4 wood beams was chosen"
+    },
+    {
+      "line": 101,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "to level each side of the boat and create a stable foundation. This allowed for aluminum rails to be mounted giving way to the"
+    },
+    {
+      "line": 102,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "use of heavy-duty locking rail carriages. Four carriages are used to create balanced and stable linear movement for each payload"
+    },
+    {
+      "line": 103,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "while being able to lock in place when necessary. Multiple iterations of 3D printed risers are used to overcome spacing and"
+    },
+    {
+      "line": 104,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "clearance issues such as with the locking mechanism of the carriage and the main drivetrain and battery elements in the center of"
+    },
+    {
+      "line": 105,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "the boat. For the actual payload, 30lb ruck weights are used as they are an optional combination of a small form factor without"
+    },
+    {
+      "line": 106,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "movement from a medium such as sandbags. Each weight is secured to the rest of the design through ¾ inch plywood, 3D"
+    },
+    {
+      "line": 107,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "printed supports, ¼ inch bolts, and quick release nuts to ensure the payload’s stability when the boat is in motion. An overview"
+    },
+    {
+      "line": 108,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "of the design is shown in Figure 7. Notably, the overall design permits two of the described systems giving the team the"
+    },
+    {
+      "line": 109,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "flexibility to choose between carrying 30lbs or 60lbs. Figure 7: Payload System Overview"
+    },
+    {
+      "line": 110,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Hydromatic Addition Design"
+    },
+    {
+      "line": 111,
+      "page_start": 5,
+      "page_end": 5,
+      "text": " Turn fins, most commonly found on miniature race boats, are fixed past the transom of the craft to provide additional surface area"
+    },
+    {
+      "line": 112,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "to create a counter-force when it makes turns. Many varying versions of turn fins exist, but few offer a size that the team deemed"
+    },
+    {
+      "line": 113,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "optimal through a general observation of hull length to turn fin length ratios of about 1:11. To accommodate, the team 3D modeled"
+    },
+    {
+      "line": 114,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "multiple sets of common turn fins in addition to creating an original design based on fish and rocket fins. The design combines the"
+    },
+    {
+      "line": 115,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "low aspect and taper ratios (1:1.7) found in rocket fins and shark fins (sharks are optimal for comparison as they are more stiff than"
+    },
+    {
+      "line": 116,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "other fish, resembling a boat better), with the higher ratios (1:7) found in wind sails. This shape mimics dorsal fins found in what"
+    },
+    {
+      "line": 117,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "research has shown to be faster fish as well as the “shark fin” of F1 race cars of the past. To mount the turn fins a custom design"
+    },
+    {
+      "line": 118,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "was created to permit the best range of motion of adjusting the fins’ angle. The trim tab design utilizes locking hinges that can be"
+    },
+    {
+      "line": 119,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "set at any angle from 0 to 180 degrees. Sizing was determined by recommendations of one inch of span per foot of hull length."
+    },
+    {
+      "line": 120,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Figure 8: Hydrodynamic Addition Overview"
+    },
+    {
+      "line": 121,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Custom Mounting Designs"
+    },
+    {
+      "line": 122,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "  A custom mount was designed to secure the stuffing tubes and house the circuit breakers Figure 9. This setup was chosen to"
+    },
+    {
+      "line": 123,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "maximize internal space while also providing easy access to the circuit breakers in case they trip during operation. Additionally,"
+    },
+    {
+      "line": 124,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "the mount keeps the stuffing tubes firmly in place, helping to minimize vibration and unwanted movement while the craft is"
+    },
+    {
+      "line": 125,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "running."
+    },
+    {
+      "line": 126,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Figure 9: Custom Mount for Drive Cables and ESC’s"
+    },
+    {
+      "line": 127,
+      "page_start": 6,
+      "page_end": 6,
+      "text": " To help optimize the boat weight and improve efficiency of the electrical system, custom battery mounts were modelled using"
+    },
+    {
+      "line": 128,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "SOLIDWORKS then 3D printed, as shown in Figure 10. Two mounts were printed, each able to hold up to four batteries. Each"
+    },
+    {
+      "line": 129,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "battery will be held in a separate slot and secured by a custom harness utilizing a velcro strip connected to a scaled belt buckle, as"
+    },
+    {
+      "line": 130,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "shown in Figure 11. This harness system allows for quick installation and removal of each battery, which could be critical for"
+    },
+    {
+      "line": 131,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "preserving integrity of various components or systems inside the boat. One slot in each set is angled and has a smaller slot"
+    },
+    {
+      "line": 132,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "embossed into the angled end, allowing for the other security system to activate. This system is a spring lock mechanism located"
+    },
+    {
+      "line": 133,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "inside the angled end of the battery slot base, as shown in Figure 12. A spring block connected to an external grip will be pushed"
+    },
+    {
+      "line": 134,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "into the angled slot by two internal springs, which can be compressed via the external grip when removal is desired. Each set of"
+    },
+    {
+      "line": 135,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "slots will be connected to a wood locking block underneath, which will link each set of four slots and act as a secondary form of"
+    },
+    {
+      "line": 136,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "security simultaneously."
+    },
+    {
+      "line": 137,
+      "page_start": 6,
+      "page_end": 6,
+      "text": ""
+    },
+    {
+      "line": 138,
+      "page_start": 6,
+      "page_end": 6,
+      "text": " Figure 10: Overview of Battery Mount. Figure 11: Belt Buckle/Strip Harness System."
+    },
+    {
+      "line": 139,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "Figure 12: Spring Lock Mechanism. Hull"
+    },
+    {
+      "line": 140,
+      "page_start": 7,
+      "page_end": 7,
+      "text": " To provide extra visualization and a foundation for expected boat performance, hydrodynamic and vector analysis was"
+    },
+    {
+      "line": 141,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "conducted. The hydrodynamic analysis of the boat hull was conducted first to visualize the benefit of hull strakes and gain a basic"
+    },
+    {
+      "line": 142,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "understanding of what performance to expect at peak operational condition. A simplified version of the boat model was recreated"
+    },
+    {
+      "line": 143,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "with and without strakes while water conditions were studied at the site of operation, shown in Figure 13 and 14. Preliminary"
+    },
+    {
+      "line": 144,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "hydrodynamic diffraction was conducted before hydrodynamic responses were studied. The frequency of the wave movement"
+    },
+    {
+      "line": 145,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "while moving was adjusted alongside the water speed to help visualize how the boat will react to the expected conditions. The"
+    },
+    {
+      "line": 146,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "results of this hydrodynamic analysis were significant in estimating the performance of the boat when including the weight of the"
+    },
+    {
+      "line": 147,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "payload alongside the internals. The hull studied without strakes was shown to drift to one side, with a longer simulation resulting"
+    },
+    {
+      "line": 148,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "in the boat tipping. The hull with strakes included showed much better performance stability wise, with minimal drifting that"
+    },
+    {
+      "line": 149,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "could easily be accounted for with trim settings. To further visualize and study the boat’s performance under operational"
+    },
+    {
+      "line": 150,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "conditions, a multi-phase flow vector analysis was conducted. The analysis was conducted with the hull with strakes included"
+    },
+    {
+      "line": 151,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "utilized in the previous analysis at the peak expected operational speed. The results of the simulation yielded promising results,"
+    },
+    {
+      "line": 152,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "with a wake expected to pass around but not over the boat, which is expected to improve as planning is achieved. The vector field"
+    },
+    {
+      "line": 153,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "of the expected wake is shown in Figure 15. The wake is also expected to keep the propeller submerged despite the amount of"
+    },
+    {
+      "line": 154,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "water displaced, further contributing to the planning potential. Utilizing the built in characteristics calculator in ANSYS Fluent"
+    },
+    {
+      "line": 155,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "post alongside material and weight data, the expected drag force was able to be determined, which is around 40 lb (177 N) when"
+    },
+    {
+      "line": 156,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "travelling at 48 mph."
+    },
+    {
+      "line": 157,
+      "page_start": 7,
+      "page_end": 7,
+      "text": ""
+    },
+    {
+      "line": 158,
+      "page_start": 7,
+      "page_end": 7,
+      "text": " Figure 13: Simplified Hull w/o Strakes Figure 14: Simplified Hull With Strakes"
+    },
+    {
+      "line": 159,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Figure 15: Vector Field of Multi-Phase Flow Analysis"
+    },
+    {
+      "line": 160,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Drivetrain Analysis"
+    },
+    {
+      "line": 161,
+      "page_start": 7,
+      "page_end": 7,
+      "text": " The team plotted the thrust output of the motors across various speeds Figure 16 to better understand their performance"
+    },
+    {
+      "line": 162,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "characteristics under different operating conditions. This visualization provides a clear representation of how thrust varies with"
+    },
+    {
+      "line": 163,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "speed, enabling identification of the motor’s efficiency range and highlighting the speeds at which performance peaks or begins to taper off. By analyzing this data, the team was able to determine the optimal throttle settings that balance power consumption"
+    },
+    {
+      "line": 164,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "with propulsion efficiency—particularly important when operating under payload conditions between 30–60 lbs. The resulting"
+    },
+    {
+      "line": 165,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "thrust curve also informed decisions regarding battery selection and propeller choice, ensuring that the drivetrain operates within"
+    },
+    {
+      "line": 166,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "its most effective range. Additionally, having access to this data allows for the simulation of different mission profiles and"
+    },
+    {
+      "line": 167,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "provides insight into how the system will respond in real-world conditions, such as accelerating out of turns or maintaining high"
+    },
+    {
+      "line": 168,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "speeds during straight-line sprints. Ultimately, this analysis is crucial for fine-tuning the craft to optimize both performance and"
+    },
+    {
+      "line": 169,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "reliability."
+    },
+    {
+      "line": 170,
+      "page_start": 8,
+      "page_end": 8,
+      "text": ""
+    },
+    {
+      "line": 171,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Figure 16: Thrust - Speed Data Figure 17: Thrust - Speed Graph"
+    },
+    {
+      "line": 172,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Electrical and Power System Analysis"
+    },
+    {
+      "line": 173,
+      "page_start": 8,
+      "page_end": 8,
+      "text": " The redesigned electrical and power system significantly enhances the RC boat’s performance, efficiency, and reliability while"
+    },
+    {
+      "line": 174,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "meeting all competition constraints. One of the most important improvements was the optimization of the battery configuration."
+    },
+    {
+      "line": 175,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "By reducing the battery count from ten to eight, the system achieves a more efficient power-to-weight ratio without"
+    },
+    {
+      "line": 176,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "compromising performance. This adjustment lowers the overall mass of the boat, improving buoyancy and maneuverability while"
+    },
+    {
+      "line": 177,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "maintaining sufficient power output. The parallel battery configuration ensures consistent voltage levels, providing stable power"
+    },
+    {
+      "line": 178,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "delivery to the propulsion and auxiliary systems. A key consideration in the design was circuit protection. The inclusion of a"
+    },
+    {
+      "line": 179,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "waterproof 300A circuit breaker and fuse box mitigates the risk of electrical failures, safeguarding both the components and"
+    },
+    {
+      "line": 180,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "overall system integrity. This protection is essential given the high current demands of the propulsion system, which operates at"
+    },
+    {
+      "line": 181,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "peak loads nearing 15,800W. Without adequate circuit protection, excessive current draw could lead to overheating, component"
+    },
+    {
+      "line": 182,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "damage, or system shutdowns, all of which could jeopardize the boat’s performance during the competition. The selection of the"
+    },
+    {
+      "line": 183,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "kV500 motors and OM-300 AHV, 300A ESC was based on a balance between power efficiency and control precision. The"
+    },
+    {
+      "line": 184,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "motors, equipped with neodymium magnets, offer high torque and energy efficiency, enabling the boat to maintain optimal thrust"
+    },
+    {
+      "line": 185,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "without unnecessary power losses. The ESC further enhances performance by regulating motor speed and ensuring smooth"
+    },
+    {
+      "line": 186,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "acceleration and deceleration, critical for maintaining control over the boat during the 2-mile course. The use of 6 AWG and 8"
+    },
+    {
+      "line": 187,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "AWG wiring minimizes resistive losses, preventing voltage drops that could otherwise impact motor efficiency and system"
+    },
+    {
+      "line": 188,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "stability. Another critical improvement was the separation of the hydraulic pumps from the main power system by assigning"
+    },
+    {
+      "line": 189,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "them an external battery source. This prevents excessive current draw from interfering with the propulsion system, reducing the"
+    },
+    {
+      "line": 190,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "risk of power fluctuations that could impair maneuverability. The integration of the Spektrum DX6C transmitter and SR515"
+    },
+    {
+      "line": 191,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "receiver provides precise control, allowing for accurate adjustments to steering and throttle inputs. These enhancements"
+    },
+    {
+      "line": 192,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "collectively ensure the RC boat operates efficiently while maintaining the necessary power levels for propulsion and auxiliary"
+    },
+    {
+      "line": 193,
+      "page_start": 8,
+      "page_end": 9,
+      "text": "functions. To provide a clear representation of the electrical layout, a schematic diagram of the system is included below, Figures 18 and 19. This schematic illustrates the connections between the batteries, circuit protection elements, ESC, motors,"
+    },
+    {
+      "line": 194,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "hydraulic pumps, and control components. Key aspects highlighted in the diagram include: Power Distribution, Circuit"
+    },
+    {
+      "line": 195,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Protection, Motor & ESC Connections, Control System."
+    },
+    {
+      "line": 196,
+      "page_start": 9,
+      "page_end": 9,
+      "text": ""
+    },
+    {
+      "line": 197,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Figure 18: Parallel Battery Schematic Figure 19: Main Electronic component Section"
+    },
+    {
+      "line": 198,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Overall, the redesigned electrical and power system successfully addresses the inefficiencies of the previous"
+    },
+    {
+      "line": 199,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "iteration by optimizing power distribution, implementing robust circuit protection, and improving energy efficiency. These"
+    },
+    {
+      "line": 200,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "improvements contribute to a more reliable and high-performing vessel capable of completing the 2-mile course within the"
+    },
+    {
+      "line": 201,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "required 55-minute time frame while adhering to all competition constraints."
+    },
+    {
+      "line": 202,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Payload Analysis"
+    },
+    {
+      "line": 203,
+      "page_start": 9,
+      "page_end": 9,
+      "text": " Given the need for reliability within the payload system an simulation based analysis of various the key structural components"
+    },
+    {
+      "line": 204,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "was done in SolidWorks. Using a full 3D render allowed the team to pinpoint the most crucial elements of the design within a"
+    },
+    {
+      "line": 205,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "greater visual context. The following simulations were completed by reducing a 30lb distributed load along the top surface:"
+    },
+    {
+      "line": 206,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "deformation analysis, stress analysis, strain analysis, and a factor of safety (FOS) analysis shown in Figure 20. Since the 3D"
+    },
+    {
+      "line": 207,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "model used to simulate the payload system was a 1:1 working digital version of what would become the actual system, accurate"
+    },
+    {
+      "line": 208,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "material properties were compiled into the software to allow each component to be realistically depicted under load. The results"
+    },
+    {
+      "line": 209,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "of the simulation yield a deformation range of 3.9x10 to 1.1x inches with the max occurring at the center of the plywood −32 10−4"
+    },
+    {
+      "line": 210,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "support. The stress ranged from 1.2x10 to 8.6x psi with a section of the aluminum rails under most force per area. The −3 101"
+    },
+    {
+      "line": 211,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "strain results ranged from 3.9x10 to 1.7x with the highest amounts occurring at the edges of the large 3D printed risers. −9 10−5"
+    },
+    {
+      "line": 212,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "To better contextualize these results the FOS results offer the most insight. With a range of 4.6x10 to 8.8x , most of the 1"
+    },
+    {
+      "line": 213,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "106"
+    },
+    {
+      "line": 214,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "system lay within the lower end of the FOS, however, this value is still significantly large and permitted the team to move"
+    },
+    {
+      "line": 215,
+      "page_start": 9,
+      "page_end": 10,
+      "text": "forward with the design with greater confidence. Figure 20: Structural Analysis via Solidworks"
+    },
+    {
+      "line": 216,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Propeller Analysis"
+    },
+    {
+      "line": 217,
+      "page_start": 10,
+      "page_end": 10,
+      "text": " To visualize and confirm the performance improvements of larger propellers, simulation utilizing ANSYS Fluent was"
+    },
+    {
+      "line": 218,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "conducted. The study was dedicated to comparing the set of 2.5 inch diameter propellers with a 3.5 inch pitch to an upgraded 2.7"
+    },
+    {
+      "line": 219,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "inch diameter set of propellers with a 4.32 inch pitch. The main point of focus for each simulation was the amount of thrust and"
+    },
+    {
+      "line": 220,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "torque each propeller can output. Pressure contours and water velocity vector fields were also synthesized for supporting"
+    },
+    {
+      "line": 221,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "analysis. These characteristics were determined to be the most relevant points of study due to their potential impact on the boat"
+    },
+    {
+      "line": 222,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "throughout operation. Both propellers will experience 11,000 RPM at 40 mph to simulate close to maximum expected operational"
+    },
+    {
+      "line": 223,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "conditions, with all movement other than rotation on the Z axis locked. Due to the focus on geometry, material properties will not"
+    },
+    {
+      "line": 224,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "be relevant throughout this study despite being accurately assigned. Initial research of the impact of an increased diameter and"
+    },
+    {
+      "line": 225,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "pitch showed that the increased diameter will have a greater thrust and torque but experience greater drag, while the increased"
+    },
+    {
+      "line": 226,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "pitch would allow for a higher top speed at the cost of a slower acceleration. The results of the study yielded promising"
+    },
+    {
+      "line": 227,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "results, with the 2.7 in diameter propeller demonstrating an average thrust of around 875 N (~196 lbf) after achieving stable"
+    },
+    {
+      "line": 228,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "operation 1 second after startup, both of which are shown on Figure 21. The 2.7 in propeller achieved an average torque of"
+    },
+    {
+      "line": 229,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "around 12 Nm (~106 in-lb), shown in Figure 22. The 2.5 in propeller yielded expected results, with an average thrust of around"
+    },
+    {
+      "line": 230,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "462.5 N (~104 lbf) after reaching stability half a second after startup, as shown in Figure 23. The 2.5 in propeller achieved an"
+    },
+    {
+      "line": 231,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "average torque of around 8 Nm (~70 in-lb) after reaching stability in a similar time frame to the thrust graph as shown in Figure"
+    },
+    {
+      "line": 232,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "24. Each force and torque graph pair share a very similar curve due to the thrust and torque applied being proportional to each"
+    },
+    {
+      "line": 233,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "other. These simulations confirm the validity of the initial research, as the 2.7 in propeller had greater amount of thrust and torque"
+    },
+    {
+      "line": 234,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "compared to the 2.5 in propeller while experiencing a slower acceleration to stability by half a second. Water velocity vector"
+    },
+    {
+      "line": 235,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "profiles and pressure contours were also synthesized for study. Figures 25 and 26 show the face and back pressure contours for"
+    },
+    {
+      "line": 236,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "the 2.5 in propeller, with the back side of the propeller being of note due to the presence of multiple smaller low pressure zones"
+    },
+    {
+      "line": 237,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "having a high potential to cause cavitation during physical operation. Figures 27 and 28 show the face and back pressure"
+    },
+    {
+      "line": 238,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "contours for the 2.7 in propeller, which show more consistent pressure zones. These pressure zones being more consistent"
+    },
+    {
+      "line": 239,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "translates to less cavitation at the operational RPM, solidifying the 2.7 in diameter propeller as beneficial and necessary for"
+    },
+    {
+      "line": 240,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "optimal operation. Figures 29 and 30 show the water velocity vector profiles for the 2.5 and 2.7 inch propellers respectively. The"
+    },
+    {
+      "line": 241,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "water movement around the 2.5 in propeller is faster in comparison to the 2.7 in propeller, which confirms that a smaller diameter"
+    },
+    {
+      "line": 242,
+      "page_start": 10,
+      "page_end": 11,
+      "text": "propeller will be faster and produce less drag than a larger diameter propeller, but will reduce the amount of torque output."
+    },
+    {
+      "line": 243,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Figure 21: 2.7 in Diameter Propeller Thrust Graph Figure 22: 2.7 in Diameter Propeller Torque Graph"
+    },
+    {
+      "line": 244,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Figure 23: 2.5 in Diameter Propeller Thrust Graph Figure 24: 2.5 in Diameter Propeller Torque Graph"
+    },
+    {
+      "line": 245,
+      "page_start": 11,
+      "page_end": 11,
+      "text": " Figure 25: face side pressure contour of 2.5 in Prop Figure 26: back side pressure contour of 2.5 in Prop"
+    },
+    {
+      "line": 246,
+      "page_start": 11,
+      "page_end": 11,
+      "text": ""
+    },
+    {
+      "line": 247,
+      "page_start": 11,
+      "page_end": 12,
+      "text": " Figure 27: face side pressure contour of 2.7 in Prop Figure 28: back side pressure contour of 2.7 in Prop Figure 29: Water Velocity Vector Field of 2.5 in Propeller Figure 30: Water Velocity Vector Field of 2.7 in Propeller"
+    },
+    {
+      "line": 248,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Build & Fabrication"
+    },
+    {
+      "line": 249,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Drivetrain"
+    },
+    {
+      "line": 250,
+      "page_start": 12,
+      "page_end": 12,
+      "text": " The majority of the build and fabrication phase of this project was focused on the drivetrain. The first step was mounting the"
+    },
+    {
+      "line": 251,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "rudder, as its position determined the alignment and fitment of the remaining components. Next, the team fiberglassed wood"
+    },
+    {
+      "line": 252,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "stringers into the hull, providing a rigid and secure base for all components without needing to drill directly into the boat itself."
+    },
+    {
+      "line": 253,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Following that, the motors were mounted to the stingers using custom CNC-machined aluminum mounts. They were set at a"
+    },
+    {
+      "line": 254,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "5-degree downward angle to help reduce cavitation and ensure efficient power transmission Figure 1. We then bent and installed"
+    },
+    {
+      "line": 255,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "the stuffing tubes using our custom mount. The tubes were shaped in an S-curve to help reduce vibration from the flexible drive"
+    },
+    {
+      "line": 256,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "shaft. Final steps included installing Teflon washers to minimize friction between the struts and props. The drive cables were"
+    },
+    {
+      "line": 257,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "greased, inserted through the stuffing tubes, and secured to the motors. Lastly, the props were attached and locked in place using"
+    },
+    {
+      "line": 258,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "nylon locking nuts."
+    },
+    {
+      "line": 259,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Electrical and Power System"
+    },
+    {
+      "line": 260,
+      "page_start": 12,
+      "page_end": 12,
+      "text": " During the building and fabrication of the unmanned boat, the placement of electronic components was carefully determined"
+    },
+    {
+      "line": 261,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "after implementing the drivetrain, which occupied a significant amount of space near the transom. With the batteries positioned at"
+    },
+    {
+      "line": 262,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "the nose of the boat to aid in weight distribution, the remaining electronics had to be rearranged to fit efficiently within the"
+    },
+    {
+      "line": 263,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "available space. As a result, the ESC was positioned directly underneath the motor, while the circuit breaker was mounted on"
+    },
+    {
+      "line": 264,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "custom-made stuffing tube mounts. These placement decisions were influenced by several critical factors, including balance, heat"
+    },
+    {
+      "line": 265,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "dissipation, and accessibility for maintenance. Placing the ESC under the motor minimized wiring complexity by reducing the"
+    },
+    {
+      "line": 266,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "length of connections between key components, which helped optimize power delivery and system efficiency. Additionally, this"
+    },
+    {
+      "line": 267,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "location provided adequate airflow to help dissipate heat generated during operation, preventing potential overheating issues. The"
+    },
+    {
+      "line": 268,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "circuit breaker was strategically mounted on the stuffing tube mounts to ensure it remained secure while also being easily"
+    },
+    {
+      "line": 269,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "accessible for maintenance and troubleshooting. This placement facilitated quick power isolation if needed, enhancing both"
+    },
+    {
+      "line": 270,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "safety and ease of operation. Overall, these design choices allowed for an efficient, well-organized layout that balanced"
+    },
+    {
+      "line": 271,
+      "page_start": 12,
+      "page_end": 13,
+      "text": "performance, thermal management, and serviceability within the spatial constraints of the vessel. Payload"
+    },
+    {
+      "line": 272,
+      "page_start": 13,
+      "page_end": 13,
+      "text": " The foundation of the payload system hindered upon the size, space, and geometry of the hull. Internal measurements were"
+    },
+    {
+      "line": 273,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "taken to set a baseline for design and fabrication. Most importantly, each side of the hull was measured which produced unique"
+    },
+    {
+      "line": 274,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "angles due. While only minimally different with the left side being 15 degrees and the right being 18 degrees, accounting for this"
+    },
+    {
+      "line": 275,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "difference was critical for the rest of the design. This was displayed most critically in the wood supports that used 2x4 studs cut"
+    },
+    {
+      "line": 276,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "using a table saw into right triangles with each of aforementioned angles thus leveling each side. The supports were then"
+    },
+    {
+      "line": 277,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "fiberglassed into the hull to create a high-strength base. The even surface created by the supports allows the rail system to"
+    },
+    {
+      "line": 278,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "operate as smoothly as possible. Said rail system is mounted using M5 bolts/screws/nuts. It was decided to have the screws"
+    },
+    {
+      "line": 279,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "come from the bottom of the wood support to prevent them from being easily ripped out. This decision required countersunk"
+    },
+    {
+      "line": 280,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "holes to keep the critical angle alignment. Additionally, the first set of 3D printed risers were created to allow the rails to sit"
+    },
+    {
+      "line": 281,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "higher above the wood allowing the locking mechanism of the rail carriage to operate. The second set of risers were made larger"
+    },
+    {
+      "line": 282,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "and more robust to copacetically fit with the rail carriages while supporting the load and providing clearance above the drivetrain"
+    },
+    {
+      "line": 283,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "and electrical systems. M4 screws/nuts were used to fix these items together. The main ¾ inch plywood support was cut to the"
+    },
+    {
+      "line": 284,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "largest size that could fit inside the access point of the hull to maximize the distribution of the load. Mounting holes were then"
+    },
+    {
+      "line": 285,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "drilled along a calculated pattern that permitted the plywood to be fixed to the larger rise supports. Additional supports for the"
+    },
+    {
+      "line": 286,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "payload were 3D printed to lock the ruck weight in place and prevent displacements through multiple degrees of motion. These"
+    },
+    {
+      "line": 287,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "elements were then assembled with ¼ inch bolts/nuts to ensure strength and stability. A ¼ inch plywood sheet was then used as a"
+    },
+    {
+      "line": 288,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "lid with the same hole pattern. The design intentionally let the bolts show above the lit which permits the use of specially quick"
+    },
+    {
+      "line": 289,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "release, push-button ¼ inch nuts to be used for locking the weight in."
+    },
+    {
+      "line": 290,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Custom Mounting"
+    },
+    {
+      "line": 291,
+      "page_start": 13,
+      "page_end": 13,
+      "text": " Design of the custom battery mount needed to take the boat stringers and boat geometry into account, which was done through"
+    },
+    {
+      "line": 292,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "measurements taken before design was initiated. The critical measurements taken were the distance between the stringers (insert"
+    },
+    {
+      "line": 293,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "here) and an internal angle of 20 degrees inside the boat. The first step to assembly was gluing the mounting bases together,"
+    },
+    {
+      "line": 294,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "which was done using Weld-On 16 acrylic cement due to the nature of its chemical bond providing unmatched strength. At the"
+    },
+    {
+      "line": 295,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "same time, the wood locking base was cut from stock wood and glued together with wood glue. After the bonding time had"
+    },
+    {
+      "line": 296,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "passed, the mounting base and wood locking base was tested to confirm correct sizing. The battery slot assemblies were then"
+    },
+    {
+      "line": 297,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "assembled as parts were delivered, utilizing a plastic hinge and a velcro strip connected to the belt clip. The clip and harness base"
+    },
+    {
+      "line": 298,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "were both secured to each slot with 8 total M4x8 screws. Once the mounting slots and wood locking base are complete, they will"
+    },
+    {
+      "line": 299,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "be glued together with a thin coat of a universal adhesive. Before the mounting base is glued onto a wood base inside the boat,"
+    },
+    {
+      "line": 300,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "the spring lock system will be assembled with Weld-On 16. Epoxy resin will be used to glue the mounting base to the wood base,"
+    },
+    {
+      "line": 301,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "which will then be attached to the boat internally in a similar fashion."
+    },
+    {
+      "line": 302,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Hydrodynamic Additions"
+    },
+    {
+      "line": 303,
+      "page_start": 13,
+      "page_end": 13,
+      "text": " Turnfins and trimtabs will be 3D printed for testing. An infill of 50% or greater will be used to provide the greatest strength"
+    },
+    {
+      "line": 304,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "and reliability. Once the final designs are determined, the turn fins and trimtabs will be CNC machined out of an aluminum alloy"
+    },
+    {
+      "line": 305,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "metal. The turn fins and trim tabs will be mounted to the rear of the craft. Mounting holes will be drilled to allow M4 screws to"
+    },
+    {
+      "line": 306,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "pass through, and the components will be secured using nylon locking nuts. To ensure a watertight seal and prevent any leaks,"
+    },
+    {
+      "line": 307,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "3M marine sealant will be applied around the mounting points during installation. The actual additions will be 3D printed at high"
+    },
+    {
+      "line": 308,
+      "page_start": 13,
+      "page_end": 14,
+      "text": "infill percentages for the highest quality results. Testing"
+    },
+    {
+      "line": 309,
+      "page_start": 14,
+      "page_end": 14,
+      "text": " A series of tests will be conducted to verify the boat’s seaworthiness, endurance, and overall performance. Testing will take"
+    },
+    {
+      "line": 310,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "place at either Swan Lake or Robious Landing Park, both locations provide calm waters and sufficient space for full-capacity"
+    },
+    {
+      "line": 311,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "operation. The first test will involve placing the boat in the water to check for leaks and ensure all systems are functioning"
+    },
+    {
+      "line": 312,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "correctly, including the motors, ESCs, rudder, and water pumps. A force gauge will be attached to measure thrust at various"
+    },
+    {
+      "line": 313,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "throttle levels.The second test will assess the boat’s endurance by verifying it can travel 2 miles without any added payload. The"
+    },
+    {
+      "line": 314,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "third and fourth tests will evaluate performance under load: first with a 30-pound payload, then with a 60-pound payload, each"
+    },
+    {
+      "line": 315,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "over a 2-mile course. Additional tests will focus on maneuverability and handling to familiarize the team with boat operation and"
+    },
+    {
+      "line": 316,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "to identify and address any potential issues prior to competition."
+    },
+    {
+      "line": 317,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Risk"
+    },
+    {
+      "line": 318,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Drivetrain"
+    },
+    {
+      "line": 319,
+      "page_start": 14,
+      "page_end": 14,
+      "text": " For the motors, the primary risk lies in power consumption. Due to their high-performance nature, they draw significant"
+    },
+    {
+      "line": 320,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "power, which could lead to rapid battery drain. To mitigate this, we plan to test various throttle settings and optimize our battery"
+    },
+    {
+      "line": 321,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "usage accordingly. Additionally, we aim to implement battery telemetry for real-time voltage monitoring to prevent unexpected"
+    },
+    {
+      "line": 322,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "power loss during operation. For the rudder, the main concern is increased drag. Since we are using a dual rudder setup, there is"
+    },
+    {
+      "line": 323,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "more surface area in the water, which slightly increases resistance. However, given the high thrust output from the motors, this"
+    },
+    {
+      "line": 324,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "additional drag is minimal and considered negligible in terms of overall performance. The risk associated with the drive shaft is"
+    },
+    {
+      "line": 325,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "excessive friction and mechanical stress, which could lead to failure. To address this, we will follow a strict maintenance"
+    },
+    {
+      "line": 326,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "routine—cleaning and drying the shaft after each use and applying fresh grease before every run to ensure smooth operation and"
+    },
+    {
+      "line": 327,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "longevity. For the props, the risk is potential loosening or imbalance during operation. To prevent this, we use nylon locking nuts"
+    },
+    {
+      "line": 328,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "to secure the props and inspect them regularly for wear or damage. Ensuring they are properly torqued and balanced helps"
+    },
+    {
+      "line": 329,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "maintain efficiency and avoid mechanical issues at high speeds."
+    },
+    {
+      "line": 330,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Electrical and Power System"
+    },
+    {
+      "line": 331,
+      "page_start": 14,
+      "page_end": 14,
+      "text": " To address the risks associated with the electrical components and power systems, several design strategies and preventative"
+    },
+    {
+      "line": 332,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "measures were implemented to enhance the safety, reliability, and performance of the unmanned boat. One of the primary"
+    },
+    {
+      "line": 333,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "concerns was heat buildup due to the ESC’s placement directly underneath the motor. To mitigate this, adequate ventilation was"
+    },
+    {
+      "line": 334,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "ensured by allowing sufficient airflow around the ESC and motor, enabling natural heat dissipation. Additionally, a heat sink was"
+    },
+    {
+      "line": 335,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "installed on the ESC to improve thermal regulation and prevent overheating during extended operation. The circuit breaker’s"
+    },
+    {
+      "line": 336,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "location on custom-made stuffing tube mounts initially posed a risk of mechanical stress and vibrations from the drivetrain,"
+    },
+    {
+      "line": 337,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "which could lead to unintentional tripping or premature wear. To counter this, vibration-dampening materials were integrated into"
+    },
+    {
+      "line": 338,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "the mounting system, reducing excessive movement and preventing accidental breaker trips. The breaker was also strategically"
+    },
+    {
+      "line": 339,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "positioned to remain easily accessible for maintenance while being securely fastened to prevent disconnections due to mechanical"
+    },
+    {
+      "line": 340,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "strain. Another potential risk was electromagnetic interference (EMI) affecting signal integrity due to the proximity of"
+    },
+    {
+      "line": 341,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "high-current components. To resolve this, shielded cables were used for critical wiring, particularly for data and control lines,"
+    },
+    {
+      "line": 342,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "while power cables were routed separately to minimize interference. Additionally, secure cable management techniques,"
+    },
+    {
+      "line": 343,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "including zip ties and protective tubing, were employed to prevent accidental disconnections, wire fatigue, or damage from"
+    },
+    {
+      "line": 344,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "vibrations. By implementing these mitigation strategies, the risks associated with the electrical and power systems were"
+    },
+    {
+      "line": 345,
+      "page_start": 14,
+      "page_end": 15,
+      "text": "effectively reduced, ensuring stable performance, reliability, and longevity of the unmanned boat’s electrical components. Payload"
+    },
+    {
+      "line": 346,
+      "page_start": 15,
+      "page_end": 15,
+      "text": " The payload presents a number of risks, most prominently from unwanted displacements and structural failure. Having a"
+    },
+    {
+      "line": 347,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "movable payload is critical for accessing other elements and testing the optimal position for operation. Since a moveable payload"
+    },
+    {
+      "line": 348,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "is so critical for the design, the application of locking rail carriages to fix the payload in place was essential in addressing any"
+    },
+    {
+      "line": 349,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "concerns. The carriages are also rated to withstand a large amount of force from pitching, yawing, and rolling motions,"
+    },
+    {
+      "line": 350,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "especially when used congruently in multiples. Material selection and geometric design was done in a fashion that combined"
+    },
+    {
+      "line": 351,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "desirable traits and distributed loads over larger areas while resisting deformation. The load simulations run helped confirm that"
+    },
+    {
+      "line": 352,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "the team adequately addressed any risk related to the loads. As was also mentioned above, 3D printing allowed many elements to"
+    },
+    {
+      "line": 353,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "be iterated upon reducing the risk of impeding on other critical components. The strategic use of push-button quick-release nuts"
+    },
+    {
+      "line": 354,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "also gives the team a faster way to prepare the payload during the five minutes allowed after the weight-in stage. This reduces"
+    },
+    {
+      "line": 355,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "the risk of the team being penalized for a time violation without compromising structural integrity."
+    },
+    {
+      "line": 356,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "Custom Mounting"
+    },
+    {
+      "line": 357,
+      "page_start": 15,
+      "page_end": 15,
+      "text": " The primary risk associated with the battery mounting system is structural failure. Fatigue and stress failure concerns are"
+    },
+    {
+      "line": 358,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "present throughout the system but the most critical is fatigue failure in the belt clip. The belt clip system is capable of supporting"
+    },
+    {
+      "line": 359,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "the battery when the full weight of the battery is placed on it, but over multiple unlocking and locking cycles the belt clip prongs"
+    },
+    {
+      "line": 360,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "will begin to experience plastic deformation, loosening the clip until it could potentially be shaken free or snap from overuse."
+    },
+    {
+      "line": 361,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "This potential failure point Is alleviated by increasing the size of the belt clip system, increasing the yield strength of the prongs"
+    },
+    {
+      "line": 362,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "and allowing for longer continued use. Another potential point of failure is stress failure of the wood base holding the mounting"
+    },
+    {
+      "line": 363,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "system inside the boat. Due to the weight of the batteries on the mount there is potential for either the wood base to snap, or the"
+    },
+    {
+      "line": 364,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "epoxy resin to fail. If time permits, a successful solution would involve creating a vertical support below the base, utilizing the"
+    },
+    {
+      "line": 365,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "bottom of the boat to alleviate the stress the wood base would experience."
+    },
+    {
+      "line": 366,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "Hydrodynamic Additions"
+    },
+    {
+      "line": 367,
+      "page_start": 15,
+      "page_end": 15,
+      "text": " The primary risk of the hydrodynamic additions is structural failure. Most pre-made versions of these designs use CNC"
+    },
+    {
+      "line": 368,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "technology. This is an option that the current team will keep on the table and pass on to future teams. However, given the current"
+    },
+    {
+      "line": 369,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "set of time and monetary constraints, 3D printing offers the most viable solution. As mentioned in the fabrication section, high"
+    },
+    {
+      "line": 370,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "infill rates will increase the density of the prints ensuring a more durable construction. Furthermore, a cross-compatible"
+    },
+    {
+      "line": 371,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "mounting design for the original trim tabs will be used to allow them to be interchangeable with the procured version, limiting the"
+    },
+    {
+      "line": 372,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "risk of unnecessary hull patching. A secondary risk associated with the trim tabs and turn fins is improper alignment or"
+    },
+    {
+      "line": 373,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "installation, which can lead to handling instability or inefficient hydrodynamics. If the trim tabs are not correctly leveled, the craft"
+    },
+    {
+      "line": 374,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "may experience uneven lift or porpoising at high speeds. Similarly, misaligned turn fins can cause unpredictable turning behavior"
+    },
+    {
+      "line": 375,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "or increased drag. To mitigate these risks, precise measurement and alignment will be performed during installation, and all"
+    },
+    {
+      "line": 376,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "hardware will be securely fastened using nylon locking nuts and marine sealant to prevent shifting during operation. Regular"
+    },
+    {
+      "line": 377,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "inspections will be conducted to ensure components remain tight and properly positioned after each run. Another potential risk is"
+    },
+    {
+      "line": 378,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "water leakage through the mounting holes; this will be addressed by applying 3M marine-grade sealant around all screw holes to"
+    },
+    {
+      "line": 379,
+      "page_start": 15,
+      "page_end": 16,
+      "text": "maintain watertight integrity.Citations"
+    },
+    {
+      "line": 380,
+      "page_start": 16,
+      "page_end": 16,
+      "text": "[1] Two years of War in Ukraine: What the Pentagon has learned - The Washington Post,"
+    },
+    {
+      "line": 381,
+      "page_start": 16,
+      "page_end": 16,
+      "text": "https://www.washingtonpost.com/national-security/2024/02/22/ukraine-war-pentagon-lessons-learned/ (accessed Oct. 4, 2024)."
+    },
+    {
+      "line": 382,
+      "page_start": 16,
+      "page_end": 16,
+      "text": "[2] EPA, https://www.epa.gov/greenvehicles/electric-vehicle-myths (accessed Oct. 4, 2024)."
+    },
+    {
+      "line": 383,
+      "page_start": 16,
+      "page_end": 16,
+      "text": "[3] “Department of the Navy releases Climate action 2030,” United States Navy,"
+    },
+    {
+      "line": 384,
+      "page_start": 16,
+      "page_end": 16,
+      "text": "https://www.navy.mil/Press-Office/Press-Releases/display-pressreleases/Article/3041221/department-of-the-navy-releases-climat"
+    },
+    {
+      "line": 385,
+      "page_start": 16,
+      "page_end": 16,
+      "text": "e-action-2030/ (accessed Oct. 4, 2024)."
+    },
+    {
+      "line": 386,
+      "page_start": 16,
+      "page_end": 16,
+      "text": "[4] “Understanding a Boat’s Propeller Pitch,” Discover Boating. https://www.discoverboating.com/resources/propeller-pitch"
+    },
+    {
+      "line": 387,
+      "page_start": 16,
+      "page_end": 16,
+      "text": "[5] D. Gerr, Propeller Handbook: The Complete Reference for Choosing, Installing, and Understanding Boat Propellers."
+    },
+    {
+      "line": 388,
+      "page_start": 16,
+      "page_end": 16,
+      "text": "International Marine Publishing, 1989."
+    }
+  ],
+  "source_line_count": 389,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}

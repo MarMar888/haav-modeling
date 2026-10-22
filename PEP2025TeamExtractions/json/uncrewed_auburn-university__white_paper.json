@@ -1,0 +1,2243 @@
+{
+  "competition_year": 2025,
+  "team": "Auburn University",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/Auburn",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Auburn/Auburn-PEPWhitePaper-2025FinalCopy.pdf",
+  "filename": "Auburn-PEPWhitePaper-2025FinalCopy.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "16"
+  },
+  "page_count": 16,
+  "pages_without_text": [],
+  "char_count": 27162,
+  "pages": [
+    {
+      "page": 1,
+      "text": "Auburn University\nWhite Paper Design Documentation\nPromoting Electrical Propulsion 24’-25’\nBanks Murdock | Henry Kendall | Jacob Nichols\nJoey Nashold | Scott Ismert | Wilson CogerIntroduction & Background\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": "Marine vessels were first introduced to the idea of electric propulsion in 1838 in Russia\nwhen Mortiz von Jacobi made a small passenger boat that would transport passengers an\nunimpressive 3 miles per hour on the Neva River in Russia [1]. Due to the rise of the internal\ncombustion engine, it fell in popularity after a brief “golden era” in the early 1900s, but the need\nfor advanced marine systems that run on clean energy, the inexpensiveness that comes with electric\nboat maintenance, and the opportunity to put out more power with less weight have all led to a\nresurgence in the concept of electric propulsion for marine applications [2]. To highlight recent\ndevelopments and research in electric propulsion, last year in March of 2024, the eWolf tugboat\nlaunched with a 6.2 megawatt-hour battery to be used for propulsion, and the vessel proved to be\nsignificantly more powerful than the diesel tugboats at the same port [3].\nWhat makes electric propulsion unique from other propulsion systems are two design\ncriteria: power storage and motor selection. Furthermore, considerations for propulsion design,\nhull selection, and steering control are also documented within the literature. Decisions made for\nall these items were made based on preliminary industry research and a desire to be on the leading\nedge of marine technology.\nFor power storage, batteries are well known and documented as a source of electric power.\nIn researching different types of batteries, 4 different types of batteries appeared as the most\npractical directions: nickel cadmium, lead acid, lithium ion, and lithium polymer batteries. Over\ntime, lithium polymer (LiPo) batteries stood out due to their popularity in remote control vehicles\nand their high energy density [4] [5]. Using a battery in turn made the option of a DC motor by far\nthe most sensible, so that a converter was not needed to provide alternating current. To reduce\nfriction within the motor and thus obtain the most optimal motor efficiency, a brushless DC motor\nwas chosen as the direction for driving the propulsion system [6].\nOn top of this, hull design and steering control also present themselves as important design\nconsiderations. In 2024’s PEP competition, stability of the hull and steering were both areas of\nconcern that let down Auburn University’s team in the competition. That meant a new design must\nboth fit the propulsion design and improve stability in choppy waters on the day of the race.\nFurthermore, it must be able to hold competition required weight and the weight of the energy\nstorage option. Significant research exists on the various hull design concepts, their drag\ncoefficients, and their ability to remain stable in choppy waters [7] [8] [9]. As for steering, not\nmuch changes as it pertains to design considerations for electric propulsion, but rudder design does\nvary in relation to both the hull design and weight, so it does become an area of focus for a team\nwith the knowledge of the previous vessel having steering complications. In steering, three options\npresented as potential options: unbalanced rudders, balanced rudders, jet drive z-axis steering, and\nflapped rudders.\nOur objective as a team is to design and build a remote-controlled boat to compete and\nsucceed in the American Society of Naval Engineers’ Promoting Electric Propulsion Competition.\nTo achieve this goal, we decided that the designing a contrarotating toroidal propeller mechanism\nto propel the boat would set us apart and give us an advantage. Following this, our goals were to\nselect an optimal motor that fit our propulsion design, choose a hull that fit the conditions of the\ncompetition and carries a 60 pound removable payload, design a rudder that gives our boat an\noptimal turn radius to reduce our heat time, design a circuit that runs our motor and other electronic\ndevices at their optimal performance measures, and lastly cool our electronic drive train\ncomponents (esc and motor) effectively to prevent overheating.Hull\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "The team’s approach to selecting the hull prioritized competition's requirements without\ncompromising the team’s focus on propulsion. As a result, a commercially available design that\naligned with the team's objectives was deemed the most suitable choice. To begin the selection\nprocess, various hull types commonly used in the marine industry were evaluated for their specific\napplications. Given the weight requirements, designs such as the hydrofoil and catamaran were\nruled out, as they did not provide the necessary balance of efficiency and stability required for\nweight-bearing vessels. Although a catamaran hull was available at no cost from the previous team,\nit was ultimately not selected. After careful consideration, the team narrowed the options to two\nfinal candidates: the deep V hull and the planing V hull.\nThe deep V hull was determined to be the most suitable choice for carrying the required\nload while providing stability, particularly in unpredictable sea conditions. The previous year's\ncompetition team encountered issues with water ingress due to both the natural chop of the river\nand the wake generated by the trailing boat. To mitigate this risk, the selected V hull features a\nsteeper deadrise angle, allowing it to cut through wake more effectively. Additionally, its design\nenables it to sit higher in the water, reducing the likelihood of water entering the hull through the\ncover seal. A 65-inch V hull from a previous build was subjected to weight testing, revealing that\nit sat too low in the water, posing a significant risk of submersion. As a result, a larger vessel was\ndeemed necessary to ensure adequate buoyancy and stability.\nUsing the drag force equation\n𝐹𝐷 = 𝑐𝐷(𝐴)(\n𝜌𝑉\n2\n2\n)\nwhere 𝑐𝐷 the drag coefficient, A is the wetted surface area, 𝜌 is the fluid density, and V is the\nvelocity of fluid, the team found the drag coefficient of a v-hull to use for propeller and motor\ncalculations. Recognizing the importance of minimizing drag, the team explored hull designs\nincorporating chines and strakes. A sharp chine introduces a distinct separation between the bottom\nand sides of the hull, preventing water from running up the sides. This reduces the wetted surface\narea, thereby decreasing drag. Additionally, strakes—small protrusions on the hull's underside—\npromote the formation of air pockets as the vessel moves through water. These pockets further\nreduce the wetted surface area, contributing to overall drag reduction.\nAfter taking these metrics into consideration, the 76” Enforcer Scarab was purchased. The\npurchased hull and estimated CAD models are shown below in figures 1 and 2.\nFigure 1: 76” Enforcer ScarabFigure 2: Isometric and Rear View of Estimated Hull CAD Model\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": "Electronics and Controls\nOne of the main components the team wanted to improve from previous competition vessel\nwas the electronics, including power storage and the ESC. The team decided on a larger single\nLiPo battery system for the drive using a 44.4V 12 cell battery. Figure 3 below shows the wiring\ndiagram for the propulsion system including all the parts and safety features.\nWith a large power supply there are safety concerns. The safety features of the system include the\nbattery disconnect switch, a Class-T marine grade fuse, and QS8 anti-spark connectors for safety\nduring installation and use. A supplemental battery system will be used in parallel with the main\ndrivetrain system to power auxiliary items such as the controller, pumps, and steering servo. One\n11.1V battery and one 7.4V battery will be used for this system and are shown in figure 4 below.\nFigure 3: Battery and wiring diagram for propulsion systemThis auxiliary system helps avoid complications with a battery eliminator circuit allowing for a\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "safer and easier process to install and turn on the boat.\nThe control system selected for our vessel is based around a Futaba R203GF receiver that\nis linked to an ESC and servo motor directly, facilitating simple communication between\nsubsystems.\nThis system allows for reliable and fast communication between controls and their\nrespective subsystems without allowing for many sources of error. The receiver comes equipped\nwith dedicated control ports for the motor / steering servo, eliminating the need for programming\nor extra hardware to split control among systems. As the servo motor requires at least 8V of voltage\nto run efficiently, and the receiver cannot be powered with an excess of 6V, two LiPo batteries that\nare 11.1V and 7.4V respectively have been dedicated to each system. The chosen ESC, the Seal\nG2 Series 300A, sports built-in telemetry features such as motor RPM, temperature, current draw,\nand voltage among others, which also eliminates the need of dedicated telemetry sensors and a\nmicrocontroller to collect their data. Instead, data collected from the ESC can be directly\ntransmitted to the vessel’s controller through use of the S.BUS2 protocol built into it, or through a\ndedicated Bluetooth app on a mobile device.\nSteering\nWith a larger wetted area of the v-hull, the rudder area needed a large increase from\npreviously used. The area of the rudder was computed using the equation\n𝐴𝑟 = 0.045 × 𝐿𝑊𝐿 × 𝐷\nwhere Ar is rudder area, LWL is the waterline length, and D is the draft of the boat. Using this\nequation, the calculated rudder area is 26.05 in2.\nFigure 4: Auxiliary systems wiring diagramThe rudder was tested using SolidWorks Fluid Flow Simulation to test for turning force,\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "and pressure on the faces of the rudder. This helped us to calculate the turning radius, and structure\nof the rudder, to withstand the drag forces determined in the simulation. Figure 5 below shows the\nsimulation results including pressure on the face of the rudder and velocity of the water around the\nrudder.\nPropulsion\nAs brushless DC motors are high-speed, efficient (~90% efficiency), and reliable, one was\nchosen to drive the drivetrain. In particular, the TFL SSS 56154 motor was chosen due to its high\npower of up to 20000W of burst power and 14000w of continuous power, while maintaining\n25,000 rpm at 55.5V. To model its current draw and power curves given a steadily increasing\nvoltage, MATLAB simulations were created in line with the two below equations.\n𝑃 = 𝐼 ∗ 𝑉 and 𝑃 = 𝐼\n2\n∗ 𝑅\nAllowing the power generated to be related to the motor’s current draw and applied voltage.\nThe results of the simulations can be found below in figures 6 and 7.\nFigure 5: Flow Simulation of Rudder DesignThis allows for determining the motor’s peak efficiency voltage by comparing the ratio of\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "the motor’s power output to its current draw at that point, giving a most efficient supply voltage\nof ~50V, meaning the motor is running at its most efficient level at maximum throttle.\nDue to the selected v-hull design a shaft drive system was decided on, as a jet drive system\nrequires a flat bottom for the intake to properly function. It was also decided that two propellers\nwith opposite rotations would be used, as this would allow for higher torque outputs with less\nimpact on the stability of the vessel. The opposite rotations stop the propeller from creating a\nheeling moment about the longitudinal axis of the boat. This shaft drive system can take two forms,\none being a single shaft contrarotating propulsion system or two separate shaft systems. Both\nsystems can be used with either type of propeller.\nThe contrarotating assembly was designed and built by our team. The usage of ANSI\nstandard limits and fits was used to design the shafts and housing below as well as various additive\nand subtractive technology, such as 3D printing, milling with indexable rotary heads, and CNC\nlathe equipment. Pictured in figure 8 is the first iteration of the gear box assembly, of which 3 more\nversions were designed.\nThe second design was essentially a beefed-up version of the assembly pictured above. The\nmain issue with the second and first design was the height of the propellers. The flat bottom would\nnot allow for the propellers to interact with non-turbulent water.\nFigure 8: First iteration of gearbox design\nFigure 6: Motor Power vs Voltage Applied Figure 7: Motor Current Draw vs Voltage AppliedThe third iteration had an angled housing and longer shafts allowing for the propellers to\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": "reach deeper under the hull. The problems with this design came during manufacturing. Due to the\nlength of the shafts multiple cutting cycles were required on the mill. This inevitably allowed for\nimperfections in surface finish which in turn unbalanced the shafts.\nThe final assembly was a pod system, shown in figure 9. The pod allowed for the propellers\nto be in a constant wet area below the boat while also allowing for shorter shafts. Fluid flow study\nshowed that the pod could be 3D printed reliably and still have a safety factor of 4 at 60 mph while\npropelling the boat. Custom drive dogs were also created and sealed bearings were pressed onto\nthe shafts.\n\nThe design had a single fatal flaw. The gear system was reformatted to fit the housing, but\nthe gear ratio was still the original ratio purchased at the beginning of the project. The 2:1 gear\nratio prior had no effect, but due to inputting power into the original transfer gear shown in figure\n9 on the far right above the system would be outputting close to 40,000 rpm per propeller with our\ncurrent motor. Although the system functions fully, the efficiency with our current equipment\nwould be very poor.\nThe propellers to go with this contra-rotating design were toroidal propellers, which are a\nnew design in the world of marine propulsion. The first thing that was seen through research is\nthat the toroidal propeller is not able to achieve the top speeds that a three-blade propeller is\ncapable of. Although it is not able to achieve quite the same top speed, it is much faster through\nthe mid-range RPMs. This is because of its improved planing ability which will allow the vessel\nto accelerate quickly out of the corners of the course and reach top speed faster. This also helps\ndramatically with efficiency. It allows for much less power usage to achieve cruising speeds. This\nwill help to maintain the battery charge and complete the entire course.\nThe propellers were designed to be mirrored copies of each other. To begin the design, an\nairfoil had to be selected. This requires finding the Reynolds Number at the hub using the equation\nbelow.\n𝑅𝑒 =\n𝜌𝑉𝑙\n𝜇\nWhere 𝜌 is the density of water, 𝑉 is the linear velocity of the base of the loop, 𝑙 is the\nchord length of the airfoil, which is dependent on the hub size, and 𝜇 is the kinematic viscosity of\nwater. The hub was made to be 2.26 centimeters. This allows for a chord length of 1.524\ncentimeters and the velocity at the base of the loop is 47 meters per second. Using these values the\nFigure 9: Pod system assemblycalculated Reynolds Number was approximately 750,000. Using Airfoiltools.com, the N10 airfoil\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "was selected to be used as a basis for the shape of the propeller. Its shape is plotted below in figure\n10.\nThis airfoil was selected because it is a flat-bottom airfoil which is commonly used for\nmarine propeller shapes. This propeller has good performance and coefficient of lift between the\nReynolds Numbers of 500,000 and 1,000,000 as seen in figure 11 showing the coefficient of lift\non the vertical axis and the angle of attack on the horizontal axis of the N10 airfoil.\nThe plot above also allowed us to choose the relative angle of attack of 8º as this allows\nfor the highest coefficient of lift before stalling the airfoil. The relative angle of attack is added to\nthe angle created by the total velocity vector or the sum of the velocity vectors of the rotational\nvelocity of the airfoil and linear velocity of the propeller through the water. This gave the total\nangle of attack of 26º at the hub portion of the toroidal loop.\nFigure 10: Airfoil design for propeller(reference you didn’t make it)\nFigure 11: Coefficient of lift vs. Angle of attack\n\n The team decided on a propeller that was 7.62 centimeters in total diameter. The pitch ratio\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 10,
+      "text": "(pitch/diameter) for this type of vessel carrying a payload was assumed to be about 0.9. This allows\nthe vessel to move quickly but output a high enough force to overcome the extra drag that a heavier\nboat faces. Using the specifications above, the following propeller was created using SolidWorks\nand is pictured in figure 12.\nThe pitch of this propeller was calculated using the equation below\n𝑃𝑃 = 𝐶𝑇 ∗ tan (𝜃)\nwhere 𝑃𝑃 is propeller pitch, 𝐶𝑇 is, the circumference of the toroidal loop (the path the midpoint of\nthe blade as the propeller makes one rotation), and 𝜃 is the angle of the roots of the blade. This\npitch will give the propellers a pitch ratio of 0.983.\nUsing SolidWorks Flow Simulation this propeller was tested and improved. However, after\nmany attempts, the propeller could not be optimized at the high speeds of the selected motor. Lack\nof research into this type of propeller made it very difficult to optimize parameters of the design.\nIn figure 13 below, the flow trajectory of the propeller is shown. The simulation was run at 2100\nradians per second, the loaded angular velocity of the motor.\nFigure 12: Toroidal propeller model\nFigure 13: Flow Simulation Results for Toroidal PropellerAs seen in the figure 13 above, the propeller succeeds at providing suction and an area of\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 11,
+      "text": "low pressure at the inlet of the propeller, however it is unable to direct the water into a high\u0002pressure stream at the outlet at this speed. Although the design worked in theory and a prototype\nwas built and made to work, it was not compatible with the selected motor, which was selected for\nits speed. This design is made obsolete by a simpler design that allows the propeller to spin faster\nand for the vessel to have a higher velocity.\nLack of time caused the group to choose a simpler solution. The group decided to use a\ncommon single flex cable common in remote control boats. This system will consist of a single\n1/4-inch flex cable through a 5/16-inch stuffing tube. The tube will start at a 30º angle and exit 8\ninches from the stern of the vessel. The shaft will bend to a 10º angle and will continue just past\nthe stern of the boat. A 67mm 3 blade propeller was selected to propel the vessel. This propeller\nhas a pitch of 4.49 inches.\nCooling System\nAfter reviewing information from previous PEP competitions cooling was identified as a\nkey constraint early in the design process, as significant heat generation from the motor, ESC, and\ngearbox were anticipated to be limiting factors during the race. In order to manage the thermal\nload efficiently, water cooling was selected due to water’s substantially greater thermal capacity\ncompared to air.\nCooling System Testing Data Analysis and Calculations\nAs part of the cooling system validation, a series of pump tests were conducted using a\ncontrolled water volume of 200 ml. The objective was to quantify the pump’s performance and\nultimately determine the cooling capacity available for the system. The recorded times for pumping\n200 ml of water were as follows:\nThe average pumping time is calculated by summing all test times and dividing by the\nnumber of tests:\n𝑇𝑎𝑣𝑔 = = 16.24 + 17.34 + 17.12 + 16.55 + 16.92 ≈ 16.83 𝑠𝑒𝑐𝑜𝑛𝑑𝑠\nFigure 6: Flowchart for pump testing and recorded\ntimesFigure 14: Flowchart for pump testing and recorded\ntimesThe flow rate (in ml/s) is obtained by dividing the water volume by the average time:\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 12,
+      "text": "𝐹𝑙𝑜𝑤 𝑅𝑎𝑡𝑒 =\n𝑉𝑜𝑙𝑢𝑚𝑒\n𝑇𝑎𝑣𝑔\n=\n200 𝑚𝑙\n16.83 𝑠𝑒𝑐\n≈ 11.88 𝑚𝑙/𝑠\nSince cooling capacity calculations are typically expressed in BTU per hour using GPM,\nthe flow rate is converted using the conversion factor (1 gallon ≈ 3785 ml):\n𝐺𝑃𝑀 =\n11.88 𝑚𝑙/𝑠 × 60 𝑠/𝑚𝑖𝑛\n3785 𝑚𝑙/𝑔𝑎𝑙 ≈ 0.188 𝐺𝑃𝑀\nFor water cooling, the cooling capacity can be estimated using the relationship:\n𝐶𝑜𝑜𝑙𝑖𝑛𝑔 𝐶𝑎𝑝𝑎𝑐𝑖𝑡𝑦 (\n𝐵𝑇𝑈\nℎ\n) = 𝐺𝑃𝑀 × 500\n𝑙𝑏 ∗ 𝑚𝑖𝑛\n𝑔𝑎𝑙 ∗ ℎ\n× 𝛥𝑇 °F\nwhere ΔT is the temperature drop across the heat exchanger. Assuming a 𝛥𝑇 of 10 °F:\n𝐶𝑜𝑜𝑙𝑖𝑛𝑔 𝐶𝑎𝑝𝑎𝑐𝑖𝑡𝑦 ≈ 0.188 𝐺𝑃𝑀 × 500\n𝑙𝑏 ∗ 𝑚𝑖𝑛\n𝑔𝑎𝑙 ∗ ℎ\n× 10 °F ≈ 940 𝐵𝑇𝑈/ℎ\nThese equations and calculations demonstrate that the pump testing data yields an average\ncooling capacity of approximately 940 BTU/h. This experimentally derived value was\nsubsequently integrated into the thermal model for the cooling system, ensuring that the design is\nrobust enough to manage the significant heat generation expected during the race.\nCooling Risk Assessment\nThis capacity was then integrated into the thermal model to assess the cooling system’s\nability to manage waste heat generated by the motor. At the motor’s maximum continuous output\nof 14,000 W with a standard brushless 90% efficiency, the motor generates about 1,556 W of waste\nheat (approximately 5,308 BTU/h). After subtracting the cooling system’s capacity, the net heat\naccumulation was estimated to be around 4,368 BTU/h. Using research on standards for brushless\nDC motors an allowable temperature rise of 40°F was determined; corresponding to an absorption\ncapacity of roughly 4,000 BTU (assuming an effective thermal capacity of 100 BTU/°F), our\ncalculations indicated that the system could maintain safe operating temperatures for\napproximately 55 minutes under these conditions.This integrated approach, pictured above in figure 15, informed the design of the overall\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 13,
+      "text": "cooling infrastructure and will ensure safe operation under race conditions. The craft should be\nable to maintain maximum performance without thermal issues or throttling.\nTesting\nIn order to make the prototyping phase as easy as possible and ensure a smooth prototyping\nprocess, we decided as a team that each subsystem of the boat would be individually tested before\nbeing integrated with other systems. Depending on what is needed out of the test, a local swimming\npool in Auburn has been used, but nearby Lake Martin is also a viable option for testing, located\njust over a half hour outside of Auburn.\nFor the hull design testing, we used the local swimming pool, sandbags to imitate weight,\nand a force gauge to determine our coefficient of drag for the hull shape. On top of this, we ensured\nwatertight sealing, buoyancy, and stability of the hull to ensure our theory that a deep-v hull was\nthe correct choice.\nFigure 7: Heat management diagramFigure 15: Heat\nmanagement diagramTo test our propulsion prototypes, a drill and shaft setup like the one in figure 16 below\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 14,
+      "text": "was used in a tank of water to justify SolidWorks flow simulation results and test the durability of\nthe prototypes that were made. By doing this, we affirmed that our propulsion system will push\nwater as desired to propel our boat forwards, and we mitigate the risk of not being able to qualify\nfor the competition because we can’t propel the boat.\nIn terms of other risks we mitigated with testing, we ensured that the cooling system\nworked as expected by setting it up outside of the boat, with a tank full of water to pull from and\nbeakers to discharge water into after it ran through the cooling system. By doing this, we ensured\nthat our vessel will not fall victim to the same overheating issue that last year’s team ran into during\nthe race.\nFuture Directions\nThe aforementioned simulation results and calculations showed that for the speed of our\nmotor, our toroidal propellor design did not perform well. Though the outcome of this analysis was\nundesirable, empirical testing is required to verify any simulations/calculations. The newest\npropellor design requires testing to ensure that adequate force is being. generated to propel the\nboat.\nThe high max RPM of the motor is efficient, but the high angular velocity of the motor\ndoes not work with any propellor design that has been analyzed. To this end, further ESC\nprogramming must be done and tested prior to the competition to optimize the vessel’s\nperformance. Through live water testing with the full assembly, we will then assure that the motor\nwill not exceed the capabilities of the ESC or battery.\nThere also exist a multitude of longer-term improvements that could be undertaken by\nfuture Auburn P.E.P. teams. Given further research, time, and experimentation, the contrarotating\ntoroidal propellor drivetrain could be attempted and optimized, allowing for a watercraft that is\nnot only competitive, but also maximizes on the opportunities presented by the newest cutting edge\npropellor technology and research. The hull’s design could also be further optimized, especially if\nFigure 8: Propeller testing apparatusFigure 16:\nPropeller testing apparatusone would be custom-built rather than commercially purchased. Such a hull could allow for more\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 15,
+      "text": "efficient geometry and easier planing, while also being designed to accommodate any gearboxes\nor drivetrain components required for toroidal propellors. If we had to do it again, we would have\nfinalized a toroidal propellor design earlier, found out what the optimal angular velocity for it was,\nand then purchased a motor and gearbox that fit the needs of the contrarotating propellor design.References\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 16,
+      "text": "[1] M. Dopplebauer, \"Jacobi's Motor,\" Karlsruhe Institure of Technology, [Online]. Available:\nhttps://www.eti.kit.edu/english/1382.php. [Accessed 24 March 2025].\n[2] \"The Rise of Electric Boats: Pros, Cons, and Predictions,\" Ocean Spare, [Online]. Available:\nhttps://oceanspare.com/the-rise-of-electric-boats-pros,-cons,-and-predictions. [Accessed 23\nMarch 2025].\n[3] R. Nikolewski, \"The little (electric) engine that could: The Port of San Diego unveils the\nnation’s first all-electric tug boat,\" The San Diego Union-Tribune, 13 March 2024.\n[4] E. Gibson, \"Lithium Polymer Battery: Key Differences, Benefits, Applications & Overview,\"\nPowering Autos, 16 October 2024. [Online]. Available: http://poweringautos.com/what-is\u0002lithium-polymer-battery/. [Accessed 24 March 2025].\n[5] MaxAmps, \"LiPo vs Lithium Ion Batteries for Unmanned & Robotics Applications,\"\nUnmanned Systems Technology, 2023. [Online]. Available:\nhttps://www.unmannedsystemstechnology.com/feature/lipo-vs-lithium-ion-batteries-for\u0002unmanned-robotics-applications/#:~:text=In summary%2C if you are,%2C then choose L.\n[Accessed 29 September 2024].\n[6] P. Millett, \"Brushless Vs Brushed DC Motors: When and Why to Choose One Over the Other,\"\nMonolithic Power Systems, 10 June 2022. [Online]. Available:\nhttps://www.monolithicpower.com/en/learning/resources/brushless-vs-brushed-dc\u0002motors?srsltid=AfmBOoo_Y7GM61KDmD-t_gfG-LjW37amqkRkJVrNVrbTMZ\u0002y_sg9M0mk. [Accessed 30 September 2024].\n[7] BoatTest.com, \"To Deep-V or Not to Deep-V?,\" BoatTest.com, [Online]. Available:\nhttps://boattest.com/view-news/6472_To-Deep-V-or-Not-to-Deep-V. [Accessed 28\nSeptember 2024].\n[8] BoatTest.com, \"Boat Buying Tips: What Hull Shape is Best?,\" BoatTest.com, [Online].\nAvailable: https://boattest.com/view-news/5402_boat-buying-tips-what-hull-shape-is-best.\n[Accessed 28 September 2024].\n[9] \"Deep-V Hull,\" GlobalSecurity.org, [Online]. Available:\nhttps://www.globalsecurity.org/military/systems/ship/deep-v-hull.htm. [Accessed 28\nSeptember 2024].\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Auburn University"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "White Paper Design Documentation"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Promoting Electrical Propulsion 24’-25’"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Banks Murdock | Henry Kendall | Jacob Nichols"
+    },
+    {
+      "line": 4,
+      "page_start": 0,
+      "page_end": 1,
+      "text": "Joey Nashold | Scott Ismert | Wilson CogerIntroduction & Background"
+    },
+    {
+      "line": 5,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Marine vessels were first introduced to the idea of electric propulsion in 1838 in Russia"
+    },
+    {
+      "line": 6,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "when Mortiz von Jacobi made a small passenger boat that would transport passengers an"
+    },
+    {
+      "line": 7,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "unimpressive 3 miles per hour on the Neva River in Russia [1]. Due to the rise of the internal"
+    },
+    {
+      "line": 8,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "combustion engine, it fell in popularity after a brief “golden era” in the early 1900s, but the need"
+    },
+    {
+      "line": 9,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "for advanced marine systems that run on clean energy, the inexpensiveness that comes with electric"
+    },
+    {
+      "line": 10,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "boat maintenance, and the opportunity to put out more power with less weight have all led to a"
+    },
+    {
+      "line": 11,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "resurgence in the concept of electric propulsion for marine applications [2]. To highlight recent"
+    },
+    {
+      "line": 12,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "developments and research in electric propulsion, last year in March of 2024, the eWolf tugboat"
+    },
+    {
+      "line": 13,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "launched with a 6.2 megawatt-hour battery to be used for propulsion, and the vessel proved to be"
+    },
+    {
+      "line": 14,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "significantly more powerful than the diesel tugboats at the same port [3]."
+    },
+    {
+      "line": 15,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "What makes electric propulsion unique from other propulsion systems are two design"
+    },
+    {
+      "line": 16,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "criteria: power storage and motor selection. Furthermore, considerations for propulsion design,"
+    },
+    {
+      "line": 17,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "hull selection, and steering control are also documented within the literature. Decisions made for"
+    },
+    {
+      "line": 18,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "all these items were made based on preliminary industry research and a desire to be on the leading"
+    },
+    {
+      "line": 19,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "edge of marine technology."
+    },
+    {
+      "line": 20,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "For power storage, batteries are well known and documented as a source of electric power."
+    },
+    {
+      "line": 21,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "In researching different types of batteries, 4 different types of batteries appeared as the most"
+    },
+    {
+      "line": 22,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "practical directions: nickel cadmium, lead acid, lithium ion, and lithium polymer batteries. Over"
+    },
+    {
+      "line": 23,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "time, lithium polymer (LiPo) batteries stood out due to their popularity in remote control vehicles"
+    },
+    {
+      "line": 24,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "and their high energy density [4] [5]. Using a battery in turn made the option of a DC motor by far"
+    },
+    {
+      "line": 25,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "the most sensible, so that a converter was not needed to provide alternating current. To reduce"
+    },
+    {
+      "line": 26,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "friction within the motor and thus obtain the most optimal motor efficiency, a brushless DC motor"
+    },
+    {
+      "line": 27,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "was chosen as the direction for driving the propulsion system [6]."
+    },
+    {
+      "line": 28,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "On top of this, hull design and steering control also present themselves as important design"
+    },
+    {
+      "line": 29,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "considerations. In 2024’s PEP competition, stability of the hull and steering were both areas of"
+    },
+    {
+      "line": 30,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "concern that let down Auburn University’s team in the competition. That meant a new design must"
+    },
+    {
+      "line": 31,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "both fit the propulsion design and improve stability in choppy waters on the day of the race."
+    },
+    {
+      "line": 32,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Furthermore, it must be able to hold competition required weight and the weight of the energy"
+    },
+    {
+      "line": 33,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "storage option. Significant research exists on the various hull design concepts, their drag"
+    },
+    {
+      "line": 34,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "coefficients, and their ability to remain stable in choppy waters [7] [8] [9]. As for steering, not"
+    },
+    {
+      "line": 35,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "much changes as it pertains to design considerations for electric propulsion, but rudder design does"
+    },
+    {
+      "line": 36,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "vary in relation to both the hull design and weight, so it does become an area of focus for a team"
+    },
+    {
+      "line": 37,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "with the knowledge of the previous vessel having steering complications. In steering, three options"
+    },
+    {
+      "line": 38,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "presented as potential options: unbalanced rudders, balanced rudders, jet drive z-axis steering, and"
+    },
+    {
+      "line": 39,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "flapped rudders."
+    },
+    {
+      "line": 40,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Our objective as a team is to design and build a remote-controlled boat to compete and"
+    },
+    {
+      "line": 41,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "succeed in the American Society of Naval Engineers’ Promoting Electric Propulsion Competition."
+    },
+    {
+      "line": 42,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "To achieve this goal, we decided that the designing a contrarotating toroidal propeller mechanism"
+    },
+    {
+      "line": 43,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "to propel the boat would set us apart and give us an advantage. Following this, our goals were to"
+    },
+    {
+      "line": 44,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "select an optimal motor that fit our propulsion design, choose a hull that fit the conditions of the"
+    },
+    {
+      "line": 45,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "competition and carries a 60 pound removable payload, design a rudder that gives our boat an"
+    },
+    {
+      "line": 46,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "optimal turn radius to reduce our heat time, design a circuit that runs our motor and other electronic"
+    },
+    {
+      "line": 47,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "devices at their optimal performance measures, and lastly cool our electronic drive train"
+    },
+    {
+      "line": 48,
+      "page_start": 1,
+      "page_end": 2,
+      "text": "components (esc and motor) effectively to prevent overheating.Hull"
+    },
+    {
+      "line": 49,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "The team’s approach to selecting the hull prioritized competition's requirements without"
+    },
+    {
+      "line": 50,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "compromising the team’s focus on propulsion. As a result, a commercially available design that"
+    },
+    {
+      "line": 51,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "aligned with the team's objectives was deemed the most suitable choice. To begin the selection"
+    },
+    {
+      "line": 52,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "process, various hull types commonly used in the marine industry were evaluated for their specific"
+    },
+    {
+      "line": 53,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "applications. Given the weight requirements, designs such as the hydrofoil and catamaran were"
+    },
+    {
+      "line": 54,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "ruled out, as they did not provide the necessary balance of efficiency and stability required for"
+    },
+    {
+      "line": 55,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "weight-bearing vessels. Although a catamaran hull was available at no cost from the previous team,"
+    },
+    {
+      "line": 56,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "it was ultimately not selected. After careful consideration, the team narrowed the options to two"
+    },
+    {
+      "line": 57,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "final candidates: the deep V hull and the planing V hull."
+    },
+    {
+      "line": 58,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "The deep V hull was determined to be the most suitable choice for carrying the required"
+    },
+    {
+      "line": 59,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "load while providing stability, particularly in unpredictable sea conditions. The previous year's"
+    },
+    {
+      "line": 60,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "competition team encountered issues with water ingress due to both the natural chop of the river"
+    },
+    {
+      "line": 61,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "and the wake generated by the trailing boat. To mitigate this risk, the selected V hull features a"
+    },
+    {
+      "line": 62,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "steeper deadrise angle, allowing it to cut through wake more effectively. Additionally, its design"
+    },
+    {
+      "line": 63,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "enables it to sit higher in the water, reducing the likelihood of water entering the hull through the"
+    },
+    {
+      "line": 64,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "cover seal. A 65-inch V hull from a previous build was subjected to weight testing, revealing that"
+    },
+    {
+      "line": 65,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "it sat too low in the water, posing a significant risk of submersion. As a result, a larger vessel was"
+    },
+    {
+      "line": 66,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "deemed necessary to ensure adequate buoyancy and stability."
+    },
+    {
+      "line": 67,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Using the drag force equation"
+    },
+    {
+      "line": 68,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "𝐹𝐷 = 𝑐𝐷(𝐴)("
+    },
+    {
+      "line": 69,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "𝜌𝑉"
+    },
+    {
+      "line": 70,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "2"
+    },
+    {
+      "line": 71,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "2"
+    },
+    {
+      "line": 72,
+      "page_start": 2,
+      "page_end": 2,
+      "text": ")"
+    },
+    {
+      "line": 73,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "where 𝑐𝐷 the drag coefficient, A is the wetted surface area, 𝜌 is the fluid density, and V is the"
+    },
+    {
+      "line": 74,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "velocity of fluid, the team found the drag coefficient of a v-hull to use for propeller and motor"
+    },
+    {
+      "line": 75,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "calculations. Recognizing the importance of minimizing drag, the team explored hull designs"
+    },
+    {
+      "line": 76,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "incorporating chines and strakes. A sharp chine introduces a distinct separation between the bottom"
+    },
+    {
+      "line": 77,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "and sides of the hull, preventing water from running up the sides. This reduces the wetted surface"
+    },
+    {
+      "line": 78,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "area, thereby decreasing drag. Additionally, strakes—small protrusions on the hull's underside—"
+    },
+    {
+      "line": 79,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "promote the formation of air pockets as the vessel moves through water. These pockets further"
+    },
+    {
+      "line": 80,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "reduce the wetted surface area, contributing to overall drag reduction."
+    },
+    {
+      "line": 81,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "After taking these metrics into consideration, the 76” Enforcer Scarab was purchased. The"
+    },
+    {
+      "line": 82,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "purchased hull and estimated CAD models are shown below in figures 1 and 2."
+    },
+    {
+      "line": 83,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "Figure 1: 76” Enforcer ScarabFigure 2: Isometric and Rear View of Estimated Hull CAD Model"
+    },
+    {
+      "line": 84,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Electronics and Controls"
+    },
+    {
+      "line": 85,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "One of the main components the team wanted to improve from previous competition vessel"
+    },
+    {
+      "line": 86,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "was the electronics, including power storage and the ESC. The team decided on a larger single"
+    },
+    {
+      "line": 87,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "LiPo battery system for the drive using a 44.4V 12 cell battery. Figure 3 below shows the wiring"
+    },
+    {
+      "line": 88,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "diagram for the propulsion system including all the parts and safety features."
+    },
+    {
+      "line": 89,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "With a large power supply there are safety concerns. The safety features of the system include the"
+    },
+    {
+      "line": 90,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "battery disconnect switch, a Class-T marine grade fuse, and QS8 anti-spark connectors for safety"
+    },
+    {
+      "line": 91,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "during installation and use. A supplemental battery system will be used in parallel with the main"
+    },
+    {
+      "line": 92,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "drivetrain system to power auxiliary items such as the controller, pumps, and steering servo. One"
+    },
+    {
+      "line": 93,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "11.1V battery and one 7.4V battery will be used for this system and are shown in figure 4 below."
+    },
+    {
+      "line": 94,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "Figure 3: Battery and wiring diagram for propulsion systemThis auxiliary system helps avoid complications with a battery eliminator circuit allowing for a"
+    },
+    {
+      "line": 95,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "safer and easier process to install and turn on the boat."
+    },
+    {
+      "line": 96,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "The control system selected for our vessel is based around a Futaba R203GF receiver that"
+    },
+    {
+      "line": 97,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "is linked to an ESC and servo motor directly, facilitating simple communication between"
+    },
+    {
+      "line": 98,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "subsystems."
+    },
+    {
+      "line": 99,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "This system allows for reliable and fast communication between controls and their"
+    },
+    {
+      "line": 100,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "respective subsystems without allowing for many sources of error. The receiver comes equipped"
+    },
+    {
+      "line": 101,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "with dedicated control ports for the motor / steering servo, eliminating the need for programming"
+    },
+    {
+      "line": 102,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "or extra hardware to split control among systems. As the servo motor requires at least 8V of voltage"
+    },
+    {
+      "line": 103,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "to run efficiently, and the receiver cannot be powered with an excess of 6V, two LiPo batteries that"
+    },
+    {
+      "line": 104,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "are 11.1V and 7.4V respectively have been dedicated to each system. The chosen ESC, the Seal"
+    },
+    {
+      "line": 105,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "G2 Series 300A, sports built-in telemetry features such as motor RPM, temperature, current draw,"
+    },
+    {
+      "line": 106,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "and voltage among others, which also eliminates the need of dedicated telemetry sensors and a"
+    },
+    {
+      "line": 107,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "microcontroller to collect their data. Instead, data collected from the ESC can be directly"
+    },
+    {
+      "line": 108,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "transmitted to the vessel’s controller through use of the S.BUS2 protocol built into it, or through a"
+    },
+    {
+      "line": 109,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "dedicated Bluetooth app on a mobile device."
+    },
+    {
+      "line": 110,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Steering"
+    },
+    {
+      "line": 111,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "With a larger wetted area of the v-hull, the rudder area needed a large increase from"
+    },
+    {
+      "line": 112,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "previously used. The area of the rudder was computed using the equation"
+    },
+    {
+      "line": 113,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "𝐴𝑟 = 0.045 × 𝐿𝑊𝐿 × 𝐷"
+    },
+    {
+      "line": 114,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "where Ar is rudder area, LWL is the waterline length, and D is the draft of the boat. Using this"
+    },
+    {
+      "line": 115,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "equation, the calculated rudder area is 26.05 in2."
+    },
+    {
+      "line": 116,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "Figure 4: Auxiliary systems wiring diagramThe rudder was tested using SolidWorks Fluid Flow Simulation to test for turning force,"
+    },
+    {
+      "line": 117,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "and pressure on the faces of the rudder. This helped us to calculate the turning radius, and structure"
+    },
+    {
+      "line": 118,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "of the rudder, to withstand the drag forces determined in the simulation. Figure 5 below shows the"
+    },
+    {
+      "line": 119,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "simulation results including pressure on the face of the rudder and velocity of the water around the"
+    },
+    {
+      "line": 120,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "rudder."
+    },
+    {
+      "line": 121,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Propulsion"
+    },
+    {
+      "line": 122,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "As brushless DC motors are high-speed, efficient (~90% efficiency), and reliable, one was"
+    },
+    {
+      "line": 123,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "chosen to drive the drivetrain. In particular, the TFL SSS 56154 motor was chosen due to its high"
+    },
+    {
+      "line": 124,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "power of up to 20000W of burst power and 14000w of continuous power, while maintaining"
+    },
+    {
+      "line": 125,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "25,000 rpm at 55.5V. To model its current draw and power curves given a steadily increasing"
+    },
+    {
+      "line": 126,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "voltage, MATLAB simulations were created in line with the two below equations."
+    },
+    {
+      "line": 127,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "𝑃 = 𝐼 ∗ 𝑉 and 𝑃 = 𝐼"
+    },
+    {
+      "line": 128,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "2"
+    },
+    {
+      "line": 129,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "∗ 𝑅"
+    },
+    {
+      "line": 130,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Allowing the power generated to be related to the motor’s current draw and applied voltage."
+    },
+    {
+      "line": 131,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "The results of the simulations can be found below in figures 6 and 7."
+    },
+    {
+      "line": 132,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "Figure 5: Flow Simulation of Rudder DesignThis allows for determining the motor’s peak efficiency voltage by comparing the ratio of"
+    },
+    {
+      "line": 133,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "the motor’s power output to its current draw at that point, giving a most efficient supply voltage"
+    },
+    {
+      "line": 134,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "of ~50V, meaning the motor is running at its most efficient level at maximum throttle."
+    },
+    {
+      "line": 135,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Due to the selected v-hull design a shaft drive system was decided on, as a jet drive system"
+    },
+    {
+      "line": 136,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "requires a flat bottom for the intake to properly function. It was also decided that two propellers"
+    },
+    {
+      "line": 137,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "with opposite rotations would be used, as this would allow for higher torque outputs with less"
+    },
+    {
+      "line": 138,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "impact on the stability of the vessel. The opposite rotations stop the propeller from creating a"
+    },
+    {
+      "line": 139,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "heeling moment about the longitudinal axis of the boat. This shaft drive system can take two forms,"
+    },
+    {
+      "line": 140,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "one being a single shaft contrarotating propulsion system or two separate shaft systems. Both"
+    },
+    {
+      "line": 141,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "systems can be used with either type of propeller."
+    },
+    {
+      "line": 142,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "The contrarotating assembly was designed and built by our team. The usage of ANSI"
+    },
+    {
+      "line": 143,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "standard limits and fits was used to design the shafts and housing below as well as various additive"
+    },
+    {
+      "line": 144,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "and subtractive technology, such as 3D printing, milling with indexable rotary heads, and CNC"
+    },
+    {
+      "line": 145,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "lathe equipment. Pictured in figure 8 is the first iteration of the gear box assembly, of which 3 more"
+    },
+    {
+      "line": 146,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "versions were designed."
+    },
+    {
+      "line": 147,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "The second design was essentially a beefed-up version of the assembly pictured above. The"
+    },
+    {
+      "line": 148,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "main issue with the second and first design was the height of the propellers. The flat bottom would"
+    },
+    {
+      "line": 149,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "not allow for the propellers to interact with non-turbulent water."
+    },
+    {
+      "line": 150,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Figure 8: First iteration of gearbox design"
+    },
+    {
+      "line": 151,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "Figure 6: Motor Power vs Voltage Applied Figure 7: Motor Current Draw vs Voltage AppliedThe third iteration had an angled housing and longer shafts allowing for the propellers to"
+    },
+    {
+      "line": 152,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "reach deeper under the hull. The problems with this design came during manufacturing. Due to the"
+    },
+    {
+      "line": 153,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "length of the shafts multiple cutting cycles were required on the mill. This inevitably allowed for"
+    },
+    {
+      "line": 154,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "imperfections in surface finish which in turn unbalanced the shafts."
+    },
+    {
+      "line": 155,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "The final assembly was a pod system, shown in figure 9. The pod allowed for the propellers"
+    },
+    {
+      "line": 156,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "to be in a constant wet area below the boat while also allowing for shorter shafts. Fluid flow study"
+    },
+    {
+      "line": 157,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "showed that the pod could be 3D printed reliably and still have a safety factor of 4 at 60 mph while"
+    },
+    {
+      "line": 158,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "propelling the boat. Custom drive dogs were also created and sealed bearings were pressed onto"
+    },
+    {
+      "line": 159,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "the shafts."
+    },
+    {
+      "line": 160,
+      "page_start": 7,
+      "page_end": 7,
+      "text": ""
+    },
+    {
+      "line": 161,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "The design had a single fatal flaw. The gear system was reformatted to fit the housing, but"
+    },
+    {
+      "line": 162,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "the gear ratio was still the original ratio purchased at the beginning of the project. The 2:1 gear"
+    },
+    {
+      "line": 163,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "ratio prior had no effect, but due to inputting power into the original transfer gear shown in figure"
+    },
+    {
+      "line": 164,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "9 on the far right above the system would be outputting close to 40,000 rpm per propeller with our"
+    },
+    {
+      "line": 165,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "current motor. Although the system functions fully, the efficiency with our current equipment"
+    },
+    {
+      "line": 166,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "would be very poor."
+    },
+    {
+      "line": 167,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "The propellers to go with this contra-rotating design were toroidal propellers, which are a"
+    },
+    {
+      "line": 168,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "new design in the world of marine propulsion. The first thing that was seen through research is"
+    },
+    {
+      "line": 169,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "that the toroidal propeller is not able to achieve the top speeds that a three-blade propeller is"
+    },
+    {
+      "line": 170,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "capable of. Although it is not able to achieve quite the same top speed, it is much faster through"
+    },
+    {
+      "line": 171,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "the mid-range RPMs. This is because of its improved planing ability which will allow the vessel"
+    },
+    {
+      "line": 172,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "to accelerate quickly out of the corners of the course and reach top speed faster. This also helps"
+    },
+    {
+      "line": 173,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "dramatically with efficiency. It allows for much less power usage to achieve cruising speeds. This"
+    },
+    {
+      "line": 174,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "will help to maintain the battery charge and complete the entire course."
+    },
+    {
+      "line": 175,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "The propellers were designed to be mirrored copies of each other. To begin the design, an"
+    },
+    {
+      "line": 176,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "airfoil had to be selected. This requires finding the Reynolds Number at the hub using the equation"
+    },
+    {
+      "line": 177,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "below."
+    },
+    {
+      "line": 178,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "𝑅𝑒 ="
+    },
+    {
+      "line": 179,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "𝜌𝑉𝑙"
+    },
+    {
+      "line": 180,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "𝜇"
+    },
+    {
+      "line": 181,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Where 𝜌 is the density of water, 𝑉 is the linear velocity of the base of the loop, 𝑙 is the"
+    },
+    {
+      "line": 182,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "chord length of the airfoil, which is dependent on the hub size, and 𝜇 is the kinematic viscosity of"
+    },
+    {
+      "line": 183,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "water. The hub was made to be 2.26 centimeters. This allows for a chord length of 1.524"
+    },
+    {
+      "line": 184,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "centimeters and the velocity at the base of the loop is 47 meters per second. Using these values the"
+    },
+    {
+      "line": 185,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "Figure 9: Pod system assemblycalculated Reynolds Number was approximately 750,000. Using Airfoiltools.com, the N10 airfoil"
+    },
+    {
+      "line": 186,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "was selected to be used as a basis for the shape of the propeller. Its shape is plotted below in figure"
+    },
+    {
+      "line": 187,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "10."
+    },
+    {
+      "line": 188,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "This airfoil was selected because it is a flat-bottom airfoil which is commonly used for"
+    },
+    {
+      "line": 189,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "marine propeller shapes. This propeller has good performance and coefficient of lift between the"
+    },
+    {
+      "line": 190,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Reynolds Numbers of 500,000 and 1,000,000 as seen in figure 11 showing the coefficient of lift"
+    },
+    {
+      "line": 191,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "on the vertical axis and the angle of attack on the horizontal axis of the N10 airfoil."
+    },
+    {
+      "line": 192,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "The plot above also allowed us to choose the relative angle of attack of 8º as this allows"
+    },
+    {
+      "line": 193,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "for the highest coefficient of lift before stalling the airfoil. The relative angle of attack is added to"
+    },
+    {
+      "line": 194,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "the angle created by the total velocity vector or the sum of the velocity vectors of the rotational"
+    },
+    {
+      "line": 195,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "velocity of the airfoil and linear velocity of the propeller through the water. This gave the total"
+    },
+    {
+      "line": 196,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "angle of attack of 26º at the hub portion of the toroidal loop."
+    },
+    {
+      "line": 197,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Figure 10: Airfoil design for propeller(reference you didn’t make it)"
+    },
+    {
+      "line": 198,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Figure 11: Coefficient of lift vs. Angle of attack"
+    },
+    {
+      "line": 199,
+      "page_start": 8,
+      "page_end": 8,
+      "text": ""
+    },
+    {
+      "line": 200,
+      "page_start": 8,
+      "page_end": 9,
+      "text": " The team decided on a propeller that was 7.62 centimeters in total diameter. The pitch ratio"
+    },
+    {
+      "line": 201,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "(pitch/diameter) for this type of vessel carrying a payload was assumed to be about 0.9. This allows"
+    },
+    {
+      "line": 202,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "the vessel to move quickly but output a high enough force to overcome the extra drag that a heavier"
+    },
+    {
+      "line": 203,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "boat faces. Using the specifications above, the following propeller was created using SolidWorks"
+    },
+    {
+      "line": 204,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "and is pictured in figure 12."
+    },
+    {
+      "line": 205,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "The pitch of this propeller was calculated using the equation below"
+    },
+    {
+      "line": 206,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "𝑃𝑃 = 𝐶𝑇 ∗ tan (𝜃)"
+    },
+    {
+      "line": 207,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "where 𝑃𝑃 is propeller pitch, 𝐶𝑇 is, the circumference of the toroidal loop (the path the midpoint of"
+    },
+    {
+      "line": 208,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "the blade as the propeller makes one rotation), and 𝜃 is the angle of the roots of the blade. This"
+    },
+    {
+      "line": 209,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "pitch will give the propellers a pitch ratio of 0.983."
+    },
+    {
+      "line": 210,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Using SolidWorks Flow Simulation this propeller was tested and improved. However, after"
+    },
+    {
+      "line": 211,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "many attempts, the propeller could not be optimized at the high speeds of the selected motor. Lack"
+    },
+    {
+      "line": 212,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "of research into this type of propeller made it very difficult to optimize parameters of the design."
+    },
+    {
+      "line": 213,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "In figure 13 below, the flow trajectory of the propeller is shown. The simulation was run at 2100"
+    },
+    {
+      "line": 214,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "radians per second, the loaded angular velocity of the motor."
+    },
+    {
+      "line": 215,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Figure 12: Toroidal propeller model"
+    },
+    {
+      "line": 216,
+      "page_start": 9,
+      "page_end": 10,
+      "text": "Figure 13: Flow Simulation Results for Toroidal PropellerAs seen in the figure 13 above, the propeller succeeds at providing suction and an area of"
+    },
+    {
+      "line": 217,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "low pressure at the inlet of the propeller, however it is unable to direct the water into a high\u0002pressure stream at the outlet at this speed. Although the design worked in theory and a prototype"
+    },
+    {
+      "line": 218,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "was built and made to work, it was not compatible with the selected motor, which was selected for"
+    },
+    {
+      "line": 219,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "its speed. This design is made obsolete by a simpler design that allows the propeller to spin faster"
+    },
+    {
+      "line": 220,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "and for the vessel to have a higher velocity."
+    },
+    {
+      "line": 221,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Lack of time caused the group to choose a simpler solution. The group decided to use a"
+    },
+    {
+      "line": 222,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "common single flex cable common in remote control boats. This system will consist of a single"
+    },
+    {
+      "line": 223,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "1/4-inch flex cable through a 5/16-inch stuffing tube. The tube will start at a 30º angle and exit 8"
+    },
+    {
+      "line": 224,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "inches from the stern of the vessel. The shaft will bend to a 10º angle and will continue just past"
+    },
+    {
+      "line": 225,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "the stern of the boat. A 67mm 3 blade propeller was selected to propel the vessel. This propeller"
+    },
+    {
+      "line": 226,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "has a pitch of 4.49 inches."
+    },
+    {
+      "line": 227,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Cooling System"
+    },
+    {
+      "line": 228,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "After reviewing information from previous PEP competitions cooling was identified as a"
+    },
+    {
+      "line": 229,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "key constraint early in the design process, as significant heat generation from the motor, ESC, and"
+    },
+    {
+      "line": 230,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "gearbox were anticipated to be limiting factors during the race. In order to manage the thermal"
+    },
+    {
+      "line": 231,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "load efficiently, water cooling was selected due to water’s substantially greater thermal capacity"
+    },
+    {
+      "line": 232,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "compared to air."
+    },
+    {
+      "line": 233,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Cooling System Testing Data Analysis and Calculations"
+    },
+    {
+      "line": 234,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "As part of the cooling system validation, a series of pump tests were conducted using a"
+    },
+    {
+      "line": 235,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "controlled water volume of 200 ml. The objective was to quantify the pump’s performance and"
+    },
+    {
+      "line": 236,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "ultimately determine the cooling capacity available for the system. The recorded times for pumping"
+    },
+    {
+      "line": 237,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "200 ml of water were as follows:"
+    },
+    {
+      "line": 238,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "The average pumping time is calculated by summing all test times and dividing by the"
+    },
+    {
+      "line": 239,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "number of tests:"
+    },
+    {
+      "line": 240,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "𝑇𝑎𝑣𝑔 = = 16.24 + 17.34 + 17.12 + 16.55 + 16.92 ≈ 16.83 𝑠𝑒𝑐𝑜𝑛𝑑𝑠"
+    },
+    {
+      "line": 241,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Figure 6: Flowchart for pump testing and recorded"
+    },
+    {
+      "line": 242,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "timesFigure 14: Flowchart for pump testing and recorded"
+    },
+    {
+      "line": 243,
+      "page_start": 10,
+      "page_end": 11,
+      "text": "timesThe flow rate (in ml/s) is obtained by dividing the water volume by the average time:"
+    },
+    {
+      "line": 244,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "𝐹𝑙𝑜𝑤 𝑅𝑎𝑡𝑒 ="
+    },
+    {
+      "line": 245,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "𝑉𝑜𝑙𝑢𝑚𝑒"
+    },
+    {
+      "line": 246,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "𝑇𝑎𝑣𝑔"
+    },
+    {
+      "line": 247,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "="
+    },
+    {
+      "line": 248,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "200 𝑚𝑙"
+    },
+    {
+      "line": 249,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "16.83 𝑠𝑒𝑐"
+    },
+    {
+      "line": 250,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "≈ 11.88 𝑚𝑙/𝑠"
+    },
+    {
+      "line": 251,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Since cooling capacity calculations are typically expressed in BTU per hour using GPM,"
+    },
+    {
+      "line": 252,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "the flow rate is converted using the conversion factor (1 gallon ≈ 3785 ml):"
+    },
+    {
+      "line": 253,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "𝐺𝑃𝑀 ="
+    },
+    {
+      "line": 254,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "11.88 𝑚𝑙/𝑠 × 60 𝑠/𝑚𝑖𝑛"
+    },
+    {
+      "line": 255,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "3785 𝑚𝑙/𝑔𝑎𝑙 ≈ 0.188 𝐺𝑃𝑀"
+    },
+    {
+      "line": 256,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "For water cooling, the cooling capacity can be estimated using the relationship:"
+    },
+    {
+      "line": 257,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "𝐶𝑜𝑜𝑙𝑖𝑛𝑔 𝐶𝑎𝑝𝑎𝑐𝑖𝑡𝑦 ("
+    },
+    {
+      "line": 258,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "𝐵𝑇𝑈"
+    },
+    {
+      "line": 259,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "ℎ"
+    },
+    {
+      "line": 260,
+      "page_start": 11,
+      "page_end": 11,
+      "text": ") = 𝐺𝑃𝑀 × 500"
+    },
+    {
+      "line": 261,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "𝑙𝑏 ∗ 𝑚𝑖𝑛"
+    },
+    {
+      "line": 262,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "𝑔𝑎𝑙 ∗ ℎ"
+    },
+    {
+      "line": 263,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "× 𝛥𝑇 °F"
+    },
+    {
+      "line": 264,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "where ΔT is the temperature drop across the heat exchanger. Assuming a 𝛥𝑇 of 10 °F:"
+    },
+    {
+      "line": 265,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "𝐶𝑜𝑜𝑙𝑖𝑛𝑔 𝐶𝑎𝑝𝑎𝑐𝑖𝑡𝑦 ≈ 0.188 𝐺𝑃𝑀 × 500"
+    },
+    {
+      "line": 266,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "𝑙𝑏 ∗ 𝑚𝑖𝑛"
+    },
+    {
+      "line": 267,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "𝑔𝑎𝑙 ∗ ℎ"
+    },
+    {
+      "line": 268,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "× 10 °F ≈ 940 𝐵𝑇𝑈/ℎ"
+    },
+    {
+      "line": 269,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "These equations and calculations demonstrate that the pump testing data yields an average"
+    },
+    {
+      "line": 270,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "cooling capacity of approximately 940 BTU/h. This experimentally derived value was"
+    },
+    {
+      "line": 271,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "subsequently integrated into the thermal model for the cooling system, ensuring that the design is"
+    },
+    {
+      "line": 272,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "robust enough to manage the significant heat generation expected during the race."
+    },
+    {
+      "line": 273,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Cooling Risk Assessment"
+    },
+    {
+      "line": 274,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "This capacity was then integrated into the thermal model to assess the cooling system’s"
+    },
+    {
+      "line": 275,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "ability to manage waste heat generated by the motor. At the motor’s maximum continuous output"
+    },
+    {
+      "line": 276,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "of 14,000 W with a standard brushless 90% efficiency, the motor generates about 1,556 W of waste"
+    },
+    {
+      "line": 277,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "heat (approximately 5,308 BTU/h). After subtracting the cooling system’s capacity, the net heat"
+    },
+    {
+      "line": 278,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "accumulation was estimated to be around 4,368 BTU/h. Using research on standards for brushless"
+    },
+    {
+      "line": 279,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "DC motors an allowable temperature rise of 40°F was determined; corresponding to an absorption"
+    },
+    {
+      "line": 280,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "capacity of roughly 4,000 BTU (assuming an effective thermal capacity of 100 BTU/°F), our"
+    },
+    {
+      "line": 281,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "calculations indicated that the system could maintain safe operating temperatures for"
+    },
+    {
+      "line": 282,
+      "page_start": 11,
+      "page_end": 12,
+      "text": "approximately 55 minutes under these conditions.This integrated approach, pictured above in figure 15, informed the design of the overall"
+    },
+    {
+      "line": 283,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "cooling infrastructure and will ensure safe operation under race conditions. The craft should be"
+    },
+    {
+      "line": 284,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "able to maintain maximum performance without thermal issues or throttling."
+    },
+    {
+      "line": 285,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Testing"
+    },
+    {
+      "line": 286,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "In order to make the prototyping phase as easy as possible and ensure a smooth prototyping"
+    },
+    {
+      "line": 287,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "process, we decided as a team that each subsystem of the boat would be individually tested before"
+    },
+    {
+      "line": 288,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "being integrated with other systems. Depending on what is needed out of the test, a local swimming"
+    },
+    {
+      "line": 289,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "pool in Auburn has been used, but nearby Lake Martin is also a viable option for testing, located"
+    },
+    {
+      "line": 290,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "just over a half hour outside of Auburn."
+    },
+    {
+      "line": 291,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "For the hull design testing, we used the local swimming pool, sandbags to imitate weight,"
+    },
+    {
+      "line": 292,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "and a force gauge to determine our coefficient of drag for the hull shape. On top of this, we ensured"
+    },
+    {
+      "line": 293,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "watertight sealing, buoyancy, and stability of the hull to ensure our theory that a deep-v hull was"
+    },
+    {
+      "line": 294,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "the correct choice."
+    },
+    {
+      "line": 295,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Figure 7: Heat management diagramFigure 15: Heat"
+    },
+    {
+      "line": 296,
+      "page_start": 12,
+      "page_end": 13,
+      "text": "management diagramTo test our propulsion prototypes, a drill and shaft setup like the one in figure 16 below"
+    },
+    {
+      "line": 297,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "was used in a tank of water to justify SolidWorks flow simulation results and test the durability of"
+    },
+    {
+      "line": 298,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "the prototypes that were made. By doing this, we affirmed that our propulsion system will push"
+    },
+    {
+      "line": 299,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "water as desired to propel our boat forwards, and we mitigate the risk of not being able to qualify"
+    },
+    {
+      "line": 300,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "for the competition because we can’t propel the boat."
+    },
+    {
+      "line": 301,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "In terms of other risks we mitigated with testing, we ensured that the cooling system"
+    },
+    {
+      "line": 302,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "worked as expected by setting it up outside of the boat, with a tank full of water to pull from and"
+    },
+    {
+      "line": 303,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "beakers to discharge water into after it ran through the cooling system. By doing this, we ensured"
+    },
+    {
+      "line": 304,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "that our vessel will not fall victim to the same overheating issue that last year’s team ran into during"
+    },
+    {
+      "line": 305,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "the race."
+    },
+    {
+      "line": 306,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Future Directions"
+    },
+    {
+      "line": 307,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "The aforementioned simulation results and calculations showed that for the speed of our"
+    },
+    {
+      "line": 308,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "motor, our toroidal propellor design did not perform well. Though the outcome of this analysis was"
+    },
+    {
+      "line": 309,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "undesirable, empirical testing is required to verify any simulations/calculations. The newest"
+    },
+    {
+      "line": 310,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "propellor design requires testing to ensure that adequate force is being. generated to propel the"
+    },
+    {
+      "line": 311,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "boat."
+    },
+    {
+      "line": 312,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "The high max RPM of the motor is efficient, but the high angular velocity of the motor"
+    },
+    {
+      "line": 313,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "does not work with any propellor design that has been analyzed. To this end, further ESC"
+    },
+    {
+      "line": 314,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "programming must be done and tested prior to the competition to optimize the vessel’s"
+    },
+    {
+      "line": 315,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "performance. Through live water testing with the full assembly, we will then assure that the motor"
+    },
+    {
+      "line": 316,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "will not exceed the capabilities of the ESC or battery."
+    },
+    {
+      "line": 317,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "There also exist a multitude of longer-term improvements that could be undertaken by"
+    },
+    {
+      "line": 318,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "future Auburn P.E.P. teams. Given further research, time, and experimentation, the contrarotating"
+    },
+    {
+      "line": 319,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "toroidal propellor drivetrain could be attempted and optimized, allowing for a watercraft that is"
+    },
+    {
+      "line": 320,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "not only competitive, but also maximizes on the opportunities presented by the newest cutting edge"
+    },
+    {
+      "line": 321,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "propellor technology and research. The hull’s design could also be further optimized, especially if"
+    },
+    {
+      "line": 322,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Figure 8: Propeller testing apparatusFigure 16:"
+    },
+    {
+      "line": 323,
+      "page_start": 13,
+      "page_end": 14,
+      "text": "Propeller testing apparatusone would be custom-built rather than commercially purchased. Such a hull could allow for more"
+    },
+    {
+      "line": 324,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "efficient geometry and easier planing, while also being designed to accommodate any gearboxes"
+    },
+    {
+      "line": 325,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "or drivetrain components required for toroidal propellors. If we had to do it again, we would have"
+    },
+    {
+      "line": 326,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "finalized a toroidal propellor design earlier, found out what the optimal angular velocity for it was,"
+    },
+    {
+      "line": 327,
+      "page_start": 14,
+      "page_end": 15,
+      "text": "and then purchased a motor and gearbox that fit the needs of the contrarotating propellor design.References"
+    },
+    {
+      "line": 328,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "[1] M. Dopplebauer, \"Jacobi's Motor,\" Karlsruhe Institure of Technology, [Online]. Available:"
+    },
+    {
+      "line": 329,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "https://www.eti.kit.edu/english/1382.php. [Accessed 24 March 2025]."
+    },
+    {
+      "line": 330,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "[2] \"The Rise of Electric Boats: Pros, Cons, and Predictions,\" Ocean Spare, [Online]. Available:"
+    },
+    {
+      "line": 331,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "https://oceanspare.com/the-rise-of-electric-boats-pros,-cons,-and-predictions. [Accessed 23"
+    },
+    {
+      "line": 332,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "March 2025]."
+    },
+    {
+      "line": 333,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "[3] R. Nikolewski, \"The little (electric) engine that could: The Port of San Diego unveils the"
+    },
+    {
+      "line": 334,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "nation’s first all-electric tug boat,\" The San Diego Union-Tribune, 13 March 2024."
+    },
+    {
+      "line": 335,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "[4] E. Gibson, \"Lithium Polymer Battery: Key Differences, Benefits, Applications & Overview,\""
+    },
+    {
+      "line": 336,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "Powering Autos, 16 October 2024. [Online]. Available: http://poweringautos.com/what-is\u0002lithium-polymer-battery/. [Accessed 24 March 2025]."
+    },
+    {
+      "line": 337,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "[5] MaxAmps, \"LiPo vs Lithium Ion Batteries for Unmanned & Robotics Applications,\""
+    },
+    {
+      "line": 338,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "Unmanned Systems Technology, 2023. [Online]. Available:"
+    },
+    {
+      "line": 339,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "https://www.unmannedsystemstechnology.com/feature/lipo-vs-lithium-ion-batteries-for\u0002unmanned-robotics-applications/#:~:text=In summary%2C if you are,%2C then choose L."
+    },
+    {
+      "line": 340,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "[Accessed 29 September 2024]."
+    },
+    {
+      "line": 341,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "[6] P. Millett, \"Brushless Vs Brushed DC Motors: When and Why to Choose One Over the Other,\""
+    },
+    {
+      "line": 342,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "Monolithic Power Systems, 10 June 2022. [Online]. Available:"
+    },
+    {
+      "line": 343,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "https://www.monolithicpower.com/en/learning/resources/brushless-vs-brushed-dc\u0002motors?srsltid=AfmBOoo_Y7GM61KDmD-t_gfG-LjW37amqkRkJVrNVrbTMZ\u0002y_sg9M0mk. [Accessed 30 September 2024]."
+    },
+    {
+      "line": 344,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "[7] BoatTest.com, \"To Deep-V or Not to Deep-V?,\" BoatTest.com, [Online]. Available:"
+    },
+    {
+      "line": 345,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "https://boattest.com/view-news/6472_To-Deep-V-or-Not-to-Deep-V. [Accessed 28"
+    },
+    {
+      "line": 346,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "September 2024]."
+    },
+    {
+      "line": 347,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "[8] BoatTest.com, \"Boat Buying Tips: What Hull Shape is Best?,\" BoatTest.com, [Online]."
+    },
+    {
+      "line": 348,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "Available: https://boattest.com/view-news/5402_boat-buying-tips-what-hull-shape-is-best."
+    },
+    {
+      "line": 349,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "[Accessed 28 September 2024]."
+    },
+    {
+      "line": 350,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "[9] \"Deep-V Hull,\" GlobalSecurity.org, [Online]. Available:"
+    },
+    {
+      "line": 351,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "https://www.globalsecurity.org/military/systems/ship/deep-v-hull.htm. [Accessed 28"
+    },
+    {
+      "line": 352,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "September 2024]."
+    }
+  ],
+  "source_line_count": 353,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}

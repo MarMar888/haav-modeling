@@ -1,0 +1,1247 @@
+{
+  "competition_year": 2025,
+  "team": "University of Rhode Island",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/URI",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/URI/URI-Naruto-Innovative_Electric_Propulsion_System_for_High_Speed_Vessel_Naruto.pdf",
+  "filename": "URI-Naruto-Innovative_Electric_Propulsion_System_for_High_Speed_Vessel_Naruto.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "13"
+  },
+  "page_count": 13,
+  "pages_without_text": [],
+  "char_count": 12771,
+  "pages": [
+    {
+      "page": 1,
+      "text": "Innovative Electric Propulsion System for High-Speed\nVessel Naruto\nURI PEP Team\nUniversity of Rhode Island\nSam Miller, Ashley Sciacca,\nLeonard Tourgee, Alex Lambert,\nShubham Chomal\nMarch 22, 2025\nFigure 1: Naruto (50)\n1URI PEP Electric Propulsion White Paper\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": "Contents\n1 Background 3\n2 Overview, Build, and Testing Process 3\n2.1 Overview of Naruto . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3\n2.2 Vessel Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4\n2.3 Power Storage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5\n2.4 Control System . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6\n2.5 Propulsion and Pumps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7\n2.6 Hull Construction Details . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9\n3 Modeling and Simulation 11\n4 Performance Expectations 11\n5 Future Plans 12\n6 Acknowledgments 13\n2URI PEP Electric Propulsion White Paper\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "Background\nFigure 2: Naruto during sea trials\nThe increasing demand for sustainable and high-efficiency marine transportation has driven\nthe adoption of electric propulsion systems in both commercial and recreational vessels. As\npart of this ongoing transformation, our team aimed to contribute a unique and practical\nsolution that blends proven electrical engineering concepts with forward-thinking naval ar\u0002chitecture. The result is our vessel, Naruto, a compact, high-performance, electric-powered\nboat engineered to perform in competitive conditions while reflecting modern design princi\u0002ples used in full-scale applications.\nElectric propulsion offers numerous advantages, including reduced emissions, quieter op\u0002eration, lower maintenance costs, and increased efficiency in specific speed regimes. Inspired\nby the precision and flexibility of electric systems used in drones, RC vehicles, and unmanned\nsurface vehicles (USVs), we sought to implement a scalable solution that retains reliability\nand performance in a dynamic aquatic environment.\nOur design emphasizes not only speed and control but also maintainability and modular\u0002ity, ensuring the craft can be quickly reconfigured or repaired in the field. The project was\napproached with rigorous research into electric propulsion technologies, careful consideration\nof mechanical and hydrodynamic factors, and a commitment to innovative problem-solving.\nOverview, Build, and Testing Process\nOverview of Naruto\nNaruto is a 1/32 scale high-speed, unmanned, electric monohull designed by the University of\nRhode Island’s Promoting Electric Propulsion (PEP) team. The vessel’s hull form features a\nthree-stage stepped planing design that reduces wetted surface area at higher speeds, thereby\ndecreasing drag and increasing efficiency. This approach draws inspiration from performance\nboats and offshore racing hulls known for their stability and maneuverability.\n3URI PEP Electric Propulsion White Paper\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": "Figure 3: Profile view of Naruto\nThe vessel is constructed using marine-grade wood layered with fiberglass and epoxy\nresin. This method provides a durable yet lightweight structure capable of withstanding\nrepeated exposure to fresh and saltwater environments. The deck is segmented into wa\u0002tertight compartments, each accessible via uniquely fitted, 3D-printed, sliding hatches, and\nsupported by a skeletal substructure of aluminum cross-braces to enhance rigidity.\nOn the interior, the design reflects both form and function. Compartments are clearly des\u0002ignated for battery storage, electronics control, flotation foam, and scale-model cabin spaces.\nThis segmentation allows for simplified maintenance and effective balancing of weight, which\nis critical for high-speed stability.\nVessel Specifications\nTable 1: Vessel Specifications\nParameter Value\nScale 1:32\nFull Scale Length 128 ft\nModel Length 4 ft (48 in)\nFull Scale Beam 48 ft\nModel Beam 18 in\nHull Type Three-stage stepped planing monohull\nConstruction Material Wood frame with epoxy + fiberglass sheathing\nDeck Design Reinforced with aluminum cross-bracing and epoxy bulkheads\nTop Speed 21 mph (119 mph full scale equivalent)\n4URI PEP Electric Propulsion White Paper\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "Power Storage\nThe power system is designed with modularity and redundancy in mind. Naruto supports\ntwo primary battery configurations, enabling the team to swap packs depending on race\nstrategy, available charge, and endurance requirements. LiPo batteries were chosen for their\nhigh energy density, reliability under load, and favorable weight-to-power ratios.\nFigure 4: Mechanical room with batteries in place\nTable 2: Battery Configuration Options\nConfiguration Voltage (Nominal) Capacity\n2x 6S LiPo (in parallel) 22.2V each 28 Ah total\n4x 6S LiPo (in parallel) 22.2V each 20 Ah each (80 Ah total)\nXT90 anti-spark connectors are implemented to prevent damaging voltage spikes during\ninitial connection. Battery compartments are lined with dense foam and secured with Dual\nLock to prevent shifting under dynamic motion. Clear labeling and color-coded wiring\nimprove safety and speed during field operations.\n5URI PEP Electric Propulsion White Paper\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "Figure 5: Measurement of the mechanical room opening (approximately 10 inches)\nControl System\nThe control system for Naruto is built around reliability, modularity, and interference resis\u0002tance. It features:\n• A RadioLink transmitter and receiver system with active telemetry for moni\u0002toring voltage, signal strength, and operational status in real time. Also chosen for it’s\nintuitive controls, ease of use, and simple reprogramming flow.\n• A BEC (Battery Eliminator Circuit) to regulate a constant 5V power supply to\nthe receiver and lighting circuits, regardless of main battery charge.\n• Signal wire isolation: The internal BECs built into the ESCs are disabled by remov\u0002ing the red signal wire, preventing voltage conflicts that could damage the receiver.\n• A redundant circuit layout for critical systems to allow selective disconnection in\ncase of component failure.\n6URI PEP Electric Propulsion White Paper\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "Figure 6: RadioLink controller connected to the Naruto system\nAll electrical connections are coated with epoxy and sealed with clear nail polish to ensure\ndurability in high-moisture environments. Wire routing prioritizes accessibility and heat\nmitigation.\nPropulsion and Pumps\nPropulsion is provided by four Turnigy brushless outrunner motors, selected for their lightweight\ndesign, high torque, and compatibility with programmable ESCs. Motor mounts are rein\u0002forced with aluminum struts and utilize adjustable pitch brackets for performance tuning.\n7URI PEP Electric Propulsion White Paper\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": "Table 3: Propulsion System Specifications\nComponent Details\nMotors Turnigy brushless outrunner (drone-style)\nESCs (Outer Motors) Castle Mamba Monster X 6S (sensorless)\nESCs (Inner Motors) Castle Mamba Monster 8S (sensorless)\nMax Current Draw 20A cruise, 40A peak (bollard pull) per motor\nESC Programming Castle Link USB software, throttle curve and timing tuned\nFigure 7: Bilge pump in the hull of Naruto\nBilge management is handled by two peristaltic pumps located in the aft compartments.\nThese pumps are self-priming, debris-resistant, and can run dry without damage. They\nare controlled through a brushed ESC with forward and reverse functionality, allowing for\nautomated clog clearing in operation.\n8URI PEP Electric Propulsion White Paper\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "Hull Construction Details\nFigure 8: Naruto during interior electronics installation\nThe hull is composed of multiple subsystems, each contributing to the overall performance\nand durability:\n• Fiberglass laminate layers on the exterior and interior protect the wood core from\nwater intrusion and physical stress.\n• Reinforced bulkheads and aluminum square-tube cross-braces prevent flexing\nat high speeds.\n• Modular compartments support foam flotation, electronics, and aesthetic design\nfeatures like navigation lights and cabins.\n• Sliding deck hatches made from 3D-printed ABS allow quick access to internal\ncomponents without requiring tools.\n9URI PEP Electric Propulsion White Paper\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 10,
+      "text": "Figure 9: Underside of Naruto showing rudder placement\nThe quad-blade propellers were chosen because they were cost-effective, accessible, and\nreliable in testing. When tested against two-blade propellers of similar design, they were\nfound to produce less churn and froth, enabling a more efficient transfer of power.\nFigure 10: Testing the hull for leaks in the fiberglass seal\nNavigation lights, interior deck lighting, and nameplate LEDs are all integrated into the\nstructure and powered via dedicated receiver channels with pre-installed resistors for current\ncontrol.\n10URI PEP Electric Propulsion White Paper\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 11,
+      "text": "Modeling and Simulation\nOur team employed a combination of CAD modeling and real-world empirical data to validate\nand refine our design. The hull form was developed using Rhino 7 and Solidworks, enabling\nus to fine-tune planing characteristics, balance, and structural layout before fabrication.\nFigure 11: CFD Run showcasing drag and wake profile from a front view\nDue to software limitations with Solidworks FlowSim’s free-surface simulation module, we\nemphasized real-world testing backed by onboard telemetry. Castle ESCs log current draw,\nthrottle position, and error events, while GPS telemetry (via wearable sensors) allowed us\nto compare performance profiles against expected values. Some CFD graphics may look low\nquality as a result of having to completely redo CFD the day of submission after a technical\nerror.\nTest data was gathered during high-speed lake runs and towing tank simulations. From\na 12-second data window at full throttle, we calculated a peak draw of 0.65 Ah/min per\nmotor, translating to roughly 39A. From this, we extrapolated the total required battery\ncapacity to complete a 2-mile run across several speed and load scenarios.\nPerformance Expectations\nBased on our testing, Naruto demonstrates the capability to achieve a top speed of 21 mph\nunder optimal load and environmental conditions. The stepped hull provides stable lift at\nplaning speeds and significantly reduces slamming in choppy water, improving both battery\nefficiency and component longevity. Our CFD runs also were validated by our real world\ntests showing very similar charactaristics when on plane to the boat during testing.\n11URI PEP Electric Propulsion White Paper\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 12,
+      "text": "Figure 12: CFD Run showcasing drag and wake profile from a side view when on plane\nFigure 13: Click the image to watch our test footage\nThroughout testing we found the boat to be capable of roughly 20 miles an hour for\n12 miles of range on 2x 28Ah and 2x 22Ah batteries. The vessel is also capable of zero\u0002radius turns using differential thrust and rudder control, a feature particularly useful during\nobstacle or agility events.\nIn rough conditions, Naruto’s foam core and sealed hull design enable it to remain afloat\neven when flooded. Testing has confirmed that the vessel can continue operating with partial\npropulsion loss or minor hull flooding, increasing resilience during competitive runs.\nFuture Plans\nFuture iterations of Naruto may include:\n• Additively manufactured hull and other critical components, such as prop shaft cou\u0002plings, made from high-strength alloys.\n• Integration of sensored ESCs to eliminate cogging during initial startup and low-speed\nthrust conditions.\n• Use of stainless steel bearings and waterproof connectors to further improve saltwater\ndurability.\n12URI PEP Electric Propulsion White Paper\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 13,
+      "text": "• Adoption of higher-pitch propellers for greater high-speed efficiency, tested against the\ncurrent configuration.\n• A modular, solar-charging top deck to explore longer-endurance unmanned surface\noperations.\n• Enclosure upgrades using waterproof boxes for critical electronics, isolating motor con\u0002trol systems from navigational sensors.\nAcknowledgments\nAs a team, we would like to thank our industry sponsor, PacMar Technologies. Their team\nworked with us throughout the year in a collaborative and financial capacity.\nNaruto’s design reflects the synthesis of hobbyist innovation and professional engineer\u0002ing practice. The propulsion configuration mirrors those used in high-performance multi\u0002rotor drones, with independently addressable motors enabling precise control. ESCs are\nprogrammable to match propeller loading and allow real-time telemetry logging, much like\nsystems in competitive e-racing vehicles.\nOur hull geometry is inspired by commercial stepped-hull speedboats and incorporates\nnaval architecture principles in planing stability and structural reinforcement. Innovative\nintegration of LED lighting and bilge automation demonstrates practical foresight in both\nsafety and reliability—core features for any vessel operating autonomously in dynamic envi\u0002ronments.\n13\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Innovative Electric Propulsion System for High-Speed"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Vessel Naruto"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "URI PEP Team"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "University of Rhode Island"
+    },
+    {
+      "line": 4,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Sam Miller, Ashley Sciacca,"
+    },
+    {
+      "line": 5,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Leonard Tourgee, Alex Lambert,"
+    },
+    {
+      "line": 6,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Shubham Chomal"
+    },
+    {
+      "line": 7,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "March 22, 2025"
+    },
+    {
+      "line": 8,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Figure 1: Naruto (50)"
+    },
+    {
+      "line": 9,
+      "page_start": 0,
+      "page_end": 1,
+      "text": "1URI PEP Electric Propulsion White Paper"
+    },
+    {
+      "line": 10,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Contents"
+    },
+    {
+      "line": 11,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "1 Background 3"
+    },
+    {
+      "line": 12,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "2 Overview, Build, and Testing Process 3"
+    },
+    {
+      "line": 13,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "2.1 Overview of Naruto . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3"
+    },
+    {
+      "line": 14,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "2.2 Vessel Specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4"
+    },
+    {
+      "line": 15,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "2.3 Power Storage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5"
+    },
+    {
+      "line": 16,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "2.4 Control System . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6"
+    },
+    {
+      "line": 17,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "2.5 Propulsion and Pumps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7"
+    },
+    {
+      "line": 18,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "2.6 Hull Construction Details . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9"
+    },
+    {
+      "line": 19,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "3 Modeling and Simulation 11"
+    },
+    {
+      "line": 20,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "4 Performance Expectations 11"
+    },
+    {
+      "line": 21,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "5 Future Plans 12"
+    },
+    {
+      "line": 22,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "6 Acknowledgments 13"
+    },
+    {
+      "line": 23,
+      "page_start": 1,
+      "page_end": 2,
+      "text": "2URI PEP Electric Propulsion White Paper"
+    },
+    {
+      "line": 24,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Background"
+    },
+    {
+      "line": 25,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Figure 2: Naruto during sea trials"
+    },
+    {
+      "line": 26,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "The increasing demand for sustainable and high-efficiency marine transportation has driven"
+    },
+    {
+      "line": 27,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "the adoption of electric propulsion systems in both commercial and recreational vessels. As"
+    },
+    {
+      "line": 28,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "part of this ongoing transformation, our team aimed to contribute a unique and practical"
+    },
+    {
+      "line": 29,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "solution that blends proven electrical engineering concepts with forward-thinking naval ar\u0002chitecture. The result is our vessel, Naruto, a compact, high-performance, electric-powered"
+    },
+    {
+      "line": 30,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "boat engineered to perform in competitive conditions while reflecting modern design princi\u0002ples used in full-scale applications."
+    },
+    {
+      "line": 31,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Electric propulsion offers numerous advantages, including reduced emissions, quieter op\u0002eration, lower maintenance costs, and increased efficiency in specific speed regimes. Inspired"
+    },
+    {
+      "line": 32,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "by the precision and flexibility of electric systems used in drones, RC vehicles, and unmanned"
+    },
+    {
+      "line": 33,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "surface vehicles (USVs), we sought to implement a scalable solution that retains reliability"
+    },
+    {
+      "line": 34,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "and performance in a dynamic aquatic environment."
+    },
+    {
+      "line": 35,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Our design emphasizes not only speed and control but also maintainability and modular\u0002ity, ensuring the craft can be quickly reconfigured or repaired in the field. The project was"
+    },
+    {
+      "line": 36,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "approached with rigorous research into electric propulsion technologies, careful consideration"
+    },
+    {
+      "line": 37,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "of mechanical and hydrodynamic factors, and a commitment to innovative problem-solving."
+    },
+    {
+      "line": 38,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Overview, Build, and Testing Process"
+    },
+    {
+      "line": 39,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Overview of Naruto"
+    },
+    {
+      "line": 40,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Naruto is a 1/32 scale high-speed, unmanned, electric monohull designed by the University of"
+    },
+    {
+      "line": 41,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Rhode Island’s Promoting Electric Propulsion (PEP) team. The vessel’s hull form features a"
+    },
+    {
+      "line": 42,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "three-stage stepped planing design that reduces wetted surface area at higher speeds, thereby"
+    },
+    {
+      "line": 43,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "decreasing drag and increasing efficiency. This approach draws inspiration from performance"
+    },
+    {
+      "line": 44,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "boats and offshore racing hulls known for their stability and maneuverability."
+    },
+    {
+      "line": 45,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "3URI PEP Electric Propulsion White Paper"
+    },
+    {
+      "line": 46,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Figure 3: Profile view of Naruto"
+    },
+    {
+      "line": 47,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "The vessel is constructed using marine-grade wood layered with fiberglass and epoxy"
+    },
+    {
+      "line": 48,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "resin. This method provides a durable yet lightweight structure capable of withstanding"
+    },
+    {
+      "line": 49,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "repeated exposure to fresh and saltwater environments. The deck is segmented into wa\u0002tertight compartments, each accessible via uniquely fitted, 3D-printed, sliding hatches, and"
+    },
+    {
+      "line": 50,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "supported by a skeletal substructure of aluminum cross-braces to enhance rigidity."
+    },
+    {
+      "line": 51,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "On the interior, the design reflects both form and function. Compartments are clearly des\u0002ignated for battery storage, electronics control, flotation foam, and scale-model cabin spaces."
+    },
+    {
+      "line": 52,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "This segmentation allows for simplified maintenance and effective balancing of weight, which"
+    },
+    {
+      "line": 53,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "is critical for high-speed stability."
+    },
+    {
+      "line": 54,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Vessel Specifications"
+    },
+    {
+      "line": 55,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Table 1: Vessel Specifications"
+    },
+    {
+      "line": 56,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Parameter Value"
+    },
+    {
+      "line": 57,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Scale 1:32"
+    },
+    {
+      "line": 58,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Full Scale Length 128 ft"
+    },
+    {
+      "line": 59,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Model Length 4 ft (48 in)"
+    },
+    {
+      "line": 60,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Full Scale Beam 48 ft"
+    },
+    {
+      "line": 61,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Model Beam 18 in"
+    },
+    {
+      "line": 62,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Hull Type Three-stage stepped planing monohull"
+    },
+    {
+      "line": 63,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Construction Material Wood frame with epoxy + fiberglass sheathing"
+    },
+    {
+      "line": 64,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Deck Design Reinforced with aluminum cross-bracing and epoxy bulkheads"
+    },
+    {
+      "line": 65,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Top Speed 21 mph (119 mph full scale equivalent)"
+    },
+    {
+      "line": 66,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "4URI PEP Electric Propulsion White Paper"
+    },
+    {
+      "line": 67,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Power Storage"
+    },
+    {
+      "line": 68,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "The power system is designed with modularity and redundancy in mind. Naruto supports"
+    },
+    {
+      "line": 69,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "two primary battery configurations, enabling the team to swap packs depending on race"
+    },
+    {
+      "line": 70,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "strategy, available charge, and endurance requirements. LiPo batteries were chosen for their"
+    },
+    {
+      "line": 71,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "high energy density, reliability under load, and favorable weight-to-power ratios."
+    },
+    {
+      "line": 72,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Figure 4: Mechanical room with batteries in place"
+    },
+    {
+      "line": 73,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Table 2: Battery Configuration Options"
+    },
+    {
+      "line": 74,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Configuration Voltage (Nominal) Capacity"
+    },
+    {
+      "line": 75,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "2x 6S LiPo (in parallel) 22.2V each 28 Ah total"
+    },
+    {
+      "line": 76,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "4x 6S LiPo (in parallel) 22.2V each 20 Ah each (80 Ah total)"
+    },
+    {
+      "line": 77,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "XT90 anti-spark connectors are implemented to prevent damaging voltage spikes during"
+    },
+    {
+      "line": 78,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "initial connection. Battery compartments are lined with dense foam and secured with Dual"
+    },
+    {
+      "line": 79,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Lock to prevent shifting under dynamic motion. Clear labeling and color-coded wiring"
+    },
+    {
+      "line": 80,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "improve safety and speed during field operations."
+    },
+    {
+      "line": 81,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "5URI PEP Electric Propulsion White Paper"
+    },
+    {
+      "line": 82,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Figure 5: Measurement of the mechanical room opening (approximately 10 inches)"
+    },
+    {
+      "line": 83,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Control System"
+    },
+    {
+      "line": 84,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "The control system for Naruto is built around reliability, modularity, and interference resis\u0002tance. It features:"
+    },
+    {
+      "line": 85,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "• A RadioLink transmitter and receiver system with active telemetry for moni\u0002toring voltage, signal strength, and operational status in real time. Also chosen for it’s"
+    },
+    {
+      "line": 86,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "intuitive controls, ease of use, and simple reprogramming flow."
+    },
+    {
+      "line": 87,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "• A BEC (Battery Eliminator Circuit) to regulate a constant 5V power supply to"
+    },
+    {
+      "line": 88,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "the receiver and lighting circuits, regardless of main battery charge."
+    },
+    {
+      "line": 89,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "• Signal wire isolation: The internal BECs built into the ESCs are disabled by remov\u0002ing the red signal wire, preventing voltage conflicts that could damage the receiver."
+    },
+    {
+      "line": 90,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "• A redundant circuit layout for critical systems to allow selective disconnection in"
+    },
+    {
+      "line": 91,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "case of component failure."
+    },
+    {
+      "line": 92,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "6URI PEP Electric Propulsion White Paper"
+    },
+    {
+      "line": 93,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Figure 6: RadioLink controller connected to the Naruto system"
+    },
+    {
+      "line": 94,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "All electrical connections are coated with epoxy and sealed with clear nail polish to ensure"
+    },
+    {
+      "line": 95,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "durability in high-moisture environments. Wire routing prioritizes accessibility and heat"
+    },
+    {
+      "line": 96,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "mitigation."
+    },
+    {
+      "line": 97,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Propulsion and Pumps"
+    },
+    {
+      "line": 98,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Propulsion is provided by four Turnigy brushless outrunner motors, selected for their lightweight"
+    },
+    {
+      "line": 99,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "design, high torque, and compatibility with programmable ESCs. Motor mounts are rein\u0002forced with aluminum struts and utilize adjustable pitch brackets for performance tuning."
+    },
+    {
+      "line": 100,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "7URI PEP Electric Propulsion White Paper"
+    },
+    {
+      "line": 101,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Table 3: Propulsion System Specifications"
+    },
+    {
+      "line": 102,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Component Details"
+    },
+    {
+      "line": 103,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Motors Turnigy brushless outrunner (drone-style)"
+    },
+    {
+      "line": 104,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "ESCs (Outer Motors) Castle Mamba Monster X 6S (sensorless)"
+    },
+    {
+      "line": 105,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "ESCs (Inner Motors) Castle Mamba Monster 8S (sensorless)"
+    },
+    {
+      "line": 106,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Max Current Draw 20A cruise, 40A peak (bollard pull) per motor"
+    },
+    {
+      "line": 107,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "ESC Programming Castle Link USB software, throttle curve and timing tuned"
+    },
+    {
+      "line": 108,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Figure 7: Bilge pump in the hull of Naruto"
+    },
+    {
+      "line": 109,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Bilge management is handled by two peristaltic pumps located in the aft compartments."
+    },
+    {
+      "line": 110,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "These pumps are self-priming, debris-resistant, and can run dry without damage. They"
+    },
+    {
+      "line": 111,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "are controlled through a brushed ESC with forward and reverse functionality, allowing for"
+    },
+    {
+      "line": 112,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "automated clog clearing in operation."
+    },
+    {
+      "line": 113,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "8URI PEP Electric Propulsion White Paper"
+    },
+    {
+      "line": 114,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Hull Construction Details"
+    },
+    {
+      "line": 115,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Figure 8: Naruto during interior electronics installation"
+    },
+    {
+      "line": 116,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "The hull is composed of multiple subsystems, each contributing to the overall performance"
+    },
+    {
+      "line": 117,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "and durability:"
+    },
+    {
+      "line": 118,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "• Fiberglass laminate layers on the exterior and interior protect the wood core from"
+    },
+    {
+      "line": 119,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "water intrusion and physical stress."
+    },
+    {
+      "line": 120,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "• Reinforced bulkheads and aluminum square-tube cross-braces prevent flexing"
+    },
+    {
+      "line": 121,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "at high speeds."
+    },
+    {
+      "line": 122,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "• Modular compartments support foam flotation, electronics, and aesthetic design"
+    },
+    {
+      "line": 123,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "features like navigation lights and cabins."
+    },
+    {
+      "line": 124,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "• Sliding deck hatches made from 3D-printed ABS allow quick access to internal"
+    },
+    {
+      "line": 125,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "components without requiring tools."
+    },
+    {
+      "line": 126,
+      "page_start": 8,
+      "page_end": 9,
+      "text": "9URI PEP Electric Propulsion White Paper"
+    },
+    {
+      "line": 127,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Figure 9: Underside of Naruto showing rudder placement"
+    },
+    {
+      "line": 128,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "The quad-blade propellers were chosen because they were cost-effective, accessible, and"
+    },
+    {
+      "line": 129,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "reliable in testing. When tested against two-blade propellers of similar design, they were"
+    },
+    {
+      "line": 130,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "found to produce less churn and froth, enabling a more efficient transfer of power."
+    },
+    {
+      "line": 131,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Figure 10: Testing the hull for leaks in the fiberglass seal"
+    },
+    {
+      "line": 132,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Navigation lights, interior deck lighting, and nameplate LEDs are all integrated into the"
+    },
+    {
+      "line": 133,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "structure and powered via dedicated receiver channels with pre-installed resistors for current"
+    },
+    {
+      "line": 134,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "control."
+    },
+    {
+      "line": 135,
+      "page_start": 9,
+      "page_end": 10,
+      "text": "10URI PEP Electric Propulsion White Paper"
+    },
+    {
+      "line": 136,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Modeling and Simulation"
+    },
+    {
+      "line": 137,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Our team employed a combination of CAD modeling and real-world empirical data to validate"
+    },
+    {
+      "line": 138,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "and refine our design. The hull form was developed using Rhino 7 and Solidworks, enabling"
+    },
+    {
+      "line": 139,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "us to fine-tune planing characteristics, balance, and structural layout before fabrication."
+    },
+    {
+      "line": 140,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Figure 11: CFD Run showcasing drag and wake profile from a front view"
+    },
+    {
+      "line": 141,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Due to software limitations with Solidworks FlowSim’s free-surface simulation module, we"
+    },
+    {
+      "line": 142,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "emphasized real-world testing backed by onboard telemetry. Castle ESCs log current draw,"
+    },
+    {
+      "line": 143,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "throttle position, and error events, while GPS telemetry (via wearable sensors) allowed us"
+    },
+    {
+      "line": 144,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "to compare performance profiles against expected values. Some CFD graphics may look low"
+    },
+    {
+      "line": 145,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "quality as a result of having to completely redo CFD the day of submission after a technical"
+    },
+    {
+      "line": 146,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "error."
+    },
+    {
+      "line": 147,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Test data was gathered during high-speed lake runs and towing tank simulations. From"
+    },
+    {
+      "line": 148,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "a 12-second data window at full throttle, we calculated a peak draw of 0.65 Ah/min per"
+    },
+    {
+      "line": 149,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "motor, translating to roughly 39A. From this, we extrapolated the total required battery"
+    },
+    {
+      "line": 150,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "capacity to complete a 2-mile run across several speed and load scenarios."
+    },
+    {
+      "line": 151,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Performance Expectations"
+    },
+    {
+      "line": 152,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Based on our testing, Naruto demonstrates the capability to achieve a top speed of 21 mph"
+    },
+    {
+      "line": 153,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "under optimal load and environmental conditions. The stepped hull provides stable lift at"
+    },
+    {
+      "line": 154,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "planing speeds and significantly reduces slamming in choppy water, improving both battery"
+    },
+    {
+      "line": 155,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "efficiency and component longevity. Our CFD runs also were validated by our real world"
+    },
+    {
+      "line": 156,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "tests showing very similar charactaristics when on plane to the boat during testing."
+    },
+    {
+      "line": 157,
+      "page_start": 10,
+      "page_end": 11,
+      "text": "11URI PEP Electric Propulsion White Paper"
+    },
+    {
+      "line": 158,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Figure 12: CFD Run showcasing drag and wake profile from a side view when on plane"
+    },
+    {
+      "line": 159,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Figure 13: Click the image to watch our test footage"
+    },
+    {
+      "line": 160,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Throughout testing we found the boat to be capable of roughly 20 miles an hour for"
+    },
+    {
+      "line": 161,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "12 miles of range on 2x 28Ah and 2x 22Ah batteries. The vessel is also capable of zero\u0002radius turns using differential thrust and rudder control, a feature particularly useful during"
+    },
+    {
+      "line": 162,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "obstacle or agility events."
+    },
+    {
+      "line": 163,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "In rough conditions, Naruto’s foam core and sealed hull design enable it to remain afloat"
+    },
+    {
+      "line": 164,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "even when flooded. Testing has confirmed that the vessel can continue operating with partial"
+    },
+    {
+      "line": 165,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "propulsion loss or minor hull flooding, increasing resilience during competitive runs."
+    },
+    {
+      "line": 166,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Future Plans"
+    },
+    {
+      "line": 167,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Future iterations of Naruto may include:"
+    },
+    {
+      "line": 168,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "• Additively manufactured hull and other critical components, such as prop shaft cou\u0002plings, made from high-strength alloys."
+    },
+    {
+      "line": 169,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "• Integration of sensored ESCs to eliminate cogging during initial startup and low-speed"
+    },
+    {
+      "line": 170,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "thrust conditions."
+    },
+    {
+      "line": 171,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "• Use of stainless steel bearings and waterproof connectors to further improve saltwater"
+    },
+    {
+      "line": 172,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "durability."
+    },
+    {
+      "line": 173,
+      "page_start": 11,
+      "page_end": 12,
+      "text": "12URI PEP Electric Propulsion White Paper"
+    },
+    {
+      "line": 174,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "• Adoption of higher-pitch propellers for greater high-speed efficiency, tested against the"
+    },
+    {
+      "line": 175,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "current configuration."
+    },
+    {
+      "line": 176,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "• A modular, solar-charging top deck to explore longer-endurance unmanned surface"
+    },
+    {
+      "line": 177,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "operations."
+    },
+    {
+      "line": 178,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "• Enclosure upgrades using waterproof boxes for critical electronics, isolating motor con\u0002trol systems from navigational sensors."
+    },
+    {
+      "line": 179,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Acknowledgments"
+    },
+    {
+      "line": 180,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "As a team, we would like to thank our industry sponsor, PacMar Technologies. Their team"
+    },
+    {
+      "line": 181,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "worked with us throughout the year in a collaborative and financial capacity."
+    },
+    {
+      "line": 182,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Naruto’s design reflects the synthesis of hobbyist innovation and professional engineer\u0002ing practice. The propulsion configuration mirrors those used in high-performance multi\u0002rotor drones, with independently addressable motors enabling precise control. ESCs are"
+    },
+    {
+      "line": 183,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "programmable to match propeller loading and allow real-time telemetry logging, much like"
+    },
+    {
+      "line": 184,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "systems in competitive e-racing vehicles."
+    },
+    {
+      "line": 185,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Our hull geometry is inspired by commercial stepped-hull speedboats and incorporates"
+    },
+    {
+      "line": 186,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "naval architecture principles in planing stability and structural reinforcement. Innovative"
+    },
+    {
+      "line": 187,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "integration of LED lighting and bilge automation demonstrates practical foresight in both"
+    },
+    {
+      "line": 188,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "safety and reliability—core features for any vessel operating autonomously in dynamic envi\u0002ronments."
+    },
+    {
+      "line": 189,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "13"
+    }
+  ],
+  "source_line_count": 190,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}

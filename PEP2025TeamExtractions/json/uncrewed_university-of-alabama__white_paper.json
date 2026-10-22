@@ -1,0 +1,2903 @@
+{
+  "competition_year": 2025,
+  "team": "University of Alabama",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/Alabama",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Alabama/UAlabama-TideChasersWhitePaper.pdf",
+  "filename": "UAlabama-TideChasersWhitePaper.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "28"
+  },
+  "page_count": 28,
+  "pages_without_text": [],
+  "char_count": 33519,
+  "pages": [
+    {
+      "page": 1,
+      "text": "1\nPEP Competition White Paper\nThe University of Alabama, Mechanical Engineering Department\n3/23/2025\nSubmitted to:\nDr. Michael Briscoe\nSubmitted by:\nThe Tide Chasers\nThe University of Alabama2\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": "X\nGrace Schneider\nTeam Lead / Controls Sub-Team\nX\nCadean Paulsen\nDesign / Hull Fabrication Lead\nX\nClancy Briggs\nPublic Relations / Hull Design Lead\nX\nJohn Perdue\nCommunications / Energy Storage Lead\nX\nKatie Heglas\nQuality Control / Propulsion Lead\nX\nOhm Patel\nFinancial Management / Controls Lead\nTeam Members\nDate: 03/23/25\nDate: 03/23/25\nDate: 03/23/25\nDate: 03/23/25\nDate: 03/23/25\nDate: 03/23/253\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "Executive Summary\nOur project is to design an electrically propelled, remote-controlled boat to compete in the Promoting\nElectric Propulsion 2025 competition. This competition seeks innovations in electric technologies for use\nin the military and industrial sectors. Our team’s key goals are to design, fabricate, and test an uncrewed\nelectric boat from the ground up. The University of Alabama competed in PEP 24, coming in first place in\nthe uncrewed boat division. We intend to continue this streak of excellence in PEP 25 by scoring well on\nour white paper assignment and video presentation and performing well on race day. Our boat will be a\ndeep V-monohull optimized for planing. We will propel our boat with two propellers powered by two 4.5\nkW motors with an open-loop cooling system. We designed our boat hull in SolidWorks and used Ansys to\ncalculate the drag force and optimize the deadrise angle.\nWe will test our motors using a test rig that can measure the heat generation and torque outputs to\neffectively cool our system and understand better how our boat should perform. We plan to fabricate the\nhull out of fiberglass and glue it together with epoxy. Our budget of $8,000 has been mainly allocated\ntowards the hull fabrication and the propulsion systems. We are seeking sponsorship from the university to\nfund our travel costs. After finishing the design of our boat, we will extensively test it in Lake Tuscaloosa\nto gauge its performance and the duration of the battery life, making corrections as necessary. Our robust\nhull design will provide lift through the 17-degree deadrise angle and the presence of strakes, enabling it to\nplane sooner and minimize drag. Our team faced several challenges in the design of our vessel, such as\nlearning how to design boats (which lack governing equations or universal design guidelines), learning\nunfamiliar software, learning how to lay fiberglass properly, balancing the battery requirements while\nminimizing weight, and innovating our fabrication processes when faced with insufficient supplies. The\nproject has taught our team the importance of cross-team collaboration, forcing us to communicate\neffectively between each other to solve the problems at hand, and to go outside of ourselves to learn from 4\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": "experts in fields such as boat design and control components. We highly appreciate our client, Dr. Briscoe,\nwho has given us welcome guidance as we navigate this project. Our team is prepared for the coming tasks,\nand because of our excellent team synergy, we will adapt to any challenges that might arise in the final\nstretch of our project.5\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "Table of Contents\nTeam Members.............................................................................................................................................................2\nExecutive Summary......................................................................................................................................................3\nTable of Contents..........................................................................................................................................................5\nProject Objectives/Scope ..............................................................................................................................................6\nTechnical Approach......................................................................................................................................................8\nEvaluation Method......................................................................................................................................................20\nRisks ...........................................................................................................................................................................23\nReferences...................................................................................................................................................................24\nAppendix.....................................................................................................................................................................266\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "Project Objectives/Scope\nThe University of Alabama PEP team will compete in the unmanned division this year. The team will\nbe tasked with designing and fabricating an unmanned vessel for use in the competition in April 2025.\nThe design is subject to several constraints, which are discussed further in the design requirements\nsection. The student-led nature of the project means that the scope of the competition encompasses initial\ndesign, prototyping, fabrication, testing, and parts sourcing for the final product.\n1. Design\na. Hull: CAD and CFD programs will be used to design an optimal hull for the conditions\nand objectives of the PEP competition.\nb. Power System: Based on motors and propellers used, a power storage system in the form\nof a battery pack will be properly sized and integrated into the boat.\nc. Controls System: A controls system will be sourced and developed such that the boat can\nbe reliably controlled throughout the duration of the race.\n2. Prototyping\na. Hull: Scale models of the chosen design will be constructed to test performance and give\nthe team fiberglass fabrication experience.\nb. Power System: The appropriate motors will be tested with the complete battery pack to\nensure operation and identify potential issues, such as heat generation.\n3. Fabrication\na. Hull: The team will determine an appropriate fabrication method and fabricate the hull\nfrom scratch using university facilities and sourced materials.\nb. Power Systems: Battery pack and management system will be constructed using 3D\nprinted parts, a spot welder, and soldered components. 7\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "4. Material Sourcing\na. Within the given budget of $8,000, the team will source all materials and components\nnecessary to build a functioning boat before the competition date in April.\n5. Competition\na. The team will pilot the completed boat remotely during the 2-mile race from April 15th to\n17th.\nThe objective of this project is to design, fabricate, and compete with a high-performance unmanned\nvessel in the ASNE PEP25 competition. The team will optimize the hull design using CAD and CFD\nsoftware to ensure efficiency, speed, and stability under race conditions. A reliable power system will be\nengineered by selecting appropriate motors, propellers, and a properly sized battery pack to sustain\noperation throughout the competition. Additionally, a robust control system will be developed to enable\nstable and responsive remote operation, ensuring precise maneuverability and compliance with\ncompetition requirements. To validate the design, scale models of the hull and power system will be\nprototyped and tested for performance, durability, and manufacturability before final fabrication. The full\u0002scale vessel will be constructed using appropriate materials and fabrication techniques, integrating all\ncomponents into a cohesive system. All materials and components will be sourced within the allocated\n$8,000 budget while maintaining quality and performance standards. Ultimately, the goal is to ensure the\nvessel is fully functional, meets all competition regulations, and is ready for remote piloting in the 2-mile\nendurance race in April 2025.8\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": "Technical Approach\nHull Team\nMuch research and discussion has gone into designing a new hull for this competition, making\nnote of last year’s setbacks to avoid a similar situation. Due to the manufacturability constraint of no team\nmember having extensive manufacturing experience, we felt that a monohull design would be the best\ndecision for our needs. An emphasis was put on ensuring the boat is lightweight, can achieve planing\nquickly, and has a low drag on the water. Fiberglass was used to construct the hull, and plywood stringers\nto fill out the frame on the inside to ensure the boat is lightweight. The fiberglass operation consisted of\nthree main parts: create a foam plug, create a female fiberglass mold, then layup the boat and stringers.\nAfter these steps were executed, a top deck was then attached and fiber glassed, along with a latch for\neasy access to the boat internals. The final step for the hull was to carefully drill holes for the shafts,\ntubes, and external assemblies, ensuring that they are properly sealed with marine sealer.\nThe next key design consideration for the boat hull is its ability to plane and cut through the water.\nA boat that can easily plane and is sharp through the water will require less power to drive, removing\nsome burden on the power requirements. Much research was done by reading books on boat design,\ntalking with industry experts, and using ANSYS to optimize our boat geometry to achieve the desired\nresults. Through these resources, the boat’s deadrise, the angle of the bottom of the boat from the\nhorizontal, was chosen to be 17 degrees. A 17-degree deadrise is the sweet spot for planing and wave\u0002slicing capability.\nOne of the critical requirements for this year’s race is that unmanned boats must carry 30 or 60\nlbs. for bonus points. The new hull design must handle a 60 lb. load and perform swiftly in the water. For\nthis reason, the boat has been lengthened and widened compared to last year’s design. The new hull will 9\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "be 7.5 feet long, 28 inches wide, and 10 inches deep. These dimensions will allow the boat to easily\nhandle up to 160 lbs., which will also allow larger motors and batteries to be used. Our goal is to produce\na high quality boat while staying within the economic constraints given to us by ASNE.\nControls Team\nUtilizing PEP24’s ideas as a foundation for a layout, a systems diagram was generated to house all\nthe electronics and propulsion systems within the boat. This vessel will only be moved by electric\npropulsion, promoting an emission-free boat. This diagram shows the setup for the boat’s internals.\nFigure (1). Systems Diagram\nFrom Figure (1), the main battery provides power solely to the motors for maximum propulsion\ncapabilities controlled through the ESC’s. We are using a six-channel RadioMaster PWM receiver with a\nRadioMaster radio controller (ELRS programmed) to control the boat. This receiver is responsible for 10\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 10,
+      "text": "sending signals for a set of pumps, two servos, and two ESC’s. Beginning with the motors, we calculated\nthe required power rating of the motors to maintain our wanted speeds of 35-40 mph to be 4.5 KW each.\nWe will be utilizing the Series 5684 1050 KV motor that has a max amp draw of 165 Amps. These motors\nare directly connected to the propeller via straight 8 mm shaft providing a 1:1 power transfer. Because of\nheating limitations, we will run the motors at about 100 amps each. From proper consideration of short\ntime running and power draw, we decided that 10-gauge wire is sufficient to handle our needs. This\nwiring should be sufficient to handle the amperage. In terms of the ESC, we want to make sure the ESC\ncan handle the max amp draw the motor is capable of for user safety and handling. We are using the ZTW\n180 burst amp draw ESC with a 10 A battery eliminator circuit (BEC). This BEC will provide adequate\npower to the servos and receiver at a selectable voltage from 5-8.4 V. We will be emulating a traditional\nRC boat turning system, using 45 KG servos to turn our rudders. As the dynamics of the boat will vary\nwith speed, center of mass, and turbulence, we opted to go for a super conservative value of 45 KG of\ntorque; which is higher than last year’s boat. From PEP 24, the major issue in the system was their\ncooling system. This year we will utilize a revamped cooling system with bigger pumps to ensure\nadequate heat transfer.11\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 11,
+      "text": "Figure (2). Cooling System Diagram\nWe are using 2 C1EC circulating pumps for this operation. These bigger pumps will pull enough\nflow mass flow rate to carry heat out of our system. Both pumps will run separate loops throughout the\nboat to provide cooling to each set of ESC and motor. Originally, the ESC we bought was designed for air\ncooling. Since our boat is an enclosed system, we opted to strip the fan and use thermal paste, thermal\npadding, and an aluminum water cooling block to provide immense conductive heat transfer.\nUnfortunately, each of these pumps require 12 volts 1.2 amps for operation. However, due to PEP 25\nguidelines, we are granted an additional battery for the control systems independent of the battery used for\nthe motors which is shown in Figure (1) through the red lines. These pumps will be controlled by a single\nswitch relay as shown in Figure (1) to power the pumps only when needed for power conservation. Using\nour radiomaster controller, we will implement kill switches (using the relay) to our pumps and even a\nthrottle cut to both of our motors for safety. Finally, two high amperage physical kill switches will be\ninstalled on top of the boat to kill power to both the motors for safety. Moving forward, the 3D printed 12\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 12,
+      "text": "rudders will provide water inlets to allow the pumps to have a water source. Each fin has a surface area of\n16in2, and there are two of them, providing ample amount of turning for the boat. One interesting note on\nthe rudders is the material used to print them. For good properties in water, PETG was used instead of\nPLA. PVA, a water-soluble plastic, was used as supports for the fins, which made cleaning off the\nsupports significantly easier.\nPower System\nAn electric power system must power the boat’s propulsion system to meet the competition’s\ndesign requirements. This power system consists of a power storage unit composed of lithium-ion\nbatteries, a battery management system, and an electric motor. From research done into the hull design\nand effects of drag during operation, it has been determined that two 4.5kW motors will be used as the\nprimary method of propulsion to meet and exceed the 4kW power requirement needed to obtain a design\nspeed of 30 knots, as well as to provide redundancy in the event of a failure during the competition. The\nchosen motor is a traditional RC motor format due to its ability to operate at incredibly high speeds\ncompared to its power draw, small size, and optimized design for the application.\nThis motor system powers a bank of lithium-ion batteries designed to produce between 44.4 and\n55.5 volts at maximum current draws of up to 300 amps. This battery system allows the motors to operate\nat optimal speed for the duration of the race without exceeding competition voltage requirements or\nrunning out of power during the competition. While fabricating a customized battery pack using smaller\ncylindrical cells was considered, the team ultimately decided on utilizing an array of 22.2V 6 Ah LiPo\nbatteries of the type typically used in RC applications. Two battery banks have been created, one to power\neach motor. To achieve the 45V operating voltage of the motors, sets of two batteries were wired together\nin series creating an array of two cells with 44.4V of potential and 6 Ah of capacity. To ensure an\noperating time of approximately 30 minutes at a peak operating current of 100 amps per motor, six of 13\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 13,
+      "text": "these arrays per motor were wired in parallel, giving each battery bank 36 Ah of capacity. To achieve this,\nseries and parallel connectors had to be fabricated using 10 AWG wire the same EC5 connection standard\npresent on the batteries.\nSafety and environmental concerns were also considered heavily in the design of the power\nsystem. The large number of batteries included in parallel configuration not only increases the amount of\navailable capacity but also allows for lower current draw rates for each individual cell, reducing stress and\nthereby the change of thermal runaway and massive heat generation. This not only reduces the safety\nhazards of handling and operating the boat but also minimizes the chance of fouling the competition\ngrounds with hazardous battery material in the event of failure. It was also decided that the battery system\nwill be cooled via a similar system to the motor cooling to further reduced the risk of thermal runaway,\nbut also to ensure that the battery compartment can be sealed to prevent leakage and damage to the cells\nas well as the risk of environmental contamination in the event of a failure. It is also important to note that\nby building an electric power boat, we will be helping to reduce the emissions released by the more\ncommon gasoline-powered boats. By promoting electric propulsion, ASNE is working to build a\ncommunity that is more economically and environmentally friendly.\nPropulsion\nIt was decided from the beginning of this project that the boat would utilize two propellers. Not\nonly does this design have superior maneuverability and fuel efficiency over a single propeller design, it\nalso brings a level of redundancy into the system. If one motor fails (either by overheating which occurred\nin the previous competition or by power supply issues), there would still be one motor/propeller system\ndriving the boat forward, albeit slower. In the dual propeller design, the propellers rotate in opposite\ndirections, as shown in Figure (3). This counter-rotation eliminates any unwanted torques from being\napplied to the hull (which could cause tipping) and it also eliminates the phenomenon of “prop walk” 14\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 14,
+      "text": "wherein a propeller pushes the back of the boat to starboard or port side causing an unintentional turn of\ndirection. Additionally, due to the complexity that arises from installing a gearbox, it was also determined\nthat the propellers would be directly connected to the motors (and thus have a 1:1 rotation ratio with the\nmotors).\nFigure (3). Diagram of Propeller Rotation\nFrom preliminary simulations of the boat in Ansys, drag values were defined for multiple speeds,\nas summarized in Table (1). These drag values correlate to the minimum required thrusts that the\npropellers must achieve so that the boat will move forward. From the motor specifications, it is also\nknown that the stall torque is 1.5 Nm and the no load speed is 46,620 rpm with an applied voltage of 44.4\nV as with our power system. With these parameters, a motor performance curve can be constructed,\nshown in Figure (4), wherein all points that lie below this curve are achievable torque/speed\ncombinations.15\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 15,
+      "text": "Table (1): Profile Drag Values at each Computed Speed\nSpeed (mph) Profile Drag Due to Hull (N)\n5 56.7\n10 70.6\n15 122.4\n20 155.0\n25 145.7\n30 120.5\nFigure (4). Motor Performance Curve for an Applied Voltage of 44.4 V\nTaking both design requirements into consideration, a 3-bladed Wageningen B-screw series\npropeller with a diameter of 3 inches was chosen as the basis for our propeller design. Not only is the B\u0002screw highly efficient, with its popularity in use, it has many resources on optimization as well as\npredicted open-water performance. To further develop the specific geometry of the propellers, the open\nwater curves of the Wageningen B-screw series were examined in the context of the motor performance\ncurve and drag values to overcome. Prior to this comparison, however, the design requirements outlined\nabove were converted to the non-dimensional performance characteristics of Advance Ratio (J),\n0\n0.2\n0.4\n0.6\n0.8\n1\n1.2\n1.4\n1.6\n0 10,000 20,000 30,000 40,000 50,000\nTorque (N*m)\nMotor Shaft Speed (rpm)16\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 16,
+      "text": "Coefficient of Thrust (CT), and Coefficient of Torque (CQ). These converisions were performed using the\nfollowing equations:\n𝑱𝑱 = 𝑽𝑽𝑨𝑨 �\nmi\nhr�\n𝒏𝒏 (rpm) ∗ 𝑫𝑫 (in)\n∗\n5,280 ft\n1 mi ∗\n12 in\n1 ft ∗ 1 hr60 min\n(1)\n(𝑪𝑪𝑻𝑻)𝒓𝒓𝒓𝒓𝒓𝒓 = 𝑻𝑻𝒓𝒓𝒓𝒓𝒓𝒓\n𝝆𝝆𝒏𝒏𝟐𝟐𝑫𝑫𝟒𝟒\n= 𝑭𝑭𝒅𝒅 𝒅𝒅𝒅𝒅 (N)\n𝝆𝝆 � kg\nm3� ∗ (𝒏𝒏 (rpm))𝟐𝟐 ∗ �𝑫𝑫 (in)�\n𝟒𝟒 ∗ �\n39.37 in\n1 m �\n4\n∗ �\n60 sec\n1 min�\n2\n(2)\n�𝑪𝑪𝑸𝑸� 𝒂𝒂 𝒂𝒂𝒂𝒂 = 𝑸𝑸 𝒂𝒂 𝒂𝒂𝒂𝒂 (N ∗ m)\n𝝆𝝆 � kg\nm3� ∗ (𝒏𝒏 (rpm))𝟐𝟐 ∗ �𝑫𝑫 (in)�\n𝟓𝟓 ∗ �\n39.37 in\n1 m �\n5\n∗ �\n60 sec\n1 min�\n2\n(3)\nwhere VA is the forward velocity of the boat, n is the rotational speed of the propeller, D is the diameter of\nthe propeller, Treq is the required thrust, ρ is water density, Fdrag is the drag forces shown in Table (1), and\nQavail is the available motor torque given on the performance curve shown in Figure (4). The results of\nthese conversions are shown in Figures 5 through 8.\nFour cases of changing pitch-to-diameter ratio (P/D) values were examined in the open water\nperformance curves for a 3-blade b-series propeller and were used to produce the curves shown in Figure\n(5) and Figure (6). As P/D increases, both CT and CQ values increase for all advance ratios. Because the\ngear ratio between the motors and propellers is one, the propellers will operate at very low J values\n(because n is very high) and torque will be a limiting factor. Thus, P/D was set to a value of 0.5. 17\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 17,
+      "text": "Figure (5): Effect of changing P/D on Thrust Coefficient as compared to (CT)req values\nFigure (6): Effect of changing P/D on Torque Coefficient as compared to (CQ)avail values\nSimilarly, the open water performance curve were used to test 4 cases of varying blade aero ratio\n(AE/AO). Low AE/AO values have greater CT and CQ values at low advance ratios, however, at high\nadvance ratios they have lower CT and CQ values. The converse is also true for high AE/AO values. Thus,\nto limit CQ at the low advance ratios we operate at, the AE/AO value was set to 0.3.18\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 18,
+      "text": "Figure (7): Effect of changing AE/AO on Thrust Coefficient as compared to (CT)req values\nFigure (8): Effect of changing AE/AO on Torque Coefficient as compared to (CQ)avail values\nTo manufacture this design, the propellers first had to be modeled in CAD. OpenVSP was used to\nmodel the complex geometry of the blades as this software is particularly adept at modeling designs that\nprioritize fluid dynamics. The blades were then imported into SolidWorks and the hub and shaft coupler\nconnection were modeled. Prototypes were made in PLA before investing in prints with better material\ncharacteristics. There are two sets of final propellers, one made of Tough 1500 resin and one 3D printed\nwith a carbon fiber reinforced nylon composite, shown in Figure (9). These propellers were sanded and\nhad a layer of epoxy and fiberglass applied to reinforce the hub-blade connections which were the failure 19\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 19,
+      "text": "points in earlier prototype testing. Having two sets of propellers allows the team to test the material limits\nof the propulsion system.\n(a) (b)\n(c) (d)\nFigure (9): Carbon fiber reinforced nylon composite propeller from (a) shaft perspective and from (b)\ndownstream perspective and Tough 1500 resin printed propeller from (c) shaft perspective and from (d)\ndownstream perspective 20\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 20,
+      "text": "Evaluation Method\nTo gauge the performance, longevity, and heat generation characteristics of our power train\ndesign, a test rig was designed to replicate the real-world operation of the drive system. This testing\nsystem allows the batteries and motors to be examined in isolation at different operating conditions to\nguide the team’s decision regarding cooling system design and adding additional energy storage to\nincrease runtime.\nTest Rig Design\nThe first test measured the thrust generated by our propellers and assessed heat production. We\nused a strain gauge on a cantilever beam positioned at a 90-degree angle to the motor to capture the data.\nFour thermocouples were used to monitor the temperature of each component, with one placed on the flat\nside of the battery pack being examined and one placed on the long end next to the wire connections and\ncharging balancer. The third was placed on or adjacent to the electronic speed controller and the final one\nwill be affixed to the outer casing of the motor. These thermocouples were used to record the temperature\nof each device over the course of the experiment. The test concluded a successful trial of the setup with\nthe propeller able to sustain loads up to 17000 rpm. At this speed, the ESC was showing considerable\namounts of amperage draw, which was expected. The ESC, however, sustained a high temperature of 90\ndegrees Celsius. This, however, will be remedied by our method of thermal paste to allow for more\ncontact area of heat transfer.\nTo test the failure mechanisms of different powertrain systems, a test setup was created to simulate\na worst-case scenario load on the powertrain components. The setup consisted of a wooden stand to\nmount the motor, pump, and control systems on, as well as a board running parallel to the shaft to allow\nfor shaft support. The heat of the speed controllers, motor RPM, current draw, and throttle percentage 21\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 21,
+      "text": "were monitored through the ZTW app. For some testing, thrust was determined by attaching the motor to\na steel beam of known quantity outfitted with a strain gauge, whose values were recorded for thrust\ncalculation. The test took place in a pool of ample depth and length to avoid the effects of turbulence in\nthe water.\nDuring the performance test, two cells were wired in series and operated at the current that would\nbe expected of an individual 44.4V cell under craft operation, approximately 20 amps. The throttle\nposition was increased slowly until reaching a motor speed of approximately 20,000 RPM and the readout\nfor all data listed above was recorded to be able to collect data over time. At the maximum RPM reached,\nthe vibration of the shaft was deemed too significant, and the test was concluded.\nThe test was then repeated after allowing the power components ample time to cool, but this time\nthrottle was increased at a slower rate to gauge the thermal performance. At time of testing, inadequate\nthermal contact was made between the ESC and associated water block. The testing was performed as a\nworst-case scenario in terms of thermal contact, and the thermal contact issues have since been remedied.\nAt time of testing, the motor was able to maintain 15% throttle for approximately 90 seconds before the\nthermal limits of the equipment were reached. Corrective measures were taken to ensure better thermal\ncontact between heat generating components and water block.\nThe test illustrated the durability of the materials used in the propellers and shaft, demonstrating\nthat these would likely not be points of failure under operation. Additionally, the ability of the power\nsystem to perform for an extended period without overheating with inadequate cooling bolstered\nconfidence in the effectiveness of the cooling system as it stands. Additionally, the strain data gained\nduring the test allowed a thrust to throttle percentage curve to be determined, allowing the potential thrust\nof the system at different currents to be estimated. The height of the test rig was also varied during 22\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 22,
+      "text": "operation to mitigate propeller cavitation, giving valuable insight into the height at which the propellers\nshould be mounted relative to the surface of the water.\nThese tests will be repeated following the retrofitting of the power system with more robust\ncomponents, including cast aluminum propellers and a more rigorous thermal management system. Future\ntesting will take place with the propulsion system fully packaged inside the finished boat to determine the\nboat’s dynamic properties, as well as to determine the limits to be set in the control system relating to\npower delivery and calibration. 23\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 23,
+      "text": "Risks\nDuring the design and build process, we identified and mitigated key risks to enhance the\nreliability and performance of our unmanned vessel. To address potential overheating—an issue that\nchallenged last year’s team—we developed a robust cooling system incorporating two pumps to actively\ncool the electronic speed controllers (ESCs) and motors. Additionally, we applied thermal paste and\ninstalled a cooling block along the ESCs for improved heat dissipation. If overheating persists during\ntesting, we have contingency plans, including integrating a cooled payload to maintain a lower internal\ntemperature during the race. To prevent structural failures, we conducted multiple leak tests and\nreinforced high-risk areas—primarily in the rear of the vessel—with additional material layers. These\nareas were patched, tested, and sealed for durability. Weight was a critical design consideration; we used\nSolidWorks to estimate total mass and ANSYS simulations to validate the vessel’s structural integrity\nunder load conditions. To mitigate battery failure risks, we procured extra batteries and implemented a\nstructured charging schedule leading up to the race. We also maximized the number of parallel battery\nconnections to reduce current draw per cell, enhancing overall power efficiency. Additionally, to protect\nthe vessel during transit, we invested in a trailer and constructed a custom stand for secure transportation.\nAs race day approaches, we will continue monitoring heat levels, battery performance, and\nstructural integrity in real time, ensuring optimal performance while proactively addressing emerging\nrisks.24\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 24,
+      "text": "References\n“Amazon.Com: ZOSKAY 35kg High Torque Coreless Motor Servo Metal Gear Digital and Stainless\nSteel Gear Servo Arduino Servo for Robotic DIY,RC Car (Control Angle 270°) : Toys & Games.”\nAccessed November 21, 2024.\nhttps://www.amazon.com/ZOSKAY-Coreless-Digital-Stainless\u0002arduino/dp/B07S9XZYN2?crid=22Z0HGLWODKHU&dib=eyJ2IjoiMSJ9.zwnBMch_J\u0002HNbpGQF-RWOvTUtylEa6iVM4nAliQ7HvJwOgJzVN06qcKtJide0rFveyYmu\u0002npS2NPln_zgngqGV3ic9R6GtQABo93urO1dK_7DzJldOMVhawDUGuAICqxDSh\u0002S3qbmbR9lbyfryJwwvZ4Rl_wN8fXtAVkpSYKMj1lKbwb\u0002bjbgFMx8xQrMDpgrgN9xMskGcZzt1U-LCvQgOPU60dEyp41AycimY9Zs-Jm-OKyzaH\u0002AP_B3FSS1tz6p90FOHmNr2C5oe\u0002gHkxlVpCLCvrC8T9a8aU8rV5WdtU.TE3XyjHRZIY9Xr2oJlV5NG1celbtnjSqXnrn6YxJG\u0002g&dib_tag=se&keywords=pwm%2Bservo&qid=1731877094&s=toys-and\u0002games&sprefix=pwm%2Bservo%2Ctoys-and-games%2C149&sr=1-13-\nspons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1.\n“B10A Circulating Pump - We Ship Wordlwide! | US Solar Pumps.” Accessed January 17, 2025.\nhttps://www.ussolarpumps.com/catalog/circulating-pumps/b10a-circulating-pump/.\nMotion RC. “ZTW Bluetooth Programming Module [ZTW2100011] Motion RC.” Accessed November\n21, 2024. https://www.motionrc.com/products/ztw-bluetooth-programming-module-ztw2100011.\nMotion RC. “ZTW Skyhawk 160A ESC High Voltage with 10A SBEC [ZTW4160311] Motion RC.”\nAccessed November 21, 2024. https://www.motionrc.com/products/ztw-skyhawk-160a-esc-high\u0002voltage-with-10a-sbec-ztw4160311.\n“Promoting Electric Propulsion (PEP) for Small Craft.” Accessed November 21, 2024.\nhttps://www.navalengineers.org/Education/Promoting-Electric-Propulsion-PEP. 25\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 25,
+      "text": "RadioMaster RC. “ER6 2.4GHz ELRS PWM Receiver.” Accessed November 21, 2024.\nhttps://www.radiomasterrc.com/products/er6-2-4ghz-elrs-pwm-receiver.\nRadioMaster RC. “Pocket Radio Controller (M2).” Accessed November 21, 2024.\nhttps://www.radiomasterrc.com/products/pocket-radio-controller-m2.\nSajedi, Hasan, and Miralam Mahdi. “Numerical Investigation of the Rake Angle Effect on the\nHydrodynamic Performance of Propeller in a Uniform and Nonuniform Flow.” Proceedings of the\nInstitution of Mechanical Engineers, Part C 233, no. 18 (September 1, 2019): 6326–38.\nhttps://doi.org/10.1177/0954406219830136.\nTeale, John. How to Design a Boat. 2nd ed. The University of Michigan: Sheridan House, 1998.\nThe WoodenBoat Forum. “Crouch’s Formula, How Low Can You Go?,” October 21, 2016.\nhttps://forum.woodenboat.com/forum/building-repair/195560-.\nUnmanned Systems Technology. “LiPo vs Lithium Ion Batteries for Unmanned & Robotics\nApplications.” Accessed November 21, 2024.\nhttps://www.unmannedsystemstechnology.com/feature/lipo-vs-lithium-ion-batteries-for\u0002unmanned-robotics-applications/.\n“What Is an Electronic Speed Controller and How Does It Work?” Accessed November 21, 2024.\nhttps://www.blikai.com/blog/components-parts/what-is-an-electronic-speed-controller-and-how\u0002does-it-work. 26\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 26,
+      "text": "Appendix\nInitial CAD drawings of 3 ideas\nFigure (10). Catamaran Hull Design\nCatamarans offer fantastic stability and lift characteristics. However, the tunnel in the center of the\nboat induces lots of stress onto the frame of the boat.\nFigure (11). Mono-hull Design\nMono-hull designs are great at planing on top of the water, storing equipment internally, and are\nhighly maneuverable. Most importantly, this design is easy to manufacture.27\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 27,
+      "text": "(4)\nFigure (12). Tri-hull Design\nTri-hulls aim to balance the maneuverability of a mono-hull with the stability of a catamaran. Tri\u0002hulls are just “ok” at these features, and the complications that would arise in manufacturing don’t make\nthem worth consideration.\nCalculations\nMotor Sizing: Crouch’s Formula\nCrouch’s formula relates the horsepower required (in horsepower) to the desired velocity (in knots) and\nweight (in pounds) of the boat by Crouch’s formula below.\n𝑃𝑃𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 = 𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊ℎ𝑡𝑡 ∗ 𝑉𝑉 𝑉𝑉𝑉𝑉𝑉𝑉 𝑉𝑉2\n𝐶𝐶2\nThe constant, C, quantifies the hydrodynamics of the boat hull geometry with several standard values for\nvarious types of boats. A typical cruiser has a C value of 150, 28\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 28,
+      "text": "(5)\n(6)\nPumps in parallel\n𝑄𝑄̇ = 𝜌𝜌 𝐶𝐶𝑝𝑝∆𝑇𝑇 - heat transfer, increase Q increase Qdot\n𝑄𝑄𝑝𝑝 𝑝𝑝𝑝𝑝,𝑝𝑝𝑝𝑝 𝑝𝑝𝑝𝑝𝑝𝑝 𝑝𝑝 = 𝑄𝑄1𝑠𝑠𝑠𝑠 𝑝𝑝 𝑝𝑝𝑝𝑝 + 𝑄𝑄2𝑛𝑛 𝑝𝑝 𝑝𝑝𝑝𝑝\n𝐸𝐸𝐸𝐸 𝐴𝐴𝐴𝐴𝐴𝐴 𝐶𝐶𝐶𝐶 𝐶𝐶 > 𝑀𝑀 𝑀𝑀 𝑀𝑀 𝑀𝑀 𝐷𝐷 𝐷𝐷\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "1"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "PEP Competition White Paper"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "The University of Alabama, Mechanical Engineering Department"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "3/23/2025"
+    },
+    {
+      "line": 4,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Submitted to:"
+    },
+    {
+      "line": 5,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Dr. Michael Briscoe"
+    },
+    {
+      "line": 6,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Submitted by:"
+    },
+    {
+      "line": 7,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "The Tide Chasers"
+    },
+    {
+      "line": 8,
+      "page_start": 0,
+      "page_end": 1,
+      "text": "The University of Alabama2"
+    },
+    {
+      "line": 9,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "X"
+    },
+    {
+      "line": 10,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Grace Schneider"
+    },
+    {
+      "line": 11,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Team Lead / Controls Sub-Team"
+    },
+    {
+      "line": 12,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "X"
+    },
+    {
+      "line": 13,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Cadean Paulsen"
+    },
+    {
+      "line": 14,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Design / Hull Fabrication Lead"
+    },
+    {
+      "line": 15,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "X"
+    },
+    {
+      "line": 16,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Clancy Briggs"
+    },
+    {
+      "line": 17,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Public Relations / Hull Design Lead"
+    },
+    {
+      "line": 18,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "X"
+    },
+    {
+      "line": 19,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "John Perdue"
+    },
+    {
+      "line": 20,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Communications / Energy Storage Lead"
+    },
+    {
+      "line": 21,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "X"
+    },
+    {
+      "line": 22,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Katie Heglas"
+    },
+    {
+      "line": 23,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Quality Control / Propulsion Lead"
+    },
+    {
+      "line": 24,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "X"
+    },
+    {
+      "line": 25,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Ohm Patel"
+    },
+    {
+      "line": 26,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Financial Management / Controls Lead"
+    },
+    {
+      "line": 27,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Team Members"
+    },
+    {
+      "line": 28,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Date: 03/23/25"
+    },
+    {
+      "line": 29,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Date: 03/23/25"
+    },
+    {
+      "line": 30,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Date: 03/23/25"
+    },
+    {
+      "line": 31,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Date: 03/23/25"
+    },
+    {
+      "line": 32,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Date: 03/23/25"
+    },
+    {
+      "line": 33,
+      "page_start": 1,
+      "page_end": 2,
+      "text": "Date: 03/23/253"
+    },
+    {
+      "line": 34,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Executive Summary"
+    },
+    {
+      "line": 35,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Our project is to design an electrically propelled, remote-controlled boat to compete in the Promoting"
+    },
+    {
+      "line": 36,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Electric Propulsion 2025 competition. This competition seeks innovations in electric technologies for use"
+    },
+    {
+      "line": 37,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "in the military and industrial sectors. Our team’s key goals are to design, fabricate, and test an uncrewed"
+    },
+    {
+      "line": 38,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "electric boat from the ground up. The University of Alabama competed in PEP 24, coming in first place in"
+    },
+    {
+      "line": 39,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "the uncrewed boat division. We intend to continue this streak of excellence in PEP 25 by scoring well on"
+    },
+    {
+      "line": 40,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "our white paper assignment and video presentation and performing well on race day. Our boat will be a"
+    },
+    {
+      "line": 41,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "deep V-monohull optimized for planing. We will propel our boat with two propellers powered by two 4.5"
+    },
+    {
+      "line": 42,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "kW motors with an open-loop cooling system. We designed our boat hull in SolidWorks and used Ansys to"
+    },
+    {
+      "line": 43,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "calculate the drag force and optimize the deadrise angle."
+    },
+    {
+      "line": 44,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "We will test our motors using a test rig that can measure the heat generation and torque outputs to"
+    },
+    {
+      "line": 45,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "effectively cool our system and understand better how our boat should perform. We plan to fabricate the"
+    },
+    {
+      "line": 46,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "hull out of fiberglass and glue it together with epoxy. Our budget of $8,000 has been mainly allocated"
+    },
+    {
+      "line": 47,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "towards the hull fabrication and the propulsion systems. We are seeking sponsorship from the university to"
+    },
+    {
+      "line": 48,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "fund our travel costs. After finishing the design of our boat, we will extensively test it in Lake Tuscaloosa"
+    },
+    {
+      "line": 49,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "to gauge its performance and the duration of the battery life, making corrections as necessary. Our robust"
+    },
+    {
+      "line": 50,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "hull design will provide lift through the 17-degree deadrise angle and the presence of strakes, enabling it to"
+    },
+    {
+      "line": 51,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "plane sooner and minimize drag. Our team faced several challenges in the design of our vessel, such as"
+    },
+    {
+      "line": 52,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "learning how to design boats (which lack governing equations or universal design guidelines), learning"
+    },
+    {
+      "line": 53,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "unfamiliar software, learning how to lay fiberglass properly, balancing the battery requirements while"
+    },
+    {
+      "line": 54,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "minimizing weight, and innovating our fabrication processes when faced with insufficient supplies. The"
+    },
+    {
+      "line": 55,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "project has taught our team the importance of cross-team collaboration, forcing us to communicate"
+    },
+    {
+      "line": 56,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "effectively between each other to solve the problems at hand, and to go outside of ourselves to learn from 4"
+    },
+    {
+      "line": 57,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "experts in fields such as boat design and control components. We highly appreciate our client, Dr. Briscoe,"
+    },
+    {
+      "line": 58,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "who has given us welcome guidance as we navigate this project. Our team is prepared for the coming tasks,"
+    },
+    {
+      "line": 59,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "and because of our excellent team synergy, we will adapt to any challenges that might arise in the final"
+    },
+    {
+      "line": 60,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "stretch of our project.5"
+    },
+    {
+      "line": 61,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Table of Contents"
+    },
+    {
+      "line": 62,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Team Members.............................................................................................................................................................2"
+    },
+    {
+      "line": 63,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Executive Summary......................................................................................................................................................3"
+    },
+    {
+      "line": 64,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Table of Contents..........................................................................................................................................................5"
+    },
+    {
+      "line": 65,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Project Objectives/Scope ..............................................................................................................................................6"
+    },
+    {
+      "line": 66,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Technical Approach......................................................................................................................................................8"
+    },
+    {
+      "line": 67,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Evaluation Method......................................................................................................................................................20"
+    },
+    {
+      "line": 68,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Risks ...........................................................................................................................................................................23"
+    },
+    {
+      "line": 69,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "References...................................................................................................................................................................24"
+    },
+    {
+      "line": 70,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "Appendix.....................................................................................................................................................................266"
+    },
+    {
+      "line": 71,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Project Objectives/Scope"
+    },
+    {
+      "line": 72,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "The University of Alabama PEP team will compete in the unmanned division this year. The team will"
+    },
+    {
+      "line": 73,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "be tasked with designing and fabricating an unmanned vessel for use in the competition in April 2025."
+    },
+    {
+      "line": 74,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "The design is subject to several constraints, which are discussed further in the design requirements"
+    },
+    {
+      "line": 75,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "section. The student-led nature of the project means that the scope of the competition encompasses initial"
+    },
+    {
+      "line": 76,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "design, prototyping, fabrication, testing, and parts sourcing for the final product."
+    },
+    {
+      "line": 77,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "1. Design"
+    },
+    {
+      "line": 78,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "a. Hull: CAD and CFD programs will be used to design an optimal hull for the conditions"
+    },
+    {
+      "line": 79,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "and objectives of the PEP competition."
+    },
+    {
+      "line": 80,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "b. Power System: Based on motors and propellers used, a power storage system in the form"
+    },
+    {
+      "line": 81,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "of a battery pack will be properly sized and integrated into the boat."
+    },
+    {
+      "line": 82,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "c. Controls System: A controls system will be sourced and developed such that the boat can"
+    },
+    {
+      "line": 83,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "be reliably controlled throughout the duration of the race."
+    },
+    {
+      "line": 84,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "2. Prototyping"
+    },
+    {
+      "line": 85,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "a. Hull: Scale models of the chosen design will be constructed to test performance and give"
+    },
+    {
+      "line": 86,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "the team fiberglass fabrication experience."
+    },
+    {
+      "line": 87,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "b. Power System: The appropriate motors will be tested with the complete battery pack to"
+    },
+    {
+      "line": 88,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "ensure operation and identify potential issues, such as heat generation."
+    },
+    {
+      "line": 89,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "3. Fabrication"
+    },
+    {
+      "line": 90,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "a. Hull: The team will determine an appropriate fabrication method and fabricate the hull"
+    },
+    {
+      "line": 91,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "from scratch using university facilities and sourced materials."
+    },
+    {
+      "line": 92,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "b. Power Systems: Battery pack and management system will be constructed using 3D"
+    },
+    {
+      "line": 93,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "printed parts, a spot welder, and soldered components. 7"
+    },
+    {
+      "line": 94,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "4. Material Sourcing"
+    },
+    {
+      "line": 95,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "a. Within the given budget of $8,000, the team will source all materials and components"
+    },
+    {
+      "line": 96,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "necessary to build a functioning boat before the competition date in April."
+    },
+    {
+      "line": 97,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "5. Competition"
+    },
+    {
+      "line": 98,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "a. The team will pilot the completed boat remotely during the 2-mile race from April 15th to"
+    },
+    {
+      "line": 99,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "17th."
+    },
+    {
+      "line": 100,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "The objective of this project is to design, fabricate, and compete with a high-performance unmanned"
+    },
+    {
+      "line": 101,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "vessel in the ASNE PEP25 competition. The team will optimize the hull design using CAD and CFD"
+    },
+    {
+      "line": 102,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "software to ensure efficiency, speed, and stability under race conditions. A reliable power system will be"
+    },
+    {
+      "line": 103,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "engineered by selecting appropriate motors, propellers, and a properly sized battery pack to sustain"
+    },
+    {
+      "line": 104,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "operation throughout the competition. Additionally, a robust control system will be developed to enable"
+    },
+    {
+      "line": 105,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "stable and responsive remote operation, ensuring precise maneuverability and compliance with"
+    },
+    {
+      "line": 106,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "competition requirements. To validate the design, scale models of the hull and power system will be"
+    },
+    {
+      "line": 107,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "prototyped and tested for performance, durability, and manufacturability before final fabrication. The full\u0002scale vessel will be constructed using appropriate materials and fabrication techniques, integrating all"
+    },
+    {
+      "line": 108,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "components into a cohesive system. All materials and components will be sourced within the allocated"
+    },
+    {
+      "line": 109,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "$8,000 budget while maintaining quality and performance standards. Ultimately, the goal is to ensure the"
+    },
+    {
+      "line": 110,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "vessel is fully functional, meets all competition regulations, and is ready for remote piloting in the 2-mile"
+    },
+    {
+      "line": 111,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "endurance race in April 2025.8"
+    },
+    {
+      "line": 112,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Technical Approach"
+    },
+    {
+      "line": 113,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Hull Team"
+    },
+    {
+      "line": 114,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Much research and discussion has gone into designing a new hull for this competition, making"
+    },
+    {
+      "line": 115,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "note of last year’s setbacks to avoid a similar situation. Due to the manufacturability constraint of no team"
+    },
+    {
+      "line": 116,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "member having extensive manufacturing experience, we felt that a monohull design would be the best"
+    },
+    {
+      "line": 117,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "decision for our needs. An emphasis was put on ensuring the boat is lightweight, can achieve planing"
+    },
+    {
+      "line": 118,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "quickly, and has a low drag on the water. Fiberglass was used to construct the hull, and plywood stringers"
+    },
+    {
+      "line": 119,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "to fill out the frame on the inside to ensure the boat is lightweight. The fiberglass operation consisted of"
+    },
+    {
+      "line": 120,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "three main parts: create a foam plug, create a female fiberglass mold, then layup the boat and stringers."
+    },
+    {
+      "line": 121,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "After these steps were executed, a top deck was then attached and fiber glassed, along with a latch for"
+    },
+    {
+      "line": 122,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "easy access to the boat internals. The final step for the hull was to carefully drill holes for the shafts,"
+    },
+    {
+      "line": 123,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "tubes, and external assemblies, ensuring that they are properly sealed with marine sealer."
+    },
+    {
+      "line": 124,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "The next key design consideration for the boat hull is its ability to plane and cut through the water."
+    },
+    {
+      "line": 125,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "A boat that can easily plane and is sharp through the water will require less power to drive, removing"
+    },
+    {
+      "line": 126,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "some burden on the power requirements. Much research was done by reading books on boat design,"
+    },
+    {
+      "line": 127,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "talking with industry experts, and using ANSYS to optimize our boat geometry to achieve the desired"
+    },
+    {
+      "line": 128,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "results. Through these resources, the boat’s deadrise, the angle of the bottom of the boat from the"
+    },
+    {
+      "line": 129,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "horizontal, was chosen to be 17 degrees. A 17-degree deadrise is the sweet spot for planing and wave\u0002slicing capability."
+    },
+    {
+      "line": 130,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "One of the critical requirements for this year’s race is that unmanned boats must carry 30 or 60"
+    },
+    {
+      "line": 131,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "lbs. for bonus points. The new hull design must handle a 60 lb. load and perform swiftly in the water. For"
+    },
+    {
+      "line": 132,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "this reason, the boat has been lengthened and widened compared to last year’s design. The new hull will 9"
+    },
+    {
+      "line": 133,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "be 7.5 feet long, 28 inches wide, and 10 inches deep. These dimensions will allow the boat to easily"
+    },
+    {
+      "line": 134,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "handle up to 160 lbs., which will also allow larger motors and batteries to be used. Our goal is to produce"
+    },
+    {
+      "line": 135,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "a high quality boat while staying within the economic constraints given to us by ASNE."
+    },
+    {
+      "line": 136,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Controls Team"
+    },
+    {
+      "line": 137,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Utilizing PEP24’s ideas as a foundation for a layout, a systems diagram was generated to house all"
+    },
+    {
+      "line": 138,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "the electronics and propulsion systems within the boat. This vessel will only be moved by electric"
+    },
+    {
+      "line": 139,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "propulsion, promoting an emission-free boat. This diagram shows the setup for the boat’s internals."
+    },
+    {
+      "line": 140,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Figure (1). Systems Diagram"
+    },
+    {
+      "line": 141,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "From Figure (1), the main battery provides power solely to the motors for maximum propulsion"
+    },
+    {
+      "line": 142,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "capabilities controlled through the ESC’s. We are using a six-channel RadioMaster PWM receiver with a"
+    },
+    {
+      "line": 143,
+      "page_start": 8,
+      "page_end": 9,
+      "text": "RadioMaster radio controller (ELRS programmed) to control the boat. This receiver is responsible for 10"
+    },
+    {
+      "line": 144,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "sending signals for a set of pumps, two servos, and two ESC’s. Beginning with the motors, we calculated"
+    },
+    {
+      "line": 145,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "the required power rating of the motors to maintain our wanted speeds of 35-40 mph to be 4.5 KW each."
+    },
+    {
+      "line": 146,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "We will be utilizing the Series 5684 1050 KV motor that has a max amp draw of 165 Amps. These motors"
+    },
+    {
+      "line": 147,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "are directly connected to the propeller via straight 8 mm shaft providing a 1:1 power transfer. Because of"
+    },
+    {
+      "line": 148,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "heating limitations, we will run the motors at about 100 amps each. From proper consideration of short"
+    },
+    {
+      "line": 149,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "time running and power draw, we decided that 10-gauge wire is sufficient to handle our needs. This"
+    },
+    {
+      "line": 150,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "wiring should be sufficient to handle the amperage. In terms of the ESC, we want to make sure the ESC"
+    },
+    {
+      "line": 151,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "can handle the max amp draw the motor is capable of for user safety and handling. We are using the ZTW"
+    },
+    {
+      "line": 152,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "180 burst amp draw ESC with a 10 A battery eliminator circuit (BEC). This BEC will provide adequate"
+    },
+    {
+      "line": 153,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "power to the servos and receiver at a selectable voltage from 5-8.4 V. We will be emulating a traditional"
+    },
+    {
+      "line": 154,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "RC boat turning system, using 45 KG servos to turn our rudders. As the dynamics of the boat will vary"
+    },
+    {
+      "line": 155,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "with speed, center of mass, and turbulence, we opted to go for a super conservative value of 45 KG of"
+    },
+    {
+      "line": 156,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "torque; which is higher than last year’s boat. From PEP 24, the major issue in the system was their"
+    },
+    {
+      "line": 157,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "cooling system. This year we will utilize a revamped cooling system with bigger pumps to ensure"
+    },
+    {
+      "line": 158,
+      "page_start": 9,
+      "page_end": 10,
+      "text": "adequate heat transfer.11"
+    },
+    {
+      "line": 159,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Figure (2). Cooling System Diagram"
+    },
+    {
+      "line": 160,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "We are using 2 C1EC circulating pumps for this operation. These bigger pumps will pull enough"
+    },
+    {
+      "line": 161,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "flow mass flow rate to carry heat out of our system. Both pumps will run separate loops throughout the"
+    },
+    {
+      "line": 162,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "boat to provide cooling to each set of ESC and motor. Originally, the ESC we bought was designed for air"
+    },
+    {
+      "line": 163,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "cooling. Since our boat is an enclosed system, we opted to strip the fan and use thermal paste, thermal"
+    },
+    {
+      "line": 164,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "padding, and an aluminum water cooling block to provide immense conductive heat transfer."
+    },
+    {
+      "line": 165,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Unfortunately, each of these pumps require 12 volts 1.2 amps for operation. However, due to PEP 25"
+    },
+    {
+      "line": 166,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "guidelines, we are granted an additional battery for the control systems independent of the battery used for"
+    },
+    {
+      "line": 167,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "the motors which is shown in Figure (1) through the red lines. These pumps will be controlled by a single"
+    },
+    {
+      "line": 168,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "switch relay as shown in Figure (1) to power the pumps only when needed for power conservation. Using"
+    },
+    {
+      "line": 169,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "our radiomaster controller, we will implement kill switches (using the relay) to our pumps and even a"
+    },
+    {
+      "line": 170,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "throttle cut to both of our motors for safety. Finally, two high amperage physical kill switches will be"
+    },
+    {
+      "line": 171,
+      "page_start": 10,
+      "page_end": 11,
+      "text": "installed on top of the boat to kill power to both the motors for safety. Moving forward, the 3D printed 12"
+    },
+    {
+      "line": 172,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "rudders will provide water inlets to allow the pumps to have a water source. Each fin has a surface area of"
+    },
+    {
+      "line": 173,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "16in2, and there are two of them, providing ample amount of turning for the boat. One interesting note on"
+    },
+    {
+      "line": 174,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "the rudders is the material used to print them. For good properties in water, PETG was used instead of"
+    },
+    {
+      "line": 175,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "PLA. PVA, a water-soluble plastic, was used as supports for the fins, which made cleaning off the"
+    },
+    {
+      "line": 176,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "supports significantly easier."
+    },
+    {
+      "line": 177,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Power System"
+    },
+    {
+      "line": 178,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "An electric power system must power the boat’s propulsion system to meet the competition’s"
+    },
+    {
+      "line": 179,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "design requirements. This power system consists of a power storage unit composed of lithium-ion"
+    },
+    {
+      "line": 180,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "batteries, a battery management system, and an electric motor. From research done into the hull design"
+    },
+    {
+      "line": 181,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "and effects of drag during operation, it has been determined that two 4.5kW motors will be used as the"
+    },
+    {
+      "line": 182,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "primary method of propulsion to meet and exceed the 4kW power requirement needed to obtain a design"
+    },
+    {
+      "line": 183,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "speed of 30 knots, as well as to provide redundancy in the event of a failure during the competition. The"
+    },
+    {
+      "line": 184,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "chosen motor is a traditional RC motor format due to its ability to operate at incredibly high speeds"
+    },
+    {
+      "line": 185,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "compared to its power draw, small size, and optimized design for the application."
+    },
+    {
+      "line": 186,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "This motor system powers a bank of lithium-ion batteries designed to produce between 44.4 and"
+    },
+    {
+      "line": 187,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "55.5 volts at maximum current draws of up to 300 amps. This battery system allows the motors to operate"
+    },
+    {
+      "line": 188,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "at optimal speed for the duration of the race without exceeding competition voltage requirements or"
+    },
+    {
+      "line": 189,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "running out of power during the competition. While fabricating a customized battery pack using smaller"
+    },
+    {
+      "line": 190,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "cylindrical cells was considered, the team ultimately decided on utilizing an array of 22.2V 6 Ah LiPo"
+    },
+    {
+      "line": 191,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "batteries of the type typically used in RC applications. Two battery banks have been created, one to power"
+    },
+    {
+      "line": 192,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "each motor. To achieve the 45V operating voltage of the motors, sets of two batteries were wired together"
+    },
+    {
+      "line": 193,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "in series creating an array of two cells with 44.4V of potential and 6 Ah of capacity. To ensure an"
+    },
+    {
+      "line": 194,
+      "page_start": 11,
+      "page_end": 12,
+      "text": "operating time of approximately 30 minutes at a peak operating current of 100 amps per motor, six of 13"
+    },
+    {
+      "line": 195,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "these arrays per motor were wired in parallel, giving each battery bank 36 Ah of capacity. To achieve this,"
+    },
+    {
+      "line": 196,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "series and parallel connectors had to be fabricated using 10 AWG wire the same EC5 connection standard"
+    },
+    {
+      "line": 197,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "present on the batteries."
+    },
+    {
+      "line": 198,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Safety and environmental concerns were also considered heavily in the design of the power"
+    },
+    {
+      "line": 199,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "system. The large number of batteries included in parallel configuration not only increases the amount of"
+    },
+    {
+      "line": 200,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "available capacity but also allows for lower current draw rates for each individual cell, reducing stress and"
+    },
+    {
+      "line": 201,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "thereby the change of thermal runaway and massive heat generation. This not only reduces the safety"
+    },
+    {
+      "line": 202,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "hazards of handling and operating the boat but also minimizes the chance of fouling the competition"
+    },
+    {
+      "line": 203,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "grounds with hazardous battery material in the event of failure. It was also decided that the battery system"
+    },
+    {
+      "line": 204,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "will be cooled via a similar system to the motor cooling to further reduced the risk of thermal runaway,"
+    },
+    {
+      "line": 205,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "but also to ensure that the battery compartment can be sealed to prevent leakage and damage to the cells"
+    },
+    {
+      "line": 206,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "as well as the risk of environmental contamination in the event of a failure. It is also important to note that"
+    },
+    {
+      "line": 207,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "by building an electric power boat, we will be helping to reduce the emissions released by the more"
+    },
+    {
+      "line": 208,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "common gasoline-powered boats. By promoting electric propulsion, ASNE is working to build a"
+    },
+    {
+      "line": 209,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "community that is more economically and environmentally friendly."
+    },
+    {
+      "line": 210,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Propulsion"
+    },
+    {
+      "line": 211,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "It was decided from the beginning of this project that the boat would utilize two propellers. Not"
+    },
+    {
+      "line": 212,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "only does this design have superior maneuverability and fuel efficiency over a single propeller design, it"
+    },
+    {
+      "line": 213,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "also brings a level of redundancy into the system. If one motor fails (either by overheating which occurred"
+    },
+    {
+      "line": 214,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "in the previous competition or by power supply issues), there would still be one motor/propeller system"
+    },
+    {
+      "line": 215,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "driving the boat forward, albeit slower. In the dual propeller design, the propellers rotate in opposite"
+    },
+    {
+      "line": 216,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "directions, as shown in Figure (3). This counter-rotation eliminates any unwanted torques from being"
+    },
+    {
+      "line": 217,
+      "page_start": 12,
+      "page_end": 13,
+      "text": "applied to the hull (which could cause tipping) and it also eliminates the phenomenon of “prop walk” 14"
+    },
+    {
+      "line": 218,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "wherein a propeller pushes the back of the boat to starboard or port side causing an unintentional turn of"
+    },
+    {
+      "line": 219,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "direction. Additionally, due to the complexity that arises from installing a gearbox, it was also determined"
+    },
+    {
+      "line": 220,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "that the propellers would be directly connected to the motors (and thus have a 1:1 rotation ratio with the"
+    },
+    {
+      "line": 221,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "motors)."
+    },
+    {
+      "line": 222,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Figure (3). Diagram of Propeller Rotation"
+    },
+    {
+      "line": 223,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "From preliminary simulations of the boat in Ansys, drag values were defined for multiple speeds,"
+    },
+    {
+      "line": 224,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "as summarized in Table (1). These drag values correlate to the minimum required thrusts that the"
+    },
+    {
+      "line": 225,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "propellers must achieve so that the boat will move forward. From the motor specifications, it is also"
+    },
+    {
+      "line": 226,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "known that the stall torque is 1.5 Nm and the no load speed is 46,620 rpm with an applied voltage of 44.4"
+    },
+    {
+      "line": 227,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "V as with our power system. With these parameters, a motor performance curve can be constructed,"
+    },
+    {
+      "line": 228,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "shown in Figure (4), wherein all points that lie below this curve are achievable torque/speed"
+    },
+    {
+      "line": 229,
+      "page_start": 13,
+      "page_end": 14,
+      "text": "combinations.15"
+    },
+    {
+      "line": 230,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Table (1): Profile Drag Values at each Computed Speed"
+    },
+    {
+      "line": 231,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Speed (mph) Profile Drag Due to Hull (N)"
+    },
+    {
+      "line": 232,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "5 56.7"
+    },
+    {
+      "line": 233,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "10 70.6"
+    },
+    {
+      "line": 234,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "15 122.4"
+    },
+    {
+      "line": 235,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "20 155.0"
+    },
+    {
+      "line": 236,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "25 145.7"
+    },
+    {
+      "line": 237,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "30 120.5"
+    },
+    {
+      "line": 238,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Figure (4). Motor Performance Curve for an Applied Voltage of 44.4 V"
+    },
+    {
+      "line": 239,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Taking both design requirements into consideration, a 3-bladed Wageningen B-screw series"
+    },
+    {
+      "line": 240,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "propeller with a diameter of 3 inches was chosen as the basis for our propeller design. Not only is the B\u0002screw highly efficient, with its popularity in use, it has many resources on optimization as well as"
+    },
+    {
+      "line": 241,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "predicted open-water performance. To further develop the specific geometry of the propellers, the open"
+    },
+    {
+      "line": 242,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "water curves of the Wageningen B-screw series were examined in the context of the motor performance"
+    },
+    {
+      "line": 243,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "curve and drag values to overcome. Prior to this comparison, however, the design requirements outlined"
+    },
+    {
+      "line": 244,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "above were converted to the non-dimensional performance characteristics of Advance Ratio (J),"
+    },
+    {
+      "line": 245,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "0"
+    },
+    {
+      "line": 246,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "0.2"
+    },
+    {
+      "line": 247,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "0.4"
+    },
+    {
+      "line": 248,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "0.6"
+    },
+    {
+      "line": 249,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "0.8"
+    },
+    {
+      "line": 250,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "1"
+    },
+    {
+      "line": 251,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "1.2"
+    },
+    {
+      "line": 252,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "1.4"
+    },
+    {
+      "line": 253,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "1.6"
+    },
+    {
+      "line": 254,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "0 10,000 20,000 30,000 40,000 50,000"
+    },
+    {
+      "line": 255,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Torque (N*m)"
+    },
+    {
+      "line": 256,
+      "page_start": 14,
+      "page_end": 15,
+      "text": "Motor Shaft Speed (rpm)16"
+    },
+    {
+      "line": 257,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "Coefficient of Thrust (CT), and Coefficient of Torque (CQ). These converisions were performed using the"
+    },
+    {
+      "line": 258,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "following equations:"
+    },
+    {
+      "line": 259,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "𝑱𝑱 = 𝑽𝑽𝑨𝑨 �"
+    },
+    {
+      "line": 260,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "mi"
+    },
+    {
+      "line": 261,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "hr�"
+    },
+    {
+      "line": 262,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "𝒏𝒏 (rpm) ∗ 𝑫𝑫 (in)"
+    },
+    {
+      "line": 263,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "∗"
+    },
+    {
+      "line": 264,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "5,280 ft"
+    },
+    {
+      "line": 265,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "1 mi ∗"
+    },
+    {
+      "line": 266,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "12 in"
+    },
+    {
+      "line": 267,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "1 ft ∗ 1 hr60 min"
+    },
+    {
+      "line": 268,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "(1)"
+    },
+    {
+      "line": 269,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "(𝑪𝑪𝑻𝑻)𝒓𝒓𝒓𝒓𝒓𝒓 = 𝑻𝑻𝒓𝒓𝒓𝒓𝒓𝒓"
+    },
+    {
+      "line": 270,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "𝝆𝝆𝒏𝒏𝟐𝟐𝑫𝑫𝟒𝟒"
+    },
+    {
+      "line": 271,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "= 𝑭𝑭𝒅𝒅 𝒅𝒅𝒅𝒅 (N)"
+    },
+    {
+      "line": 272,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "𝝆𝝆 � kg"
+    },
+    {
+      "line": 273,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "m3� ∗ (𝒏𝒏 (rpm))𝟐𝟐 ∗ �𝑫𝑫 (in)�"
+    },
+    {
+      "line": 274,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "𝟒𝟒 ∗ �"
+    },
+    {
+      "line": 275,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "39.37 in"
+    },
+    {
+      "line": 276,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "1 m �"
+    },
+    {
+      "line": 277,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "4"
+    },
+    {
+      "line": 278,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "∗ �"
+    },
+    {
+      "line": 279,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "60 sec"
+    },
+    {
+      "line": 280,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "1 min�"
+    },
+    {
+      "line": 281,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "2"
+    },
+    {
+      "line": 282,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "(2)"
+    },
+    {
+      "line": 283,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "�𝑪𝑪𝑸𝑸� 𝒂𝒂 𝒂𝒂𝒂𝒂 = 𝑸𝑸 𝒂𝒂 𝒂𝒂𝒂𝒂 (N ∗ m)"
+    },
+    {
+      "line": 284,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "𝝆𝝆 � kg"
+    },
+    {
+      "line": 285,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "m3� ∗ (𝒏𝒏 (rpm))𝟐𝟐 ∗ �𝑫𝑫 (in)�"
+    },
+    {
+      "line": 286,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "𝟓𝟓 ∗ �"
+    },
+    {
+      "line": 287,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "39.37 in"
+    },
+    {
+      "line": 288,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "1 m �"
+    },
+    {
+      "line": 289,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "5"
+    },
+    {
+      "line": 290,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "∗ �"
+    },
+    {
+      "line": 291,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "60 sec"
+    },
+    {
+      "line": 292,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "1 min�"
+    },
+    {
+      "line": 293,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "2"
+    },
+    {
+      "line": 294,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "(3)"
+    },
+    {
+      "line": 295,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "where VA is the forward velocity of the boat, n is the rotational speed of the propeller, D is the diameter of"
+    },
+    {
+      "line": 296,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "the propeller, Treq is the required thrust, ρ is water density, Fdrag is the drag forces shown in Table (1), and"
+    },
+    {
+      "line": 297,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "Qavail is the available motor torque given on the performance curve shown in Figure (4). The results of"
+    },
+    {
+      "line": 298,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "these conversions are shown in Figures 5 through 8."
+    },
+    {
+      "line": 299,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "Four cases of changing pitch-to-diameter ratio (P/D) values were examined in the open water"
+    },
+    {
+      "line": 300,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "performance curves for a 3-blade b-series propeller and were used to produce the curves shown in Figure"
+    },
+    {
+      "line": 301,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "(5) and Figure (6). As P/D increases, both CT and CQ values increase for all advance ratios. Because the"
+    },
+    {
+      "line": 302,
+      "page_start": 15,
+      "page_end": 15,
+      "text": "gear ratio between the motors and propellers is one, the propellers will operate at very low J values"
+    },
+    {
+      "line": 303,
+      "page_start": 15,
+      "page_end": 16,
+      "text": "(because n is very high) and torque will be a limiting factor. Thus, P/D was set to a value of 0.5. 17"
+    },
+    {
+      "line": 304,
+      "page_start": 16,
+      "page_end": 16,
+      "text": "Figure (5): Effect of changing P/D on Thrust Coefficient as compared to (CT)req values"
+    },
+    {
+      "line": 305,
+      "page_start": 16,
+      "page_end": 16,
+      "text": "Figure (6): Effect of changing P/D on Torque Coefficient as compared to (CQ)avail values"
+    },
+    {
+      "line": 306,
+      "page_start": 16,
+      "page_end": 16,
+      "text": "Similarly, the open water performance curve were used to test 4 cases of varying blade aero ratio"
+    },
+    {
+      "line": 307,
+      "page_start": 16,
+      "page_end": 16,
+      "text": "(AE/AO). Low AE/AO values have greater CT and CQ values at low advance ratios, however, at high"
+    },
+    {
+      "line": 308,
+      "page_start": 16,
+      "page_end": 16,
+      "text": "advance ratios they have lower CT and CQ values. The converse is also true for high AE/AO values. Thus,"
+    },
+    {
+      "line": 309,
+      "page_start": 16,
+      "page_end": 17,
+      "text": "to limit CQ at the low advance ratios we operate at, the AE/AO value was set to 0.3.18"
+    },
+    {
+      "line": 310,
+      "page_start": 17,
+      "page_end": 17,
+      "text": "Figure (7): Effect of changing AE/AO on Thrust Coefficient as compared to (CT)req values"
+    },
+    {
+      "line": 311,
+      "page_start": 17,
+      "page_end": 17,
+      "text": "Figure (8): Effect of changing AE/AO on Torque Coefficient as compared to (CQ)avail values"
+    },
+    {
+      "line": 312,
+      "page_start": 17,
+      "page_end": 17,
+      "text": "To manufacture this design, the propellers first had to be modeled in CAD. OpenVSP was used to"
+    },
+    {
+      "line": 313,
+      "page_start": 17,
+      "page_end": 17,
+      "text": "model the complex geometry of the blades as this software is particularly adept at modeling designs that"
+    },
+    {
+      "line": 314,
+      "page_start": 17,
+      "page_end": 17,
+      "text": "prioritize fluid dynamics. The blades were then imported into SolidWorks and the hub and shaft coupler"
+    },
+    {
+      "line": 315,
+      "page_start": 17,
+      "page_end": 17,
+      "text": "connection were modeled. Prototypes were made in PLA before investing in prints with better material"
+    },
+    {
+      "line": 316,
+      "page_start": 17,
+      "page_end": 17,
+      "text": "characteristics. There are two sets of final propellers, one made of Tough 1500 resin and one 3D printed"
+    },
+    {
+      "line": 317,
+      "page_start": 17,
+      "page_end": 17,
+      "text": "with a carbon fiber reinforced nylon composite, shown in Figure (9). These propellers were sanded and"
+    },
+    {
+      "line": 318,
+      "page_start": 17,
+      "page_end": 18,
+      "text": "had a layer of epoxy and fiberglass applied to reinforce the hub-blade connections which were the failure 19"
+    },
+    {
+      "line": 319,
+      "page_start": 18,
+      "page_end": 18,
+      "text": "points in earlier prototype testing. Having two sets of propellers allows the team to test the material limits"
+    },
+    {
+      "line": 320,
+      "page_start": 18,
+      "page_end": 18,
+      "text": "of the propulsion system."
+    },
+    {
+      "line": 321,
+      "page_start": 18,
+      "page_end": 18,
+      "text": "(a) (b)"
+    },
+    {
+      "line": 322,
+      "page_start": 18,
+      "page_end": 18,
+      "text": "(c) (d)"
+    },
+    {
+      "line": 323,
+      "page_start": 18,
+      "page_end": 18,
+      "text": "Figure (9): Carbon fiber reinforced nylon composite propeller from (a) shaft perspective and from (b)"
+    },
+    {
+      "line": 324,
+      "page_start": 18,
+      "page_end": 18,
+      "text": "downstream perspective and Tough 1500 resin printed propeller from (c) shaft perspective and from (d)"
+    },
+    {
+      "line": 325,
+      "page_start": 18,
+      "page_end": 19,
+      "text": "downstream perspective 20"
+    },
+    {
+      "line": 326,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "Evaluation Method"
+    },
+    {
+      "line": 327,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "To gauge the performance, longevity, and heat generation characteristics of our power train"
+    },
+    {
+      "line": 328,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "design, a test rig was designed to replicate the real-world operation of the drive system. This testing"
+    },
+    {
+      "line": 329,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "system allows the batteries and motors to be examined in isolation at different operating conditions to"
+    },
+    {
+      "line": 330,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "guide the team’s decision regarding cooling system design and adding additional energy storage to"
+    },
+    {
+      "line": 331,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "increase runtime."
+    },
+    {
+      "line": 332,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "Test Rig Design"
+    },
+    {
+      "line": 333,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "The first test measured the thrust generated by our propellers and assessed heat production. We"
+    },
+    {
+      "line": 334,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "used a strain gauge on a cantilever beam positioned at a 90-degree angle to the motor to capture the data."
+    },
+    {
+      "line": 335,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "Four thermocouples were used to monitor the temperature of each component, with one placed on the flat"
+    },
+    {
+      "line": 336,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "side of the battery pack being examined and one placed on the long end next to the wire connections and"
+    },
+    {
+      "line": 337,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "charging balancer. The third was placed on or adjacent to the electronic speed controller and the final one"
+    },
+    {
+      "line": 338,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "will be affixed to the outer casing of the motor. These thermocouples were used to record the temperature"
+    },
+    {
+      "line": 339,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "of each device over the course of the experiment. The test concluded a successful trial of the setup with"
+    },
+    {
+      "line": 340,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "the propeller able to sustain loads up to 17000 rpm. At this speed, the ESC was showing considerable"
+    },
+    {
+      "line": 341,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "amounts of amperage draw, which was expected. The ESC, however, sustained a high temperature of 90"
+    },
+    {
+      "line": 342,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "degrees Celsius. This, however, will be remedied by our method of thermal paste to allow for more"
+    },
+    {
+      "line": 343,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "contact area of heat transfer."
+    },
+    {
+      "line": 344,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "To test the failure mechanisms of different powertrain systems, a test setup was created to simulate"
+    },
+    {
+      "line": 345,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "a worst-case scenario load on the powertrain components. The setup consisted of a wooden stand to"
+    },
+    {
+      "line": 346,
+      "page_start": 19,
+      "page_end": 19,
+      "text": "mount the motor, pump, and control systems on, as well as a board running parallel to the shaft to allow"
+    },
+    {
+      "line": 347,
+      "page_start": 19,
+      "page_end": 20,
+      "text": "for shaft support. The heat of the speed controllers, motor RPM, current draw, and throttle percentage 21"
+    },
+    {
+      "line": 348,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "were monitored through the ZTW app. For some testing, thrust was determined by attaching the motor to"
+    },
+    {
+      "line": 349,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "a steel beam of known quantity outfitted with a strain gauge, whose values were recorded for thrust"
+    },
+    {
+      "line": 350,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "calculation. The test took place in a pool of ample depth and length to avoid the effects of turbulence in"
+    },
+    {
+      "line": 351,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "the water."
+    },
+    {
+      "line": 352,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "During the performance test, two cells were wired in series and operated at the current that would"
+    },
+    {
+      "line": 353,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "be expected of an individual 44.4V cell under craft operation, approximately 20 amps. The throttle"
+    },
+    {
+      "line": 354,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "position was increased slowly until reaching a motor speed of approximately 20,000 RPM and the readout"
+    },
+    {
+      "line": 355,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "for all data listed above was recorded to be able to collect data over time. At the maximum RPM reached,"
+    },
+    {
+      "line": 356,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "the vibration of the shaft was deemed too significant, and the test was concluded."
+    },
+    {
+      "line": 357,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "The test was then repeated after allowing the power components ample time to cool, but this time"
+    },
+    {
+      "line": 358,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "throttle was increased at a slower rate to gauge the thermal performance. At time of testing, inadequate"
+    },
+    {
+      "line": 359,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "thermal contact was made between the ESC and associated water block. The testing was performed as a"
+    },
+    {
+      "line": 360,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "worst-case scenario in terms of thermal contact, and the thermal contact issues have since been remedied."
+    },
+    {
+      "line": 361,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "At time of testing, the motor was able to maintain 15% throttle for approximately 90 seconds before the"
+    },
+    {
+      "line": 362,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "thermal limits of the equipment were reached. Corrective measures were taken to ensure better thermal"
+    },
+    {
+      "line": 363,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "contact between heat generating components and water block."
+    },
+    {
+      "line": 364,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "The test illustrated the durability of the materials used in the propellers and shaft, demonstrating"
+    },
+    {
+      "line": 365,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "that these would likely not be points of failure under operation. Additionally, the ability of the power"
+    },
+    {
+      "line": 366,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "system to perform for an extended period without overheating with inadequate cooling bolstered"
+    },
+    {
+      "line": 367,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "confidence in the effectiveness of the cooling system as it stands. Additionally, the strain data gained"
+    },
+    {
+      "line": 368,
+      "page_start": 20,
+      "page_end": 20,
+      "text": "during the test allowed a thrust to throttle percentage curve to be determined, allowing the potential thrust"
+    },
+    {
+      "line": 369,
+      "page_start": 20,
+      "page_end": 21,
+      "text": "of the system at different currents to be estimated. The height of the test rig was also varied during 22"
+    },
+    {
+      "line": 370,
+      "page_start": 21,
+      "page_end": 21,
+      "text": "operation to mitigate propeller cavitation, giving valuable insight into the height at which the propellers"
+    },
+    {
+      "line": 371,
+      "page_start": 21,
+      "page_end": 21,
+      "text": "should be mounted relative to the surface of the water."
+    },
+    {
+      "line": 372,
+      "page_start": 21,
+      "page_end": 21,
+      "text": "These tests will be repeated following the retrofitting of the power system with more robust"
+    },
+    {
+      "line": 373,
+      "page_start": 21,
+      "page_end": 21,
+      "text": "components, including cast aluminum propellers and a more rigorous thermal management system. Future"
+    },
+    {
+      "line": 374,
+      "page_start": 21,
+      "page_end": 21,
+      "text": "testing will take place with the propulsion system fully packaged inside the finished boat to determine the"
+    },
+    {
+      "line": 375,
+      "page_start": 21,
+      "page_end": 21,
+      "text": "boat’s dynamic properties, as well as to determine the limits to be set in the control system relating to"
+    },
+    {
+      "line": 376,
+      "page_start": 21,
+      "page_end": 22,
+      "text": "power delivery and calibration. 23"
+    },
+    {
+      "line": 377,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "Risks"
+    },
+    {
+      "line": 378,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "During the design and build process, we identified and mitigated key risks to enhance the"
+    },
+    {
+      "line": 379,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "reliability and performance of our unmanned vessel. To address potential overheating—an issue that"
+    },
+    {
+      "line": 380,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "challenged last year’s team—we developed a robust cooling system incorporating two pumps to actively"
+    },
+    {
+      "line": 381,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "cool the electronic speed controllers (ESCs) and motors. Additionally, we applied thermal paste and"
+    },
+    {
+      "line": 382,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "installed a cooling block along the ESCs for improved heat dissipation. If overheating persists during"
+    },
+    {
+      "line": 383,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "testing, we have contingency plans, including integrating a cooled payload to maintain a lower internal"
+    },
+    {
+      "line": 384,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "temperature during the race. To prevent structural failures, we conducted multiple leak tests and"
+    },
+    {
+      "line": 385,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "reinforced high-risk areas—primarily in the rear of the vessel—with additional material layers. These"
+    },
+    {
+      "line": 386,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "areas were patched, tested, and sealed for durability. Weight was a critical design consideration; we used"
+    },
+    {
+      "line": 387,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "SolidWorks to estimate total mass and ANSYS simulations to validate the vessel’s structural integrity"
+    },
+    {
+      "line": 388,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "under load conditions. To mitigate battery failure risks, we procured extra batteries and implemented a"
+    },
+    {
+      "line": 389,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "structured charging schedule leading up to the race. We also maximized the number of parallel battery"
+    },
+    {
+      "line": 390,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "connections to reduce current draw per cell, enhancing overall power efficiency. Additionally, to protect"
+    },
+    {
+      "line": 391,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "the vessel during transit, we invested in a trailer and constructed a custom stand for secure transportation."
+    },
+    {
+      "line": 392,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "As race day approaches, we will continue monitoring heat levels, battery performance, and"
+    },
+    {
+      "line": 393,
+      "page_start": 22,
+      "page_end": 22,
+      "text": "structural integrity in real time, ensuring optimal performance while proactively addressing emerging"
+    },
+    {
+      "line": 394,
+      "page_start": 22,
+      "page_end": 23,
+      "text": "risks.24"
+    },
+    {
+      "line": 395,
+      "page_start": 23,
+      "page_end": 23,
+      "text": "References"
+    },
+    {
+      "line": 396,
+      "page_start": 23,
+      "page_end": 23,
+      "text": "“Amazon.Com: ZOSKAY 35kg High Torque Coreless Motor Servo Metal Gear Digital and Stainless"
+    },
+    {
+      "line": 397,
+      "page_start": 23,
+      "page_end": 23,
+      "text": "Steel Gear Servo Arduino Servo for Robotic DIY,RC Car (Control Angle 270°) : Toys & Games.”"
+    },
+    {
+      "line": 398,
+      "page_start": 23,
+      "page_end": 23,
+      "text": "Accessed November 21, 2024."
+    },
+    {
+      "line": 399,
+      "page_start": 23,
+      "page_end": 23,
+      "text": "https://www.amazon.com/ZOSKAY-Coreless-Digital-Stainless\u0002arduino/dp/B07S9XZYN2?crid=22Z0HGLWODKHU&dib=eyJ2IjoiMSJ9.zwnBMch_J\u0002HNbpGQF-RWOvTUtylEa6iVM4nAliQ7HvJwOgJzVN06qcKtJide0rFveyYmu\u0002npS2NPln_zgngqGV3ic9R6GtQABo93urO1dK_7DzJldOMVhawDUGuAICqxDSh\u0002S3qbmbR9lbyfryJwwvZ4Rl_wN8fXtAVkpSYKMj1lKbwb\u0002bjbgFMx8xQrMDpgrgN9xMskGcZzt1U-LCvQgOPU60dEyp41AycimY9Zs-Jm-OKyzaH\u0002AP_B3FSS1tz6p90FOHmNr2C5oe\u0002gHkxlVpCLCvrC8T9a8aU8rV5WdtU.TE3XyjHRZIY9Xr2oJlV5NG1celbtnjSqXnrn6YxJG\u0002g&dib_tag=se&keywords=pwm%2Bservo&qid=1731877094&s=toys-and\u0002games&sprefix=pwm%2Bservo%2Ctoys-and-games%2C149&sr=1-13-"
+    },
+    {
+      "line": 400,
+      "page_start": 23,
+      "page_end": 23,
+      "text": "spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1."
+    },
+    {
+      "line": 401,
+      "page_start": 23,
+      "page_end": 23,
+      "text": "“B10A Circulating Pump - We Ship Wordlwide! | US Solar Pumps.” Accessed January 17, 2025."
+    },
+    {
+      "line": 402,
+      "page_start": 23,
+      "page_end": 23,
+      "text": "https://www.ussolarpumps.com/catalog/circulating-pumps/b10a-circulating-pump/."
+    },
+    {
+      "line": 403,
+      "page_start": 23,
+      "page_end": 23,
+      "text": "Motion RC. “ZTW Bluetooth Programming Module [ZTW2100011] Motion RC.” Accessed November"
+    },
+    {
+      "line": 404,
+      "page_start": 23,
+      "page_end": 23,
+      "text": "21, 2024. https://www.motionrc.com/products/ztw-bluetooth-programming-module-ztw2100011."
+    },
+    {
+      "line": 405,
+      "page_start": 23,
+      "page_end": 23,
+      "text": "Motion RC. “ZTW Skyhawk 160A ESC High Voltage with 10A SBEC [ZTW4160311] Motion RC.”"
+    },
+    {
+      "line": 406,
+      "page_start": 23,
+      "page_end": 23,
+      "text": "Accessed November 21, 2024. https://www.motionrc.com/products/ztw-skyhawk-160a-esc-high\u0002voltage-with-10a-sbec-ztw4160311."
+    },
+    {
+      "line": 407,
+      "page_start": 23,
+      "page_end": 23,
+      "text": "“Promoting Electric Propulsion (PEP) for Small Craft.” Accessed November 21, 2024."
+    },
+    {
+      "line": 408,
+      "page_start": 23,
+      "page_end": 24,
+      "text": "https://www.navalengineers.org/Education/Promoting-Electric-Propulsion-PEP. 25"
+    },
+    {
+      "line": 409,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "RadioMaster RC. “ER6 2.4GHz ELRS PWM Receiver.” Accessed November 21, 2024."
+    },
+    {
+      "line": 410,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "https://www.radiomasterrc.com/products/er6-2-4ghz-elrs-pwm-receiver."
+    },
+    {
+      "line": 411,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "RadioMaster RC. “Pocket Radio Controller (M2).” Accessed November 21, 2024."
+    },
+    {
+      "line": 412,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "https://www.radiomasterrc.com/products/pocket-radio-controller-m2."
+    },
+    {
+      "line": 413,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "Sajedi, Hasan, and Miralam Mahdi. “Numerical Investigation of the Rake Angle Effect on the"
+    },
+    {
+      "line": 414,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "Hydrodynamic Performance of Propeller in a Uniform and Nonuniform Flow.” Proceedings of the"
+    },
+    {
+      "line": 415,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "Institution of Mechanical Engineers, Part C 233, no. 18 (September 1, 2019): 6326–38."
+    },
+    {
+      "line": 416,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "https://doi.org/10.1177/0954406219830136."
+    },
+    {
+      "line": 417,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "Teale, John. How to Design a Boat. 2nd ed. The University of Michigan: Sheridan House, 1998."
+    },
+    {
+      "line": 418,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "The WoodenBoat Forum. “Crouch’s Formula, How Low Can You Go?,” October 21, 2016."
+    },
+    {
+      "line": 419,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "https://forum.woodenboat.com/forum/building-repair/195560-."
+    },
+    {
+      "line": 420,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "Unmanned Systems Technology. “LiPo vs Lithium Ion Batteries for Unmanned & Robotics"
+    },
+    {
+      "line": 421,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "Applications.” Accessed November 21, 2024."
+    },
+    {
+      "line": 422,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "https://www.unmannedsystemstechnology.com/feature/lipo-vs-lithium-ion-batteries-for\u0002unmanned-robotics-applications/."
+    },
+    {
+      "line": 423,
+      "page_start": 24,
+      "page_end": 24,
+      "text": "“What Is an Electronic Speed Controller and How Does It Work?” Accessed November 21, 2024."
+    },
+    {
+      "line": 424,
+      "page_start": 24,
+      "page_end": 25,
+      "text": "https://www.blikai.com/blog/components-parts/what-is-an-electronic-speed-controller-and-how\u0002does-it-work. 26"
+    },
+    {
+      "line": 425,
+      "page_start": 25,
+      "page_end": 25,
+      "text": "Appendix"
+    },
+    {
+      "line": 426,
+      "page_start": 25,
+      "page_end": 25,
+      "text": "Initial CAD drawings of 3 ideas"
+    },
+    {
+      "line": 427,
+      "page_start": 25,
+      "page_end": 25,
+      "text": "Figure (10). Catamaran Hull Design"
+    },
+    {
+      "line": 428,
+      "page_start": 25,
+      "page_end": 25,
+      "text": "Catamarans offer fantastic stability and lift characteristics. However, the tunnel in the center of the"
+    },
+    {
+      "line": 429,
+      "page_start": 25,
+      "page_end": 25,
+      "text": "boat induces lots of stress onto the frame of the boat."
+    },
+    {
+      "line": 430,
+      "page_start": 25,
+      "page_end": 25,
+      "text": "Figure (11). Mono-hull Design"
+    },
+    {
+      "line": 431,
+      "page_start": 25,
+      "page_end": 25,
+      "text": "Mono-hull designs are great at planing on top of the water, storing equipment internally, and are"
+    },
+    {
+      "line": 432,
+      "page_start": 25,
+      "page_end": 26,
+      "text": "highly maneuverable. Most importantly, this design is easy to manufacture.27"
+    },
+    {
+      "line": 433,
+      "page_start": 26,
+      "page_end": 26,
+      "text": "(4)"
+    },
+    {
+      "line": 434,
+      "page_start": 26,
+      "page_end": 26,
+      "text": "Figure (12). Tri-hull Design"
+    },
+    {
+      "line": 435,
+      "page_start": 26,
+      "page_end": 26,
+      "text": "Tri-hulls aim to balance the maneuverability of a mono-hull with the stability of a catamaran. Tri\u0002hulls are just “ok” at these features, and the complications that would arise in manufacturing don’t make"
+    },
+    {
+      "line": 436,
+      "page_start": 26,
+      "page_end": 26,
+      "text": "them worth consideration."
+    },
+    {
+      "line": 437,
+      "page_start": 26,
+      "page_end": 26,
+      "text": "Calculations"
+    },
+    {
+      "line": 438,
+      "page_start": 26,
+      "page_end": 26,
+      "text": "Motor Sizing: Crouch’s Formula"
+    },
+    {
+      "line": 439,
+      "page_start": 26,
+      "page_end": 26,
+      "text": "Crouch’s formula relates the horsepower required (in horsepower) to the desired velocity (in knots) and"
+    },
+    {
+      "line": 440,
+      "page_start": 26,
+      "page_end": 26,
+      "text": "weight (in pounds) of the boat by Crouch’s formula below."
+    },
+    {
+      "line": 441,
+      "page_start": 26,
+      "page_end": 26,
+      "text": "𝑃𝑃𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 = 𝑊𝑊𝑊𝑊𝑊𝑊𝑊𝑊ℎ𝑡𝑡 ∗ 𝑉𝑉 𝑉𝑉𝑉𝑉𝑉𝑉 𝑉𝑉2"
+    },
+    {
+      "line": 442,
+      "page_start": 26,
+      "page_end": 26,
+      "text": "𝐶𝐶2"
+    },
+    {
+      "line": 443,
+      "page_start": 26,
+      "page_end": 26,
+      "text": "The constant, C, quantifies the hydrodynamics of the boat hull geometry with several standard values for"
+    },
+    {
+      "line": 444,
+      "page_start": 26,
+      "page_end": 27,
+      "text": "various types of boats. A typical cruiser has a C value of 150, 28"
+    },
+    {
+      "line": 445,
+      "page_start": 27,
+      "page_end": 27,
+      "text": "(5)"
+    },
+    {
+      "line": 446,
+      "page_start": 27,
+      "page_end": 27,
+      "text": "(6)"
+    },
+    {
+      "line": 447,
+      "page_start": 27,
+      "page_end": 27,
+      "text": "Pumps in parallel"
+    },
+    {
+      "line": 448,
+      "page_start": 27,
+      "page_end": 27,
+      "text": "𝑄𝑄̇ = 𝜌𝜌 𝐶𝐶𝑝𝑝∆𝑇𝑇 - heat transfer, increase Q increase Qdot"
+    },
+    {
+      "line": 449,
+      "page_start": 27,
+      "page_end": 27,
+      "text": "𝑄𝑄𝑝𝑝 𝑝𝑝𝑝𝑝,𝑝𝑝𝑝𝑝 𝑝𝑝𝑝𝑝𝑝𝑝 𝑝𝑝 = 𝑄𝑄1𝑠𝑠𝑠𝑠 𝑝𝑝 𝑝𝑝𝑝𝑝 + 𝑄𝑄2𝑛𝑛 𝑝𝑝 𝑝𝑝𝑝𝑝"
+    },
+    {
+      "line": 450,
+      "page_start": 27,
+      "page_end": 27,
+      "text": "𝐸𝐸𝐸𝐸 𝐴𝐴𝐴𝐴𝐴𝐴 𝐶𝐶𝐶𝐶 𝐶𝐶 > 𝑀𝑀 𝑀𝑀 𝑀𝑀 𝑀𝑀 𝐷𝐷 𝐷𝐷"
+    }
+  ],
+  "source_line_count": 451,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}

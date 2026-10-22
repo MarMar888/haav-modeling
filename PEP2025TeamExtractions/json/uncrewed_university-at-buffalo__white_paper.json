@@ -1,0 +1,1171 @@
+{
+  "competition_year": 2025,
+  "team": "University at Buffalo",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/Buffalo",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Buffalo/University%20at%20Buffalo%20PEP%20Uncrewed%20White%20Paper.pdf",
+  "filename": "University at Buffalo PEP Uncrewed White Paper.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "11"
+  },
+  "page_count": 11,
+  "pages_without_text": [
+    2
+  ],
+  "char_count": 12597,
+  "pages": [
+    {
+      "page": 1,
+      "text": "UB PEP Uncrewed Team\nThe Furnas\nUniversity at Buffalo\nUncrewed Boat\nAiden Nabinger\nAndrew Vickery\nDavin Spier\nEric Sandle\nJacob DiFrancesco\nVan Hywel ValenciaBackground\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": "",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "Much of what we needed to research surrounded our main design changes made between\nlast year’s unmanned boat team design and the current design. Thanks to our graduate advisor for\nthe project, Zack Medicis, many of our design changes and reasonings for each were made clear.\nOne being that we needed to change the hull type. Catamaran hulls are very stable and fast\nhowever are not as fast as a v-shaped monohull. The tradeoff we found, was a decrease in\nstability in harsh wake to an increase in overall thrust output. A v-shaped hull with steps on the\nbottom of the hull, as seen in figure 3, acts as a platform for the boat to skim along while it is at\nspeed. The v-shape of the overall hull cuts through the water like a knife and the steps push the\nboat upward and out of the water. When the boat is pushed out of the water more there is less\nskin drag acting upon the boat from the water as air acts with less resistance with the water. And\nresearching a proper model v-shaped monohull to fabricate would be paramount for the specs of\nthe boat.\nMuch of the research for the internal layout and design of electronics was done by\nconsulting our advisor Zach and the previous boat. We pushed for not only one motor so\ndesigning with Zach a proper electronic layout including how to integrate multiple safety\nmeasures such as a fuse and a kill switch. The dual parallel systems for each set of batteries and\nmotors also needed to properly communicate with the receiver. Much of the research regarding\nthe receiver consulted the user manual for the receiver and remote control for the watercraft.\nThe inclusion of two motors meant that there would be two independent propellors acting\nas thrusters for the craft. The interaction between these two propellors and how it would affect\nthe overall speed and steering of the craft came into question. How would we orient these\npropellors? Would we need to make the dual propellors counter rotate to stop the hull from\nturning with two propellors? One of our team members had an old Textbook regarding the\nPrincipals of Naval Architecture, from the society of naval Architecture & Marine Engineers.\nThe book had these answers regarding the drivetrain and this new design change. As the dual\npropellors would need to spin in opposite directions to stop the craft from slightly turning\nwhenever thrusting forward.\nOur boat would need to be made from scratch, so our team would need to learn how to\nproperly produce layups of fiberglass and techniques that strengthen the material. With the help\nof the University at Buffalo AIAA team and a student by the name of Thomas Przedwiecki we\ngot this completed. Thomas has had multiple previous experiences making fiberglass layups for\naerospace applications. Not only did he help us find and purchase the right materials, UB AIAA\nwas there to offer us resources to help produce the hull itself.\nLater on in this report, we go over materials testing regarding the structural integrity of\nthe fiberglass hull. While fiberglass is strong for its weight, we were uncertain if the hull alone\nwith fiberglass would support the weight from the boat moving at speed. Conducting a tensile\ntest on samples of differing layers of fiberglass would help us visualize the strength of our hull. Design & Analysis\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": "Electrical & Propulsion:\nThe speed of the boat can be theoretically calculated by looking at the KV value of the\nmotors, voltage through the system and the pitch of the propeller. The KV value of the two\nmotors is 540KV, the voltage though the system is 34V with a charge of 4.2V per cell, and a\npitch of 1.9 in/s for the propellers.\nRPM is defined as:\n𝑅𝑃𝑀 = 𝐾𝑉 × 𝑉\nwhere RPM = revolutions per minute, KV = KV value of the motor, V = voltage.\nSpeed which will is defined as:\nv = RPM × P × GR\nwhere v = velocity, P = pitch, and GR = gear ratio.\nSince we do not have a gear ratio incorporated into the system, we can assume that the gear ratio\nis 1 and it would just simplify to RPM x GR. Inserting all the measured values, we can get a\nspeed of around 33mph.\nHull:\nMany notices of concern were rightly brought up by members of the team and from TA\nKarim about confirmation about the structural integrity of the hull. Mainly questioning if the\nchosen number of layers for the fiberglass layup was the correct amount. We conducted a Tensile\ntest to determine the effect on tensile strength adding more layers of the fiberglass had. These tests\nwere applied to at least 5 samples of each type tested to follow ASTM guidelines for a Tensile test.\nThe samples were 4-layer, 6-layer, and 8-layer fiberglass layups, respectively. The results are\nshown in Table 2.\nTable 1: Major tensile test findings# layers\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "Avg max\nForce (lbs.) St dev\nTensile\nStrength (psi) St Dev2 Avg Area (in^2) St Dev3\n4 layers 505.844 35.276 9521.82 2133.657 0.056306 0.014779175\n6 layers 832.1248 26.496 19260.749 1439.313 0.0434338 0.003389828\n8 layers 825.5488 59.382 14225.941 1575.099 0.058401 0.004132727\nTensile Strength is defined as:\n𝜎𝑇𝑆 =\n𝐹\n𝐴\nWhere 𝜎𝑇𝑆 = tensile strength, F = axial force, A = cross-sectional area of the samples (length ×\nwidth)\nStandard Deviation is defined as:\n𝜎 = √\n∑(𝑥 − 𝜇)\n2\n𝑁\nWhere σ = tensile strength, N = number of samples, µ = average, x = elemental value\nNote that the calculated tensile strength [Equation]decreased for the increase of layers\nbetween 6 and 8 layers. Also note that the 6-layer tensile strength was the largest. Our group's\nhypothesis is that the decrease in tensile strength between 6-layers and 8-layers was due to the\nincrease in epoxy usage. As the layers between each epoxy layer grew, each layer of the weaving\nof the fiberglass spread apart from one another. The interaction between each layer of fiberglass\nis the main factor in strengthening the material. Having such a large tensile strength for our 6-\nlayer lay-up (19260.75±1439.31 lbs/in^2) assured our team that the boat would be structurally\nsound. And that the main concern was any weakening of the boat from improper manufacturing\nof the fiberglass layers. Such as excessive epoxy between layers, delamination, and bubbles.Overview of Build & Fabrication Processes\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "Hull:\nFigure 1. Fabricated Hull\nThe top half of the hull consists of four layers of 0.2 mm fiberglass, and the bottom is six\nlayers. Our manufacturing process involved wet-laying the fiberglass over a 3D-CNC'd\nfoam mold with epoxy resin. The angle at which the threads of the fiberglass are directed\nvary in 45° increments to increase the tensile strength in all directions. The resulting\nproduct is exceptionally durable, lightweight, easy to manufacture, and cost-effective.\nTable 2: Boat Specifications\nDesign Specifications Data Value\nFiberglass Sheet Thickness 0.2 mm\nLayers in bottom hull 6\nLayers in top hull 4\nWidth 18.91”\nLength 71.8”\nBottom Hull Depth 5.69”\nTop Hull Depth 3.24”\nHull Depth (combined) 8.93”\nDepth Submerged with 60-lb payload 3.2”\nCost to Manufacture $262Figure 2. Modified CAD Model\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "This is the final CAD model of the hull in SolidWorks.\nFigure 3. Original CAD Model\nThis is the original model for our hull. It originally had a hump on the top that was also\npart of a removable lid, and it served mostly as a cosmetic design choice. Since the hump\ncreated issues in neatly laying the fiberglass over the mold, it was removed in the final\ndesign as shown above. This also allowed us to cut a door more easily into the top of\nthe hull. Note in Figure 3 there are small steps along the bottom of the hull from tip totail. These steps act as a floor for the water as the hull is pushed out of the water.\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": "There are stringers that run down the length of the inside of the bottom boat hull section.\nSince our hull mold was CNC’d with rigid polyurethane we decided to leave a small flat section\nat the bottom of the hull to act as a floor. The foam is only about an inch deep towards the\nsurface of the fiberglass hull and is a minor factor towards the hull’s rigidity. The stringers were\nadhered in place with 3M Marine Adhesive Sealant 5200 and JB weld. The Stringers were\nmodeled in SolidWorks and cut from a .188in thick sheet of aircraft aluminum with a waterjet\ncutter. The stringers act to stabilize the hull and prevent the fiberglass from flexing inwards dur\nto forces acting against the skin of the hull.\nFigure 4: Bottom section of the hull showing alignment of aluminum stringers\nHoles were drilled in the rear of the boat, and brass sleeves were glued down with epoxy\nto act as guide holes for the drivetrain to feed through to the water. The mounts for the dual\nelectric motors were epoxied down along the sloped sides fiberglass besides the stringers. The\nmounts were places such that the flex shafts reach through the brass guide holes.\nElectrical & Propulsion:\nThe whole electrical system contains 8, 14.8V lithium 4 cell batteries, a kill switch, fuse,\ntelemetry sensor, 2 electronic speed controllers, 2 motors, servo and receiver. The system outputs\naround 34V through the system if the batteries are held at a 4.2V per cell or if the batteries are\nheld at 3.8V the system can sustain a 31V power through the system. Each motor has a 540KV\nrating which can get the propeller to spin at a range of 16,740-18360rpm depending on how\nmuch voltage the cells are charged up to. The battery harness that connects all the batteries together are connected in series as well as parallel to allow the voltage to be below the 55V\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "maximum set by this competition. Most of the electronics are soldered together using 8-gauge\nwire.\nFigure 5: Electronical diagram of propulsion and telemetry system\nFigure 6: Electrical system Fully wired up within bottom hull before constructionThe propulsion system uses 3/16” propellers and steps down from a ¼” shaft to the\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 10,
+      "text": "propeller 3/16”. The propeller is secured onto the shaft via a drive dog to prevent it from sliding\nwhile the shaft rotates and is held in place from the other end by a bullet nut for more fluid\ndynamic movement to prevent as much cavitation as possible.\nRisks\nDesign and Building\nFor the 2025 PEP Competition, the unmanned team from the University at Buffalo was\ngiven a clear set of design changes from the previous year’s team. In the 2024 competition, the\nUniversity at Buffalo brought a roughly four-foot-long catamaran boat. This boat was submerged\nnearly six feet by a wake that formed in front of it during the competition. This incident flooded\nthe internal components and shook the battery connections out of place. This failure significantly\naffected the team’s performance and is to be avoided with the next iteration.\nWhen meeting with the 2024 team, we were told how we could potentially solve this\nissue in our design. From the list of possible design changes, our team chose to increase the hull\nlength, create a second motor system, and securing the batteries with brackets instead of Velcro\nstrips. The hull length increase is meant to solve the concern of wakes in the water, as the\nincreased length makes it harder to get the bow-end submerged. Having a second motor in\nparallel with the original system will increase our speed, as well as reduce the risk of system\nfailure due to broken connections. The use of brackets will ensure that the batteries cannot move\nwithin the boat under any circumstances, including capsizing. These three changes were outlined\nas our design improvements at the start of the project.\nRisk Mitigation\nOperating an entirely electric boat involves several risks, most of which are electrocution\nor electrical failure. The electrical system has been designed to split into two segments, both of\nwhich are separate except for the safety and telemetry systems. As per the PEP Competition\nRules, the circuit must include a manual kill switch and a fuse. The kill switch has the entirety of\nthe batteries' current passing through it, and can be deactivated by twisting the handle and disconnecting the circuit. The kill switch is added in case a situation occurs where the boat will\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 11,
+      "text": "not respond to inputs from the controller, or when the circuit is compromised and poses an\nelectrocution hazard. The fuse is after the kill switch in the circuit, and serves as an emergency\nfailsafe. If it is not safe or possible to disengage the kill switch, the fuse serves as a built-in\ndisconnect where the circuit will break. This is put in place to protect the speed controllers at the\nend of the circuit, as they are sensitive to the total current passing through them.\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "UB PEP Uncrewed Team"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "The Furnas"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "University at Buffalo"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Uncrewed Boat"
+    },
+    {
+      "line": 4,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Aiden Nabinger"
+    },
+    {
+      "line": 5,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Andrew Vickery"
+    },
+    {
+      "line": 6,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Davin Spier"
+    },
+    {
+      "line": 7,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Eric Sandle"
+    },
+    {
+      "line": 8,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Jacob DiFrancesco"
+    },
+    {
+      "line": 9,
+      "page_start": 0,
+      "page_end": 2,
+      "text": "Van Hywel ValenciaBackground"
+    },
+    {
+      "line": 10,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Much of what we needed to research surrounded our main design changes made between"
+    },
+    {
+      "line": 11,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "last year’s unmanned boat team design and the current design. Thanks to our graduate advisor for"
+    },
+    {
+      "line": 12,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "the project, Zack Medicis, many of our design changes and reasonings for each were made clear."
+    },
+    {
+      "line": 13,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "One being that we needed to change the hull type. Catamaran hulls are very stable and fast"
+    },
+    {
+      "line": 14,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "however are not as fast as a v-shaped monohull. The tradeoff we found, was a decrease in"
+    },
+    {
+      "line": 15,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "stability in harsh wake to an increase in overall thrust output. A v-shaped hull with steps on the"
+    },
+    {
+      "line": 16,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "bottom of the hull, as seen in figure 3, acts as a platform for the boat to skim along while it is at"
+    },
+    {
+      "line": 17,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "speed. The v-shape of the overall hull cuts through the water like a knife and the steps push the"
+    },
+    {
+      "line": 18,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "boat upward and out of the water. When the boat is pushed out of the water more there is less"
+    },
+    {
+      "line": 19,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "skin drag acting upon the boat from the water as air acts with less resistance with the water. And"
+    },
+    {
+      "line": 20,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "researching a proper model v-shaped monohull to fabricate would be paramount for the specs of"
+    },
+    {
+      "line": 21,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "the boat."
+    },
+    {
+      "line": 22,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Much of the research for the internal layout and design of electronics was done by"
+    },
+    {
+      "line": 23,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "consulting our advisor Zach and the previous boat. We pushed for not only one motor so"
+    },
+    {
+      "line": 24,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "designing with Zach a proper electronic layout including how to integrate multiple safety"
+    },
+    {
+      "line": 25,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "measures such as a fuse and a kill switch. The dual parallel systems for each set of batteries and"
+    },
+    {
+      "line": 26,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "motors also needed to properly communicate with the receiver. Much of the research regarding"
+    },
+    {
+      "line": 27,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "the receiver consulted the user manual for the receiver and remote control for the watercraft."
+    },
+    {
+      "line": 28,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "The inclusion of two motors meant that there would be two independent propellors acting"
+    },
+    {
+      "line": 29,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "as thrusters for the craft. The interaction between these two propellors and how it would affect"
+    },
+    {
+      "line": 30,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "the overall speed and steering of the craft came into question. How would we orient these"
+    },
+    {
+      "line": 31,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "propellors? Would we need to make the dual propellors counter rotate to stop the hull from"
+    },
+    {
+      "line": 32,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "turning with two propellors? One of our team members had an old Textbook regarding the"
+    },
+    {
+      "line": 33,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Principals of Naval Architecture, from the society of naval Architecture & Marine Engineers."
+    },
+    {
+      "line": 34,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "The book had these answers regarding the drivetrain and this new design change. As the dual"
+    },
+    {
+      "line": 35,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "propellors would need to spin in opposite directions to stop the craft from slightly turning"
+    },
+    {
+      "line": 36,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "whenever thrusting forward."
+    },
+    {
+      "line": 37,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Our boat would need to be made from scratch, so our team would need to learn how to"
+    },
+    {
+      "line": 38,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "properly produce layups of fiberglass and techniques that strengthen the material. With the help"
+    },
+    {
+      "line": 39,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "of the University at Buffalo AIAA team and a student by the name of Thomas Przedwiecki we"
+    },
+    {
+      "line": 40,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "got this completed. Thomas has had multiple previous experiences making fiberglass layups for"
+    },
+    {
+      "line": 41,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "aerospace applications. Not only did he help us find and purchase the right materials, UB AIAA"
+    },
+    {
+      "line": 42,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "was there to offer us resources to help produce the hull itself."
+    },
+    {
+      "line": 43,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Later on in this report, we go over materials testing regarding the structural integrity of"
+    },
+    {
+      "line": 44,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "the fiberglass hull. While fiberglass is strong for its weight, we were uncertain if the hull alone"
+    },
+    {
+      "line": 45,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "with fiberglass would support the weight from the boat moving at speed. Conducting a tensile"
+    },
+    {
+      "line": 46,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "test on samples of differing layers of fiberglass would help us visualize the strength of our hull. Design & Analysis"
+    },
+    {
+      "line": 47,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Electrical & Propulsion:"
+    },
+    {
+      "line": 48,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "The speed of the boat can be theoretically calculated by looking at the KV value of the"
+    },
+    {
+      "line": 49,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "motors, voltage through the system and the pitch of the propeller. The KV value of the two"
+    },
+    {
+      "line": 50,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "motors is 540KV, the voltage though the system is 34V with a charge of 4.2V per cell, and a"
+    },
+    {
+      "line": 51,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "pitch of 1.9 in/s for the propellers."
+    },
+    {
+      "line": 52,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "RPM is defined as:"
+    },
+    {
+      "line": 53,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "𝑅𝑃𝑀 = 𝐾𝑉 × 𝑉"
+    },
+    {
+      "line": 54,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "where RPM = revolutions per minute, KV = KV value of the motor, V = voltage."
+    },
+    {
+      "line": 55,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Speed which will is defined as:"
+    },
+    {
+      "line": 56,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "v = RPM × P × GR"
+    },
+    {
+      "line": 57,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "where v = velocity, P = pitch, and GR = gear ratio."
+    },
+    {
+      "line": 58,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Since we do not have a gear ratio incorporated into the system, we can assume that the gear ratio"
+    },
+    {
+      "line": 59,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "is 1 and it would just simplify to RPM x GR. Inserting all the measured values, we can get a"
+    },
+    {
+      "line": 60,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "speed of around 33mph."
+    },
+    {
+      "line": 61,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Hull:"
+    },
+    {
+      "line": 62,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Many notices of concern were rightly brought up by members of the team and from TA"
+    },
+    {
+      "line": 63,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Karim about confirmation about the structural integrity of the hull. Mainly questioning if the"
+    },
+    {
+      "line": 64,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "chosen number of layers for the fiberglass layup was the correct amount. We conducted a Tensile"
+    },
+    {
+      "line": 65,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "test to determine the effect on tensile strength adding more layers of the fiberglass had. These tests"
+    },
+    {
+      "line": 66,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "were applied to at least 5 samples of each type tested to follow ASTM guidelines for a Tensile test."
+    },
+    {
+      "line": 67,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "The samples were 4-layer, 6-layer, and 8-layer fiberglass layups, respectively. The results are"
+    },
+    {
+      "line": 68,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "shown in Table 2."
+    },
+    {
+      "line": 69,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "Table 1: Major tensile test findings# layers"
+    },
+    {
+      "line": 70,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Avg max"
+    },
+    {
+      "line": 71,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Force (lbs.) St dev"
+    },
+    {
+      "line": 72,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Tensile"
+    },
+    {
+      "line": 73,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Strength (psi) St Dev2 Avg Area (in^2) St Dev3"
+    },
+    {
+      "line": 74,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "4 layers 505.844 35.276 9521.82 2133.657 0.056306 0.014779175"
+    },
+    {
+      "line": 75,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "6 layers 832.1248 26.496 19260.749 1439.313 0.0434338 0.003389828"
+    },
+    {
+      "line": 76,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "8 layers 825.5488 59.382 14225.941 1575.099 0.058401 0.004132727"
+    },
+    {
+      "line": 77,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Tensile Strength is defined as:"
+    },
+    {
+      "line": 78,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "𝜎𝑇𝑆 ="
+    },
+    {
+      "line": 79,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "𝐹"
+    },
+    {
+      "line": 80,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "𝐴"
+    },
+    {
+      "line": 81,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Where 𝜎𝑇𝑆 = tensile strength, F = axial force, A = cross-sectional area of the samples (length ×"
+    },
+    {
+      "line": 82,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "width)"
+    },
+    {
+      "line": 83,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Standard Deviation is defined as:"
+    },
+    {
+      "line": 84,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "𝜎 = √"
+    },
+    {
+      "line": 85,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "∑(𝑥 − 𝜇)"
+    },
+    {
+      "line": 86,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "2"
+    },
+    {
+      "line": 87,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "𝑁"
+    },
+    {
+      "line": 88,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Where σ = tensile strength, N = number of samples, µ = average, x = elemental value"
+    },
+    {
+      "line": 89,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Note that the calculated tensile strength [Equation]decreased for the increase of layers"
+    },
+    {
+      "line": 90,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "between 6 and 8 layers. Also note that the 6-layer tensile strength was the largest. Our group's"
+    },
+    {
+      "line": 91,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "hypothesis is that the decrease in tensile strength between 6-layers and 8-layers was due to the"
+    },
+    {
+      "line": 92,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "increase in epoxy usage. As the layers between each epoxy layer grew, each layer of the weaving"
+    },
+    {
+      "line": 93,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "of the fiberglass spread apart from one another. The interaction between each layer of fiberglass"
+    },
+    {
+      "line": 94,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "is the main factor in strengthening the material. Having such a large tensile strength for our 6-"
+    },
+    {
+      "line": 95,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "layer lay-up (19260.75±1439.31 lbs/in^2) assured our team that the boat would be structurally"
+    },
+    {
+      "line": 96,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "sound. And that the main concern was any weakening of the boat from improper manufacturing"
+    },
+    {
+      "line": 97,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "of the fiberglass layers. Such as excessive epoxy between layers, delamination, and bubbles.Overview of Build & Fabrication Processes"
+    },
+    {
+      "line": 98,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Hull:"
+    },
+    {
+      "line": 99,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Figure 1. Fabricated Hull"
+    },
+    {
+      "line": 100,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "The top half of the hull consists of four layers of 0.2 mm fiberglass, and the bottom is six"
+    },
+    {
+      "line": 101,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "layers. Our manufacturing process involved wet-laying the fiberglass over a 3D-CNC'd"
+    },
+    {
+      "line": 102,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "foam mold with epoxy resin. The angle at which the threads of the fiberglass are directed"
+    },
+    {
+      "line": 103,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "vary in 45° increments to increase the tensile strength in all directions. The resulting"
+    },
+    {
+      "line": 104,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "product is exceptionally durable, lightweight, easy to manufacture, and cost-effective."
+    },
+    {
+      "line": 105,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Table 2: Boat Specifications"
+    },
+    {
+      "line": 106,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Design Specifications Data Value"
+    },
+    {
+      "line": 107,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Fiberglass Sheet Thickness 0.2 mm"
+    },
+    {
+      "line": 108,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Layers in bottom hull 6"
+    },
+    {
+      "line": 109,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Layers in top hull 4"
+    },
+    {
+      "line": 110,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Width 18.91”"
+    },
+    {
+      "line": 111,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Length 71.8”"
+    },
+    {
+      "line": 112,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Bottom Hull Depth 5.69”"
+    },
+    {
+      "line": 113,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Top Hull Depth 3.24”"
+    },
+    {
+      "line": 114,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Hull Depth (combined) 8.93”"
+    },
+    {
+      "line": 115,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Depth Submerged with 60-lb payload 3.2”"
+    },
+    {
+      "line": 116,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "Cost to Manufacture $262Figure 2. Modified CAD Model"
+    },
+    {
+      "line": 117,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "This is the final CAD model of the hull in SolidWorks."
+    },
+    {
+      "line": 118,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Figure 3. Original CAD Model"
+    },
+    {
+      "line": 119,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "This is the original model for our hull. It originally had a hump on the top that was also"
+    },
+    {
+      "line": 120,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "part of a removable lid, and it served mostly as a cosmetic design choice. Since the hump"
+    },
+    {
+      "line": 121,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "created issues in neatly laying the fiberglass over the mold, it was removed in the final"
+    },
+    {
+      "line": 122,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "design as shown above. This also allowed us to cut a door more easily into the top of"
+    },
+    {
+      "line": 123,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "the hull. Note in Figure 3 there are small steps along the bottom of the hull from tip totail. These steps act as a floor for the water as the hull is pushed out of the water."
+    },
+    {
+      "line": 124,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "There are stringers that run down the length of the inside of the bottom boat hull section."
+    },
+    {
+      "line": 125,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Since our hull mold was CNC’d with rigid polyurethane we decided to leave a small flat section"
+    },
+    {
+      "line": 126,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "at the bottom of the hull to act as a floor. The foam is only about an inch deep towards the"
+    },
+    {
+      "line": 127,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "surface of the fiberglass hull and is a minor factor towards the hull’s rigidity. The stringers were"
+    },
+    {
+      "line": 128,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "adhered in place with 3M Marine Adhesive Sealant 5200 and JB weld. The Stringers were"
+    },
+    {
+      "line": 129,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "modeled in SolidWorks and cut from a .188in thick sheet of aircraft aluminum with a waterjet"
+    },
+    {
+      "line": 130,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "cutter. The stringers act to stabilize the hull and prevent the fiberglass from flexing inwards dur"
+    },
+    {
+      "line": 131,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "to forces acting against the skin of the hull."
+    },
+    {
+      "line": 132,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Figure 4: Bottom section of the hull showing alignment of aluminum stringers"
+    },
+    {
+      "line": 133,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Holes were drilled in the rear of the boat, and brass sleeves were glued down with epoxy"
+    },
+    {
+      "line": 134,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "to act as guide holes for the drivetrain to feed through to the water. The mounts for the dual"
+    },
+    {
+      "line": 135,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "electric motors were epoxied down along the sloped sides fiberglass besides the stringers. The"
+    },
+    {
+      "line": 136,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "mounts were places such that the flex shafts reach through the brass guide holes."
+    },
+    {
+      "line": 137,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Electrical & Propulsion:"
+    },
+    {
+      "line": 138,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "The whole electrical system contains 8, 14.8V lithium 4 cell batteries, a kill switch, fuse,"
+    },
+    {
+      "line": 139,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "telemetry sensor, 2 electronic speed controllers, 2 motors, servo and receiver. The system outputs"
+    },
+    {
+      "line": 140,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "around 34V through the system if the batteries are held at a 4.2V per cell or if the batteries are"
+    },
+    {
+      "line": 141,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "held at 3.8V the system can sustain a 31V power through the system. Each motor has a 540KV"
+    },
+    {
+      "line": 142,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "rating which can get the propeller to spin at a range of 16,740-18360rpm depending on how"
+    },
+    {
+      "line": 143,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "much voltage the cells are charged up to. The battery harness that connects all the batteries together are connected in series as well as parallel to allow the voltage to be below the 55V"
+    },
+    {
+      "line": 144,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "maximum set by this competition. Most of the electronics are soldered together using 8-gauge"
+    },
+    {
+      "line": 145,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "wire."
+    },
+    {
+      "line": 146,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Figure 5: Electronical diagram of propulsion and telemetry system"
+    },
+    {
+      "line": 147,
+      "page_start": 8,
+      "page_end": 9,
+      "text": "Figure 6: Electrical system Fully wired up within bottom hull before constructionThe propulsion system uses 3/16” propellers and steps down from a ¼” shaft to the"
+    },
+    {
+      "line": 148,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "propeller 3/16”. The propeller is secured onto the shaft via a drive dog to prevent it from sliding"
+    },
+    {
+      "line": 149,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "while the shaft rotates and is held in place from the other end by a bullet nut for more fluid"
+    },
+    {
+      "line": 150,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "dynamic movement to prevent as much cavitation as possible."
+    },
+    {
+      "line": 151,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Risks"
+    },
+    {
+      "line": 152,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Design and Building"
+    },
+    {
+      "line": 153,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "For the 2025 PEP Competition, the unmanned team from the University at Buffalo was"
+    },
+    {
+      "line": 154,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "given a clear set of design changes from the previous year’s team. In the 2024 competition, the"
+    },
+    {
+      "line": 155,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "University at Buffalo brought a roughly four-foot-long catamaran boat. This boat was submerged"
+    },
+    {
+      "line": 156,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "nearly six feet by a wake that formed in front of it during the competition. This incident flooded"
+    },
+    {
+      "line": 157,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "the internal components and shook the battery connections out of place. This failure significantly"
+    },
+    {
+      "line": 158,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "affected the team’s performance and is to be avoided with the next iteration."
+    },
+    {
+      "line": 159,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "When meeting with the 2024 team, we were told how we could potentially solve this"
+    },
+    {
+      "line": 160,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "issue in our design. From the list of possible design changes, our team chose to increase the hull"
+    },
+    {
+      "line": 161,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "length, create a second motor system, and securing the batteries with brackets instead of Velcro"
+    },
+    {
+      "line": 162,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "strips. The hull length increase is meant to solve the concern of wakes in the water, as the"
+    },
+    {
+      "line": 163,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "increased length makes it harder to get the bow-end submerged. Having a second motor in"
+    },
+    {
+      "line": 164,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "parallel with the original system will increase our speed, as well as reduce the risk of system"
+    },
+    {
+      "line": 165,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "failure due to broken connections. The use of brackets will ensure that the batteries cannot move"
+    },
+    {
+      "line": 166,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "within the boat under any circumstances, including capsizing. These three changes were outlined"
+    },
+    {
+      "line": 167,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "as our design improvements at the start of the project."
+    },
+    {
+      "line": 168,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Risk Mitigation"
+    },
+    {
+      "line": 169,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Operating an entirely electric boat involves several risks, most of which are electrocution"
+    },
+    {
+      "line": 170,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "or electrical failure. The electrical system has been designed to split into two segments, both of"
+    },
+    {
+      "line": 171,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "which are separate except for the safety and telemetry systems. As per the PEP Competition"
+    },
+    {
+      "line": 172,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Rules, the circuit must include a manual kill switch and a fuse. The kill switch has the entirety of"
+    },
+    {
+      "line": 173,
+      "page_start": 9,
+      "page_end": 10,
+      "text": "the batteries' current passing through it, and can be deactivated by twisting the handle and disconnecting the circuit. The kill switch is added in case a situation occurs where the boat will"
+    },
+    {
+      "line": 174,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "not respond to inputs from the controller, or when the circuit is compromised and poses an"
+    },
+    {
+      "line": 175,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "electrocution hazard. The fuse is after the kill switch in the circuit, and serves as an emergency"
+    },
+    {
+      "line": 176,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "failsafe. If it is not safe or possible to disengage the kill switch, the fuse serves as a built-in"
+    },
+    {
+      "line": 177,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "disconnect where the circuit will break. This is put in place to protect the speed controllers at the"
+    },
+    {
+      "line": 178,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "end of the circuit, as they are sensitive to the total current passing through them."
+    }
+  ],
+  "source_line_count": 179,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}

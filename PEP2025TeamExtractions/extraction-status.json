@@ -1,0 +1,69 @@
+{
+  "competition_year": 2025,
+  "attempted_at": "2026-10-21T22:29:57+00:00",
+  "extracted": 15,
+  "failed": 12,
+  "failures": [
+    {
+      "team": "North Carolina State",
+      "source_url": "https://navalengineers.sharepoint.com/%3Ab%3A/g/EQPLyrU7dqROouenSizomMIBbrYtnm8G5i2GIX-s3gCI9A",
+      "error": "Paper text unavailable from web reader; direct download blocked by DNS"
+    },
+    {
+      "team": "University of Virginia",
+      "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/UVa/UVA-PEP2025FinalPaper_Min.pdf",
+      "error": "Paper text unavailable from web reader; direct download blocked by DNS"
+    },
+    {
+      "team": "Virginia Tech",
+      "source_url": "https://navalengineers.sharepoint.com/%3Ab%3A/g/ESR8ieAE3xxFtXXA91xttOcBl0uOoN0GD_6nXYLl8zb4rg",
+      "error": "Paper text unavailable from web reader; direct download blocked by DNS"
+    },
+    {
+      "team": "Elon University",
+      "source_url": "https://www.navalengineers.org/Portals/16/PEP/2025/Elon/ElonWhitePaper.pdf",
+      "error": "Paper text unavailable from web reader; direct download blocked by DNS"
+    },
+    {
+      "team": "Texas A&M",
+      "source_url": "https://www.navalengineers.org/LinkClick.aspx?fileticket=bAjqlNeqiWA%3D&portalid=16",
+      "error": "Paper text unavailable from web reader; direct download blocked by DNS"
+    },
+    {
+      "team": "University of Connecticut",
+      "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/UCONN/UCONN_EBC_WhitePaper_ASNE.pdf",
+      "error": "Paper text unavailable from web reader; direct download blocked by DNS"
+    },
+    {
+      "team": "University of Kentucky \u2014 Hydro Hustlers",
+      "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Kentucky/HydroHustler-UK-WhitePaper.pdf",
+      "error": "Paper text unavailable from web reader; direct download blocked by DNS"
+    },
+    {
+      "team": "University of Kentucky \u2014 Gato Del Barro",
+      "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Kentucky/Kentucky-GatoDelBarro-ElectricMudboatTeam%20-Uncrewed-White%20Paper.pdf",
+      "error": "Paper text unavailable from web reader; direct download blocked by DNS"
+    },
+    {
+      "team": "University of Kentucky \u2014 The Deciduous",
+      "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Kentucky/UnivKentucky-Deciduous-WhitePaper.pdf",
+      "error": "Paper text unavailable from web reader; direct download blocked by DNS"
+    },
+    {
+      "team": "Stony Brook University",
+      "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/StonyBrook/StonyBrook-PEP%202025%20Unmanned%20WhitePaper.pdf",
+      "error": "Paper text unavailable from web reader; direct download blocked by DNS"
+    },
+    {
+      "team": "University of Notre Dame",
+      "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/NotreDame/NotreDame-2025-WhitePaper.pdf",
+      "error": "Paper text unavailable from web reader; direct download blocked by DNS"
+    },
+    {
+      "team": "University of Iowa",
+      "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Iowa/Iowa-PEP%20White%20Paper%20UIOWA%20submission.pdf",
+      "error": "Paper text unavailable from web reader; direct download blocked by DNS"
+    }
+  ],
+  "entries_without_paper_link": 2
+}

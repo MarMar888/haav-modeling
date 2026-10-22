@@ -1,0 +1,1907 @@
+{
+  "competition_year": 2025,
+  "team": "Howard University",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/Howard",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Howard/Howard-TidalTitans-WhitePaper-PEP25.pdf",
+  "filename": "Howard-TidalTitans-WhitePaper-PEP25.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "15"
+  },
+  "page_count": 15,
+  "pages_without_text": [],
+  "char_count": 26696,
+  "pages": [
+    {
+      "page": 1,
+      "text": "Nauti Buoy\nWhite Paper Report\nSubmitted to:\nAmerican Society of Naval Engineers (ASNE)\nFor\nPromoting Electric Propulsion 2025 Competition (Unmanned)\nHoward University\nSubmitted By\nTeam: Jefferson Ogbuka (PM),\nGreg Hyson, Evan Barker, Elijah Pratt, Irena Silcott-Nanton\nMarch 25, 2025.EXECUTIVE SUMMARY\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": "This final report details the progress of the Tidal Titans, a team of undergraduate mechanical engineering\nstudents, in designing and preparing the Nauti Buoy, an unmanned electric-propelled watercraft for the\nASNE PEP competition. Building on iterative design phases and rigorous engineering analyses, the team\nhas finalized component selection, structural modifications, and system integration protocols. The hull, a\nprefabricated 49-inch fiberglass catamaran, underwent strategic enhancements, including PVC outriggers\nfor stability and aluminum reinforcements for weight distribution. These modifications were guided by\ncomputational fluid dynamics (CFD) simulations and buoyancy calculations to ensure hydrodynamic\nefficiency.\nThe propulsion system centers on two Blue Robotics T200 thrusters, selected for their high thrust-to-weight\nratio and compatibility with a 24V 50Ah LiFePO4 battery pack. This battery system, equipped with\nintegrated thermal management and overcharge protection, was chosen to maximize energy density while\nadhering to weight constraints. A Radiolink-based control framework, paired with Arduino\nmicrocontrollers, enables precise remote operation, ensuring responsiveness to environmental variables\nsuch as currents and wind.\nWith all components procured, fabricated, or modified, the project now enters its final phase: full assembly\nand comprehensive testing. Hull adjustments remain iterative, with refinements ongoing to optimize\nbalance and drag reduction ahead of scheduled water trials. Pending tests include maneuverability\nassessments, endurance validation under race conditions, and emergency system audits.\nThrough this collaborative effort, the Tidal Titans aim to demonstrate the viability of electric propulsion in\ndemanding marine applications. By addressing technical challenges through structured innovation, the team\nstrives to deliver a vessel that not only meets competition standards but also advances the broader adoption\nof sustainable naval technologies. TABLE OF CONTENTS\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "1. Introduction\n2. The Big Picture -The Nauti Buoy\n2.1. The Hull\n2.2. The Propulsion System\n2.3. Control System\n2.4. The Battery Management System\n3. CAD And Testing\n4. Risk Management\n5. Next Steps1. INTRODUCTION\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": "Propulsion systems have been integral to technological progress, powering vehicles, ships, and aircraft\nsince the industrial revolution. Historically reliant on internal combustion engines (ICEs) fueled by fossil\nresources, these systems revolutionized global trade and travel. However, their environmental and\noperational drawbacks—chiefly pollution and inefficiency—present challenges in the face of modern\nclimate and resource crises.\nCombustion-based systems emit significant pollutants such as carbon dioxide (CO2), nitrogen oxides\n(NOx), and particulate matter, which contribute to global warming, ocean acidification, and air pollution.\nThese emissions exacerbate climate change and biodiversity loss, necessitating a shift to cleaner,\nsustainable propulsion technologies [1]. Furthermore, ICEs suffer from low thermal efficiency, converting\nonly 25–30% of fuel energy into useful work, with most lost as heat [2]. Their mechanical complexity\nintroduces further energy losses and operational wear, emphasizing the need for innovative alternatives.\nElectric propulsion systems offer a transformative solution, leveraging electric motors powered by batteries\nor fuel cells. These systems achieve efficiencies exceeding 90%, far surpassing ICEs [3]. The sustainability\nof electric propulsion is amplified when powered by renewable energy sources like solar or wind. Advances\nin battery technology, energy management systems, and power electronics have expanded electric\npropulsion's applications across industries, including automotive, aerospace, and maritime sectors.\nThe maritime industry is increasingly adopting electric propulsion to mitigate environmental impacts.\nCompetitions like the Promoting Electric Propulsion (PEP), sponsored by the American Society of Naval\nEngineers (ASNE) and the Office of Naval Research, encourage innovation in electric watercraft design.\nUniversity teams are tasked with developing unmanned electric- powered vessels capable of completing a\n2-mile race, promoting advancements in energy efficiency, reliability, and autonomous operation.\nIn response to the PEP challenge, the team will design an autonomous electric-powered watercraft\noptimized for performance and sustainability. The design incorporates high-efficiency electric motors,\nlightweight materials, and advanced battery management systems to ensure energy optimization. A\nstreamlined hull minimizes hydrodynamic drag, enabling high speeds while maintaining stability. Thermal\nmanagement and structural integrity are prioritized to maintain consistent performance throughout the race.\nThe team’s target is to complete the race in under 8 minutes, showcasing the capabilities of electric\npropulsion in maritime applications. Beyond the competition, this project serves as a platform to explore\ncutting-edge propulsion technologies, contributing to sustainable engineering solutions. The PEP competition embodies a pivotal effort to advance electric propulsion in the maritime sector. By fostering\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "innovation and sustainability, it aligns with broader environmental goals while preparing the next\ngeneration of engineers to develop transformative naval technologies. Through this project, we aim to\ndemonstrate the potential of electric propulsion to drive sustainable progress in naval engineering.\n2. THE BIG PICTURE – The Nauti Buoy\nThe Nauti Buoy is a lightweight, electric-propelled watercraft engineered for the ASNE PEP competition,\ndesigned to balance speed, stability, and sustainability through advanced marine engineering solutions.\nBuilt around a 49-inch fiberglass catamaran hull (8.22 lbs), the vessel integrates PVC outriggers supported\nby aluminum tubing to enhance buoyancy and hydrodynamic efficiency, validated through iterative CFD\nsimulations. Figure 1 below shows the preliminary build of the vessel with subsystems integrated.\nPropulsion is driven by two Blue Robotics T200 thrusters (22.9 lbf total thrust), powered by a 24V 50Ah\nLiFePO4 battery system with integrated thermal management and overcharge protection, ensuring optimal\nenergy distribution for target speeds of 15 mph. Remote operation is enabled by a Radiolink R12DS\ntransmitter/receiver system and Arduino Mega 2560 microcontroller, refined through firmware updates for\nprecise control in dynamic marine conditions. Structural modifications, including reinforced interior plates\nand vibration-dampening rubber gaskets, remain under iterative refinement to optimize weight distribution\nahead of final assembly and testing. With all components procured and subsystems tested, the project\nadvances toward comprehensive hydrodynamic trials, endurance validation, and race simulations,\npositioning The Nauti Buoy as a benchmark in sustainable marine innovation aligned with ASNE’s vision\nfor eco-conscious naval engineering.\n\nFigure 1: The Big Picture - Nauti Buoy2.1. THE HULL (Design and Build Processes)\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "The Tidal Titans selected a hull with a multihull-inspired design for their unmanned watercraft after an in\u0002depth evaluation of hydrodynamic efficiency, stability, and weight distribution. By comparing various hull\ndesigns, including monohulls, trimarans, and hydrofoils, the team concluded that the chosen structure\noffered the best balance of reduced drag and enhanced stability — both critical for achieving the\ncompetition’s minimum target speed of 15 mph.\nThe hull features a single open interior yet incorporates a wider, catamaran-like outer profile, providing\nstability benefits typically seen in multihull designs. This shape helps reduce wetted surface area,\nminimizing hydrodynamic resistance compared to traditional monohulls. Computational Fluid Dynamics\n(CFD) simulations supported this advantage, revealing a drag force of 66N at the target speed and a power\nrequirement of approximately 737W to sustain it. Constructed from lightweight fiberglass and weighing\njust 10 pounds, the hull enhances maneuverability and propulsion efficiency. To guide the design decision,\nthe team employed a Pugh matrix analysis, where the selected hull excelled in speed efficiency and stability\n— two of the most critical evaluation criteria.\nTo enhance performance and accommodate the hull’s 72-pound weight capacity, the team is implementing\nseveral modifications. Outriggers are being added to improve weight distribution and balance while keeping\ndrag to a minimum. Internal and external plates will help centralize key components like the battery, cooling\nsystem, and electronics, ensuring even weight distribution and reducing instability. The dual Blue Robotics\nT200 thrusters will be securely mounted to the bottom of the PVC outriggers using custom aluminum\nmounts, delivering the necessary thrust to counteract drag while maintaining redundancy. Additionally, a\nventilated plastic cover will shield internal components while promoting effective heat dissipation, which\nis crucial for sustaining battery and thruster performance.\n\nFigure 2: Hull Preparation and Assembly in Machine shopThese modifications align with best practices in naval engineering, integrating hydrodynamic refinements,\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "modular component design, and efficient thermal management. The team has already performed CFD\nsimulations to evaluate the impact of these adjustments, ensuring they enhance overall stability, efficiency,\nand performance. Moving forward, additional CFD modeling will be conducted to refine the design further,\nensuring the watercraft meets competition standards while advancing sustainable propulsion technology.\nInitial CFD Analysis (Baseline Hull)\nA multiphase flow simulation was conducted in ANSYS Fluent to evaluate the hydrodynamic performance\nof the unmanned watercraft’s baseline hull. The Volume of Fluid (VOF) model was employed to capture\nair-water interactions at the free surface, with the following boundary conditions:\n• Domain: 24,000 mm (length) × 7,000 mm (height) × 5,000 mm (width).\n• Inlet: Velocity = 6.7 m/s (15 mph), free surface level = -0.075 m.\n• Outlet: Pressure outlet, free surface level = -0.075 m.\n• Symmetry: Half-boat model to reduce computational load.\n• Mesh: Polyhedral mesh with local refinement near the hull (81,325 cells).\nThe simulation stabilized after 435 iterations, yielding a drag force of 66 N and a drag coefficient\nof 0.0368 (Figure 3). The required power to propel the boat at a velocity of 6.7m/s, considering the\ncalculated drag force and accounting for 60% system efficiency is 737W.\nFigure 3: Drag force plot: Baseline hull (66 N)\nUpdated CFD Analysis (Modified Hull) – Propulsion System Choice\nFollowing structural modifications—PVC outriggers, aluminum 6063 mounts, and interior steel plates—a\nrevised CFD analysis was performed to assess hydrodynamic impacts. The updated model retained the VOF\nmultiphase framework but incorporated the new geometry (Figure 4). From this analysis, the drag force\nincreased to 82.7N due to the outrigger-induced turbulence. The peak pressure at the bow of the boat rose by 18%, while flow separation at the stern diminished. This 25% drag increase necessitated reevaluation\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": "of propulsion requirements. The team selected two Blue Robotics T200 thrusters (14.8lbf each, 65.8 N) to\ndeliver 131.7 N of total thrust, exceeding the revised minimum requirement of 82.7N (18.6lbf) and\nensuring robust performance under variable conditions.\nFigure 4: Drag force plot comparison: Modified hull (82.7 N).\n2.2.THE PROPULSION SYSTEM (Integration)\nFollowing the updated CFD analysis for the modified hull, the team chose two T200 Blue Robotics\nThrusters for propulsion. To optimize thrust efficiency and reduce unnecessary weight, the team has revised\nthe original mounting configuration for the thrusters. Instead of utilizing a back mount, the thrusters will\nnow be attached beneath the sealed, hollow 4-inch PVC outriggers, which are connected to the hull via\nrectangular aluminum tubing. This strategic placement ensures proper thruster spacing, prevents thrust\ninterference and improves overall propulsion effectiveness. Additionally, this placement allows the team to\nmaximize the available space on the hull, which is particularly important given the compact size of the\nvessel.\nThis design adjustment offers several key advantages. Firstly, eliminating the back mount reduces excess\nstructural weight, contributing to an improved thrust-to-weight ratio. Secondly, the lower positioning of the\nthrusters within the water column enhances directional control and propulsion efficiency, minimizing\nsurface turbulence and energy loss.2.3.THE CONTROL SYSTEM\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "The Tidal Titans' electric watercraft integrates a robust control system based on sound engineering\nprinciples to achieve real-time controllability and optimal power management. Figure 5 presents a System\nBlock Diagram of the control system.\nFigure 5. System Block Diagram\nThe system employs a Radiolink transmitter and receiver as the primary control interface, making use of\nclosed-loop signal processing to ensure precise motor command execution with minimal latency. Power\ndelivery is following a strictly engineered plan, with propulsion coming from a 24V primary battery through\nan isolated high-current bus and isolated 12V lithium batteries separately powering control and cooling to\npreclude ground interaction and enhance reliability.\nVoltage regulation is controlled through a high-efficiency buck converter with dynamic load compensation\nto supply stable power with high rates of current changes. The drive system for the thrusters utilizes field\u0002oriented control software electronic speed controllers, housed in high-current XT90 connectors to reduce\npower loss and react instantaneously to signal inputs. Thermally sensitive switching logic powers cooling\nfans strategically placed to maintain optimal operating temperatures by utilizing calculated airflow patterns\ntaking into account component layout and heat dissipation rates.\nEvery aspect of hardware build shows consideration engineering. The IP67-rated weatherproof housing not\nonly protects against the environment but also incorporates shielding to keep electromagnetic interference to a minimum. Cabling within the unit follows best practice in high-vibration environments, with major\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 10,
+      "text": "signal routes separated to reduce crosstalk. Parallel power supply with derating accommodates all the\ncomponents operating within safe tolerances, and the modular design facilitates simple maintenance and\nfault location.\nThis system is an example of balanced electromechanical design, where theoretical principles—whether\nKirchhoff's circuit laws or thermal dynamics—are employed to achieve strong, competition-level\nperformance. The result is a watercraft that demonstrates how foundational engineering principles, when\nproperly applied, can yield straightforward solutions to what could have been tough technical challenges.\n2.4. THE BATTERY MANAGEMENT SYSTEM (BMS)\nThe development of an efficient and reliable power system is essential for the performance of the\nautonomous vessel. The BMS plays a critical role in monitoring battery health, ensuring safe operation, and\noptimizing power delivery to meet the propulsion system's demands. This report presents a comprehensive\nanalysis of the selected battery, its integration with propulsion components, and the supporting electrical\nsystems necessary for safe and effective operation.\nA LiFePO4 battery was chosen due to its superior cycle life, thermal stability, and high energy efficiency\ncompared to other lithium-ion chemistries. The Newport 24V 50Ah battery was selected for its ability to\ndeliver sufficient power to meet the propulsion system's energy demands. With the propulsion system\nrequiring approximately 737W to maintain the target speed of 15 mph, the Newport battery's 1.2\nkWh energy capacity ensures the vessel can sustain this output for the duration of the race. This capacity\nalso provides an energy buffer to account for unexpected fluctuations in load or environmental conditions.\nThe battery's integrated BMS enhances system reliability with built-in protection features such as\novercharge, over-discharge, and overcurrent protection, safeguarding the system from power\ninconsistencies that could impact performance. The BMS also ensures proper cell balancing, maintaining\neven voltage distribution to maximize energy efficiency and extend battery life. Its temperature monitoring\nsystem further prevents overheating by adjusting performance to maintain safe thermal conditions during\nprolonged operation. These combined features ensure the battery can reliably support the propulsion\nsystem, contributing to stable performance throughout the competition.\n3. CAD and TESTING\nA Computer-Aided design model was developed using Autodesk Fusion 360 for design, planning, and\nsimulation purposes. The RC boat hull was captured and created in the CAD model visually by referencing different image views of the actual hull. Once the RC hull was captured in the 3D model, hull modification\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 11,
+      "text": "components were added to the model by utilizing provided STEP files from manufacturers for the aluminum\nrailings, PVC pipes, L brackets, bolts, and T200 thrusters. Sourcing manufacturer STEP files allowed more\naccurate planning of the design construction by allowing virtual tests and simulations prior to procurement.\nThis static stress simulation examines the structural integrity of an aluminum 6061 railing intended to secure\nan outrigger to the main hull of a naval system. The simulation simplifies the overall design in order to\nisolate and focus on the stress behavior of the railing under anticipated operational loads.\nFigure 6. Static Stress Analysis of Aluminum 6061 Railings\nMultiple simulations were run to observe the railings' performance under varying loads. Two principal\nforces are used in Figure 5: a 250 N vertical load in the Z direction to replicate the weight of the outrigger,\nand a 100 N horizontal force in the X direction to approximate the push from onboard motors installed\nbeneath the outriggers. The maximum stress observed is approximately 17.728 MPa, located near the joint\nwhere the railing connects to the hull, suggesting this region bears the highest combined load. The\ninformation from these simulations informed reinforcements needed at stress concentration points. The\naluminum brackets used in the design are capable of withstanding this stress without exceeding their yield\nstrength, ensuring structural integrity under these conditions.\nTesting Plan for ASNE PEP Competition\nTo ensure the performance, reliability, and safety of our unmanned electric-propelled watercraft, a series of\ncritical tests have been conducted, with additional evaluations planned. Initial tests were performed in the\nlab, where the thrusters were placed in separate buckets of water to assess their functionality and power\ndraw. Subsequent testing involved using the university's swimming pool to evaluate the fully assembled watercraft's efficiency, maneuverability, and structural integrity, ensuring compliance with competition\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 12,
+      "text": "requirements.\nCompleted Tests:\n1. Dryness Test\nThis test evaluated the boat's waterproofing by conducting a dry rehearsal. The hull was carefully inspected\nfor leaks or breaches in its waterproofing system. Any identified gaps or holes were sealed with epoxy to\nmaintain the boat's integrity. The hull successfully passed the test with no leaks detected.\n2. Battery Management System (BMS) Testing\nThe BMS underwent extensive testing to confirm its ability to regulate voltage, prevent overcharging, and\nmanage thermal conditions. The step-down converter integration was assessed to ensure optimal power\ndelivery while minimizing energy losses. Real-time monitoring of the State of Charge (SOC) and State of\nHealth (SOH) will be conducted using diagnostic tools to optimize battery performance and lifespan overall.\n3. Buoyancy and Stability Assessment\nBuoyancy tests were carried out to confirm the vessel's ability to remain afloat under varying payloads.\nStability evaluations ensured the watercraft maintains an even keel, preventing capsizing under sudden\nmovements or external disturbances.\n4. Control System and Remote Kill Switch Validation\nThe reliability of the remote kill switch was tested to verify its ability to immediately shut down propulsion\nin emergency scenarios. Signal range and response time will be analyzed to ensure safe remote operation.\n5. Structural Load and Stress Testing\nThe mechanical durability of mounting brackets, outriggers, and propulsion supports will be tested under\nsimulated forces. This will verify that all structural elements can withstand operational stresses without\nfailure.\n6. Battery Performance and Endurance\nA runtime assessment was performed to determine the battery efficiency under continuous operation. The\ninitial battery performance test involved connecting the two thrusters to the battery and placing them in\nseparate buckets of water to evaluate the system's setup and power draw. This preliminary test provided\nvaluable insights into the system’s ability to sustain peak performance throughout the race.\nTests to be completed by March 28th, 2025:7. Maneuverability and Steering Control\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 13,
+      "text": "The propulsion system’s response to control inputs will be evaluated through a series of turning radius tests.\nThe effectiveness of differential thrust steering will be measured, ensuring precise navigation without the\nneed for a rudder. Data will be collected on agility and directional stability under various load conditions.\n8. Speed and Acceleration Tests\nThe maximum achievable speed will be measured using GPS tracking. Acceleration tests will be conducted\nto evaluate thrust efficiency and propulsion response. These results will inform potential optimizations in\npower distribution and hull hydrodynamics.\n9. Environmental and Temperature Testing\nThe system’s performance under varying temperatures and environmental conditions will be analyzed to\nensure reliability in different weather scenarios. Heat dissipation efficiency of the BMS and propulsion\nsystem will be assessed to prevent overheating during prolonged operation. These comprehensive tests will\nensure the watercraft is competition-ready, optimizing safety, efficiency, and performance for the ASNE\nPEP event.\n4. RISK MANAGEMENT\nThe Nauti Buoy's design integrates a comprehensive risk management strategy that addresses structural,\nelectrical, hydrodynamic, and operational hazards through proactive engineering solutions and redundant\nsystems. Structural Risks were a primary concern due to the significant dynamic loads anticipated during\ncompetition. To mitigate potential failures, the team conducted iterative FEA simulations on key load\u0002bearing components, particularly the aluminum 6061 mounting brackets and PVC outrigger joints. These\nsimulations identified stress concentrations near fastener holes, which were addressed by incorporating\ngasket sheets and switching to larger diameter fasteners to improve load distribution. Waterproofing\nmeasures included epoxy-sealed joints, gasket sheets for thruster mounts, and buoyant PVC outriggers.\nThese solutions were validated through dedicated dryness and buoyancy tests to ensure the vessel’s\nintegrity.\nThermal Management was approached using both active and passive cooling methods. The LiFePO4\nbattery pack’s integrated BMS provides cell-level monitoring, ensuring thermal stability during operation.\nAdditionally, two redundant 12V fans, controlled by NTC thermistors, provide active cooling to prevent\noverheating during prolonged operation. This cooling system was tested through continuous stress testing\nin the lab, simulating conditions exceeding the race duration to confirm reliability.To enhance Operational Safety, the control system was equipped with both RF and hardwired emergency\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 14,
+      "text": "kill switches, enabling immediate shutdown in case of system malfunctions or emergencies.\nThese combined measures effectively mitigate identified risks while ensuring multiple layers of protection\nagainst unexpected failures. The team will conduct final validation during open-water testing, ensuring\nsystem interactions remain stable and reliable under real-world race conditions.\n5. NEXT STEPS\nTo further advance The Nauti Buoy’s performance and expand its applications in marine engineering,\nseveral strategic enhancements could be pursued. Integrating rudders alongside the existing thruster-based\nsteering system presents an opportunity to reduce energy consumption during maneuvers. By offloading\ndirectional control from thrusters to hydrodynamically optimized rudders, power could be reallocated to\npropulsion, improving overall efficiency. Computational simulations could compare rudder configurations\nto identify designs that minimize drag while maximizing responsiveness. Autonomy and AI-driven\nnavigation represent another critical frontier. Implementing machine learning algorithms trained on real\u0002world hydrodynamic and environmental data could enable adaptive pathfinding, allowing the vessel to\ndynamically adjust speed, thrust, and steering in response to currents, wind, or obstacles.\nAdditionally, CFD-driven weight distribution studies could refine the craft’s center of gravity and\nbuoyancy. Multiphase simulations analyzing cargo placement, battery positioning, and outrigger geometry\nmight reveal configurations that further reduce drag or enhance stability in rough waters. Coupled with\ntopology optimization, this could inform lightweight, 3D-printed structural components (e.g., carbon fiber\u0002reinforced mounts) to replace bulkier aluminum or PVC parts. These advancements, grounded in iterative\ntesting and computational modeling, would position The Nauti Buoy as a platform for cutting-edge research\nin sustainable marine propulsion.REFERENCES\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 15,
+      "text": "[1] United States Environmental Protection Agency. Air Pollution Emissions Overview. 2023. Accessed:\nAugust 2023. Available: https://www.epa.gov/air-emissions-inventories/air-pollutionemissions-overview.\n[2] Çengel, Y. A., and Boles, M. A. Thermodynamics: An Engineering Approach. 9th ed., McGraw-Hill\nEducation, 2019.\n[3] Heywood, J. B. Internal Combustion Engine Fundamentals. 2nd ed., McGraw-Hill, 2018.\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Nauti Buoy"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "White Paper Report"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Submitted to:"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "American Society of Naval Engineers (ASNE)"
+    },
+    {
+      "line": 4,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "For"
+    },
+    {
+      "line": 5,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Promoting Electric Propulsion 2025 Competition (Unmanned)"
+    },
+    {
+      "line": 6,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Howard University"
+    },
+    {
+      "line": 7,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Submitted By"
+    },
+    {
+      "line": 8,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Team: Jefferson Ogbuka (PM),"
+    },
+    {
+      "line": 9,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Greg Hyson, Evan Barker, Elijah Pratt, Irena Silcott-Nanton"
+    },
+    {
+      "line": 10,
+      "page_start": 0,
+      "page_end": 1,
+      "text": "March 25, 2025.EXECUTIVE SUMMARY"
+    },
+    {
+      "line": 11,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "This final report details the progress of the Tidal Titans, a team of undergraduate mechanical engineering"
+    },
+    {
+      "line": 12,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "students, in designing and preparing the Nauti Buoy, an unmanned electric-propelled watercraft for the"
+    },
+    {
+      "line": 13,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "ASNE PEP competition. Building on iterative design phases and rigorous engineering analyses, the team"
+    },
+    {
+      "line": 14,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "has finalized component selection, structural modifications, and system integration protocols. The hull, a"
+    },
+    {
+      "line": 15,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "prefabricated 49-inch fiberglass catamaran, underwent strategic enhancements, including PVC outriggers"
+    },
+    {
+      "line": 16,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "for stability and aluminum reinforcements for weight distribution. These modifications were guided by"
+    },
+    {
+      "line": 17,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "computational fluid dynamics (CFD) simulations and buoyancy calculations to ensure hydrodynamic"
+    },
+    {
+      "line": 18,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "efficiency."
+    },
+    {
+      "line": 19,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "The propulsion system centers on two Blue Robotics T200 thrusters, selected for their high thrust-to-weight"
+    },
+    {
+      "line": 20,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "ratio and compatibility with a 24V 50Ah LiFePO4 battery pack. This battery system, equipped with"
+    },
+    {
+      "line": 21,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "integrated thermal management and overcharge protection, was chosen to maximize energy density while"
+    },
+    {
+      "line": 22,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "adhering to weight constraints. A Radiolink-based control framework, paired with Arduino"
+    },
+    {
+      "line": 23,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "microcontrollers, enables precise remote operation, ensuring responsiveness to environmental variables"
+    },
+    {
+      "line": 24,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "such as currents and wind."
+    },
+    {
+      "line": 25,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "With all components procured, fabricated, or modified, the project now enters its final phase: full assembly"
+    },
+    {
+      "line": 26,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "and comprehensive testing. Hull adjustments remain iterative, with refinements ongoing to optimize"
+    },
+    {
+      "line": 27,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "balance and drag reduction ahead of scheduled water trials. Pending tests include maneuverability"
+    },
+    {
+      "line": 28,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "assessments, endurance validation under race conditions, and emergency system audits."
+    },
+    {
+      "line": 29,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Through this collaborative effort, the Tidal Titans aim to demonstrate the viability of electric propulsion in"
+    },
+    {
+      "line": 30,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "demanding marine applications. By addressing technical challenges through structured innovation, the team"
+    },
+    {
+      "line": 31,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "strives to deliver a vessel that not only meets competition standards but also advances the broader adoption"
+    },
+    {
+      "line": 32,
+      "page_start": 1,
+      "page_end": 2,
+      "text": "of sustainable naval technologies. TABLE OF CONTENTS"
+    },
+    {
+      "line": 33,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "1. Introduction"
+    },
+    {
+      "line": 34,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "2. The Big Picture -The Nauti Buoy"
+    },
+    {
+      "line": 35,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "2.1. The Hull"
+    },
+    {
+      "line": 36,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "2.2. The Propulsion System"
+    },
+    {
+      "line": 37,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "2.3. Control System"
+    },
+    {
+      "line": 38,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "2.4. The Battery Management System"
+    },
+    {
+      "line": 39,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "3. CAD And Testing"
+    },
+    {
+      "line": 40,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "4. Risk Management"
+    },
+    {
+      "line": 41,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "5. Next Steps1. INTRODUCTION"
+    },
+    {
+      "line": 42,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Propulsion systems have been integral to technological progress, powering vehicles, ships, and aircraft"
+    },
+    {
+      "line": 43,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "since the industrial revolution. Historically reliant on internal combustion engines (ICEs) fueled by fossil"
+    },
+    {
+      "line": 44,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "resources, these systems revolutionized global trade and travel. However, their environmental and"
+    },
+    {
+      "line": 45,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "operational drawbacks—chiefly pollution and inefficiency—present challenges in the face of modern"
+    },
+    {
+      "line": 46,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "climate and resource crises."
+    },
+    {
+      "line": 47,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Combustion-based systems emit significant pollutants such as carbon dioxide (CO2), nitrogen oxides"
+    },
+    {
+      "line": 48,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "(NOx), and particulate matter, which contribute to global warming, ocean acidification, and air pollution."
+    },
+    {
+      "line": 49,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "These emissions exacerbate climate change and biodiversity loss, necessitating a shift to cleaner,"
+    },
+    {
+      "line": 50,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "sustainable propulsion technologies [1]. Furthermore, ICEs suffer from low thermal efficiency, converting"
+    },
+    {
+      "line": 51,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "only 25–30% of fuel energy into useful work, with most lost as heat [2]. Their mechanical complexity"
+    },
+    {
+      "line": 52,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "introduces further energy losses and operational wear, emphasizing the need for innovative alternatives."
+    },
+    {
+      "line": 53,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Electric propulsion systems offer a transformative solution, leveraging electric motors powered by batteries"
+    },
+    {
+      "line": 54,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "or fuel cells. These systems achieve efficiencies exceeding 90%, far surpassing ICEs [3]. The sustainability"
+    },
+    {
+      "line": 55,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "of electric propulsion is amplified when powered by renewable energy sources like solar or wind. Advances"
+    },
+    {
+      "line": 56,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "in battery technology, energy management systems, and power electronics have expanded electric"
+    },
+    {
+      "line": 57,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "propulsion's applications across industries, including automotive, aerospace, and maritime sectors."
+    },
+    {
+      "line": 58,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "The maritime industry is increasingly adopting electric propulsion to mitigate environmental impacts."
+    },
+    {
+      "line": 59,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Competitions like the Promoting Electric Propulsion (PEP), sponsored by the American Society of Naval"
+    },
+    {
+      "line": 60,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Engineers (ASNE) and the Office of Naval Research, encourage innovation in electric watercraft design."
+    },
+    {
+      "line": 61,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "University teams are tasked with developing unmanned electric- powered vessels capable of completing a"
+    },
+    {
+      "line": 62,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "2-mile race, promoting advancements in energy efficiency, reliability, and autonomous operation."
+    },
+    {
+      "line": 63,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "In response to the PEP challenge, the team will design an autonomous electric-powered watercraft"
+    },
+    {
+      "line": 64,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "optimized for performance and sustainability. The design incorporates high-efficiency electric motors,"
+    },
+    {
+      "line": 65,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "lightweight materials, and advanced battery management systems to ensure energy optimization. A"
+    },
+    {
+      "line": 66,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "streamlined hull minimizes hydrodynamic drag, enabling high speeds while maintaining stability. Thermal"
+    },
+    {
+      "line": 67,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "management and structural integrity are prioritized to maintain consistent performance throughout the race."
+    },
+    {
+      "line": 68,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "The team’s target is to complete the race in under 8 minutes, showcasing the capabilities of electric"
+    },
+    {
+      "line": 69,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "propulsion in maritime applications. Beyond the competition, this project serves as a platform to explore"
+    },
+    {
+      "line": 70,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "cutting-edge propulsion technologies, contributing to sustainable engineering solutions. The PEP competition embodies a pivotal effort to advance electric propulsion in the maritime sector. By fostering"
+    },
+    {
+      "line": 71,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "innovation and sustainability, it aligns with broader environmental goals while preparing the next"
+    },
+    {
+      "line": 72,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "generation of engineers to develop transformative naval technologies. Through this project, we aim to"
+    },
+    {
+      "line": 73,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "demonstrate the potential of electric propulsion to drive sustainable progress in naval engineering."
+    },
+    {
+      "line": 74,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "2. THE BIG PICTURE – The Nauti Buoy"
+    },
+    {
+      "line": 75,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "The Nauti Buoy is a lightweight, electric-propelled watercraft engineered for the ASNE PEP competition,"
+    },
+    {
+      "line": 76,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "designed to balance speed, stability, and sustainability through advanced marine engineering solutions."
+    },
+    {
+      "line": 77,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Built around a 49-inch fiberglass catamaran hull (8.22 lbs), the vessel integrates PVC outriggers supported"
+    },
+    {
+      "line": 78,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "by aluminum tubing to enhance buoyancy and hydrodynamic efficiency, validated through iterative CFD"
+    },
+    {
+      "line": 79,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "simulations. Figure 1 below shows the preliminary build of the vessel with subsystems integrated."
+    },
+    {
+      "line": 80,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Propulsion is driven by two Blue Robotics T200 thrusters (22.9 lbf total thrust), powered by a 24V 50Ah"
+    },
+    {
+      "line": 81,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "LiFePO4 battery system with integrated thermal management and overcharge protection, ensuring optimal"
+    },
+    {
+      "line": 82,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "energy distribution for target speeds of 15 mph. Remote operation is enabled by a Radiolink R12DS"
+    },
+    {
+      "line": 83,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "transmitter/receiver system and Arduino Mega 2560 microcontroller, refined through firmware updates for"
+    },
+    {
+      "line": 84,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "precise control in dynamic marine conditions. Structural modifications, including reinforced interior plates"
+    },
+    {
+      "line": 85,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "and vibration-dampening rubber gaskets, remain under iterative refinement to optimize weight distribution"
+    },
+    {
+      "line": 86,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "ahead of final assembly and testing. With all components procured and subsystems tested, the project"
+    },
+    {
+      "line": 87,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "advances toward comprehensive hydrodynamic trials, endurance validation, and race simulations,"
+    },
+    {
+      "line": 88,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "positioning The Nauti Buoy as a benchmark in sustainable marine innovation aligned with ASNE’s vision"
+    },
+    {
+      "line": 89,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "for eco-conscious naval engineering."
+    },
+    {
+      "line": 90,
+      "page_start": 4,
+      "page_end": 4,
+      "text": ""
+    },
+    {
+      "line": 91,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "Figure 1: The Big Picture - Nauti Buoy2.1. THE HULL (Design and Build Processes)"
+    },
+    {
+      "line": 92,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "The Tidal Titans selected a hull with a multihull-inspired design for their unmanned watercraft after an in\u0002depth evaluation of hydrodynamic efficiency, stability, and weight distribution. By comparing various hull"
+    },
+    {
+      "line": 93,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "designs, including monohulls, trimarans, and hydrofoils, the team concluded that the chosen structure"
+    },
+    {
+      "line": 94,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "offered the best balance of reduced drag and enhanced stability — both critical for achieving the"
+    },
+    {
+      "line": 95,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "competition’s minimum target speed of 15 mph."
+    },
+    {
+      "line": 96,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "The hull features a single open interior yet incorporates a wider, catamaran-like outer profile, providing"
+    },
+    {
+      "line": 97,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "stability benefits typically seen in multihull designs. This shape helps reduce wetted surface area,"
+    },
+    {
+      "line": 98,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "minimizing hydrodynamic resistance compared to traditional monohulls. Computational Fluid Dynamics"
+    },
+    {
+      "line": 99,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "(CFD) simulations supported this advantage, revealing a drag force of 66N at the target speed and a power"
+    },
+    {
+      "line": 100,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "requirement of approximately 737W to sustain it. Constructed from lightweight fiberglass and weighing"
+    },
+    {
+      "line": 101,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "just 10 pounds, the hull enhances maneuverability and propulsion efficiency. To guide the design decision,"
+    },
+    {
+      "line": 102,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "the team employed a Pugh matrix analysis, where the selected hull excelled in speed efficiency and stability"
+    },
+    {
+      "line": 103,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "— two of the most critical evaluation criteria."
+    },
+    {
+      "line": 104,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "To enhance performance and accommodate the hull’s 72-pound weight capacity, the team is implementing"
+    },
+    {
+      "line": 105,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "several modifications. Outriggers are being added to improve weight distribution and balance while keeping"
+    },
+    {
+      "line": 106,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "drag to a minimum. Internal and external plates will help centralize key components like the battery, cooling"
+    },
+    {
+      "line": 107,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "system, and electronics, ensuring even weight distribution and reducing instability. The dual Blue Robotics"
+    },
+    {
+      "line": 108,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "T200 thrusters will be securely mounted to the bottom of the PVC outriggers using custom aluminum"
+    },
+    {
+      "line": 109,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "mounts, delivering the necessary thrust to counteract drag while maintaining redundancy. Additionally, a"
+    },
+    {
+      "line": 110,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "ventilated plastic cover will shield internal components while promoting effective heat dissipation, which"
+    },
+    {
+      "line": 111,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "is crucial for sustaining battery and thruster performance."
+    },
+    {
+      "line": 112,
+      "page_start": 5,
+      "page_end": 5,
+      "text": ""
+    },
+    {
+      "line": 113,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "Figure 2: Hull Preparation and Assembly in Machine shopThese modifications align with best practices in naval engineering, integrating hydrodynamic refinements,"
+    },
+    {
+      "line": 114,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "modular component design, and efficient thermal management. The team has already performed CFD"
+    },
+    {
+      "line": 115,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "simulations to evaluate the impact of these adjustments, ensuring they enhance overall stability, efficiency,"
+    },
+    {
+      "line": 116,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "and performance. Moving forward, additional CFD modeling will be conducted to refine the design further,"
+    },
+    {
+      "line": 117,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "ensuring the watercraft meets competition standards while advancing sustainable propulsion technology."
+    },
+    {
+      "line": 118,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Initial CFD Analysis (Baseline Hull)"
+    },
+    {
+      "line": 119,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "A multiphase flow simulation was conducted in ANSYS Fluent to evaluate the hydrodynamic performance"
+    },
+    {
+      "line": 120,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "of the unmanned watercraft’s baseline hull. The Volume of Fluid (VOF) model was employed to capture"
+    },
+    {
+      "line": 121,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "air-water interactions at the free surface, with the following boundary conditions:"
+    },
+    {
+      "line": 122,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "• Domain: 24,000 mm (length) × 7,000 mm (height) × 5,000 mm (width)."
+    },
+    {
+      "line": 123,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "• Inlet: Velocity = 6.7 m/s (15 mph), free surface level = -0.075 m."
+    },
+    {
+      "line": 124,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "• Outlet: Pressure outlet, free surface level = -0.075 m."
+    },
+    {
+      "line": 125,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "• Symmetry: Half-boat model to reduce computational load."
+    },
+    {
+      "line": 126,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "• Mesh: Polyhedral mesh with local refinement near the hull (81,325 cells)."
+    },
+    {
+      "line": 127,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "The simulation stabilized after 435 iterations, yielding a drag force of 66 N and a drag coefficient"
+    },
+    {
+      "line": 128,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "of 0.0368 (Figure 3). The required power to propel the boat at a velocity of 6.7m/s, considering the"
+    },
+    {
+      "line": 129,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "calculated drag force and accounting for 60% system efficiency is 737W."
+    },
+    {
+      "line": 130,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Figure 3: Drag force plot: Baseline hull (66 N)"
+    },
+    {
+      "line": 131,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Updated CFD Analysis (Modified Hull) – Propulsion System Choice"
+    },
+    {
+      "line": 132,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Following structural modifications—PVC outriggers, aluminum 6063 mounts, and interior steel plates—a"
+    },
+    {
+      "line": 133,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "revised CFD analysis was performed to assess hydrodynamic impacts. The updated model retained the VOF"
+    },
+    {
+      "line": 134,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "multiphase framework but incorporated the new geometry (Figure 4). From this analysis, the drag force"
+    },
+    {
+      "line": 135,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "increased to 82.7N due to the outrigger-induced turbulence. The peak pressure at the bow of the boat rose by 18%, while flow separation at the stern diminished. This 25% drag increase necessitated reevaluation"
+    },
+    {
+      "line": 136,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "of propulsion requirements. The team selected two Blue Robotics T200 thrusters (14.8lbf each, 65.8 N) to"
+    },
+    {
+      "line": 137,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "deliver 131.7 N of total thrust, exceeding the revised minimum requirement of 82.7N (18.6lbf) and"
+    },
+    {
+      "line": 138,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "ensuring robust performance under variable conditions."
+    },
+    {
+      "line": 139,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Figure 4: Drag force plot comparison: Modified hull (82.7 N)."
+    },
+    {
+      "line": 140,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "2.2.THE PROPULSION SYSTEM (Integration)"
+    },
+    {
+      "line": 141,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Following the updated CFD analysis for the modified hull, the team chose two T200 Blue Robotics"
+    },
+    {
+      "line": 142,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Thrusters for propulsion. To optimize thrust efficiency and reduce unnecessary weight, the team has revised"
+    },
+    {
+      "line": 143,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "the original mounting configuration for the thrusters. Instead of utilizing a back mount, the thrusters will"
+    },
+    {
+      "line": 144,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "now be attached beneath the sealed, hollow 4-inch PVC outriggers, which are connected to the hull via"
+    },
+    {
+      "line": 145,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "rectangular aluminum tubing. This strategic placement ensures proper thruster spacing, prevents thrust"
+    },
+    {
+      "line": 146,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "interference and improves overall propulsion effectiveness. Additionally, this placement allows the team to"
+    },
+    {
+      "line": 147,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "maximize the available space on the hull, which is particularly important given the compact size of the"
+    },
+    {
+      "line": 148,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "vessel."
+    },
+    {
+      "line": 149,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "This design adjustment offers several key advantages. Firstly, eliminating the back mount reduces excess"
+    },
+    {
+      "line": 150,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "structural weight, contributing to an improved thrust-to-weight ratio. Secondly, the lower positioning of the"
+    },
+    {
+      "line": 151,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "thrusters within the water column enhances directional control and propulsion efficiency, minimizing"
+    },
+    {
+      "line": 152,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "surface turbulence and energy loss.2.3.THE CONTROL SYSTEM"
+    },
+    {
+      "line": 153,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "The Tidal Titans' electric watercraft integrates a robust control system based on sound engineering"
+    },
+    {
+      "line": 154,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "principles to achieve real-time controllability and optimal power management. Figure 5 presents a System"
+    },
+    {
+      "line": 155,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Block Diagram of the control system."
+    },
+    {
+      "line": 156,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Figure 5. System Block Diagram"
+    },
+    {
+      "line": 157,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "The system employs a Radiolink transmitter and receiver as the primary control interface, making use of"
+    },
+    {
+      "line": 158,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "closed-loop signal processing to ensure precise motor command execution with minimal latency. Power"
+    },
+    {
+      "line": 159,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "delivery is following a strictly engineered plan, with propulsion coming from a 24V primary battery through"
+    },
+    {
+      "line": 160,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "an isolated high-current bus and isolated 12V lithium batteries separately powering control and cooling to"
+    },
+    {
+      "line": 161,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "preclude ground interaction and enhance reliability."
+    },
+    {
+      "line": 162,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Voltage regulation is controlled through a high-efficiency buck converter with dynamic load compensation"
+    },
+    {
+      "line": 163,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "to supply stable power with high rates of current changes. The drive system for the thrusters utilizes field\u0002oriented control software electronic speed controllers, housed in high-current XT90 connectors to reduce"
+    },
+    {
+      "line": 164,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "power loss and react instantaneously to signal inputs. Thermally sensitive switching logic powers cooling"
+    },
+    {
+      "line": 165,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "fans strategically placed to maintain optimal operating temperatures by utilizing calculated airflow patterns"
+    },
+    {
+      "line": 166,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "taking into account component layout and heat dissipation rates."
+    },
+    {
+      "line": 167,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Every aspect of hardware build shows consideration engineering. The IP67-rated weatherproof housing not"
+    },
+    {
+      "line": 168,
+      "page_start": 8,
+      "page_end": 9,
+      "text": "only protects against the environment but also incorporates shielding to keep electromagnetic interference to a minimum. Cabling within the unit follows best practice in high-vibration environments, with major"
+    },
+    {
+      "line": 169,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "signal routes separated to reduce crosstalk. Parallel power supply with derating accommodates all the"
+    },
+    {
+      "line": 170,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "components operating within safe tolerances, and the modular design facilitates simple maintenance and"
+    },
+    {
+      "line": 171,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "fault location."
+    },
+    {
+      "line": 172,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "This system is an example of balanced electromechanical design, where theoretical principles—whether"
+    },
+    {
+      "line": 173,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Kirchhoff's circuit laws or thermal dynamics—are employed to achieve strong, competition-level"
+    },
+    {
+      "line": 174,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "performance. The result is a watercraft that demonstrates how foundational engineering principles, when"
+    },
+    {
+      "line": 175,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "properly applied, can yield straightforward solutions to what could have been tough technical challenges."
+    },
+    {
+      "line": 176,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "2.4. THE BATTERY MANAGEMENT SYSTEM (BMS)"
+    },
+    {
+      "line": 177,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "The development of an efficient and reliable power system is essential for the performance of the"
+    },
+    {
+      "line": 178,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "autonomous vessel. The BMS plays a critical role in monitoring battery health, ensuring safe operation, and"
+    },
+    {
+      "line": 179,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "optimizing power delivery to meet the propulsion system's demands. This report presents a comprehensive"
+    },
+    {
+      "line": 180,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "analysis of the selected battery, its integration with propulsion components, and the supporting electrical"
+    },
+    {
+      "line": 181,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "systems necessary for safe and effective operation."
+    },
+    {
+      "line": 182,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "A LiFePO4 battery was chosen due to its superior cycle life, thermal stability, and high energy efficiency"
+    },
+    {
+      "line": 183,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "compared to other lithium-ion chemistries. The Newport 24V 50Ah battery was selected for its ability to"
+    },
+    {
+      "line": 184,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "deliver sufficient power to meet the propulsion system's energy demands. With the propulsion system"
+    },
+    {
+      "line": 185,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "requiring approximately 737W to maintain the target speed of 15 mph, the Newport battery's 1.2"
+    },
+    {
+      "line": 186,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "kWh energy capacity ensures the vessel can sustain this output for the duration of the race. This capacity"
+    },
+    {
+      "line": 187,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "also provides an energy buffer to account for unexpected fluctuations in load or environmental conditions."
+    },
+    {
+      "line": 188,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "The battery's integrated BMS enhances system reliability with built-in protection features such as"
+    },
+    {
+      "line": 189,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "overcharge, over-discharge, and overcurrent protection, safeguarding the system from power"
+    },
+    {
+      "line": 190,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "inconsistencies that could impact performance. The BMS also ensures proper cell balancing, maintaining"
+    },
+    {
+      "line": 191,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "even voltage distribution to maximize energy efficiency and extend battery life. Its temperature monitoring"
+    },
+    {
+      "line": 192,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "system further prevents overheating by adjusting performance to maintain safe thermal conditions during"
+    },
+    {
+      "line": 193,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "prolonged operation. These combined features ensure the battery can reliably support the propulsion"
+    },
+    {
+      "line": 194,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "system, contributing to stable performance throughout the competition."
+    },
+    {
+      "line": 195,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "3. CAD and TESTING"
+    },
+    {
+      "line": 196,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "A Computer-Aided design model was developed using Autodesk Fusion 360 for design, planning, and"
+    },
+    {
+      "line": 197,
+      "page_start": 9,
+      "page_end": 10,
+      "text": "simulation purposes. The RC boat hull was captured and created in the CAD model visually by referencing different image views of the actual hull. Once the RC hull was captured in the 3D model, hull modification"
+    },
+    {
+      "line": 198,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "components were added to the model by utilizing provided STEP files from manufacturers for the aluminum"
+    },
+    {
+      "line": 199,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "railings, PVC pipes, L brackets, bolts, and T200 thrusters. Sourcing manufacturer STEP files allowed more"
+    },
+    {
+      "line": 200,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "accurate planning of the design construction by allowing virtual tests and simulations prior to procurement."
+    },
+    {
+      "line": 201,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "This static stress simulation examines the structural integrity of an aluminum 6061 railing intended to secure"
+    },
+    {
+      "line": 202,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "an outrigger to the main hull of a naval system. The simulation simplifies the overall design in order to"
+    },
+    {
+      "line": 203,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "isolate and focus on the stress behavior of the railing under anticipated operational loads."
+    },
+    {
+      "line": 204,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Figure 6. Static Stress Analysis of Aluminum 6061 Railings"
+    },
+    {
+      "line": 205,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Multiple simulations were run to observe the railings' performance under varying loads. Two principal"
+    },
+    {
+      "line": 206,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "forces are used in Figure 5: a 250 N vertical load in the Z direction to replicate the weight of the outrigger,"
+    },
+    {
+      "line": 207,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "and a 100 N horizontal force in the X direction to approximate the push from onboard motors installed"
+    },
+    {
+      "line": 208,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "beneath the outriggers. The maximum stress observed is approximately 17.728 MPa, located near the joint"
+    },
+    {
+      "line": 209,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "where the railing connects to the hull, suggesting this region bears the highest combined load. The"
+    },
+    {
+      "line": 210,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "information from these simulations informed reinforcements needed at stress concentration points. The"
+    },
+    {
+      "line": 211,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "aluminum brackets used in the design are capable of withstanding this stress without exceeding their yield"
+    },
+    {
+      "line": 212,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "strength, ensuring structural integrity under these conditions."
+    },
+    {
+      "line": 213,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Testing Plan for ASNE PEP Competition"
+    },
+    {
+      "line": 214,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "To ensure the performance, reliability, and safety of our unmanned electric-propelled watercraft, a series of"
+    },
+    {
+      "line": 215,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "critical tests have been conducted, with additional evaluations planned. Initial tests were performed in the"
+    },
+    {
+      "line": 216,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "lab, where the thrusters were placed in separate buckets of water to assess their functionality and power"
+    },
+    {
+      "line": 217,
+      "page_start": 10,
+      "page_end": 11,
+      "text": "draw. Subsequent testing involved using the university's swimming pool to evaluate the fully assembled watercraft's efficiency, maneuverability, and structural integrity, ensuring compliance with competition"
+    },
+    {
+      "line": 218,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "requirements."
+    },
+    {
+      "line": 219,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Completed Tests:"
+    },
+    {
+      "line": 220,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "1. Dryness Test"
+    },
+    {
+      "line": 221,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "This test evaluated the boat's waterproofing by conducting a dry rehearsal. The hull was carefully inspected"
+    },
+    {
+      "line": 222,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "for leaks or breaches in its waterproofing system. Any identified gaps or holes were sealed with epoxy to"
+    },
+    {
+      "line": 223,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "maintain the boat's integrity. The hull successfully passed the test with no leaks detected."
+    },
+    {
+      "line": 224,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "2. Battery Management System (BMS) Testing"
+    },
+    {
+      "line": 225,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "The BMS underwent extensive testing to confirm its ability to regulate voltage, prevent overcharging, and"
+    },
+    {
+      "line": 226,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "manage thermal conditions. The step-down converter integration was assessed to ensure optimal power"
+    },
+    {
+      "line": 227,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "delivery while minimizing energy losses. Real-time monitoring of the State of Charge (SOC) and State of"
+    },
+    {
+      "line": 228,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Health (SOH) will be conducted using diagnostic tools to optimize battery performance and lifespan overall."
+    },
+    {
+      "line": 229,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "3. Buoyancy and Stability Assessment"
+    },
+    {
+      "line": 230,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Buoyancy tests were carried out to confirm the vessel's ability to remain afloat under varying payloads."
+    },
+    {
+      "line": 231,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Stability evaluations ensured the watercraft maintains an even keel, preventing capsizing under sudden"
+    },
+    {
+      "line": 232,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "movements or external disturbances."
+    },
+    {
+      "line": 233,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "4. Control System and Remote Kill Switch Validation"
+    },
+    {
+      "line": 234,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "The reliability of the remote kill switch was tested to verify its ability to immediately shut down propulsion"
+    },
+    {
+      "line": 235,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "in emergency scenarios. Signal range and response time will be analyzed to ensure safe remote operation."
+    },
+    {
+      "line": 236,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "5. Structural Load and Stress Testing"
+    },
+    {
+      "line": 237,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "The mechanical durability of mounting brackets, outriggers, and propulsion supports will be tested under"
+    },
+    {
+      "line": 238,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "simulated forces. This will verify that all structural elements can withstand operational stresses without"
+    },
+    {
+      "line": 239,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "failure."
+    },
+    {
+      "line": 240,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "6. Battery Performance and Endurance"
+    },
+    {
+      "line": 241,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "A runtime assessment was performed to determine the battery efficiency under continuous operation. The"
+    },
+    {
+      "line": 242,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "initial battery performance test involved connecting the two thrusters to the battery and placing them in"
+    },
+    {
+      "line": 243,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "separate buckets of water to evaluate the system's setup and power draw. This preliminary test provided"
+    },
+    {
+      "line": 244,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "valuable insights into the system’s ability to sustain peak performance throughout the race."
+    },
+    {
+      "line": 245,
+      "page_start": 11,
+      "page_end": 12,
+      "text": "Tests to be completed by March 28th, 2025:7. Maneuverability and Steering Control"
+    },
+    {
+      "line": 246,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "The propulsion system’s response to control inputs will be evaluated through a series of turning radius tests."
+    },
+    {
+      "line": 247,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "The effectiveness of differential thrust steering will be measured, ensuring precise navigation without the"
+    },
+    {
+      "line": 248,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "need for a rudder. Data will be collected on agility and directional stability under various load conditions."
+    },
+    {
+      "line": 249,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "8. Speed and Acceleration Tests"
+    },
+    {
+      "line": 250,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "The maximum achievable speed will be measured using GPS tracking. Acceleration tests will be conducted"
+    },
+    {
+      "line": 251,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "to evaluate thrust efficiency and propulsion response. These results will inform potential optimizations in"
+    },
+    {
+      "line": 252,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "power distribution and hull hydrodynamics."
+    },
+    {
+      "line": 253,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "9. Environmental and Temperature Testing"
+    },
+    {
+      "line": 254,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "The system’s performance under varying temperatures and environmental conditions will be analyzed to"
+    },
+    {
+      "line": 255,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "ensure reliability in different weather scenarios. Heat dissipation efficiency of the BMS and propulsion"
+    },
+    {
+      "line": 256,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "system will be assessed to prevent overheating during prolonged operation. These comprehensive tests will"
+    },
+    {
+      "line": 257,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "ensure the watercraft is competition-ready, optimizing safety, efficiency, and performance for the ASNE"
+    },
+    {
+      "line": 258,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "PEP event."
+    },
+    {
+      "line": 259,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "4. RISK MANAGEMENT"
+    },
+    {
+      "line": 260,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "The Nauti Buoy's design integrates a comprehensive risk management strategy that addresses structural,"
+    },
+    {
+      "line": 261,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "electrical, hydrodynamic, and operational hazards through proactive engineering solutions and redundant"
+    },
+    {
+      "line": 262,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "systems. Structural Risks were a primary concern due to the significant dynamic loads anticipated during"
+    },
+    {
+      "line": 263,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "competition. To mitigate potential failures, the team conducted iterative FEA simulations on key load\u0002bearing components, particularly the aluminum 6061 mounting brackets and PVC outrigger joints. These"
+    },
+    {
+      "line": 264,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "simulations identified stress concentrations near fastener holes, which were addressed by incorporating"
+    },
+    {
+      "line": 265,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "gasket sheets and switching to larger diameter fasteners to improve load distribution. Waterproofing"
+    },
+    {
+      "line": 266,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "measures included epoxy-sealed joints, gasket sheets for thruster mounts, and buoyant PVC outriggers."
+    },
+    {
+      "line": 267,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "These solutions were validated through dedicated dryness and buoyancy tests to ensure the vessel’s"
+    },
+    {
+      "line": 268,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "integrity."
+    },
+    {
+      "line": 269,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Thermal Management was approached using both active and passive cooling methods. The LiFePO4"
+    },
+    {
+      "line": 270,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "battery pack’s integrated BMS provides cell-level monitoring, ensuring thermal stability during operation."
+    },
+    {
+      "line": 271,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Additionally, two redundant 12V fans, controlled by NTC thermistors, provide active cooling to prevent"
+    },
+    {
+      "line": 272,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "overheating during prolonged operation. This cooling system was tested through continuous stress testing"
+    },
+    {
+      "line": 273,
+      "page_start": 12,
+      "page_end": 13,
+      "text": "in the lab, simulating conditions exceeding the race duration to confirm reliability.To enhance Operational Safety, the control system was equipped with both RF and hardwired emergency"
+    },
+    {
+      "line": 274,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "kill switches, enabling immediate shutdown in case of system malfunctions or emergencies."
+    },
+    {
+      "line": 275,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "These combined measures effectively mitigate identified risks while ensuring multiple layers of protection"
+    },
+    {
+      "line": 276,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "against unexpected failures. The team will conduct final validation during open-water testing, ensuring"
+    },
+    {
+      "line": 277,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "system interactions remain stable and reliable under real-world race conditions."
+    },
+    {
+      "line": 278,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "5. NEXT STEPS"
+    },
+    {
+      "line": 279,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "To further advance The Nauti Buoy’s performance and expand its applications in marine engineering,"
+    },
+    {
+      "line": 280,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "several strategic enhancements could be pursued. Integrating rudders alongside the existing thruster-based"
+    },
+    {
+      "line": 281,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "steering system presents an opportunity to reduce energy consumption during maneuvers. By offloading"
+    },
+    {
+      "line": 282,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "directional control from thrusters to hydrodynamically optimized rudders, power could be reallocated to"
+    },
+    {
+      "line": 283,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "propulsion, improving overall efficiency. Computational simulations could compare rudder configurations"
+    },
+    {
+      "line": 284,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "to identify designs that minimize drag while maximizing responsiveness. Autonomy and AI-driven"
+    },
+    {
+      "line": 285,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "navigation represent another critical frontier. Implementing machine learning algorithms trained on real\u0002world hydrodynamic and environmental data could enable adaptive pathfinding, allowing the vessel to"
+    },
+    {
+      "line": 286,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "dynamically adjust speed, thrust, and steering in response to currents, wind, or obstacles."
+    },
+    {
+      "line": 287,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Additionally, CFD-driven weight distribution studies could refine the craft’s center of gravity and"
+    },
+    {
+      "line": 288,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "buoyancy. Multiphase simulations analyzing cargo placement, battery positioning, and outrigger geometry"
+    },
+    {
+      "line": 289,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "might reveal configurations that further reduce drag or enhance stability in rough waters. Coupled with"
+    },
+    {
+      "line": 290,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "topology optimization, this could inform lightweight, 3D-printed structural components (e.g., carbon fiber\u0002reinforced mounts) to replace bulkier aluminum or PVC parts. These advancements, grounded in iterative"
+    },
+    {
+      "line": 291,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "testing and computational modeling, would position The Nauti Buoy as a platform for cutting-edge research"
+    },
+    {
+      "line": 292,
+      "page_start": 13,
+      "page_end": 14,
+      "text": "in sustainable marine propulsion.REFERENCES"
+    },
+    {
+      "line": 293,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "[1] United States Environmental Protection Agency. Air Pollution Emissions Overview. 2023. Accessed:"
+    },
+    {
+      "line": 294,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "August 2023. Available: https://www.epa.gov/air-emissions-inventories/air-pollutionemissions-overview."
+    },
+    {
+      "line": 295,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "[2] Çengel, Y. A., and Boles, M. A. Thermodynamics: An Engineering Approach. 9th ed., McGraw-Hill"
+    },
+    {
+      "line": 296,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Education, 2019."
+    },
+    {
+      "line": 297,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "[3] Heywood, J. B. Internal Combustion Engine Fundamentals. 2nd ed., McGraw-Hill, 2018."
+    }
+  ],
+  "source_line_count": 298,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}

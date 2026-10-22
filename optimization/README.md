@@ -328,6 +328,15 @@ and test artifacts live under `.context/` at the repo root.
 To use an existing Chrome installation instead of downloading Chromium, run
 `PLAYWRIGHT_CHANNEL=chrome pnpm exec playwright test`.
 
+## Sample Savitsky calculator
+
+Open [`savitsky/index.html`](savitsky/index.html) directly in a browser for editable
+hull/load inputs and a speed sweep from zero. It runs offline without installing
+Python packages. It explicitly leaves displacement-speed resistance unmodeled and
+flags planing estimates outside its checks. See [`savitsky/README.md`](savitsky/README.md)
+for scope, command-line JSON reports and validation. This is separate from the
+explore notebook and does not import CAD geometry yet.
+
 ## Explore notebook
 
 `explore.ipynb` is a working model of the boat described in `optimization2.md` for exploring by hand: a prismatic

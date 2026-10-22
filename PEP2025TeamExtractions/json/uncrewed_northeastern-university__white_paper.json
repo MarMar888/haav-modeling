@@ -1,0 +1,2477 @@
+{
+  "competition_year": 2025,
+  "team": "Northeastern University",
+  "division": "Uncrewed",
+  "division_rank": null,
+  "official_score": null,
+  "official_score_source": "https://www.navalengineers.org/PEP25",
+  "team_page": "https://www.navalengineers.org/Northeastern",
+  "team_page_score_blocks": [],
+  "notes": "2025 source selected from the team's 2025 archive section. Rank and scores have not been reconciled. The URL's 2024 folder is not the competition year.",
+  "document_type": "white_paper",
+  "source_url": "https://www.navalengineers.org/Portals/16/PEP/2024/Northeastern/NUWave_PEP_2025_Whitepaper-compressed.pdf",
+  "filename": "NUWave_PEP_2025_Whitepaper-compressed.pdf",
+  "sha256": null,
+  "extracted_at": "2026-10-21T22:29:57+00:00",
+  "extractor": "Web PDF text reader; complete indexed source lines",
+  "pdf_info": {
+    "Pages": "15"
+  },
+  "page_count": 15,
+  "pages_without_text": [],
+  "char_count": 27737,
+  "pages": [
+    {
+      "page": 1,
+      "text": "White Paper Report\nNortheastern University | Boston, MA\n2025 ASNE PEP Competition\nPEP Team\nJonah Jaffe: CEO and Co-Founder\nElizabeth Collins: Boat Project Lead\nEvan Lin: Mechanical\nCharlotte Stieve: Chief Safety Officer\nLily Miles: Electrical Lead\nNeo Isak: Software\nNikolas Sanderson: Electrical\nElizabeth Carney: Electrical\nMichelle Liu: Electrical\nMira Rieley: Mechanical and Chemical\nMeera Patel: Mechanical and Chemical\nSam Elkerton: Electrical and Software\nDavid Mitchell: Mechanical\nMaya Krattli: Mechanical and Chemical\nCraft: Usain Boat\n1Background\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 2,
+      "text": "Marine electrical propulsion systems have been of increasing interest as concern\nfor the environmental impact of the shipping, and transportation industries grows [1].\nFurther, electrification could allow for en route recharging that could extend the range of\nvessels and increase cost efficiency [2]. With advances in the energy density and reliability\nof battery technology, a reality where fully electric marine vessels are a significant portion\nof the shipping, transportation and even the tourism industries seems highly feasible.\nWith electric propulsion, there are a few key factors to consider. The hull design\nfactors from any other medium of ship design still apply, with certain profiles providing\nmore efficiency, stability and ability to handle vibrations. The density of water is 1000\ntimes larger than that of air and since drag is proportional to fluid density, efficient boat\nhulls focus on optimizing their designs around minimizing water drag in a few ways. The\nfirst is that hulls are designed such that the portion in contact with the water cuts through\nit. This can be done with shapes with low drag coefficients (Figure 1) [3].\nFigure 1: Drag coefficients of different shapes Equation 1: The equation for drag\nAdditionally, some boats focus on minimizing the part of the hull that is in the\nwater using a hydrofoil or a hydroplane to generate lift. Many of the world’s fastest boats\ndo this, but this is a high risk, high reward strategy. If you do not generate the requisite lift\nfor planing or foiling, you risk having a part of a boat with a high drag coefficient being in\nthe water. We weighed this risk heavily when considering the hull shape for our vessel.\nAt NUWave, we come from an underwater robotics background. We’re used to\nwaterproofing everything for a depth of 15 meters and focusing on every little detail\nbecause one mistake can be costly. The team applies this philosophy to the creation of\nour surface vessels. We aim to create a “bulletproof boat”, a vehicle that will work, not\njust in optimal conditions, but when faced with the harsh realities of ocean environments.\nYou can see this in every aspect of our design, from redundancy in our hull for increased\nflotation, to choosing electronic parts with extra capacity to handle current draw spikes.\nDesign and Analysis\nPropeller and Motor\nWhen choosing a motor to optimize the efficiency of the electric propulsion\nsystem, the goal was to balance the factors of torque and RPM (rotations per minute).\nRPM is often optimized around a different factor of kV or RPM per volt because it allows\nyou to draw a direct correlation between power storage requirements and thrust output.\nThere are a few key factors to consider with this approach though. Primarily kV ratings can\nbe specified for different input amperages at the same voltage range. This was the case\nwhen comparing our two top motor choices, the Leopard 56110, and the TP Power 5870.\nEach of these motors have a variant that takes 36 volts, something that would work with\nour planned power storage system, and the TP Power 5870 offered a greater kV of 1100\ncompared to the Leopard 56110’s.\n2kV Voltage Nominal Power RPM per kW\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 3,
+      "text": "Leopard 56110 950 36V 7560W 125.66\nTP Power 5870 1100 36V 9000W 122.22\nTable 1: Motor efficiency comparisons\nAs seen in the table above, while the TP Power 5870 offers a higher kV, it is in fact\nless efficient for the amount of power given than the Leopard 56110, making the Leopard\n56110 the power optimal choice. Lower kV motors are often ideal when you want higher\ntorque, as spinning slower allows for greater propeller diameters without overheating\nelectronics. The initially high torque of these two motors is why they were selected as\ngood candidates in the first place in the first place. Many aerial drone motors have better\nkVs than our selected choices, but due to their lack of torque, they cannot effectively push\nwater without slowing down significantly or cavitating. The Leopard 56110 motor is\ndesigned to be an inboard motor and as such has the requisite torque (Figure 2).\nFigure 2: ZTW Seal 300A ESC and the Leopard 56110 motor\nDC brushless motors require electronic speed controllers (ESCs) to provide the\n3-phase current required for driving the motor. ESCs are a common failure point of\nelectric propulsion systems as they heat up the fastest of any part and contain sensitive\nelectronics that can fail if the motor overdraws. The ZTW Seal 300A ESC gave us a factor\nof safety of 1.4 over our current limit of 210A, all while coming with a pre-installed cooling\njacket for heat dissipation (Figure 2). Further, the ZTW Seal is waterproof allowing us to\nhave confidence in it even in the case of a potentially dangerous leak.\nAnother important potential failure point to consider is the drive shaft. In using the\ntorque calculations and our diameter of 6.35mm, we experience a shear force of 37.8MPa.\nA 304 stainless steel drive shaft was chosen for its shear force of 386MPa [4]. This gives a\nfactor of safety of 10.21. The shear force experienced by the motor mount and screws is\nalso considered (Figure 3)\n𝑄 = 𝑃\nω\nEquation 2: Torque calculation where P is power and ω is the angular velocity\nEquation 3: Torque calculations for our motor, which we use to determine drive shaft torque\n3Figure 3: An FEA simulation of our motor mount\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 4,
+      "text": "Component Factor of\nSafety\nArea (𝑚𝑚\n2\n) Shear Force\n(𝑀𝑝𝑎)\nShear Yield\nStrength (𝑀𝑃𝑎)\nM4 screw (1) 5.4 12.6 39.8 214.6\nMotor Bracket 3.5 12.8 39.1 138.0\nTable 2: The shear force experienced by our motor mounting bracket and screws\nWhen choosing a propeller manufacturer, Octura propellers [5] stood out as a\nreputable source with a wide variety of options to allow us to find an exact fit for our\nneeds. In selecting propellers, our goal was to balance efficiency with thrust output. The\nindustry recommendation is a minimum of 60mm [6] for a boat of our size and that left us\nwith the Octura X-series. Of the X-series, there are propellers with two to three blades.\nTwo-bladed propellers result in higher efficiency, reduced loads on electronics, and less\ndrag [7]. Alternatively, three-bladed propellers provide greater thrust and less vibration,\nwhich is ideal for races with heavy payloads. Indeterminate of blade count, the pitch\ndetermines the amount of forward movement the boat is able to move with each rotation.\nHigher pitches result in faster top speeds at the cost of more load on the motor [8]. Lower\npitches are slower, but are more ideal for payloads and reducing the load on the motor\nand therefore heat generation.\nGiven those constraints, we narrowed down our search to the following options:\nPropeller Diameter (mm) Pitch (in) Shaft Size (in) Material # Blades\nOctura X467 67 3.696 1/4 BC 2\nOctura X470 70 3.864 1/4 BC 2\nOctura X470/3 70 3.864 1/4 BC 3\nOctura X472 72 3.967 1/4 BC 2\nOctura X482 82 4.508 1/4 BC 2\nTable 3: Propeller comparison payload\nWhile the X482 is too large for the high RPMs of our motor and would likely lead to\noverheating of the electronics, the other options were close enough that the X470 and\nX470/3 were purchased for testing. Selecting this middle-ground would allow the team to\nspecify slightly larger or smaller dimensions depending on testing results, which are\ndiscussed in our propeller and propulsion system fabrication section.\n4Hull\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 5,
+      "text": "A mid-rise V-shaped monohull was chosen for the design of the hull of Usain Boat.\nThe V-shape aspect allows the vehicle to withstand the somewhat choppy waters that are\ntypically seen in the race location while still maintaining a low draft for easier planing\nspeeds and reduced drag. The monohull cockpit provided ample room to house all\nelectronics plus the additional 30-60 lb payload.\nThe monohull design took inspiration from skiffs, sonars, and the Provincetown I\nFerry, which are all designed for handling heavy payloads while maintaining stability\nagainst heavy winds and rapid waters. For the initial design, the original Provincetown I\nFerry lines plan, drafted by Gilbert Associates Inc. was studied for basic overall length,\nbeam, chine, and draft dimensions (Figure 4).\nFigure 4: The Lines Plans for the Provincetown I Ferry\nWhile the Provincetown I Ferry design provided a good starting point for the\ndesign of Usain Boat, many changes needed to be made to iteratively improve its\ndimensions and performance for the competition. An initial concern the team needed to\naddress was our ability to transport the boat in and out of our workspace. This\nconstrained the dimensions to ensure the vehicle could fit in elevators, tight doorways,\nand an SUV trunk. As such, the overall length of the boat could not exceed six feet\ninclusive of the propulsion system. Furthermore, in order to reduce wet drag, the vehicle\nneeded to be narrow and have a shallow draft, while still displacing enough water to carry\nthe payload and electronics. In order to find the ideal shape for the boat based on these\nconstraints, several calculations and simulations were performed.\nFirst, a lines plan was designed in FREE!Ship, an open source software commonly\nused within industry. This lines plane took into account the maximum length of the boat, a\n10-20 degree variable deadrise, and a maximum width of no more than 24” to remain\nunder the CNC machining limitations.\nFigure 5: An initial CAD model of Usain Boat\n5The lines plan was then imported to SolidWorks to develop a 3D model for volume\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 6,
+      "text": "analysis at waterlines of 4 and 4.5 inches from the bottom of the hull and eventual CNC\nmachining (Figure 5) . The volumes were substituted into the buoyancy force equation\nshown below:\n𝐹𝑏 = ρ𝑉𝑔\nEquation 4: Buoyancy Force\nwhere 𝐹 is the buoyancy force, is the density of the displaced liquid ( for 𝑏 ρ 1000 𝑘𝑔/𝑚\n3\nwater and 1025 𝑘𝑔/𝑚 for saltwater), is the displaced volume, and g is the acceleration\n3 𝑉\ndue to gravity (9. 81 𝑚/𝑠 ). The overall weight of the hull, electronics, and payload was\n2\nestimated to be no more than 100lbs, so it was calculated that the displaced volume for a\ndraft between 4 and 4.5 inches was between 1.39 and 1.70 ft\n3\n, and the buoyancy force is\nbetween 87.02 and 106.14 lbf.\nThe design was scaled down and 3D printed to observe potential fiberglassing\nissues, center of buoyancies, and machining issues. After 17 design iterations, two\ndesigns were finalized that fit the dimension and calculation specifications; however, one\nhad a rounded bottom while the other had a chine. Although rounded bottoms are\noptimal for displacement hulls, they are less stable and harder to fiberglass without\nmultiple relief cuts. Thus, the chine design was finalized upon as seen in the lines plan\nbelow (Figure 6).\nFigure 6: Lines Plan for the final boat design\nAll of the important dimensions of the boat were organized into the following table:\nTable 4: Important dimension calculations for Usain Boat\n6Additionally, the design was imported into Ansys to run a computational fluid\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 7,
+      "text": "dynamic (CFD) analysis on the drag force on the hull (Figure 7). The final results estimated\nthe drag force to be approximately 60N at 10 mph under ideal conditions; however, the\nfinal drag force is expected to be higher than 60N due to fabrication imperfections,\nunpredictable environmental forces, and Ansys Fluent’s limitation to static bodies.\nFigure 7: Ansys Simulation of drag force on the hull\nOnce the design of the boat was finalized, the boat material needed to be\ndetermined. Wood, metal, and carbon fiber are all common in boat hull construction,\nhowever, fiberglass was chosen due to it being cost effective, high strength, moldable,\nand lightweight. A foam base would be used to carve out the shape, allowing for\nrelatively easy edits for custom sized compartments for electronics and payloads while\nmaintaining a light weight, high buoyancy, and internal structural support.\nOverview of Build and Fabrication Processes\nHull Fabrication\nIn order to become familiar with the process of building a boat hull from epoxy, a\nscaled down version of the craft was first constructed (Figure 8). This prototype of Usain\nBoat was first created using a combination of 3D printed parts for either end of the boat\nand foam that was cut using a hot wire cutter for the center. It originally aimed to be\nconstructed fully out of foam, however there were difficulties in accurately cutting out the\ncurve of the V-shape at the bow. The 3D printed parts and foam center were then covered\nin fiberglass, which then was covered in epoxy to create the hull.\nFigure 8: First trial of hull creation\nBased on the difficulties faced with cutting the foam for this smaller version of the\nvehicle, and the impracticability of 3D printing the base of our hull, it was decided that\nthe foam for the shape of the hull would be cut out using a CNC machine (Figure 9).\nMultiple layers of foam were stacked and glued together, then cut into the shape of a\nmid-rise V-hull.\n7Figure 9: The boat hull after being cut out on the CNC machine\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 8,
+      "text": "After being cut out, the sides of the craft had to be sanded down to create a\nsmooth surface that the fiberglass and epoxy could be shaped around. Once this was\ncompleted fiberglass strips were placed on the foam mold, then covered in a thin layer of\nepoxy to dry. This process was performed outside, and with proper personal protective\nequipment to keep all involved safe from the epoxy and fiberglass (Figure 10).\nFigure 10: Putting the fiberglass and epoxy on the foam boat mold (15°F)\nFigure 11: Usain Boat after being trimmed and painted\nMultiple layers of fiberglass and epoxy were put on to reinforce the hull of the\nboat, with special care taken around the bow and stern where the boat would experience\nthe most force. Once the epoxy was fully dried, the edges had excess pooling of epoxy.\nThe edges were trimmed with an angle grinder before proceeding. The bottom of the\nboat was then painted and holes were drilled into the stern for the propeller and rudders\n(Figure 11). While the paint was drying, a cradle was built to hold the boat in an upright\nposition while working on the deck.\n8Figure 12: Fiberglassing the deck, adding a space for the tow rope, and foam cutting the motor bay\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 9,
+      "text": "The next steps were to begin fiberglassing the top of the boat, to create\ncompartments to house the electronics within the boat, and to add an attachment point\nfor a tow rope (Figure 12). By this point it had been decided that the foam mold of the\nhull was going to stay inside of the fiberglass and epoxy shell, ensuring stability of the\ncraft, and providing extra protection from water entering the vehicle. Further, this allowed\nfor the compartments of our electronics to be cut directly into this foam (Figure 13). These\ncompartments were cut using a hot wire cutter, slowly cutting away strips of foam until the\ncompartment was the proper depth and width. A piece of wood was also added for\nstability reasons after cutting away the foam.\nFigure 13: Usain Boat after having the electronics compartments cut out\nAfter cutting out these compartments, they were covered in a layer of fiberglass\nand epoxy as well, and watertight lids for the compartments were fitted into the boat.\nElectronics were then placed inside, and the rest of the boat was painted.\nPropeller and Propulsion System\nOur team’s experience with underwater robotics, a field where focusing on every\nminor detail is critical, was something we were able to apply to the fabrication of our\npropulsion system. We took extra care to ensure that both of our propellers were\nsharpened and balanced to increase efficiency and reduce vibration. We also made sure\nto fill our stuffing tube with marine grease to ensure that no water would leak in and to\nminimize friction.\n9Figure 14: The Octura X470/2 (left) and X470/3 (right)\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 10,
+      "text": "In terms of testing the two bladed and three bladed propeller, the team came to\nthe conclusion that the three bladed X470’s superior thrust outweighed the efficiency\nbenefits generated from the two bladed propeller (Figure 14). This was largely because\nwe had the battery capacity for the 5 mile race from 2024, making the 2 mile race easily\nfeasible. The propellers also both didn’t cavitate, implying that the diameter and pitch of\nthe propeller was sufficiently close to optimal for creating thrust efficiently without\nrotating too fast and pushing air.\nFigure 15: The propeller ventilation (left) and the propeller stable after adjustments were made (right)\nIn testing propellers, the team also focused on drive shaft angle for two reasons.\nFirstly, a downward angled drive shaft can provide some upward force that pushes more\nof the hull out of the water, reducing drag. Additionally, the drive shaft not being deep\nenough underwater would make it easier for air to be sucked under the surface and cause\nventilation (Figure 15). We determined the optimal angle through experimental testing\nand bent our stuffing tube to the correct angle.\nThe final modification considered was a gearbox or belt drive. These options would\ntrade off RPM for torque while maintaining motor efficiency. The team decided on a direct\ndrive system as it significantly reduced the number of failure points, a conscious decision\nto sacrifice some performance benefits for reliability, something befitting of our design\nprinciples. RPM limiting is still maintainable in the software of the system.\nThe entire propulsion system of the craft can be seen laid out below (Figure 16).\nFigure 16: Usain Boat’s Electric Propulsion System\n10Power Storage\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 11,
+      "text": "In terms of batteries, the vehicle is powered by 2 MaxAmps Lithium 8s 20000mAh\nLi-Ion batteries configured in parallel (Figure 17). These batteries are able to output a\ncontinuous 100 amps each, however running these batteries in parallel allows for the\noutput of the amperage to be doubled, which in turn allows for more speed for Usain\nBoat. Additionally, these batteries boast an energy density that is unrivaled by other\nmarket options. At 250 Wh/kg, they outperform almost all other batteries in energy\ndensity, especially in the 8S range.\nFigure 17: MaxAmps Lithium ion batteries\nThere are a few 6s options with up to 300 Wh/kg, but they are all LiPo batteries\nwhich are significantly less safe than Lion batteries, with a much higher likelihood of\ncombusting if improperly used. While safer than LiPo batteries to begin with, the\nMaxAmps Lithium batteries also have automatic internal cell balancing to prevent an\nindividual cell from getting over drained and failing before the battery is too low.\nFigure 18: Marine access hatch\nThe batteries for the craft are stored in the center of the boat, with one on each\nside for proper weight distribution. They are protected by a watertight lid, as well as\nmultiple layers of foam, and are velcroed down to an acrylic plate within the vehicle\n(Figure 18).\nPowertrain\nIn developing a power system, we wanted to separate our high power systems\nfrom our sensing and controls suite for noise and safety reasons. Our high power safety\nshutoff is 36V volt contactor that is controlled by a relay. To power our lower voltage\nelectronics, we use a 14S power conversion module. Using a 14S power module gives us\na significant factor of safety to handle power spikes, something we needed as last year we\nblew a 10S power conversion module. The power diagram for the vehicle can be seen\nbelow (Figure 19).\n11Figure 19: High power systems and power conversion. Note that the nominal voltage of the system is 28.8V,\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 12,
+      "text": "but it gets as high as 33V on full charge\nFor propulsion and steering, we use the aforementioned ZTW Seal 300A ESC and\nLeopard 56110 on our 28.8V line, and we run our steering servos with 8.4V. They give\n70kg of torque each and are waterproof, providing sufficient reliability (Figure 21).\nFigure 20: Our propulsion and steering powertrain\nPayload\nWith the introduction of a variable payload into this year’s competition, many\ndesign decisions were made to adapt to this new format. To be as competitively viable as\npossible, it was decided to make a payload flexible hull design for a pretty simple reason:\nit gave the team the most paths to victory. In the event that the competition was filled\nwith fast, but light, 30lb payload boats, we could go light to keep pace with them. On the\nother hand, if there is one exceptionally fast 30lb boat, but the rest are much slower, a\nmiddling-speed 60lb payload boat can use its 5 point bonus to overtake the first place\nteam with a second place run time. As for our actual payload, we used steel shot balls in\nshooting bags as they were maulable and adjustable to our needs (Figure 21).\nFigure 21: Our payload bags (left) and our payload paths to the podium (right)\n12Control System\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 13,
+      "text": "Figure 22: The control and communications signals\nThe control system of the craft consists of a Pixhawk controller, a common flight\ncontroller for RC drones and aircraft. We use the ArduRover firmware to configure our\npixhawk for use on Usain Boat. The flight controller has a built-in IMU. With an additional\nGPS and current sensor we are able to monitor key facets of our craft. A Dragonlink RC\ntwo-way radio system is used to control the vessel, and transmit telemetry data, such as\nGPS location, current speed, and battery current draw and voltage to the pilot (Figure 22).\nFigure 23: The Dragonlink RC Radio and Taranis controller\nThe Dragonlink system boasts a 50 km range, far more than is needed for the 2\nmile race. For its price point, it is potentially the strongest commercial radio on the market\n(Figure 23). Since the boat sits low in the water, there are concerns about Fresnel Zone\nclearance. To alleviate that concern, Usain Boat’s receiver antenna is high up on the boat.\nThis combined with the strength of the transmitter provides a reliable solution against\nobstructions and allows confidence in the performance of the craft’s radio.\nFigure 24: The CAD and resulting 3D print of one of the rudders\n13Since Usain Boat is equipped with only a single propeller, a separate rudder system\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 14,
+      "text": "was created to steer the craft. This system adds a rudder on either side of the propeller\nand these rudders are attached to servos that can be controlled with our Taranis controller\nover a Dragonlink radio connection to turn the vehicle. The rudders were designed in\nSolidworks, then 3D printed before being attached to our boat (Figure 24).\nRisk\nWhen designing a Usain Boat, it was important to take into account the risks\nassociated with the different parts of the craft. Usain Boat only has a singular propeller,\nwhich poses complications in terms of turning the vehicle, ensuring there is enough\npower from the singular propeller to drive the boat forward with a 30-60 pound payload,\nand presents the risk of not having any propulsion should the propeller fail. In order to\naccount for these risks, proper protocols and additions to the craft have been put into\nplace. To handle the issue of steering a rudder system has been attached to the back of\nthe craft, allowing it to turn. Our team also makes sure to keep the propeller clear, both to\nkeep themselves safe and not cause damage to the propeller. There was also proper\nresearch done to ensure the motor met the required specifications to provide the\npropeller with enough power to move the craft, even while operating with a payload.\nThe motor of Usain Boat is connected to the propeller using a flexible shaft. This\nflexible shaft is susceptible to unwinding if mishandled, so care is always taken whenever\nattaching the motor and the propeller or when working with the shaft. In addition to this,\ncare and proper precautions are taken when working with the batteries that provide\npower to the vehicle. The boat operates on Lithium ion batteries, which are safer than\nLiPo batteries, but still pose risks. When the batteries are not in use, they are stored in a\nflammables bag or in a flammables cabinet (Figure 25), and it is ensured that they are\ncharged properly to avoid damaging the batteries and increasing their risk of harm. There\nis also always sand available in our lab space, in case a fire were to occur.\nFigure 25: Lithium Ion Battery Bag Figure 26: Contactor Kill Switch\nThe team works with fiberglass and epoxy often, using them to fabricate the hull of\nthe vehicle, and can be exposed to harmful chemicals when working with these materials\nas well as when participating in activities such as foam cutting. In order to minimize the\nrisk when working with these materials, it is ensured that proper protective equipment,\nincluding gloves, masks, goggles, and respirators are worn. It is also ensured that these\nmaterials are utilized correctly and safely. For example, we made sure that there was no\nloose fiberglass on the hull of the boat and that all of the epoxy had cured correctly.\nTo account for any risks that could occur during the race, the craft has a contactor\nkill switch installed, in addition to a physical kill switch, that allows Usain Boat to be shut\ndown remotely (Figure 26). That means if any issue is to occur during the race, the vehicle\ncan quickly and safely be shut down to minimize any potential hazards.\n14Conclusion\n",
+      "text_layout": null,
+      "embedded_images": null
+    },
+    {
+      "page": 15,
+      "text": "Usain Boat is the result of well over 1000 hours of work from our dedicated team at\nNUWave. It’s designed to be a “bulletproof boat,” capable of running reliably even in\nadverse circumstances. It is equipped to operate at either the 30lb or 60lb payload\nweight in order to optimize to competition circumstances, and it features an entirely new\npropulsion system from last year’s design. It boasts a wide variety of safety features from\ncontactors to waterproof hatches to create a secure craft.\nWhen considering future directions, the team is considering adding a second\npropeller to both double the thrust and replace the rudder with a differential thrust\nturning system for sharper corners. Our software system also enables improvement\nthrough autonomy strategies like waypoint following and raceline optimization.\nReferences\n[1] “Marine Environment.” International Maritime Organization,\nwww.imo.org/en/OurWork/Environment/Pages/Default.aspx.\n[2] Kersey, Jessica, et al. “Rapid battery cost declines accelerate the prospects of\nall-electric interregional container shipping.” Nature Energy, vol. 7, no. 7, 18 July 2022,\npp. 664–674, https://doi.org/10.1038/s41560-022-01065-y.\n[3] “Shape Effects on Drag.” NASA, NASA, 20 Nov. 2023,\nwww1.grc.nasa.gov/beginners-guide-to-aeronautics/shape-effects-on-drag/.\n[4] “Material Datasheet.” ProtoXYZ, protoxyz.com/materials/metal/Stainless_Steel_304.\n[5] “Propeller Chart & Recommendations.” Offshore Electrics, 29 Sept. 2022,\nwww.offshoreelectrics.com/proddetail.php?prod=art-prop-chart.\n[6] “Propeller Testing / Recommendations.” Offshore Electrics, 24 Feb. 2023,\nwww.offshoreelectrics.com/proddetail.php?prod=art-prop-testing.\n[7] Hutchison, Fred. 2, 3 and 4 Blade Propellers Are They All the Same?, PYI Inc., 17 Mar.\n2013, www.pyiinc.com/articles/2-3-and-4-blade-propellers-are-they-all-the-same.\n[8] “Propellers: Understanding Prop Diameter & Pitch.” Further Customs, Further\nCustoms, 11 June 2024, furthercustoms.com/blogs/propellers-understanding-prop\n-diameter-pitch/propellers-understanding-prop-diameter-pitch?srsltid=AfmBOoqCjcYlkW\nH9bqeNRamLVZ3UJTQxBibeyFn5o666vnOtBgs5Ty\n15\n",
+      "text_layout": null,
+      "embedded_images": null
+    }
+  ],
+  "source_lines": [
+    {
+      "line": 0,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "White Paper Report"
+    },
+    {
+      "line": 1,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Northeastern University | Boston, MA"
+    },
+    {
+      "line": 2,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "2025 ASNE PEP Competition"
+    },
+    {
+      "line": 3,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "PEP Team"
+    },
+    {
+      "line": 4,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Jonah Jaffe: CEO and Co-Founder"
+    },
+    {
+      "line": 5,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Elizabeth Collins: Boat Project Lead"
+    },
+    {
+      "line": 6,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Evan Lin: Mechanical"
+    },
+    {
+      "line": 7,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Charlotte Stieve: Chief Safety Officer"
+    },
+    {
+      "line": 8,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Lily Miles: Electrical Lead"
+    },
+    {
+      "line": 9,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Neo Isak: Software"
+    },
+    {
+      "line": 10,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Nikolas Sanderson: Electrical"
+    },
+    {
+      "line": 11,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Elizabeth Carney: Electrical"
+    },
+    {
+      "line": 12,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Michelle Liu: Electrical"
+    },
+    {
+      "line": 13,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Mira Rieley: Mechanical and Chemical"
+    },
+    {
+      "line": 14,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Meera Patel: Mechanical and Chemical"
+    },
+    {
+      "line": 15,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Sam Elkerton: Electrical and Software"
+    },
+    {
+      "line": 16,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "David Mitchell: Mechanical"
+    },
+    {
+      "line": 17,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Maya Krattli: Mechanical and Chemical"
+    },
+    {
+      "line": 18,
+      "page_start": 0,
+      "page_end": 0,
+      "text": "Craft: Usain Boat"
+    },
+    {
+      "line": 19,
+      "page_start": 0,
+      "page_end": 1,
+      "text": "1Background"
+    },
+    {
+      "line": 20,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Marine electrical propulsion systems have been of increasing interest as concern"
+    },
+    {
+      "line": 21,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "for the environmental impact of the shipping, and transportation industries grows [1]."
+    },
+    {
+      "line": 22,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Further, electrification could allow for en route recharging that could extend the range of"
+    },
+    {
+      "line": 23,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "vessels and increase cost efficiency [2]. With advances in the energy density and reliability"
+    },
+    {
+      "line": 24,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "of battery technology, a reality where fully electric marine vessels are a significant portion"
+    },
+    {
+      "line": 25,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "of the shipping, transportation and even the tourism industries seems highly feasible."
+    },
+    {
+      "line": 26,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "With electric propulsion, there are a few key factors to consider. The hull design"
+    },
+    {
+      "line": 27,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "factors from any other medium of ship design still apply, with certain profiles providing"
+    },
+    {
+      "line": 28,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "more efficiency, stability and ability to handle vibrations. The density of water is 1000"
+    },
+    {
+      "line": 29,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "times larger than that of air and since drag is proportional to fluid density, efficient boat"
+    },
+    {
+      "line": 30,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "hulls focus on optimizing their designs around minimizing water drag in a few ways. The"
+    },
+    {
+      "line": 31,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "first is that hulls are designed such that the portion in contact with the water cuts through"
+    },
+    {
+      "line": 32,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "it. This can be done with shapes with low drag coefficients (Figure 1) [3]."
+    },
+    {
+      "line": 33,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Figure 1: Drag coefficients of different shapes Equation 1: The equation for drag"
+    },
+    {
+      "line": 34,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Additionally, some boats focus on minimizing the part of the hull that is in the"
+    },
+    {
+      "line": 35,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "water using a hydrofoil or a hydroplane to generate lift. Many of the world’s fastest boats"
+    },
+    {
+      "line": 36,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "do this, but this is a high risk, high reward strategy. If you do not generate the requisite lift"
+    },
+    {
+      "line": 37,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "for planing or foiling, you risk having a part of a boat with a high drag coefficient being in"
+    },
+    {
+      "line": 38,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "the water. We weighed this risk heavily when considering the hull shape for our vessel."
+    },
+    {
+      "line": 39,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "At NUWave, we come from an underwater robotics background. We’re used to"
+    },
+    {
+      "line": 40,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "waterproofing everything for a depth of 15 meters and focusing on every little detail"
+    },
+    {
+      "line": 41,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "because one mistake can be costly. The team applies this philosophy to the creation of"
+    },
+    {
+      "line": 42,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "our surface vessels. We aim to create a “bulletproof boat”, a vehicle that will work, not"
+    },
+    {
+      "line": 43,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "just in optimal conditions, but when faced with the harsh realities of ocean environments."
+    },
+    {
+      "line": 44,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "You can see this in every aspect of our design, from redundancy in our hull for increased"
+    },
+    {
+      "line": 45,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "flotation, to choosing electronic parts with extra capacity to handle current draw spikes."
+    },
+    {
+      "line": 46,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Design and Analysis"
+    },
+    {
+      "line": 47,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Propeller and Motor"
+    },
+    {
+      "line": 48,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "When choosing a motor to optimize the efficiency of the electric propulsion"
+    },
+    {
+      "line": 49,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "system, the goal was to balance the factors of torque and RPM (rotations per minute)."
+    },
+    {
+      "line": 50,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "RPM is often optimized around a different factor of kV or RPM per volt because it allows"
+    },
+    {
+      "line": 51,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "you to draw a direct correlation between power storage requirements and thrust output."
+    },
+    {
+      "line": 52,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "There are a few key factors to consider with this approach though. Primarily kV ratings can"
+    },
+    {
+      "line": 53,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "be specified for different input amperages at the same voltage range. This was the case"
+    },
+    {
+      "line": 54,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "when comparing our two top motor choices, the Leopard 56110, and the TP Power 5870."
+    },
+    {
+      "line": 55,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Each of these motors have a variant that takes 36 volts, something that would work with"
+    },
+    {
+      "line": 56,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "our planned power storage system, and the TP Power 5870 offered a greater kV of 1100"
+    },
+    {
+      "line": 57,
+      "page_start": 1,
+      "page_end": 1,
+      "text": "compared to the Leopard 56110’s."
+    },
+    {
+      "line": 58,
+      "page_start": 1,
+      "page_end": 2,
+      "text": "2kV Voltage Nominal Power RPM per kW"
+    },
+    {
+      "line": 59,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Leopard 56110 950 36V 7560W 125.66"
+    },
+    {
+      "line": 60,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "TP Power 5870 1100 36V 9000W 122.22"
+    },
+    {
+      "line": 61,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Table 1: Motor efficiency comparisons"
+    },
+    {
+      "line": 62,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "As seen in the table above, while the TP Power 5870 offers a higher kV, it is in fact"
+    },
+    {
+      "line": 63,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "less efficient for the amount of power given than the Leopard 56110, making the Leopard"
+    },
+    {
+      "line": 64,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "56110 the power optimal choice. Lower kV motors are often ideal when you want higher"
+    },
+    {
+      "line": 65,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "torque, as spinning slower allows for greater propeller diameters without overheating"
+    },
+    {
+      "line": 66,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "electronics. The initially high torque of these two motors is why they were selected as"
+    },
+    {
+      "line": 67,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "good candidates in the first place in the first place. Many aerial drone motors have better"
+    },
+    {
+      "line": 68,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "kVs than our selected choices, but due to their lack of torque, they cannot effectively push"
+    },
+    {
+      "line": 69,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "water without slowing down significantly or cavitating. The Leopard 56110 motor is"
+    },
+    {
+      "line": 70,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "designed to be an inboard motor and as such has the requisite torque (Figure 2)."
+    },
+    {
+      "line": 71,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Figure 2: ZTW Seal 300A ESC and the Leopard 56110 motor"
+    },
+    {
+      "line": 72,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "DC brushless motors require electronic speed controllers (ESCs) to provide the"
+    },
+    {
+      "line": 73,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "3-phase current required for driving the motor. ESCs are a common failure point of"
+    },
+    {
+      "line": 74,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "electric propulsion systems as they heat up the fastest of any part and contain sensitive"
+    },
+    {
+      "line": 75,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "electronics that can fail if the motor overdraws. The ZTW Seal 300A ESC gave us a factor"
+    },
+    {
+      "line": 76,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "of safety of 1.4 over our current limit of 210A, all while coming with a pre-installed cooling"
+    },
+    {
+      "line": 77,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "jacket for heat dissipation (Figure 2). Further, the ZTW Seal is waterproof allowing us to"
+    },
+    {
+      "line": 78,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "have confidence in it even in the case of a potentially dangerous leak."
+    },
+    {
+      "line": 79,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Another important potential failure point to consider is the drive shaft. In using the"
+    },
+    {
+      "line": 80,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "torque calculations and our diameter of 6.35mm, we experience a shear force of 37.8MPa."
+    },
+    {
+      "line": 81,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "A 304 stainless steel drive shaft was chosen for its shear force of 386MPa [4]. This gives a"
+    },
+    {
+      "line": 82,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "factor of safety of 10.21. The shear force experienced by the motor mount and screws is"
+    },
+    {
+      "line": 83,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "also considered (Figure 3)"
+    },
+    {
+      "line": 84,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "𝑄 = 𝑃"
+    },
+    {
+      "line": 85,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "ω"
+    },
+    {
+      "line": 86,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Equation 2: Torque calculation where P is power and ω is the angular velocity"
+    },
+    {
+      "line": 87,
+      "page_start": 2,
+      "page_end": 2,
+      "text": "Equation 3: Torque calculations for our motor, which we use to determine drive shaft torque"
+    },
+    {
+      "line": 88,
+      "page_start": 2,
+      "page_end": 3,
+      "text": "3Figure 3: An FEA simulation of our motor mount"
+    },
+    {
+      "line": 89,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Component Factor of"
+    },
+    {
+      "line": 90,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Safety"
+    },
+    {
+      "line": 91,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Area (𝑚𝑚"
+    },
+    {
+      "line": 92,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "2"
+    },
+    {
+      "line": 93,
+      "page_start": 3,
+      "page_end": 3,
+      "text": ") Shear Force"
+    },
+    {
+      "line": 94,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "(𝑀𝑝𝑎)"
+    },
+    {
+      "line": 95,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Shear Yield"
+    },
+    {
+      "line": 96,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Strength (𝑀𝑃𝑎)"
+    },
+    {
+      "line": 97,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "M4 screw (1) 5.4 12.6 39.8 214.6"
+    },
+    {
+      "line": 98,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Motor Bracket 3.5 12.8 39.1 138.0"
+    },
+    {
+      "line": 99,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Table 2: The shear force experienced by our motor mounting bracket and screws"
+    },
+    {
+      "line": 100,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "When choosing a propeller manufacturer, Octura propellers [5] stood out as a"
+    },
+    {
+      "line": 101,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "reputable source with a wide variety of options to allow us to find an exact fit for our"
+    },
+    {
+      "line": 102,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "needs. In selecting propellers, our goal was to balance efficiency with thrust output. The"
+    },
+    {
+      "line": 103,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "industry recommendation is a minimum of 60mm [6] for a boat of our size and that left us"
+    },
+    {
+      "line": 104,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "with the Octura X-series. Of the X-series, there are propellers with two to three blades."
+    },
+    {
+      "line": 105,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Two-bladed propellers result in higher efficiency, reduced loads on electronics, and less"
+    },
+    {
+      "line": 106,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "drag [7]. Alternatively, three-bladed propellers provide greater thrust and less vibration,"
+    },
+    {
+      "line": 107,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "which is ideal for races with heavy payloads. Indeterminate of blade count, the pitch"
+    },
+    {
+      "line": 108,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "determines the amount of forward movement the boat is able to move with each rotation."
+    },
+    {
+      "line": 109,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Higher pitches result in faster top speeds at the cost of more load on the motor [8]. Lower"
+    },
+    {
+      "line": 110,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "pitches are slower, but are more ideal for payloads and reducing the load on the motor"
+    },
+    {
+      "line": 111,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "and therefore heat generation."
+    },
+    {
+      "line": 112,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Given those constraints, we narrowed down our search to the following options:"
+    },
+    {
+      "line": 113,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Propeller Diameter (mm) Pitch (in) Shaft Size (in) Material # Blades"
+    },
+    {
+      "line": 114,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Octura X467 67 3.696 1/4 BC 2"
+    },
+    {
+      "line": 115,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Octura X470 70 3.864 1/4 BC 2"
+    },
+    {
+      "line": 116,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Octura X470/3 70 3.864 1/4 BC 3"
+    },
+    {
+      "line": 117,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Octura X472 72 3.967 1/4 BC 2"
+    },
+    {
+      "line": 118,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Octura X482 82 4.508 1/4 BC 2"
+    },
+    {
+      "line": 119,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "Table 3: Propeller comparison payload"
+    },
+    {
+      "line": 120,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "While the X482 is too large for the high RPMs of our motor and would likely lead to"
+    },
+    {
+      "line": 121,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "overheating of the electronics, the other options were close enough that the X470 and"
+    },
+    {
+      "line": 122,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "X470/3 were purchased for testing. Selecting this middle-ground would allow the team to"
+    },
+    {
+      "line": 123,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "specify slightly larger or smaller dimensions depending on testing results, which are"
+    },
+    {
+      "line": 124,
+      "page_start": 3,
+      "page_end": 3,
+      "text": "discussed in our propeller and propulsion system fabrication section."
+    },
+    {
+      "line": 125,
+      "page_start": 3,
+      "page_end": 4,
+      "text": "4Hull"
+    },
+    {
+      "line": 126,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "A mid-rise V-shaped monohull was chosen for the design of the hull of Usain Boat."
+    },
+    {
+      "line": 127,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "The V-shape aspect allows the vehicle to withstand the somewhat choppy waters that are"
+    },
+    {
+      "line": 128,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "typically seen in the race location while still maintaining a low draft for easier planing"
+    },
+    {
+      "line": 129,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "speeds and reduced drag. The monohull cockpit provided ample room to house all"
+    },
+    {
+      "line": 130,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "electronics plus the additional 30-60 lb payload."
+    },
+    {
+      "line": 131,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "The monohull design took inspiration from skiffs, sonars, and the Provincetown I"
+    },
+    {
+      "line": 132,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Ferry, which are all designed for handling heavy payloads while maintaining stability"
+    },
+    {
+      "line": 133,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "against heavy winds and rapid waters. For the initial design, the original Provincetown I"
+    },
+    {
+      "line": 134,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Ferry lines plan, drafted by Gilbert Associates Inc. was studied for basic overall length,"
+    },
+    {
+      "line": 135,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "beam, chine, and draft dimensions (Figure 4)."
+    },
+    {
+      "line": 136,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Figure 4: The Lines Plans for the Provincetown I Ferry"
+    },
+    {
+      "line": 137,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "While the Provincetown I Ferry design provided a good starting point for the"
+    },
+    {
+      "line": 138,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "design of Usain Boat, many changes needed to be made to iteratively improve its"
+    },
+    {
+      "line": 139,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "dimensions and performance for the competition. An initial concern the team needed to"
+    },
+    {
+      "line": 140,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "address was our ability to transport the boat in and out of our workspace. This"
+    },
+    {
+      "line": 141,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "constrained the dimensions to ensure the vehicle could fit in elevators, tight doorways,"
+    },
+    {
+      "line": 142,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "and an SUV trunk. As such, the overall length of the boat could not exceed six feet"
+    },
+    {
+      "line": 143,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "inclusive of the propulsion system. Furthermore, in order to reduce wet drag, the vehicle"
+    },
+    {
+      "line": 144,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "needed to be narrow and have a shallow draft, while still displacing enough water to carry"
+    },
+    {
+      "line": 145,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "the payload and electronics. In order to find the ideal shape for the boat based on these"
+    },
+    {
+      "line": 146,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "constraints, several calculations and simulations were performed."
+    },
+    {
+      "line": 147,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "First, a lines plan was designed in FREE!Ship, an open source software commonly"
+    },
+    {
+      "line": 148,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "used within industry. This lines plane took into account the maximum length of the boat, a"
+    },
+    {
+      "line": 149,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "10-20 degree variable deadrise, and a maximum width of no more than 24” to remain"
+    },
+    {
+      "line": 150,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "under the CNC machining limitations."
+    },
+    {
+      "line": 151,
+      "page_start": 4,
+      "page_end": 4,
+      "text": "Figure 5: An initial CAD model of Usain Boat"
+    },
+    {
+      "line": 152,
+      "page_start": 4,
+      "page_end": 5,
+      "text": "5The lines plan was then imported to SolidWorks to develop a 3D model for volume"
+    },
+    {
+      "line": 153,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "analysis at waterlines of 4 and 4.5 inches from the bottom of the hull and eventual CNC"
+    },
+    {
+      "line": 154,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "machining (Figure 5) . The volumes were substituted into the buoyancy force equation"
+    },
+    {
+      "line": 155,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "shown below:"
+    },
+    {
+      "line": 156,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "𝐹𝑏 = ρ𝑉𝑔"
+    },
+    {
+      "line": 157,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Equation 4: Buoyancy Force"
+    },
+    {
+      "line": 158,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "where 𝐹 is the buoyancy force, is the density of the displaced liquid ( for 𝑏 ρ 1000 𝑘𝑔/𝑚"
+    },
+    {
+      "line": 159,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "3"
+    },
+    {
+      "line": 160,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "water and 1025 𝑘𝑔/𝑚 for saltwater), is the displaced volume, and g is the acceleration"
+    },
+    {
+      "line": 161,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "3 𝑉"
+    },
+    {
+      "line": 162,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "due to gravity (9. 81 𝑚/𝑠 ). The overall weight of the hull, electronics, and payload was"
+    },
+    {
+      "line": 163,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "2"
+    },
+    {
+      "line": 164,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "estimated to be no more than 100lbs, so it was calculated that the displaced volume for a"
+    },
+    {
+      "line": 165,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "draft between 4 and 4.5 inches was between 1.39 and 1.70 ft"
+    },
+    {
+      "line": 166,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "3"
+    },
+    {
+      "line": 167,
+      "page_start": 5,
+      "page_end": 5,
+      "text": ", and the buoyancy force is"
+    },
+    {
+      "line": 168,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "between 87.02 and 106.14 lbf."
+    },
+    {
+      "line": 169,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "The design was scaled down and 3D printed to observe potential fiberglassing"
+    },
+    {
+      "line": 170,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "issues, center of buoyancies, and machining issues. After 17 design iterations, two"
+    },
+    {
+      "line": 171,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "designs were finalized that fit the dimension and calculation specifications; however, one"
+    },
+    {
+      "line": 172,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "had a rounded bottom while the other had a chine. Although rounded bottoms are"
+    },
+    {
+      "line": 173,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "optimal for displacement hulls, they are less stable and harder to fiberglass without"
+    },
+    {
+      "line": 174,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "multiple relief cuts. Thus, the chine design was finalized upon as seen in the lines plan"
+    },
+    {
+      "line": 175,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "below (Figure 6)."
+    },
+    {
+      "line": 176,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Figure 6: Lines Plan for the final boat design"
+    },
+    {
+      "line": 177,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "All of the important dimensions of the boat were organized into the following table:"
+    },
+    {
+      "line": 178,
+      "page_start": 5,
+      "page_end": 5,
+      "text": "Table 4: Important dimension calculations for Usain Boat"
+    },
+    {
+      "line": 179,
+      "page_start": 5,
+      "page_end": 6,
+      "text": "6Additionally, the design was imported into Ansys to run a computational fluid"
+    },
+    {
+      "line": 180,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "dynamic (CFD) analysis on the drag force on the hull (Figure 7). The final results estimated"
+    },
+    {
+      "line": 181,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "the drag force to be approximately 60N at 10 mph under ideal conditions; however, the"
+    },
+    {
+      "line": 182,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "final drag force is expected to be higher than 60N due to fabrication imperfections,"
+    },
+    {
+      "line": 183,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "unpredictable environmental forces, and Ansys Fluent’s limitation to static bodies."
+    },
+    {
+      "line": 184,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Figure 7: Ansys Simulation of drag force on the hull"
+    },
+    {
+      "line": 185,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Once the design of the boat was finalized, the boat material needed to be"
+    },
+    {
+      "line": 186,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "determined. Wood, metal, and carbon fiber are all common in boat hull construction,"
+    },
+    {
+      "line": 187,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "however, fiberglass was chosen due to it being cost effective, high strength, moldable,"
+    },
+    {
+      "line": 188,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "and lightweight. A foam base would be used to carve out the shape, allowing for"
+    },
+    {
+      "line": 189,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "relatively easy edits for custom sized compartments for electronics and payloads while"
+    },
+    {
+      "line": 190,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "maintaining a light weight, high buoyancy, and internal structural support."
+    },
+    {
+      "line": 191,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Overview of Build and Fabrication Processes"
+    },
+    {
+      "line": 192,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Hull Fabrication"
+    },
+    {
+      "line": 193,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "In order to become familiar with the process of building a boat hull from epoxy, a"
+    },
+    {
+      "line": 194,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "scaled down version of the craft was first constructed (Figure 8). This prototype of Usain"
+    },
+    {
+      "line": 195,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Boat was first created using a combination of 3D printed parts for either end of the boat"
+    },
+    {
+      "line": 196,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "and foam that was cut using a hot wire cutter for the center. It originally aimed to be"
+    },
+    {
+      "line": 197,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "constructed fully out of foam, however there were difficulties in accurately cutting out the"
+    },
+    {
+      "line": 198,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "curve of the V-shape at the bow. The 3D printed parts and foam center were then covered"
+    },
+    {
+      "line": 199,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "in fiberglass, which then was covered in epoxy to create the hull."
+    },
+    {
+      "line": 200,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Figure 8: First trial of hull creation"
+    },
+    {
+      "line": 201,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Based on the difficulties faced with cutting the foam for this smaller version of the"
+    },
+    {
+      "line": 202,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "vehicle, and the impracticability of 3D printing the base of our hull, it was decided that"
+    },
+    {
+      "line": 203,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "the foam for the shape of the hull would be cut out using a CNC machine (Figure 9)."
+    },
+    {
+      "line": 204,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "Multiple layers of foam were stacked and glued together, then cut into the shape of a"
+    },
+    {
+      "line": 205,
+      "page_start": 6,
+      "page_end": 6,
+      "text": "mid-rise V-hull."
+    },
+    {
+      "line": 206,
+      "page_start": 6,
+      "page_end": 7,
+      "text": "7Figure 9: The boat hull after being cut out on the CNC machine"
+    },
+    {
+      "line": 207,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "After being cut out, the sides of the craft had to be sanded down to create a"
+    },
+    {
+      "line": 208,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "smooth surface that the fiberglass and epoxy could be shaped around. Once this was"
+    },
+    {
+      "line": 209,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "completed fiberglass strips were placed on the foam mold, then covered in a thin layer of"
+    },
+    {
+      "line": 210,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "epoxy to dry. This process was performed outside, and with proper personal protective"
+    },
+    {
+      "line": 211,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "equipment to keep all involved safe from the epoxy and fiberglass (Figure 10)."
+    },
+    {
+      "line": 212,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Figure 10: Putting the fiberglass and epoxy on the foam boat mold (15°F)"
+    },
+    {
+      "line": 213,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Figure 11: Usain Boat after being trimmed and painted"
+    },
+    {
+      "line": 214,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "Multiple layers of fiberglass and epoxy were put on to reinforce the hull of the"
+    },
+    {
+      "line": 215,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "boat, with special care taken around the bow and stern where the boat would experience"
+    },
+    {
+      "line": 216,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "the most force. Once the epoxy was fully dried, the edges had excess pooling of epoxy."
+    },
+    {
+      "line": 217,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "The edges were trimmed with an angle grinder before proceeding. The bottom of the"
+    },
+    {
+      "line": 218,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "boat was then painted and holes were drilled into the stern for the propeller and rudders"
+    },
+    {
+      "line": 219,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "(Figure 11). While the paint was drying, a cradle was built to hold the boat in an upright"
+    },
+    {
+      "line": 220,
+      "page_start": 7,
+      "page_end": 7,
+      "text": "position while working on the deck."
+    },
+    {
+      "line": 221,
+      "page_start": 7,
+      "page_end": 8,
+      "text": "8Figure 12: Fiberglassing the deck, adding a space for the tow rope, and foam cutting the motor bay"
+    },
+    {
+      "line": 222,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "The next steps were to begin fiberglassing the top of the boat, to create"
+    },
+    {
+      "line": 223,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "compartments to house the electronics within the boat, and to add an attachment point"
+    },
+    {
+      "line": 224,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "for a tow rope (Figure 12). By this point it had been decided that the foam mold of the"
+    },
+    {
+      "line": 225,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "hull was going to stay inside of the fiberglass and epoxy shell, ensuring stability of the"
+    },
+    {
+      "line": 226,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "craft, and providing extra protection from water entering the vehicle. Further, this allowed"
+    },
+    {
+      "line": 227,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "for the compartments of our electronics to be cut directly into this foam (Figure 13). These"
+    },
+    {
+      "line": 228,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "compartments were cut using a hot wire cutter, slowly cutting away strips of foam until the"
+    },
+    {
+      "line": 229,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "compartment was the proper depth and width. A piece of wood was also added for"
+    },
+    {
+      "line": 230,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "stability reasons after cutting away the foam."
+    },
+    {
+      "line": 231,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Figure 13: Usain Boat after having the electronics compartments cut out"
+    },
+    {
+      "line": 232,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "After cutting out these compartments, they were covered in a layer of fiberglass"
+    },
+    {
+      "line": 233,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "and epoxy as well, and watertight lids for the compartments were fitted into the boat."
+    },
+    {
+      "line": 234,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Electronics were then placed inside, and the rest of the boat was painted."
+    },
+    {
+      "line": 235,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Propeller and Propulsion System"
+    },
+    {
+      "line": 236,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "Our team’s experience with underwater robotics, a field where focusing on every"
+    },
+    {
+      "line": 237,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "minor detail is critical, was something we were able to apply to the fabrication of our"
+    },
+    {
+      "line": 238,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "propulsion system. We took extra care to ensure that both of our propellers were"
+    },
+    {
+      "line": 239,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "sharpened and balanced to increase efficiency and reduce vibration. We also made sure"
+    },
+    {
+      "line": 240,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "to fill our stuffing tube with marine grease to ensure that no water would leak in and to"
+    },
+    {
+      "line": 241,
+      "page_start": 8,
+      "page_end": 8,
+      "text": "minimize friction."
+    },
+    {
+      "line": 242,
+      "page_start": 8,
+      "page_end": 9,
+      "text": "9Figure 14: The Octura X470/2 (left) and X470/3 (right)"
+    },
+    {
+      "line": 243,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "In terms of testing the two bladed and three bladed propeller, the team came to"
+    },
+    {
+      "line": 244,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "the conclusion that the three bladed X470’s superior thrust outweighed the efficiency"
+    },
+    {
+      "line": 245,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "benefits generated from the two bladed propeller (Figure 14). This was largely because"
+    },
+    {
+      "line": 246,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "we had the battery capacity for the 5 mile race from 2024, making the 2 mile race easily"
+    },
+    {
+      "line": 247,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "feasible. The propellers also both didn’t cavitate, implying that the diameter and pitch of"
+    },
+    {
+      "line": 248,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "the propeller was sufficiently close to optimal for creating thrust efficiently without"
+    },
+    {
+      "line": 249,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "rotating too fast and pushing air."
+    },
+    {
+      "line": 250,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Figure 15: The propeller ventilation (left) and the propeller stable after adjustments were made (right)"
+    },
+    {
+      "line": 251,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "In testing propellers, the team also focused on drive shaft angle for two reasons."
+    },
+    {
+      "line": 252,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Firstly, a downward angled drive shaft can provide some upward force that pushes more"
+    },
+    {
+      "line": 253,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "of the hull out of the water, reducing drag. Additionally, the drive shaft not being deep"
+    },
+    {
+      "line": 254,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "enough underwater would make it easier for air to be sucked under the surface and cause"
+    },
+    {
+      "line": 255,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "ventilation (Figure 15). We determined the optimal angle through experimental testing"
+    },
+    {
+      "line": 256,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "and bent our stuffing tube to the correct angle."
+    },
+    {
+      "line": 257,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "The final modification considered was a gearbox or belt drive. These options would"
+    },
+    {
+      "line": 258,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "trade off RPM for torque while maintaining motor efficiency. The team decided on a direct"
+    },
+    {
+      "line": 259,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "drive system as it significantly reduced the number of failure points, a conscious decision"
+    },
+    {
+      "line": 260,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "to sacrifice some performance benefits for reliability, something befitting of our design"
+    },
+    {
+      "line": 261,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "principles. RPM limiting is still maintainable in the software of the system."
+    },
+    {
+      "line": 262,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "The entire propulsion system of the craft can be seen laid out below (Figure 16)."
+    },
+    {
+      "line": 263,
+      "page_start": 9,
+      "page_end": 9,
+      "text": "Figure 16: Usain Boat’s Electric Propulsion System"
+    },
+    {
+      "line": 264,
+      "page_start": 9,
+      "page_end": 10,
+      "text": "10Power Storage"
+    },
+    {
+      "line": 265,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "In terms of batteries, the vehicle is powered by 2 MaxAmps Lithium 8s 20000mAh"
+    },
+    {
+      "line": 266,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Li-Ion batteries configured in parallel (Figure 17). These batteries are able to output a"
+    },
+    {
+      "line": 267,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "continuous 100 amps each, however running these batteries in parallel allows for the"
+    },
+    {
+      "line": 268,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "output of the amperage to be doubled, which in turn allows for more speed for Usain"
+    },
+    {
+      "line": 269,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Boat. Additionally, these batteries boast an energy density that is unrivaled by other"
+    },
+    {
+      "line": 270,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "market options. At 250 Wh/kg, they outperform almost all other batteries in energy"
+    },
+    {
+      "line": 271,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "density, especially in the 8S range."
+    },
+    {
+      "line": 272,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Figure 17: MaxAmps Lithium ion batteries"
+    },
+    {
+      "line": 273,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "There are a few 6s options with up to 300 Wh/kg, but they are all LiPo batteries"
+    },
+    {
+      "line": 274,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "which are significantly less safe than Lion batteries, with a much higher likelihood of"
+    },
+    {
+      "line": 275,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "combusting if improperly used. While safer than LiPo batteries to begin with, the"
+    },
+    {
+      "line": 276,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "MaxAmps Lithium batteries also have automatic internal cell balancing to prevent an"
+    },
+    {
+      "line": 277,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "individual cell from getting over drained and failing before the battery is too low."
+    },
+    {
+      "line": 278,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Figure 18: Marine access hatch"
+    },
+    {
+      "line": 279,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "The batteries for the craft are stored in the center of the boat, with one on each"
+    },
+    {
+      "line": 280,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "side for proper weight distribution. They are protected by a watertight lid, as well as"
+    },
+    {
+      "line": 281,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "multiple layers of foam, and are velcroed down to an acrylic plate within the vehicle"
+    },
+    {
+      "line": 282,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "(Figure 18)."
+    },
+    {
+      "line": 283,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "Powertrain"
+    },
+    {
+      "line": 284,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "In developing a power system, we wanted to separate our high power systems"
+    },
+    {
+      "line": 285,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "from our sensing and controls suite for noise and safety reasons. Our high power safety"
+    },
+    {
+      "line": 286,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "shutoff is 36V volt contactor that is controlled by a relay. To power our lower voltage"
+    },
+    {
+      "line": 287,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "electronics, we use a 14S power conversion module. Using a 14S power module gives us"
+    },
+    {
+      "line": 288,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "a significant factor of safety to handle power spikes, something we needed as last year we"
+    },
+    {
+      "line": 289,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "blew a 10S power conversion module. The power diagram for the vehicle can be seen"
+    },
+    {
+      "line": 290,
+      "page_start": 10,
+      "page_end": 10,
+      "text": "below (Figure 19)."
+    },
+    {
+      "line": 291,
+      "page_start": 10,
+      "page_end": 11,
+      "text": "11Figure 19: High power systems and power conversion. Note that the nominal voltage of the system is 28.8V,"
+    },
+    {
+      "line": 292,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "but it gets as high as 33V on full charge"
+    },
+    {
+      "line": 293,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "For propulsion and steering, we use the aforementioned ZTW Seal 300A ESC and"
+    },
+    {
+      "line": 294,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Leopard 56110 on our 28.8V line, and we run our steering servos with 8.4V. They give"
+    },
+    {
+      "line": 295,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "70kg of torque each and are waterproof, providing sufficient reliability (Figure 21)."
+    },
+    {
+      "line": 296,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Figure 20: Our propulsion and steering powertrain"
+    },
+    {
+      "line": 297,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Payload"
+    },
+    {
+      "line": 298,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "With the introduction of a variable payload into this year’s competition, many"
+    },
+    {
+      "line": 299,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "design decisions were made to adapt to this new format. To be as competitively viable as"
+    },
+    {
+      "line": 300,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "possible, it was decided to make a payload flexible hull design for a pretty simple reason:"
+    },
+    {
+      "line": 301,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "it gave the team the most paths to victory. In the event that the competition was filled"
+    },
+    {
+      "line": 302,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "with fast, but light, 30lb payload boats, we could go light to keep pace with them. On the"
+    },
+    {
+      "line": 303,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "other hand, if there is one exceptionally fast 30lb boat, but the rest are much slower, a"
+    },
+    {
+      "line": 304,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "middling-speed 60lb payload boat can use its 5 point bonus to overtake the first place"
+    },
+    {
+      "line": 305,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "team with a second place run time. As for our actual payload, we used steel shot balls in"
+    },
+    {
+      "line": 306,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "shooting bags as they were maulable and adjustable to our needs (Figure 21)."
+    },
+    {
+      "line": 307,
+      "page_start": 11,
+      "page_end": 11,
+      "text": "Figure 21: Our payload bags (left) and our payload paths to the podium (right)"
+    },
+    {
+      "line": 308,
+      "page_start": 11,
+      "page_end": 12,
+      "text": "12Control System"
+    },
+    {
+      "line": 309,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Figure 22: The control and communications signals"
+    },
+    {
+      "line": 310,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "The control system of the craft consists of a Pixhawk controller, a common flight"
+    },
+    {
+      "line": 311,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "controller for RC drones and aircraft. We use the ArduRover firmware to configure our"
+    },
+    {
+      "line": 312,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "pixhawk for use on Usain Boat. The flight controller has a built-in IMU. With an additional"
+    },
+    {
+      "line": 313,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "GPS and current sensor we are able to monitor key facets of our craft. A Dragonlink RC"
+    },
+    {
+      "line": 314,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "two-way radio system is used to control the vessel, and transmit telemetry data, such as"
+    },
+    {
+      "line": 315,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "GPS location, current speed, and battery current draw and voltage to the pilot (Figure 22)."
+    },
+    {
+      "line": 316,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Figure 23: The Dragonlink RC Radio and Taranis controller"
+    },
+    {
+      "line": 317,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "The Dragonlink system boasts a 50 km range, far more than is needed for the 2"
+    },
+    {
+      "line": 318,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "mile race. For its price point, it is potentially the strongest commercial radio on the market"
+    },
+    {
+      "line": 319,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "(Figure 23). Since the boat sits low in the water, there are concerns about Fresnel Zone"
+    },
+    {
+      "line": 320,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "clearance. To alleviate that concern, Usain Boat’s receiver antenna is high up on the boat."
+    },
+    {
+      "line": 321,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "This combined with the strength of the transmitter provides a reliable solution against"
+    },
+    {
+      "line": 322,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "obstructions and allows confidence in the performance of the craft’s radio."
+    },
+    {
+      "line": 323,
+      "page_start": 12,
+      "page_end": 12,
+      "text": "Figure 24: The CAD and resulting 3D print of one of the rudders"
+    },
+    {
+      "line": 324,
+      "page_start": 12,
+      "page_end": 13,
+      "text": "13Since Usain Boat is equipped with only a single propeller, a separate rudder system"
+    },
+    {
+      "line": 325,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "was created to steer the craft. This system adds a rudder on either side of the propeller"
+    },
+    {
+      "line": 326,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "and these rudders are attached to servos that can be controlled with our Taranis controller"
+    },
+    {
+      "line": 327,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "over a Dragonlink radio connection to turn the vehicle. The rudders were designed in"
+    },
+    {
+      "line": 328,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Solidworks, then 3D printed before being attached to our boat (Figure 24)."
+    },
+    {
+      "line": 329,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Risk"
+    },
+    {
+      "line": 330,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "When designing a Usain Boat, it was important to take into account the risks"
+    },
+    {
+      "line": 331,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "associated with the different parts of the craft. Usain Boat only has a singular propeller,"
+    },
+    {
+      "line": 332,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "which poses complications in terms of turning the vehicle, ensuring there is enough"
+    },
+    {
+      "line": 333,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "power from the singular propeller to drive the boat forward with a 30-60 pound payload,"
+    },
+    {
+      "line": 334,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "and presents the risk of not having any propulsion should the propeller fail. In order to"
+    },
+    {
+      "line": 335,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "account for these risks, proper protocols and additions to the craft have been put into"
+    },
+    {
+      "line": 336,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "place. To handle the issue of steering a rudder system has been attached to the back of"
+    },
+    {
+      "line": 337,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "the craft, allowing it to turn. Our team also makes sure to keep the propeller clear, both to"
+    },
+    {
+      "line": 338,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "keep themselves safe and not cause damage to the propeller. There was also proper"
+    },
+    {
+      "line": 339,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "research done to ensure the motor met the required specifications to provide the"
+    },
+    {
+      "line": 340,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "propeller with enough power to move the craft, even while operating with a payload."
+    },
+    {
+      "line": 341,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "The motor of Usain Boat is connected to the propeller using a flexible shaft. This"
+    },
+    {
+      "line": 342,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "flexible shaft is susceptible to unwinding if mishandled, so care is always taken whenever"
+    },
+    {
+      "line": 343,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "attaching the motor and the propeller or when working with the shaft. In addition to this,"
+    },
+    {
+      "line": 344,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "care and proper precautions are taken when working with the batteries that provide"
+    },
+    {
+      "line": 345,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "power to the vehicle. The boat operates on Lithium ion batteries, which are safer than"
+    },
+    {
+      "line": 346,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "LiPo batteries, but still pose risks. When the batteries are not in use, they are stored in a"
+    },
+    {
+      "line": 347,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "flammables bag or in a flammables cabinet (Figure 25), and it is ensured that they are"
+    },
+    {
+      "line": 348,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "charged properly to avoid damaging the batteries and increasing their risk of harm. There"
+    },
+    {
+      "line": 349,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "is also always sand available in our lab space, in case a fire were to occur."
+    },
+    {
+      "line": 350,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "Figure 25: Lithium Ion Battery Bag Figure 26: Contactor Kill Switch"
+    },
+    {
+      "line": 351,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "The team works with fiberglass and epoxy often, using them to fabricate the hull of"
+    },
+    {
+      "line": 352,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "the vehicle, and can be exposed to harmful chemicals when working with these materials"
+    },
+    {
+      "line": 353,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "as well as when participating in activities such as foam cutting. In order to minimize the"
+    },
+    {
+      "line": 354,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "risk when working with these materials, it is ensured that proper protective equipment,"
+    },
+    {
+      "line": 355,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "including gloves, masks, goggles, and respirators are worn. It is also ensured that these"
+    },
+    {
+      "line": 356,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "materials are utilized correctly and safely. For example, we made sure that there was no"
+    },
+    {
+      "line": 357,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "loose fiberglass on the hull of the boat and that all of the epoxy had cured correctly."
+    },
+    {
+      "line": 358,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "To account for any risks that could occur during the race, the craft has a contactor"
+    },
+    {
+      "line": 359,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "kill switch installed, in addition to a physical kill switch, that allows Usain Boat to be shut"
+    },
+    {
+      "line": 360,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "down remotely (Figure 26). That means if any issue is to occur during the race, the vehicle"
+    },
+    {
+      "line": 361,
+      "page_start": 13,
+      "page_end": 13,
+      "text": "can quickly and safely be shut down to minimize any potential hazards."
+    },
+    {
+      "line": 362,
+      "page_start": 13,
+      "page_end": 14,
+      "text": "14Conclusion"
+    },
+    {
+      "line": 363,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Usain Boat is the result of well over 1000 hours of work from our dedicated team at"
+    },
+    {
+      "line": 364,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "NUWave. It’s designed to be a “bulletproof boat,” capable of running reliably even in"
+    },
+    {
+      "line": 365,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "adverse circumstances. It is equipped to operate at either the 30lb or 60lb payload"
+    },
+    {
+      "line": 366,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "weight in order to optimize to competition circumstances, and it features an entirely new"
+    },
+    {
+      "line": 367,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "propulsion system from last year’s design. It boasts a wide variety of safety features from"
+    },
+    {
+      "line": 368,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "contactors to waterproof hatches to create a secure craft."
+    },
+    {
+      "line": 369,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "When considering future directions, the team is considering adding a second"
+    },
+    {
+      "line": 370,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "propeller to both double the thrust and replace the rudder with a differential thrust"
+    },
+    {
+      "line": 371,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "turning system for sharper corners. Our software system also enables improvement"
+    },
+    {
+      "line": 372,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "through autonomy strategies like waypoint following and raceline optimization."
+    },
+    {
+      "line": 373,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "References"
+    },
+    {
+      "line": 374,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "[1] “Marine Environment.” International Maritime Organization,"
+    },
+    {
+      "line": 375,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "www.imo.org/en/OurWork/Environment/Pages/Default.aspx."
+    },
+    {
+      "line": 376,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "[2] Kersey, Jessica, et al. “Rapid battery cost declines accelerate the prospects of"
+    },
+    {
+      "line": 377,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "all-electric interregional container shipping.” Nature Energy, vol. 7, no. 7, 18 July 2022,"
+    },
+    {
+      "line": 378,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "pp. 664–674, https://doi.org/10.1038/s41560-022-01065-y."
+    },
+    {
+      "line": 379,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "[3] “Shape Effects on Drag.” NASA, NASA, 20 Nov. 2023,"
+    },
+    {
+      "line": 380,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "www1.grc.nasa.gov/beginners-guide-to-aeronautics/shape-effects-on-drag/."
+    },
+    {
+      "line": 381,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "[4] “Material Datasheet.” ProtoXYZ, protoxyz.com/materials/metal/Stainless_Steel_304."
+    },
+    {
+      "line": 382,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "[5] “Propeller Chart & Recommendations.” Offshore Electrics, 29 Sept. 2022,"
+    },
+    {
+      "line": 383,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "www.offshoreelectrics.com/proddetail.php?prod=art-prop-chart."
+    },
+    {
+      "line": 384,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "[6] “Propeller Testing / Recommendations.” Offshore Electrics, 24 Feb. 2023,"
+    },
+    {
+      "line": 385,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "www.offshoreelectrics.com/proddetail.php?prod=art-prop-testing."
+    },
+    {
+      "line": 386,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "[7] Hutchison, Fred. 2, 3 and 4 Blade Propellers Are They All the Same?, PYI Inc., 17 Mar."
+    },
+    {
+      "line": 387,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "2013, www.pyiinc.com/articles/2-3-and-4-blade-propellers-are-they-all-the-same."
+    },
+    {
+      "line": 388,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "[8] “Propellers: Understanding Prop Diameter & Pitch.” Further Customs, Further"
+    },
+    {
+      "line": 389,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "Customs, 11 June 2024, furthercustoms.com/blogs/propellers-understanding-prop"
+    },
+    {
+      "line": 390,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "-diameter-pitch/propellers-understanding-prop-diameter-pitch?srsltid=AfmBOoqCjcYlkW"
+    },
+    {
+      "line": 391,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "H9bqeNRamLVZ3UJTQxBibeyFn5o666vnOtBgs5Ty"
+    },
+    {
+      "line": 392,
+      "page_start": 14,
+      "page_end": 14,
+      "text": "15"
+    }
+  ],
+  "source_line_count": 393,
+  "extraction_notes": "All web reader source lines collected. Source line page indices are zero-based; pages[].page is one-based. Lines spanning pages are assigned to their starting page. Layout, image counts, PDF hash and other PDF metadata unavailable. Image-only content is not transcribed."
+}
