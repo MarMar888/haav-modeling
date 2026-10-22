@@ -482,3 +482,45 @@ select:not(:disabled),
 input[type="file"]::file-selector-button {
   cursor: pointer;
 }
+
+/* Quotations get a muted emerald rule and a little indent, so they read as quotes at any width. */
+main blockquote {
+  border-inline-start: 3px solid #10b981;
+  padding-inline-start: 1rem;
+  margin-inline: 0;
+}
+
+/* Numbers in tables line up in columns, and wide tables scroll rather than squeeze on a phone. */
+main table {
+  font-variant-numeric: tabular-nums;
+}
+main :is(div, figure):has(> table) {
+  overflow-x: auto;
+}
+
+/* List bullets and numbers take the site's emerald. */
+main li::marker {
+  color: #10b981;
+}
+
+/* Superscripts and subscripts do not push the line spacing apart. */
+sub,
+sup {
+  line-height: 0;
+}
+
+/* Highlighted text reads as a highlighter pen in both themes. */
+main mark {
+  background: color-mix(in srgb, #10b981 30%, transparent);
+  color: inherit;
+  padding-inline: 0.15em;
+  border-radius: 0.2em;
+}
+
+/* Buttons dip slightly when pressed, so a tap gives immediate feedback on touch screens. */
+@media (prefers-reduced-motion: no-preference) {
+  button:not(:disabled):active {
+    scale: 0.97;
+    transition: scale 0.08s ease;
+  }
+}

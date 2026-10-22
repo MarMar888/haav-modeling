@@ -3,6 +3,12 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.17 — 2026-10-22
+
+Six more responsive UI tweaks: block quotes get an emerald rule; table numbers line up and wide tables scroll inside their
+wrapper; list markers take the emerald; sub/superscripts no longer stretch line spacing; highlighted text reads as a
+highlighter pen; and buttons dip slightly when pressed (unless reduced motion is requested).
+
 ## 0.7.16 — 2026-10-21
 
 Six more responsive UI tweaks: keyboard keys render as small chips; expandable summaries are full-width pointer targets with a
