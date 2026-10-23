@@ -623,3 +623,36 @@ dialog::backdrop {
   background: rgb(0 0 0 / 0.5);
   backdrop-filter: blur(2px);
 }
+
+/* Anything marked hidden stays hidden even when a utility class sets its display. */
+[hidden] {
+  display: none !important;
+}
+
+/* The disclosure triangle on expandable sections takes the site's emerald. */
+summary::marker {
+  color: #10b981;
+}
+
+/* Defined terms stand out in semibold italics where they are first introduced. */
+main dfn {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Program output and variables read in the monospace font, like inline code. */
+main :is(samp, var) {
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+  font-size: 0.9em;
+}
+
+/* Embedded frames lose the browser border and scale to the column, keeping their shape on a phone. */
+main iframe {
+  border: 0;
+  max-width: 100%;
+}
+
+/* The file-picker button keeps a gap from the file name beside it. */
+input[type="file"]::file-selector-button {
+  margin-inline-end: 0.75rem;
+}

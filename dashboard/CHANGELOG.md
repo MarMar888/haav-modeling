@@ -3,6 +3,12 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.21 — 2026-10-23
+
+Six more responsive UI tweaks: hidden elements stay hidden whatever their display class; expandable-section triangles take the
+emerald; defined terms are semibold italic; program output and variables use the monospace font; embedded frames lose their
+border and fit the column; and the file-picker button keeps a gap from the file name.
+
 ## 0.7.20 — 2026-10-22
 
 The timeline legend now names its two markers: a filled dot is a "Milestone" and a hollow ring is a "Phase".
