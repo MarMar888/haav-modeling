@@ -697,3 +697,44 @@ main img {
   overflow-wrap: anywhere;
   font-style: italic;
 }
+
+/* Headings reached by an anchor link stop below the sticky header instead of hiding under it. */
+main :is(h1, h2, h3, h4, h5, h6)[id],
+main [id]:target {
+  scroll-margin-top: 5rem;
+}
+
+/* The search field's clear button stays a comfortable tap target and follows the text colour. */
+input[type="search"]::-webkit-search-cancel-button {
+  cursor: pointer;
+  opacity: 0.6;
+}
+@media (pointer: coarse) {
+  input[type="search"]::-webkit-search-cancel-button {
+    transform: scale(1.25);
+  }
+}
+
+/* Option-group labels in dropdowns read as bold headings, not as selectable choices. */
+optgroup {
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Regions marked busy dim slightly and show a progress cursor so loading is visible. */
+[aria-busy="true"] {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+/* Table footers (totals) get a heavier top rule and semibold text, mirroring the header. */
+main tfoot {
+  font-weight: 600;
+  border-top: 2px solid currentColor;
+}
+
+/* Heading groups pull their subtitle tight under the title and mute it. */
+main hgroup > :is(p, h2, h3, h4):not(:first-child) {
+  margin-top: 0.25rem;
+  opacity: 0.75;
+}

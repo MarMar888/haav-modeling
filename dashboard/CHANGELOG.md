@@ -3,6 +3,12 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.23 — 2026-10-23
+
+Six more responsive UI tweaks: anchored headings stop below the sticky header; the search clear button is muted and larger on
+touch screens; dropdown option-group labels read bold; busy regions dim with a progress cursor; table footers get a heavier
+rule and semibold text; and heading-group subtitles tuck tight under the title.
+
 ## 0.7.22 — 2026-10-23
 
 Six more responsive UI tweaks: checkboxes, radios and sliders take the emerald (and larger hit areas on touch screens); inline
