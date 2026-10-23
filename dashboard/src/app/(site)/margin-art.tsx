@@ -8,7 +8,6 @@ import { LEFT_SCENES, RIGHT_SCENES } from "./margin-scenes";
 // its share of the page. Scroll progress is written to CSS variables (no React re-render per frame); globals.css
 // turns them into opacity, draw-in, drift and the planing-hull trim. Hidden where there is no margin to fill.
 // Only the long home page scrolls through the scenes; short pages would sweep them far too fast, so they hold the first.
-// The simulation page is full of its own figures, so it has none.
 
 const COUNT = LEFT_SCENES.length;
 const SPAN = 1 / (COUNT - 1);
@@ -18,7 +17,6 @@ export function MarginArt() {
   const root = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const scrolls = pathname === "/";
-  const hidden = pathname === "/simulation";
 
   useEffect(() => {
     const el = root.current;
@@ -56,7 +54,7 @@ export function MarginArt() {
       resize.disconnect();
       if (frame) cancelAnimationFrame(frame);
     };
-  }, [scrolls, hidden]);
+  }, [scrolls]);
 
   const side = (scenes: typeof LEFT_SCENES, align: string, edge: string) => (
     <div className={`absolute inset-y-0 w-[calc((100%-42rem)/2)] ${edge}`}>
@@ -67,8 +65,6 @@ export function MarginArt() {
       ))}
     </div>
   );
-
-  if (hidden) return null;
 
   return (
     <div ref={root} aria-hidden="true" className="ma pointer-events-none fixed inset-0 -z-10 hidden xl:block">

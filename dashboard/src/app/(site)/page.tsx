@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ADVISORS, GROUPS, TEAM } from "@/lib/team";
 import { CONTACT_EMAIL, SITE_DESCRIPTION, pageMetadata } from "@/lib/site";
+import { SPONSORS, type Sponsor } from "@/lib/sponsors";
 import { TIMELINE } from "@/lib/timeline";
 import { InquiryForm } from "./inquiry-form";
 
@@ -16,7 +17,7 @@ const prose = "mt-4 text-pretty text-lg leading-relaxed text-zinc-700 dark:text-
 
 export default function Page() {
   return (
-    <div className="space-y-20">
+    <div className="space-y-12">
       <section className="pt-8">
         <h1 className="text-5xl sm:text-6xl font-semibold tracking-tight">Haav</h1>
         <p className="mt-3 font-mono text-sm text-zinc-500">Highly Amphibious / Autonomous Vessel</p>
@@ -59,6 +60,11 @@ export default function Page() {
             Sponsor the build
           </Link>
         </div>
+      </section>
+
+      <section id="sponsors" className={section}>
+        <h2 className={h2}>Our sponsors</h2>
+        <SponsorList sponsors={SPONSORS} />
       </section>
 
       <section id="boat" className={section}>
@@ -136,10 +142,6 @@ export default function Page() {
         <p className={prose}>
           We are looking for funds, parts and skills. If your company or lab would like to help, or would like to learn more, please fill out the form below! 
         </p>
-        
-        <p className={prose}>
-As a sponsor, you can get your logo on our hull, merch and website, access to our team talent and more soon!
-        </p>
         <div className="mt-8">
           <InquiryForm />
         </div>
@@ -188,5 +190,34 @@ function People({ people }: { people: readonly { name: string; role: string; bio
         </div>
       ))}
     </dl>
+  );
+}
+
+// One row of sponsor logos, each linking to the sponsor's site. The white tile keeps dark logos legible in dark mode.
+function SponsorList({ sponsors }: { sponsors: readonly Sponsor[] }) {
+  return (
+    <ul aria-label="Our sponsors" className="mt-8 space-y-20">
+      {sponsors.map((s) => (
+        <li key={s.name}>
+          <a
+            href={s.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${s.name} (opens in a new tab)`}
+            className="flex w-full items-center justify-center rounded-lg bg-white py-1 transition-opacity hover:opacity-80"
+          >
+            <Image
+              src={s.logo.src}
+              alt={s.name}
+              width={s.logo.width}
+              height={s.logo.height}
+              unoptimized={s.logo.src.endsWith(".svg")}
+              className={s.width ? "h-auto" : "h-auto max-h-24 w-auto max-w-72"}
+              style={s.width ? { width: `min(100%, ${s.width}px)` } : undefined}
+            />
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 }

@@ -12,7 +12,6 @@ export const CONTACT_EMAIL = "mhbarrett@wisc.edu";
 // Pages worth indexing. The workshop (/bom, /optimization), /handout and /api are working tools and stay out.
 export const PUBLIC_PATHS = [
   { path: "/", title: "Home", description: "What Haav is, the boat, the build timeline, the team and how to sponsor." },
-  { path: "/simulation", title: "Simulation", description: "Simulation studies for the boat: propeller, thrust, motor drive and speed." },
   { path: "/join", title: "Become a member", description: "How UW-Madison students can join the build team." },
 ] as const;
 

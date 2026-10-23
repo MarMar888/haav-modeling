@@ -3,6 +3,17 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.25 — 2026-10-23
+
+Removed the simulation page: its route, figure, header link and sitemap / llms.txt entry. `/simulation` now redirects to the home
+page, and the side-margin artwork no longer has a page it skips. Issue #92 covers the rest of this branch's sponsors work.
+
+## 0.7.24 — 2026-10-23
+
+New "Our sponsors" section on the home page, right above Basic Spec: one logo per row in a single column —
+TotalBoat, Fincantieri Marine Group, the Grainger Engineering Design Innovation Laboratory and the Hoofers Sailing Club —
+each linking to the sponsor's site. Issue #92.
+
 ## 0.7.23 — 2026-10-23
 
 Six more responsive UI tweaks: anchored headings stop below the sticky header; the search clear button is muted and larger on

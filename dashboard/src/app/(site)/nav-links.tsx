@@ -7,21 +7,20 @@ import { useEffect, useState } from "react";
 const LINKS = [
   { href: "/#timeline", label: "Timeline", id: "timeline" },
   { href: "/#team", label: "Team", id: "team" },
-  { href: "/simulation", label: "Simulation" },
   { href: "/#contact", label: "Contact", id: "contact" },
 ] as const;
 
 const base =
   "inline-flex min-h-11 items-center whitespace-nowrap border-b-2 text-sm hover:text-emerald-700 dark:hover:text-emerald-400";
 
-// Header links; the one for the section in view (or the current page) is underlined and marked aria-current.
+// Header links; the one for the section in view is underlined and marked aria-current.
 export function NavLinks() {
   const pathname = usePathname();
   const [section, setSection] = useState<string | null>(null);
 
   useEffect(() => {
     if (pathname !== "/") return;
-    const els = LINKS.flatMap((l) => ("id" in l ? [document.getElementById(l.id)] : [])).filter((e): e is HTMLElement => !!e);
+    const els = LINKS.map((l) => document.getElementById(l.id)).filter((e): e is HTMLElement => !!e);
     const seen = new Set<string>();
     // A section counts as "in view" while it crosses a band just below the sticky header.
     const io = new IntersectionObserver(
@@ -39,7 +38,7 @@ export function NavLinks() {
   }, [pathname]);
 
   return LINKS.map((l) => {
-    const current = "id" in l ? pathname === "/" && section === l.id : pathname === l.href;
+    const current = pathname === "/" && section === l.id;
     return (
       <Link
         key={l.href}
