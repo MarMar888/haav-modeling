@@ -3,6 +3,15 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.2.1 — 2026-10-23
+
+`willmarley.ipynb`: added the propeller torque equation (`Q = K_Q * rho * n^2 * D^5`) in the notebook's own style — one
+equation, bounds on each input (`K_Q`, diameter, rpm), a sweep of each input alone — then the load curve overlaid on the
+5Y motor torque/speed chart, with each winding's operating point (the crossing) marked and tabulated: operating rpm,
+torque, shaft power, and that power against the sheet's continuous rating. The `K_Q` range is sanity-checked against
+`explore.ipynb`'s baseline (5.3 N·m at 2640 rpm, 6 in ⇒ `K_Q ≈ 0.033`). Still numpy + matplotlib only; no change to
+`explore.ipynb` or its model/write-up (#85).
+
 ## 0.2.0 — 2026-10-23
 
 `explore.ipynb`: real hydrostatics and visibility work (#87).

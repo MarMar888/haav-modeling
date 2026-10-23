@@ -387,8 +387,10 @@ to understand the library before trusting `explore.ipynb`'s use of it. Same setu
 `willmarley.ipynb` is a third, standalone notebook: one battery runtime equation,
 `minutes = 0.8 * Capacity(Ah) * Voltage(V) * battery efficiency / (load power(W) * motor efficiency) * 60`,
 with a lower and upper bound on each input and a sweep of each input on its own (others at their midpoint).
-It ends with one first-quadrant torque vs speed graph of the 5Y winding of every SSS motor on the supplier spec sheet,
-with the motors named in the PEP 2025 and 2026 white papers highlighted
+It continues with a first-quadrant torque vs speed graph of the 5Y winding of every SSS motor on the supplier spec sheet,
+with the motors named in the PEP 2025 and 2026 white papers highlighted, and ends with the propeller torque equation
+(`Q = K_Q ρ n² D⁵`, same bounds-and-sweeps treatment) overlaid as a load curve on those motor lines: each crossing is that
+winding's operating point, tabulated with its shaft power against the motor's continuous rating
 (27 models, 263 windings in all, typed into `sss_motors.csv`, which the notebook reads from its own folder;
 change `WINDING` to plot another winding). It needs only `numpy` and
 `matplotlib` and does not use `explore.ipynb`'s model. Its first code cell runs `%pip install -q matplotlib numpy`,
