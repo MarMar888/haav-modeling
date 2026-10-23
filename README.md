@@ -396,7 +396,8 @@ inside the slip factor — and sweeps each input against it, then closes with a 
 section: motor, propeller and speed solved together at steady-state planing (the torque balance reduces to a quadratic in
 rpm, current limit as the one special case), with no motor picked — every input, the five motor numbers included, gets a
 low/high range bracketing the SSS sheet and a sweep against the steady-state speed, with shaft power, electrical power and
-efficiency falling out
+efficiency falling out, plus three explanatory charts: the torque balance itself, per-input efficiency sweeps, and a
+diameter × pitch speed map
 (27 models, 263 windings in all, typed into `sss_motors.csv`, which the notebook reads from its own folder;
 change `WINDING` to plot another winding). It needs only `numpy` and
 `matplotlib` and does not use `explore.ipynb`'s model. Its first code cell runs `%pip install -q matplotlib numpy`,

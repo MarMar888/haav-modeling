@@ -3,6 +3,14 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.2.8 — 2026-10-23
+
+`willmarley.ipynb`: three explanatory charts added to the "Super simple model" (#85). The torque balance itself — the
+motor's available-torque line (flat at the current cap, falling once the voltage runs out) against propeller parabolas
+for three diameters, crossings marked with their rpm; an efficiency row of the same per-input sweeps, which shows what
+the speed view hides (when current-limited, more supply voltage buys no speed while efficiency falls as 1/V); and a
+diameter × pitch map of steady-state speed with mph contours, covering the two numbers printed on a propeller.
+
 ## 0.2.7 — 2026-10-23
 
 `willmarley.ipynb`: the "Super simple model" no longer assumes a picked motor (#85). Every input — the five motor
