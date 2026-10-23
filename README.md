@@ -364,7 +364,10 @@ the seeds, a target speed and which designs to compare. The notebook then search
 `DESIGNS`. Every later chart reads from that dictionary, so adding your own design to `EXTRA_DESIGNS` puts it in all of them.
 Run All takes about two and a half minutes, most of it the searches.
 
-**Local setup:** after creating `optimization/.venv` as above, also run
+**Local setup:** use a Python between 3.10 and 3.13 for the venv — `navaltoolbox` ships prebuilt wheels for
+CPython 3.9–3.13 only, and on a newer Python pip falls back to compiling its Rust source, which fails (the
+notebook's first cell now says so instead of printing the compiler log). After creating `optimization/.venv`
+as above (e.g. `python3.13 -m venv optimization/.venv`), also run
 `optimization/.venv/bin/python -m pip install -r optimization/requirements-notebook.txt`. That adds `openplaning`, `navaltoolbox`,
 `ipywidgets`, `matplotlib`, `jupyterlab`, and `setuptools<81`. Without the pin, `from openplaning import PlaningBoat` fails with
 `ModuleNotFoundError: No module named 'pkg_resources'`, because newer virtualenvs no longer install `setuptools` and

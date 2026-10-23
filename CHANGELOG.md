@@ -28,7 +28,8 @@ sliders follow `BOUNDS`; the Assumptions lens sweeps the new placeholders instea
 
 Updated `explore-model.tex` and rebuilt `explore-model.pdf`: the mesh/navaltoolbox hydrostatics, the stability margin
 (twenty-four margins), the motor limit modes, the changed constants, and the worked example recomputed from
-`fastest_feasible(DESIGN, FIXED)`. `requirements-notebook.txt` adds `navaltoolbox`.
+`fastest_feasible(DESIGN, FIXED)`. `requirements-notebook.txt` adds `navaltoolbox`, which ships wheels for
+CPython 3.9–3.13 only; the setup cell now says so on a newer kernel instead of failing into a Rust compile log.
 
 ## 0.1.7 — 2026-10-22
 
