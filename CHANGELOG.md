@@ -3,6 +3,16 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.2.6 — 2026-10-23
+
+`willmarley.ipynb`: the "Super simple model" section is now the full computation, self-contained — motor, propeller and
+speed at steady-state planing, with the battery/runtime piece removed from it (#85). One cell holds every input (the
+56154-V2 5Y row typed in, supply voltage, `K_Q`, diameter, pitch, slip) and the whole solve: the motor-torque =
+prop-torque balance reduces to one quadratic in rpm (closed form, no solver), the current limit handled as the one
+special case, then speed = rpm × pitch × slip / 1056, with shaft power, electrical power and motor efficiency falling
+out at the end. The result reproduces the catalog-based crossing from the earlier section (11.8k rpm, 7.56 N·m) with
+nothing imported from it.
+
 ## 0.2.5 — 2026-10-23
 
 `willmarley.ipynb`: added a closing "Super simple model" section (#85) — the four one-line pieces (battery runtime,

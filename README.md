@@ -392,9 +392,9 @@ with the motors named in the PEP 2025 and 2026 white papers highlighted, and end
 (`Q = K_Q ρ n² D⁵`, same bounds-and-sweeps treatment) overlaid as a load curve on those motor lines: each crossing is that
 winding's operating point, tabulated with its shaft power against the motor's continuous rating. A final section reduces
 speed to one equation — speed = rpm × pitch × slip / 1056, with rpm just an input for now and all the hull physics hiding
-inside the slip factor — and sweeps each input against it, then closes with a "Super simple model" section: all four
-one-line pieces on one screen with a shared input dict, reporting speed, runtime and the range they imply against the
-2-mile course
+inside the slip factor — and sweeps each input against it, then closes with a self-contained "Super simple model"
+section: motor, propeller and speed solved together at steady-state planing in one cell (the torque balance reduces to a
+quadratic in rpm, current limit as the one special case), with shaft power, electrical power and efficiency falling out
 (27 models, 263 windings in all, typed into `sss_motors.csv`, which the notebook reads from its own folder;
 change `WINDING` to plot another winding). It needs only `numpy` and
 `matplotlib` and does not use `explore.ipynb`'s model. Its first code cell runs `%pip install -q matplotlib numpy`,
