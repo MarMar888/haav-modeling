@@ -3,6 +3,18 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.2.2 — 2026-10-23
+
+`willmarley.ipynb`: closed the loop to boat speed with an idealized on-plane chain (#85): drag = weight / (L/D)
+(speed-independent planing drag), speed = rpm × pitch × slip / 1056, rpm from the motor–propeller crossing, runnable only
+if propeller thrust (`eta_p × power / speed`) covers the drag **and** the blade tip stays under 150 ft/s. Each input
+(`K_Q`, diameter, pitch, slip, `eta_p`, weight, L/D) gets bounds and a sweep against the speed we can run, with
+off-plane / cavitating points marked, plus a per-winding bar chart of on-plane speed. Propeller diameter bounds set to
+2–5 in throughout. The sweeps' subject is the 56133-V2 5Y — at the midpoint prop it is the only winding that both planes
+and keeps its tip under the cap (bigger motors overspeed, smaller ones can't make the thrust). The notes say plainly that
+the absolute speeds are what the idealization believes; the shapes and crossovers are the useful part. Still numpy +
+matplotlib only; no change to `explore.ipynb` or its model/write-up.
+
 ## 0.2.1 — 2026-10-23
 
 `willmarley.ipynb`: added the propeller torque equation (`Q = K_Q * rho * n^2 * D^5`) in the notebook's own style — one
