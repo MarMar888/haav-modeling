@@ -3,6 +3,13 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.8.0 — 2026-10-23
+
+Newsletter. Newsletters are MDX files in `newsletters/` (Markdown plus `<Figure>` and `<Button>`, with images beside
+them), rendered through a React email template that follows the site's design. A passcode-protected `/admin` page adds
+subscribers to a Resend segment, previews a newsletter, emails a preview to the owner, and sends it to the list as a
+Resend broadcast, once per newsletter.
+
 ## 0.7.25 — 2026-10-23
 
 Removed the simulation page: its route, figure, header link and sitemap / llms.txt entry. `/simulation` now redirects to the home

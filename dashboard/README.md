@@ -6,6 +6,7 @@ One Next.js site, in two halves:
 |---|---|---|
 | **Public site** (`src/app/(site)/`) | `/`, one page: the project, the team, a sponsor form | Judges, sponsors, anyone with the link |
 | **Workshop** (`src/app/(workshop)/`) | `/bom`, `/optimization` | The team. Editable by anyone with the link, so marked `noindex` |
+| **Admin** (`src/app/admin/`) | `/admin` | Whoever has the passcode: the newsletter list and sending |
 
 Each half has its own layout and header, so the working tools never dress up as the public face, and the
 other way round.
@@ -39,6 +40,30 @@ database read. `/sponsors` redirects to the form at the bottom of it.
   and the JSON-LD in `src/app/(site)/layout.tsx`. The site origin, description and list of indexable pages live in
   [`src/lib/site.ts`](src/lib/site.ts); a new public page needs an entry in `PUBLIC_PATHS` and `pageMetadata(...)`. The
   workshop is `noindex`, not listed in the sitemap.
+
+## The newsletter
+
+Newsletters are files in [`newsletters/`](newsletters/README.md), sent with [Resend](https://resend.com) broadcasts from
+**/admin** (passcode-protected, `noindex`).
+
+- **Write** a newsletter by copying `newsletters/welcome/` to a new folder and editing `newsletter.mdx`: a short header
+  (`subject`, `preview`, `date`), then Markdown plus a few tags (`<Figure>`, `<Button>`). Images go in the same folder.
+  [`newsletters/README.md`](newsletters/README.md) has the full syntax.
+- **The template** (logo header, footer, unsubscribe link, colors, dark mode) is
+  [`src/emails/newsletter.tsx`](src/emails/newsletter.tsx). [`src/lib/newsletter.tsx`](src/lib/newsletter.tsx) reads a
+  newsletter file and renders it to email HTML and plain text.
+- **/admin** lists every newsletter. **Preview** shows it in the page; **Send preview to me** emails it to the preview
+  address; **Send to everyone** (after a confirmation) creates a Resend broadcast to the whole list. A newsletter can
+  only go out once: the broadcast is named after the folder, and the admin checks Resend for it.
+- **Subscribers** are contacts in a Resend segment named "Newsletter", created on first use. Add people on /admin, singly
+  or pasted in bulk. Removing someone is done in the Resend dashboard; people can also unsubscribe from the email
+  footer, and then stay off the list.
+- **Settings** live in [`src/lib/newsletter-config.ts`](src/lib/newsletter-config.ts): the `/admin` passcode, the sender
+  address and the preview address. Only `RESEND_API_KEY` is an environment variable (set it in `.env.local` and in
+  Vercel); without it `/admin` stays locked. The sender's domain must be verified in Resend before "Send to everyone"
+  works. This repo is public, so the passcode is readable by anyone: it deters casual visitors, not a determined one.
+- **Images** are served from `/newsletters/<folder>/<file>`, so the email loads them from haav.build. Push and deploy
+  before sending a preview of a newsletter with new images (the in-page preview works immediately).
 
 ## The BOM
 
