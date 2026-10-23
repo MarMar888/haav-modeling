@@ -656,3 +656,44 @@ main iframe {
 input[type="file"]::file-selector-button {
   margin-inline-end: 0.75rem;
 }
+
+/* Checkboxes, radios and range sliders take the emerald, and their hit area is a comfortable size on touch screens. */
+input:is([type="checkbox"], [type="radio"], [type="range"]) {
+  accent-color: #10b981;
+}
+@media (pointer: coarse) {
+  input:is([type="checkbox"], [type="radio"]) {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+/* Inline quotes get curly quotation marks that follow the document language. */
+main q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* An expanded section's summary turns the emerald so open and closed sections are distinguishable at a glance. */
+main details[open] > summary {
+  color: #10b981;
+}
+
+/* Nested lists indent less and sit tight against their parent item, so deep outlines don't squeeze a phone column. */
+main :is(ul, ol) :is(ul, ol) {
+  padding-inline-start: 1.25rem;
+  margin-block: 0.25rem;
+}
+
+/* Tapping links and buttons on touch devices no longer flashes the default grey rectangle. */
+a,
+button,
+summary,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Images that fail to load keep a visible, wrapped alt text instead of collapsing or overflowing. */
+main img {
+  overflow-wrap: anywhere;
+  font-style: italic;
+}

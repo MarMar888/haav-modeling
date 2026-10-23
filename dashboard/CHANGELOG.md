@@ -3,6 +3,12 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `package.json`'s `version`
 are kept — this folder versions independently of `cad/`, `optimization/`, and `docs/`.
 
+## 0.7.22 — 2026-10-23
+
+Six more responsive UI tweaks: checkboxes, radios and sliders take the emerald (and larger hit areas on touch screens); inline
+quotes get curly quotation marks; open sections' summaries turn emerald; nested lists indent less; touch taps no longer flash
+the grey highlight; and broken images show wrapped alt text.
+
 ## 0.7.21 — 2026-10-23
 
 Six more responsive UI tweaks: hidden elements stay hidden whatever their display class; expandable-section triangles take the
