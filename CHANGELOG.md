@@ -3,6 +3,13 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.2.5 — 2026-10-23
+
+`willmarley.ipynb`: added a closing "Super simple model" section (#85) — the four one-line pieces (battery runtime,
+motor, propeller torque, speed) on one screen, one shared `INPUTS` dict, and the outputs computed together: speed,
+runtime, and `range = speed × runtime`, checked against the 2-mile course. `rpm` and `P` stay free inputs, with the
+later one-line connections (crossing picks the rpm, motor draw becomes `P`, constraints return) listed in the notes.
+
 ## 0.2.4 — 2026-10-23
 
 `willmarley.ipynb`: simplified the speed section again, per direction — the motor catalog is out of the chain for now
