@@ -391,8 +391,8 @@ It continues with a first-quadrant torque vs speed graph of the 5Y winding of ev
 with the motors named in the PEP 2025 and 2026 white papers highlighted, and ends with the propeller torque equation
 (`Q = K_Q ρ n² D⁵`, same bounds-and-sweeps treatment) overlaid as a load curve on those motor lines: each crossing is that
 winding's operating point, tabulated with its shaft power against the motor's continuous rating. A final section turns
-the crossing into boat speed with an idealized on-plane chain (drag = weight / lift-to-drag, speed = rpm × pitch × slip / 1056,
-runnable only if thrust covers drag and the blade tip stays under 150 ft/s) and sweeps every input against the speed we can run
+the crossing into speed with the simplest possible chain — the crossing fixes the rpm, then speed = rpm × pitch × slip / 1056,
+with all the hull physics hiding inside the slip factor for now — and sweeps each input against that speed
 (27 models, 263 windings in all, typed into `sss_motors.csv`, which the notebook reads from its own folder;
 change `WINDING` to plot another winding). It needs only `numpy` and
 `matplotlib` and does not use `explore.ipynb`'s model. Its first code cell runs `%pip install -q matplotlib numpy`,

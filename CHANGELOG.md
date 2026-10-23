@@ -3,6 +3,15 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.2.3 — 2026-10-23
+
+`willmarley.ipynb`: simplified the speed section to the bare chain, per discussion — start simple, make sense of it,
+then add constraints back (#85). The on-plane drag check, the tip-speed cap and their inputs (`eta_p`, weight, L/D) are
+removed; what remains is two lines on top of the motor–prop crossing: the crossing fixes the rpm, and
+`speed = rpm × pitch × slip / 1056`. The notes say plainly that all the hull physics hides inside `slip` for now, so
+the absolute speeds are the drive's, not the boat's. Sweeps cover `K_Q`, diameter (2–5 in), pitch and slip; the
+per-winding bar chart loses its runnability graying. Subject motor back to the 56154-V2 5Y.
+
 ## 0.2.2 — 2026-10-23
 
 `willmarley.ipynb`: closed the loop to boat speed with an idealized on-plane chain (#85): drag = weight / (L/D)
