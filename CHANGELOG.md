@@ -3,6 +3,15 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.2.7 — 2026-10-23
+
+`willmarley.ipynb`: the "Super simple model" no longer assumes a picked motor (#85). Every input — the five motor
+numbers (`Kv`, `R`, `I0`, `I_max`, `V`) and the prop/speed inputs (`K_Q`, diameter, pitch, slip) — gets a lower and an
+upper bound roughly bracketing the SSS sheet, with the midpoint as baseline, and each input is swept alone against the
+steady-state speed (orange marks where the motor is held at its current limit). At the midpoints the solve is
+current-limited, which the sweeps make visible: supply voltage and winding resistance are flat lines there, while
+`I_max`, `Kv`, `K_Q`, diameter and pitch carry all the leverage.
+
 ## 0.2.6 — 2026-10-23
 
 `willmarley.ipynb`: the "Super simple model" section is now the full computation, self-contained — motor, propeller and

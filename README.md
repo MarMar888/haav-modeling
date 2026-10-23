@@ -393,8 +393,10 @@ with the motors named in the PEP 2025 and 2026 white papers highlighted, and end
 winding's operating point, tabulated with its shaft power against the motor's continuous rating. A final section reduces
 speed to one equation — speed = rpm × pitch × slip / 1056, with rpm just an input for now and all the hull physics hiding
 inside the slip factor — and sweeps each input against it, then closes with a self-contained "Super simple model"
-section: motor, propeller and speed solved together at steady-state planing in one cell (the torque balance reduces to a
-quadratic in rpm, current limit as the one special case), with shaft power, electrical power and efficiency falling out
+section: motor, propeller and speed solved together at steady-state planing (the torque balance reduces to a quadratic in
+rpm, current limit as the one special case), with no motor picked — every input, the five motor numbers included, gets a
+low/high range bracketing the SSS sheet and a sweep against the steady-state speed, with shaft power, electrical power and
+efficiency falling out
 (27 models, 263 windings in all, typed into `sss_motors.csv`, which the notebook reads from its own folder;
 change `WINDING` to plot another winding). It needs only `numpy` and
 `matplotlib` and does not use `explore.ipynb`'s model. Its first code cell runs `%pip install -q matplotlib numpy`,
