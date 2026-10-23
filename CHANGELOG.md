@@ -3,6 +3,14 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.2.4 — 2026-10-23
+
+`willmarley.ipynb`: simplified the speed section again, per direction — the motor catalog is out of the chain for now
+(#85). Speed is one equation with three inputs, `speed = rpm × pitch × slip / 1056`, where rpm is just an input
+(whatever the motor ends up turning) and slip stands in for all the hull physics. Bounds and per-input sweeps as
+everywhere else; midpoint lands at 28.2 mph. The per-winding speed bar chart is removed; the motor torque/speed chart
+and the propeller-load crossing remain as their own earlier sections, ready to pick the rpm later.
+
 ## 0.2.3 — 2026-10-23
 
 `willmarley.ipynb`: simplified the speed section to the bare chain, per discussion — start simple, make sense of it,
