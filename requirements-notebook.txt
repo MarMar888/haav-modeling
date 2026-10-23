@@ -1,5 +1,6 @@
 # For optimization/explore.ipynb, on top of requirements.txt
 openplaning>=0.4.9
+navaltoolbox           # mesh hydrostatics (draft, freeboard, GM) for the hull
 setuptools<81          # openplaning imports pkg_resources, which newer setuptools no longer ships
 matplotlib
 ipywidgets

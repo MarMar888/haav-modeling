@@ -3,6 +3,33 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.2.0 — 2026-10-23
+
+`explore.ipynb`: real hydrostatics and visibility work (#87).
+
+Model changes: the closed-form prism hydrostatics and the guessed prismatic coefficient (0.85) are replaced by mesh
+hydrostatics from [navaltoolbox](https://github.com/NavalToolbox/navaltoolbox-lib) on a watertight hull mesh the notebook
+generates (V-bottom, vertical sides, the chine beam tapering linearly to the stem over a new placeholder `Fixed.bow_fraction`,
+0.25). Draft, freeboard, the metacentric height GM and the at-rest trim all come from that mesh (level trim in `evaluate()`,
+cached per design; free trim in the charts), and the hull skin mass is now the mesh area times the laminate weight. One new
+margin, `stability` (GM at rest ≥ new placeholder `Fixed.min_gmt_m`, 0.05 m), makes twenty-four margins; a hull too narrow to
+stand up is now infeasible instead of merely unwise. A new Modes cell in section 2 collects the explicit switches —
+`MOTOR_LIMITS` ("sheet" caps the motor by the spec sheet's max current/voltage as before; "theoretical" derives caps from the
+DC model: back-EMF at the rpm ceiling and the current carrying the continuous power), `ENFORCE_VALIDITY`, `INCLUDE_SUSPECT_R`,
+`COURSE_MODE` — and `BOUNDS` moved beside the inputs. Baseline top speed moves from 21.38 to 21.25 mph (the mesh floats the
+real bow, so draft and hull mass change slightly).
+
+Visibility (no further model changes): a problem card in section 9 — modes, every decision variable against its bounds, every
+margin sorted tightest-first, the at-rest equilibrium — all computed live, and reprinted for the search winner; section 10
+redrawn so the first constraint to cross zero is named at its crossing; the section 14 search now records every candidate
+(`SEARCH_LOG`) and charts its own convergence, feasible share and which constraint killed the infeasible candidates; a
+relaxation chart prices each limit (fastest feasible speed gained if that limit alone were loosened 10%); the interactive
+sliders follow `BOUNDS`; the Assumptions lens sweeps the new placeholders instead of the removed prismatic coefficient.
+
+Updated `explore-model.tex` and rebuilt `explore-model.pdf`: the mesh/navaltoolbox hydrostatics, the stability margin
+(twenty-four margins), the motor limit modes, the changed constants, and the worked example recomputed from
+`fastest_feasible(DESIGN, FIXED)`. `requirements-notebook.txt` adds `navaltoolbox`.
+
 ## 0.1.7 — 2026-10-22
 
 `explore.ipynb`: the placeholder motor is replaced by the real SSS motors from the supplier spec sheet (`sss_motors.csv`, 27 motors, 263 windings; weights added to the file).

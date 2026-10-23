@@ -339,13 +339,21 @@ explore notebook and does not import CAD geometry yet.
 
 ## Explore notebook
 
-`explore.ipynb` is a working model of the boat described in `optimization2.md` for exploring by hand: a prismatic
-hull with OpenPlaning for the planing balance, plus hydrostatics, propeller, battery voltage and the constraints, with
+`explore.ipynb` is a working model of the boat described in `optimization2.md` for exploring by hand: a V-bottom
+hull with OpenPlaning for the planing balance, plus mesh hydrostatics, propeller, battery voltage and the constraints, with
 sweeps, sliders and a small search. It is separate from the finalops solver above and uses placeholder cell, speed controller and propeller data. The motor is real: one winding of one
 SSS brushless motor, chosen from the supplier spec sheet in `sss_motors.csv` (27 motors, 263 windings; the 33 whose resistance entry looks like a typo on the
 sheet are left out unless `INCLUDE_SUSPECT_R = True`). Kv, max current and voltage, continuous power and weight come from the sheet, and the motor's current and efficiency come from a DC
 motor model at the propeller's operating point, so the torque and rpm a propeller asks for now decide which motors can drive it. Its propeller has a small model (actuator-disk efficiency, mass that grows with diameter cubed, a tip-speed limit), so
 pitch and diameter are searched along with the hull, motor and battery.
+Hydrostatics are real geometry: the notebook meshes the hull (prismatic aft body, chine beam tapering to the stem over a
+placeholder bow fraction) and [navaltoolbox](https://github.com/NavalToolbox/navaltoolbox-lib) computes draft, freeboard,
+the metacentric height GM and the at-rest trim from that mesh; a minimum-GM stability margin (one of twenty-four) now
+punishes hulls too narrow to stand up. A Modes cell collects the explicit switches (`MOTOR_LIMITS` sheet/theoretical,
+`ENFORCE_VALIDITY`, `INCLUDE_SUSPECT_R`, `COURSE_MODE`) and a problem card prints the whole problem — modes, every decision
+variable against its bounds, every margin sorted tightest-first — computed live for the baseline and again for the search
+winner. The section 14 search records every candidate it evaluates and charts its own convergence, feasible share and
+which constraint killed the infeasible candidates, plus what loosening each limit 10% would buy the winner.
 
 After section 7 the notebook has an eleven-chart overview of how the model operates (pipeline, propeller/thrust/motor drive, hull, mass and balance,
 hydrostatics, planing, power chain, battery, race, constraints, feasible region), all drawn live from the section 2 design.
@@ -357,14 +365,14 @@ the seeds, a target speed and which designs to compare. The notebook then search
 Run All takes about two and a half minutes, most of it the searches.
 
 **Local setup:** after creating `optimization/.venv` as above, also run
-`optimization/.venv/bin/python -m pip install -r optimization/requirements-notebook.txt`. That adds `openplaning`, `ipywidgets`,
-`matplotlib`, `jupyterlab`, and `setuptools<81`. Without the pin, `from openplaning import PlaningBoat` fails with
+`optimization/.venv/bin/python -m pip install -r optimization/requirements-notebook.txt`. That adds `openplaning`, `navaltoolbox`,
+`ipywidgets`, `matplotlib`, `jupyterlab`, and `setuptools<81`. Without the pin, `from openplaning import PlaningBoat` fails with
 `ModuleNotFoundError: No module named 'pkg_resources'`, because newer virtualenvs no longer install `setuptools` and
 setuptools 81 and later no longer ship `pkg_resources`.
 
 **Colab:** `explore.ipynb` also runs in Google Colab with no setup. Open it with
 [this link](https://colab.research.google.com/github/MarMar888/hav/blob/master/optimization/explore.ipynb) and choose Runtime, Run all.
-Its first code cell installs `openplaning` (pinning `setuptools<81`, as `requirements-notebook.txt` does); Colab already has the rest.
+Its first code cell installs `openplaning` and `navaltoolbox` when they are missing (pinning `setuptools<81`, as `requirements-notebook.txt` does); Colab already has the rest.
 The notebook reads `sss_motors.csv` from beside itself, and falls back to the copy on GitHub when the file is not there (as in Colab).
 
 `openplaning-reference.ipynb` is a different, smaller notebook: a reference for the `PlaningBoat` class
