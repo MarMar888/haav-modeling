@@ -3,6 +3,16 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.4.6 — 2026-10-24
+
+`willmarley.ipynb`: the weight build-up is now the real one (#85): `W = W_hull + W_batt + W_motor + payload + margin`,
+where `W_hull` is the bare hull (range narrowed to 30–90 lb), `W_motor` is a new motor input (0.4–5 lb as a range;
+taken from the sheet's `weight_g` column in the catalog sections), and payload (30 lb) and safety margin (5 lb) are
+fixed constants printed in section 4 and drawn on the map. Every downstream result reflects the heavier boat: median
+all-up weight rises to ~152 lb, the random valid space tightens to ~0.6%, 174 of 263 sheet windings have no valid
+combo, and the ideal picks shift (fastest: 56133-V2 6Y at ~45 mph; knee: 56154-V2 11Y at ~28 mph with ~3 h). No bound
+is pressed. The deliberately-missing list now notes only the sheet's power ratings as uncounted.
+
 ## 0.4.5 — 2026-10-24
 
 `willmarley.ipynb`: section 9's text now defines a combo (one winding + one sampled prop/battery/hull) and says plainly

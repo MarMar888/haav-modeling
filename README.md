@@ -389,7 +389,8 @@ battery, one section per choice, with the loop closed — every input is a low/h
 single design point is headlined. Section 1, the motor (`Kt = 60/2πKv`, torque from current, rpm from volts, the
 `I_max` guardrail); section 2, the propeller (torque demand `Q = K_Q ρ n² D⁵`, prop efficiency `η_p`, and the zero-slip
 ceiling `rpm × pitch / 1056` — slip is an output now, not an input); section 3, the battery (volts, amp-hours, runtime,
-and its own weight `W_batt = C·V/e_batt`); section 4, the water and the weight (`W = W_hull + W_batt`,
+and its own weight `W_batt = C·V/e_batt`); section 4, the water and the weight
+(`W = W_hull + W_batt + W_motor + payload + margin` with a fixed 30 lb payload and 5 lb safety margin,
 `R_water = W/(L/D)` with the planing L/D as a ranged input, and the towing bill `P = R_water × speed`). Section 5 draws
 the map — the model's ontology, every input grouped by component with an arrow per equation into the intermediates and
 the outputs. Section 6 solves it: the torque balance (a quadratic in rpm, current limit as the one special case) gives
