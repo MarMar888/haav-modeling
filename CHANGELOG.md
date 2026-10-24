@@ -3,6 +3,18 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.4.3 — 2026-10-24
+
+`willmarley.ipynb`: new section 9, "What's actually out there: the SSS catalog" (#85). Every winding of every SSS
+motor on the supplier sheet (`sss_motors.csv`, 263 windings) runs through the same model and the same section-8
+validity checks, with the motor's four numbers off the sheet, pack voltage clamped to the winding's `v_max`, and
+`max_rpm` enforced. Output: a ranked table of windings by valid share of the prop/battery/hull space, a Kv-vs-valid
+chart of the whole sheet (the room collapses above Kv ≈ 400, matching section 8's shop-low-Kv verdict; 164 of 263
+windings have no valid combo at all), and the best winding's own cloud and Pareto front. At the shipped requirements
+the sheet's winner is the 56133-V2 11Y (Kv 200), with ~15% of the sampled space valid — fifteen times the room of a
+random motor from the section-1 ranges. The deliberately-missing list notes the sheet columns not yet enforced
+(power ratings, motor weight).
+
 ## 0.4.2 — 2026-10-24
 
 `willmarley.ipynb`: new section 8, "Conclusions: the valid space and the ideal space" (#85), and the Monte-Carlo
