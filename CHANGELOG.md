@@ -3,6 +3,18 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.4.8 — 2026-10-24
+
+`willmarley.ipynb`: runtime is no longer a goal, only a race-finish requirement (#85). A new editable `RACE` constant
+(course miles + energy reserve; placeholder 5 mi + 30% — set to the real course) replaces the flat minimum-runtime
+requirement: a design is valid if its carried runtime clears `60·miles/speed·reserve`, which is drawn as the dashed
+hyperbola on section 8's chart — anything far above it is battery towed for nothing. Ideal is now simply the fastest
+valid (at constant drive, race time = course/speed): section 8 prints the top three by speed, section 10's pooled ideal
+set becomes "within 5% of the fastest valid," and the shopping lists repick as fastest / lightest battery / most
+efficient, with new computed rows: race time, battery used in the race, and the capacity actually needed with reserve —
+making pack oversizing visible (the lightest-battery pick races 5 mi at ~43 mph on an 11 lb, 46 Ah pack sized within
+1 Ah of its need).
+
 ## 0.4.7 — 2026-10-24
 
 `willmarley.ipynb`: the motor section now explains, in plain words, how many volts a motor actually needs (#85) — the
