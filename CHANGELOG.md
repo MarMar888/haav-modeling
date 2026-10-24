@@ -3,6 +3,17 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.3.1 — 2026-10-24
+
+`willmarley.ipynb`: new section 5, "How big should R_water be?", ahead of the combined solve (#85). On plane,
+resistance ≈ weight / (L/D); for the assumed 130 lb all-up boat the section computes the expected band — roughly
+20 lbf just on plane (L/D ~6.5), ~26 lbf planing pretty well (L/D 5, the starting number), up to ~52 lbf driven hard
+(L/D ~2.5, cross-checked against the Savitsky model in explore's library) — and charts both R vs L/D and the towing
+power it implies (P = R × speed). The combined solve (now section 6) gains a computed reality check comparing the
+towing power band at its solved speed against the shaft power delivered, stating dynamically whether the headline mph
+is optimistic, conservative, or consistent; at the midpoint of every range it is optimistic (the slip stand-in still
+hides the hull physics until R_water is fed into the solve).
+
 ## 0.3.0 — 2026-10-24
 
 `willmarley.ipynb`: rebuilt from scratch for followability (#85) — minor bump because the notebook's structure is new,

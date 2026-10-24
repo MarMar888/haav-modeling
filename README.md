@@ -389,10 +389,13 @@ battery, one section per choice. Each section shows its raw equations and gives 
 is picked. Section 1, the motor (`Kt = 60/2πKv`, torque from current, rpm from volts, the `I_max` guardrail); section 2,
 the propeller (torque demand `Q = K_Q ρ n² D⁵` and `speed = rpm × pitch × slip / 1056`); section 3, the battery (volts,
 amp-hours, runtime); section 4, the water — deliberately left as the one *undefined* input: the hull's planing
-resistance `R_water`, which the slip range stands in for until it is defined. Section 5 brings them together: motor
+resistance `R_water`, which the slip range stands in for until it is defined. Section 5 sizes that missing input for an
+assumed 130 lb boat — on plane, `R_water ≈ W / (L/D)`, giving roughly 20–52 lbf across the planing L/D range with ~26 lbf
+as the planes-pretty-well starting number — and charts the towing power it implies. Section 6 brings them together: motor
 torque = propeller torque reduces to a quadratic in rpm (current limit as the one special case), solved at the midpoint
 of every range and shown three ways — the torque-balance chart, a per-input speed sweep, and a diameter × pitch speed
-map. A closing list names what's deliberately missing and what one line would add each piece back.
+map — then reality-checks its own headline speed against section 5's towing-power band. A closing list names what's
+deliberately missing and what one line would add each piece back.
 (27 models, 263 windings in all, typed into `sss_motors.csv`, which the notebook reads from its own folder;
 change `WINDING` to plot another winding). It needs only `numpy` and
 `matplotlib` and does not use `explore.ipynb`'s model. Its first code cell runs `%pip install -q matplotlib numpy`,
