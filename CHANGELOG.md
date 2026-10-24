@@ -3,6 +3,16 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.4.4 — 2026-10-24
+
+`willmarley.ipynb`: new section 10, "Are the ideal designs pressed against our bounds?" (#85). Section 9 now pools
+every valid (winding, prop, battery, hull) combo across the whole SSS sheet; the ideal set is the 5%-tolerance Pareto
+front of that pool — real, buyable motors only (~490 designs, dominated by 56154-V2 windings). For each non-motor
+input, a range bar shows where the ideal designs sit (p10–p90 and median) with a computed verdict: pressed at the
+upper/lower bound, leans high/low, or comfortably interior; pressed verdicts print a widen-it-or-buy-the-bound line.
+At the shipped ranges nothing is pressed against a bound — lift-to-drag leans high and pitch and hull weight lean low,
+everything else sits interior — so the ranges are wide enough that the physics, not the bounds, is choosing.
+
 ## 0.4.3 — 2026-10-24
 
 `willmarley.ipynb`: new section 9, "What's actually out there: the SSS catalog" (#85). Every winding of every SSS
