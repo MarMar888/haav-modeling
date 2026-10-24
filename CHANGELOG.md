@@ -3,6 +3,16 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.4.9 — 2026-10-24
+
+`willmarley.ipynb`: the pack's continuous-discharge limit is in the solve (#85). New battery input `C_rate` (1–10, the
+pack's discharge rating); the steady-state current cap is now the smaller of the motor's `I_max` and 80% of
+`C_rate · C` (`DISCHARGE_DERATE = 0.8`, printed in section 3), so a pack sized only for the race's energy can be too
+small to feed the current — amp-hours buy amps, not just minutes. The map gains the `C_rate` node (and `C`) feeding the
+torque balance; the shopping lists add "capacity needed to feed amps" and a "current ceiling" row naming which limit —
+motor or pack — binds each pick. The lightest-battery pick now carries ~50 Ah at a high C-rating; at a gentler-rated
+pack the same current would force the capacity up, which is the oversizing this models.
+
 ## 0.4.8 — 2026-10-24
 
 `willmarley.ipynb`: runtime is no longer a goal, only a race-finish requirement (#85). A new editable `RACE` constant
