@@ -3,6 +3,16 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.4.5 — 2026-10-24
+
+`willmarley.ipynb`: section 9's text now defines a combo (one winding + one sampled prop/battery/hull) and says plainly
+that its table ranks *forgiveness* — the share of combos that stay valid — not top performance, which is section 10's
+job (#85). After section 10's bounds chart, a new shopping-list cell prints three complete ideal designs — fastest,
+balanced knee, longest — each as a buyable SSS winding (name, Kv, I_max, v_max) plus the full propeller, battery and
+hull parameters and what you get (speed, runtime, amps, battery weight, all-up weight, efficiency, solved slip). At the
+shipped ranges all three picks are 56154-V2 windings: the 5Y for 45 mph / 26 min, the 12Y for 28 mph / ~200 min at the
+knee.
+
 ## 0.4.4 — 2026-10-24
 
 `willmarley.ipynb`: new section 10, "Are the ideal designs pressed against our bounds?" (#85). Section 9 now pools

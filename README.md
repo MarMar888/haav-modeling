@@ -404,7 +404,9 @@ sheet (`sss_motors.csv`) through the same model and checks — voltage clamped t
 enforced — ranking the catalog by its valid share of the prop/battery/hull space and showing the best winding's own
 Pareto front. Section 10 pools every valid catalog combo, takes the 5%-tolerance Pareto set (buyable motors only), and
 checks each non-motor input for bound-hugging — a computed pressed/leans/interior verdict per range, flagging any bound
-that is doing the choosing instead of the physics. A closing list names what's deliberately missing.
+that is doing the choosing instead of the physics — then prints three complete shopping lists from the ideal set
+(fastest, balanced, longest): the SSS winding to buy plus every propeller, battery and hull parameter and the resulting
+speed, runtime, current, weights, efficiency and solved slip. A closing list names what's deliberately missing.
 (27 models, 263 windings in all, typed into `sss_motors.csv`, which the notebook reads from its own folder;
 change `WINDING` to plot another winding). It needs only `numpy` and
 `matplotlib` and does not use `explore.ipynb`'s model. Its first code cell runs `%pip install -q matplotlib numpy`,
