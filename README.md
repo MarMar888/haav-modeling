@@ -387,7 +387,7 @@ to understand the library before trusting `explore.ipynb`'s use of it. Same setu
 `willmarley.ipynb` is a third, standalone notebook (numpy + matplotlib only): how to choose a motor, propeller and
 battery, one section per choice, with the loop closed — every input is a low/high range, nothing is picked, and no
 single design point is headlined. Section 1, the motor (`Kt = 60/2πKv`, torque from current, rpm from volts, the
-`I_max` guardrail); section 2, the propeller (torque demand `Q = K_Q ρ n² D⁵`, prop efficiency `η_p`, and the zero-slip
+`I_max` guardrail, and the volts a motor actually needs: `V_needed = rpm/Kv + I·R`); section 2, the propeller (torque demand `Q = K_Q ρ n² D⁵`, prop efficiency `η_p`, and the zero-slip
 ceiling `rpm × pitch / 1056` — slip is an output now, not an input); section 3, the battery (volts, amp-hours, runtime,
 and its own weight `W_batt = C·V/e_batt`); section 4, the water and the weight
 (`W = W_hull + W_batt + W_motor + payload + margin` with a fixed 30 lb payload and 5 lb safety margin,

@@ -3,6 +3,16 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.4.7 — 2026-10-24
+
+`willmarley.ipynb`: the motor section now explains, in plain words, how many volts a motor actually needs (#85) — the
+speed equation flipped into `V_needed = rpm/Kv + I·R` (push-back plus winding loss), with the points that the propeller
+load sets the rpm, that volts beyond `V_needed` only shove more current (heat), and that a winding's `v_max` is a
+ceiling (`max_rpm/Kv`, the no-load spin limit), not a requirement. A new chart draws `V_needed` versus rpm for low/mid/
+high Kv at the full mid-range current, and the section-10 shopping lists print a computed "volts actually needed" row
+next to each ideal design's chosen pack — the knee and longest picks sized their packs to within a tenth of a volt of
+it.
+
 ## 0.4.6 — 2026-10-24
 
 `willmarley.ipynb`: the weight build-up is now the real one (#85): `W = W_hull + W_batt + W_motor + payload + margin`,
