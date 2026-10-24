@@ -396,7 +396,10 @@ the outputs. Section 6 solves it: the torque balance (a quadratic in rpm, curren
 shaft power, power balance against `R_water` gives speed, capped by the zero-slip ceiling — shown as the torque-balance
 chart, a per-input speed sweep, and a diameter × pitch speed map. Section 7 samples every range uniformly (thousands of
 whole-model solves) and shows how the variables move together: an input × output correlation heatmap and a
-speed-vs-runtime scatter of every sampled design. A closing list names what's deliberately missing.
+speed-vs-runtime scatter of every sampled design. Section 8 draws conclusions: a valid space (editable requirements
+plus sanity bounds where the model's assumptions hold) with per-criterion pass-rates, a per-input chart of where valid
+designs sit in each range with computed shop-low/shop-high verdicts, and an ideal space — the speed-runtime Pareto
+front among valid designs, with three picked designs printed in full. A closing list names what's deliberately missing.
 (27 models, 263 windings in all, typed into `sss_motors.csv`, which the notebook reads from its own folder;
 change `WINDING` to plot another winding). It needs only `numpy` and
 `matplotlib` and does not use `explore.ipynb`'s model. Its first code cell runs `%pip install -q matplotlib numpy`,

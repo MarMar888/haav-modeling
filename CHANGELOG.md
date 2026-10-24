@@ -3,6 +3,18 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.4.2 — 2026-10-24
+
+`willmarley.ipynb`: new section 8, "Conclusions: the valid space and the ideal space" (#85), and the Monte-Carlo
+sample grows to 20,000 solves. Valid = editable requirements (min speed, min runtime, max weight) plus sanity bounds
+where the model's own assumptions hold (motor efficiency ≥ 0.5, solved slip ≥ 0.5, and speed ≤ 45 mph — past which the
+constant-L/D planing assumption is fiction); each criterion's lone pass-rate and the combined valid fraction are
+printed. A per-input chart shows where valid designs sit inside each range (full range in gray, valid p10–p90 in blue,
+median dotted), sorted most-decisive first with computed shop-low/shop-high verdicts. Ideal = the speed-runtime Pareto
+front among valid designs, drawn over the sampled cloud with three picks — fastest, balanced knee, longest — printed
+as full input/output columns. At the shipped bounds ~1% of the space is valid; the decisive directions are low Kv, low
+pack voltage and low pitch.
+
 ## 0.4.1 — 2026-10-24
 
 `willmarley.ipynb`: the map (section 5) now names every node in plain words with the short symbol in parentheses —
