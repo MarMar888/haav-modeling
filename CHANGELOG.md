@@ -3,6 +3,16 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.4.10 — 2026-10-24
+
+`willmarley.ipynb`: the motor count is a design choice (#85). New discrete input `n_motors` (1 or 2, sampled in the
+Monte-Carlo and catalog sections; sweeps and example charts hold it at one): twins multiply shaft power and motor
+weight by two, the pack draw doubles (`I_pack = n·I`, runtime and the amp-feed capacity scale with it), and each motor
+gets half the pack's discharge ceiling. The map gains the node; the valid-space and ideal-set cells print the
+single-vs-twin split; the shopping lists show the count, pack-level current, and per-motor ceiling. At the shipped
+ranges twins win: 58% of valid designs and 72% of the ideal set are twin-motor — the fastest ideal is now a pair of
+56154-V2 9Y, while the lightest-battery and most-efficient picks stay single.
+
 ## 0.4.9 — 2026-10-24
 
 `willmarley.ipynb`: the pack's continuous-discharge limit is in the solve (#85). New battery input `C_rate` (1–10, the
