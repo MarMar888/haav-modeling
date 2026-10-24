@@ -3,6 +3,17 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.3.0 — 2026-10-24
+
+`willmarley.ipynb`: rebuilt from scratch for followability (#85) — minor bump because the notebook's structure is new,
+not an increment on the old one. One section per purchase choice, each with its raw equations and a low/high range on
+every input (nothing picked): 1 the motor, 2 the propeller, 3 the battery, and 4 the water — the hull's planing
+resistance `R_water`, deliberately declared as the one still-undefined input, with the slip range standing in for it
+until it's defined. Section 5 brings them together (motor torque = prop torque, a quadratic in rpm with the current
+limit as the one special case) and shows the solve three ways: the torque-balance chart, per-input speed sweeps, and a
+diameter × pitch speed map. The SSS catalog chart, the separate runtime/speed sections, and the efficiency charts from
+0.1.6–0.2.8 are removed; battery runtime now falls out of the combined solve instead.
+
 ## 0.2.8 — 2026-10-23
 
 `willmarley.ipynb`: three explanatory charts added to the "Super simple model" (#85). The torque balance itself — the

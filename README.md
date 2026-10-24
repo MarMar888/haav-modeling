@@ -384,20 +384,15 @@ openplaning README's own documented Savitsky '76 worked example rather than this
 to understand the library before trusting `explore.ipynb`'s use of it. Same setup as above, just point
 `jupyter lab` at `optimization/openplaning-reference.ipynb` instead.
 
-`willmarley.ipynb` is a third, standalone notebook: one battery runtime equation,
-`minutes = 0.8 * Capacity(Ah) * Voltage(V) * battery efficiency / (load power(W) * motor efficiency) * 60`,
-with a lower and upper bound on each input and a sweep of each input on its own (others at their midpoint).
-It continues with a first-quadrant torque vs speed graph of the 5Y winding of every SSS motor on the supplier spec sheet,
-with the motors named in the PEP 2025 and 2026 white papers highlighted, and ends with the propeller torque equation
-(`Q = K_Q ρ n² D⁵`, same bounds-and-sweeps treatment) overlaid as a load curve on those motor lines: each crossing is that
-winding's operating point, tabulated with its shaft power against the motor's continuous rating. A final section reduces
-speed to one equation — speed = rpm × pitch × slip / 1056, with rpm just an input for now and all the hull physics hiding
-inside the slip factor — and sweeps each input against it, then closes with a self-contained "Super simple model"
-section: motor, propeller and speed solved together at steady-state planing (the torque balance reduces to a quadratic in
-rpm, current limit as the one special case), with no motor picked — every input, the five motor numbers included, gets a
-low/high range bracketing the SSS sheet and a sweep against the steady-state speed, with shaft power, electrical power and
-efficiency falling out, plus three explanatory charts: the torque balance itself, per-input efficiency sweeps, and a
-diameter × pitch speed map
+`willmarley.ipynb` is a third, standalone notebook (numpy + matplotlib only): how to choose a motor, propeller and
+battery, one section per choice. Each section shows its raw equations and gives every input a low/high range — nothing
+is picked. Section 1, the motor (`Kt = 60/2πKv`, torque from current, rpm from volts, the `I_max` guardrail); section 2,
+the propeller (torque demand `Q = K_Q ρ n² D⁵` and `speed = rpm × pitch × slip / 1056`); section 3, the battery (volts,
+amp-hours, runtime); section 4, the water — deliberately left as the one *undefined* input: the hull's planing
+resistance `R_water`, which the slip range stands in for until it is defined. Section 5 brings them together: motor
+torque = propeller torque reduces to a quadratic in rpm (current limit as the one special case), solved at the midpoint
+of every range and shown three ways — the torque-balance chart, a per-input speed sweep, and a diameter × pitch speed
+map. A closing list names what's deliberately missing and what one line would add each piece back.
 (27 models, 263 windings in all, typed into `sss_motors.csv`, which the notebook reads from its own folder;
 change `WINDING` to plot another winding). It needs only `numpy` and
 `matplotlib` and does not use `explore.ipynb`'s model. Its first code cell runs `%pip install -q matplotlib numpy`,
