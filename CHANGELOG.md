@@ -3,6 +3,21 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.5.0 — 2026-10-24
+
+`willmarley.ipynb`: lift-to-drag is now a function of speed (#85) — `L/D(v) = LD0 / (1 + (v/26)²)`, one hull-quality
+knob (`LD0`, 5–10, replacing the constant `LD` input) and one fixed shape constant (26 mph, where friction has doubled
+the push-back), both calibrated against the Savitsky cross-check. The power balance becomes a cubic in speed with one
+real root (solved in closed form), the 45 mph sanity wall is removed — going fast now gets expensive for the real
+reason — and with it the ballast loophole: valid designs no longer benefit from carrying surplus battery to stay under
+a cap, so packs shrink to their binding need (every current pick carries within a few Ah of max(energy, amps) need).
+Section 4's charts now draw L/D-vs-speed and the upward-bending towing bill; the solve reports the operating L/D, shown
+as a new shopping-list row. The catalog ideal set becomes the 50 fastest valid combos (the 5% band collapsed once speed
+stopped saturating). Fastest valid now reaches ~62 mph on twin 56133-V2 5Y at operating L/D ~1.5 — flagged in the
+deliberately-missing list: constant `η_p` lets tiny props claim unlimited thrust, so a `K_T` thrust cap is the next
+fidelity step and will pull the top end down. Bounds pressure moved to `LD0` and `C_rate` (both hugged high: the fast
+designs want the best hull and the most discharge-capable pack).
+
 ## 0.4.12 — 2026-10-24
 
 `willmarley.ipynb`: the shopping-list table closes with a new "if you just keep driving at this speed" block (#85) —

@@ -393,7 +393,9 @@ ceiling `rpm × pitch / 1056` — slip is an output now, not an input); section 
 its own weight `W_batt = C·V/e_batt`, and a continuous-amp ceiling of 80% of `C_rate·C` that the solve enforces
 alongside the motor's `I_max`); section 4, the water and the weight
 (`W = W_hull + W_batt + W_motor + payload + margin` with a fixed 30 lb payload and 5 lb safety margin,
-`R_water = W/(L/D)` with the planing L/D as a ranged input, and the towing bill `P = R_water × speed`). Section 5 draws
+`R_water = W / L/D(v)` where `L/D(v) = LD0/(1+(v/26)²)` — the hull rides worse the faster it goes, with peak quality
+`LD0` as the ranged input — and the towing bill `P = R_water × speed`, which makes the power balance a cubic in speed
+and removes any need for an artificial speed cap). Section 5 draws
 the map — the model's ontology, every input grouped by component with an arrow per equation into the intermediates and
 the outputs. Section 6 solves it: the torque balance (a quadratic in rpm, current limit as the one special case) gives
 shaft power, power balance against `R_water` gives speed, capped by the zero-slip ceiling — shown as the torque-balance
