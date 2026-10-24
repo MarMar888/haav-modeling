@@ -3,6 +3,21 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.4.0 — 2026-10-24
+
+`willmarley.ipynb`: the loop is closed — minor bump because speed is now a different (honest) quantity (#85). The water
+is in the solve: speed comes from power balance (`speed = η_p · P_shaft / R_water`) with the zero-slip ceiling
+(`rpm · pitch / 1056`) as a cap, so slip is an output, not a guessed input (`slip` and the old speed-section inputs are
+gone; `η_p`, prop efficiency 0.5–0.7, replaces them). The battery's weight counts against the boat: new `e_batt`
+(Wh/lb) input, `W_batt = C·V/e_batt`, `W = W_hull + W_batt`, `R_water = W/(L/D)` with `W_hull` and `L/D` as ranged
+inputs — so volts and amp-hours each live double lives (power and weight). The midpoint headline table, reality check,
+and "mid of every range" markers are removed (sweeps still hold other inputs mid-range, stated as such). Two new
+sections: "The map" draws the model's ontology — every input, grouped by component, with an arrow per equation into
+the intermediate quantities and the outputs — and "How the variables move together" samples every input range uniformly
+(4000 whole-model solves), prints p10/median/p90 for speed, runtime, amps and weight, and charts an input×output
+correlation heatmap plus a speed-vs-runtime scatter of every sampled design. Median speed across the whole space is
+~16 mph, which is what the 0.3.1 reality check predicted once the water got a vote.
+
 ## 0.3.1 — 2026-10-24
 
 `willmarley.ipynb`: new section 5, "How big should R_water be?", ahead of the combined solve (#85). On plane,
