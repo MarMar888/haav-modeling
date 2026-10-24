@@ -3,6 +3,13 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.4.12 — 2026-10-24
+
+`willmarley.ipynb`: the shopping-list table closes with a new "if you just keep driving at this speed" block (#85) —
+full runtime on the chosen battery (`60·usable·C / I_pack`) and the distance that covers, replacing the runtime row
+that sat mid-table. At current picks: the fastest ideal cruises 59 min / 44 mi on its 164 Ah pack; the lightest-battery
+pick, 13 min / 10 mi on its 9 lb pack — the race plus reserve and little more, by design.
+
 ## 0.4.11 — 2026-10-24
 
 `willmarley.ipynb`: propeller diameter upper bound widened from 5 to 7 inches after the fastest ideal designs were
