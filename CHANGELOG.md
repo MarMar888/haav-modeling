@@ -3,6 +3,12 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.4.1 — 2026-10-24
+
+`willmarley.ipynb`: the map (section 5) now names every node in plain words with the short symbol in parentheses —
+"pack voltage (V)", "speed constant (Kv)", "weight before battery (W_hull)", and so on — so the ontology reads without
+having to remember the symbols (#85). Chart-only change; the model is untouched.
+
 ## 0.4.0 — 2026-10-24
 
 `willmarley.ipynb`: the loop is closed — minor bump because speed is now a different (honest) quantity (#85). The water
