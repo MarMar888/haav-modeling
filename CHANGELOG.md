@@ -3,6 +3,15 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.4.11 — 2026-10-24
+
+`willmarley.ipynb`: propeller diameter upper bound widened from 5 to 7 inches after the fastest ideal designs were
+found hugging the old lid (#85). Verdict from the re-run: the pressure came off — ideal designs settle around
+4.3–4.4 in ("leans low" in the new range, both edges clear), preferring a mid-size prop with more pitch and higher
+efficiency over 5-plus-inch props, so the physics, not the bound, is now choosing the diameter. The fastest ideal
+becomes a single 56154-V2 10Y (4.4 in × 13 in prop, 32 V, 45 mph at 0.84 efficiency); the lightest-battery pick drops
+to a 9 lb, 40 Ah pack (pack-limited); twins still take 71% of the ideal set.
+
 ## 0.4.10 — 2026-10-24
 
 `willmarley.ipynb`: the motor count is a design choice (#85). New discrete input `n_motors` (1 or 2, sampled in the
