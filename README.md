@@ -388,7 +388,8 @@ to understand the library before trusting `explore.ipynb`'s use of it. Same setu
 battery, one section per choice, with the loop closed — every input is a low/high range, nothing is picked, and no
 single design point is headlined. Section 1, the motor (`Kt = 60/2πKv`, torque from current, rpm from volts, the
 `I_max` guardrail, the volts a motor actually needs: `V_needed = rpm/Kv + I·R`, and `n_motors` — one or two, with twins
-doubling shaft power, motor weight and pack draw); section 2, the propeller (torque demand `Q = K_Q ρ n² D⁵`, prop efficiency `η_p`, and the zero-slip
+doubling shaft power, motor weight and pack draw); section 2, the propeller (torque demand `Q = K_Q ρ n² D⁵`, the thrust ceiling
+`T = K_T ρ n² D⁴` that a valid design's push-back must fit under, prop efficiency `η_p`, and the zero-slip
 ceiling `rpm × pitch / 1056` — slip is an output now, not an input); section 3, the battery (volts, amp-hours, runtime,
 its own weight `W_batt = C·V/e_batt`, and a continuous-amp ceiling of 80% of `C_rate·C` that the solve enforces
 alongside the motor's `I_max`); section 4, the water and the weight

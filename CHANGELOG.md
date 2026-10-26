@@ -3,6 +3,16 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.5.1 — 2026-10-26
+
+`willmarley.ipynb`: the K_T thrust ceiling is in (#85, "level 1"). New prop input `K_T` (0.05–0.15, the disk's grip);
+after the solve, a design is valid only if `n_motors · K_T·ρ·n²·D⁴` covers `R_water` at the solved speed. It is the
+single toughest check (14% lone pass rate); the valid space tightens to ~0.3%, the magic tiny-prop sprint rigs die
+(fastest valid drops 62 → 58 mph, now on 3.6 in props with real thrust headroom), and the catalog ideal set moves back
+to mid-size diameters. The shopping lists print "push available vs needed (lbf)" per pick; the map gains the K_T node.
+Bounds pressure now sits on C_rate, LD0 (both high) and bare hull weight (low) — all buy-the-bound items. Missing-list
+item 1 updated: the constant-K_T ceiling is in; the full K_T(J)/K_Q(J) curves remain the next step.
+
 ## 0.5.0 — 2026-10-24
 
 `willmarley.ipynb`: lift-to-drag is now a function of speed (#85) — `L/D(v) = LD0 / (1 + (v/26)²)`, one hull-quality
