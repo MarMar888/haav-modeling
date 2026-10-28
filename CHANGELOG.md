@@ -3,6 +3,21 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.6.0 — 2026-10-28
+
+`willmarley.ipynb`: three more inputs stop being decision variables (#85), minor bump because the solve's structure
+changes. (1) **Capacity** is solved, not sampled: `C = amps · (course/speed) · reserve / usable`, iterated with weight
+and speed to a fixed point inside `steady_state` (the pack weighs on the boat, the heavier boat races slower and needs
+more pack); the race-finish check disappears — it holds by construction — and `RACE` moves to the battery section.
+(2) **Pitch** is derived at a fixed 80% slip target (`pitch = speed·1056/(rpm·0.8)`), replacing the pitch input, the
+zero-slip cap and the slip sanity check with one buyable-thread check (6–14 in). (3) **Usable fraction** is a fixed 0.8
+policy constant. Inputs drop to 14 (13 ranges + the motor count); the battery section's charts become
+capacity-the-race-demands and pack weight; the prop section's right chart becomes pitch-to-buy vs rpm; the D×pitch map
+becomes a diameter × voltage speed map; the MC scatter becomes speed vs pack demanded; shopping lists grow explicit
+"to BUY" rows (capacity, pack weight, C-rating, pitch). Noted in the results: the C-rating requirement reduces to
+`speed / (course · reserve)`, so the 10C buyability ceiling caps a 5-mile race near 65 mph — the fastest valid catalog
+combo lands at 64.7 mph (twin 56154-V2), and all three picks choose 43–48 V packs sized within amp-hours of their need.
+
 ## 0.5.2 — 2026-10-28
 
 `willmarley.ipynb`: the pack's discharge rating is no longer a sampled input to optimize — it's a requirement the

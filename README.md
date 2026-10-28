@@ -384,40 +384,32 @@ openplaning README's own documented Savitsky '76 worked example rather than this
 to understand the library before trusting `explore.ipynb`'s use of it. Same setup as above, just point
 `jupyter lab` at `optimization/openplaning-reference.ipynb` instead.
 
-`willmarley.ipynb` is a third, standalone notebook (numpy + matplotlib only): how to choose a motor, propeller and
-battery, one section per choice, with the loop closed — every input is a low/high range, nothing is picked, and no
-single design point is headlined. Section 1, the motor (`Kt = 60/2πKv`, torque from current, rpm from volts, the
-`I_max` guardrail, the volts a motor actually needs: `V_needed = rpm/Kv + I·R`, and `n_motors` — one or two, with twins
-doubling shaft power, motor weight and pack draw); section 2, the propeller (torque demand `Q = K_Q ρ n² D⁵`, the thrust ceiling
-`T = K_T ρ n² D⁴` that a valid design's push-back must fit under, prop efficiency `η_p`, and the zero-slip
-ceiling `rpm × pitch / 1056` — slip is an output now, not an input); section 3, the battery (volts, amp-hours, runtime,
-its own weight `W_batt = C·V/e_batt`, and the discharge rating the pack must carry — `C_rate_needed = amps/(0.8·C)`,
-computed as a printed requirement with a fixed buyability ceiling rather than optimized); section 4, the water and the weight
-(`W = W_hull + W_batt + W_motor + payload + margin` with a fixed 30 lb payload and 5 lb safety margin,
-`R_water = W / L/D(v)` where `L/D(v) = LD0/(1+(v/26)²)` — the hull rides worse the faster it goes, with peak quality
-`LD0` as the ranged input — and the towing bill `P = R_water × speed`, which makes the power balance a cubic in speed
-and removes any need for an artificial speed cap). Section 5 draws
-the map — the model's ontology, every input grouped by component with an arrow per equation into the intermediates and
-the outputs. Section 6 solves it: the torque balance (a quadratic in rpm, current limit as the one special case) gives
-shaft power, power balance against `R_water` gives speed, capped by the zero-slip ceiling — shown as the torque-balance
-chart, a per-input speed sweep, and a diameter × pitch speed map. Section 7 samples every range uniformly (thousands of
-whole-model solves) and shows how the variables move together: an input × output correlation heatmap and a
-speed-vs-runtime scatter of every sampled design. Section 8 draws conclusions: a valid space (editable requirements
-plus sanity bounds where the model's assumptions hold) with per-criterion pass-rates, a per-input chart of where valid
-designs sit in each range with computed shop-low/shop-high verdicts, and an ideal space — the fastest valid designs,
-with runtime required only to finish an editable race course with reserve (race time = course / speed), the top three
-printed in full. Section 9 runs every winding on the SSS supplier
-sheet (`sss_motors.csv`) through the same model and checks — voltage clamped to each winding's `v_max`, `max_rpm`
-enforced — ranking the catalog by its valid share of the prop/battery/hull space and showing the best winding's own
-Pareto front. Section 10 pools every valid catalog combo, takes the 5%-tolerance Pareto set (buyable motors only), and
-checks each non-motor input for bound-hugging — a computed pressed/leans/interior verdict per range, flagging any bound
-that is doing the choosing instead of the physics — then prints three complete shopping lists from the ideal set
-(fastest, lightest battery, most efficient): the SSS winding to buy plus every propeller, battery and hull parameter,
-the resulting speed, race time, battery used vs capacity needed, current, weights, efficiency and solved slip. A closing list names what's deliberately missing.
-(27 models, 263 windings in all, typed into `sss_motors.csv`, which the notebook reads from its own folder;
-change `WINDING` to plot another winding). It needs only `numpy` and
-`matplotlib` and does not use `explore.ipynb`'s model. Its first code cell runs `%pip install -q matplotlib numpy`,
-which installs into whichever kernel runs it. In VS Code, open the notebook, choose Select Kernel, then Python
-Environments, and pick `optimization/.venv` (create it as in the setup above and add `ipykernel`). The notebook's
-kernel is the generic `python3`, so it follows that choice. Tracking issue:
+`willmarley.ipynb` is a third, standalone notebook (numpy + matplotlib only): how to choose motors, a propeller and
+a battery for a race, one section per choice, with the loop closed — every real decision is a low/high range (nothing
+is picked), and every number that is really a *consequence* (pack size, pack rating, prop pitch) is solved and printed
+as a shopping note instead of pretending to be a choice. Section 1, the motor (`Kt = 60/2πKv`, torque from current,
+rpm from volts, the `I_max` guardrail, the volts a motor actually needs `V_needed = rpm/Kv + I·R`, and `n_motors` —
+one or two). Section 2, the propeller (torque demand `Q = K_Q ρ n² D⁵`, the thrust ceiling `T = K_T ρ n² D⁴` a valid
+design's push-back must fit under, prop efficiency `η_p`, and pitch derived at a fixed 80% slip target with a
+buyable-thread check). Section 3, the battery (only voltage and chemistry are decisions; the race — an editable course
++ reserve — sizes the amp-hours, and the amps size the C-rating, each with a buyability limit). Section 4, the water
+and the weight (`W = W_hull + W_batt + n_motors·W_motor + payload + margin` with fixed 30 lb payload and 5 lb margin;
+`R_water = W / L/D(v)` with `L/D(v) = LD0/(1+(v/26)²)`, so the towing bill bends upward and no artificial speed cap is
+needed). Section 5 draws the map — the model's ontology, an arrow per equation. Section 6 solves it: torque balance →
+shaft power → a fixed-point between pack size, weight and speed (the power balance is a cubic with one real root) →
+thrust check → shopping notes; shown as the torque-balance chart, per-input speed sweeps, and a diameter × voltage
+speed map. Section 7 samples every range uniformly (thousands of whole-model solves): an input × output correlation
+heatmap and a speed-vs-pack-demanded scatter. Section 8 draws conclusions: a valid space (editable requirements plus
+buyability and sanity checks — the race itself is satisfied by construction) with per-criterion pass-rates and a
+per-input shop-low/shop-high chart, and an ideal space — the fastest valid designs, top three printed. Section 9 runs
+every winding on the SSS supplier sheet (`sss_motors.csv`) through the same model and checks — voltage clamped to each
+winding's `v_max`, `max_rpm` enforced — ranking the catalog by its valid share. Section 10 pools every valid catalog
+combo, takes the fastest as the ideal set, checks each input for bound-hugging (a computed pressed/leans/interior
+verdict per range), and prints three complete shopping lists (fastest, lightest battery, most efficient): the SSS
+winding to buy, every parameter, and the solved requirements — capacity, pack weight, C-rating, pitch — plus speed,
+race time, currents, weights, efficiency and operating L/D. A closing list names what's deliberately missing. It needs
+only `numpy` and `matplotlib` and does not use `explore.ipynb`'s model. Its first code cell runs
+`%pip install -q matplotlib numpy`, which installs into whichever kernel runs it. In VS Code, open the notebook, choose
+Select Kernel, then Python Environments, and pick `optimization/.venv` (create it as in the setup above and add
+`ipykernel`). The notebook's kernel is the generic `python3`, so it follows that choice. Tracking issue:
 [#85](https://github.com/MarMar888/hav/issues/85).
