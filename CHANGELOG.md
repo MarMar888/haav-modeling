@@ -3,6 +3,17 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.5.2 — 2026-10-28
+
+`willmarley.ipynb`: the pack's discharge rating is no longer a sampled input to optimize — it's a requirement the
+design writes on the shopping list (#85). `C_rate` leaves the battery bounds (and the map, sweeps, heatmap and
+pressure chart); the solve outputs `C_rate_needed = amps / (0.8·C)` instead, printed per pick as "pack rating NEEDED",
+with one fixed buyability ceiling (`C_RATE_MAX = 10`) as a validity check. The current cap in the solve reverts to the
+motor's `I_max` alone. Downstream effect worth noting: freed from sampling pack ratings, the ideal set now presses
+pack voltage against its upper bound (median ~45 V) — higher volts cut amps and the C-rating the pack must carry —
+independently confirming the 48 V-class recommendation; the 20–50 V bound reads as "buy the bound", since ~50 V is a
+real touch-safe/rules threshold rather than a guess.
+
 ## 0.5.1 — 2026-10-26
 
 `willmarley.ipynb`: the K_T thrust ceiling is in (#85, "level 1"). New prop input `K_T` (0.05–0.15, the disk's grip);

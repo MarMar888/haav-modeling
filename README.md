@@ -391,8 +391,8 @@ single design point is headlined. Section 1, the motor (`Kt = 60/2πKv`, torque 
 doubling shaft power, motor weight and pack draw); section 2, the propeller (torque demand `Q = K_Q ρ n² D⁵`, the thrust ceiling
 `T = K_T ρ n² D⁴` that a valid design's push-back must fit under, prop efficiency `η_p`, and the zero-slip
 ceiling `rpm × pitch / 1056` — slip is an output now, not an input); section 3, the battery (volts, amp-hours, runtime,
-its own weight `W_batt = C·V/e_batt`, and a continuous-amp ceiling of 80% of `C_rate·C` that the solve enforces
-alongside the motor's `I_max`); section 4, the water and the weight
+its own weight `W_batt = C·V/e_batt`, and the discharge rating the pack must carry — `C_rate_needed = amps/(0.8·C)`,
+computed as a printed requirement with a fixed buyability ceiling rather than optimized); section 4, the water and the weight
 (`W = W_hull + W_batt + W_motor + payload + margin` with a fixed 30 lb payload and 5 lb safety margin,
 `R_water = W / L/D(v)` where `L/D(v) = LD0/(1+(v/26)²)` — the hull rides worse the faster it goes, with peak quality
 `LD0` as the ranged input — and the towing bill `P = R_water × speed`, which makes the power balance a cubic in speed
