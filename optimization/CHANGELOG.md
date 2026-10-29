@@ -3,6 +3,30 @@
 See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
 folder versions independently of `cad/`, `dashboard/`, and `docs/`.
 
+## 0.1.8 — 2026-10-28
+
+Added a notebook and standalone Python arithmetic audit of the original Savitsky
+1964 Tables 1 and 2. Source graph readings and coefficients are explicit JSON
+inputs; the report compares every numerical row with recalculated arithmetic,
+reproduces the simplified-case rounded trim and general-case drag interpolation,
+and identifies printed arithmetic inconsistencies and differences from our engine.
+Production equations, historical runs, and `explore.ipynb` are unchanged.
+
+## 0.1.7 — 2026-10-28
+
+Added a LaTeX model reference at the top of `savitsky/current-hull.ipynb`, with
+notation, geometry, lift, friction, thrust, coupled equilibrium equations, and
+the implemented applicability checks. Calculations and saved outputs are unchanged.
+
+## 0.1.6 — 2026-10-28
+
+Added `savitsky/current-hull.ipynb`, a Python workbook with visible 1964 geometry,
+friction, force and moment equations and a bracketed equilibrium solver. Includes
+documented editable JSON inputs, historical-run comparisons, a selected-speed
+calculation audit, performance plots, scenario comparisons and optional JSON/CSV
+exports. Geometry warnings remain separate from the empirical screen. No changes
+to `explore.ipynb` or its model/write-up.
+
 ## 0.1.5 — 2026-10-21
 
 Added a standalone local Savitsky sample calculator in `savitsky/`, with editable

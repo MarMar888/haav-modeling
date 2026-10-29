@@ -1,0 +1,18 @@
+{
+  "length_m": 30.48,
+  "beam_m": 4.2672,
+  "mass_kg": 27215.680961355618,
+  "deadrise_deg": 10,
+  "lcg_m": 8.8392,
+  "vcg_m": 0.6096,
+  "thrust_height_m": 0.4568278547324294,
+  "thrust_x_m": 8.8392,
+  "thrust_angle_deg": 4,
+  "density_kg_m3": 999.8349076828002,
+  "viscosity_m2_s": 9.290304000000002e-07,
+  "roughness_m": 0,
+  "wetted_lengths_type": 2,
+  "flap_chord_m": 0,
+  "flap_span_ratio": 0,
+  "flap_angle_deg": 0
+}

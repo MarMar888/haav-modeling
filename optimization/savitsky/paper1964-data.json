@@ -1,0 +1,491 @@
+{
+  "source": {
+    "pdf": "../../outputs/savitsky/savitsky-1964-reference-2026-10-28/Savitsky-1964.pdf",
+    "table1_pdf_page": 19,
+    "table1_printed_page": 89,
+    "table2_pdf_page": 20,
+    "table2_printed_page": 90,
+    "description": "Manual transcription of supplied scanned PDF; graph readings are explicit reference inputs, not outputs independently verified by this audit."
+  },
+  "given": {
+    "weight_lbf": 60000,
+    "beam_ft": 14,
+    "lcg_ft": 29,
+    "vcg_ft": 2,
+    "beta_deg": 10,
+    "speed_ft_s": 67.5,
+    "gravity_ft_s2": 32.2,
+    "density_slug_ft3": 1.94,
+    "viscosity_ft2_s": 1e-05,
+    "epsilon_deg": 4,
+    "f_ft": 0.5
+  },
+  "given_notes": {
+    "density_slug_ft3": "Inferred from printed lift denominator 0.97 = rho/2. Density is not separately specified.",
+    "viscosity_ft2_s": "Approximately inferred from printed Reynolds numbers; not separately specified.",
+    "speed_ft_s": "Paper rounded 40-knot speed retained."
+  },
+  "table1_trials_deg": [
+    2,
+    3,
+    4
+  ],
+  "table1_rows": [
+    {
+      "row": 1,
+      "key": "tau_power",
+      "label": "tau^1.1",
+      "source": "power",
+      "printed": [
+        2.14,
+        3.35,
+        4.59
+      ]
+    },
+    {
+      "row": 2,
+      "key": "cl0",
+      "label": "C_L0",
+      "source": "Figure 11",
+      "printed": [
+        0.085,
+        0.085,
+        0.085
+      ]
+    },
+    {
+      "row": 3,
+      "key": "lift_ratio",
+      "label": "C_L0 / tau^1.1",
+      "source": "2 / 1",
+      "printed": [
+        0.0397,
+        0.0254,
+        0.0185
+      ]
+    },
+    {
+      "row": 4,
+      "key": "lambda",
+      "label": "mean wetting / beam",
+      "source": "Figure 10",
+      "printed": [
+        3.85,
+        2.6,
+        1.86
+      ]
+    },
+    {
+      "row": 5,
+      "key": "vm_ft_s",
+      "label": "bottom-flow speed (ft/s)",
+      "source": "Figure 14",
+      "printed": [
+        67,
+        66.6,
+        66.2
+      ]
+    },
+    {
+      "row": 6,
+      "key": "re",
+      "label": "Reynolds number",
+      "source": "V_m lambda b / nu",
+      "printed": [
+        361000000.0,
+        242000000.0,
+        173000000.0
+      ]
+    },
+    {
+      "row": 7,
+      "key": "cf",
+      "label": "Schoenherr friction coefficient",
+      "source": "Schoenherr",
+      "printed": [
+        0.00174,
+        0.00184,
+        0.00192
+      ]
+    },
+    {
+      "row": 8,
+      "key": "dcf",
+      "label": "roughness allowance",
+      "source": "ATTC standard",
+      "printed": [
+        0.0004,
+        0.0004,
+        0.0004
+      ]
+    },
+    {
+      "row": 9,
+      "key": "cf_total",
+      "label": "total friction coefficient",
+      "source": "7 + 8",
+      "printed": [
+        0.00214,
+        0.00224,
+        0.00232
+      ]
+    },
+    {
+      "row": 10,
+      "key": "df_lbf",
+      "label": "bottom-tangent friction force (lbf)",
+      "source": "rho V_m^2 lambda b^2 (Cf+dCf) / (2 cos beta)",
+      "printed": [
+        7340,
+        5160,
+        3760
+      ]
+    },
+    {
+      "row": 11,
+      "key": "tan_tau",
+      "label": "tan tau",
+      "source": "trig",
+      "printed": [
+        0.0349,
+        0.0524,
+        0.0698
+      ]
+    },
+    {
+      "row": 12,
+      "key": "sin_tau",
+      "label": "sin tau",
+      "source": "trig",
+      "printed": [
+        0.0349,
+        0.0524,
+        0.0698
+      ]
+    },
+    {
+      "row": 13,
+      "key": "cos_tau",
+      "label": "cos tau",
+      "source": "trig",
+      "printed": [
+        0.9994,
+        0.9986,
+        0.9976
+      ]
+    },
+    {
+      "row": 14,
+      "key": "pressure_lbf",
+      "label": "weight tan tau (lbf)",
+      "source": "weight * 11",
+      "printed": [
+        2094,
+        3144,
+        4188
+      ]
+    },
+    {
+      "row": 15,
+      "key": "friction_drag_lbf",
+      "label": "Df / cos tau (lbf)",
+      "source": "10 / 13",
+      "printed": [
+        7340,
+        5160,
+        3760
+      ]
+    },
+    {
+      "row": 16,
+      "key": "drag_lbf",
+      "label": "horizontal resistance (lbf)",
+      "source": "14 + 15",
+      "printed": [
+        9434,
+        8304,
+        7948
+      ]
+    },
+    {
+      "row": 17,
+      "key": "cp_ratio",
+      "label": "pressure-center / mean wetting",
+      "source": "Figure 17",
+      "printed": [
+        0.59,
+        0.65,
+        0.7
+      ]
+    },
+    {
+      "row": 18,
+      "key": "cp_ft",
+      "label": "pressure center (ft)",
+      "source": "17 * 4 * beam",
+      "printed": [
+        31.6,
+        23.5,
+        18.2
+      ]
+    },
+    {
+      "row": 19,
+      "key": "c_ft",
+      "label": "pressure moment arm (ft)",
+      "source": "LCG - 18",
+      "printed": [
+        -2.6,
+        5.5,
+        10.8
+      ]
+    },
+    {
+      "row": 20,
+      "key": "friction_height_ft",
+      "label": "b tan beta / 4 (ft)",
+      "source": "geometry",
+      "printed": [
+        0.616,
+        0.616,
+        0.616
+      ]
+    },
+    {
+      "row": 21,
+      "key": "a_ft",
+      "label": "friction moment arm (ft)",
+      "source": "VCG - 20",
+      "printed": [
+        1.39,
+        1.39,
+        1.39
+      ]
+    },
+    {
+      "row": 22,
+      "key": "sin_sum",
+      "label": "sin(tau+epsilon)",
+      "source": "trig",
+      "printed": [
+        0.1045,
+        0.1219,
+        0.1392
+      ]
+    },
+    {
+      "row": 23,
+      "key": "vertical_factor",
+      "label": "1 - sin tau sin(tau+epsilon)",
+      "source": "1 - 12 * 22",
+      "printed": [
+        0.9964,
+        0.9964,
+        0.9903
+      ]
+    },
+    {
+      "row": 24,
+      "key": "normal_arm_ft",
+      "label": "factor * c / cos tau (ft)",
+      "source": "23 * 19 / 13",
+      "printed": [
+        -2.59,
+        5.46,
+        10.7
+      ]
+    },
+    {
+      "row": 25,
+      "key": "thrust_arm_ft",
+      "label": "f sin tau (ft)",
+      "source": "f * 12",
+      "printed": [
+        0.0174,
+        0.0262,
+        0.0349
+      ]
+    },
+    {
+      "row": 26,
+      "key": "combined_arm_ft",
+      "label": "normal arm - thrust arm (ft)",
+      "source": "24 - 25",
+      "printed": [
+        -2.6,
+        5.53,
+        10.73
+      ]
+    },
+    {
+      "row": 27,
+      "key": "normal_moment_lbft",
+      "label": "weight * combined arm",
+      "source": "weight * 26",
+      "printed": [
+        -156500,
+        332000,
+        645000
+      ]
+    },
+    {
+      "row": 28,
+      "key": "friction_thrust_arm_ft",
+      "label": "a - f (ft)",
+      "source": "21 - f",
+      "printed": [
+        0.89,
+        0.89,
+        0.89
+      ]
+    },
+    {
+      "row": 29,
+      "key": "friction_moment_lbft",
+      "label": "Df (a-f)",
+      "source": "10 * 28",
+      "printed": [
+        6540,
+        4600,
+        3350
+      ]
+    },
+    {
+      "row": 30,
+      "key": "moment_lbft",
+      "label": "Eq 35 moment sum",
+      "source": "27 + 29",
+      "printed": [
+        -149960,
+        336600,
+        648350
+      ]
+    }
+  ],
+  "table1_summary": {
+    "trim_deg": 2.3,
+    "drag_lbf": 9095,
+    "ehp": 1115,
+    "lambda": 3.29,
+    "keel_ft": 55.9,
+    "chine_ft": 36.1,
+    "draft_ft": 2.24
+  },
+  "table2_rows": [
+    {
+      "row": 1,
+      "key": "cl0",
+      "printed": 0.085,
+      "source": "Figure 11"
+    },
+    {
+      "row": 2,
+      "key": "cp_over_beam",
+      "printed": 2.07,
+      "source": "LCG / beam"
+    },
+    {
+      "row": 3,
+      "key": "lambda",
+      "printed": 3.45,
+      "source": "Figure 19"
+    },
+    {
+      "row": 4,
+      "key": "lift_ratio",
+      "printed": 0.035,
+      "source": "Figure 19"
+    },
+    {
+      "row": 5,
+      "key": "tau_power",
+      "printed": 2.42,
+      "source": "1 / 4"
+    },
+    {
+      "row": 6,
+      "key": "trim_deg",
+      "printed": 2.23,
+      "source": "5^(1/1.1)"
+    },
+    {
+      "row": 7,
+      "key": "tan_tau",
+      "printed": 0.039,
+      "source": "trig"
+    },
+    {
+      "row": 8,
+      "key": "pressure_lbf",
+      "printed": 2340,
+      "source": "weight * 7"
+    },
+    {
+      "row": 9,
+      "key": "lambda_b2_ft2",
+      "printed": 675,
+      "source": "3 * beam^2"
+    },
+    {
+      "row": 10,
+      "key": "vm_ft_s",
+      "printed": 66.9,
+      "source": "Figure 14"
+    },
+    {
+      "row": 11,
+      "key": "re",
+      "printed": 322000000.0,
+      "source": "V_m lambda b / nu"
+    },
+    {
+      "row": 12,
+      "key": "cf",
+      "printed": 0.00177,
+      "source": "Schoenherr"
+    },
+    {
+      "row": 13,
+      "key": "dcf",
+      "printed": 0.0004,
+      "source": "ATTC"
+    },
+    {
+      "row": 14,
+      "key": "cf_total",
+      "printed": 0.00217,
+      "source": "12 + 13"
+    },
+    {
+      "row": 15,
+      "key": "df_lbf",
+      "printed": 6670,
+      "source": "Eq 19 with allowance"
+    },
+    {
+      "row": 16,
+      "key": "friction_drag_lbf",
+      "printed": 6670,
+      "source": "15 / cos tau"
+    },
+    {
+      "row": 17,
+      "key": "drag_lbf",
+      "printed": 9010,
+      "source": "8 + 16 (paper source misprints 8 + 17)"
+    },
+    {
+      "row": 18,
+      "key": "ehp",
+      "printed": 1100,
+      "source": "17 * speed / 550"
+    },
+    {
+      "row": 19,
+      "key": "porpoising_axis",
+      "printed": 0.186,
+      "source": "sqrt(CLbeta/2)"
+    }
+  ],
+  "table2_porpoising_note": "Row 20 reads a critical trim greater than about 4.5 degrees from Figure 18 and states stable; this graph judgment is not numerically verified."
+}

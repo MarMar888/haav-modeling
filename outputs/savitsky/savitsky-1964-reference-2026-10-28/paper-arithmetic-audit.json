@@ -1,0 +1,1172 @@
+{
+  "method": "Literal audit of printed graph readings and arithmetic; not a new performance engine.",
+  "source": {
+    "pdf": "../../outputs/savitsky/savitsky-1964-reference-2026-10-28/Savitsky-1964.pdf",
+    "table1_pdf_page": 19,
+    "table1_printed_page": 89,
+    "table2_pdf_page": 20,
+    "table2_printed_page": 90,
+    "description": "Manual transcription of supplied scanned PDF; graph readings are explicit reference inputs, not outputs independently verified by this audit."
+  },
+  "given": {
+    "weight_lbf": 60000,
+    "beam_ft": 14,
+    "lcg_ft": 29,
+    "vcg_ft": 2,
+    "beta_deg": 10,
+    "speed_ft_s": 67.5,
+    "gravity_ft_s2": 32.2,
+    "density_slug_ft3": 1.94,
+    "viscosity_ft2_s": 1e-05,
+    "epsilon_deg": 4,
+    "f_ft": 0.5
+  },
+  "given_notes": {
+    "density_slug_ft3": "Inferred from printed lift denominator 0.97 = rho/2. Density is not separately specified.",
+    "viscosity_ft2_s": "Approximately inferred from printed Reynolds numbers; not separately specified.",
+    "speed_ft_s": "Paper rounded 40-knot speed retained."
+  },
+  "table1_rows": [
+    {
+      "table": 1,
+      "row": 1,
+      "trial_trim_deg": 2,
+      "quantity": "tau_power",
+      "printed": 2.14,
+      "calculated": 2.1435469250725863,
+      "difference": 0.003546925072586138,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 2,
+      "trial_trim_deg": 2,
+      "quantity": "cl0",
+      "printed": 0.085,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 3,
+      "trial_trim_deg": 2,
+      "quantity": "lift_ratio",
+      "printed": 0.0397,
+      "calculated": 0.0397196261682243,
+      "difference": 1.9626168224297358e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 4,
+      "trial_trim_deg": 2,
+      "quantity": "lambda",
+      "printed": 3.85,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 5,
+      "trial_trim_deg": 2,
+      "quantity": "vm_ft_s",
+      "printed": 67,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 6,
+      "trial_trim_deg": 2,
+      "quantity": "re",
+      "printed": 361000000.0,
+      "calculated": 361129999.99999994,
+      "difference": 129999.9999999404,
+      "note": "Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties; see given_notes in JSON."
+    },
+    {
+      "table": 1,
+      "row": 7,
+      "trial_trim_deg": 2,
+      "quantity": "cf",
+      "printed": 0.00174,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 8,
+      "trial_trim_deg": 2,
+      "quantity": "dcf",
+      "printed": 0.0004,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 9,
+      "trial_trim_deg": 2,
+      "quantity": "cf_total",
+      "printed": 0.00214,
+      "calculated": 0.00214,
+      "difference": 0.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 10,
+      "trial_trim_deg": 2,
+      "quantity": "df_lbf",
+      "printed": 7340,
+      "calculated": 7140.036878276722,
+      "difference": -199.96312172327816,
+      "note": "Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties; see given_notes in JSON."
+    },
+    {
+      "table": 1,
+      "row": 11,
+      "trial_trim_deg": 2,
+      "quantity": "tan_tau",
+      "printed": 0.0349,
+      "calculated": 0.03492076949174773,
+      "difference": 2.0769491747729685e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 12,
+      "trial_trim_deg": 2,
+      "quantity": "sin_tau",
+      "printed": 0.0349,
+      "calculated": 0.03489949670250097,
+      "difference": -5.032974990312744e-07,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 13,
+      "trial_trim_deg": 2,
+      "quantity": "cos_tau",
+      "printed": 0.9994,
+      "calculated": 0.9993908270190958,
+      "difference": -9.17298090419294e-06,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 14,
+      "trial_trim_deg": 2,
+      "quantity": "pressure_lbf",
+      "printed": 2094,
+      "calculated": 2094.0,
+      "difference": 0.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 15,
+      "trial_trim_deg": 2,
+      "quantity": "friction_drag_lbf",
+      "printed": 7340,
+      "calculated": 7344.406643986392,
+      "difference": 4.406643986391828,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 16,
+      "trial_trim_deg": 2,
+      "quantity": "drag_lbf",
+      "printed": 9434,
+      "calculated": 9434,
+      "difference": 0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 17,
+      "trial_trim_deg": 2,
+      "quantity": "cp_ratio",
+      "printed": 0.59,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 18,
+      "trial_trim_deg": 2,
+      "quantity": "cp_ft",
+      "printed": 31.6,
+      "calculated": 31.801000000000002,
+      "difference": 0.2010000000000005,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 19,
+      "trial_trim_deg": 2,
+      "quantity": "c_ft",
+      "printed": -2.6,
+      "calculated": -2.6000000000000014,
+      "difference": -1.3322676295501878e-15,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 20,
+      "trial_trim_deg": 2,
+      "quantity": "friction_height_ft",
+      "printed": 0.616,
+      "calculated": 0.6171444324796274,
+      "difference": 0.0011444324796273664,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 21,
+      "trial_trim_deg": 2,
+      "quantity": "a_ft",
+      "printed": 1.39,
+      "calculated": 1.384,
+      "difference": -0.006000000000000005,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 22,
+      "trial_trim_deg": 2,
+      "quantity": "sin_sum",
+      "printed": 0.1045,
+      "calculated": 0.10452846326765347,
+      "difference": 2.8463267653475177e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 23,
+      "trial_trim_deg": 2,
+      "quantity": "vertical_factor",
+      "printed": 0.9964,
+      "calculated": 0.99635295,
+      "difference": -4.704999999993742e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 24,
+      "trial_trim_deg": 2,
+      "quantity": "normal_arm_ft",
+      "printed": -2.59,
+      "calculated": -2.5921953171903143,
+      "difference": -0.0021953171903144053,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 25,
+      "trial_trim_deg": 2,
+      "quantity": "thrust_arm_ft",
+      "printed": 0.0174,
+      "calculated": 0.01745,
+      "difference": 5.000000000000143e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 26,
+      "trial_trim_deg": 2,
+      "quantity": "combined_arm_ft",
+      "printed": -2.6,
+      "calculated": -2.6073999999999997,
+      "difference": -0.007399999999999629,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 27,
+      "trial_trim_deg": 2,
+      "quantity": "normal_moment_lbft",
+      "printed": -156500,
+      "calculated": -156000.0,
+      "difference": 500.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 28,
+      "trial_trim_deg": 2,
+      "quantity": "friction_thrust_arm_ft",
+      "printed": 0.89,
+      "calculated": 0.8899999999999999,
+      "difference": -1.1102230246251565e-16,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 29,
+      "trial_trim_deg": 2,
+      "quantity": "friction_moment_lbft",
+      "printed": 6540,
+      "calculated": 6532.6,
+      "difference": -7.399999999999636,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 30,
+      "trial_trim_deg": 2,
+      "quantity": "moment_lbft",
+      "printed": -149960,
+      "calculated": -149960,
+      "difference": 0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 1,
+      "trial_trim_deg": 3,
+      "quantity": "tau_power",
+      "printed": 3.35,
+      "calculated": 3.348369522101714,
+      "difference": -0.0016304778982862977,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 2,
+      "trial_trim_deg": 3,
+      "quantity": "cl0",
+      "printed": 0.085,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 3,
+      "trial_trim_deg": 3,
+      "quantity": "lift_ratio",
+      "printed": 0.0254,
+      "calculated": 0.02537313432835821,
+      "difference": -2.686567164178824e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 4,
+      "trial_trim_deg": 3,
+      "quantity": "lambda",
+      "printed": 2.6,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 5,
+      "trial_trim_deg": 3,
+      "quantity": "vm_ft_s",
+      "printed": 66.6,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 6,
+      "trial_trim_deg": 3,
+      "quantity": "re",
+      "printed": 242000000.0,
+      "calculated": 242423999.99999997,
+      "difference": 423999.9999999702,
+      "note": "Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties; see given_notes in JSON."
+    },
+    {
+      "table": 1,
+      "row": 7,
+      "trial_trim_deg": 3,
+      "quantity": "cf",
+      "printed": 0.00184,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 8,
+      "trial_trim_deg": 3,
+      "quantity": "dcf",
+      "printed": 0.0004,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 9,
+      "trial_trim_deg": 3,
+      "quantity": "cf_total",
+      "printed": 0.00224,
+      "calculated": 0.0022400000000000002,
+      "difference": 4.336808689942018e-19,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 10,
+      "trial_trim_deg": 3,
+      "quantity": "df_lbf",
+      "printed": 5160,
+      "calculated": 4987.078120324176,
+      "difference": -172.92187967582413,
+      "note": "Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties; see given_notes in JSON."
+    },
+    {
+      "table": 1,
+      "row": 11,
+      "trial_trim_deg": 3,
+      "quantity": "tan_tau",
+      "printed": 0.0524,
+      "calculated": 0.05240777928304121,
+      "difference": 7.779283041207952e-06,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 12,
+      "trial_trim_deg": 3,
+      "quantity": "sin_tau",
+      "printed": 0.0524,
+      "calculated": 0.052335956242943835,
+      "difference": -6.40437570561675e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 13,
+      "trial_trim_deg": 3,
+      "quantity": "cos_tau",
+      "printed": 0.9986,
+      "calculated": 0.9986295347545738,
+      "difference": 2.9534754573790067e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 14,
+      "trial_trim_deg": 3,
+      "quantity": "pressure_lbf",
+      "printed": 3144,
+      "calculated": 3144.0,
+      "difference": 0.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 15,
+      "trial_trim_deg": 3,
+      "quantity": "friction_drag_lbf",
+      "printed": 5160,
+      "calculated": 5167.23412777889,
+      "difference": 7.23412777889007,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 16,
+      "trial_trim_deg": 3,
+      "quantity": "drag_lbf",
+      "printed": 8304,
+      "calculated": 8304,
+      "difference": 0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 17,
+      "trial_trim_deg": 3,
+      "quantity": "cp_ratio",
+      "printed": 0.65,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 18,
+      "trial_trim_deg": 3,
+      "quantity": "cp_ft",
+      "printed": 23.5,
+      "calculated": 23.660000000000004,
+      "difference": 0.1600000000000037,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 19,
+      "trial_trim_deg": 3,
+      "quantity": "c_ft",
+      "printed": 5.5,
+      "calculated": 5.5,
+      "difference": 0.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 20,
+      "trial_trim_deg": 3,
+      "quantity": "friction_height_ft",
+      "printed": 0.616,
+      "calculated": 0.6171444324796274,
+      "difference": 0.0011444324796273664,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 21,
+      "trial_trim_deg": 3,
+      "quantity": "a_ft",
+      "printed": 1.39,
+      "calculated": 1.384,
+      "difference": -0.006000000000000005,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 22,
+      "trial_trim_deg": 3,
+      "quantity": "sin_sum",
+      "printed": 0.1219,
+      "calculated": 0.12186934340514748,
+      "difference": -3.065659485251837e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 23,
+      "trial_trim_deg": 3,
+      "quantity": "vertical_factor",
+      "printed": 0.9964,
+      "calculated": 0.99361244,
+      "difference": -0.0027875599999999112,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 24,
+      "trial_trim_deg": 3,
+      "quantity": "normal_arm_ft",
+      "printed": 5.46,
+      "calculated": 5.487883036250751,
+      "difference": 0.027883036250750948,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 25,
+      "trial_trim_deg": 3,
+      "quantity": "thrust_arm_ft",
+      "printed": 0.0262,
+      "calculated": 0.0262,
+      "difference": 0.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 26,
+      "trial_trim_deg": 3,
+      "quantity": "combined_arm_ft",
+      "printed": 5.53,
+      "calculated": 5.4338,
+      "difference": -0.09620000000000051,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 27,
+      "trial_trim_deg": 3,
+      "quantity": "normal_moment_lbft",
+      "printed": 332000,
+      "calculated": 331800.0,
+      "difference": -200.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 28,
+      "trial_trim_deg": 3,
+      "quantity": "friction_thrust_arm_ft",
+      "printed": 0.89,
+      "calculated": 0.8899999999999999,
+      "difference": -1.1102230246251565e-16,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 29,
+      "trial_trim_deg": 3,
+      "quantity": "friction_moment_lbft",
+      "printed": 4600,
+      "calculated": 4592.4,
+      "difference": -7.600000000000364,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 30,
+      "trial_trim_deg": 3,
+      "quantity": "moment_lbft",
+      "printed": 336600,
+      "calculated": 336600,
+      "difference": 0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 1,
+      "trial_trim_deg": 4,
+      "quantity": "tau_power",
+      "printed": 4.59,
+      "calculated": 4.59479341998814,
+      "difference": 0.004793419988140535,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 2,
+      "trial_trim_deg": 4,
+      "quantity": "cl0",
+      "printed": 0.085,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 3,
+      "trial_trim_deg": 4,
+      "quantity": "lift_ratio",
+      "printed": 0.0185,
+      "calculated": 0.01851851851851852,
+      "difference": 1.8518518518521876e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 4,
+      "trial_trim_deg": 4,
+      "quantity": "lambda",
+      "printed": 1.86,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 5,
+      "trial_trim_deg": 4,
+      "quantity": "vm_ft_s",
+      "printed": 66.2,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 6,
+      "trial_trim_deg": 4,
+      "quantity": "re",
+      "printed": 173000000.0,
+      "calculated": 172384799.99999997,
+      "difference": -615200.0000000298,
+      "note": "Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties; see given_notes in JSON."
+    },
+    {
+      "table": 1,
+      "row": 7,
+      "trial_trim_deg": 4,
+      "quantity": "cf",
+      "printed": 0.00192,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 8,
+      "trial_trim_deg": 4,
+      "quantity": "dcf",
+      "printed": 0.0004,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 9,
+      "trial_trim_deg": 4,
+      "quantity": "cf_total",
+      "printed": 0.00232,
+      "calculated": 0.00232,
+      "difference": 0.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 10,
+      "trial_trim_deg": 4,
+      "quantity": "df_lbf",
+      "printed": 3760,
+      "calculated": 3650.843820363375,
+      "difference": -109.15617963662498,
+      "note": "Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties; see given_notes in JSON."
+    },
+    {
+      "table": 1,
+      "row": 11,
+      "trial_trim_deg": 4,
+      "quantity": "tan_tau",
+      "printed": 0.0698,
+      "calculated": 0.06992681194351041,
+      "difference": 0.00012681194351041314,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 12,
+      "trial_trim_deg": 4,
+      "quantity": "sin_tau",
+      "printed": 0.0698,
+      "calculated": 0.0697564737441253,
+      "difference": -4.3526255874698494e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 13,
+      "trial_trim_deg": 4,
+      "quantity": "cos_tau",
+      "printed": 0.9976,
+      "calculated": 0.9975640502598242,
+      "difference": -3.5949740175844624e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 14,
+      "trial_trim_deg": 4,
+      "quantity": "pressure_lbf",
+      "printed": 4188,
+      "calculated": 4188.0,
+      "difference": 0.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 15,
+      "trial_trim_deg": 4,
+      "quantity": "friction_drag_lbf",
+      "printed": 3760,
+      "calculated": 3769.0457097032877,
+      "difference": 9.045709703287685,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 16,
+      "trial_trim_deg": 4,
+      "quantity": "drag_lbf",
+      "printed": 7948,
+      "calculated": 7948,
+      "difference": 0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 17,
+      "trial_trim_deg": 4,
+      "quantity": "cp_ratio",
+      "printed": 0.7,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input: graph reading or stated friction/roughness choice; not independently verified."
+    },
+    {
+      "table": 1,
+      "row": 18,
+      "trial_trim_deg": 4,
+      "quantity": "cp_ft",
+      "printed": 18.2,
+      "calculated": 18.228,
+      "difference": 0.028000000000002245,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 19,
+      "trial_trim_deg": 4,
+      "quantity": "c_ft",
+      "printed": 10.8,
+      "calculated": 10.8,
+      "difference": 0.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 20,
+      "trial_trim_deg": 4,
+      "quantity": "friction_height_ft",
+      "printed": 0.616,
+      "calculated": 0.6171444324796274,
+      "difference": 0.0011444324796273664,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 21,
+      "trial_trim_deg": 4,
+      "quantity": "a_ft",
+      "printed": 1.39,
+      "calculated": 1.384,
+      "difference": -0.006000000000000005,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 22,
+      "trial_trim_deg": 4,
+      "quantity": "sin_sum",
+      "printed": 0.1392,
+      "calculated": 0.13917310096006544,
+      "difference": -2.689903993455256e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 23,
+      "trial_trim_deg": 4,
+      "quantity": "vertical_factor",
+      "printed": 0.9903,
+      "calculated": 0.99028384,
+      "difference": -1.6159999999931784e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 24,
+      "trial_trim_deg": 4,
+      "quantity": "normal_arm_ft",
+      "printed": 10.7,
+      "calculated": 10.720970328789093,
+      "difference": 0.020970328789093884,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 25,
+      "trial_trim_deg": 4,
+      "quantity": "thrust_arm_ft",
+      "printed": 0.0349,
+      "calculated": 0.0349,
+      "difference": 0.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 26,
+      "trial_trim_deg": 4,
+      "quantity": "combined_arm_ft",
+      "printed": 10.73,
+      "calculated": 10.665099999999999,
+      "difference": -0.06490000000000151,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 27,
+      "trial_trim_deg": 4,
+      "quantity": "normal_moment_lbft",
+      "printed": 645000,
+      "calculated": 643800.0,
+      "difference": -1200.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 28,
+      "trial_trim_deg": 4,
+      "quantity": "friction_thrust_arm_ft",
+      "printed": 0.89,
+      "calculated": 0.8899999999999999,
+      "difference": -1.1102230246251565e-16,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 29,
+      "trial_trim_deg": 4,
+      "quantity": "friction_moment_lbft",
+      "printed": 3350,
+      "calculated": 3346.4,
+      "difference": -3.599999999999909,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 1,
+      "row": 30,
+      "trial_trim_deg": 4,
+      "quantity": "moment_lbft",
+      "printed": 648350,
+      "calculated": 648350,
+      "difference": 0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    }
+  ],
+  "table1_summary": {
+    "unrounded_interpolation_fraction": 0.30820453798092734,
+    "unrounded_interpolated_trim_deg": 2.3082045379809273,
+    "rounded_trim_deg": 2.3,
+    "fraction_used_in_printed_followup": 0.3,
+    "drag_lbf": 9095.0,
+    "drag_lbf_from_literal_printed_9424": 9085.0,
+    "ehp_from_printed_drag_and_speed": 1116.2045454545455,
+    "lambda_from_printed_interpolation": 3.475,
+    "keel_ft_using_printed_lambda": 55.84201600746056,
+    "chine_ft_using_printed_lambda": 36.27798399253945,
+    "keel_ft_using_recalculated_lambda": 58.43201600746055,
+    "chine_ft_using_recalculated_lambda": 38.86798399253945,
+    "draft_ft_using_printed_keel_and_sine": 2.243367202570089
+  },
+  "table2_rows": [
+    {
+      "table": 2,
+      "row": 1,
+      "trial_trim_deg": null,
+      "quantity": "cl0",
+      "printed": 0.085,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input from graph or stated coefficient; not independently verified."
+    },
+    {
+      "table": 2,
+      "row": 2,
+      "trial_trim_deg": null,
+      "quantity": "cp_over_beam",
+      "printed": 2.07,
+      "calculated": 2.0714285714285716,
+      "difference": 0.0014285714285717788,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 2,
+      "row": 3,
+      "trial_trim_deg": null,
+      "quantity": "lambda",
+      "printed": 3.45,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input from graph or stated coefficient; not independently verified."
+    },
+    {
+      "table": 2,
+      "row": 4,
+      "trial_trim_deg": null,
+      "quantity": "lift_ratio",
+      "printed": 0.035,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input from graph or stated coefficient; not independently verified."
+    },
+    {
+      "table": 2,
+      "row": 5,
+      "trial_trim_deg": null,
+      "quantity": "tau_power",
+      "printed": 2.42,
+      "calculated": 2.4285714285714284,
+      "difference": 0.008571428571428452,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 2,
+      "row": 6,
+      "trial_trim_deg": null,
+      "quantity": "trim_deg",
+      "printed": 2.23,
+      "calculated": 2.233176556129782,
+      "difference": 0.003176556129782071,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 2,
+      "row": 7,
+      "trial_trim_deg": null,
+      "quantity": "tan_tau",
+      "printed": 0.039,
+      "calculated": 0.03894050708045712,
+      "difference": -5.949291954288061e-05,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 2,
+      "row": 8,
+      "trial_trim_deg": null,
+      "quantity": "pressure_lbf",
+      "printed": 2340,
+      "calculated": 2340.0,
+      "difference": 0.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 2,
+      "row": 9,
+      "trial_trim_deg": null,
+      "quantity": "lambda_b2_ft2",
+      "printed": 675,
+      "calculated": 676.2,
+      "difference": 1.2000000000000455,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 2,
+      "row": 10,
+      "trial_trim_deg": null,
+      "quantity": "vm_ft_s",
+      "printed": 66.9,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input from graph or stated coefficient; not independently verified."
+    },
+    {
+      "table": 2,
+      "row": 11,
+      "trial_trim_deg": null,
+      "quantity": "re",
+      "printed": 322000000.0,
+      "calculated": 323127000.0,
+      "difference": 1127000.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties."
+    },
+    {
+      "table": 2,
+      "row": 12,
+      "trial_trim_deg": null,
+      "quantity": "cf",
+      "printed": 0.00177,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input from graph or stated coefficient; not independently verified."
+    },
+    {
+      "table": 2,
+      "row": 13,
+      "trial_trim_deg": null,
+      "quantity": "dcf",
+      "printed": 0.0004,
+      "calculated": null,
+      "difference": null,
+      "note": "Reference input from graph or stated coefficient; not independently verified."
+    },
+    {
+      "table": 2,
+      "row": 14,
+      "trial_trim_deg": null,
+      "quantity": "cf_total",
+      "printed": 0.00217,
+      "calculated": 0.00217,
+      "difference": 0.0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 2,
+      "row": 15,
+      "trial_trim_deg": null,
+      "quantity": "df_lbf",
+      "printed": 6670,
+      "calculated": 6457.077775459159,
+      "difference": -212.92222454084094,
+      "note": "Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties."
+    },
+    {
+      "table": 2,
+      "row": 16,
+      "trial_trim_deg": null,
+      "quantity": "friction_drag_lbf",
+      "printed": 6670,
+      "calculated": 6675.055155273968,
+      "difference": 5.055155273968012,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 2,
+      "row": 17,
+      "trial_trim_deg": null,
+      "quantity": "drag_lbf",
+      "printed": 9010,
+      "calculated": 9010,
+      "difference": 0,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 2,
+      "row": 18,
+      "trial_trim_deg": null,
+      "quantity": "ehp",
+      "printed": 1100,
+      "calculated": 1105.7727272727273,
+      "difference": 5.772727272727252,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    },
+    {
+      "table": 2,
+      "row": 19,
+      "trial_trim_deg": null,
+      "quantity": "porpoising_axis",
+      "printed": 0.186,
+      "calculated": 0.1857417562100671,
+      "difference": -0.0002582437899328882,
+      "note": "Recomputed from printed parent rows; no hidden rounding."
+    }
+  ],
+  "table2_extra": {
+    "trim_without_intermediate_rounding_deg": 2.24036605109313,
+    "trim_from_printed_2_42_deg": 2.233176556129782,
+    "density_implied_by_printed_friction_slug_ft3": 2.0039715255063437
+  },
+  "equation_spot_checks": [
+    {
+      "trial_trim_deg": 2,
+      "lambda_from_graph": 3.85,
+      "cv": 3.179155853872544,
+      "clbeta_from_loading": 0.06926532863368079,
+      "cl0_from_eq15": 0.08439662690378559,
+      "clbeta_from_eq16": 0.06964946628798761,
+      "cp_ratio_from_eq28": 0.5817220034924915
+    },
+    {
+      "trial_trim_deg": 3,
+      "lambda_from_graph": 2.6,
+      "cv": 3.179155853872544,
+      "clbeta_from_loading": 0.06926532863368079,
+      "cl0_from_eq15": 0.08465021797573997,
+      "clbeta_from_eq16": 0.06987648636429539,
+      "cp_ratio_from_eq28": 0.6517642278918971
+    },
+    {
+      "trial_trim_deg": 4,
+      "lambda_from_graph": 1.86,
+      "cv": 3.179155853872544,
+      "clbeta_from_loading": 0.06926532863368079,
+      "cl0_from_eq15": 0.08699498283814358,
+      "clbeta_from_eq16": 0.07197705958131778,
+      "cp_ratio_from_eq28": 0.6932164357871684
+    }
+  ]
+}

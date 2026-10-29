@@ -1,5 +1,42 @@
 # Savitsky sample calculator
 
+## Python calculation notebook
+
+For an audit of the **original 1964 paper**, open
+[paper1964-reference.ipynb](paper1964-reference.ipynb). It replays Tables 1 and 2,
+shows every arithmetic row against its printed value, and documents differences
+from our engine. Transcribed graph readings are explicitly retained as reference
+inputs in [paper1964-data.json](paper1964-data.json). The paper has some internal
+arithmetic inconsistencies, so exact agreement with every printed answer is not
+claimed. Run `python3 optimization/savitsky/paper1964_audit.py` to regenerate the
+[audit report](../../outputs/savitsky/savitsky-1964-reference-2026-10-28/PAPER-REPLICATION.md)
+and JSON/CSV using only the standard library. This audit does not change the
+production model.
+
+Open [current-hull.ipynb](current-hull.ipynb) to reproduce the October 21, 2026
+current-hull run, inspect equations and intermediate values, and compare designs.
+All geometry, force and solver code is visible in notebook cells. Editable,
+documented SI defaults live in [current-hull-inputs.json](current-hull-inputs.json).
+The historical results remain a separate, unchanged regression reference.
+
+```sh
+python -m pip install -r optimization/savitsky/requirements-notebook.txt
+jupyter lab optimization/savitsky/current-hull.ipynb
+```
+
+Run all cells once. Change `OVERRIDES`, `SPEEDS_MPH`, and `DETAIL_MPH` in section 2,
+then rerun that cell and everything below it. Section 7 exposes every intermediate
+value and signed force/moment term at the selected speed. Section 9 compares input
+changes. Section 10 optionally exports inputs and results to new JSON/CSV files.
+The reference comparison always uses the original inputs, independently of edits.
+
+This notebook supports the saved run's 1964 geometry with no flap; unsupported
+1976/flap settings are rejected explicitly. The uniform-aft-section warning stays
+visible separately from the empirical engine screen. No changes are made to
+`explore.ipynb` or its model/write-up.
+
+## Browser calculator
+
 Open **[index.html](index.html)** in a browser. It works locally with no server,
 network, package installation or build. Keep `model.js` and `calculator.js` beside
 it. Change the inputs, calculate, and move the speed slider. Save CSV exports all

@@ -1,0 +1,100 @@
+{
+  "description": "Editable inputs copied without rounding from the October 21, 2026 current-hull run. No live CAD import.",
+  "reference_file": "outputs/savitsky/current-hull-2026-10-21/results.json",
+  "inputs": {
+    "length_m": 1.8288,
+    "beam_m": 0.30479999999999996,
+    "mass_kg": 56.81199075013,
+    "deadrise_deg": 13.161188003393887,
+    "lcg_m": 0.5980938,
+    "vcg_m": 0.15440659999999998,
+    "thrust_height_m": -0.0328240561840604,
+    "thrust_x_m": -0.12252673981613506,
+    "thrust_angle_deg": 15,
+    "density_kg_m3": 998.2,
+    "viscosity_m2_s": 1.004e-06,
+    "roughness_m": 0,
+    "wetted_lengths_type": 2,
+    "flap_chord_m": 0,
+    "flap_span_ratio": 0,
+    "flap_angle_deg": 0
+  },
+  "input_notes": {
+    "length_m": {
+      "unit": "m",
+      "meaning": "Overall length; 72 in"
+    },
+    "beam_m": {
+      "unit": "m",
+      "meaning": "Chine beam; 12 in"
+    },
+    "mass_kg": {
+      "unit": "kg",
+      "meaning": "Total loaded mass; recorded as 125.249 lb"
+    },
+    "deadrise_deg": {
+      "unit": "deg",
+      "meaning": "Equivalent V: degrees(atan(1.403 / 6)); curved bottom approximated"
+    },
+    "lcg_m": {
+      "unit": "m",
+      "meaning": "CG forward of transom; 23.547 in"
+    },
+    "vcg_m": {
+      "unit": "m",
+      "meaning": "CG above aft keel datum; 6.079 in"
+    },
+    "thrust_height_m": {
+      "unit": "m",
+      "meaning": "Point on shaft line, above keel; negative = below datum"
+    },
+    "thrust_x_m": {
+      "unit": "m",
+      "meaning": "Point on shaft line, forward of transom; negative = aft"
+    },
+    "thrust_angle_deg": {
+      "unit": "deg",
+      "meaning": "Upward forward thrust angle relative to keel"
+    },
+    "density_kg_m3": {
+      "unit": "kg/m\u00b3",
+      "meaning": "Freshwater at 20 \u00b0C"
+    },
+    "viscosity_m2_s": {
+      "unit": "m\u00b2/s",
+      "meaning": "Freshwater kinematic viscosity at 20 \u00b0C"
+    },
+    "roughness_m": {
+      "unit": "m",
+      "meaning": "Zero = smooth-hull assumption, disables roughness allowance"
+    },
+    "wetted_lengths_type": {
+      "unit": "code",
+      "meaning": "2 = Savitsky 1964; this notebook supports only this geometry"
+    },
+    "flap_chord_m": {
+      "unit": "m",
+      "meaning": "Zero; this notebook supports no flap"
+    },
+    "flap_span_ratio": {
+      "unit": "1",
+      "meaning": "Zero; this notebook supports no flap"
+    },
+    "flap_angle_deg": {
+      "unit": "deg",
+      "meaning": "Zero; this notebook supports no flap"
+    }
+  },
+  "uniform_aft_length_m": 0.9652,
+  "propeller_count": 2,
+  "assumptions": [
+    "Equivalent constant V-bottom: atan(1.403/6) = 13.161 degrees; curved section with 5-degree keel slope is not represented exactly.",
+    "Aft 38 inches assumed uniform; all solved points predict wetting beyond this section. No clipping of predicted wetting.",
+    "Freshwater 20 C, density 998.2 kg/m3, viscosity 1.004e-6 m2/s.",
+    "Smooth hull: roughness allowance zero. Fully turbulent ITTC friction; actual finish unknown.",
+    "No displacement/wave-making resistance, appendage drag, air drag, propeller interaction, waves or dynamic stability model.",
+    "Total thrust is along both shafts combined. Per-prop figures assume equal thrust. Effective power is horizontal resistance times speed, not motor shaft or battery power.",
+    "CAD +Y forward, +Z up; aft keel assumed parallel to top plane; transverse CG offset 0.004 in ignored in symmetric calculation.",
+    "Cv<1 cutoff is not a prediction of planing onset."
+  ]
+}
