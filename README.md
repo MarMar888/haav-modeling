@@ -21,9 +21,9 @@ make notebook   # open prop_motor_battery/willmarley.ipynb in JupyterLab
 make clean      # delete .venv
 ```
 
-`make setup PYTHON=python3.12` picks a different interpreter. Any other Jupyter works too: the
-notebook's first cell installs `numpy` and `matplotlib` into whatever kernel runs it. It reads
-`sss_motors.csv` from beside itself, so run it from where it lives.
+`make setup PYTHON=python3.12` picks a different interpreter. Any other Jupyter works too, as long as
+its kernel has `numpy` and `matplotlib`. The notebook reads `sss_motors.csv` from beside itself, so
+run it from where it lives.
 
 In VS Code: open the notebook, Select Kernel → Python Environments → `.venv` (or any Python 3.10+),
 then Run All. Every input has a low/high range near the top of its section — edit, re-run, and the

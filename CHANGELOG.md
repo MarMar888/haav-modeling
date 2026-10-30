@@ -4,6 +4,15 @@ See [`VERSIONING.md`](VERSIONING.md) for how this file and `VERSION` are kept. T
 of [`MarMar888/hav`](https://github.com/MarMar888/hav)'s `optimization/` folder with its full history
 (MarMar888/hav#98) and keeps the same version line.
 
+## 0.6.4 — 2026-10-30
+
+`willmarley.ipynb` rewritten to read more plainly, no model change. The prose is shorter and drops
+the figurative phrasing; the equations are unchanged. In the code, `steady_state` is split into
+`motor_prop_balance` and `speed_from_power` (the cubic, with its derivation in the docstring), unit
+conversions and the pack-sizing loop settings are named constants, imports and chart helpers sit in
+one setup cell, and the long cells are split in two. Every printed line and every chart is identical
+to 0.6.3 (checked by running both and comparing the outputs, chart images included).
+
 ## 0.6.3 — 2026-10-30
 
 Environment setup, no model change. A root `requirements.txt` (`numpy`, `matplotlib`, `jupyterlab` — what
