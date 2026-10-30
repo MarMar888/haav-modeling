@@ -7,20 +7,23 @@ the PEP race. Split out of hav's `optimization/` folder with its full git histor
 
 | Model | Status |
 |---|---|
-| [`prop_motor_battery/willmarley.ipynb`](prop_motor_battery/willmarley.ipynb) — how to choose motors, a propeller and a battery: one section per choice, the raw equations, then one solved model that maps the valid and ideal design space and ends with real SSS windings to buy | **Active** |
+| [`prop_motor_battery/willmarley.ipynb`](prop_motor_battery/willmarley.ipynb) — pick motors, a propeller and a battery: inputs with bounds, the model, the fastest design inside the bounds, the SSS catalog run through the same search, and a shopping list | **Active** |
 | Everything in [`archive/`](archive/) — an earlier SciPy joint optimizer, the `explore.ipynb` model and its LaTeX write-up, planning notes, diagrams, a Savitsky calculator | Archived: kept for reference, frozen |
 
 ## Run the notebook
 
-Any Jupyter works. The notebook needs only `numpy` and `matplotlib`, and its first cell installs them
-into whatever kernel runs it (`%pip install -q matplotlib numpy`). It reads `sss_motors.csv` from
-beside itself, so run it from where it lives:
+Needs Python 3.10+. One command builds `.venv` with everything the notebook uses (`requirements.txt`:
+`numpy`, `matplotlib`, `jupyterlab`) and opens it:
 
 ```sh
-python3 -m venv .venv
-.venv/bin/pip install jupyterlab
-.venv/bin/jupyter lab prop_motor_battery/willmarley.ipynb
+make setup      # create .venv and install requirements.txt
+make notebook   # open prop_motor_battery/willmarley.ipynb in JupyterLab
+make clean      # delete .venv
 ```
+
+`make setup PYTHON=python3.12` picks a different interpreter. Any other Jupyter works too, as long as
+its kernel has `numpy` and `matplotlib`. The notebook reads `sss_motors.csv` from beside itself, so
+run it from where it lives.
 
 In VS Code: open the notebook, Select Kernel → Python Environments → `.venv` (or any Python 3.10+),
 then Run All. Every input has a low/high range near the top of its section — edit, re-run, and the
