@@ -4,6 +4,19 @@ See [`VERSIONING.md`](VERSIONING.md) for how this file and `VERSION` are kept. T
 of [`MarMar888/hav`](https://github.com/MarMar888/hav)'s `optimization/` folder with its full history
 (MarMar888/hav#98) and keeps the same version line.
 
+## 0.7.0 — 2026-10-30
+
+`willmarley.ipynb` cut down and reorganized: inputs with bounds, the model, then the fastest design
+the bounds allow. The solve now maximizes speed (random search over the bounds plus a hill-climb,
+numpy only) instead of sampling the space and reporting percentiles; the SSS catalog is run through
+the same search per winding, sorted by best speed with ties going to the more forgiving winding. One
+`ok()` check replaces the two copies of the validity rules. Dropped: the per-section explainer charts,
+the correlation matrix, the valid-space bar charts. The inputs → steps → outputs map stays, redrawn
+with the middle nodes named after the functions. Added: an amp-hours vs runtime
+chart for the three picks, and a printed note that the 10C pack cap is a speed cap
+(`C_RATE_MAX × miles × reserve` = 65 mph) because the pack is sized to the race. Minor bump: the
+notebook answers a different question (the best design, not the shape of the space).
+
 ## 0.6.4 — 2026-10-30
 
 `willmarley.ipynb` rewritten to read more plainly, no model change. The prose is shorter and drops

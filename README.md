@@ -7,7 +7,7 @@ the PEP race. Split out of hav's `optimization/` folder with its full git histor
 
 | Model | Status |
 |---|---|
-| [`prop_motor_battery/willmarley.ipynb`](prop_motor_battery/willmarley.ipynb) — how to choose motors, a propeller and a battery: one section per choice, the raw equations, then one solved model that maps the valid and ideal design space and ends with real SSS windings to buy | **Active** |
+| [`prop_motor_battery/willmarley.ipynb`](prop_motor_battery/willmarley.ipynb) — pick motors, a propeller and a battery: inputs with bounds, the model, the fastest design inside the bounds, the SSS catalog run through the same search, and a shopping list | **Active** |
 | Everything in [`archive/`](archive/) — an earlier SciPy joint optimizer, the `explore.ipynb` model and its LaTeX write-up, planning notes, diagrams, a Savitsky calculator | Archived: kept for reference, frozen |
 
 ## Run the notebook
