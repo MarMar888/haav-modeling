@@ -76,7 +76,7 @@ class OptimizationTests(unittest.TestCase):
         s = quick(self.scenario, 3)
         with TemporaryDirectory() as temp:
             out = Path(temp)
-            with patch("optimization.solve.select", wraps=select) as selection:
+            with patch("optimizer.solve.select", wraps=select) as selection:
                 result = optimize(s, out)
                 selection.assert_called_once()
             self.assertEqual(result["optimization_mode"], "continuous_nlp")
