@@ -4,6 +4,16 @@ See [`VERSIONING.md`](VERSIONING.md) for how this file and `VERSION` are kept. T
 of [`MarMar888/hav`](https://github.com/MarMar888/hav)'s `optimization/` folder with its full history
 (MarMar888/hav#98) and keeps the same version line.
 
+## 0.6.2 — 2026-10-30
+
+The flat root becomes two folders (#1), no model change. `prop_motor_battery/` holds the one active
+model, `willmarley.ipynb`, with the `sss_motors.csv` it reads beside it. Everything else — the SciPy
+optimizer (now a package named `optimizer`, run from `archive/`), `explore.ipynb` with its LaTeX
+write-up, the planning notes, the dependency diagrams and the Savitsky calculator — is frozen under
+`archive/`, each with a line in `archive/README.md` saying what it was. The root README now just lists
+the models and how to run the notebook, and `explore.ipynb`'s GitHub fallback and write-up links point
+at this repo instead of hav.
+
 ## 0.6.1 — 2026-10-30
 
 Split into its own repo, `Haav-modeling`, from `MarMar888/hav` (MarMar888/hav#98). No model change. The
