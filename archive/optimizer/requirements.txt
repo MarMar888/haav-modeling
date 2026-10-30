@@ -1,0 +1,4 @@
+finalops @ git+https://github.com/MarMar888/finalops.git@02ebe70a9e19ea584cb525485ddc5e8ac0467620#subdirectory=finalops
+pulp==3.3.0
+pydantic>=2.5,<3
+scipy>=1.11,<2

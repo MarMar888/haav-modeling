@@ -1,4 +1,42 @@
-# Haav
+# Haav modeling
+
+Design-space models for [Haav](https://github.com/MarMar888/hav), a 4-foot autonomous RIB built for
+the PEP race. Split out of hav's `optimization/` folder with its full git history (MarMar888/hav#98).
+
+## Models
+
+| Model | Status |
+|---|---|
+| [`prop_motor_battery/willmarley.ipynb`](prop_motor_battery/willmarley.ipynb) — how to choose motors, a propeller and a battery: one section per choice, the raw equations, then one solved model that maps the valid and ideal design space and ends with real SSS windings to buy | **Active** |
+| Everything in [`archive/`](archive/) — an earlier SciPy joint optimizer, the `explore.ipynb` model and its LaTeX write-up, planning notes, diagrams, a Savitsky calculator | Archived: kept for reference, frozen |
+
+## Run the notebook
+
+Any Jupyter works. The notebook needs only `numpy` and `matplotlib`, and its first cell installs them
+into whatever kernel runs it (`%pip install -q matplotlib numpy`). It reads `sss_motors.csv` from
+beside itself, so run it from where it lives:
+
+```sh
+python3 -m venv .venv
+.venv/bin/pip install jupyterlab
+.venv/bin/jupyter lab prop_motor_battery/willmarley.ipynb
+```
+
+In VS Code: open the notebook, Select Kernel → Python Environments → `.venv` (or any Python 3.10+),
+then Run All. Every input has a low/high range near the top of its section — edit, re-run, and the
+charts, requirements and shopping lists recompute.
+
+Versions and changes: [`VERSION`](VERSION) + [`CHANGELOG.md`](CHANGELOG.md), kept per
+[`VERSIONING.md`](VERSIONING.md).
+
+## Local integration
+
+This checkout also preserves the CAD, hydrostatics outputs, dashboard, research, and earlier
+`optimization/` files from the original `hav` repository. The active modeling notebook above
+is from `haav-modeling`. Earlier paths remain available so existing scripts and documentation
+continue to work; the modeling archive follows the upstream repository layout.
+
+## Preserved Haav project files
 
 **Highly Amphibious / Autonomous Vessel.** A 4-foot autonomous RIB. We build the hull ourselves: a 3D-printed deep-V shell used as a plug, glassed
 outside as the skin and taped inside at the joints, with custom inflatable tubes along the sides and a
@@ -16,7 +54,7 @@ This repo holds five things, each documented where it lives, not here:
 | [`PEP2026TeamExtractions/`](PEP2026TeamExtractions/) | Raw text of the PEP26 Autonomy and Uncrewed Open white papers, with charts of what the teams built (motors, batteries, race points) and a TFL SSS motor catalog | Research data, not part of the design. Doesn't version; see its README |
 | [`docs/`](docs/) | Reference material that isn't part of the design itself | [`docs/PEP-Rules/`](docs/PEP-Rules/) holds the official race rules; [`docs/white-paper/`](docs/white-paper/) is the scaffold for the required 20-point submission, unwritten so far |
 
-## If you're new here
+### If you're new here
 
 1. Read this file (you're doing it).
 2. Read [`docs/PEP-Rules/`](docs/PEP-Rules/) — this is the race the boat is built for, and most of the
@@ -33,13 +71,13 @@ This repo holds five things, each documented where it lives, not here:
 5. If you care about the design math, [`optimization/README.md`](optimization/README.md) has the full
    model — objective, constraints, decision variables, and its limits.
 
-## What's real and what isn't
+### What's real and what isn't
 
 The CAD is a real, dimensioned design you could build today. The BOM tracks real parts and real prices.
 The optimizer runs end to end and returns a feasible boat — but every number in its component catalog is
 a placeholder, and it says so: every result carries `build_ready: false`. Nothing here has touched water.
 
-## Development
+### Development
 
 Three languages, three setups:
 
@@ -53,7 +91,7 @@ before touching `dashboard/`.
 `cad/`, `optimization/`, `dashboard/`, and `docs/` each version independently (their own `VERSION` +
 `CHANGELOG.md`, or `package.json`'s version for `dashboard/`) — see [`docs/VERSIONING.md`](docs/VERSIONING.md).
 
-## Archive
+### Archive
 
 [`archive/thinking/`](archive/thinking/) is the design reasoning from the project's first phase: a bought
 catamaran hull, an Xbox controller, a ~$1,250 budget. The parts list is out of date; most of the reasoning

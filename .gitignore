@@ -24,3 +24,9 @@
 
 # OpenFOAM decomposed solver output (hundreds of MB); regenerate with the case run scripts
 cad/cfd/*/processor*/
+
+.venv/
+__pycache__/
+.pytest_cache/
+runs/
+.ipynb_checkpoints/

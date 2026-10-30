@@ -1,0 +1,31 @@
+graph LR
+  MASS["mass"]
+  M1["margin: loaded_mass_kg<br/>= max_mass_kg - mass"]
+
+  ENERGY["energy_used"]
+  CAP["battery_capacity_wh"]
+  M2["margin: energy_wh<br/>= usable_fraction*capacity - energy_used"]
+
+  SHAFT["shaft_power"]
+  M3["margin: shaft_power_w<br/>= rating_fraction*drive_rating - shaft_power"]
+
+  BUSI["bus_current"]
+  M4["margin: battery_current_a"]
+  M5["margin: drive_current_a"]
+
+  BV["battery.full_voltage_v<br/>(fixed once battery is chosen,<br/>no decision variable sets it)"]
+  M6["margin: system_voltage_v<br/>= voltage_limit_v - full_voltage_v<br/>CONSTANT given a battery choice"]
+  M7["margin: drive_voltage_v<br/>= drive.max_voltage_v - full_voltage_v<br/>CONSTANT given a drive+battery choice"]
+
+  MASS --> M1
+
+  ENERGY --> M2
+  CAP --> M2
+
+  SHAFT --> M3
+
+  BUSI --> M4
+  BUSI --> M5
+
+  BV --> M6
+  BV --> M7
