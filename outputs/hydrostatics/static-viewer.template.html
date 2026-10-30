@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hav — freshwater hydrostatics</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#16313a;background:#f3f5f4;font-synthesis:none}*{box-sizing:border-box}body{margin:0}header{padding:22px 28px;background:#fff;border-bottom:1px solid #dce4e2;display:flex;justify-content:space-between;gap:20px;align-items:center}h1{font-size:22px;letter-spacing:-.7px;margin:0 0 5px}header p{margin:0;font-size:13px;color:#60747a}.badge{font-size:11px;font-weight:650;letter-spacing:1px;padding:9px 12px;background:#e3f1eb;color:#27614b;border-radius:6px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;min-height:calc(100vh - 92px)}main{min-width:0}.metrics{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;margin:20px 20px 0;border:1px solid #dce4e2;border-radius:9px;overflow:hidden}.metric{padding:16px;border-right:1px solid #e4eae8}.metric:last-child{border:0}.metric span{display:block;color:#657c80;font-size:11px;text-transform:uppercase;letter-spacing:.7px}.metric strong{display:block;font-size:23px;font-weight:600;margin:5px 0}.metric small{font-size:11px;color:#61777d}.scene{height:min(65vh,660px);min-height:380px;position:relative;margin:16px 20px 0;border:1px solid #d9e3e3;border-radius:9px;overflow:hidden;background:#e5eeef}canvas{display:block;width:100%;height:100%;touch-action:none}.toolbar{position:absolute;left:14px;top:14px;display:flex;gap:5px;z-index:2}button{font:inherit;font-size:12px;background:#fff;border:1px solid #c5d2d3;padding:8px 11px;border-radius:5px;color:#264951;cursor:pointer}button:hover,button.active{background:#183f49;color:#fff;border-color:#183f49}.caption{position:absolute;bottom:13px;left:15px;font-size:11px;color:#486770;background:#ffffffd9;padding:7px 10px;border-radius:4px;pointer-events:none}.legend{display:flex;gap:18px;margin:14px 24px;flex-wrap:wrap;font-size:12px;color:#48636b}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px}.note{font-size:12px;line-height:1.6;color:#5c737a;margin:12px 24px 24px;max-width:850px}aside{background:#fff;border-left:1px solid #dce4e2;padding:23px 21px}h2{font-size:14px;margin:0 0 15px}section{padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid #e1e8e6}section:last-child{border:0}dl{display:grid;grid-template-columns:1fr auto;gap:10px;font-size:12px;margin:0}dt{color:#6b7e83}dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}.toggles{display:flex;flex-direction:column;gap:11px;font-size:12px}.toggles label{display:flex;align-items:center;gap:8px}input{accent-color:#245a64}.weights{width:100%;font-size:12px;border-collapse:collapse}.weights td{padding:8px 0;border-top:1px solid #edf0ef;vertical-align:top}.weights td:last-child{text-align:right;white-space:nowrap;padding-left:8px;font-variant-numeric:tabular-nums}.weights small{color:#70858b;display:block;font-size:10px;margin-top:3px}.axis{font-size:11px;line-height:1.7;color:#6b8086}.tooltip{display:none;position:absolute;pointer-events:none;background:#173e49;color:white;padding:9px 12px;border-radius:6px;max-width:260px;font-size:12px;line-height:1.5;z-index:3}.error{display:none;position:absolute;inset:70px 25px auto;background:white;padding:20px;border-radius:8px;color:#9b3d31}.noscript{padding:30px}.fine{font-size:11px;line-height:1.6;color:#6b8086}footer{font-size:11px;line-height:1.6;color:#71868b;margin-top:18px}@media(max-width:850px){.layout{grid-template-columns:1fr}aside{border-left:0;border-top:1px solid #dce4e2}.metrics{grid-template-columns:repeat(2,1fr)}.metric:nth-child(2){border:0}.scene{height:55vh}header{padding:18px 20px}.badge{display:none}}@media(max-width:480px){.toolbar{flex-wrap:wrap;right:10px}.scene{margin:12px 10px 0}.metrics{margin:12px 10px 0}.metric strong{font-size:20px}}
+</style>
+</head>
+<body>
+<header><div><h1>Hav / hydrostatics</h1><p>72 in hull · freshwater · initial loading condition</p></div><div class="badge" id="status">CALCULATED EQUILIBRIUM</div></header>
+<div class="layout"><main>
+<div class="metrics">
+<div class="metric"><span>All-up weight</span><strong id="weight"></strong><small>Hull included in frame weight</small></div>
+<div class="metric"><span>Stern waterline</span><strong id="stern"></strong><small>Above Z = 0 baseline</small></div>
+<div class="metric"><span>Trim</span><strong id="trim"></strong><small>Stern down</small></div>
+<div class="metric"><span>Heel</span><strong id="heel"></strong><small>Positive X side down</small></div>
+</div>
+<div class="scene" id="scene">
+<div class="toolbar"><button data-view="iso" class="active">Perspective</button><button data-view="side">Side</button><button data-view="top">Top</button><button data-view="stern">Stern</button><button id="reset">Reset</button></div>
+<canvas id="canvas" aria-label="Interactive 3D hull settled on a freshwater surface"></canvas>
+<div class="caption">Drag to orbit · scroll to zoom · hover over a marker</div><div class="tooltip" id="tooltip"></div><div class="error" id="error"></div>
+</div>
+<div class="legend"><span><i class="dot" style="background:#a8c7ce"></i>Hull envelope</span><span><i class="dot" style="background:#28799c"></i>Submerged hull</span><span><i class="dot" style="background:#e5a328"></i>Center of gravity</span><span><i class="dot" style="background:#bb4d59"></i>Center of buoyancy</span><span><i class="dot" style="background:#486970"></i>Component centers</span></div>
+<p class="note">The boat is shown at its calculated attitude with a level water surface. Component markers indicate their centers of mass; their sizes are symbolic. The hull is a filled buoyancy envelope, so the upper CAD closure is visible.</p>
+<noscript><p class="noscript">Enable JavaScript to display the model. Numerical results are also in static-results.json.</p></noscript>
+</main><aside>
+<section><h2>Floating condition</h2><dl id="condition"></dl></section>
+<section><h2>Display</h2><div class="toggles"><label><input id="water" type="checkbox" checked> Water surface</label><label><input id="hull" type="checkbox" checked> Transparent hull envelope</label><label><input id="wet" type="checkbox" checked> Submerged hull</label><label><input id="markers" type="checkbox" checked> Centers of gravity and buoyancy</label><label><input id="components" type="checkbox" checked> Component centers</label></div></section>
+<section><h2>Included weights</h2><table class="weights"><tbody id="weights"></tbody></table></section>
+<section><h2>Centers in CAD coordinates</h2><dl id="centers"></dl><p class="axis">X across · Y forward from stern · Z upward<br>Positions in inches. Hull: 72 × 24.904 × 12 in.</p></section>
+<div class="fine">Freshwater density: 1,000 kg/m³. Blank mass rows are excluded. Frame mass and its center represent the combined frame/hull assembly. Tubes and appendages contribute no buoyancy in this model. Calm water only.</div>
+<footer>This is a saved loading condition. To update after changing the CSV, rerun the solver and viewer builder as described in STATIC-MODEL.md.</footer>
+</aside></div>
+<script id="three-library">__THREE_LIBRARY__</script>
+<script id="model-data" type="application/json">__MODEL_DATA__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('model-data').textContent),r=data.results;
+const $=id=>document.getElementById(id),fmt=(x,n=3)=>Number(x).toFixed(n);
+$('weight').textContent=fmt(r.total_weight_lbs)+' lb';$('stern').textContent=fmt(r.stern_centerline_waterline_z_in,2)+' in';$('trim').textContent=fmt(Math.abs(r.pitch_deg),3)+'°';$('heel').textContent=fmt(Math.abs(r.roll_deg),3)+'°';
+function dl(id,rows){for(const [name,value] of rows){const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=name;dd.textContent=value;$(id).append(dt,dd)}}
+dl('condition',[['Displaced volume',fmt(r.displacement_ft3)+' ft³'],['Buoyant weight',fmt(r.buoyant_weight_lbs)+' lb'],['Waterline length',fmt(r.waterline_y_limits_in[1]-r.waterline_y_limits_in[0],2)+' in¹'],['Local restoring response',r.locally_restoring?'Roll and pitch':'Not established']]);
+dl('centers',[['Gravity X / Y / Z',r.cg_in.map(v=>fmt(v,2)).join(' / ')],['Buoyancy X / Y / Z',r.cb_in.map(v=>fmt(v,2)).join(' / ')]]);
+const footnote=document.createElement('p');footnote.className='fine';footnote.textContent='¹ Extent along the hull’s longitudinal CAD axis.';$('condition').after(footnote);
+for(const c of r.components){const tr=document.createElement('tr'),td=document.createElement('td'),num=document.createElement('td');td.textContent=c.id==='backbone'?'Frame + hull assembly':c.name;const small=document.createElement('small');small.textContent=c.cg_in.map(v=>fmt(v,2)).join(' / ')+' in';td.append(small);num.textContent=fmt(c.mass_lbs)+' lb';tr.append(td,num);$('weights').append(tr)}
+try{
+const scene=new THREE.Scene();scene.background=new THREE.Color('#e5eeef');
+const camera=new THREE.PerspectiveCamera(36,1,.1,1200);camera.up.set(0,0,1);
+const renderer=new THREE.WebGLRenderer({canvas:$('canvas'),antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;
+scene.add(new THREE.HemisphereLight(0xffffff,0x6b8792,2.2));const light=new THREE.DirectionalLight(0xffffff,2.2);light.position.set(-30,-60,100);scene.add(light);
+const R=r.rotation_body_to_world,origin=r.waterplane_origin_in;
+function world(p){const q=p.map((v,i)=>v-origin[i]);return new THREE.Vector3(...R.map(row=>row.reduce((a,v,i)=>a+v*q[i],0)))}
+function geometry(tris){const g=new THREE.BufferGeometry();const positions=[];for(const t of tris)for(const p of t){const v=world(p);positions.push(v.x,v.y,v.z)}g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.computeVertexNormals();return g}
+const hull=new THREE.Mesh(geometry(data.hull_triangles),new THREE.MeshStandardMaterial({color:0xa8c7ce,metalness:.05,roughness:.5,side:THREE.DoubleSide,transparent:true,opacity:.27,depthWrite:false}));hull.renderOrder=2;scene.add(hull);
+const wet=new THREE.Mesh(geometry(data.submerged_triangles),new THREE.MeshStandardMaterial({color:0x28799c,roughness:.6,side:THREE.DoubleSide,transparent:true,opacity:.7}));wet.renderOrder=1;scene.add(wet);
+const water=new THREE.Group();const surface=new THREE.Mesh(new THREE.PlaneGeometry(120,130),new THREE.MeshBasicMaterial({color:0x79b3c5,transparent:true,opacity:.18,side:THREE.DoubleSide,depthWrite:false}));surface.position.set(0,12,-.025);water.add(surface);
+const gridPositions=[];for(let x=-60;x<=60;x+=6)gridPositions.push(x,-53,-.04,x,77,-.04);for(let y=-53;y<=77;y+=6)gridPositions.push(-60,y,-.04,60,y,-.04);
+const gg=new THREE.BufferGeometry();gg.setAttribute('position',new THREE.Float32BufferAttribute(gridPositions,3));water.add(new THREE.LineSegments(gg,new THREE.LineBasicMaterial({color:0x8bafba,transparent:true,opacity:.34})));scene.add(water);
+const waterline=new THREE.Group();for(const line of data.waterline){const g=new THREE.BufferGeometry().setFromPoints(line.map(world));waterline.add(new THREE.Line(g,new THREE.LineBasicMaterial({color:0x164e68})))}scene.add(waterline);
+const markers=new THREE.Group(),components=new THREE.Group(),pickables=[];scene.add(markers,components);
+function sphere(parent,p,color,size,description){const m=new THREE.Mesh(new THREE.SphereGeometry(size,20,12),new THREE.MeshBasicMaterial({color,depthTest:false}));m.position.copy(world(p));m.renderOrder=5;m.userData.description=description;parent.add(m);pickables.push(m);return m}
+sphere(markers,r.cg_in,0xe5a328,.7,'Center of gravity · '+r.cg_in.map(v=>fmt(v,3)).join(' / ')+' in');
+sphere(markers,r.cb_in,0xbb4d59,.65,'Center of buoyancy · '+r.cb_in.map(v=>fmt(v,3)).join(' / ')+' in');
+const forcePositions=[];for(const [p,color] of [[r.cg_in,0xe5a328],[r.cb_in,0xbb4d59]]){const start=world(p);const direction=new THREE.Vector3(0,0,p===r.cg_in?-1:1);markers.add(new THREE.ArrowHelper(direction,start,4,color,.9,.45))}
+for(const c of r.components){sphere(components,c.cg_in,0x486970,.4,(c.id==='backbone'?'Frame + hull':c.name)+' · '+fmt(c.mass_lbs)+' lb · '+c.cg_in.map(v=>fmt(v,2)).join(' / ')+' in')}
+let target=new THREE.Vector3(0,12,0),azimuth=-1.05,elevation=.52,distance=128;
+function updateCamera(){camera.position.set(target.x+distance*Math.cos(elevation)*Math.cos(azimuth),target.y+distance*Math.cos(elevation)*Math.sin(azimuth),target.z+distance*Math.sin(elevation));camera.lookAt(target);renderer.render(scene,camera)}
+function resize(){const rect=$('scene').getBoundingClientRect();renderer.setSize(rect.width,rect.height,false);camera.aspect=rect.width/rect.height;camera.updateProjectionMatrix();updateCamera()}
+new ResizeObserver(resize).observe($('scene'));
+const views={iso:[-1.05,.52],side:[0,.001],top:[-Math.PI/2,Math.PI/2-.001],stern:[-Math.PI/2,.001]};
+function setView(name){[azimuth,elevation]=views[name];for(const b of document.querySelectorAll('[data-view]'))b.classList.toggle('active',b.dataset.view===name);updateCamera()}
+for(const b of document.querySelectorAll('[data-view]'))b.onclick=()=>setView(b.dataset.view);
+$('reset').onclick=()=>{distance=128;target.set(0,12,0);setView('iso')};
+let drag=null;const canvas=$('canvas');canvas.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId);$('tooltip').style.display='none'});
+canvas.addEventListener('pointerup',()=>drag=null);canvas.addEventListener('pointercancel',()=>drag=null);
+const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
+canvas.addEventListener('pointermove',e=>{if(drag){azimuth-=(e.clientX-drag.x)*.008;elevation=Math.max(-1.45,Math.min(1.56,elevation+(e.clientY-drag.y)*.008));drag={x:e.clientX,y:e.clientY};for(const b of document.querySelectorAll('[data-view]'))b.classList.remove('active');updateCamera();return}const rect=canvas.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);const visible=pickables.filter(m=>m.parent.visible);const hits=raycaster.intersectObjects(visible);const tooltip=$('tooltip');tooltip.style.display=hits.length?'block':'none';if(hits.length){tooltip.textContent=hits[0].object.userData.description;tooltip.style.left=Math.max(8,Math.min(rect.width-260,e.clientX-rect.left+12))+'px';tooltip.style.top=Math.max(8,e.clientY-rect.top-55)+'px'}});
+canvas.addEventListener('pointerleave',()=>$('tooltip').style.display='none');canvas.addEventListener('wheel',e=>{e.preventDefault();distance=Math.max(40,Math.min(350,distance*Math.exp(e.deltaY*.001)));updateCamera()},{passive:false});
+for(const [id,object] of [['water',water],['hull',hull],['wet',wet],['markers',markers],['components',components]])$(id).addEventListener('change',()=>{object.visible=$(id).checked;updateCamera()});
+resize();window.havViewer={renderer,scene,camera,results:r,ready:true};
+}catch(error){$('error').style.display='block';$('error').textContent='The 3D view could not start: '+error.message+'. The numerical results remain available above.';console.error(error)}
+</script></body></html>
