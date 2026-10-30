@@ -12,15 +12,18 @@ the PEP race. Split out of hav's `optimization/` folder with its full git histor
 
 ## Run the notebook
 
-Any Jupyter works. The notebook needs only `numpy` and `matplotlib`, and its first cell installs them
-into whatever kernel runs it (`%pip install -q matplotlib numpy`). It reads `sss_motors.csv` from
-beside itself, so run it from where it lives:
+Needs Python 3.10+. One command builds `.venv` with everything the notebook uses (`requirements.txt`:
+`numpy`, `matplotlib`, `jupyterlab`) and opens it:
 
 ```sh
-python3 -m venv .venv
-.venv/bin/pip install jupyterlab
-.venv/bin/jupyter lab prop_motor_battery/willmarley.ipynb
+make setup      # create .venv and install requirements.txt
+make notebook   # open prop_motor_battery/willmarley.ipynb in JupyterLab
+make clean      # delete .venv
 ```
+
+`make setup PYTHON=python3.12` picks a different interpreter. Any other Jupyter works too: the
+notebook's first cell installs `numpy` and `matplotlib` into whatever kernel runs it. It reads
+`sss_motors.csv` from beside itself, so run it from where it lives.
 
 In VS Code: open the notebook, Select Kernel → Python Environments → `.venv` (or any Python 3.10+),
 then Run All. Every input has a low/high range near the top of its section — edit, re-run, and the

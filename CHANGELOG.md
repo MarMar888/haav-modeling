@@ -4,6 +4,13 @@ See [`VERSIONING.md`](VERSIONING.md) for how this file and `VERSION` are kept. T
 of [`MarMar888/hav`](https://github.com/MarMar888/hav)'s `optimization/` folder with its full history
 (MarMar888/hav#98) and keeps the same version line.
 
+## 0.6.3 — 2026-10-30
+
+Environment setup, no model change. A root `requirements.txt` (`numpy`, `matplotlib`, `jupyterlab` — what
+`willmarley.ipynb` uses) and a `Makefile`: `make setup` builds `.venv` and installs it (re-running only when
+`requirements.txt` changes), `make notebook` opens the active model, `make clean` removes `.venv`. The README's
+run instructions now point at these. The frozen `archive/` requirements files are untouched.
+
 ## 0.6.2 — 2026-10-30
 
 The flat root becomes two folders (#1), no model change. `prop_motor_battery/` holds the one active
