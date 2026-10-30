@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1018.8pt" height="847.60425pt" viewBox="0 0 1018.8 847.60425" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-30T13:43:48.592699</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 847.60425 
+L 1018.8 847.60425 
+L 1018.8 0 
+L 0 0 
+z
+" style="fill: #f5f7fb"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 106.837666 180.889211 
+Q 304.333894 202.844127 500.163338 224.613753 
+" clip-path="url(#p9e07a2fd06)" style="fill: none; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 495.282436 221.455145 
+L 500.163338 224.613753 
+L 494.707911 226.623309 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #687a91; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 302.10478 181.093931 
+Q 401.985147 202.844282 500.226867 224.237795 
+" clip-path="url(#p9e07a2fd06)" style="fill: none; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 495.699164 220.590891 
+L 500.226867 224.237795 
+L 494.592722 225.671814 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #687a91; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 495.821398 182.636262 
+Q 499.635429 202.846522 503.13846 221.408821 
+" clip-path="url(#p9e07a2fd06)" style="fill: none; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 504.729053 215.816861 
+L 503.13846 221.408821 
+L 499.619248 216.781171 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #687a91; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 688.801862 181.130476 
+Q 597.283316 202.844649 507.396521 224.171666 
+" clip-path="url(#p9e07a2fd06)" style="fill: none; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 513.056284 225.500982 
+L 507.396521 224.171666 
+L 511.855832 220.441445 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #687a91; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 884.064079 180.898686 
+Q 694.935643 202.844175 507.473081 224.596365 
+" clip-path="url(#p9e07a2fd06)" style="fill: none; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 512.938104 226.579677 
+L 507.473081 224.596365 
+L 512.338744 221.414334 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #687a91; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 334.629932 358.96551 
+Q 291.780744 380.25188 250.43349 400.792129 
+" clip-path="url(#p9e07a2fd06)" style="fill: none; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 256.247247 400.807152 
+L 250.43349 400.792129 
+L 253.933763 396.150137 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #687a91; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 678.422164 359.248395 
+Q 707.489551 380.251926 735.19762 400.27324 
+" clip-path="url(#p9e07a2fd06)" style="fill: none; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 732.505577 395.120289 
+L 735.19762 400.27324 
+L 729.460033 399.335103 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #687a91; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 249.074813 508.281801 
+Q 319.679796 527.168195 388.664688 545.621226 
+" clip-path="url(#p9e07a2fd06)" style="fill: none; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 384.313164 541.765809 
+L 388.664688 545.621226 
+L 382.96944 546.789194 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #687a91; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 736.281118 508.393127 
+Q 679.588687 527.168685 624.488271 545.416995 
+" clip-path="url(#p9e07a2fd06)" style="fill: none; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 630.242013 546.250332 
+L 624.488271 545.416995 
+L 628.607186 541.314003 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #687a91; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 509.4 631.7341 
+Q 509.4 646.363427 509.4 659.315704 
+" clip-path="url(#p9e07a2fd06)" style="fill: none; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 512 654.115704 
+L 509.4 659.315704 
+L 506.8 654.115704 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #687a91; stroke: #687a91; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 24px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #192c43" x="18.36" y="25.43625" transform="rotate(-0 18.36 25.43625)">How hull adjustments change drag and power</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #52637b" x="18.36" y="53.15625" transform="rotate(-0 18.36 53.15625)">Current-hull notebook • causal calculation map • arrows show dependencies, not universal increase/decrease rules</text>
+   </g>
+   <g id="patch_12">
+    <path d="M 22.824 183.99465 
+L 186.876 183.99465 
+Q 194.688 183.99465 194.688 176.23305 
+L 194.688 85.31145 
+Q 194.688 77.54985 186.876 77.54985 
+L 22.824 77.54985 
+Q 15.012 77.54985 15.012 85.31145 
+L 15.012 176.23305 
+Q 15.012 183.99465 22.824 183.99465 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #e7efff; stroke: #4675bd; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 218.124 183.99465 
+L 382.176 183.99465 
+Q 389.988 183.99465 389.988 176.23305 
+L 389.988 85.31145 
+Q 389.988 77.54985 382.176 77.54985 
+L 218.124 77.54985 
+Q 210.312 77.54985 210.312 85.31145 
+L 210.312 176.23305 
+Q 210.312 183.99465 218.124 183.99465 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #e7efff; stroke: #4675bd; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 413.424 183.99465 
+L 577.476 183.99465 
+Q 585.288 183.99465 585.288 176.23305 
+L 585.288 85.31145 
+Q 585.288 77.54985 577.476 77.54985 
+L 413.424 77.54985 
+Q 405.612 77.54985 405.612 85.31145 
+L 405.612 176.23305 
+Q 405.612 183.99465 413.424 183.99465 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #e7efff; stroke: #4675bd; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 608.724 183.99465 
+L 772.776 183.99465 
+Q 780.588 183.99465 780.588 176.23305 
+L 780.588 85.31145 
+Q 780.588 77.54985 772.776 77.54985 
+L 608.724 77.54985 
+Q 600.912 77.54985 600.912 85.31145 
+L 600.912 176.23305 
+Q 600.912 183.99465 608.724 183.99465 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #e7efff; stroke: #4675bd; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 804.024 183.99465 
+L 968.076 183.99465 
+Q 975.888 183.99465 975.888 176.23305 
+L 975.888 85.31145 
+Q 975.888 77.54985 968.076 77.54985 
+L 804.024 77.54985 
+Q 796.212 77.54985 796.212 85.31145 
+L 796.212 176.23305 
+Q 796.212 183.99465 804.024 183.99465 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #e7efff; stroke: #4675bd; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 151.164 361.40265 
+L 867.636 361.40265 
+Q 875.448 361.40265 875.448 353.64105 
+L 875.448 229.45545 
+Q 875.448 221.69385 867.636 221.69385 
+L 151.164 221.69385 
+Q 143.352 221.69385 143.352 229.45545 
+L 143.352 353.64105 
+Q 143.352 361.40265 151.164 361.40265 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #e7f4f0; stroke: #27806d; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 45.144 511.09065 
+L 449.136 511.09065 
+Q 456.948 511.09065 456.948 503.32905 
+L 456.948 406.86345 
+Q 456.948 399.10185 449.136 399.10185 
+L 45.144 399.10185 
+Q 37.332 399.10185 37.332 406.86345 
+L 37.332 503.32905 
+Q 37.332 511.09065 45.144 511.09065 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #fff0df; stroke: #bf7624; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 564.084 511.09065 
+L 968.076 511.09065 
+Q 975.888 511.09065 975.888 503.32905 
+L 975.888 406.86345 
+Q 975.888 399.10185 968.076 399.10185 
+L 564.084 399.10185 
+Q 556.272 399.10185 556.272 406.86345 
+L 556.272 503.32905 
+Q 556.272 511.09065 564.084 511.09065 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #fff0df; stroke: #bf7624; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 218.124 633.05865 
+L 800.676 633.05865 
+Q 808.488 633.05865 808.488 625.29705 
+L 808.488 551.00745 
+Q 808.488 543.24585 800.676 543.24585 
+L 218.124 543.24585 
+Q 210.312 543.24585 210.312 551.00745 
+L 210.312 625.29705 
+Q 210.312 633.05865 218.124 633.05865 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #fff0df; stroke: #bf7624; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 218.124 749.48265 
+L 800.676 749.48265 
+Q 808.488 749.48265 808.488 741.72105 
+L 808.488 667.43145 
+Q 808.488 659.66985 800.676 659.66985 
+L 218.124 659.66985 
+Q 210.312 659.66985 210.312 667.43145 
+L 210.312 741.72105 
+Q 210.312 749.48265 218.124 749.48265 
+z
+" clip-path="url(#p9e07a2fd06)" style="fill: #e9e5fa; stroke: #7460ae; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #7460ae" x="18.36" y="779.42025" transform="rotate(-0 18.36 779.42025)">PLANING EARLIER: also need thrust available vs. speed and the displacement / transition resistance curve.</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #52637b" x="18.36" y="807.14025" transform="rotate(-0 18.36 807.14025)">These are outside this notebook. Acceleration follows (horizontal thrust available − resistance) / mass.</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #52637b" x="18.36" y="834.86025" transform="rotate(-0 18.36 834.86025)">Model limits: Cv = 1 is a calculation cutoff, not planing onset. Current baseline wetting exceeds the assumed uniform aft section.</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #192c43" x="104.85" y="107.385203" transform="rotate(-0 104.85 107.385203)">LOAD</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(80.965391 130.816594)">mass_kg</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(61.548672 147.469563)">Weight W = mg</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #192c43" x="300.15" y="107.385203" transform="rotate(-0 300.15 107.385203)">BALANCE</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(262.624531 130.816594)">lcg_m, vcg_m</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(233.963516 148.102922)">CG forward / above keel</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #192c43" x="495.45" y="107.385203" transform="rotate(-0 495.45 107.385203)">HULL SHAPE</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(431.349219 130.816594)">beam_m, deadrise_deg</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(431.283047 147.469563)">Lift + wetted geometry</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #192c43" x="690.75" y="107.385203" transform="rotate(-0 690.75 107.385203)">THRUST LINE</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(624.178516 130.969563)">angle, height, x position</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(612.979141 147.469563)">Vertical force + pitch torque</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #192c43" x="886.05" y="107.385203" transform="rotate(-0 886.05 107.385203)">OPERATING POINT</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(818.432656 130.969563)">speed, density, viscosity</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(830.092656 147.469563)">roughness → friction</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #192c43" x="509.4" y="251.530219" transform="rotate(-0 509.4 251.530219)">COUPLED EQUILIBRIUM: solve trim τ and wetted keel length Lk together</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(327.291563 276.1395)">Vertical: lift − friction·sin(τ) − weight + thrust·sin(τ + ε) = 0</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(314.32875 294.1395)">Pitch: pressure moment + friction moment + thrust moment = 0</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(282.520313 312.1395)">CG and thrust line set moments; trim and wetted length change the forces.</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #192c43" x="247.14" y="428.937203" transform="rotate(-0 247.14 428.937203)">PRESSURE / LIFT DRAG</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(202.68 453.540938)">Dp = L · tan(τ)</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(111.147188 471.5475)">At fixed lift: more trim → more pressure drag.</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #192c43" x="766.08" y="428.937203" transform="rotate(-0 766.08 428.937203)">WETTED SURFACE / FRICTION</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 10.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(628.72425 452.316375)">Ff = ½ρ(Cf + ΔCf) S V²; horizontal drag = Ff cos(τ)</text>
+    <text style="font-size: 10.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(619.7805 468.516375)">Wetted geometry + speed + ν → Re → Cf; finish → ΔCf</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #192c43" x="509.4" y="573.081203" transform="rotate(-0 509.4 573.081203)">TOTAL HORIZONTAL RESISTANCE</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #26384e" x="509.4" y="597.550875" transform="rotate(-0 509.4 597.550875)">R = Dp + Ff cos(τ)       |       Required shaft thrust: T = R / cos(τ + ε)</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #192c43" x="509.4" y="689.506219" transform="rotate(-0 509.4 689.506219)">COMPARE AT THE SAME SPEED: lower R → lower effective power</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 11.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(340.247578 713.467766)">PE = R · V       |       Energy per distance = PE / V = R  (J/m)</text>
+    <text style="font-size: 11.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; fill: #26384e" transform="translate(308.295547 730.852531)">Trim is a tradeoff: pressure drag and wetted-area friction both matter.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p9e07a2fd06">
+   <rect x="7.2" y="8.80425" width="1004.4" height="831.6"/>
+  </clipPath>
+ </defs>
+</svg>

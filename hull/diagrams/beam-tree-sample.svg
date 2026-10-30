@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1550" viewBox="0 0 1600 1550" role="img" aria-labelledby="title desc">
+<title id="title">Beam decision-tree sample: individual consequence nodes</title>
+<desc id="desc">Increase or decrease beam, follow the wetted-length changes, then branch Reynolds number by an explicit threshold and follow its consequences for friction coefficient. This expands one path only, not all beam effects.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#8191a7"/></marker><style>text{font-family:Arial,Helvetica,sans-serif;fill:#20324b}.edge{fill:none;stroke:#8191a7;stroke-width:2;marker-end:url(#arrow)}</style></defs>
+<rect width="1600" height="1550" fill="#f7f9fd"/>
+<text x="50" y="46" font-size="28" font-weight="bold" text-anchor="start" style="fill:#20324b">A beam change, followed one consequence at a time</text>
+<text x="50" y="78" font-size="17" font-weight="normal" text-anchor="start" style="fill:#20324b">Sample path: beam → wetted geometry → Reynolds number → friction coefficient</text>
+<text x="50" y="109" font-size="14" font-weight="normal" text-anchor="start" style="fill:#61718a">Hold τ, Lk, V, β and water properties fixed; 0 &lt; τ, β &lt; 90°. Follow this path while chines remain wet: Lc &gt; 0.</text>
+<rect x="630.0" y="143" width="340" height="96" rx="12" fill="#203b60" stroke="#203b60" stroke-width="1.5"/>
+<text x="800" y="171" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#fff">CHINE BEAM · b</text>
+<text x="800" y="196" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#fff">Start with an increase or decrease</text>
+<path class="edge" d="M800,239 V274.5 H400 V310"/>
+<rect x="346.5" y="261" width="107.0" height="22" rx="5" fill="#f7f9fd"/>
+<text x="400" y="276" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">INCREASE b</text>
+<rect x="235.0" y="310" width="330" height="96" rx="12" fill="#e8efff" stroke="#779ad4" stroke-width="1.5"/>
+<text x="400" y="338" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">WETTING DIFFERENCE · ΔL ↑</text>
+<text x="400" y="363" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">ΔL = b tanβ / (π tanτ)</text>
+<text x="400" y="384" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Linear in b · exponent +1</text>
+<path class="edge" d="M400,406 V443.0 H220 V480"/>
+<rect x="158.8" y="436" width="122.4" height="22" rx="5" fill="#f7f9fd"/>
+<text x="220" y="451" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">ΔLc = −Δ(ΔL)</text>
+<path class="edge" d="M400,406 V443.0 H530 V480"/>
+<rect x="464.95" y="436" width="130.10000000000002" height="22" rx="5" fill="#f7f9fd"/>
+<text x="530" y="451" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">Δℓ = −½ Δ(ΔL)</text>
+<rect x="85.0" y="480" width="270" height="96" rx="12" fill="#fff0e4" stroke="#d59e76" stroke-width="1.5"/>
+<text x="220" y="508" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">CHINE WET LENGTH · Lc ↓</text>
+<text x="220" y="533" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Lc = Lk − ΔL</text>
+<text x="220" y="554" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Equal, opposite absolute change</text>
+<rect x="380.0" y="480" width="300" height="96" rx="12" fill="#fff0e4" stroke="#d59e76" stroke-width="1.5"/>
+<text x="530" y="508" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">MEAN WET LENGTH · ℓ ↓</text>
+<text x="530" y="533" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">ℓ = (Lk + Lc)/2 = Lk − ΔL/2</text>
+<text x="530" y="554" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Half, opposite absolute change</text>
+<path class="edge" d="M530,576 V605.5 H530 V635"/>
+<rect x="438.0" y="593" width="184.0" height="22" rx="5" fill="#f7f9fd"/>
+<text x="530" y="608" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">ℓ and b act together</text>
+<rect x="380.0" y="635" width="300" height="96" rx="12" fill="#fff0e4" stroke="#d59e76" stroke-width="1.5"/>
+<text x="530" y="663" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">WET LENGTH / BEAM · λ ↓</text>
+<text x="530" y="688" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">λ = ℓ / b</text>
+<text x="530" y="709" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">ℓ decreases AND b increases</text>
+<path class="edge" d="M530,731 V764.0 H400 V797"/>
+<rect x="265.65" y="753" width="268.70000000000005" height="22" rx="5" fill="#f7f9fd"/>
+<text x="400" y="768" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">λ changes bottom-flow factor fv</text>
+<rect x="70.0" y="797" width="660" height="120" rx="12" fill="#eee8fa" stroke="#b29cd3" stroke-width="1.5"/>
+<text x="400" y="825" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">REYNOLDS NUMBER · Re</text>
+<text x="400" y="850" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Re = (V/ν) × ℓ × √fv</text>
+<text x="400" y="871" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">ℓ factor: exponent +1 · fv factor: +½</text>
+<text x="400" y="892" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Combine BOTH factors to determine direction</text>
+<path class="edge" d="M400,917 V964.5 H240 V1012"/>
+<rect x="151.85" y="950" width="176.3" height="22" rx="5" fill="#f7f9fd"/>
+<text x="240" y="965" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">g &gt; 1 → INCREASE Re</text>
+<path class="edge" d="M400,917 V964.5 H560 V1012"/>
+<rect x="471.85" y="950" width="176.3" height="22" rx="5" fill="#f7f9fd"/>
+<text x="560" y="965" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">g &lt; 1 → DECREASE Re</text>
+<rect x="97.5" y="1012" width="285" height="96" rx="12" fill="#e8efff" stroke="#779ad4" stroke-width="1.5"/>
+<text x="240" y="1040" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">REYNOLDS NUMBER ↑</text>
+<text x="240" y="1065" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">The combined multiplier g &gt; 1</text>
+<rect x="417.5" y="1012" width="285" height="96" rx="12" fill="#fff0e4" stroke="#d59e76" stroke-width="1.5"/>
+<text x="560" y="1040" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">REYNOLDS NUMBER ↓</text>
+<text x="560" y="1065" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">The combined multiplier g &lt; 1</text>
+<path class="edge" d="M240,1108 V1144.0 H240 V1180"/>
+<rect x="178.8" y="1133" width="122.4" height="22" rx="5" fill="#f7f9fd"/>
+<text x="240" y="1148" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">Cf decreases</text>
+<path class="edge" d="M560,1108 V1144.0 H560 V1180"/>
+<rect x="498.8" y="1133" width="122.4" height="22" rx="5" fill="#f7f9fd"/>
+<text x="560" y="1148" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">Cf increases</text>
+<rect x="97.5" y="1180" width="285" height="96" rx="12" fill="#fff0e4" stroke="#d59e76" stroke-width="1.5"/>
+<text x="240" y="1208" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">FRICTION COEFFICIENT · Cf ↓</text>
+<text x="240" y="1233" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Cf = 0.075/(log10(Re) − 2)²</text>
+<text x="240" y="1254" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Inverse shifted-log-square response</text>
+<rect x="417.5" y="1180" width="285" height="96" rx="12" fill="#e8efff" stroke="#779ad4" stroke-width="1.5"/>
+<text x="560" y="1208" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">FRICTION COEFFICIENT · Cf ↑</text>
+<text x="560" y="1233" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Cf = 0.075/(log10(Re) − 2)²</text>
+<text x="560" y="1254" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Inverse shifted-log-square response</text>
+<path class="edge" d="M800,239 V274.5 H1200 V310"/>
+<rect x="1146.5" y="261" width="107.0" height="22" rx="5" fill="#f7f9fd"/>
+<text x="1200" y="276" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">DECREASE b</text>
+<rect x="1035.0" y="310" width="330" height="96" rx="12" fill="#fff0e4" stroke="#d59e76" stroke-width="1.5"/>
+<text x="1200" y="338" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">WETTING DIFFERENCE · ΔL ↓</text>
+<text x="1200" y="363" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">ΔL = b tanβ / (π tanτ)</text>
+<text x="1200" y="384" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Linear in b · exponent +1</text>
+<path class="edge" d="M1200,406 V443.0 H1020 V480"/>
+<rect x="958.8" y="436" width="122.4" height="22" rx="5" fill="#f7f9fd"/>
+<text x="1020" y="451" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">ΔLc = −Δ(ΔL)</text>
+<path class="edge" d="M1200,406 V443.0 H1330 V480"/>
+<rect x="1264.95" y="436" width="130.10000000000002" height="22" rx="5" fill="#f7f9fd"/>
+<text x="1330" y="451" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">Δℓ = −½ Δ(ΔL)</text>
+<rect x="885.0" y="480" width="270" height="96" rx="12" fill="#e8efff" stroke="#779ad4" stroke-width="1.5"/>
+<text x="1020" y="508" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">CHINE WET LENGTH · Lc ↑</text>
+<text x="1020" y="533" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Lc = Lk − ΔL</text>
+<text x="1020" y="554" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Equal, opposite absolute change</text>
+<rect x="1180.0" y="480" width="300" height="96" rx="12" fill="#e8efff" stroke="#779ad4" stroke-width="1.5"/>
+<text x="1330" y="508" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">MEAN WET LENGTH · ℓ ↑</text>
+<text x="1330" y="533" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">ℓ = (Lk + Lc)/2 = Lk − ΔL/2</text>
+<text x="1330" y="554" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Half, opposite absolute change</text>
+<path class="edge" d="M1330,576 V605.5 H1330 V635"/>
+<rect x="1238.0" y="593" width="184.0" height="22" rx="5" fill="#f7f9fd"/>
+<text x="1330" y="608" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">ℓ and b act together</text>
+<rect x="1180.0" y="635" width="300" height="96" rx="12" fill="#e8efff" stroke="#779ad4" stroke-width="1.5"/>
+<text x="1330" y="663" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">WET LENGTH / BEAM · λ ↑</text>
+<text x="1330" y="688" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">λ = ℓ / b</text>
+<text x="1330" y="709" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">ℓ increases AND b decreases</text>
+<path class="edge" d="M1330,731 V764.0 H1200 V797"/>
+<rect x="1065.65" y="753" width="268.70000000000005" height="22" rx="5" fill="#f7f9fd"/>
+<text x="1200" y="768" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">λ changes bottom-flow factor fv</text>
+<rect x="870.0" y="797" width="660" height="120" rx="12" fill="#eee8fa" stroke="#b29cd3" stroke-width="1.5"/>
+<text x="1200" y="825" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">REYNOLDS NUMBER · Re</text>
+<text x="1200" y="850" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Re = (V/ν) × ℓ × √fv</text>
+<text x="1200" y="871" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">ℓ factor: exponent +1 · fv factor: +½</text>
+<text x="1200" y="892" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Combine BOTH factors to determine direction</text>
+<path class="edge" d="M1200,917 V964.5 H1040 V1012"/>
+<rect x="951.85" y="950" width="176.3" height="22" rx="5" fill="#f7f9fd"/>
+<text x="1040" y="965" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">g &gt; 1 → INCREASE Re</text>
+<path class="edge" d="M1200,917 V964.5 H1360 V1012"/>
+<rect x="1271.85" y="950" width="176.3" height="22" rx="5" fill="#f7f9fd"/>
+<text x="1360" y="965" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">g &lt; 1 → DECREASE Re</text>
+<rect x="897.5" y="1012" width="285" height="96" rx="12" fill="#e8efff" stroke="#779ad4" stroke-width="1.5"/>
+<text x="1040" y="1040" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">REYNOLDS NUMBER ↑</text>
+<text x="1040" y="1065" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">The combined multiplier g &gt; 1</text>
+<rect x="1217.5" y="1012" width="285" height="96" rx="12" fill="#fff0e4" stroke="#d59e76" stroke-width="1.5"/>
+<text x="1360" y="1040" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">REYNOLDS NUMBER ↓</text>
+<text x="1360" y="1065" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">The combined multiplier g &lt; 1</text>
+<path class="edge" d="M1040,1108 V1144.0 H1040 V1180"/>
+<rect x="978.8" y="1133" width="122.4" height="22" rx="5" fill="#f7f9fd"/>
+<text x="1040" y="1148" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">Cf decreases</text>
+<path class="edge" d="M1360,1108 V1144.0 H1360 V1180"/>
+<rect x="1298.8" y="1133" width="122.4" height="22" rx="5" fill="#f7f9fd"/>
+<text x="1360" y="1148" font-size="14" font-weight="bold" text-anchor="middle" style="fill:#20324b">Cf increases</text>
+<rect x="897.5" y="1180" width="285" height="96" rx="12" fill="#fff0e4" stroke="#d59e76" stroke-width="1.5"/>
+<text x="1040" y="1208" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">FRICTION COEFFICIENT · Cf ↓</text>
+<text x="1040" y="1233" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Cf = 0.075/(log10(Re) − 2)²</text>
+<text x="1040" y="1254" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Inverse shifted-log-square response</text>
+<rect x="1217.5" y="1180" width="285" height="96" rx="12" fill="#e8efff" stroke="#779ad4" stroke-width="1.5"/>
+<text x="1360" y="1208" font-size="17" font-weight="bold" text-anchor="middle" style="fill:#20324b">FRICTION COEFFICIENT · Cf ↑</text>
+<text x="1360" y="1233" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Cf = 0.075/(log10(Re) − 2)²</text>
+<text x="1360" y="1254" font-size="14" font-weight="normal" text-anchor="middle" style="fill:#20324b">Inverse shifted-log-square response</text>
+<text x="50" y="1340" font-size="19" font-weight="bold" text-anchor="start" style="fill:#20324b">The branch test is explicit:</text>
+<text x="50" y="1371" font-size="16" font-weight="normal" text-anchor="start" style="fill:#20324b">g = Re_new / Re_old = (ℓ_new / ℓ_old) × √(fv_new / fv_old). A larger beam shortens ℓ, but fv also changes through λ.</text>
+<text x="50" y="1401" font-size="15" font-weight="normal" text-anchor="start" style="fill:#20324b">This replaces “it depends” with a threshold: g &gt; 1 means Re increases; g &lt; 1 means Re decreases. Only changing outcomes are drawn.</text>
+<text x="50" y="1431" font-size="14" font-weight="normal" text-anchor="start" style="fill:#61718a">fv = 1 − [B − 0.0065β B^0.6]/(λ cosτ), where B = 0.012τ_deg^1.1√λ. Require fv &gt; 0 and Re &gt; 100 for these branches.</text>
+<text x="50" y="1461" font-size="14" font-weight="normal" text-anchor="start" style="fill:#61718a">Sensitivity: y = Cxⁿ → a small percentage change in x gives about n times that percentage change in y, holding other factors fixed.</text>
+<text x="50" y="1491" font-size="14" font-weight="normal" text-anchor="start" style="fill:#61718a">Scope: one expanded beam path. Other beam paths (area, lift and pressure center), roughness and the equilibrium re-solve are outside this sample.</text>
+</svg>

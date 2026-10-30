@@ -4,6 +4,31 @@ See [`VERSIONING.md`](VERSIONING.md) for how this file and `VERSION` are kept. T
 of [`MarMar888/hav`](https://github.com/MarMar888/hav)'s `optimization/` folder with its full history
 (MarMar888/hav#98) and keeps the same version line.
 
+## 0.6.5 — 2026-10-30
+
+Added a reusable Savitsky sensitivity notebook in `hull/`, linked from the active
+propulsion model, with editable baselines and speed grids, one-input variations and coupled
+scenarios, physical-output curves, percentage changes and normalized finite-change
+sensitivity across speed. CSV/JSON exports retain inputs, equation fingerprints,
+intermediates and applicability flags; unavailable points remain gaps. The
+existing current-hull equations and propulsion calculations are unchanged.
+
+## 0.6.4 — 2026-10-30
+
+`outputs/hydrostatics/hydrostatics.ipynb` adds a standalone hydrostatics
+walkthrough: component mass/CG inputs, offset interpolation, submerged-cell
+volumes and buoyancy centers, and visible draft/trim/heel iterations translated
+from DBB. Executed tables and plots show how the water plane reaches equilibrium.
+Both loading cases are compared against a hash-recorded reference from the
+original DBB core; the prior propulsion-model cells and input files are unchanged.
+
+## 0.6.3 — 2026-10-30
+
+The local DBB viewer now defaults to a water-horizontal camera reference, so the
+boat shows its calculated trim and heel against level water. A Level water toggle
+restores the original hull-horizontal view. This changes the view only; the DBB
+calculation core, project coordinates and loading inputs are unchanged.
+
 ## 0.6.2 — 2026-10-30
 
 The flat root becomes two folders (#1), no model change. `prop_motor_battery/` holds the one active

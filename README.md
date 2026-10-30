@@ -8,6 +8,7 @@ the PEP race. Split out of hav's `optimization/` folder with its full git histor
 | Model | Status |
 |---|---|
 | [`prop_motor_battery/willmarley.ipynb`](prop_motor_battery/willmarley.ipynb) — how to choose motors, a propeller and a battery: one section per choice, the raw equations, then one solved model that maps the valid and ideal design space and ends with real SSS windings to buy | **Active** |
+| [`hull/`](hull/README.md) — Savitsky sensitivity notebook, analysis helper and hull diagrams | Analysis |
 | Everything in [`archive/`](archive/) — an earlier SciPy joint optimizer, the `explore.ipynb` model and its LaTeX write-up, planning notes, diagrams, a Savitsky calculator | Archived: kept for reference, frozen |
 
 ## Run the notebook
@@ -25,6 +26,13 @@ python3 -m venv .venv
 In VS Code: open the notebook, Select Kernel → Python Environments → `.venv` (or any Python 3.10+),
 then Run All. Every input has a low/high range near the top of its section — edit, re-run, and the
 charts, requirements and shopping lists recompute.
+
+For hull changes across speed, open the [Savitsky sensitivity workspace](hull/sensitivity-analysis.ipynb).
+Edit its baseline, speed grid and parameter values, then Run All to compare curves,
+percent changes and normalized sensitivities. Install its Python dependencies with
+`python -m pip install -r optimization/savitsky/requirements-notebook.txt`.
+A saved [example study](outputs/savitsky/sensitivity/example/study.json) and
+[CSV curves](outputs/savitsky/sensitivity/example/curves.csv) are included.
 
 Versions and changes: [`VERSION`](VERSION) + [`CHANGELOG.md`](CHANGELOG.md), kept per
 [`VERSIONING.md`](VERSIONING.md).

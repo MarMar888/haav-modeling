@@ -1,0 +1,56 @@
+{
+  "method": "Unmodified original DBB calculation core, normal-resolution floatState, scale 10",
+  "core_sha256": "be04384812386f86f607cbb1d978cc55e183dc0be0d0ad9f2792f2ec9e2f6361",
+  "offsets_sha256": "f993077a90450db01865515d8223d80d416952ae06ed0ae862d47f4a5c310481",
+  "cases": {
+    "baseline": {
+      "project": "dbb-project-10x.json",
+      "csv": "component-masses.csv",
+      "csv_sha256": "4894940eefb56aea7ea8ce722305e555714d8255835f7aca57f698908e01ac31",
+      "weight_lbs": 125.10699999999997,
+      "cg_in": [
+        0.003086773721694212,
+        23.73425433428985,
+        6.023535541576411
+      ],
+      "Tm_m_scaled": 1.600398294037158,
+      "k": 0.005280969332838753,
+      "kp": 0.001728891699550199,
+      "level_draft_m_scaled": 1.6125774592012168,
+      "trim_deg": 0.30257444173433046,
+      "heel_deg": 0.09905809892242307,
+      "stern_waterline_in": 6.490895581167856,
+      "bow_station_waterline_in": 6.110665789203465,
+      "cb_in": [
+        0.00677443119487754,
+        23.722956321221638,
+        3.8876110356978453
+      ]
+    },
+    "updated": {
+      "project": "dbb-project-updated-weights-10x.json",
+      "csv": "component-masses-front-loaded.csv",
+      "csv_sha256": "75fba9a69df02f9c624100b4a0d19b873a2e48e4b26e97114d0c657a769eae8c",
+      "weight_lbs": 125.10699999999997,
+      "cg_in": [
+        0.003086773721694212,
+        17.28977081218477,
+        4.818087405181164
+      ],
+      "Tm_m_scaled": 1.222980851488766,
+      "k": 0.13629195386810725,
+      "kp": 0.0008095684822171575,
+      "level_draft_m_scaled": 1.6125774592012168,
+      "trim_deg": 7.761133852844957,
+      "heel_deg": 0.046384847124296365,
+      "stern_waterline_in": 9.721395581333615,
+      "bow_station_waterline_in": -0.09162509717010511,
+      "cb_in": [
+        0.0034895365472433605,
+        17.22203122221153,
+        4.321205650405228
+      ]
+    }
+  },
+  "geometry_project_sha256": "3c2176ce0576855e8bb1f3202c2b3aaef7b09a33b894ba0f321b3a3eeca7aa33"
+}

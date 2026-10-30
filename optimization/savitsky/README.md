@@ -35,6 +35,26 @@ This notebook supports the saved run's 1964 geometry with no flap; unsupported
 visible separately from the empirical engine screen. No changes are made to
 `explore.ipynb` or its model/write-up.
 
+## Variable relationships and planing goals
+
+Start with the [increase/decrease decision tree](../../hull/diagrams/decision-tree.md): it follows
+beam and the other decision inputs through individual equations, then through
+the trim/wetted-length re-solve. Includes both directions and numerical results.
+
+See the [variable flow chart and adjustment guide](../../hull/diagrams/variable-flow.md) for the chain
+from mass, CG, hull shape and thrust line to trim, wetting, drag and power. It
+includes re-solved examples at 22 mph and explains the additional data needed to
+evaluate earlier planing. The diagram is also displayed near the top of the notebook.
+
+## Sensitivity across speed
+
+Open [the sensitivity workspace](../../hull/sensitivity-analysis.ipynb)
+to load these inputs or a saved study, vary multiple inputs one at a time, and
+compare raw curves, percentage changes and normalized sensitivity across speed.
+It also accepts coupled design scenarios and exports traceable JSON plus flat
+curve/sensitivity CSV tables. The existing notebook remains the equation source.
+See the [executed example export](../../outputs/savitsky/sensitivity/example/study.json).
+
 ## Browser calculator
 
 Open **[index.html](index.html)** in a browser. It works locally with no server,

@@ -1,0 +1,1623 @@
+{
+  "date": "2026-10-30",
+  "core_sha256": "be04384812386f86f607cbb1d978cc55e183dc0be0d0ad9f2792f2ec9e2f6361",
+  "methods": {
+    "unmodified_loader": "Original project parser at each scale, including its size clamps.",
+    "correct_geometry": "Original solver, with already-loaded model rescaled in memory to avoid parser clamps. Solver source unchanged.",
+    "saved_reload": "Original parser and original serializeProject rounding, then reload."
+  },
+  "cases": [
+    {
+      "project": "dbb-project-10x.json",
+      "correct_geometry": [
+        {
+          "scale": 1,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10700000000001,
+          "stern_waterline_in": 6.490916661775855,
+          "bow_station_waterline_in": 6.1106557409684825,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 0.30259921258961553,
+          "heel_deg": 0.09905809892240448,
+          "gm_in": 1.806850860213274,
+          "volume_in3": 3461.630546443005,
+          "waterplane_area_in2": 805.460861284623,
+          "lcb_in": 24.039040839830335,
+          "kb_in": 3.8890481922056566,
+          "cb": 0.550079656645045,
+          "cp": 0.7225186673665729,
+          "cm": 0.761336255366202,
+          "cwp": 0.8125988058953438,
+          "tpc_full_size_t_per_cm": 0.005196511292663873,
+          "kgmax_in": 1.924874590766064,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "fail",
+              "value": 0.04589401184941716,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09905809892240448,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.009658627388507257,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12.000000000000002
+        },
+        {
+          "scale": 2,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10700000000001,
+          "stern_waterline_in": 6.49090748241961,
+          "bow_station_waterline_in": 6.110656077350402,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 0.3025916404169912,
+          "heel_deg": 0.09905809892240448,
+          "gm_in": 1.806850860213274,
+          "volume_in3": 3461.630546443005,
+          "waterplane_area_in2": 805.460861284623,
+          "lcb_in": 24.039040839830335,
+          "kb_in": 3.8890481922056566,
+          "cb": 0.550079656645045,
+          "cp": 0.7225186673665729,
+          "cm": 0.761336255366202,
+          "cwp": 0.8125988058953438,
+          "tpc_full_size_t_per_cm": 0.005196511292663873,
+          "kgmax_in": 4.877630496277875,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "fail",
+              "value": 0.09178802369883432,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09905809892240448,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.01931677137751575,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12.000000000000002
+        },
+        {
+          "scale": 5,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 6.490899207987849,
+          "bow_station_waterline_in": 6.1106630669819255,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 0.3025794940001471,
+          "heel_deg": 0.09905809892242307,
+          "gm_in": 1.8068508602132753,
+          "volume_in3": 3461.630546443008,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.039040839830445,
+          "kb_in": 3.8890481922056637,
+          "cb": 0.5500796566450453,
+          "cp": 0.7225186673665734,
+          "cm": 0.7613362553662018,
+          "cwp": 0.8125988058953443,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 6.649284039584962,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.22947005924708597,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09905809892242307,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.04828998990775224,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12
+        },
+        {
+          "scale": 10,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 6.490895581167856,
+          "bow_station_waterline_in": 6.110665789203465,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 0.30257444173433046,
+          "heel_deg": 0.09905809892242307,
+          "gm_in": 1.8068508602132753,
+          "volume_in3": 3461.630546443008,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.039040839830445,
+          "kb_in": 3.8890481922056637,
+          "cb": 0.5500796566450453,
+          "cp": 0.7225186673665734,
+          "cm": 0.7613362553662018,
+          "cwp": 0.8125988058953443,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 7.239835220687325,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.45894011849417193,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09905809892242307,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.09657836715895529,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12
+        },
+        {
+          "scale": 20,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 6.490892265161159,
+          "bow_station_waterline_in": 6.110667073326045,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 0.3025707811698523,
+          "heel_deg": 0.09905809892242307,
+          "gm_in": 1.8068508602132753,
+          "volume_in3": 3461.630546443008,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.039040839830445,
+          "kb_in": 3.8890481922056637,
+          "cb": 0.5500796566450453,
+          "cp": 0.7225186673665734,
+          "cm": 0.7613362553662018,
+          "cwp": 0.8125988058953443,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 7.535110811238505,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.9178802369883439,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09905809892242307,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.19315439745223806,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12
+        },
+        {
+          "scale": 50,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 6.490895841812653,
+          "bow_station_waterline_in": 6.110668956291663,
+          "level_draft_in": 6.348730154335497,
+          "trim_deg": 0.3025721289246617,
+          "heel_deg": 0.09905809892240953,
+          "gm_in": 1.8068508602132494,
+          "volume_in3": 3461.630546443006,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.03904083983043,
+          "kb_in": 3.8890481922056344,
+          "cb": 0.5500796566450454,
+          "cp": 0.7225186673665733,
+          "cm": 0.761336255366202,
+          "cwp": 0.8125988058953447,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 7.712276165569187,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 2.294700592470827,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09905809892240953,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.48288814461165774,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12
+        }
+      ],
+      "unmodified_loader": [
+        {
+          "scale": 1,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10700000000001,
+          "stern_waterline_in": 6.813117330643212,
+          "bow_station_waterline_in": 8.693006350249153,
+          "level_draft_in": 7.491417955167181,
+          "trim_deg": -1.4956283500166432,
+          "heel_deg": 0.09826552722662472,
+          "gm_in": 1.779403136354903,
+          "volume_in3": 3460.965390838775,
+          "waterplane_area_in2": 715.7874201756298,
+          "lcb_in": 22.5135869940763,
+          "kb_in": 4.712499534526741,
+          "cb": 0.5309998303925338,
+          "cp": 0.72686760921041,
+          "cm": 0.7305317002216598,
+          "cwp": 0.8227070425291293,
+          "tpc_full_size_t_per_cm": 0.004617974120005093,
+          "kgmax_in": 1.8974268669076928,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "fail",
+              "value": 0.045196839663414534,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09826552722662472,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": -0.04774918109799092,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 19.68503937007874,
+          "warnings": []
+        },
+        {
+          "scale": 2,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10700000000001,
+          "stern_waterline_in": 6.49090748241961,
+          "bow_station_waterline_in": 6.110656077350402,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 0.3025916404169912,
+          "heel_deg": 0.09905809892240448,
+          "gm_in": 1.806850860213274,
+          "volume_in3": 3461.630546443005,
+          "waterplane_area_in2": 805.460861284623,
+          "lcb_in": 24.039040839830335,
+          "kb_in": 3.8890481922056566,
+          "cb": 0.550079656645045,
+          "cp": 0.7225186673665729,
+          "cm": 0.761336255366202,
+          "cwp": 0.8125988058953438,
+          "tpc_full_size_t_per_cm": 0.005196511292663873,
+          "kgmax_in": 4.877630496277875,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "fail",
+              "value": 0.09178802369883432,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09905809892240448,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.01931677137751575,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12.000000000000002,
+          "warnings": []
+        },
+        {
+          "scale": 5,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 6.490899207987849,
+          "bow_station_waterline_in": 6.1106630669819255,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 0.3025794940001471,
+          "heel_deg": 0.09905809892242307,
+          "gm_in": 1.8068508602132753,
+          "volume_in3": 3461.630546443008,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.039040839830445,
+          "kb_in": 3.8890481922056637,
+          "cb": 0.5500796566450453,
+          "cp": 0.7225186673665734,
+          "cm": 0.7613362553662018,
+          "cwp": 0.8125988058953443,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 6.649284039584962,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.22947005924708597,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09905809892242307,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.04828998990775224,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        },
+        {
+          "scale": 10,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 6.490895581167856,
+          "bow_station_waterline_in": 6.110665789203465,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 0.30257444173433046,
+          "heel_deg": 0.09905809892242307,
+          "gm_in": 1.8068508602132753,
+          "volume_in3": 3461.630546443008,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.039040839830445,
+          "kb_in": 3.8890481922056637,
+          "cb": 0.5500796566450453,
+          "cp": 0.7225186673665734,
+          "cm": 0.7613362553662018,
+          "cwp": 0.8125988058953443,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 7.239835220687325,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.45894011849417193,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09905809892242307,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.09657836715895529,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        },
+        {
+          "scale": 20,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 6.490892265161159,
+          "bow_station_waterline_in": 6.110667073326045,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 0.3025707811698523,
+          "heel_deg": 0.09905809892242307,
+          "gm_in": 1.8068508602132753,
+          "volume_in3": 3461.630546443008,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.039040839830445,
+          "kb_in": 3.8890481922056637,
+          "cb": 0.5500796566450453,
+          "cp": 0.7225186673665734,
+          "cm": 0.7613362553662018,
+          "cwp": 0.8125988058953443,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 7.535110811238505,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.9178802369883439,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09905809892242307,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.19315439745223806,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        },
+        {
+          "scale": 50,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 6.490895841812653,
+          "bow_station_waterline_in": 6.110668956291663,
+          "level_draft_in": 6.348730154335497,
+          "trim_deg": 0.3025721289246617,
+          "heel_deg": 0.09905809892240953,
+          "gm_in": 1.8068508602132494,
+          "volume_in3": 3461.630546443006,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.03904083983043,
+          "kb_in": 3.8890481922056344,
+          "cb": 0.5500796566450454,
+          "cp": 0.7225186673665733,
+          "cm": 0.761336255366202,
+          "cwp": 0.8125988058953447,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 7.712276165569187,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 2.294700592470827,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09905809892240953,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.48288814461165774,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        }
+      ],
+      "saved_reload": [
+        {
+          "scale": 2,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.08477600714492,
+          "stern_waterline_in": 6.49025674978415,
+          "bow_station_waterline_in": 6.111909548657115,
+          "level_draft_in": 6.348766185343265,
+          "trim_deg": 0.3010763651192055,
+          "heel_deg": 0.10644878454884768,
+          "gm_in": 1.805850186016803,
+          "volume_in3": 3461.0096270950608,
+          "waterplane_area_in2": 805.3575165126787,
+          "lcb_in": 24.03866677460503,
+          "kb_in": 3.8892752589670616,
+          "cb": 0.5500491901667041,
+          "cp": 0.7225451296789388,
+          "cm": 0.7612662068750183,
+          "cwp": 0.8125999133267483,
+          "tpc_full_size_t_per_cm": 0.005195844553533197,
+          "kgmax_in": 4.87718297463964,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "fail",
+              "value": 0.09173718944965359,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.10644878454884768,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.019220037817253344,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12.000000000000002,
+          "warnings": []
+        },
+        {
+          "scale": 5,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10792454467435,
+          "stern_waterline_in": 6.491104177166653,
+          "bow_station_waterline_in": 6.110634388867722,
+          "level_draft_in": 6.348857246339321,
+          "trim_deg": 0.30276541941969093,
+          "heel_deg": 0.09925955041750953,
+          "gm_in": 1.8071004855512398,
+          "volume_in3": 3461.6623581683225,
+          "waterplane_area_in2": 805.472861395887,
+          "lcb_in": 24.039148129015363,
+          "kb_in": 3.8891687438629132,
+          "cb": 0.5500575052350487,
+          "cp": 0.7225136046543513,
+          "cm": 0.7613109312982346,
+          "cwp": 0.8125869880196559,
+          "tpc_full_size_t_per_cm": 0.005196588712581705,
+          "kgmax_in": 6.649521266692231,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.22950176166500746,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09925955041750953,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.048319663113964184,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        },
+        {
+          "scale": 10,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10726315788777,
+          "stern_waterline_in": 6.491071117220824,
+          "bow_station_waterline_in": 6.110735840859597,
+          "level_draft_in": 6.3488634154200545,
+          "trim_deg": 0.30265838120860167,
+          "heel_deg": 0.09926546774580619,
+          "gm_in": 1.8067918115062105,
+          "volume_in3": 3461.6307576725217,
+          "waterplane_area_in2": 805.4458797355267,
+          "lcb_in": 24.039102770767062,
+          "kb_in": 3.889154672337853,
+          "cb": 0.5500752224628509,
+          "cp": 0.722521511923699,
+          "cm": 0.7613271209023058,
+          "cwp": 0.812594147926235,
+          "tpc_full_size_t_per_cm": 0.005196414637701724,
+          "kgmax_in": 7.239725974337937,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.45892512012257747,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09926546774580619,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.0966051601957516,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        },
+        {
+          "scale": 20,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10701513784285,
+          "stern_waterline_in": 6.490842564648109,
+          "bow_station_waterline_in": 6.110663275429222,
+          "level_draft_in": 6.348696626722813,
+          "trim_deg": 0.3025342540470277,
+          "heel_deg": 0.09927570779754298,
+          "gm_in": 1.8068906406399097,
+          "volume_in3": 3461.631025762468,
+          "waterplane_area_in2": 805.4647875856849,
+          "lcb_in": 24.03901878977406,
+          "kb_in": 3.889028642682638,
+          "cb": 0.5500794332088481,
+          "cp": 0.7225193770322483,
+          "cm": 0.7613351983282469,
+          "cwp": 0.8125980330539205,
+          "tpc_full_size_t_per_cm": 0.005196536623587805,
+          "kgmax_in": 7.535155488145333,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.9179004454450741,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09927570779754298,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.19313107892319437,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        },
+        {
+          "scale": 50,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10700036687125,
+          "stern_waterline_in": 6.490936385977732,
+          "bow_station_waterline_in": 6.110686091770889,
+          "level_draft_in": 6.348761133849622,
+          "trim_deg": 0.30259075644546524,
+          "heel_deg": 0.09926437926729914,
+          "gm_in": 1.8068418035384441,
+          "volume_in3": 3461.6296592129943,
+          "waterplane_area_in2": 805.4580733573453,
+          "lcb_in": 24.03905188565965,
+          "kb_in": 3.889074349631517,
+          "cb": 0.5500796512354921,
+          "cp": 0.7225184610226327,
+          "cm": 0.761336465309031,
+          "cwp": 0.8126001587186126,
+          "tpc_full_size_t_per_cm": 0.005196493306072249,
+          "kgmax_in": 7.71226111861225,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 2.294689090493824,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.09926437926729914,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "pass",
+              "value": 0.4829178736426911,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        }
+      ],
+      "scale_spread": {
+        "stern_waterline_in": {
+          "min": 6.490892265161159,
+          "max": 6.490916661775855,
+          "range": 0.00002439661469555432,
+          "reference_10x": 6.490895581167856
+        },
+        "trim_deg": {
+          "min": 0.3025707811698523,
+          "max": 0.30259921258961553,
+          "range": 0.000028431419763219612,
+          "reference_10x": 0.30257444173433046
+        },
+        "heel_deg": {
+          "min": 0.09905809892240448,
+          "max": 0.09905809892242307,
+          "range": 1.8582357874663558e-14,
+          "reference_10x": 0.09905809892242307
+        },
+        "gm_in": {
+          "min": 1.8068508602132494,
+          "max": 1.8068508602132753,
+          "range": 2.5979218776228663e-14,
+          "reference_10x": 1.8068508602132753
+        },
+        "volume_in3": {
+          "min": 3461.630546443005,
+          "max": 3461.630546443008,
+          "range": 2.7284841053187847e-12,
+          "reference_10x": 3461.630546443008
+        },
+        "waterplane_area_in2": {
+          "min": 805.460861284623,
+          "max": 805.4608612846234,
+          "range": 4.547473508864641e-13,
+          "reference_10x": 805.4608612846234
+        }
+      }
+    },
+    {
+      "project": "dbb-project-updated-weights-10x.json",
+      "correct_geometry": [
+        {
+          "scale": 1,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10700000000001,
+          "stern_waterline_in": 9.721391810680812,
+          "bow_station_waterline_in": -0.09161451068688291,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 7.761122636154414,
+          "heel_deg": 0.046403525220598436,
+          "gm_in": 3.012298996608521,
+          "volume_in3": 3461.630546443005,
+          "waterplane_area_in2": 805.460861284623,
+          "lcb_in": 24.039040839830335,
+          "kb_in": 3.8890481922056566,
+          "cb": 0.550079656645045,
+          "cp": 0.7225186673665729,
+          "cm": 0.761336255366202,
+          "cwp": 0.8125988058953438,
+          "tpc_full_size_t_per_cm": 0.005196511292663873,
+          "kgmax_in": 1.924874590766064,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "fail",
+              "value": 0.07651239451385643,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.046403525220598436,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 0.24925036056273944,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12.000000000000002
+        },
+        {
+          "scale": 2,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10700000000001,
+          "stern_waterline_in": 9.721382459557034,
+          "bow_station_waterline_in": -0.09160621262733151,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 7.7611088475102745,
+          "heel_deg": 0.04640522640308378,
+          "gm_in": 3.012298996608521,
+          "volume_in3": 3461.630546443005,
+          "waterplane_area_in2": 805.460861284623,
+          "lcb_in": 24.039040839830335,
+          "kb_in": 3.8890481922056566,
+          "cb": 0.550079656645045,
+          "cp": 0.7225186673665729,
+          "cm": 0.761336255366202,
+          "cwp": 0.8125988058953438,
+          "tpc_full_size_t_per_cm": 0.005196511292663873,
+          "kgmax_in": 4.877630496277875,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.15302478902771285,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.04640522640308378,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 0.4984998245469658,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12.000000000000002
+        },
+        {
+          "scale": 5,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 9.721396613276818,
+          "bow_station_waterline_in": -0.09163018563837914,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 7.761138634492131,
+          "heel_deg": 0.04639945659688802,
+          "gm_in": 3.012298996608522,
+          "volume_in3": 3461.630546443008,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.039040839830445,
+          "kb_in": 3.8890481922056637,
+          "cb": 0.5500796566450453,
+          "cp": 0.7225186673665734,
+          "cm": 0.7613362553662018,
+          "cwp": 0.8125988058953443,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 6.649284039584962,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.38256197256928226,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.04639945659688802,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 1.2462544034622303,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12
+        },
+        {
+          "scale": 10,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 9.721395581333615,
+          "bow_station_waterline_in": -0.09162509717010511,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 7.761133852844957,
+          "heel_deg": 0.046384847124296365,
+          "gm_in": 3.012298996608522,
+          "volume_in3": 3461.630546443008,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.039040839830445,
+          "kb_in": 3.8890481922056637,
+          "cb": 0.5500796566450453,
+          "cp": 0.7225186673665734,
+          "cm": 0.7613362553662018,
+          "cwp": 0.8125988058953443,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 7.239835220687325,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.7651239451385645,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.046384847124296365,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 2.492507252339945,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12
+        },
+        {
+          "scale": 20,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 9.721394116050488,
+          "bow_station_waterline_in": -0.09161328805267054,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 7.76112348205494,
+          "heel_deg": 0.0463867443519423,
+          "gm_in": 3.012298996608522,
+          "volume_in3": 3461.630546443008,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.039040839830445,
+          "kb_in": 3.8890481922056637,
+          "cb": 0.5500796566450453,
+          "cp": 0.7225186673665734,
+          "cm": 0.7613362553662018,
+          "cwp": 0.8125988058953443,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 7.535110811238505,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 1.530247890277129,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.0463867443519423,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 4.985007761284404,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12
+        },
+        {
+          "scale": 50,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 9.721393027830011,
+          "bow_station_waterline_in": -0.09160878642804558,
+          "level_draft_in": 6.348730154335497,
+          "trim_deg": 7.761119114919001,
+          "heel_deg": 0.046395183542508,
+          "gm_in": 3.0122989966084948,
+          "volume_in3": 3461.630546443006,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.03904083983043,
+          "kb_in": 3.8890481922056344,
+          "cb": 0.5500796566450454,
+          "cp": 0.7225186673665733,
+          "cm": 0.761336255366202,
+          "cwp": 0.8125988058953447,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 7.712276165569187,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 3.825619725692788,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.046395183542508,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 12.462512304107733,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12
+        }
+      ],
+      "unmodified_loader": [
+        {
+          "scale": 1,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10700000000001,
+          "stern_waterline_in": 10.615548967875371,
+          "bow_station_waterline_in": 1.3107539331675813,
+          "level_draft_in": 7.491417955167181,
+          "trim_deg": 7.363707276797259,
+          "heel_deg": 0.056031835211195945,
+          "gm_in": 2.98485127275015,
+          "volume_in3": 3460.965390838775,
+          "waterplane_area_in2": 715.7874201756298,
+          "lcb_in": 22.5135869940763,
+          "kb_in": 4.712499534526741,
+          "cb": 0.5309998303925338,
+          "cp": 0.72686760921041,
+          "cm": 0.7305317002216598,
+          "cwp": 0.8227070425291293,
+          "tpc_full_size_t_per_cm": 0.004617974120005093,
+          "kgmax_in": 1.8974268669076928,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "fail",
+              "value": 0.0758152223278538,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.056031835211195945,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 0.23634179388157783,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 19.68503937007874,
+          "warnings": []
+        },
+        {
+          "scale": 2,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10700000000001,
+          "stern_waterline_in": 9.721382459557034,
+          "bow_station_waterline_in": -0.09160621262733151,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 7.7611088475102745,
+          "heel_deg": 0.04640522640308378,
+          "gm_in": 3.012298996608521,
+          "volume_in3": 3461.630546443005,
+          "waterplane_area_in2": 805.460861284623,
+          "lcb_in": 24.039040839830335,
+          "kb_in": 3.8890481922056566,
+          "cb": 0.550079656645045,
+          "cp": 0.7225186673665729,
+          "cm": 0.761336255366202,
+          "cwp": 0.8125988058953438,
+          "tpc_full_size_t_per_cm": 0.005196511292663873,
+          "kgmax_in": 4.877630496277875,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.15302478902771285,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.04640522640308378,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 0.4984998245469658,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12.000000000000002,
+          "warnings": []
+        },
+        {
+          "scale": 5,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 9.721396613276818,
+          "bow_station_waterline_in": -0.09163018563837914,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 7.761138634492131,
+          "heel_deg": 0.04639945659688802,
+          "gm_in": 3.012298996608522,
+          "volume_in3": 3461.630546443008,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.039040839830445,
+          "kb_in": 3.8890481922056637,
+          "cb": 0.5500796566450453,
+          "cp": 0.7225186673665734,
+          "cm": 0.7613362553662018,
+          "cwp": 0.8125988058953443,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 6.649284039584962,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.38256197256928226,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.04639945659688802,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 1.2462544034622303,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        },
+        {
+          "scale": 10,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 9.721395581333615,
+          "bow_station_waterline_in": -0.09162509717010511,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 7.761133852844957,
+          "heel_deg": 0.046384847124296365,
+          "gm_in": 3.012298996608522,
+          "volume_in3": 3461.630546443008,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.039040839830445,
+          "kb_in": 3.8890481922056637,
+          "cb": 0.5500796566450453,
+          "cp": 0.7225186673665734,
+          "cm": 0.7613362553662018,
+          "cwp": 0.8125988058953443,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 7.239835220687325,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.7651239451385645,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.046384847124296365,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 2.492507252339945,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        },
+        {
+          "scale": 20,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 9.721394116050488,
+          "bow_station_waterline_in": -0.09161328805267054,
+          "level_draft_in": 6.348730154335499,
+          "trim_deg": 7.76112348205494,
+          "heel_deg": 0.0463867443519423,
+          "gm_in": 3.012298996608522,
+          "volume_in3": 3461.630546443008,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.039040839830445,
+          "kb_in": 3.8890481922056637,
+          "cb": 0.5500796566450453,
+          "cp": 0.7225186673665734,
+          "cm": 0.7613362553662018,
+          "cwp": 0.8125988058953443,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 7.535110811238505,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 1.530247890277129,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.0463867443519423,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 4.985007761284404,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        },
+        {
+          "scale": 50,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10699999999997,
+          "stern_waterline_in": 9.721393027830011,
+          "bow_station_waterline_in": -0.09160878642804558,
+          "level_draft_in": 6.348730154335497,
+          "trim_deg": 7.761119114919001,
+          "heel_deg": 0.046395183542508,
+          "gm_in": 3.0122989966084948,
+          "volume_in3": 3461.630546443006,
+          "waterplane_area_in2": 805.4608612846234,
+          "lcb_in": 24.03904083983043,
+          "kb_in": 3.8890481922056344,
+          "cb": 0.5500796566450454,
+          "cp": 0.7225186673665733,
+          "cm": 0.761336255366202,
+          "cwp": 0.8125988058953447,
+          "tpc_full_size_t_per_cm": 0.005196511292663877,
+          "kgmax_in": 7.712276165569187,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 3.825619725692788,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.046395183542508,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 12.462512304107733,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        }
+      ],
+      "saved_reload": [
+        {
+          "scale": 2,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.08477600714492,
+          "stern_waterline_in": 9.720693452256596,
+          "bow_station_waterline_in": -0.09002149606461377,
+          "level_draft_in": 6.348766185343265,
+          "trim_deg": 7.759332464879466,
+          "heel_deg": 0.049848112879022674,
+          "gm_in": 3.011416381352763,
+          "volume_in3": 3461.0096270950608,
+          "waterplane_area_in2": 805.3575165126787,
+          "lcb_in": 24.03866677460503,
+          "kb_in": 3.8892752589670616,
+          "cb": 0.5500491901667041,
+          "cp": 0.7225451296789388,
+          "cm": 0.7612662068750183,
+          "cwp": 0.8125999133267483,
+          "tpc_full_size_t_per_cm": 0.005195844553533197,
+          "kgmax_in": 4.87718297463964,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.15297995217272034,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.049848112879022674,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 0.4983843193747174,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12.000000000000002,
+          "warnings": []
+        },
+        {
+          "scale": 5,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10792454467435,
+          "stern_waterline_in": 9.721540279339239,
+          "bow_station_waterline_in": -0.09153290641698875,
+          "level_draft_in": 6.348857246339321,
+          "trim_deg": 7.761174874781949,
+          "heel_deg": 0.04649494975147472,
+          "gm_in": 3.0127884587372935,
+          "volume_in3": 3461.6623581683225,
+          "waterplane_area_in2": 805.472861395887,
+          "lcb_in": 24.039148129015363,
+          "kb_in": 3.8891687438629132,
+          "cb": 0.5500575052350487,
+          "cp": 0.7225136046543513,
+          "cm": 0.7613109312982346,
+          "cwp": 0.8125869880196559,
+          "tpc_full_size_t_per_cm": 0.005196588712581705,
+          "kgmax_in": 6.649521266692231,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.38262413425963626,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.04649494975147472,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 1.2462602945910408,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        },
+        {
+          "scale": 10,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10726315788777,
+          "stern_waterline_in": 9.721603329888506,
+          "bow_station_waterline_in": -0.09161976868804357,
+          "level_draft_in": 6.3488634154200545,
+          "trim_deg": 7.761291995973066,
+          "heel_deg": 0.046485919950764176,
+          "gm_in": 3.012232419810582,
+          "volume_in3": 3461.6307576725217,
+          "waterplane_area_in2": 805.4458797355267,
+          "lcb_in": 24.039102770767062,
+          "kb_in": 3.889154672337853,
+          "cb": 0.5500752224628509,
+          "cp": 0.722521511923699,
+          "cm": 0.7613271209023058,
+          "cwp": 0.812594147926235,
+          "tpc_full_size_t_per_cm": 0.005196414637701724,
+          "kgmax_in": 7.239725974337937,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 0.7651070346318878,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.046485919950764176,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 2.4925586670384434,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        },
+        {
+          "scale": 20,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10701513784285,
+          "stern_waterline_in": 9.721332676137484,
+          "bow_station_waterline_in": -0.09159361695165648,
+          "level_draft_in": 6.348696626722813,
+          "trim_deg": 7.7610601130585115,
+          "heel_deg": 0.046485878320002144,
+          "gm_in": 3.0123314240681283,
+          "volume_in3": 3461.631025762468,
+          "waterplane_area_in2": 805.4647875856849,
+          "lcb_in": 24.03901878977406,
+          "kb_in": 3.889028642682638,
+          "cb": 0.5500794332088481,
+          "cp": 0.7225193770322483,
+          "cm": 0.7613351983282469,
+          "cwp": 0.8125980330539205,
+          "tpc_full_size_t_per_cm": 0.005196536623587805,
+          "kgmax_in": 7.535155488145333,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 1.530264363426609,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.046485878320002144,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 4.984966556889283,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        },
+        {
+          "scale": 50,
+          "ok": true,
+          "trimOk": true,
+          "heelOk": true,
+          "weight_lbs": 125.10700036687125,
+          "stern_waterline_in": 9.721436529828644,
+          "bow_station_waterline_in": -0.09159787076496,
+          "level_draft_in": 6.348761133849622,
+          "trim_deg": 7.7611445733972655,
+          "heel_deg": 0.04649517690955998,
+          "gm_in": 3.0122823926671547,
+          "volume_in3": 3461.6296592129943,
+          "waterplane_area_in2": 805.4580733573453,
+          "lcb_in": 24.03905188565965,
+          "kb_in": 3.889074349631517,
+          "cb": 0.5500796512354921,
+          "cp": 0.7225184610226327,
+          "cm": 0.761336465309031,
+          "cwp": 0.8126001587186126,
+          "tpc_full_size_t_per_cm": 0.005196493306072249,
+          "kgmax_in": 7.71226111861225,
+          "stability_checks": [
+            {
+              "name": "Initial metacentric height GM (corrected)",
+              "status": "pass",
+              "value": 3.8255986386872864,
+              "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+            },
+            {
+              "name": "Static heel",
+              "status": "pass",
+              "value": 0.04649517690955998,
+              "limit": "at most 5° (design guide)"
+            },
+            {
+              "name": "Trim",
+              "status": "fail",
+              "value": 12.462553688753875,
+              "limit": "at most 1% of the hull length (design guide)"
+            }
+          ],
+          "loaded_hull_depth_in": 12,
+          "warnings": []
+        }
+      ],
+      "scale_spread": {
+        "stern_waterline_in": {
+          "min": 9.721382459557034,
+          "max": 9.721396613276818,
+          "range": 0.000014153719783749352,
+          "reference_10x": 9.721395581333615
+        },
+        "trim_deg": {
+          "min": 7.7611088475102745,
+          "max": 7.761138634492131,
+          "range": 0.00002978698185618356,
+          "reference_10x": 7.761133852844957
+        },
+        "heel_deg": {
+          "min": 0.046384847124296365,
+          "max": 0.04640522640308378,
+          "range": 0.000020379278787417687,
+          "reference_10x": 0.046384847124296365
+        },
+        "gm_in": {
+          "min": 3.0122989966084948,
+          "max": 3.012298996608522,
+          "range": 2.708944180085382e-14,
+          "reference_10x": 3.012298996608522
+        },
+        "volume_in3": {
+          "min": 3461.630546443005,
+          "max": 3461.630546443008,
+          "range": 2.7284841053187847e-12,
+          "reference_10x": 3461.630546443008
+        },
+        "waterplane_area_in2": {
+          "min": 805.460861284623,
+          "max": 805.4608612846234,
+          "range": 4.547473508864641e-13,
+          "reference_10x": 805.4608612846234
+        }
+      }
+    }
+  ]
+}

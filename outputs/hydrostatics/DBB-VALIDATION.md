@@ -14,6 +14,14 @@ CAD-solid solver's visualization and should not be identified as a DBB result.
 4. Open the **Hydrostatics** tab. The six small boxes are mass-center markers;
    their dimensions do not represent the components' actual sizes.
 
+The local viewer defaults to **Level water**: the water plane is the camera's
+horizontal reference, making the boat show its calculated trim and heel.
+Use **Side** or **Front** to view the waterline horizontally. The toolbar button
+and the Hydrostatics tab's **Keep water horizontal** checkbox switch back to the
+original hull-horizontal reference. **Float** and **Show trim and heel in 3D**
+must be enabled to display the solved attitude. These options change the camera
+only; block/hull coordinates, weight inputs and hydrostatic results are unchanged.
+
 The browser interface could not be operated here because computer-use permissions
 were denied. The file was loaded through the original app's project parser, with
 no warnings, and its original calculation functions were executed in Node.
@@ -27,8 +35,10 @@ The downloaded app's `sanitizeProject` function clamps hull depth to at least
 The project therefore scales **all positions and hull dimensions by 10** and
 **all masses by 1,000**, at unchanged water density. Under static hydrostatic
 similarity, lengths scale linearly, volumes/masses cubically, waterplane areas
-quadratically, and angles remain unchanged. This uses the original app without
-changing its source. In the app:
+quadratically, and angles remain unchanged in theory. A numerical comparison of
+1x through 50x for both loading conditions found negligible differences from
+fixed solver tolerances; see [DBB-SCALING-AUDIT.md](DBB-SCALING-AUDIT.md).
+This uses the original app without changing its source. In the app:
 
 - Divide lengths, drafts, CG/CB coordinates and GM by **10** for full-size meters.
 - Divide displayed tonnes by **1,000** for full-size tonnes.
@@ -48,10 +58,21 @@ side down**.
 ## Which original code was used
 
 The app and its three script dependencies were downloaded from
-https://shiplab.github.io/dbb/ on 2026-10-29. `dbb/index.html` and `dbb/vendor/`
-contain those unmodified files. The app's own core reports `APP_VERSION = 1.2.0`;
-source hashes in `dbb-results.json` identify the exact downloaded code rather
-than relying on a version label.
+https://shiplab.github.io/dbb/ on 2026-10-29. `dbb/vendor/` remains unmodified.
+On 2026-10-30 the local `dbb/index.html` gained the view-only **Level water** camera
+option; its embedded calculation core remains byte-for-byte identical to
+`dbb-source/core.js`. The app's own core reports `APP_VERSION = 1.2.0`.
+The whole-page source hash in the earlier `dbb-results.json` refers to the
+original download, before the camera customization; its core hash still applies.
+
+The local camera change was checked against both loading conditions using the
+bundled Three.js and real OrbitControls without a WebGL browser. Checks covered
+horizontal waterline projection in side/front views, visible hull trim, all five
+view presets, restoring the hull-horizontal view, Float-off orientation reset,
+orbit event-listener cleanup and preserving orbit-disabled state during editing.
+Project data and numerical results were confirmed unchanged. All inline scripts
+passed syntax parsing. Browser inspection remains unavailable due to computer-use
+permissions.
 
 `run_original_dbb.mjs` extracts the original **DBB core** script and executes it
 unchanged, with the app's original Three.js dependency. It calls:

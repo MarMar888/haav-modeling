@@ -697,6 +697,7 @@ body.wvopen { overflow: hidden; }
           <button class="btn" data-view="front" title="Front view, from the bow (4)">Front</button>
           <button class="btn" data-view="fit" title="Fit all (F or 5)">Fit</button>
         </div>
+        <button class="btn on" id="btnLevelWater" aria-pressed="true" title="Keep the water surface horizontal in the view; show the boat at its calculated trim and heel">Level water</button>
         <button class="btn" id="btnXray" aria-pressed="false" title="Make blocks see-through">See-through</button>
         <button class="btn" id="btnBig" aria-label="Maximize" aria-pressed="false" title="Maximize the 3D view to the whole window (M). Press again or Esc to go back"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       </div>
@@ -749,6 +750,7 @@ body.wvopen { overflow: hidden; }
             <div class="hydrobar">
               <label class="check"><input type="checkbox" id="floatChk"> Float: draught and trim follow the weight</label>
               <label class="check"><input type="checkbox" id="trimChk" checked> Show trim and heel in 3D</label>
+              <label class="check"><input type="checkbox" id="levelWaterChk" checked> Keep water horizontal</label>
               <label>Water density <input id="rhoIn" type="number" step="0.001" min="0.9" max="1.3" inputmode="decimal"> t/m&sup3;</label>
               <label>Structure and outfitting <input id="structIn" type="number" step="1" min="0" max="100" inputmode="decimal"> % of displacement</label>
             </div>
@@ -7943,6 +7945,7 @@ var DBB_PSV_DETAILED = "{\"app\":\"dbb-block-editor\",\"version\":2,\"name\":\"P
     collapsed: {}, mode: 'translate', snap: 0.5, xray: false,
     tab: 'summary', drawerOpen: true, delim: ',', selHull: null,
     waterColor: null, hullColor: null, showTrim: true, floatRes: null,     // view only: water colour (null = theme), trim shown in 3D, last floating state
+    levelWater: true,                 // view only: water-normal camera up; model coordinates remain unchanged
     drawerH: null, blkSets: { geo: true, mass: true, hull: true }, blkSort: null   // view state only, not saved
   };
   var meshes = {};            // block id -> THREE.Mesh
@@ -8155,6 +8158,7 @@ var DBB_PSV_DETAILED = "{\"app\":\"dbb-block-editor\",\"version\":2,\"name\":\"P
 
   function updateWater() {
     updateDeckLine();
+    syncWaterView(curPlane());
     var m = S.model, w = m.hulls.length && m.waterline !== false ? C.waterExtent(m) : null;
     waterMesh.visible = !!w;
     waterMat.color.set(waterCol());
@@ -8659,6 +8663,41 @@ var DBB_PSV_DETAILED = "{\"app\":\"dbb-block-editor\",\"version\":2,\"name\":\"P
   }
 
   /* ---------- camera views ---------- */
+  // DBB computes the water plane in hull coordinates: z = Tm - k(x-xm) + kp(y-ym).
+  // Its normal (k,-kp,1) is the physical vertical. Use it as camera up rather
+  // than rotating/editing any model objects, so picking, gizmos and export data
+  // retain their original coordinates. OrbitControls caches its up-axis basis
+  // at construction, so recreate it when that axis changes.
+  function syncWaterView(plane) {
+    var up = S.levelWater && plane ? new THREE.Vector3(plane.k, -plane.kp, 1).normalize() : new THREE.Vector3(0, 0, 1);
+    var button = $('#btnLevelWater'), check = $('#levelWaterChk');
+    button.setAttribute('aria-pressed', S.levelWater ? 'true' : 'false');
+    button.classList.toggle('on', S.levelWater);
+    check.checked = S.levelWater;
+    if (camera.up.distanceToSquared(up) < 1e-20) return;
+    var target = orbit.target.clone(), distanceMin = orbit.minDistance, distanceMax = orbit.maxDistance, enabled = orbit.enabled;
+    var turn = new THREE.Quaternion().setFromUnitVectors(camera.up.clone().normalize(), up);
+    var offset = camera.position.clone().sub(target).applyQuaternion(turn);
+    orbit.dispose();
+    camera.up.copy(up);
+    camera.position.copy(target).add(offset);
+    orbit = new THREE.OrbitControls(camera, dom);
+    orbit.target.copy(target);
+    orbit.minDistance = distanceMin;
+    orbit.maxDistance = distanceMax;
+    orbit.screenSpacePanning = true;
+    orbit.enabled = enabled;
+    orbit.addEventListener('change', request);
+    orbit.addEventListener('change', updateGridDetail);
+    orbit.update();
+    request();
+  }
+
+  function setLevelWater(on) {
+    S.levelWater = !!on;
+    updateWater();
+  }
+
   function setView(name) {
     var env = C.envelope(S.model);
     var cx = 42, cy = 0, cz = 8, R = 45;
@@ -8675,12 +8714,19 @@ var DBB_PSV_DETAILED = "{\"app\":\"dbb-block-editor\",\"version\":2,\"name\":\"P
       var dl = hi[0] - lo[0], db = hi[1] - lo[1], dh = hi[2] - lo[2];
       R = Math.max(4, 0.5 * Math.sqrt(dl * dl + db * db + dh * dh));
     }
+    var plane = curPlane();
+    // Side/end views look along the water surface itself, putting the horizon
+    // at screen center instead of aiming above or below it through the hull.
+    if (S.levelWater && plane && (name === 'side' || name === 'front')) {
+      cz = plane.Tm - plane.k * (cx - plane.xm) + plane.kp * (cy - plane.ym);
+    }
     var dir;
     if (name === 'fit') dir = camera.position.clone().sub(orbit.target).normalize();
     else if (name === 'top') dir = new THREE.Vector3(0, -0.015, 1).normalize();
     else if (name === 'side') dir = new THREE.Vector3(0, -1, 0);
     else if (name === 'front') dir = new THREE.Vector3(1, 0, 0);
     else dir = new THREE.Vector3(-0.7, -1, 0.62).normalize();
+    if (name !== 'fit') dir.applyQuaternion(new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 0, 1), camera.up.clone().normalize()));
     var vf = camera.fov * D2R / 2;
     var hf = Math.atan(Math.tan(vf) * camera.aspect);
     var d = Math.max(R / Math.sin(vf), R / Math.sin(hf)) * 1.08;
@@ -11198,6 +11244,8 @@ var DBB_PSV_DETAILED = "{\"app\":\"dbb-block-editor\",\"version\":2,\"name\":\"P
     $('#floatChk').addEventListener('change', function (e) { setFloat(e.target.checked); });
     $('#btnFloat').addEventListener('click', function () { setFloat(!S.model.float); });
     $('#trimChk').addEventListener('change', function (e) { S.showTrim = e.target.checked; renderAll(); });
+    $('#levelWaterChk').addEventListener('change', function (e) { setLevelWater(e.target.checked); });
+    $('#btnLevelWater').addEventListener('click', function () { setLevelWater(!S.levelWater); });
     // drag the top edge or the tab bar of the tables panel to change its height
     (function () {
       var dr = $('#drawer'), startY = 0, startH = 0, moved = false;
