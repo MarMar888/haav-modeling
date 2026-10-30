@@ -27,7 +27,7 @@ How to do it:
    Do not hand-type the numbers.
 3. Rebuild the PDF from this folder: `tectonic explore-model.tex`, or run `pdflatex explore-model.tex` twice so
    references resolve. Open the PDF and check the pages you touched.
-4. Update the version, as `../docs/VERSIONING.md` requires: bump `VERSION` (patch by default) and add a dated entry
+4. Update the version, as `VERSIONING.md` requires: bump `VERSION` (patch by default) and add a dated entry
    at the top of `CHANGELOG.md`, in the same change. Mention in the entry that the write-up was updated.
 5. Commit the `.ipynb`, `.tex`, `.pdf`, `VERSION` and `CHANGELOG.md` together.
 

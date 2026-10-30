@@ -1,0 +1,33 @@
+graph LR
+  L["length_m"]
+  B["beam_m"]
+  TB["transom_beam_m"]
+  BD["bow_deadrise_deg,<br/>aft_deadrise_deg"]
+  BC["battery_capacity_wh"]
+  PX["payload_x_fraction"]
+  BX["battery_x_fraction"]
+  FIXED["payload_kg + fixed_mass_kg<br/>+ drive.mass_kg + prop.mass_kg<br/>(catalog + mission constants)"]
+  AREA["area = mult * length<br/>* mean(beam,transom) / cos(mean deadrise)"]
+  HM["hull.mass_kg"]
+  BM["battery_mass =<br/>capacity_wh / specific_energy"]
+  MASS["mass"]
+  LCG["lcg"]
+
+  L --> AREA
+  B --> AREA
+  TB --> AREA
+  BD --> AREA
+  AREA --> HM
+
+  BC --> BM
+
+  HM --> MASS
+  FIXED --> MASS
+  BM --> MASS
+
+  HM --> LCG
+  FIXED --> LCG
+  PX --> LCG
+  BX --> LCG
+  BM --> LCG
+  MASS --> LCG

@@ -1,7 +1,15 @@
 # Optimization changelog
 
-See [`../docs/VERSIONING.md`](../docs/VERSIONING.md) for how this file and `VERSION` are kept — this
-folder versions independently of `cad/`, `dashboard/`, and `docs/`.
+See [`VERSIONING.md`](VERSIONING.md) for how this file and `VERSION` are kept. This repo was split out
+of [`MarMar888/hav`](https://github.com/MarMar888/hav)'s `optimization/` folder with its full history
+(MarMar888/hav#98) and keeps the same version line.
+
+## 0.6.1 — 2026-10-30
+
+Split into its own repo, `Haav-modeling`, from `MarMar888/hav` (MarMar888/hav#98). No model change. The
+`opt-*` variable-dependency diagrams moved in under `diagrams/`, `VERSIONING.md` is now a local copy of
+the versioning rules, and links that used to climb out of `optimization/` (diagrams, PEP rules) were
+repointed — the PEP race rules stay in hav and are linked by URL.
 
 ## 0.6.0 — 2026-10-28
 
@@ -377,7 +385,7 @@ rebuilt, and the version bumped, in the same change.
 
 ## 0.1.2 — 2026-10-01
 
-Added three variable-dependency diagrams under `../diagrams/` (decisions → mass/balance, mass/speed →
+Added three variable-dependency diagrams under `diagrams/` (decisions → mass/balance, mass/speed →
 power → objective, and the constraint margins), traced directly from `model.py`/`continuous.py`. Found
 and documented that `system_voltage_v`/`drive_voltage_v` don't depend on any decision variable - they're
 a fixed catalog-compatibility check once a drive/battery pair is chosen, not a real optimization tradeoff.
@@ -393,6 +401,6 @@ than this project's hull. Separate from `explore.ipynb`, which models this proje
 First version tracked here. A continuous multistart SLSQP search (`continuous.py`) over hull geometry,
 battery capacity, placement and speed, plus a discrete drive/propeller choice, feeding a single
 finalops selection model. Objective: minimize time over the PEP27 2-mile course (see
-[`../docs/PEP-Rules/`](../docs/PEP-Rules/)). Component catalog, prices, and resistance model are
+[`docs/PEP-Rules/` in hav](https://github.com/MarMar888/hav/tree/master/docs/PEP-Rules)). Component catalog, prices, and resistance model are
 synthetic fixtures — every result carries `build_ready: false`. `/optimization` on the dashboard reads
 completed runs and compares candidates. See [`README.md`](README.md) for the full model and its limits.

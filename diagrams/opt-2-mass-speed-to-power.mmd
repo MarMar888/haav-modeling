@@ -1,0 +1,38 @@
+graph LR
+  MASS["mass"]
+  LCG["lcg"]
+  SPEED["speed_mps"]
+  SHAPE["length_m, beam_m,<br/>transom_beam_m, aft_deadrise_deg"]
+  DRAG["drag = resistance_n(...)<br/>(synthetic demo law, not a real hull curve)"]
+  PROPEFF["prop.efficiency"]
+  SHAFT["shaft_power"]
+  DRIVEEFF["drive.electrical_to_shaft_efficiency"]
+  HOTEL["hotel_power_w"]
+  BUS["bus_power"]
+  DIST["distance_m"]
+  EXTRA["extra_time_s"]
+  RACE["race_time"]
+  ENERGY["energy_used"]
+  OBJ["OBJECTIVE:<br/>minimize race_time"]
+
+  MASS --> DRAG
+  SPEED --> DRAG
+  SHAPE --> DRAG
+  LCG --> DRAG
+
+  DRAG --> SHAFT
+  SPEED --> SHAFT
+  PROPEFF --> SHAFT
+
+  SHAFT --> BUS
+  DRIVEEFF --> BUS
+  HOTEL --> BUS
+
+  DIST --> RACE
+  SPEED --> RACE
+  EXTRA --> RACE
+
+  BUS --> ENERGY
+  RACE --> ENERGY
+
+  RACE --> OBJ

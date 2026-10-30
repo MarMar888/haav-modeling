@@ -1,4 +1,8 @@
-# Boat optimization
+# Haav modeling
+
+The design-space modeling for [Haav](https://github.com/MarMar888/hav), a 4-foot autonomous RIB built for the PEP race.
+This repo was split out of hav's `optimization/` folder with its full git history
+(MarMar888/hav#98); the boat itself — CAD, dashboard, race rules — stays in hav.
 
 One optimization problem chooses the complete boat: hull geometry, drive,
 propeller, battery capacity, component placement and operating speed together.
@@ -181,14 +185,14 @@ are also assumptions, not CAD outputs.
 
 ### Variable dependency diagrams
 
-Three diagrams in [`../diagrams/`](../diagrams/), traced line by line from `model.py`/`continuous.py`
+Three diagrams in [`diagrams/`](diagrams/), traced line by line from `model.py`/`continuous.py`
 rather than paraphrased from this README, each kept under ~15 nodes so it's actually readable:
 
-- [`opt-1-decisions-to-mass-balance`](../diagrams/opt-1-decisions-to-mass-balance.png) - hull geometry and
+- [`opt-1-decisions-to-mass-balance`](diagrams/opt-1-decisions-to-mass-balance.png) - hull geometry and
   battery capacity decisions down to `mass` and `lcg`.
-- [`opt-2-mass-speed-to-power`](../diagrams/opt-2-mass-speed-to-power.png) - `mass`/`speed_mps` through
+- [`opt-2-mass-speed-to-power`](diagrams/opt-2-mass-speed-to-power.png) - `mass`/`speed_mps` through
   `drag` → `shaft_power` → `bus_power` → `race_time` (the objective).
-- [`opt-3-constraints`](../diagrams/opt-3-constraints.png) - what actually limits the search. Flags
+- [`opt-3-constraints`](diagrams/opt-3-constraints.png) - what actually limits the search. Flags
   something non-obvious found while tracing this: `system_voltage_v` and `drive_voltage_v` compare
   `battery.full_voltage_v` against fixed catalog limits - **neither margin depends on any decision
   variable at all**, once a drive/battery pair is picked. They're a catalog-compatibility check, not
@@ -227,7 +231,7 @@ reversed or nonpositive ranges, invalid efficiencies and inconsistent voltage or
 
 | Input or constraint | Starting value | Basis |
 | --- | --- | --- |
-| Distance | 3218.688 m | PEP27 rules: uncrewed craft race 2 miles (`../docs/PEP-Rules/`) |
+| Distance | 3218.688 m | PEP27 rules: uncrewed craft race 2 miles ([`docs/PEP-Rules/` in hav](https://github.com/MarMar888/hav/tree/master/docs/PEP-Rules)) |
 | Benchmark | 420 s | User-reported target to beat; not a hard feasibility rule |
 | Payload | 13.6077711 kg | PEP27 rule 17: 30 lb removable payload, fixed in every candidate |
 | Mass limit | 52.16 kg | Earlier 115 lb design bound; not a verified hull capacity, and not a PEP27 rule — PEP27 caps capacity (500 Ah) and voltage, not total mass |
