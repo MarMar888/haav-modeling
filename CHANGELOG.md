@@ -4,6 +4,31 @@ See [`VERSIONING.md`](VERSIONING.md) for how this file and `VERSION` are kept. T
 of [`MarMar888/hav`](https://github.com/MarMar888/hav)'s `optimization/` folder with its full history
 (MarMar888/hav#98) and keeps the same version line.
 
+## 0.6.8 — 2026-10-30
+
+The hull sensitivity workspace displays lengths in inches, areas in square
+inches and moments in N·in, including input tables, curve legends and sensitivity
+slopes. Length overrides accept inch-based names and CSV exports use explicit
+inch-based columns. Equations and reloadable study JSON remain SI, with percent
+changes and normalized sensitivities preserved.
+
+## 0.6.7 — 2026-10-30
+
+The sensitivity notebook reloads its Python helper before each study, so a
+running kernel picks up updates without retaining an old solve path. This fixes
+the NoneType error when a cached helper sent v4's unestablished uniform aft
+length into the original numeric-only sweep function. User adjustment lists
+and physical inputs are preserved.
+
+## 0.6.6 — 2026-10-30
+
+Added the verified v4 hull baseline with a 14-inch outer chine beam, supplied
+component loading and a 0–30 mph Savitsky sweep comparing main-panel and
+outer-chine-chord deadrise approximations. The sensitivity workspace now starts
+from v4. A missing uniform aft length is kept explicit and flags every solved
+point as an equivalent-hull approximation; no previous hull geometry threshold
+is reused. Hydrodynamic equations are unchanged.
+
 ## 0.6.5 — 2026-10-30
 
 Added a reusable Savitsky sensitivity notebook in `hull/`, linked from the active

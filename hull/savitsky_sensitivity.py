@@ -54,6 +54,7 @@ def load_baseline(path=DEFAULT_INPUTS, *, uniform_aft_length_m=None, propeller_c
     CSV is for external analysis; JSON retains the metadata needed to restart.
     Older run files need explicit uniform_aft_length_m / propeller_count overrides
     if those assumptions were not saved; they are never guessed.
+    A null uniform_aft_length_m explicitly means no uniform region established.
     """
     path = Path(path).resolve()
     data = json.loads(path.read_text())
@@ -74,6 +75,30 @@ def load_baseline(path=DEFAULT_INPUTS, *, uniform_aft_length_m=None, propeller_c
                          'supply the physical assumptions rather than guessing them.')
     config['source'] = {'path': str(path), 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
     return config, speeds
+
+
+
+def run_curves(engine, inputs, speeds, config):
+    """Keep an unestablished uniform aft length explicit, rather than inventing one."""
+    aft = config['uniform_aft_length_m']
+    count = config['propeller_count']
+    if not isinstance(count, int) or isinstance(count, bool) or count < 1:
+        raise ValueError('Propeller count must be a positive integer.')
+    if aft is not None:
+        return engine['run_sweep'](inputs, speeds, aft, count)
+    caveat = config.get('geometry_warning', 'No uniform aft length established; equivalent-hull approximation.')
+    rows = []
+    for mph in speeds:
+        row = engine['solve'](inputs, mph * MPH_TO_M_S)
+        solved = 'trim_deg' in row
+        row.update(speed_mph=mph, forebody_approximation=solved,
+                   geometry_warning=caveat if solved else '')
+        if 'thrust_n' in row:
+            row['total_thrust_lbf'] = row['thrust_n'] / 4.4482216152605
+            row['per_prop_thrust_lbf'] = row['total_thrust_lbf'] / count
+            row['keel_wetted_in'] = row['keel_wetted_m'] / 0.0254
+        rows.append(row)
+    return rows
 
 
 def study(config, speeds_mph, variations, scenarios=None, require_uniform_aft=False):
@@ -118,7 +143,7 @@ def study(config, speeds_mph, variations, scenarios=None, require_uniform_aft=Fa
         raise ValueError('Scenario labels must be unique; use less closely spaced values.')
     rows = []
     for name, key, value, q in choices:
-        result = engine['run_sweep'](q, speeds, config['uniform_aft_length_m'], config['propeller_count'])
+        result = run_curves(engine, q, speeds, config)
         for row in result:
             solved = 'trim_deg' in row
             row.update(scenario=name, parameter=key, parameter_value=value,
@@ -130,7 +155,7 @@ def study(config, speeds_mph, variations, scenarios=None, require_uniform_aft=Fa
             rows.append(row)
     baseline = {r['speed_mph']: r for r in rows if r['scenario'] == 'baseline'}
     metrics = ['resistance_n', 'effective_power_kw', 'trim_deg', 'keel_wetted_m',
-               'wetted_area_m2', 'reynolds_number', 'pressure_drag_n', 'friction_drag_n', 'thrust_n']
+               'wetted_area_m2', 'reynolds_number', 'pressure_drag_n', 'friction_drag_n', 'thrust_n','chine_wetted_m']
     sensitivity = []
     for row in rows:
         if row['parameter'] is None:
@@ -178,12 +203,16 @@ def study(config, speeds_mph, variations, scenarios=None, require_uniform_aft=Fa
 
 
 def export_study(payload, folder):
-    """Write a new directory containing JSON and two plain CSV tables; never overwrite."""
+    """Write SI JSON and two inch-based CSV tables into a new directory; never overwrite."""
     folder = Path(folder)
-    serialized = json.dumps(payload, indent=2, allow_nan=False) + '\n'
+    from display_units import curve_rows_in_inches, sensitivity_rows_in_inches
+    serialized = json.dumps({**payload, 'csv_display_units':
+        'inches, square inches, cubic inches; N·in; in/s; viscosity in²/s; density kg/in³; other units unchanged'},
+        indent=2, allow_nan=False) + '\n'
     folder.mkdir(parents=True, exist_ok=False)
     (folder/'study.json').write_text(serialized)
-    for filename, rows in [('curves.csv', payload['results']), ('sensitivities.csv', payload['sensitivities'])]:
+    for filename, rows in [('curves.csv', curve_rows_in_inches(payload['results'])),
+                           ('sensitivities.csv', sensitivity_rows_in_inches(payload['sensitivities']))]:
         fields = sorted({key for row in rows for key in row}) or [
             'scenario', 'speed_mph', 'parameter', 'parameter_value', 'parameter_baseline',
             'metric', 'eligible', 'reason', 'change', 'slope', 'percent_change', 'elasticity']

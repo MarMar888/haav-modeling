@@ -1,0 +1,126 @@
+{
+  "description": "v4 hull; user verified external dimensions and 14-inch outer chine beam. Equivalent-hull estimates only.",
+  "inputs": {
+    "length_m": 1.8288,
+    "beam_m": 0.35559999999999997,
+    "mass_kg": 56.747580633590005,
+    "deadrise_deg": 20.0,
+    "lcg_m": 0.6028500600909621,
+    "vcg_m": 0.1529978027560408,
+    "thrust_height_m": -0.0328240561840604,
+    "thrust_x_m": -0.12252673981613506,
+    "thrust_angle_deg": 15,
+    "density_kg_m3": 998.2,
+    "viscosity_m2_s": 1.004e-06,
+    "roughness_m": 0,
+    "wetted_lengths_type": 2,
+    "flap_chord_m": 0,
+    "flap_span_ratio": 0,
+    "flap_angle_deg": 0
+  },
+  "input_notes": {
+    "length_m": {
+      "unit": "m",
+      "meaning": "External overall length: 72 in."
+    },
+    "beam_m": {
+      "unit": "m",
+      "meaning": "Outer transom chine-to-chine beam: 14 in; includes both reverse-chine strips, not overall width."
+    },
+    "mass_kg": {
+      "unit": "kg",
+      "meaning": "Sum of supplied nonblank component masses: 125.107 lb."
+    },
+    "deadrise_deg": {
+      "unit": "deg",
+      "meaning": "20-degree main-panel angle at transom, used as a constant-V approximation; outer-chine chord comparison is separate."
+    },
+    "lcg_m": {
+      "unit": "m",
+      "meaning": "Mass-weighted CG: 23.7342543343 in forward of transom (CAD Y)."
+    },
+    "vcg_m": {
+      "unit": "m",
+      "meaning": "Mass-weighted CG: 6.02353554158 in above aft keel (CAD Z)."
+    },
+    "thrust_height_m": {
+      "unit": "m",
+      "meaning": "Point on shaft line, above keel; negative = below datum"
+    },
+    "thrust_x_m": {
+      "unit": "m",
+      "meaning": "Point on shaft line, forward of transom; negative = aft"
+    },
+    "thrust_angle_deg": {
+      "unit": "deg",
+      "meaning": "Upward forward thrust angle relative to keel"
+    },
+    "density_kg_m3": {
+      "unit": "kg/m\u00b3",
+      "meaning": "Freshwater at 20 \u00b0C"
+    },
+    "viscosity_m2_s": {
+      "unit": "m\u00b2/s",
+      "meaning": "Freshwater kinematic viscosity at 20 \u00b0C"
+    },
+    "roughness_m": {
+      "unit": "m",
+      "meaning": "Zero = smooth-hull assumption, disables roughness allowance"
+    },
+    "wetted_lengths_type": {
+      "unit": "code",
+      "meaning": "2 = Savitsky 1964; this notebook supports only this geometry"
+    },
+    "flap_chord_m": {
+      "unit": "m",
+      "meaning": "Zero; this notebook supports no flap"
+    },
+    "flap_span_ratio": {
+      "unit": "1",
+      "meaning": "Zero; this notebook supports no flap"
+    },
+    "flap_angle_deg": {
+      "unit": "deg",
+      "meaning": "Zero; this notebook supports no flap"
+    }
+  },
+  "uniform_aft_length_m": null,
+  "propeller_count": 2,
+  "comparison_deadrise_deg": 18.35821230535409,
+  "geometry_warning": "Reverse-chine strips, changing chine beam and keel rocker; no uniform aft length established. Constant-V equivalent-hull estimate only.",
+  "geometry_source": {
+    "path": "cad/stepfiles/v4 - solid hull 10.30.26",
+    "sha256": "b5c753c90c2c9ded47cc6a7b63b085823a6858615f8c8781a6a879413c4af4a3"
+  },
+  "loading_source": {
+    "path": "hull/boats/v4-2026-10-30/component-masses.csv",
+    "sha256": "4894940eefb56aea7ea8ce722305e555714d8255835f7aca57f698908e01ac31",
+    "excluded_blank_rows": [
+      "printed_shell",
+      "glass_resin_finish",
+      "tube_port",
+      "tube_starboard",
+      "baseboard",
+      "esc_port",
+      "esc_starboard",
+      "electronics_enclosure",
+      "electronics",
+      "sensor_tower",
+      "wiring",
+      "fasteners_adhesives"
+    ]
+  },
+  "assumptions": [
+    "Outer transom chine-to-chine beam b=14 in; overall maximum width is not used as b.",
+    "Main V panel is 20 degrees at transom; comparison uses the 18.358212-degree keel-to-outer-chine chord.",
+    "The constant-V model does not explicitly represent reverse-chine lift/drag or varying sections and rocker.",
+    "No uniform aft region has been established; geometry_ok is false at every solved speed.",
+    "Loading uses only supplied nonblank masses; no missing component masses are estimated.",
+    "CG coordinates use CAD Y forward from transom and Z above aft keel; small transverse CG offset is ignored by symmetric model.",
+    "User requested previous two-prop thrust line: 15 degrees, same signed point coordinates relative to aft keel/transom.",
+    "Freshwater at 20 C: density 998.2 kg/m3, viscosity 1.004e-6 m2/s; smooth-hull roughness allowance disabled.",
+    "Effective power is horizontal resistance times speed, not motor or battery power.",
+    "No displacement/transition resistance, appendages, air drag, waves, propeller interaction or dynamic-stability model.",
+    "Cv<1 is an evaluation cutoff, not planing onset."
+  ]
+}

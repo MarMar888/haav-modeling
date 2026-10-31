@@ -1,6 +1,6 @@
 # Hull analysis
 
-Open **[sensitivity-analysis.ipynb](sensitivity-analysis.ipynb)** to change boat inputs and compare resistance, effective power, trim, wetting and sensitivity across speed. Edit section 1 and Run All. Section 6 exports CSV/JSON into `outputs/savitsky/sensitivity/`; a saved [example study](../outputs/savitsky/sensitivity/example/study.json) is included.
+Open **[sensitivity-analysis.ipynb](sensitivity-analysis.ipynb)** to change boat inputs and compare resistance, effective power, trim, wetting and sensitivity across speed. Edit section 1 and Run All. Length displays and controls use inches (e.g. `lcg_in`); areas use square inches. CSV exports use inch-based columns and slope units; reloadable JSON and internal equations remain SI. Section 6 exports CSV/JSON into `outputs/savitsky/sensitivity/`; a saved [example study](../outputs/savitsky/sensitivity/example/study.json) is included.
 
 ```sh
 python -m pip install -r optimization/savitsky/requirements-notebook.txt
@@ -18,3 +18,7 @@ Run the regression and export checks from the repository root:
 ```sh
 python3 -m unittest discover -s hull -p 'test_*.py'
 ```
+
+## Boats
+
+- [v4 — October 30, 2026](boats/v4-2026-10-30/README.md): verified STEP dimensions, supplied loading and completed 0–30 mph sweep. This is now the sensitivity notebook's default boat.

@@ -61,6 +61,43 @@ class SensitivityTests(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 export_study(run, folder)
 
+    def test_unknown_uniform_aft_length_is_always_flagged(self):
+        self.config['uniform_aft_length_m'] = None
+        self.config['geometry_warning'] = 'Reverse chine / varying sections; equivalent hull only.'
+        m = self.config['inputs']['mass_kg']
+        run = study(self.config, [0, 2, 22], {'mass_kg': [m*1.1]}, require_uniform_aft=True)
+        solved = [r for r in run['results'] if r['solved']]
+        self.assertTrue(solved)
+        self.assertTrue(all(not r['geometry_ok'] and r['forebody_approximation'] for r in solved))
+        self.assertTrue(all(r['geometry_warning'] == self.config['geometry_warning'] for r in solved))
+        self.assertTrue(all(not r['eligible'] for r in run['sensitivities']))
+        original = study(load_baseline()[0], [22], {})['results'][0]
+        self.assertAlmostEqual(solved[0]['resistance_n'], original['resistance_n'])
+
+    def test_notebook_refreshes_a_stale_import_before_study(self):
+        import importlib
+        import savitsky_sensitivity as helper
+        notebook = json.loads((ROOT/'hull/sensitivity-analysis.ipynb').read_text())
+        source = next(''.join(c['source']) for c in notebook['cells']
+                      if c['cell_type'] == 'code' and 'payload = study(config,' in ''.join(c['source']))
+        refresh = source.split('# Refresh the helper', 1)[1].split('# Load the baseline', 1)[0]
+        refresh = '# Refresh the helper' + refresh
+
+        def stale_study(*args, **kwargs):
+            raise TypeError('must be real number, not NoneType')
+
+        namespace = {'study': stale_study}
+        helper.study = stale_study  # simulate a module cached in an existing kernel
+        try:
+            exec(compile(refresh, '<notebook helper refresh>', 'exec'), namespace)
+            config, _ = namespace['load_baseline'](ROOT/'hull/boats/v4-2026-10-30/savitsky-inputs.json')
+            self.assertIsNone(config['uniform_aft_length_m'])
+            run = namespace['study'](config, [22], {})
+            self.assertTrue(run['results'][0]['solved'])
+            self.assertFalse(run['results'][0]['geometry_ok'])
+        finally:
+            importlib.reload(helper)
+
     def test_invalid_inputs_are_not_silently_dropped(self):
         for speeds, changes in [([22, 22], {}), ([22, 2], {}), ([float('nan')], {}),
                                 ([22], {'beam_typo': [.3]}), ([22], {'mass_kg': [-1]}),
