@@ -1,0 +1,25 @@
+flowchart TD
+  MASS["Loaded mass m → weight W = mg"] --> EQ
+  CG["CG: lcg_m forward; vcg_m above keel"] --> EQ
+  HULL["Chine beam b + deadrise β"] --> GEO
+  THRUST["Thrust angle ε + line coordinates xT, zT"] --> EQ
+  WATER["Speed V + density ρ"] --> GEO
+  GEO["Wetted geometry + lift + pressure center<br/>Lk, Lc, λ, S, L, xp"] <--> EQ["Solve vertical force AND pitch moment balance<br/>Unknowns: running trim τ + wetted keel length Lk"]
+  GEO --> DP["Pressure drag Dp = L tan τ<br/>At fixed L: τ ↑ → Dp ↑"]
+  GEO --> FF["Skin friction Ff = ½ρ(Cf + ΔCf) S V²<br/>At fixed other terms: S ↑ → Ff ↑"]
+  FINISH["Viscosity ν + roughness k"] --> FF
+  WATER --> FF
+  FF --> EQ
+  DP --> R["Horizontal resistance R = Dp + Ff cos τ"]
+  FF --> R
+  R --> T["Required shaft thrust T = R / cos(τ + ε)"]
+  T --> EQ
+  R --> PE["Effective power PE = R V<br/>At fixed V: lower R → lower power and energy/distance"]
+  V["Speed V"] --> PE
+  PE -. "extension outside notebook" .-> BAT["Battery power ≈ PE / (ηpropulsive ηdrive) + auxiliary power<br/>ηpropulsive = PE / Pshaft; shaft power = torque × angular speed"]
+  R -.-> ACC["Acceleration ≈ (available horizontal thrust − R) / m"]
+  PROP["Motor torque / RPM + propeller + battery limits<br/>Available thrust across speed: outside notebook"] -.-> ACC
+  MASS -.-> ACC
+  LOW["Displacement + transition resistance; planing criterion<br/>Outside notebook: Cv = 1 is NOT planing onset"] -.-> ACC
+  ACC -.-> GOAL["Goal: reach sustained planing at lower speed / sooner<br/>Then minimize battery energy per distance at chosen cruise speed"]
+  LENGTH["Overall length: input / geometry checks only<br/>Uniform aft length: warning only<br/>Propeller count: divides reported thrust only"] --> CHECK["Applicability / reporting<br/>No direct resistance improvement from changing these alone"]

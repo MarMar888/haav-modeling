@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Savitsky sample calculator</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#17212e;font:15px/1.5 system-ui,sans-serif}main{max-width:1100px;margin:auto;padding:28px 22px}h1{font-size:28px;margin:0 0 8px}h2{font-size:19px;margin:0 0 14px}p{margin:8px 0 18px}.muted{color:#536477}.panel{background:white;border:1px solid #dbe2eb;border-radius:10px;padding:20px;margin:20px 0}.inputs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}label{display:flex;flex-direction:column;gap:5px}input,button{font:inherit}input[type=number]{width:100%;padding:9px;border:1px solid #abb7c6;border-radius:5px}input[type=range]{width:100%}button{padding:9px 16px;border:1px solid #adb9c6;border-radius:5px;background:white;color:inherit;cursor:pointer}button.primary{background:#1859a9;border-color:#1859a9;color:white}.actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:20px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:16px 0}.stat span{display:block;font-size:13px;color:#536477}.stat strong{font-size:23px;font-weight:600}.plots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.plot{min-width:0}.plot svg{width:100%;display:block}svg text{font:12px system-ui,sans-serif;fill:#334155}.legend{display:flex;gap:22px;flex-wrap:wrap;color:#536477;font-size:13px}.legend span:before{content:'';display:inline-block;width:22px;height:3px;margin:0 6px 3px 0;background:#1859a9}.legend .outside:before{background:repeating-linear-gradient(to right,#ad5a08 0 5px,transparent 5px 8px)}.warning{background:#fff5e5;color:#78410b;padding:12px;border-radius:5px}.error{color:#a51d28}details{margin:16px 0}summary{cursor:pointer}table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:9px;border-bottom:1px solid #e0e5ed}td.numeric{text-align:right;font-variant-numeric:tabular-nums}.table-wrap{overflow-x:auto}small{font-size:13px}a{color:#1859a9}#error:empty{display:none}#selection-note{min-height:24px}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #7bb6ff;outline-offset:3px}@media(max-width:650px){.inputs{grid-template-columns:repeat(2,minmax(0,1fr))}.plots{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}main{padding:20px 12px}.panel{padding:15px}}@media(prefers-color-scheme:dark){body{background:#121a25;color:#e2e8f0}.panel{background:#1c2736;border-color:#3e4b5b}.muted,.stat span,.legend{color:#afc0d3}input[type=number],button{background:#121a25;color:#e2e8f0;border-color:#64748b}svg text{fill:#cbd5e1}.warning{background:#3f301a;color:#ffd596}a{color:#8cbaff}th,td{border-color:#3e4b5b}}
+</style>
+</head>
+<body><main>
+<h1>Savitsky sample calculator</h1>
+<p class="muted">Explore how speed changes running trim, hull resistance and effective power. Sample values describe a generic prismatic monohull, not your CAD hull.</p>
+<form id="calculator" class="panel">
+<h2>Hull and loaded boat</h2>
+<div class="inputs">
+<label>Hull length (m)<input name="length_m" type="number" value="2.59" min="0.1" step="any" required></label>
+<label>Chine beam (m)<input name="beam_m" type="number" value="0.4064" min="0.01" step="any" required></label>
+<label>Loaded mass (kg)<input name="mass_kg" type="number" value="43.1" min="0.1" step="any" required></label>
+<label>Deadrise (degrees)<input name="deadrise_deg" type="number" value="10" min="0" max="45" step="any" required></label>
+<label>CG forward of transom (m)<input name="lcg_m" type="number" value="0.9065" min="0.001" step="any" required></label>
+<label>CG above keel (m)<input name="vcg_m" type="number" value="0.16" min="0" step="any" required></label>
+</div>
+<details><summary>Thrust line and water properties</summary>
+<p class="muted"><small>Thrust acts forward. Positive thrust angle tilts thrust upward relative to the keel. Positions are measured forward from the transom and upward from the keel.</small></p>
+<div class="inputs">
+<label>Thrust angle (degrees)<input name="thrust_angle_deg" type="number" value="0" min="-20" max="20" step="any" required></label>
+<label>Thrust point above keel (m)<input name="thrust_height_m" type="number" value="0.08" step="any" required></label>
+<label>Thrust point forward of transom (m)<input name="thrust_x_m" type="number" value="0" step="any" required></label>
+<label>Water density (kg/m³)<input name="density_kg_m3" type="number" value="998.2" min="1" step="any" required></label>
+<label>Kinematic viscosity (m²/s)<input name="viscosity_m2_s" type="number" value="0.000001004" min="0.000000001" step="any" required></label>
+<label>Hull roughness (m)<input name="roughness_m" type="number" value="0.00015" min="0" step="any" required></label>
+</div></details>
+<div class="actions"><label>Maximum sweep speed (m/s)<input name="max_speed" type="number" value="15" min="0.1" max="50" step="any" required></label><button class="primary" type="submit">Calculate speed sweep</button><button id="export" type="button">Save CSV</button></div>
+<p id="error" class="error" role="alert"></p>
+</form>
+<section class="panel">
+<label for="selected-speed">Inspect speed: <strong id="speed-label"></strong></label>
+<input id="selected-speed" type="range" min="0" max="15" step="0.1" value="8">
+<div id="selection" aria-live="polite"></div>
+</section>
+<section aria-label="Speed sensitivity charts"><div class="plots"><div id="power-plot" class="plot"></div><div id="trim-plot" class="plot"></div></div>
+<div class="legend"><span>Within implemented checks</span><span class="outside">Outside one or more checks</span></div>
+<p class="muted"><small>At zero speed, resistance and power are zero. Low-speed gaps are intentional: this calculator has no displacement or wave-making model. Dashed estimates are extrapolations or fail geometry checks. Lines stop at gaps.</small></p></section>
+<details><summary>All sweep results</summary><div class="table-wrap"><table><thead><tr><th>Speed (m/s)</th><th>Trim (°)</th><th>Resistance (N)</th><th>Power (kW)</th><th>Model status</th></tr></thead><tbody id="sweep-rows"></tbody></table></div></details>
+<details><summary>Model scope and sources</summary><p>Calm-water force and pitch equilibrium for a constant-deadrise prismatic monohull; Savitsky 1964 wetted lengths, ITTC 1957 friction and Townsin roughness allowance. The solver searches 0.5–35° trim and flags trim outside 2–15°, wetted-length ratio above 4, beam speed coefficient above 13, dry chines and wetting beyond hull length. Speeds with a beam coefficient below 1 are not evaluated.</p><p>Passing these checks does not establish that the boat will plane or be stable. No porpoising, wave response, appendage drag, air drag, propulsion efficiency, electrical power, endurance or CAD import is included. Effective power is hull resistance × speed, not battery power. Static trim and draft are not calculated.</p><p>Equations adapted from <a href="https://github.com/elcf/python-openplaning">OpenPlaning</a> under its MIT license. See <a href="NOTICE.txt">attribution</a> and <a href="README.md">calculator documentation</a>.</p></details>
+</main>
+<script src="model.js"></script>
+<script src="calculator.js"></script>
+</body></html>

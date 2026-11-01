@@ -1,0 +1,55 @@
+<div id="pep-hulls">
+<style>
+#pep-hulls .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 18px;margin:18px 0}
+#pep-hulls .entry{min-width:0;display:flex;flex-direction:column;gap:7px;align-items:flex-start}
+#pep-hulls .drawing{width:100%;height:155px;color:var(--viz-series-1)}
+#pep-hulls .shell{fill:color-mix(in srgb,var(--viz-series-1) 18%,transparent);stroke:var(--viz-series-1);stroke-width:1.6;stroke-linejoin:round}
+#pep-hulls .structure{fill:var(--muted);stroke:var(--muted-foreground);stroke-width:1.2}
+#pep-hulls .detail{fill:none;stroke:var(--viz-series-1);stroke-width:1.4}
+#pep-hulls .foil{fill:color-mix(in srgb,var(--viz-series-2) 24%,transparent);stroke:var(--viz-series-2);stroke-width:1.5}
+#pep-hulls .meta{color:var(--muted-foreground)}
+#pep-hulls dl{display:grid;grid-template-columns:110px 1fr;gap:9px 14px;margin:16px 0}
+#pep-hulls dt{color:var(--muted-foreground)}#pep-hulls dd{margin:0}
+@media(max-width:600px){#pep-hulls .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:390px){#pep-hulls .gallery{grid-template-columns:1fr}#pep-hulls dl{grid-template-columns:1fr;gap:4px}#pep-hulls dd{margin-bottom:9px}}
+</style>
+<h2>PEP26 · Competitive hull designs</h2>
+<div class="text-small meta">Schematic top views · bow upward · not to scale or exact boat geometry</div>
+<div class="gallery" id="pep-gallery"></div>
+<hr>
+<div id="pep-detail" aria-live="polite"></div>
+<div class="text-small meta">Overall division placements include paper and video scores. Team-reported hull benefits do not establish the cause of race results. Dashed lines indicate underside features.</div>
+<script>
+(()=>{
+const root=document.getElementById('pep-hulls');
+const boats=[
+{id:'wm',name:'William & Mary',rank:'Autonomy · 1st',shape:'Planing catamaran',material:'Carbon fiber + foam support',route:'Custom build → reused hull → propulsion and steering refinements',feature:'Twin running surfaces; tunnel between hulls',evidence:'Testing: rudder improved control on plane; propeller changes delivered the main breakthrough.',pages:'PDF pp. 2, 6–8',url:'WM/WilliamMary_White_Paper_2026.pdf',kind:'cat'},
+{id:'vcu',name:'VCU',rank:'Autonomy · 2nd',shape:'V-bottom monohull',material:'Inherited hull with underside strakes',route:'Previous-year hull → revised battery and payload restraints',feature:'Single V-bottom; longitudinal strakes',evidence:'Testing: moving equipment aft raised the bow. Simulation: strakes improved directional stability.',pages:'PDF pp. 5–6, 10, 14',url:'VCU/VCU%20PEP26%20White%20Paper.pdf',kind:'mono'},
+{id:'jhu',name:'Johns Hopkins',rank:'Autonomy · 3rd',shape:'Trimaran conversion',material:'RC main hull + foam outriggers',route:'Purchased RC hull → buoyancy test → floats and PVC frame',feature:'Central hull with smaller floats on either side',evidence:'Testing: the main hull alone lacked capacity. Outriggers supplied additional buoyancy and roll stability.',pages:'PDF pp. 9–10, 12–13',url:'JHU/JHU_PEP26_WHITE_PAPER.pdf',kind:'tri'},
+{id:'mma',name:'Mass Maritime',rank:'Uncrewed Open · 1st',shape:'Kit planing monohull',material:'Plywood + epoxy + fiberglass',route:'Purchased CLC Cocktail Class Racer kit → stitch-and-glue assembly',feature:'Broad planing bottom; conventional small racing boat',evidence:'Design selection: sufficient planing area and freeboard, with a readily available kit.',pages:'PDF pp. 5, 9',url:'MassMaritime/Mass%20Maritime%20-%20Birddoggers%20White%20Paper%20PEP26.pdf',kind:'kit'},
+{id:'ecu',name:'East Carolina',rank:'Uncrewed Open · 2nd',shape:'Stepped racing catamaran',material:'Vacuum-bagged carbon fiber / epoxy',route:'Custom design → carved foam tooling → fiberglass mold → carbon layup',feature:'Twin narrow hulls; tunnel and underside steps',evidence:'Design intent: steps reduce wetted contact at speed. Simulation omitted waves and dynamic hull rise.',pages:'PDF pp. 2–3, 9–11',url:'ECU/ECU%20PEP%20BOAT%20WHITE%20PAPER.pdf',kind:'stepcat'},
+{id:'mad',name:'Madison College',rank:'Uncrewed Open · 3rd',shape:'Monohull + hydrofoils',material:'Thermoformed plastic + aluminum frame',route:'Racebird-inspired design → sponsored tooling and forming → team assembly',feature:'Shallow-V stepped hull; lifting foils and aft T-foil',evidence:'Design intent: efficient acceleration to foil takeoff. Model validation was limited; race foiling is unconfirmed.',pages:'PDF pp. 3–4, 11, 16',url:'Madison/MATC%20PEP26%20White%20Paper.pdf',kind:'foil'}];
+const mono='<path class="shell" d="M100 12 Q62 40 64 89 L68 145 L132 145 L136 89 Q138 40 100 12Z"/>';
+const cat='<path class="shell" d="M57 10 Q39 39 40 85 L42 145 L72 145 L74 85 Q75 39 57 10Z M143 10 Q125 39 126 85 L128 145 L158 145 L160 85 Q161 39 143 10Z"/><path class="structure" d="M74 69 H126 L127 127 H73Z"/>';
+function draw(k){
+if(k==='cat')return cat+'<path class="detail" d="M84 80 H116 V112 H84Z"/>';
+if(k==='stepcat')return cat+'<path class="detail" stroke-dasharray="4 3" d="M41 99 H74 M126 99 H159 M42 119 H73 M127 119 H158"/>';
+if(k==='mono')return mono+'<path class="detail" stroke-dasharray="4 3" d="M100 28 V145 M87 58 L80 142 M113 58 L120 142"/>';
+if(k==='tri')return '<path class="structure" d="M33 74 H167 V80 H33Z M33 120 H167 V126 H33Z"/>'+mono+'<path class="shell" d="M30 47 Q19 63 20 85 L22 139 H41 L43 85 Q44 63 30 47Z M170 47 Q157 63 157 85 L159 139 H178 L180 85 Q181 63 170 47Z"/>';
+if(k==='kit')return '<path class="shell" d="M100 17 Q52 20 42 68 L47 145 H153 L158 68 Q148 20 100 17Z"/><path class="structure" d="M69 68 Q100 48 131 68 L132 125 H68Z"/><path class="detail" d="M48 131 H152"/>';
+return '<path class="foil" d="M80 70 L20 87 L31 112 L77 91Z M120 70 L180 87 L169 112 L123 91Z"/>'+mono+'<path class="detail" stroke-dasharray="4 3" d="M66 107 H134"/><path class="detail" d="M100 143 V162"/><path class="foil" d="M73 156 H127 V163 H73Z"/>';
+}
+const gallery=root.querySelector('#pep-gallery');
+gallery.innerHTML=boats.map(b=>'<section class="entry"><div class="text-small meta">'+b.rank+'</div><button type="button" class="btn" data-boat="'+b.id+'" aria-pressed="false">'+b.name+'</button><svg class="drawing" viewBox="0 0 200 175" role="img" aria-label="'+b.shape+', schematic top view"><title>'+b.shape+'</title>'+draw(b.kind)+'</svg><div>'+b.shape+'</div><div class="text-small meta">'+b.material+'</div></section>').join('');
+function select(id,save){
+const b=boats.find(b=>b.id===id)||boats[0];
+root.querySelectorAll('[data-boat]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.boat===b.id)));
+root.querySelector('#pep-detail').innerHTML='<h3>'+b.name+'</h3><dl><dt>Geometry</dt><dd>'+b.feature+'</dd><dt>Construction</dt><dd>'+b.route+'</dd><dt>Evidence</dt><dd>'+b.evidence+'</dd><dt>Source</dt><dd><a href="https://www.navalengineers.org/Portals/16/PEP/2026/'+b.url+'" target="_blank" rel="noopener">Team white paper</a> · '+b.pages+'</dd></dl>';
+if(save&&window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{selectedTeam:b.name,hullType:b.shape},privateContent:{selected:b.id}}).catch(()=>{});
+}
+gallery.addEventListener('click',e=>{const b=e.target.closest('[data-boat]');if(b)select(b.dataset.boat,true)});
+select(window.openai?.widgetState?.privateContent?.selected||'wm',false);
+window.addEventListener('openai:set_globals',e=>{const s=e.detail?.globals?.widgetState?.privateContent?.selected;if(s)select(s,false)});
+})();
+</script>
+</div>

@@ -4,6 +4,17 @@ See [`VERSIONING.md`](VERSIONING.md) for how this file and `VERSION` are kept. T
 of [`MarMar888/hav`](https://github.com/MarMar888/hav)'s `optimization/` folder with its full history
 (MarMar888/hav#98) and keeps the same version line.
 
+## 0.7.1 — 2026-11-01
+
+Merged Patrick's hull work from master (0.6.3–0.6.8 below) and put it where this repo keeps modeling:
+the Savitsky engine, `current-hull.ipynb` and the 1964 paper audit now live in `hull/savitsky/` (was
+`optimization/savitsky/`), the hull STEP exports in `hull/stepfiles/` (was `cad/stepfiles/`), and every
+path in `hull/`, `outputs/` and the notebooks is repointed. The rest of the hav project tree that came in
+with that merge — `dashboard/`, `cad/`, `optimization/`, `docs/`, `PEP*TeamExtractions/`, `diagrams/` (a
+copy of `archive/diagrams/`), `archive/hull/`, `archive/thinking/`, `.claude/skills/`, `package.json`, the
+Next.js block in `AGENTS.md` — is dropped again, as 0.6.2 did. Our 0.6.3 and 0.6.4 entries are renumbered
+0.6.9 and 0.6.10 because master had already used those numbers for the hull work.
+
 ## 0.7.0 — 2026-10-30
 
 `willmarley.ipynb` cut down and reorganized: inputs with bounds, the model, then the fastest design
@@ -17,7 +28,7 @@ chart for the three picks, and a printed note that the 10C pack cap is a speed c
 (`C_RATE_MAX × miles × reserve` = 65 mph) because the pack is sized to the race. Minor bump: the
 notebook answers a different question (the best design, not the shape of the space).
 
-## 0.6.4 — 2026-10-30
+## 0.6.10 — 2026-10-30
 
 `willmarley.ipynb` rewritten to read more plainly, no model change. The prose is shorter and drops
 the figurative phrasing; the equations are unchanged. In the code, `steady_state` is split into
@@ -26,12 +37,62 @@ conversions and the pack-sizing loop settings are named constants, imports and c
 one setup cell, and the long cells are split in two. Every printed line and every chart is identical
 to 0.6.3 (checked by running both and comparing the outputs, chart images included).
 
-## 0.6.3 — 2026-10-30
+## 0.6.9 — 2026-10-30
 
 Environment setup, no model change. A root `requirements.txt` (`numpy`, `matplotlib`, `jupyterlab` — what
 `willmarley.ipynb` uses) and a `Makefile`: `make setup` builds `.venv` and installs it (re-running only when
 `requirements.txt` changes), `make notebook` opens the active model, `make clean` removes `.venv`. The README's
 run instructions now point at these. The frozen `archive/` requirements files are untouched.
+
+## 0.6.8 — 2026-10-30
+
+The hull sensitivity workspace displays lengths in inches, areas in square
+inches and moments in N·in, including input tables, curve legends and sensitivity
+slopes. Length overrides accept inch-based names and CSV exports use explicit
+inch-based columns. Equations and reloadable study JSON remain SI, with percent
+changes and normalized sensitivities preserved.
+
+## 0.6.7 — 2026-10-30
+
+The sensitivity notebook reloads its Python helper before each study, so a
+running kernel picks up updates without retaining an old solve path. This fixes
+the NoneType error when a cached helper sent v4's unestablished uniform aft
+length into the original numeric-only sweep function. User adjustment lists
+and physical inputs are preserved.
+
+## 0.6.6 — 2026-10-30
+
+Added the verified v4 hull baseline with a 14-inch outer chine beam, supplied
+component loading and a 0–30 mph Savitsky sweep comparing main-panel and
+outer-chine-chord deadrise approximations. The sensitivity workspace now starts
+from v4. A missing uniform aft length is kept explicit and flags every solved
+point as an equivalent-hull approximation; no previous hull geometry threshold
+is reused. Hydrodynamic equations are unchanged.
+
+## 0.6.5 — 2026-10-30
+
+Added a reusable Savitsky sensitivity notebook in `hull/`, linked from the active
+propulsion model, with editable baselines and speed grids, one-input variations and coupled
+scenarios, physical-output curves, percentage changes and normalized finite-change
+sensitivity across speed. CSV/JSON exports retain inputs, equation fingerprints,
+intermediates and applicability flags; unavailable points remain gaps. The
+existing current-hull equations and propulsion calculations are unchanged.
+
+## 0.6.4 — 2026-10-30
+
+`outputs/hydrostatics/hydrostatics.ipynb` adds a standalone hydrostatics
+walkthrough: component mass/CG inputs, offset interpolation, submerged-cell
+volumes and buoyancy centers, and visible draft/trim/heel iterations translated
+from DBB. Executed tables and plots show how the water plane reaches equilibrium.
+Both loading cases are compared against a hash-recorded reference from the
+original DBB core; the prior propulsion-model cells and input files are unchanged.
+
+## 0.6.3 — 2026-10-30
+
+The local DBB viewer now defaults to a water-horizontal camera reference, so the
+boat shows its calculated trim and heel against level water. A Level water toggle
+restores the original hull-horizontal view. This changes the view only; the DBB
+calculation core, project coordinates and loading inputs are unchanged.
 
 ## 0.6.2 — 2026-10-30
 

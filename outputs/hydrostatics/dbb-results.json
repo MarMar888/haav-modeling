@@ -1,0 +1,186 @@
+{
+  "source_url": "https://shiplab.github.io/dbb/index.html",
+  "source_sha256": "7ae83a7b86ee7ba72c0abf0b4a31787b9b429823827084ddda75da6b9d977894",
+  "core_sha256": "be04384812386f86f607cbb1d978cc55e183dc0be0d0ad9f2792f2ec9e2f6361",
+  "app_reported_version": "1.2.0",
+  "three_revision": "147",
+  "geometry_scale": 10,
+  "mass_scale": 1000,
+  "load_warnings": [],
+  "normalized_full_size": {
+    "weight_lbs": 125.10699999999997,
+    "stern_waterline_z_in": 6.490895581167856,
+    "bow_station_waterline_z_in": 6.110665789203465,
+    "trim_deg": 0.30257444173433046,
+    "heel_deg": 0.09905809892242307,
+    "cg_source_in": [
+      0.003086773721694212,
+      23.73425433428985,
+      6.023535541576411
+    ],
+    "cb_source_in": [
+      0.00677443119487754,
+      23.722956321221638,
+      3.8876110356978453
+    ],
+    "gm_in": 1.8068508602132753
+  },
+  "comparison_to_cad_solid": {
+    "stern_waterline_difference_in": 0.01364651149453966,
+    "trim_difference_deg": 0.1068358780337173,
+    "heel_difference_deg": 0.002225910052435748
+  },
+  "dbb_weights": {
+    "rows": [
+      {
+        "group": {
+          "id": "weights",
+          "name": "Measured/CAD component weights — 1000x mass",
+          "color": "#397986",
+          "parent": null,
+          "visible": true,
+          "density": null
+        },
+        "depth": 0,
+        "total": {
+          "n": 6,
+          "mass": 56.74758063358998,
+          "lcg": 6.028500600909622,
+          "tcg": 0.0007840405253103298,
+          "vcg": 1.5299780275604085
+        },
+        "density": {
+          "value": 0.3,
+          "own": false
+        }
+      }
+    ],
+    "blocks": {
+      "n": 6,
+      "mass": 56.74758063358998,
+      "lcg": 6.028500600909622,
+      "tcg": 0.0007840405253103298,
+      "vcg": 1.5299780275604085
+    },
+    "struct": {
+      "n": 0,
+      "mass": 0,
+      "lcg": null,
+      "tcg": null,
+      "vcg": null
+    },
+    "pct": 0,
+    "total": {
+      "n": 6,
+      "mass": 56.74758063358998,
+      "lcg": 6.028500600909622,
+      "tcg": 0.0007840405253103298,
+      "vcg": 1.5299780275604085
+    },
+    "hasHull": true,
+    "disp": 57.112219487973924,
+    "lcb": 6.111120422428147,
+    "tcb": 0,
+    "kb": 0.9920677404013817,
+    "margin": 0.3646388543839407,
+    "marginPct": 0.638460311388743,
+    "lcgMinusLcb": -0.08261982151852543
+  },
+  "dbb_float": {
+    "weight": 56.74758063358998,
+    "lcg": 6.028500600909622,
+    "rho": 1,
+    "ok": true,
+    "overloaded": false,
+    "T": 1.6125774592012168,
+    "lcbLevel": 6.105225439918339,
+    "trimOk": true,
+    "Tm": 1.600398294037158,
+    "trim": 0.09657836715895529,
+    "angle": 0.30257444173433046,
+    "draftAft": 1.6486874776166356,
+    "draftFwd": 1.5521091104576803,
+    "lcb": 6.025630905590296,
+    "xAft": 0,
+    "xFwd": 18.288,
+    "k": 0.005280969332838753,
+    "xm": 9.144,
+    "tcg": 0.0007840405253103298,
+    "tcb": 0.0017207055234988952,
+    "kp": 0.001728891699550199,
+    "heel": 0.09905809892242307,
+    "heelOk": true,
+    "ym": 0,
+    "kb": 0.9874532030672527,
+    "draftPort": 1.6058663888770908,
+    "draftStbd": 1.5949301991972251,
+    "yPort": 3.16277465,
+    "yStbd": -3.16277465
+  },
+  "dbb_stability": {
+    "overloaded": false,
+    "T": 1.6125774592012168,
+    "weight": 56.74758063358998,
+    "V": 56.725961308916546,
+    "Awp": 51.96511292663877,
+    "LCF": 6.867648234179713,
+    "IT": 56.788354490683304,
+    "IL": 859.6202255557102,
+    "KB": 0.9878182408202386,
+    "BMt": 1.001099905234342,
+    "BMl": 15.153911995856996,
+    "KMt": 1.9889181460545804,
+    "KMl": 16.141730236677233,
+    "KG": 1.5299780275604085,
+    "GMsolid": 0.45894011849417193,
+    "marked": 0,
+    "fsT": 0,
+    "fsL": 0,
+    "GM": 0.45894011849417193,
+    "GMl": 14.611752209116824,
+    "tanks": [],
+    "B": 6.3255493,
+    "L": 18.288,
+    "KGmax": 1.8389181460545805,
+    "heel": 0.09905809892242307,
+    "trim": 0.09657836715895529,
+    "checks": [
+      {
+        "name": "Initial metacentric height GM (corrected)",
+        "status": "pass",
+        "value": 0.45894011849417193,
+        "limit": "at least 0.15 m (IMO IS Code, general intact criterion)"
+      },
+      {
+        "name": "Static heel",
+        "status": "pass",
+        "value": 0.09905809892242307,
+        "limit": "at most 5° (design guide)"
+      },
+      {
+        "name": "Trim",
+        "status": "pass",
+        "value": 0.09657836715895529,
+        "limit": "at most 1% of the hull length (design guide)"
+      }
+    ]
+  },
+  "analytical_rectangular_hull_check": {
+    "case": "Rectangular box hull, centered load",
+    "expected_draft_m": 0.4905495624655504,
+    "dbb_draft_m": 0.49054956208169465,
+    "draft_error_percent": -7.825015245460946e-8,
+    "expected_GM_m": 6.280510814771594,
+    "dbb_GM_m": 6.28051081989897,
+    "GM_error_percent": 8.16394718271711e-8,
+    "trim_deg": -1.0672170578144923e-8,
+    "heel_deg": 0
+  },
+  "save_reload_normalized": {
+    "weight_lbs": 125.10726315788777,
+    "stern_waterline_z_in": 6.491071117220824,
+    "trim_deg": 0.30265838120860167,
+    "heel_deg": 0.09926546774580619,
+    "warnings": []
+  }
+}

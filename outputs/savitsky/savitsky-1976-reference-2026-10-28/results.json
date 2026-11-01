@@ -1,0 +1,463 @@
+{
+  "model": "Savitsky calm-water sample; 1964 wetted-length default",
+  "version": "0.1.7",
+  "generated_at": "2026-10-28T22:16:33.861Z",
+  "source": "https://github.com/elcf/python-openplaning",
+  "inputs": {
+    "length_m": 24.38,
+    "beam_m": 7.315,
+    "mass_kg": 84371.7496379989,
+    "deadrise_deg": 15,
+    "lcg_m": 10.67,
+    "vcg_m": 1.0450000000000002,
+    "thrust_height_m": 1.0450000000000002,
+    "thrust_x_m": 10.67,
+    "thrust_angle_deg": 0,
+    "density_kg_m3": 1025.87,
+    "viscosity_m2_s": 0.00000119,
+    "roughness_m": 0.00015,
+    "wetted_lengths_type": 3,
+    "flap_chord_m": 0.3048,
+    "flap_span_ratio": 1,
+    "flap_angle_deg": 5
+  },
+  "scope": "Generic prismatic monohull. No displacement resistance, waves, appendages, air drag, propulsion efficiency, stability analysis or CAD import. Effective power is resistance times speed.",
+  "results": [
+    {
+      "speed_m_s": 0,
+      "status": "static",
+      "resistance_n": 0,
+      "effective_power_kw": 0,
+      "warnings": [
+        "At rest: no steady-motion resistance. Static trim and draft are not calculated."
+      ]
+    },
+    {
+      "speed_m_s": 0.4356666666666667,
+      "cv": 0.0514384575226045,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 0.8713333333333334,
+      "cv": 0.102876915045209,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 1.307,
+      "cv": 0.1543153725678135,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 1.7426666666666668,
+      "cv": 0.205753830090418,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 2.1783333333333332,
+      "cv": 0.2571922876130225,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 2.614,
+      "cv": 0.308630745135627,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 3.049666666666667,
+      "cv": 0.36006920265823156,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 3.4853333333333336,
+      "cv": 0.411507660180836,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 3.921,
+      "cv": 0.46294611770344046,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 4.3566666666666665,
+      "cv": 0.514384575226045,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 4.792333333333334,
+      "cv": 0.5658230327486495,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 5.228,
+      "cv": 0.617261490271254,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 5.663666666666667,
+      "cv": 0.6686999477938586,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 6.099333333333334,
+      "cv": 0.7201384053164631,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 6.535,
+      "cv": 0.7715768628390675,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 6.970666666666667,
+      "cv": 0.823015320361672,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 7.406333333333333,
+      "cv": 0.8744537778842765,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 7.842,
+      "cv": 0.9258922354068809,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 8.277666666666667,
+      "cv": 0.9773306929294855,
+      "status": "displacement_unmodeled",
+      "warnings": [
+        "Low speed: no displacement or wave-making resistance model."
+      ]
+    },
+    {
+      "speed_m_s": 8.713333333333333,
+      "status": "outside_limits",
+      "trim_deg": 2.4010065142038854,
+      "keel_wetted_m": 34.28485357044427,
+      "chine_wetted_m": 20.995997209170497,
+      "lambda": 3.8085954053051787,
+      "cv": 1.02876915045209,
+      "wetted_area_m2": 209.32219247436564,
+      "transom_draft_m": 1.4363024093184122,
+      "center_pressure_m": 10.837699181976888,
+      "resistance_n": 51118.52169863879,
+      "thrust_n": 51163.438372017146,
+      "effective_power_kw": 445.4127190674726,
+      "pressure_drag_n": 33794.76713698797,
+      "friction_drag_n": 16555.187097985057,
+      "flap_drag_n": 768.5674636657662,
+      "vertical_residual_n": -1.3778844731859863e-10,
+      "moment_residual_nm": 2.796878106892109e-8,
+      "friction_coefficient": 0.0020326811710247128,
+      "warnings": [
+        "Predicted keel wetting exceeds actual hull length.",
+        "Flap regression outside its documented chord/speed range."
+      ]
+    },
+    {
+      "speed_m_s": 9.149000000000001,
+      "status": "outside_limits",
+      "trim_deg": 2.452027279350631,
+      "keel_wetted_m": 33.717962205260136,
+      "chine_wetted_m": 20.71393329847565,
+      "lambda": 3.7505670200776335,
+      "cv": 1.0802076079746945,
+      "wetted_area_m2": 206.10760411051942,
+      "transom_draft_m": 1.442551772089756,
+      "center_pressure_m": 10.855177218664833,
+      "resistance_n": 53279.678696159564,
+      "thrust_n": 53328.50664398816,
+      "effective_power_kw": 487.4557803911639,
+      "pressure_drag_n": 34423.48161194433,
+      "friction_drag_n": 18003.010057838612,
+      "flap_drag_n": 853.1870263766225,
+      "vertical_residual_n": -1.8962964531965554e-10,
+      "moment_residual_nm": 7.043126970529556e-9,
+      "friction_coefficient": 0.0020362886714868538,
+      "warnings": [
+        "Predicted keel wetting exceeds actual hull length.",
+        "Flap regression outside its documented chord/speed range."
+      ]
+    },
+    {
+      "speed_m_s": 9.584666666666667,
+      "status": "outside_limits",
+      "trim_deg": 2.5041823638252083,
+      "keel_wetted_m": 33.141008192554324,
+      "chine_wetted_m": 20.416146986054823,
+      "lambda": 3.690776157116141,
+      "cv": 1.131646065497299,
+      "wetted_area_m2": 202.79538007418518,
+      "transom_draft_m": 1.4480073293419535,
+      "center_pressure_m": 10.873572013751975,
+      "resistance_n": 55479.40477944841,
+      "thrust_n": 55532.436319242624,
+      "effective_power_kw": 531.7516016760866,
+      "pressure_drag_n": 35059.91385236733,
+      "friction_drag_n": 19476.559830051254,
+      "flap_drag_n": 942.9310970298214,
+      "vertical_residual_n": 7.098606147337705e-10,
+      "moment_residual_nm": 2.1042069420218468e-8,
+      "friction_coefficient": 0.0020401061502963807,
+      "warnings": [
+        "Predicted keel wetting exceeds actual hull length.",
+        "Flap regression outside its documented chord/speed range."
+      ]
+    },
+    {
+      "speed_m_s": 10.020333333333333,
+      "status": "outside_limits",
+      "trim_deg": 2.5569714269014128,
+      "keel_wetted_m": 32.55774251276131,
+      "chine_wetted_m": 20.103848756091626,
+      "lambda": 3.6295619459229616,
+      "cv": 1.1830845230199034,
+      "wetted_area_m2": 199.40430706341644,
+      "transom_draft_m": 1.4524906951318255,
+      "center_pressure_m": 10.892895269684205,
+      "resistance_n": 57706.3571306519,
+      "thrust_n": 57763.8694241303,
+      "effective_power_kw": 578.2369339015089,
+      "pressure_drag_n": 35696.687793035635,
+      "friction_drag_n": 20971.81914659765,
+      "flap_drag_n": 1037.8501910186205,
+      "vertical_residual_n": 2.419255906715989e-10,
+      "moment_residual_nm": 2.9365764930844307e-8,
+      "friction_coefficient": 0.00204412531076847,
+      "warnings": [
+        "Predicted keel wetting exceeds actual hull length.",
+        "Flap regression outside its documented chord/speed range."
+      ]
+    },
+    {
+      "speed_m_s": 10.456,
+      "status": "outside_limits",
+      "trim_deg": 2.609771022194792,
+      "keel_wetted_m": 31.97240320183723,
+      "chine_wetted_m": 19.778567846418984,
+      "lambda": 3.5673185952328237,
+      "cv": 1.234522980542508,
+      "wetted_area_m2": 195.95622299092807,
+      "transom_draft_m": 1.4558105748759969,
+      "center_pressure_m": 10.91316004570265,
+      "resistance_n": 59948.219942233445,
+      "thrust_n": 60010.4616397197,
+      "effective_power_kw": 626.8185877159929,
+      "pressure_drag_n": 36324.79329160633,
+      "friction_drag_n": 22485.47112262852,
+      "flap_drag_n": 1137.9555279985943,
+      "vertical_residual_n": -3.992681740783155e-10,
+      "moment_residual_nm": 2.3224856704473495e-8,
+      "friction_coefficient": 0.002048330934868729,
+      "warnings": [
+        "Predicted keel wetting exceeds actual hull length.",
+        "Flap regression outside its documented chord/speed range."
+      ]
+    },
+    {
+      "speed_m_s": 10.891666666666667,
+      "status": "outside_limits",
+      "trim_deg": 2.6618344838454107,
+      "keel_wetted_m": 31.389663203032754,
+      "chine_wetted_m": 19.442158910883798,
+      "lambda": 3.504492283931411,
+      "cv": 1.2859614380651125,
+      "wetted_area_m2": 192.47584475084852,
+      "transom_draft_m": 1.4577694161420789,
+      "center_pressure_m": 10.934380906293862,
+      "resistance_n": 62191.90878732371,
+      "thrust_n": 62259.084371070574,
+      "effective_power_kw": 677.3735398752674,
+      "pressure_drag_n": 36933.62134110425,
+      "friction_drag_n": 24015.078860971924,
+      "flap_drag_n": 1243.2085852475363,
+      "vertical_residual_n": 4.1382008930668235e-11,
+      "moment_residual_nm": 1.548323780298233e-8,
+      "friction_coefficient": 0.0020527005969913966,
+      "warnings": [
+        "Predicted keel wetting exceeds actual hull length.",
+        "Flap regression outside its documented chord/speed range."
+      ]
+    },
+    {
+      "speed_m_s": 11.327333333333334,
+      "status": "outside_limits",
+      "trim_deg": 2.7123032190804963,
+      "keel_wetted_m": 30.81453104320819,
+      "chine_wetted_m": 19.096784354836313,
+      "lambda": 3.441573164596343,
+      "cv": 1.337399895587717,
+      "wetted_area_m2": 188.99032524027024,
+      "transom_draft_m": 1.458172664740733,
+      "center_pressure_m": 10.956574054953233,
+      "resistance_n": 64423.91367709228,
+      "thrust_n": 64496.166366203295,
+      "effective_power_kw": 729.7511448583166,
+      "pressure_drag_n": 37511.15965297974,
+      "friction_drag_n": 25559.242339111213,
+      "flap_drag_n": 1353.5116850013326,
+      "vertical_residual_n": 5.775291356258094e-10,
+      "moment_residual_nm": 1.7171259969472885e-9,
+      "friction_coefficient": 0.00205720468409354,
+      "warnings": [
+        "Predicted keel wetting exceeds actual hull length.",
+        "Flap regression outside its documented chord/speed range."
+      ]
+    },
+    {
+      "speed_m_s": 11.763,
+      "status": "outside_limits",
+      "trim_deg": 2.760231954966713,
+      "keel_wetted_m": 30.252201825867388,
+      "chine_wetted_m": 18.744867051843887,
+      "lambda": 3.3790819465284527,
+      "cv": 1.3888383531103214,
+      "wetted_area_m2": 185.52851010176695,
+      "transom_draft_m": 1.4568402601392199,
+      "center_pressure_m": 10.97975743899689,
+      "resistance_n": 66630.79055347748,
+      "thrust_n": 66708.18521912853,
+      "effective_power_kw": 783.7779892805555,
+      "pressure_drag_n": 38044.379564302166,
+      "friction_drag_n": 27117.709793818383,
+      "flap_drag_n": 1468.7011953569324,
+      "vertical_residual_n": -1.064108801074326e-10,
+      "moment_residual_nm": -4.540197551250458e-9,
+      "friction_coefficient": 0.002061806875482611,
+      "warnings": [
+        "Predicted keel wetting exceeds actual hull length.",
+        "Flap regression outside its documented chord/speed range."
+      ]
+    },
+    {
+      "speed_m_s": 12.198666666666668,
+      "status": "outside_limits",
+      "trim_deg": 2.8046286223431878,
+      "keel_wetted_m": 29.707864449283946,
+      "chine_wetted_m": 18.38901188307624,
+      "lambda": 3.317551355595364,
+      "cv": 1.4402768106329262,
+      "wetted_area_m2": 182.1199106575729,
+      "transom_draft_m": 1.4536194104377604,
+      "center_pressure_m": 11.003950812491517,
+      "resistance_n": 68799.78484542825,
+      "thrust_n": 68882.29289841186,
+      "effective_power_kw": 839.2656420677641,
+      "pressure_drag_n": 38519.81812001322,
+      "friction_drag_n": 28691.42172377417,
+      "flap_drag_n": 1588.545001640856,
+      "vertical_residual_n": -3.369677870068699e-10,
+      "moment_residual_nm": 2.2671883925795555e-8,
+      "friction_coefficient": 0.0020664651858370124,
+      "warnings": [
+        "Predicted keel wetting exceeds actual hull length.",
+        "Flap regression outside its documented chord/speed range."
+      ]
+    },
+    {
+      "speed_m_s": 12.634333333333334,
+      "status": "outside_limits",
+      "trim_deg": 2.8445067377475937,
+      "keel_wetted_m": 29.186480984583397,
+      "chine_wetted_m": 18.031900070636883,
+      "lambda": 3.2575038315256513,
+      "cv": 1.4917152681555306,
+      "wetted_area_m2": 178.79346841046637,
+      "transom_draft_m": 1.4483971185445805,
+      "center_pressure_m": 11.029175749299108,
+      "resistance_n": 70919.53760208751,
+      "thrust_n": 71007.0260664577,
+      "effective_power_kw": 896.0210779106411,
+      "pressure_drag_n": 38924.31981088177,
+      "friction_drag_n": 30282.472218521343,
+      "flap_drag_n": 1712.7455726844107,
+      "vertical_residual_n": -1.8553691916167736e-10,
+      "moment_residual_nm": -2.4156179279088974e-8,
+      "friction_coefficient": 0.002071133584522193,
+      "warnings": [
+        "Predicted keel wetting exceeds actual hull length.",
+        "Flap regression outside its documented chord/speed range."
+      ]
+    },
+    {
+      "speed_m_s": 13.07,
+      "status": "outside_limits",
+      "trim_deg": 2.8789449845786237,
+      "keel_wetted_m": 28.692562978997152,
+      "chine_wetted_m": 17.67616638334447,
+      "lambda": 3.1994278443159003,
+      "cv": 1.543153725678135,
+      "wetted_area_m2": 175.5762430478911,
+      "transom_draft_m": 1.4411106004687906,
+      "center_pressure_m": 11.055455606329499,
+      "resistance_n": 72980.79346588034,
+      "thrust_n": 73073.0202685674,
+      "effective_power_kw": 953.8589705990561,
+      "pressure_drag_n": 39245.859895449605,
+      "friction_drag_n": 31893.984411561512,
+      "flap_drag_n": 1840.9491588692297,
+      "vertical_residual_n": 1.7962520360015333e-10,
+      "moment_residual_nm": -1.2223608791828156e-9,
+      "friction_coefficient": 0.0020757640866140496,
+      "warnings": [
+        "Predicted keel wetting exceeds actual hull length.",
+        "Flap regression outside its documented chord/speed range."
+      ]
+    }
+  ]
+}

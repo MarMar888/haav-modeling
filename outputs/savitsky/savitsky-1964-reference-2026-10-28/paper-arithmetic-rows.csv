@@ -1,0 +1,110 @@
+table,row,trial_trim_deg,quantity,printed,calculated,difference,note
+1,1,2,tau_power,2.14,2.1435469250725863,0.003546925072586138,Recomputed from printed parent rows; no hidden rounding.
+1,2,2,cl0,0.085,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,3,2,lift_ratio,0.0397,0.0397196261682243,1.9626168224297358e-05,Recomputed from printed parent rows; no hidden rounding.
+1,4,2,lambda,3.85,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,5,2,vm_ft_s,67,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,6,2,re,361000000.0,361129999.99999994,129999.9999999404,Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties; see given_notes in JSON.
+1,7,2,cf,0.00174,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,8,2,dcf,0.0004,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,9,2,cf_total,0.00214,0.00214,0.0,Recomputed from printed parent rows; no hidden rounding.
+1,10,2,df_lbf,7340,7140.036878276722,-199.96312172327816,Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties; see given_notes in JSON.
+1,11,2,tan_tau,0.0349,0.03492076949174773,2.0769491747729685e-05,Recomputed from printed parent rows; no hidden rounding.
+1,12,2,sin_tau,0.0349,0.03489949670250097,-5.032974990312744e-07,Recomputed from printed parent rows; no hidden rounding.
+1,13,2,cos_tau,0.9994,0.9993908270190958,-9.17298090419294e-06,Recomputed from printed parent rows; no hidden rounding.
+1,14,2,pressure_lbf,2094,2094.0,0.0,Recomputed from printed parent rows; no hidden rounding.
+1,15,2,friction_drag_lbf,7340,7344.406643986392,4.406643986391828,Recomputed from printed parent rows; no hidden rounding.
+1,16,2,drag_lbf,9434,9434,0,Recomputed from printed parent rows; no hidden rounding.
+1,17,2,cp_ratio,0.59,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,18,2,cp_ft,31.6,31.801000000000002,0.2010000000000005,Recomputed from printed parent rows; no hidden rounding.
+1,19,2,c_ft,-2.6,-2.6000000000000014,-1.3322676295501878e-15,Recomputed from printed parent rows; no hidden rounding.
+1,20,2,friction_height_ft,0.616,0.6171444324796274,0.0011444324796273664,Recomputed from printed parent rows; no hidden rounding.
+1,21,2,a_ft,1.39,1.384,-0.006000000000000005,Recomputed from printed parent rows; no hidden rounding.
+1,22,2,sin_sum,0.1045,0.10452846326765347,2.8463267653475177e-05,Recomputed from printed parent rows; no hidden rounding.
+1,23,2,vertical_factor,0.9964,0.99635295,-4.704999999993742e-05,Recomputed from printed parent rows; no hidden rounding.
+1,24,2,normal_arm_ft,-2.59,-2.5921953171903143,-0.0021953171903144053,Recomputed from printed parent rows; no hidden rounding.
+1,25,2,thrust_arm_ft,0.0174,0.01745,5.000000000000143e-05,Recomputed from printed parent rows; no hidden rounding.
+1,26,2,combined_arm_ft,-2.6,-2.6073999999999997,-0.007399999999999629,Recomputed from printed parent rows; no hidden rounding.
+1,27,2,normal_moment_lbft,-156500,-156000.0,500.0,Recomputed from printed parent rows; no hidden rounding.
+1,28,2,friction_thrust_arm_ft,0.89,0.8899999999999999,-1.1102230246251565e-16,Recomputed from printed parent rows; no hidden rounding.
+1,29,2,friction_moment_lbft,6540,6532.6,-7.399999999999636,Recomputed from printed parent rows; no hidden rounding.
+1,30,2,moment_lbft,-149960,-149960,0,Recomputed from printed parent rows; no hidden rounding.
+1,1,3,tau_power,3.35,3.348369522101714,-0.0016304778982862977,Recomputed from printed parent rows; no hidden rounding.
+1,2,3,cl0,0.085,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,3,3,lift_ratio,0.0254,0.02537313432835821,-2.686567164178824e-05,Recomputed from printed parent rows; no hidden rounding.
+1,4,3,lambda,2.6,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,5,3,vm_ft_s,66.6,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,6,3,re,242000000.0,242423999.99999997,423999.9999999702,Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties; see given_notes in JSON.
+1,7,3,cf,0.00184,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,8,3,dcf,0.0004,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,9,3,cf_total,0.00224,0.0022400000000000002,4.336808689942018e-19,Recomputed from printed parent rows; no hidden rounding.
+1,10,3,df_lbf,5160,4987.078120324176,-172.92187967582413,Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties; see given_notes in JSON.
+1,11,3,tan_tau,0.0524,0.05240777928304121,7.779283041207952e-06,Recomputed from printed parent rows; no hidden rounding.
+1,12,3,sin_tau,0.0524,0.052335956242943835,-6.40437570561675e-05,Recomputed from printed parent rows; no hidden rounding.
+1,13,3,cos_tau,0.9986,0.9986295347545738,2.9534754573790067e-05,Recomputed from printed parent rows; no hidden rounding.
+1,14,3,pressure_lbf,3144,3144.0,0.0,Recomputed from printed parent rows; no hidden rounding.
+1,15,3,friction_drag_lbf,5160,5167.23412777889,7.23412777889007,Recomputed from printed parent rows; no hidden rounding.
+1,16,3,drag_lbf,8304,8304,0,Recomputed from printed parent rows; no hidden rounding.
+1,17,3,cp_ratio,0.65,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,18,3,cp_ft,23.5,23.660000000000004,0.1600000000000037,Recomputed from printed parent rows; no hidden rounding.
+1,19,3,c_ft,5.5,5.5,0.0,Recomputed from printed parent rows; no hidden rounding.
+1,20,3,friction_height_ft,0.616,0.6171444324796274,0.0011444324796273664,Recomputed from printed parent rows; no hidden rounding.
+1,21,3,a_ft,1.39,1.384,-0.006000000000000005,Recomputed from printed parent rows; no hidden rounding.
+1,22,3,sin_sum,0.1219,0.12186934340514748,-3.065659485251837e-05,Recomputed from printed parent rows; no hidden rounding.
+1,23,3,vertical_factor,0.9964,0.99361244,-0.0027875599999999112,Recomputed from printed parent rows; no hidden rounding.
+1,24,3,normal_arm_ft,5.46,5.487883036250751,0.027883036250750948,Recomputed from printed parent rows; no hidden rounding.
+1,25,3,thrust_arm_ft,0.0262,0.0262,0.0,Recomputed from printed parent rows; no hidden rounding.
+1,26,3,combined_arm_ft,5.53,5.4338,-0.09620000000000051,Recomputed from printed parent rows; no hidden rounding.
+1,27,3,normal_moment_lbft,332000,331800.0,-200.0,Recomputed from printed parent rows; no hidden rounding.
+1,28,3,friction_thrust_arm_ft,0.89,0.8899999999999999,-1.1102230246251565e-16,Recomputed from printed parent rows; no hidden rounding.
+1,29,3,friction_moment_lbft,4600,4592.4,-7.600000000000364,Recomputed from printed parent rows; no hidden rounding.
+1,30,3,moment_lbft,336600,336600,0,Recomputed from printed parent rows; no hidden rounding.
+1,1,4,tau_power,4.59,4.59479341998814,0.004793419988140535,Recomputed from printed parent rows; no hidden rounding.
+1,2,4,cl0,0.085,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,3,4,lift_ratio,0.0185,0.01851851851851852,1.8518518518521876e-05,Recomputed from printed parent rows; no hidden rounding.
+1,4,4,lambda,1.86,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,5,4,vm_ft_s,66.2,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,6,4,re,173000000.0,172384799.99999997,-615200.0000000298,Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties; see given_notes in JSON.
+1,7,4,cf,0.00192,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,8,4,dcf,0.0004,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,9,4,cf_total,0.00232,0.00232,0.0,Recomputed from printed parent rows; no hidden rounding.
+1,10,4,df_lbf,3760,3650.843820363375,-109.15617963662498,Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties; see given_notes in JSON.
+1,11,4,tan_tau,0.0698,0.06992681194351041,0.00012681194351041314,Recomputed from printed parent rows; no hidden rounding.
+1,12,4,sin_tau,0.0698,0.0697564737441253,-4.3526255874698494e-05,Recomputed from printed parent rows; no hidden rounding.
+1,13,4,cos_tau,0.9976,0.9975640502598242,-3.5949740175844624e-05,Recomputed from printed parent rows; no hidden rounding.
+1,14,4,pressure_lbf,4188,4188.0,0.0,Recomputed from printed parent rows; no hidden rounding.
+1,15,4,friction_drag_lbf,3760,3769.0457097032877,9.045709703287685,Recomputed from printed parent rows; no hidden rounding.
+1,16,4,drag_lbf,7948,7948,0,Recomputed from printed parent rows; no hidden rounding.
+1,17,4,cp_ratio,0.7,,,Reference input: graph reading or stated friction/roughness choice; not independently verified.
+1,18,4,cp_ft,18.2,18.228,0.028000000000002245,Recomputed from printed parent rows; no hidden rounding.
+1,19,4,c_ft,10.8,10.8,0.0,Recomputed from printed parent rows; no hidden rounding.
+1,20,4,friction_height_ft,0.616,0.6171444324796274,0.0011444324796273664,Recomputed from printed parent rows; no hidden rounding.
+1,21,4,a_ft,1.39,1.384,-0.006000000000000005,Recomputed from printed parent rows; no hidden rounding.
+1,22,4,sin_sum,0.1392,0.13917310096006544,-2.689903993455256e-05,Recomputed from printed parent rows; no hidden rounding.
+1,23,4,vertical_factor,0.9903,0.99028384,-1.6159999999931784e-05,Recomputed from printed parent rows; no hidden rounding.
+1,24,4,normal_arm_ft,10.7,10.720970328789093,0.020970328789093884,Recomputed from printed parent rows; no hidden rounding.
+1,25,4,thrust_arm_ft,0.0349,0.0349,0.0,Recomputed from printed parent rows; no hidden rounding.
+1,26,4,combined_arm_ft,10.73,10.665099999999999,-0.06490000000000151,Recomputed from printed parent rows; no hidden rounding.
+1,27,4,normal_moment_lbft,645000,643800.0,-1200.0,Recomputed from printed parent rows; no hidden rounding.
+1,28,4,friction_thrust_arm_ft,0.89,0.8899999999999999,-1.1102230246251565e-16,Recomputed from printed parent rows; no hidden rounding.
+1,29,4,friction_moment_lbft,3350,3346.4,-3.599999999999909,Recomputed from printed parent rows; no hidden rounding.
+1,30,4,moment_lbft,648350,648350,0,Recomputed from printed parent rows; no hidden rounding.
+2,1,,cl0,0.085,,,Reference input from graph or stated coefficient; not independently verified.
+2,2,,cp_over_beam,2.07,2.0714285714285716,0.0014285714285717788,Recomputed from printed parent rows; no hidden rounding.
+2,3,,lambda,3.45,,,Reference input from graph or stated coefficient; not independently verified.
+2,4,,lift_ratio,0.035,,,Reference input from graph or stated coefficient; not independently verified.
+2,5,,tau_power,2.42,2.4285714285714284,0.008571428571428452,Recomputed from printed parent rows; no hidden rounding.
+2,6,,trim_deg,2.23,2.233176556129782,0.003176556129782071,Recomputed from printed parent rows; no hidden rounding.
+2,7,,tan_tau,0.039,0.03894050708045712,-5.949291954288061e-05,Recomputed from printed parent rows; no hidden rounding.
+2,8,,pressure_lbf,2340,2340.0,0.0,Recomputed from printed parent rows; no hidden rounding.
+2,9,,lambda_b2_ft2,675,676.2,1.2000000000000455,Recomputed from printed parent rows; no hidden rounding.
+2,10,,vm_ft_s,66.9,,,Reference input from graph or stated coefficient; not independently verified.
+2,11,,re,322000000.0,323127000.0,1127000.0,Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties.
+2,12,,cf,0.00177,,,Reference input from graph or stated coefficient; not independently verified.
+2,13,,dcf,0.0004,,,Reference input from graph or stated coefficient; not independently verified.
+2,14,,cf_total,0.00217,0.00217,0.0,Recomputed from printed parent rows; no hidden rounding.
+2,15,,df_lbf,6670,6457.077775459159,-212.92222454084094,Recomputed from printed parent rows; no hidden rounding. Uses inferred water properties.
+2,16,,friction_drag_lbf,6670,6675.055155273968,5.055155273968012,Recomputed from printed parent rows; no hidden rounding.
+2,17,,drag_lbf,9010,9010,0,Recomputed from printed parent rows; no hidden rounding.
+2,18,,ehp,1100,1105.7727272727273,5.772727272727252,Recomputed from printed parent rows; no hidden rounding.
+2,19,,porpoising_axis,0.186,0.1857417562100671,-0.0002582437899328882,Recomputed from printed parent rows; no hidden rounding.

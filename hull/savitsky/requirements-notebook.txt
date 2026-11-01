@@ -1,0 +1,5 @@
+# Standalone Savitsky workbook; no optimizer or OpenPlaning dependency required.
+pandas>=2.2,<4
+matplotlib>=3.9,<4
+ipykernel>=6,<8
+jupyterlab>=4,<5
