@@ -10,7 +10,7 @@ contains the numerical results, source-file hashes and assumptions.
 
 ## Inputs and result
 
-- Geometry: `cad/stepfiles/v3 - solid hull. 10.29.26`.
+- Geometry: `hull/stepfiles/v3 - solid hull. 10.29.26`.
 - Loading: six populated rows in `component-masses.csv`, totaling **125.107 lb**.
 - Combined frame/hull: 35.107 lb, using the frame row's center of mass.
 - Blank mass rows are excluded from this loading condition; no estimated masses

@@ -1,6 +1,6 @@
 # How adjustments affect planing and efficiency
 
-This map follows the equations in [current-hull.ipynb](../../optimization/savitsky/current-hull.ipynb), using its **1964, no-flap equivalent V-bottom model**. Arrows mean calculation dependencies, not statistical correlation. An adjustment must be solved again because trim and wetted length change together.
+This map follows the equations in [current-hull.ipynb](../savitsky/current-hull.ipynb), using its **1964, no-flap equivalent V-bottom model**. Arrows mean calculation dependencies, not statistical correlation. An adjustment must be solved again because trim and wetted length change together.
 
 ![Savitsky variable dependency map](variable-flow.png)
 

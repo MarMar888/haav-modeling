@@ -1,6 +1,6 @@
 # Savitsky 1976 reference check — 2026-10-28
 
-Ran the existing `optimization/savitsky/run.js` locally with the OpenPlaning README reference inputs, `wetted_lengths_type=3` (1976 geometry), Townsin roughness allowance, and the specified flap. This is the large reference vessel, not our current hull. No wave-resistance model is included in this script.
+Ran the existing `hull/savitsky/run.js` locally with the OpenPlaning README reference inputs, `wetted_lengths_type=3` (1976 geometry), Townsin roughness allowance, and the specified flap. This is the large reference vessel, not our current hull. No wave-resistance model is included in this script.
 
 **PASS:** all seven benchmark comparisons and all eight existing engine regression tests.
 
@@ -24,8 +24,8 @@ At V = 13.07 m/s, force residual = 1.79625e-10 N; moment residual = -1.22236e-09
 From the repository root (use your Node executable if `node` is not on PATH):
 
 ```sh
-node --test optimization/savitsky/model.test.js
-node optimization/savitsky/run.js --config outputs/savitsky/savitsky-1976-reference-2026-10-28/inputs.json --max-speed 13.07 --output /tmp/savitsky-1976-rerun.json
+node --test hull/savitsky/model.test.js
+node hull/savitsky/run.js --config outputs/savitsky/savitsky-1976-reference-2026-10-28/inputs.json --max-speed 13.07 --output /tmp/savitsky-1976-rerun.json
 ```
 
 Node used on this device: `/Users/patri/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node`.

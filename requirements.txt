@@ -1,0 +1,5 @@
+# Dependencies for the active model, prop_motor_battery/willmarley.ipynb.
+# `make setup` installs these into .venv. The frozen code under archive/ has its own requirements files.
+numpy>=1.26
+matplotlib>=3.8
+jupyterlab>=4

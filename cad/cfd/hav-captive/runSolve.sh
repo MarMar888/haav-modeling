@@ -1,6 +1,0 @@
-#!/bin/sh
-cd "${0%/*}" || exit
-. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions
-restore0Dir -processor
-runParallel setFields
-runParallel $(getApplication)

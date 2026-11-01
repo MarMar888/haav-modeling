@@ -1,30 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# root package.json only delegates into dashboard/ - no real deps to lock
-/node_modules
-/pnpm-lock.yaml
-
-# misc
-.DS_Store
-*.pem
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# gstack
-.gstack/
-
-# universal agent-skills mirror; .claude/skills/ is the committed copy
-/.agents/
-
-# CAD: the Python env and everything agentcad generates. Source lives in
-# cad/hull.py; rebuild with `agentcad run hull.py` (see README).
-/.venv-cad/
-/cad/build/
-
-# OpenFOAM decomposed solver output (hundreds of MB); regenerate with the case run scripts
-cad/cfd/*/processor*/
-
 .venv/
 __pycache__/
 .pytest_cache/

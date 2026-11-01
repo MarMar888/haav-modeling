@@ -1,6 +1,6 @@
 # Hull offsets
 
-Source: `cad/stepfiles/v3 - solid hull. 10.29.26`.
+Source: `hull/stepfiles/v3 - solid hull. 10.29.26`.
 
 The STEP geometry passes Open CASCADE's BRep validity check and contains one solid,
 one shell, and eight faces. Dimensions: 72.000 in long (Y), 24.904061 in wide (X),

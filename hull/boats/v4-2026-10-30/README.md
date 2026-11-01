@@ -4,7 +4,7 @@
 
 [Results and limitations](../../../outputs/savitsky/v4-2026-10-30/RESULTS.md) · [Performance curves](../../../outputs/savitsky/v4-2026-10-30/performance.svg) · [Input configuration](savitsky-inputs.json)
 
-Source: [v4 - solid hull 10.30.26](<../../../cad/stepfiles/v4 - solid hull 10.30.26>). STEP export names this `v4 (Peyton sandbox) - Hull`. Open CASCADE reports valid geometry, one solid and 17 faces. The file contains external and internal shell surfaces; measurements below use the **external** transom and chine edges, not the internal shell.
+Source: [v4 - solid hull 10.30.26](<../../../hull/stepfiles/v4 - solid hull 10.30.26>). STEP export names this `v4 (Peyton sandbox) - Hull`. Open CASCADE reports valid geometry, one solid and 17 faces. The file contains external and internal shell surfaces; measurements below use the **external** transom and chine edges, not the internal shell.
 
 ![Geometry and chine-width review](geometry-review.svg)
 

@@ -20,7 +20,7 @@ from OCP.BRepAdaptor import BRepAdaptor_Curve
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-SOURCE = ROOT / 'cad/stepfiles/v4 - solid hull 10.30.26'
+SOURCE = ROOT / 'hull/stepfiles/v4 - solid hull 10.30.26'
 MASS_FILE = HERE / 'component-masses.csv'
 
 def xyz(p):

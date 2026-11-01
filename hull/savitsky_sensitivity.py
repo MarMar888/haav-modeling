@@ -13,8 +13,8 @@ import json
 import math
 
 ROOT = Path(__file__).resolve().parents[1]
-NOTEBOOK = ROOT / 'optimization/savitsky/current-hull.ipynb'
-DEFAULT_INPUTS = ROOT / 'optimization/savitsky/current-hull-inputs.json'
+NOTEBOOK = ROOT / 'hull/savitsky/current-hull.ipynb'
+DEFAULT_INPUTS = ROOT / 'hull/savitsky/current-hull-inputs.json'
 FUNCTIONS = ('validate', 'geometry_and_lift', 'forces', 'vertical_balance', 'solve', 'run_sweep')
 MPH_TO_M_S = 0.44704
 

@@ -1,5 +1,5 @@
 {
-  "source": "cad/stepfiles/v3 - solid hull. 10.29.26",
+  "source": "hull/stepfiles/v3 - solid hull. 10.29.26",
   "source_sha256": "f61001b276bf8fe68ce06a8c8530a97337a385c579fbedd31f937a3c83251b99",
   "mass_csv_sha256": "4894940eefb56aea7ea8ce722305e555714d8255835f7aca57f698908e01ac31",
   "water_density_kg_m3": 1000.0,

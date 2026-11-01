@@ -1,7 +1,7 @@
 # Savitsky 1964 paper comparison — 2026-10-28
 
 **Follow-up:** the [exact arithmetic audit](PAPER-REPLICATION.md) and
-[paper audit notebook](../../../optimization/savitsky/paper1964-reference.ipynb)
+[paper audit notebook](../../../hull/savitsky/paper1964-reference.ipynb)
 now replay the printed tables. Table 1's stated interpolation gives lambda=3.475,
 not its printed 3.29, so the earlier wetting-length comparison below is against an
 internally inconsistent printed result. Table 2's 2.23° trim is reproduced using
@@ -63,8 +63,8 @@ The 150 µm result is close in total drag, but that proximity alone does not pro
 - Results are 31-point sweeps; the final point is the worked-example speed.
 
 ```sh
-node optimization/savitsky/run.js --config outputs/savitsky/savitsky-1964-reference-2026-10-28/inputs.json --max-speed 20.574 --output /tmp/savitsky64-smooth.json
-node optimization/savitsky/run.js --config outputs/savitsky/savitsky-1964-reference-2026-10-28/inputs-modern-roughness.json --max-speed 20.574 --output /tmp/savitsky64-rough.json
+node hull/savitsky/run.js --config outputs/savitsky/savitsky-1964-reference-2026-10-28/inputs.json --max-speed 20.574 --output /tmp/savitsky64-smooth.json
+node hull/savitsky/run.js --config outputs/savitsky/savitsky-1964-reference-2026-10-28/inputs-modern-roughness.json --max-speed 20.574 --output /tmp/savitsky64-rough.json
 ```
 
 On this device, Node was run as `/Users/patri/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node`.

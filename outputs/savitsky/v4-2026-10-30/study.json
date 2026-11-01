@@ -2,7 +2,7 @@
   "schema": "haav.savitsky-sensitivity.v1",
   "created_utc": "2026-10-31T00:08:24.428315+00:00",
   "model": "current-hull.ipynb: Savitsky 1964, no flap",
-  "engine_source": "optimization/savitsky/current-hull.ipynb",
+  "engine_source": "hull/savitsky/current-hull.ipynb",
   "engine_functions_sha256": "beea4b9359303787728b3c9ba4a1cdbd7ed55d93c2c105ee1c87d572b792f567",
   "repository_version": "0.6.6",
   "baseline_config": {
@@ -96,7 +96,7 @@
     "comparison_deadrise_deg": 18.35821230535409,
     "geometry_warning": "Reverse-chine strips, changing chine beam and keel rocker; no uniform aft length established. Constant-V equivalent-hull estimate only.",
     "geometry_source": {
-      "path": "cad/stepfiles/v4 - solid hull 10.30.26",
+      "path": "hull/stepfiles/v4 - solid hull 10.30.26",
       "sha256": "b5c753c90c2c9ded47cc6a7b63b085823a6858615f8c8781a6a879413c4af4a3"
     },
     "loading_source": {

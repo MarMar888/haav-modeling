@@ -89,7 +89,7 @@
   "comparison_deadrise_deg": 18.35821230535409,
   "geometry_warning": "Reverse-chine strips, changing chine beam and keel rocker; no uniform aft length established. Constant-V equivalent-hull estimate only.",
   "geometry_source": {
-    "path": "cad/stepfiles/v4 - solid hull 10.30.26",
+    "path": "hull/stepfiles/v4 - solid hull 10.30.26",
     "sha256": "b5c753c90c2c9ded47cc6a7b63b085823a6858615f8c8781a6a879413c4af4a3"
   },
   "loading_source": {

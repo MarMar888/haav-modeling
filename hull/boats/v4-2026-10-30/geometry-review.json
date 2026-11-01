@@ -1,6 +1,6 @@
 {
   "status": "CAD dimensions and supplied loading only; see the separate run outputs for hydrodynamics",
-  "source": "cad/stepfiles/v4 - solid hull 10.30.26",
+  "source": "hull/stepfiles/v4 - solid hull 10.30.26",
   "source_sha256": "b5c753c90c2c9ded47cc6a7b63b085823a6858615f8c8781a6a879413c4af4a3",
   "kernel_valid": true,
   "topology": {

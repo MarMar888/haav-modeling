@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 
 HERE = Path(__file__).resolve().parent
-ENGINE = HERE.parents[1] / 'optimization/savitsky'
+ENGINE = HERE.parent / 'savitsky'
 config = json.loads((ENGINE / 'current-hull-inputs.json').read_text())
 notebook = json.loads((ENGINE / 'current-hull.ipynb').read_text())
 ns = {'math': math, 'config': config, 'G': 9.8066}

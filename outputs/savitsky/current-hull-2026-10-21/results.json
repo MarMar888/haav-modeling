@@ -1,7 +1,7 @@
 {
   "model": "Savitsky equivalent-prismatic-hull estimate; 1964 wetted geometry",
   "source": "https://github.com/elcf/python-openplaning",
-  "engine": "/Users/patri/Programming/boat/hav/optimization/savitsky/model.js",
+  "engine": "/Users/patri/Programming/boat/hav/hull/savitsky/model.js",
   "inputs": {
     "length_m": 1.8288,
     "beam_m": 0.30479999999999996,

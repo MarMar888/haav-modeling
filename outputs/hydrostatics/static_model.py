@@ -74,7 +74,7 @@ def main():
     if args.water_density <= 0:
         raise ValueError('Water density must be positive')
     folder = Path(__file__).resolve().parent
-    source = ROOT / 'cad/stepfiles/v3 - solid hull. 10.29.26'
+    source = ROOT / 'hull/stepfiles/v3 - solid hull. 10.29.26'
     mass_path = folder / 'component-masses.csv'
     components, excluded = [], []
     with mass_path.open(newline='') as stream:

@@ -2,7 +2,7 @@
   "schema": "haav.savitsky-sensitivity.v1",
   "created_utc": "2026-10-30T20:01:25.692390+00:00",
   "model": "current-hull.ipynb: Savitsky 1964, no flap",
-  "engine_source": "optimization/savitsky/current-hull.ipynb",
+  "engine_source": "hull/savitsky/current-hull.ipynb",
   "engine_functions_sha256": "beea4b9359303787728b3c9ba4a1cdbd7ed55d93c2c105ee1c87d572b792f567",
   "repository_version": "0.6.5",
   "baseline_config": {
@@ -105,7 +105,7 @@
       "Cv<1 cutoff is not a prediction of planing onset."
     ],
     "source": {
-      "path": "/Users/patri/Programming/boat/hav/optimization/savitsky/current-hull-inputs.json",
+      "path": "/Users/patri/Programming/boat/hav/hull/savitsky/current-hull-inputs.json",
       "sha256": "19e0369dab28486c30c441cd55a89967a55e9289ee098d2a8cebfebe3234c21f"
     }
   },

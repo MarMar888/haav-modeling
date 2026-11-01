@@ -165,9 +165,9 @@ Values below are recalculated from printed immediate parent rows, not propagated
 
 ## Reproduce or inspect
 
-Run `python3 optimization/savitsky/paper1964_audit.py` from the repository root. Requires only Python’s standard library.
+Run `python3 hull/savitsky/paper1964_audit.py` from the repository root. Requires only Python’s standard library.
 
-- [Editable source transcription](../../../optimization/savitsky/paper1964-data.json)
-- [Calculation code](../../../optimization/savitsky/paper1964_audit.py)
-- [Audit notebook](../../../optimization/savitsky/paper1964-reference.ipynb)
+- [Editable source transcription](../../../hull/savitsky/paper1964-data.json)
+- [Calculation code](../../../hull/savitsky/paper1964_audit.py)
+- [Audit notebook](../../../hull/savitsky/paper1964-reference.ipynb)
 - [Machine-readable audit](paper-arithmetic-audit.json) and [all rows as CSV](paper-arithmetic-rows.csv).
