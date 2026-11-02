@@ -4,6 +4,17 @@ See [`VERSIONING.md`](VERSIONING.md) for how this file and `VERSION` are kept. T
 of [`MarMar888/hav`](https://github.com/MarMar888/hav)'s `optimization/` folder with its full history
 (MarMar888/hav#98) and keeps the same version line.
 
+## 0.7.2 — 2026-11-02
+
+`willmarley.ipynb` gets section 8, a case study for the battery we may actually have: two 48 V 30 Ah
+LiFePO4 forklift packs in parallel at 1C. The pack is fixed instead of searched, motor voltage becomes a
+free input (the ESC sets it), and the 1C limit is a check on pack amps. `fastest()` takes a `solve_fn` /
+`ok_fn` pair so the same search runs the fixed-pack model. Four charts walk it through: discharge rating
+vs speed, the SSS sheet at 1C, the pick's operating point under the pack-power curve, and the prop
+diameter sweep that shows the 60 A wall. The pitch floor is 4 in in this section (small props on a
+4 ft boat). Finding: at 1C the pack is the ceiling at ~31 mph; low-Kv windings (56133-V2 11Y) win on
+efficiency, not speed.
+
 ## 0.7.1 — 2026-11-01
 
 Merged Patrick's hull work from master (0.6.3–0.6.8 below) and put it where this repo keeps modeling:
