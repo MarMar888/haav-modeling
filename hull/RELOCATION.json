@@ -1,0 +1,165 @@
+{
+  "note": "Historical result payloads retain original provenance paths. Sources and links use the new locations.",
+  "moves": [
+    {
+      "from": "outputs/hydrostatics",
+      "to": "hull/hydrostatics/v3-2026-10-29",
+      "files": 31
+    },
+    {
+      "from": "hull/hydrostatics.ipynb",
+      "to": "hull/hydrostatics/v4-2026-10-30/displacement-calculator.ipynb",
+      "files": 1
+    },
+    {
+      "from": "hull/boats/v4-2026-10-30",
+      "to": "hull/hydrodynamics-savitsky/v4-2026-10-30",
+      "files": 8
+    },
+    {
+      "from": "hull/sensitivity-analysis.ipynb",
+      "to": "hull/hydrodynamics-savitsky/v4-2026-10-30/sensitivity-analysis.ipynb",
+      "files": 1
+    },
+    {
+      "from": "optimization/savitsky",
+      "to": "hull/hydrodynamics-savitsky/engine",
+      "files": 14
+    },
+    {
+      "from": "outputs/savitsky/v4-2026-10-30",
+      "to": "hull/hydrodynamics-savitsky/v4-2026-10-30/results",
+      "files": 5
+    },
+    {
+      "from": "outputs/savitsky/current-hull-2026-10-21",
+      "to": "hull/hydrodynamics-savitsky/legacy-2026-10-21/results",
+      "files": 6
+    },
+    {
+      "from": "outputs/savitsky/sensitivity",
+      "to": "hull/hydrodynamics-savitsky/legacy-2026-10-21/sensitivity",
+      "files": 3
+    },
+    {
+      "from": "outputs/savitsky/savitsky-1964-reference-2026-10-28",
+      "to": "hull/hydrodynamics-savitsky/references/savitsky-1964-reference-2026-10-28",
+      "files": 9
+    },
+    {
+      "from": "outputs/savitsky/savitsky-1976-reference-2026-10-28",
+      "to": "hull/hydrodynamics-savitsky/references/savitsky-1976-reference-2026-10-28",
+      "files": 3
+    },
+    {
+      "from": "hull/diagrams",
+      "to": "hull/hydrodynamics-savitsky/diagrams",
+      "files": 12
+    },
+    {
+      "from": "hull/savitsky_sensitivity.py",
+      "to": "hull/hydrodynamics-savitsky/savitsky_sensitivity.py",
+      "files": 1
+    },
+    {
+      "from": "hull/display_units.py",
+      "to": "hull/hydrodynamics-savitsky/display_units.py",
+      "files": 1
+    },
+    {
+      "from": "hull/test_display_units.py",
+      "to": "hull/hydrodynamics-savitsky/test_display_units.py",
+      "files": 1
+    },
+    {
+      "from": "hull/test_savitsky_sensitivity.py",
+      "to": "hull/hydrodynamics-savitsky/test_savitsky_sensitivity.py",
+      "files": 1
+    },
+    {
+      "from": "cad/stepfiles/v4 - solid hull 10.30.26",
+      "to": "hull/geometry/v4-2026-10-30/hull.step",
+      "files": 1
+    },
+    {
+      "from": "cad/stepfiles/v3 - solid hull. 10.29.26",
+      "to": "hull/geometry/v3-2026-10-29/hull.step",
+      "files": 1
+    },
+    {
+      "from": "outputs/savitsky/sample.json",
+      "to": "hull/hydrodynamics-savitsky/references/sample/sample.json",
+      "files": 1
+    },
+    {
+      "from": "outputs/savitsky/sample.png",
+      "to": "hull/hydrodynamics-savitsky/references/sample/sample.png",
+      "files": 1
+    },
+    {
+      "from": "outputs/savitsky/sample.svg",
+      "to": "hull/hydrodynamics-savitsky/references/sample/sample.svg",
+      "files": 1
+    },
+    {
+      "from": "cad/requirements.txt",
+      "to": "hull/geometry/legacy-parametric/requirements.txt",
+      "files": 1
+    },
+    {
+      "from": "cad/CHANGELOG.md",
+      "to": "hull/geometry/legacy-parametric/CHANGELOG.md",
+      "files": 1
+    },
+    {
+      "from": "cad/drawings",
+      "to": "hull/geometry/legacy-parametric/drawings",
+      "files": 6
+    },
+    {
+      "from": "cad/.claude",
+      "to": "hull/geometry/legacy-parametric/.claude",
+      "files": 1
+    },
+    {
+      "from": "cad/agentcad.toml",
+      "to": "hull/geometry/legacy-parametric/agentcad.toml",
+      "files": 1
+    },
+    {
+      "from": "cad/hull.py",
+      "to": "hull/geometry/legacy-parametric/hull.py",
+      "files": 1
+    },
+    {
+      "from": "cad/README.md",
+      "to": "hull/geometry/legacy-parametric/README.md",
+      "files": 1
+    },
+    {
+      "from": "cad/exports",
+      "to": "hull/geometry/legacy-parametric/exports",
+      "files": 1
+    },
+    {
+      "from": "cad/VERSION",
+      "to": "hull/geometry/legacy-parametric/VERSION",
+      "files": 1
+    },
+    {
+      "from": "cad/AGENTS.md",
+      "to": "hull/geometry/legacy-parametric/AGENTS.md",
+      "files": 1
+    },
+    {
+      "from": "cad/reference",
+      "to": "hull/geometry/legacy-parametric/reference",
+      "files": 1
+    },
+    {
+      "from": "optimization/openplaning-reference.ipynb",
+      "to": "hull/hydrodynamics-savitsky/references/openplaning-reference.ipynb",
+      "files": 1
+    }
+  ]
+}

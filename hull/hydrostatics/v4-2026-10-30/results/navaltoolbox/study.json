@@ -1,0 +1,178 @@
+{
+  "created_utc": "2026-11-01T19:24:06.071556+00:00",
+  "navaltoolbox_version": "0.9.3",
+  "input_file": "hull/hydrodynamics-savitsky/v4-2026-10-30/savitsky-inputs.json",
+  "input_sha256": "185b594769eab63d9a0a73298c7255c622d864f939c579702ddbdad5813e3ce1",
+  "density_kg_m3": 998.2,
+  "cog_naval_m": [
+    0.6028500600909621,
+    0.0,
+    0.1529978027560408
+  ],
+  "baseline_mass_kg": 56.747580633590005,
+  "geometry": {
+    "source": "hull/geometry/v4-2026-10-30/hull.step",
+    "source_sha256": "b5c753c90c2c9ded47cc6a7b63b085823a6858615f8c8781a6a879413c4af4a3",
+    "stl_sha256": "bca2fada547445ba89368511d49290f97523ebc6cfdc8828eb2caad24876949b",
+    "axes": "X forward = CAD Y; Y = -CAD X; Z up. All metres. No 10x scaling.",
+    "watertight": true,
+    "winding_consistent": true,
+    "bounds_m": [
+      [
+        -1.04840925575114e-17,
+        -0.325510614911895,
+        0.0
+      ],
+      [
+        1.8288,
+        0.325510614911895,
+        0.3048
+      ]
+    ],
+    "triangles": 17226,
+    "exact_envelope_volume_m3": 0.1753492587193598,
+    "mesh_volume_m3": 0.1753254993663039,
+    "relative_volume_error": 0.00013549731107742602,
+    "assumption": "Dry interior below the rim; artificial cap at 12 inches. No tubes/appendages. Stop interpreting dry-hull results when freeboard <= 0."
+  },
+  "analytical_box_check": {
+    "volume": {
+      "expected": 0.1337803776,
+      "actual": 0.13377221229375005,
+      "relative_error": 6.103515624955591e-05
+    },
+    "waterplane_area": {
+      "expected": 1.1148364800000001,
+      "actual": 1.1148364800000001,
+      "relative_error": 0.0
+    },
+    "wetted_surface_area": {
+      "expected": 1.70005248,
+      "actual": 1.7000167612500001,
+      "relative_error": 2.101038080892792e-05
+    }
+  },
+  "note": "Static dry-interior flotation only. Fixed whole-boat CG during mass sweep. Positive trim is bow down. No speed/thrust/planing. Rim immersion invalidates the dry-interior assumption.",
+  "results": [
+    {
+      "added_mass_kg": -10.0,
+      "mass_kg": 46.747580633590005,
+      "mass_lb": 103.06077378151225,
+      "volume_l": 46.82794358961055,
+      "extra_volume_in3": -611.337849075659,
+      "draft_midship_in": 5.239746158507856,
+      "draft_aft_in": 5.633326078586141,
+      "draft_forward_in": 4.846166238429571,
+      "trim_bow_down_deg": -0.6263769552669923,
+      "heel_deg": 0.0,
+      "freeboard_min_in": 6.366293465302797,
+      "waterline_length_in": 61.2220825065303,
+      "submerged_length_in": 61.2220825065303,
+      "wetted_area_in2": 1213.9524297246849,
+      "waterplane_area_in2": 884.6330141071368,
+      "gm_transverse_in": 3.718849139374858,
+      "mass_balance_relative_error": 8.401167263671905e-05,
+      "dry_hull_assumption_ok": true
+    },
+    {
+      "added_mass_kg": -5.0,
+      "mass_kg": 51.747580633590005,
+      "mass_lb": 114.08388689075612,
+      "volume_l": 51.83611117510563,
+      "extra_volume_in3": -305.6689245378295,
+      "draft_midship_in": 5.5407715528532195,
+      "draft_aft_in": 6.094246946108038,
+      "draft_forward_in": 4.987296159598401,
+      "trim_bow_down_deg": -0.8808140701312412,
+      "heel_deg": 0.0,
+      "freeboard_min_in": 5.905055207308776,
+      "waterline_length_in": 61.62141923075679,
+      "submerged_length_in": 61.62141923075679,
+      "wetted_area_in2": 1269.0049540811822,
+      "waterplane_area_in2": 908.8407323912659,
+      "gm_transverse_in": 3.686825052525147,
+      "mass_balance_relative_error": 9.226438301279671e-05,
+      "dry_hull_assumption_ok": true
+    },
+    {
+      "added_mass_kg": 0.0,
+      "mass_kg": 56.747580633590005,
+      "mass_lb": 125.107,
+      "volume_l": 56.844711937745025,
+      "extra_volume_in3": 0.0,
+      "draft_midship_in": 5.833740306474011,
+      "draft_aft_in": 6.545252605331161,
+      "draft_forward_in": 5.122228007616862,
+      "trim_bow_down_deg": -1.1322596030349152,
+      "heel_deg": 0.0,
+      "freeboard_min_in": 5.453682326819623,
+      "waterline_length_in": 62.00073778067893,
+      "submerged_length_in": 62.00073778067893,
+      "wetted_area_in2": 1323.180729164704,
+      "waterplane_area_in2": 932.9327421869842,
+      "gm_transverse_in": 3.7026857643644586,
+      "mass_balance_relative_error": 9.144314656195363e-05,
+      "dry_hull_assumption_ok": true
+    },
+    {
+      "added_mass_kg": 5.0,
+      "mass_kg": 61.747580633590005,
+      "mass_lb": 136.1301131092439,
+      "volume_l": 61.85987508856192,
+      "extra_volume_in3": 305.6689245378295,
+      "draft_midship_in": 6.119384841254282,
+      "draft_aft_in": 6.987277820856875,
+      "draft_forward_in": 5.251491861651691,
+      "trim_bow_down_deg": -1.3810270951201518,
+      "heel_deg": 0.0,
+      "freeboard_min_in": 5.011266110842672,
+      "waterline_length_in": 62.36191582680772,
+      "submerged_length_in": 62.36191582680772,
+      "wetted_area_in2": 1376.6701955274673,
+      "waterplane_area_in2": 957.0963522163607,
+      "gm_transverse_in": 3.7580665806490656,
+      "mass_balance_relative_error": 1.533144785259566e-05,
+      "dry_hull_assumption_ok": true
+    },
+    {
+      "added_mass_kg": 10.0,
+      "mass_kg": 66.74758063359,
+      "mass_lb": 147.15322621848776,
+      "volume_l": 66.8724500690802,
+      "extra_volume_in3": 611.337849075659,
+      "draft_midship_in": 6.397705157194035,
+      "draft_aft_in": 7.419586101857004,
+      "draft_forward_in": 5.3758242125310645,
+      "trim_bow_down_deg": -1.6259374676603724,
+      "heel_deg": 0.0,
+      "freeboard_min_in": 4.578569698235672,
+      "waterline_length_in": 62.67871282960535,
+      "submerged_length_in": 62.67871282960535,
+      "wetted_area_in2": 1429.2380938864487,
+      "waterplane_area_in2": 980.9375810626847,
+      "gm_transverse_in": 3.8368460647480767,
+      "mass_balance_relative_error": 6.74035721317523e-05,
+      "dry_hull_assumption_ok": true
+    },
+    {
+      "added_mass_kg": 20.0,
+      "mass_kg": 76.74758063359,
+      "mass_lb": 169.19945243697552,
+      "volume_l": 76.88314131744637,
+      "extra_volume_in3": 1222.675698151318,
+      "draft_midship_in": 6.933837976320083,
+      "draft_aft_in": 8.256185799063708,
+      "draft_forward_in": 5.611490153576458,
+      "trim_bow_down_deg": -2.103636210196912,
+      "heel_deg": 0.0,
+      "freeboard_min_in": 3.7412911180641624,
+      "waterline_length_in": 63.27257062015254,
+      "submerged_length_in": 63.27257062015254,
+      "wetted_area_in2": 1531.817493546413,
+      "waterplane_area_in2": 1027.8148097760302,
+      "gm_transverse_in": 4.046972271090322,
+      "mass_balance_relative_error": 3.686071263320212e-05,
+      "dry_hull_assumption_ok": true
+    }
+  ]
+}

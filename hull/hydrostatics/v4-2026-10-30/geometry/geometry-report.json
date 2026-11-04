@@ -1,0 +1,25 @@
+{
+  "source": "hull/geometry/v4-2026-10-30/hull.step",
+  "source_sha256": "b5c753c90c2c9ded47cc6a7b63b085823a6858615f8c8781a6a879413c4af4a3",
+  "stl_sha256": "bca2fada547445ba89368511d49290f97523ebc6cfdc8828eb2caad24876949b",
+  "axes": "X forward = CAD Y; Y = -CAD X; Z up. All metres. No 10x scaling.",
+  "watertight": true,
+  "winding_consistent": true,
+  "bounds_m": [
+    [
+      -1.04840925575114e-17,
+      -0.325510614911895,
+      0.0
+    ],
+    [
+      1.8288,
+      0.325510614911895,
+      0.3048
+    ]
+  ],
+  "triangles": 17226,
+  "exact_envelope_volume_m3": 0.1753492587193598,
+  "mesh_volume_m3": 0.1753254993663039,
+  "relative_volume_error": 0.00013549731107742602,
+  "assumption": "Dry interior below the rim; artificial cap at 12 inches. No tubes/appendages. Stop interpreting dry-hull results when freeboard <= 0."
+}

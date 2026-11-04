@@ -1,0 +1,213 @@
+{
+  "source": "cad/stepfiles/v3 - solid hull. 10.29.26",
+  "source_sha256": "f61001b276bf8fe68ce06a8c8530a97337a385c579fbedd31f937a3c83251b99",
+  "mass_csv_sha256": "4894940eefb56aea7ea8ce722305e555714d8255835f7aca57f698908e01ac31",
+  "water_density_kg_m3": 1000.0,
+  "total_weight_lbs": 125.107,
+  "components": [
+    {
+      "id": "backbone",
+      "name": "Aluminium backbone",
+      "mass_lbs": 35.107,
+      "cg_in": [
+        0.011,
+        28.751,
+        7.023
+      ]
+    },
+    {
+      "id": "battery_1",
+      "name": "Battery 1",
+      "mass_lbs": 30.0,
+      "cg_in": [
+        0.0,
+        26.182,
+        7.402
+      ]
+    },
+    {
+      "id": "motor_port",
+      "name": "Port motor assembly",
+      "mass_lbs": 15.0,
+      "cg_in": [
+        -4.0,
+        12.593,
+        3.374
+      ]
+    },
+    {
+      "id": "motor_starboard",
+      "name": "Starboard motor assembly",
+      "mass_lbs": 15.0,
+      "cg_in": [
+        4.0,
+        12.593,
+        3.374
+      ]
+    },
+    {
+      "id": "payload front",
+      "name": "Additional payload",
+      "mass_lbs": 15.0,
+      "cg_in": [
+        0.0,
+        12.932,
+        4.25
+      ]
+    },
+    {
+      "id": "payload back",
+      "name": "Additional payload",
+      "mass_lbs": 15.0,
+      "cg_in": [
+        0.0,
+        40.182,
+        8.0
+      ]
+    }
+  ],
+  "excluded_blank_rows": [
+    "printed_shell",
+    "glass_resin_finish",
+    "tube_port",
+    "tube_starboard",
+    "baseboard",
+    "esc_port",
+    "esc_starboard",
+    "electronics_enclosure",
+    "electronics",
+    "sensor_tower",
+    "wiring",
+    "fasteners_adhesives"
+  ],
+  "cg_in": [
+    0.0030867737216942583,
+    23.734254334289847,
+    6.02353554157641
+  ],
+  "cb_in": [
+    0.0066543089854765956,
+    23.727042814175835,
+    3.9126205478713745
+  ],
+  "hull_bounds_in": [
+    [
+      -12.452030692828018,
+      -3.9370101119456245e-09,
+      -3.937007874015748e-09
+    ],
+    [
+      12.452030692828016,
+      72.00000000393702,
+      12.000000003937014
+    ]
+  ],
+  "full_volume_in3": 9381.436375430407,
+  "displacement_in3": 3462.949838579642,
+  "displacement_ft3": 2.0040218973261816,
+  "buoyant_weight_lbs": 125.10700000000939,
+  "roll_deg": 0.09683218886998732,
+  "pitch_deg": 0.19573856370061316,
+  "heel_direction": "positive X side lower",
+  "trim_direction": "stern down",
+  "stern_centerline_waterline_z_in": 6.4772490696733165,
+  "bow_centerline_waterline_z_in": 6.231275427977826,
+  "waterplane_origin_in": [
+    0.0,
+    23.734254334289847,
+    6.396165722846479
+  ],
+  "waterplane_normal_body": [
+    -0.0016900298509634679,
+    0.003416275764473821,
+    0.9999927364031221
+  ],
+  "rotation_body_to_world": [
+    [
+      0.9999985718818643,
+      0.0,
+      0.0016900397131683717
+    ],
+    [
+      5.773641713095396e-06,
+      0.9999941645129241,
+      -0.003416270885628445
+    ],
+    [
+      -0.0016900298509634679,
+      0.003416275764473821,
+      0.9999927364031221
+    ]
+  ],
+  "weight_residual_lbs": 9.393374966748524e-12,
+  "horizontal_cg_cb_error_in": [
+    -1.5635470348995817e-12,
+    1.4217411969941196e-12
+  ],
+  "restoring_stiffness_lb_in_per_rad": [
+    [
+      -228.50341149279512,
+      -0.1530758920013106
+    ],
+    [
+      -0.14536445924111233,
+      -7017.914027035271
+    ]
+  ],
+  "restoring_eigenvalues": [
+    -7017.914030314887,
+    -228.50340821317897
+  ],
+  "locally_restoring": true,
+  "history": [
+    {
+      "iteration": 0,
+      "state": [
+        6.0,
+        0.0,
+        0.0
+      ],
+      "residual_norm": 0.08810674791621236
+    },
+    {
+      "iteration": 1,
+      "state": [
+        6.400851494332592,
+        0.0017864162108531625,
+        0.003509500467264686
+      ],
+      "residual_norm": 0.001018148637781439
+    },
+    {
+      "iteration": 2,
+      "state": [
+        6.396166242653757,
+        0.0016901283374318502,
+        0.003416262003524005
+      ],
+      "residual_norm": 1.3616088951563458e-07
+    },
+    {
+      "iteration": 3,
+      "state": [
+        6.396165722846479,
+        0.0016900405176942862,
+        0.0034162824097003558
+      ],
+      "residual_norm": 8.064485239965904e-14
+    }
+  ],
+  "assumptions": [
+    "Nominal freshwater density 1000 kg/m\u00b3 unless overridden.",
+    "Frame mass and CG represent the combined hull/frame assembly.",
+    "Blank mass rows are excluded, not estimated.",
+    "Only the supplied hull solid contributes buoyancy; tubes and appendages are excluded.",
+    "Calm water, no speed, waves, thrust or mooring forces.",
+    "Upper CAD closure is treated as sealed; physical downflooding is not modeled.",
+    "Component markers show CG positions, not component sizes."
+  ],
+  "waterline_y_limits_in": [
+    -3.314868029539107e-15,
+    61.90000464126109
+  ]
+}

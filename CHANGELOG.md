@@ -4,6 +4,19 @@ See [`VERSIONING.md`](VERSIONING.md) for how this file and `VERSION` are kept. T
 of [`MarMar888/hav`](https://github.com/MarMar888/hav)'s `optimization/` folder with its full history
 (MarMar888/hav#98) and keeps the same version line.
 
+## 0.7.2 — 2026-11-03
+
+Merged upstream 0.7.1 setup and propulsion notebook changes with local hull work.
+Removed the website and unrelated project folders as upstream intended; retained
+the revision-based hull geometry, hydrostatics and Savitsky analyses, and reconciled
+active paths. CFD files remain local and are excluded from this update.
+
+Added a compact v4 displacement calculator and a NavalToolbox setup, notebook,
+analytical-box benchmark and weight-sweep runner, with a validated full-scale
+flotation mesh. Verified NavalToolbox 0.9.3 against the analytical box and six v4
+mass cases and saved the report, CSV and graphs. Preserved existing notebook
+controls, loading edits, geometry and historical analysis results.
+
 ## 0.7.1 — 2026-11-01
 
 Merged Patrick's hull work from master (0.6.3–0.6.8 below) and put it where this repo keeps modeling:
