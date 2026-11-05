@@ -1,0 +1,2 @@
+mass_lb,mass_kg,draft_aft_in,draft_midship_in,draft_forward_in,trim_bow_down_deg,heel_deg,freeboard_min_in,waterline_length_in,submerged_length_in,wetted_area_in2,waterplane_area_in2,displacement_volume_l,gm_transverse_in,mass_balance_relative_error,dry_hull_assumption_ok
+148.59499999999997,67.40155822015,6.679197545682611,6.019775465023214,5.360353384363816,-1.0493855047021863,-0.008894924462697783,5.317978358970682,62.455529180668535,62.455529180668535,1458.3860480189132,1007.0283514602518,67.52225989427201,2.470948562154887,1.2438787912461002e-05,True

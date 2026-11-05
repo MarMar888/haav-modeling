@@ -1,0 +1,14 @@
+csv_line,component_id,component,mass_lbs,cg_x_in,cg_y_in,cg_z_in,source,notes
+3,glass_resin_finish,Fiberglass resin fairing and paint,,,,,,Include inside tapes and coatings
+4,tube_port,Port tube,,,,,,Tube material and fittings; document sealed buoyancy in geometry notes
+5,tube_starboard,Starboard tube,,,,,,Tube material and fittings; document sealed buoyancy in geometry notes
+6,backbone,Backbone and frame,,,,,,Complete frame assembly
+7,baseboard,Baseboard,,,,,,Include glass and resin unless counted elsewhere
+13,esc_port,Port motor controller,,,,,,
+14,esc_starboard,Starboard motor controller,,,,,,
+15,electronics_enclosure,Electronics enclosure,,,,,,Empty enclosure; list contents separately
+16,electronics,Electronics and power distribution,,,,,,Exclude components counted in other rows
+17,sensor_tower,Sensor tower and sensors,,,,,,
+18,wiring,Wiring connectors and cables,,,,,,
+19,fasteners_adhesives,Fasteners mounts and adhesives,,,,,,Only items not already included in assemblies
+20,payload_front,Front payload,,,,,,Exclude equipment already listed

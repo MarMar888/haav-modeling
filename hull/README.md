@@ -1,5 +1,7 @@
 # Hull work
 
+[v5 hydrostatics notebook and results](hydrostatics/v5-2026-11-05/README.md) use the new STEP and the 148.595 lb supplied-row loading. The v4 entry points below remain available for comparison.
+
 | Analysis | Current v4 entry point | Older work |
 |---|---|---|
 | Hydrostatics | [NavalToolbox](hydrostatics/v4-2026-10-30/navaltoolbox.ipynb) · [quick displacement calculator](hydrostatics/v4-2026-10-30/displacement-calculator.ipynb) | [v3 DBB and static model](hydrostatics/v3-2026-10-29/) |

@@ -1,5 +1,6 @@
 # Hydrostatics
 
+- [v5 NavalToolbox notebook](v5-2026-11-05/navaltoolbox.ipynb): new STEP and supplied component loading; blank weights intentionally excluded as requested. [Results and assumptions](v5-2026-11-05/README.md).
 - [v4 NavalToolbox notebook](v4-2026-10-30/navaltoolbox.ipynb): actual hull geometry, weight sweeps, draft, freeboard and wetted area. [Current validation status](v4-2026-10-30/VALIDATION.md).
 - [v4 quick displacement calculator](v4-2026-10-30/displacement-calculator.ipynb): mass ÷ density, with no hull-shape solve.
 - [v3](v3-2026-10-29/): existing DBB projects, original detailed notebook and static HTML viewer. Its 10× DBB workaround applies only to those projects.

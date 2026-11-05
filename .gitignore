@@ -30,6 +30,7 @@ __pycache__/
 .pytest_cache/
 runs/
 .ipynb_checkpoints/
+.mpl-cache/
 
 # Isolated hydrostatics dependency environment
 /hull/hydrostatics/.venv/

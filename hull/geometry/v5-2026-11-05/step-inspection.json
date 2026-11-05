@@ -1,0 +1,54 @@
+{
+  "source": "hull/geometry/v5-2026-11-05/hull.step",
+  "source_sha256": "c0c8787bbfcdf710b55f49427a14a8c2a297b81ad33194a5c7f1055304bccbdc",
+  "valid": true,
+  "counts": {
+    "solids": 1,
+    "shells": 1,
+    "faces": 17
+  },
+  "bounds_mm": [
+    -333.30886738823693,
+    -1.0000002553320209e-07,
+    -1.0000001776356839e-07,
+    333.30886738823693,
+    1828.8000001,
+    304.80000010000015
+  ],
+  "extents_in": [
+    26.244792707735193,
+    72.00000000787402,
+    12.000000007874023
+  ],
+  "material_volume_m3": 0.006975781037958699,
+  "original_filename": "v4 - Hull.step",
+  "step_export_timestamp": "2026-11-05T21:19:37Z",
+  "step_length_unit": "metre",
+  "inspection_length_unit": "mm (Open CASCADE import)",
+  "comparison_v4": {
+    "source": "hull/geometry/v4-2026-10-30/hull.step",
+    "source_sha256": "b5c753c90c2c9ded47cc6a7b63b085823a6858615f8c8781a6a879413c4af4a3",
+    "valid": true,
+    "counts": {
+      "solids": 1,
+      "shells": 1,
+      "faces": 17
+    },
+    "bounds_mm": [
+      -325.6109573176059,
+      -1.0000002463237946e-07,
+      -1e-07,
+      325.6109573176059,
+      1828.8000001,
+      304.8000001000002
+    ],
+    "extents_in": [
+      25.6386580565044,
+      72.00000000787402,
+      12.000000007874025
+    ],
+    "material_volume_m3": 0.006760140659380383
+  },
+  "status": "STEP topology and dimensions checked; flotation envelope not prepared",
+  "note": "Material volume is the thin-shell solid volume, not the enclosed buoyancy volume. Physical axis signs and buoyancy closures still require review."
+}

@@ -4,6 +4,16 @@ See [`VERSIONING.md`](VERSIONING.md) for how this file and `VERSION` are kept. T
 of [`MarMar888/hav`](https://github.com/MarMar888/hav)'s `optimization/` folder with its full history
 (MarMar888/hav#98) and keeps the same version line.
 
+## 0.7.3 — 2026-11-05
+
+Added a dedicated v5 hydrostatics notebook for the November 5 STEP and component
+loading. The v5 flotation envelope uses reviewed exterior faces and a dry-interior
+rim cap, with watertightness, winding and exact STEP volume checks. The notebook
+preserves all three CG coordinates, lists excluded blank loading rows explicitly,
+checks an analytical box and buoyancy balance, and saves each run with its input
+snapshot, report, CSV and figure. The supplied-row loading deliberately excludes
+blank weights as requested, and includes all three filled battery rows.
+
 ## 0.7.2 — 2026-11-03
 
 Merged upstream 0.7.1 setup and propulsion notebook changes with local hull work.
